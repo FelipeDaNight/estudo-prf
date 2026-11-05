@@ -70,3 +70,13 @@ Na pasta `tests`: `node test_codegs.js` (script, com planilha simulada) e `node 
 - **Hoje** é a primeira tela: anéis de estudo (dia), corridas e academia (semana), próxima ação sugerida, sequência de dias de estudo (1 folga por semana não quebra), desafios da semana e recordes. Os números vêm dos registros feitos neste aparelho.
 - As metas ficam em **Ajustes > Metas dos desafios**.
 - **Visor de corrida**: abre em tela cheia ao iniciar. Mostra tempo, km, pace atual e médio, trajeto, aviso por voz a cada km e pausa automática ao parar. Mantenha a tela ligada.
+
+## Questões e simulados
+
+Aba **Questões**: escolha um banco (ex.: CBMGO 2022) e use **Treinar** (por matéria; todas/novas/erradas) ou **Simulado completo**.
+- Treino: feedback na hora (certo/errado + alternativa correta + justificativa), com "Certeza/Dúvida/Chute". Ao errar, aparece o tipo de erro e a regra (editável) e o erro vai sozinho para a aba **Erros** da planilha.
+- Simulado: sem feedback até o fim, cronômetro, "Em branco". Em bancos Certo/Errado (Cebraspe) a nota é acertos − erros.
+- Sessões viram linhas na aba **Questões** (por matéria|tópico); simulados vão para **Simulados** quando o banco pede.
+- Tipos suportados: `mc` (A–E) e `ce` (Certo/Errado). Bancos ficam em `bancos/` (`index.json` + um JSON por prova).
+- **Atenção:** depois de atualizar, cole o novo `apps-script/Code.gs` no Apps Script e implante uma *nova versão* (Implantar → Gerenciar implantações → editar → Nova versão).
+- O gabarito do banco CBMGO 2022 é feito por mim (não oficial). Questões marcadas ⚠ têm confiança média.

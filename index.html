@@ -51,6 +51,28 @@ nav button i{display:block;font-style:normal;font-size:21px}
 .tapbtn{height:120px;font-size:34px}
 
 nav button{font-size:10.5px}
+.alt{display:block;text-align:left;font-weight:500;font-size:16px;line-height:1.35;background:var(--bg);color:var(--ink);border:1.5px solid var(--line);margin-top:8px;padding:12px}
+.alt b{display:inline-block;min-width:22px;color:var(--pri)}
+.alt.sel{border-color:var(--pri);background:rgba(110,166,234,.16)}
+.alt.certa{border-color:var(--acc);background:rgba(102,187,106,.2)}
+.alt.errada{border-color:var(--warn);background:rgba(239,83,80,.18)}
+.chips{display:flex;gap:6px;margin-top:10px}
+.chips button{margin:0;padding:8px 4px;font-size:14px;border-radius:99px;background:transparent;color:var(--mut);border:1.5px solid var(--line)}
+.chips button.on{border-color:var(--pri);color:var(--pri);background:rgba(110,166,234,.14)}
+.mapa{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.mapa button{width:38px;margin:0;padding:7px 0;font-size:13px;border-radius:9px;background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.mapa button.atual{border-color:var(--pri);border-width:2.5px}
+.mapa button.resp{background:rgba(110,166,234,.22)}
+.mapa button.ok{background:rgba(102,187,106,.3)}
+.mapa button.no{background:rgba(239,83,80,.28)}
+.fb{border-radius:12px;padding:12px;margin-top:12px;font-size:15px;line-height:1.4}
+.fb.ok{background:rgba(102,187,106,.18);border:1px solid var(--acc)}
+.fb.no{background:rgba(239,83,80,.14);border:1px solid var(--warn)}
+.qenun{font-size:16px;line-height:1.45;margin:8px 0}
+.qitem{font-size:15px;line-height:1.4;margin:6px 0 6px 4px;color:var(--ink)}
+.qapoio p{font-size:14px;line-height:1.45;margin:6px 0}
+.qimg{width:100%;border-radius:10px;border:1px solid var(--line);margin:8px 0;background:#fff}
+.tabela{width:100%;border-collapse:collapse;font-size:14px}.tabela td,.tabela th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:right}.tabela td:first-child,.tabela th:first-child{text-align:left}
 nav button i{font-size:19px}
 .rings{display:flex;justify-content:space-around;text-align:center}
 .anel{width:30%}
@@ -178,6 +200,36 @@ nav button i{font-size:19px}
  <div class="card"><b>Séries de hoje</b><div class="list" id="a_hoje"></div></div>
 </section>
 
+<section id="quest" class="tab">
+ <div id="q_lista"></div>
+ <div id="q_tela" style="display:none">
+  <div class="card">
+   <div class="row" style="align-items:center"><div class="note" id="q_cab" style="flex:2"></div><div class="note" id="q_tmr" style="text-align:right"></div></div>
+   <div class="note" id="q_tag" style="margin-top:4px"></div>
+   <details id="q_apoio" class="qapoio" style="margin-top:8px"><summary id="q_apoio_t">Texto de apoio</summary><div id="q_apoio_c"></div></details>
+   <div class="qenun" id="q_enun"></div>
+   <div id="q_itens"></div>
+   <img id="q_img" class="qimg" style="display:none" alt="">
+   <div class="qenun" id="q_enun2"></div>
+   <div id="q_fecho" class="qenun"></div>
+   <div class="note" style="margin-top:10px">Quanta certeza você tem?</div>
+   <div class="chips" id="q_conf"><button data-c="Certeza" class="on">Certeza</button><button data-c="Dúvida">Dúvida</button><button data-c="Chute">Chute</button></div>
+   <div id="q_alts"></div>
+   <div id="q_fb"></div>
+   <div id="q_erro" style="display:none">
+    <label>Tipo do erro</label><select id="q_e_tipo"></select>
+    <label>Regra para não errar de novo (edite com suas palavras)</label><textarea id="q_e_regra"></textarea>
+    <div class="note">Vai para o caderno de erros da planilha quando você tocar em Próxima.</div>
+   </div>
+   <div class="row"><button id="q_ant" class="sec">Anterior</button><button id="q_pular" class="sec">Pular</button><button id="q_prox">Próxima</button></div>
+   <button id="q_fim" class="sec">Encerrar</button>
+  </div>
+  <div class="card"><b>Mapa</b><div class="mapa" id="q_mapa"></div></div>
+ </div>
+ <div id="q_res" style="display:none"></div>
+ <div class="card"><button id="q_manual" class="sec" style="margin-top:0">Registrar um erro manualmente</button></div>
+</section>
+
 <section id="erro" class="tab">
  <div class="card">
   <label>Tópico</label><select id="r_top"></select>
@@ -201,6 +253,7 @@ nav button i{font-size:19px}
   <details style="margin-top:10px"><summary>Metas dos desafios</summary>
    <div class="row"><div><label>Estudo por dia (min)</label><input id="g_m_min" inputmode="numeric"></div><div><label>Horas por semana</label><input id="g_m_horas" inputmode="decimal"></div></div>
    <div class="row"><div><label>Dias de estudo/sem.</label><input id="g_m_dias" inputmode="numeric"></div><div><label>Erros/sem.</label><input id="g_m_err" inputmode="numeric"></div></div>
+   <div class="row"><div><label>Questões/sem.</label><input id="g_m_quest" inputmode="numeric"></div></div>
    <div class="row"><div><label>Corridas/sem.</label><input id="g_m_corr" inputmode="numeric"></div><div><label>Km/sem.</label><input id="g_m_km" inputmode="decimal"></div><div><label>Academia/sem.</label><input id="g_m_acad" inputmode="numeric"></div></div>
   </details>
   <div class="note">Crie no app Atalhos um atalho com a ação "Definir Foco" (ligar o Foco que você quiser) e coloque o nome dele aqui. Deixe em branco para não receber o convite.</div>
@@ -220,7 +273,7 @@ nav button i{font-size:19px}
  <button data-t="corrida"><i>🏃</i>Corrida</button>
  <button data-t="taf"><i>🎯</i>TAF</button>
  <button data-t="academia"><i>🏋️</i>Academia</button>
- <button data-t="erro"><i>📝</i>Erro</button>
+ <button data-t="quest"><i>📝</i>Questões</button>
  <button data-t="cfg"><i>⚙️</i>Ajustes</button>
 </nav>
 <div id="visor">

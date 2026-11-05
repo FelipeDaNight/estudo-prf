@@ -11,6 +11,8 @@ const ABAS = {
   taf:      { aba: "TAF",       inicio: 16, max: 200,  cols: { data: 1, exercicio: 2, marca: 3 } },
   corrida:  { aba: "Corridas",  inicio: 6,  max: 500,  cols: { data: 1, tipo: 2, km: 3, min: 4, origem: 6, obs: 7 } },
   academia: { aba: "Academia",  inicio: 6,  max: 2000, cols: { data: 1, treino: 2, exercicio: 3, serie: 4, reps: 5, carga: 6, rpe: 7 } },
+  questoes: { aba: "Questões",  inicio: 6,  max: 500,  cols: { data: 1, materia: 2, topico: 3, feitas: 4, acertos: 5, erros: 6, fonte: 9 } },
+  simulado: { aba: "Simulados", inicio: 6,  max: 200,  cols: { data: 1, nome: 2, itens: 3, acertos: 4, erros: 5, tempo: 11 } },
 };
 const OBRIGATORIOS = {
   estudo: ["data", "materia", "minutos"],
@@ -18,8 +20,10 @@ const OBRIGATORIOS = {
   taf: ["data", "exercicio", "marca"],
   corrida: ["data", "km", "min"],
   academia: ["data", "exercicio", "reps"],
+  questoes: ["data", "materia", "feitas", "acertos", "erros"],
+  simulado: ["data", "nome", "itens", "acertos", "erros"],
 };
-const NUMERICOS = ["minutos", "marca", "km", "min", "serie", "reps", "carga", "rpe"];
+const NUMERICOS = ["minutos", "marca", "km", "min", "serie", "reps", "carga", "rpe", "feitas", "acertos", "erros", "itens", "tempo"];
 
 function saida_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);

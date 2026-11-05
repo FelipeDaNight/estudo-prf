@@ -54,7 +54,7 @@
 
   // ---------------------------------------------------------------- configuração e listas
   const DEF = {
-    cfg: { url: "", token: "", foco: 25, pausa: 5, longa: 15, desc: 90, atalho: "Foco Estudo", convite: true, voz: true, autopausa: true, metaMin: 90, metaHoras: 10, metaDias: 5, metaErros: 5, metaCorr: 3, metaKm: 12, metaAcad: 2 },
+    cfg: { url: "", token: "", foco: 25, pausa: 5, longa: 15, desc: 90, atalho: "Foco Estudo", convite: true, voz: true, autopausa: true, metaMin: 90, metaHoras: 10, metaDias: 5, metaErros: 5, metaCorr: 3, metaKm: 12, metaAcad: 2, metaQuest: 100 },
     listas: {
       materias: ["Língua Portuguesa", "Raciocínio Lógico", "Informática", "Física", "Ética e Cidadania", "Geopolítica", "Legislação de Trânsito", "Legislação Especial", "Direito Constitucional", "Direito Administrativo", "Direito Penal", "Processo Penal", "Direitos Humanos", "Legislação da PRF"],
       topicos: [],
@@ -190,8 +190,8 @@
     const sem = hist.filter((x) => x.d >= ini && x.d <= h);
     const soma = (a) => a.reduce((t, x) => t + (x.v || 0), 0);
     const dias = (a) => new Set(a.map((x) => x.d)).size;
-    const est = sem.filter((x) => x.k === "estudo"), cor = sem.filter((x) => x.k === "corrida"), ac = sem.filter((x) => x.k === "academia"), er = sem.filter((x) => x.k === "erro");
-    return { estudoHoje: soma(est.filter((x) => x.d === h)), estudoSem: soma(est), diasEstudo: dias(est), corridas: cor.length, km: soma(cor), acad: dias(ac), erros: er.length, treinoHoje: ac.some((x) => x.d === h), ini };
+    const est = sem.filter((x) => x.k === "estudo"), cor = sem.filter((x) => x.k === "corrida"), ac = sem.filter((x) => x.k === "academia"), er = sem.filter((x) => x.k === "erro"), qs = sem.filter((x) => x.k === "questao");
+    return { estudoHoje: soma(est.filter((x) => x.d === h)), estudoSem: soma(est), diasEstudo: dias(est), corridas: cor.length, km: soma(cor), acad: dias(ac), erros: er.length, questoes: qs.length, qAcertos: soma(qs), treinoHoje: ac.some((x) => x.d === h), ini };
   }
   function diasDesde(k) {
     let u = ""; hist.forEach((x) => { if (x.k === k && x.d > u) u = x.d; });
@@ -243,6 +243,7 @@
       { n: "Correr " + cfg.metaCorr + " vezes", a: s.corridas, m: cfg.metaCorr, f: (v) => String(v) },
       { n: "Somar " + fmt1(cfg.metaKm) + " km", a: s.km, m: cfg.metaKm, f: (v) => fmt1(v) + " km" },
       { n: cfg.metaAcad + " treinos de academia", a: s.acad, m: cfg.metaAcad, f: (v) => String(v) },
+      { n: "Resolver " + cfg.metaQuest + " questões" + (s.questoes ? " (" + Math.round(s.qAcertos / s.questoes * 100) + "% de acerto)" : ""), a: s.questoes, m: cfg.metaQuest, f: (v) => String(v) },
       { n: "Registrar " + cfg.metaErros + " erros no caderno", a: s.erros, m: cfg.metaErros, f: (v) => String(v) },
     ];
     const box = $("h_desafios"); box.innerHTML = ""; let feitos = 0;
@@ -608,19 +609,218 @@
     $("r_regra").value = ""; $("r_lei").value = ""; $("r_fonte").value = ""; toast("Erro salvo.");
   }
 
+  // ---------------------------------------------------------------- QUESTÕES (treino com resposta na hora e simulado)
+  const Q = { bancos: [], carregados: {}, b: null, modo: "", ids: [], pos: 0, resp: {}, conf: {}, ini: 0, tmr: null, trav: false, pend: null, sessao: {}, confFim: 0 };
+  let prog = LS.get("qprog", {});     // { bancoId: { n: { r, ok, conf, d } } }
+  let simHist = LS.get("qsim", []);   // últimos simulados
+  const fonteCurta = (b) => String(b.titulo || b.id).split(" · ")[0];
+  const el = (tag, txt, cls) => { const e = document.createElement(tag); if (txt !== undefined) e.textContent = txt; if (cls) e.className = cls; return e; };
+
+  async function qIndice() {
+    try {
+      const r = await fetch("bancos/index.json", { cache: "no-cache" }); Q.bancos = await r.json(); LS.set("qidx", Q.bancos);
+    } catch (e) { Q.bancos = LS.get("qidx", []); }
+    return Q.bancos;
+  }
+  async function qBanco(info) {
+    if (Q.carregados[info.id]) return Q.carregados[info.id];
+    const r = await fetch(info.arquivo); const b = await r.json(); Q.carregados[info.id] = b; return b;
+  }
+  const qProg = (b) => (prog[b.id] = prog[b.id] || {});
+  function qSalvarProg() { LS.set("qprog", prog); }
+  function qResumoProg(b) {
+    const p = qProg(b); let r = 0, a = 0; b.questoes.forEach((q) => { if (p[q.n]) { r++; if (p[q.n].ok) a++; } });
+    return { r, a, e: r - a };
+  }
+  async function qDesenhaLista() {
+    const box = document.createDocumentFragment();
+    await qIndice();
+    if (!Q.bancos.length) { box.appendChild(el("div", "Nenhum banco de questões disponível. Conecte-se à internet uma vez para baixar.", "note")); $("q_lista").replaceChildren(box); return; }
+    for (const info of Q.bancos) {
+      let b; try { b = await qBanco(info); } catch (e) { box.appendChild(el("div", "Não foi possível carregar " + info.titulo + ". Tente com internet.", "note")); continue; }
+      const c = el("div", undefined, "card"); c.dataset.banco = b.id;
+      c.appendChild(el("b", b.titulo));
+      if (b.aviso) { const a = el("div", b.aviso, "note"); a.style.marginTop = "6px"; c.appendChild(a); }
+      const s = qResumoProg(b);
+      const pr = el("div", "Respondidas " + s.r + "/" + b.questoes.length + " · acertos " + s.a + " · erradas " + s.e, "sub"); pr.style.marginTop = "8px"; c.appendChild(pr);
+      const mats = Array.from(new Set(b.questoes.map((q) => q.materia)));
+      c.appendChild(el("label", "Matéria"));
+      const sm = el("select"); sm.className = "q_mat"; [["", "Todas as matérias"]].concat(mats.map((m) => [m, m])).forEach((p) => { const o = el("option", p[1]); o.value = p[0]; sm.appendChild(o); }); c.appendChild(sm);
+      c.appendChild(el("label", "Quais questões"));
+      const sq = el("select"); sq.className = "q_quais"; [["todas", "Todas"], ["novas", "Ainda não respondidas"], ["erradas", "As que errei"]].forEach((p) => { const o = el("option", p[1]); o.value = p[0]; sq.appendChild(o); }); c.appendChild(sq);
+      const bt = el("button", "Treinar (resposta na hora)", "ok"); bt.className = "ok q_treino"; bt.onclick = () => qIniciar(b, "treino", sm.value, sq.value); c.appendChild(bt);
+      const bs = el("button", "Simulado completo (" + b.questoes.length + " questões)"); bs.className = "q_sim"; bs.onclick = () => qIniciar(b, "sim", "", "todas"); c.appendChild(bs);
+      const ult = simHist.filter((x) => x.banco === b.id).pop();
+      if (ult) { const u = el("div", "Último simulado (" + ult.d.split("-").reverse().join("/") + "): " + ult.acertos + " acertos, " + ult.erros + " erros, " + ult.brancos + " em branco · " + ult.tempo + " min", "note"); u.style.marginTop = "8px"; c.appendChild(u); }
+      const bz = el("button", "Zerar progresso deste banco"); bz.className = "sec"; bz.onclick = () => { if (bz.dataset.c) { delete prog[b.id]; qSalvarProg(); qDesenhaLista(); return; } bz.dataset.c = "1"; bz.textContent = "Toque de novo para zerar"; setTimeout(() => { bz.dataset.c = ""; bz.textContent = "Zerar progresso deste banco"; }, 3000); };
+      c.appendChild(bz);
+      box.appendChild(c);
+    }
+    $("q_lista").replaceChildren(box);
+  }
+  function qIniciar(b, modo, mat, quais) {
+    qFlushErro(); qFlushSessao();
+    const p = qProg(b);
+    let ids = b.questoes.map((q, i) => i).filter((i) => !mat || b.questoes[i].materia === mat);
+    if (modo === "treino") {
+      if (quais === "novas") ids = ids.filter((i) => !p[b.questoes[i].n]);
+      if (quais === "erradas") ids = ids.filter((i) => p[b.questoes[i].n] && !p[b.questoes[i].n].ok);
+    }
+    if (!ids.length) { toast("Nenhuma questão nesse filtro."); return; }
+    Object.assign(Q, { b, modo, ids, pos: 0, resp: {}, conf: {}, ini: Date.now(), trav: false, pend: null, sessao: {}, confFim: 0 });
+    clearInterval(Q.tmr); Q.tmr = null;
+    if (modo === "sim") { Q.tmr = setInterval(() => { $("q_tmr").textContent = "⏱ " + mmss(Date.now() - Q.ini); }, 1000); wakeOn(); Q.wake = true; }
+    $("q_lista").style.display = "none"; $("q_res").style.display = "none"; $("q_tela").style.display = "block";
+    qRender(); window.scrollTo(0, 0);
+  }
+  const qAtual = () => Q.b.questoes[Q.ids[Q.pos]];
+  function qRender() {
+    const q = qAtual(), b = Q.b, sim = Q.modo === "sim", p = qProg(b);
+    $("q_cab").textContent = (sim ? "Simulado" : "Treino") + " · questão " + q.n + " (" + (Q.pos + 1) + "/" + Q.ids.length + ")";
+    $("q_tmr").textContent = sim ? "⏱ " + mmss(Date.now() - Q.ini) : "";
+    $("q_tag").textContent = q.materia + " · " + q.topico;
+    const ap = $("q_apoio");
+    if (q.apoio) { ap.style.display = "block"; ap.open = false; $("q_apoio_t").textContent = "Texto de apoio: " + q.apoio.titulo; const c = $("q_apoio_c"); c.innerHTML = ""; q.apoio.paragrafos.forEach((t) => c.appendChild(el("p", t))); } else ap.style.display = "none";
+    $("q_enun").textContent = q.enunciado;
+    const it = $("q_itens"); it.innerHTML = ""; (q.itens || []).forEach((t) => it.appendChild(el("div", t, "qitem")));
+    const im = $("q_img"); if (q.img) { im.style.display = "block"; im.src = q.img; im.alt = q.img_alt || "Figura da questão"; } else { im.style.display = "none"; im.removeAttribute("src"); }
+    $("q_enun2").textContent = q.enunciado2 || ""; $("q_fecho").textContent = q.fecho || "";
+    const alts = $("q_alts"); alts.innerHTML = "";
+    const lista = q.tipo === "ce" ? [["C", "Certo"], ["E", "Errado"]] : Object.keys(q.alternativas).map((k) => [k, q.alternativas[k]]);
+    lista.forEach((par) => {
+      const bt = el("button"); bt.className = "alt"; bt.dataset.k = par[0];
+      if (q.tipo === "ce") bt.appendChild(document.createTextNode(par[1])); else { bt.appendChild(el("b", par[0] + ")")); bt.appendChild(document.createTextNode(" " + par[1])); }
+      bt.onclick = () => qResponder(par[0]); alts.appendChild(bt);
+    });
+    Q.trav = !sim && Q.resp[q.n] !== undefined;
+    const confAtual = Q.conf[q.n] || "Certeza";
+    document.querySelectorAll("#q_conf button").forEach((x) => { x.classList.toggle("on", x.dataset.c === confAtual); x.disabled = Q.trav; });
+    $("q_fb").innerHTML = ""; $("q_erro").style.display = "none";
+    if (sim) { const r = Q.resp[q.n]; document.querySelectorAll("#q_alts .alt").forEach((x) => x.classList.toggle("sel", x.dataset.k === r)); }
+    else if (Q.trav) qMostrarFb(q, Q.resp[q.n]);
+    const ultimo = Q.pos === Q.ids.length - 1;
+    $("q_ant").disabled = Q.pos === 0;
+    $("q_pular").textContent = sim ? "Em branco" : "Pular";
+    $("q_prox").textContent = ultimo ? (sim ? "Finalizar" : "Concluir") : "Próxima";
+    $("q_fim").textContent = sim ? "Finalizar simulado" : "Encerrar sessão";
+    qMapa();
+  }
+  function qMapa() {
+    const m = $("q_mapa"); m.innerHTML = ""; const sim = Q.modo === "sim", p = qProg(Q.b);
+    Q.ids.forEach((i, pos) => {
+      const q = Q.b.questoes[i], bt = el("button", String(q.n)); let cl = "";
+      if (pos === Q.pos) cl += " atual";
+      if (sim) { if (Q.resp[q.n] !== undefined) cl += " resp"; }
+      else if (Q.resp[q.n] !== undefined) cl += Q.resp[q.n] === q.resp ? " ok" : " no";
+      bt.className = cl.trim(); bt.onclick = () => qIr(pos); m.appendChild(bt);
+    });
+  }
+  function qMostrarFb(q, r) {
+    const ok = r === q.resp, f = $("q_fb"); f.innerHTML = "";
+    document.querySelectorAll("#q_alts .alt").forEach((x) => { x.classList.remove("sel"); if (x.dataset.k === q.resp) x.classList.add("certa"); else if (x.dataset.k === r) x.classList.add("errada"); });
+    const d = el("div", undefined, "fb " + (ok ? "ok" : "no"));
+    const rot = q.tipo === "ce" ? (q.resp === "C" ? "Certo" : "Errado") : q.resp;
+    d.appendChild(el("b", ok ? "✅ Acertou!" : "❌ Errou. Resposta correta: " + rot));
+    if (q.just) { const j = el("div", q.just); j.style.marginTop = "6px"; d.appendChild(j); }
+    if (q.conf === "media") { const w = el("div", "⚠ Gabarito próprio com confiança média: confira no oficial.", "note"); w.style.marginTop = "6px"; d.appendChild(w); }
+    if (ok && (Q.conf[q.n] === "Chute")) { const w = el("div", "Acertou no chute: revise esse assunto mesmo assim.", "note"); w.style.marginTop = "6px"; d.appendChild(w); }
+    f.appendChild(d);
+    if (!ok && Q.pend && Q.pend.q === q) { $("q_erro").style.display = "block"; }
+  }
+  function histQuestao(ok) { hist.push({ k: "questao", v: ok ? 1 : 0, d: hoje(), id: "q" + uid() }); LS.set("hist", hist); }
+  function qResponder(k) {
+    const q = qAtual(), sim = Q.modo === "sim";
+    const conf = ((document.querySelector("#q_conf button.on") || {}).dataset || {}).c || "Certeza";
+    if (sim) { Q.resp[q.n] = Q.resp[q.n] === k ? undefined : k; if (Q.resp[q.n] === undefined) delete Q.conf[q.n]; else Q.conf[q.n] = conf; qRender(); return; }
+    if (Q.trav) return;
+    const ok = k === q.resp; Q.resp[q.n] = k; Q.conf[q.n] = conf; Q.trav = true;
+    qProg(Q.b)[q.n] = { r: k, ok, conf, d: hoje() }; qSalvarProg(); histQuestao(ok);
+    const g = q.materia + "||" + q.topico; const s = (Q.sessao[g] = Q.sessao[g] || { feitas: 0, acertos: 0, erros: 0 });
+    s.feitas++; if (ok) s.acertos++; else s.erros++;
+    if (!ok) {
+      Q.pend = { q, conf, b: Q.b };
+      opts($("q_e_tipo"), listas.tipos, conf === "Chute" ? "Chute que deu errado" : "Teoria que eu não sabia");
+      $("q_e_regra").value = q.just || "";
+    }
+    document.querySelectorAll("#q_conf button").forEach((x) => { x.disabled = true; });
+    qMostrarFb(q, k); qMapa(); pintarHoje();
+  }
+  function qFlushErro() {
+    const p = Q.pend; if (!p) return; Q.pend = null; $("q_erro").style.display = "none";
+    const regra = ($("q_e_regra").value || "").trim() || ("Rever: " + (p.q.just || p.q.topico));
+    enqueue("erro", { data: hoje(), topico: p.q.topico, tipo: $("q_e_tipo").value, confianca: p.conf, regra, lei: "", fonte: fonteCurta(p.b) + " Q" + p.q.n });
+  }
+  function qFlushSessao() {
+    const b = Q.b; if (!b) return; const ks = Object.keys(Q.sessao); if (!ks.length) return;
+    const s = Q.sessao; Q.sessao = {};
+    ks.forEach((g) => { const m = g.split("||"); enqueue("questoes", { data: hoje(), materia: m[0], topico: m[1], feitas: s[g].feitas, acertos: s[g].acertos, erros: s[g].erros, fonte: fonteCurta(b) }); });
+  }
+  function qIr(pos) { qFlushErro(); if (pos < 0 || pos >= Q.ids.length) return; Q.pos = pos; qRender(); window.scrollTo(0, 0); }
+  function qProx() {
+    if (Q.pos < Q.ids.length - 1) { qIr(Q.pos + 1); return; }
+    if (Q.modo === "sim") qFinalizar(false); else qEncerrar();
+  }
+  function qEncerrar() {
+    qFlushErro(); qFlushSessao(); clearInterval(Q.tmr); Q.tmr = null; if (Q.wake) { wakeOff(); Q.wake = false; }
+    $("q_tela").style.display = "none"; $("q_res").style.display = "none"; $("q_lista").style.display = "block"; qDesenhaLista();
+  }
+  function qFinalizar(forcar) {
+    if (Q.modo !== "sim") { qEncerrar(); return; }
+    const brancos = Q.ids.filter((i) => Q.resp[Q.b.questoes[i].n] === undefined).length;
+    if (brancos && !forcar && !(Date.now() - Q.confFim < 4000)) {
+      Q.confFim = Date.now(); $("q_fim").textContent = brancos + " em branco. Toque de novo para finalizar";
+      setTimeout(() => { if (Q.modo === "sim" && $("q_tela").style.display !== "none") $("q_fim").textContent = "Finalizar simulado"; }, 4000); return;
+    }
+    clearInterval(Q.tmr); Q.tmr = null; if (Q.wake) { wakeOff(); Q.wake = false; }
+    const b = Q.b, tempo = Math.max(1, Math.round((Date.now() - Q.ini) / 60000)), por = {}, grupo = {};
+    let ac = 0, er = 0, br = 0; const erradas = [];
+    Q.ids.forEach((i) => {
+      const q = b.questoes[i], r = Q.resp[q.n], m = (por[q.materia] = por[q.materia] || { a: 0, e: 0, b: 0, n: 0 });
+      const g = (grupo[q.materia + "||" + q.topico] = grupo[q.materia + "||" + q.topico] || { feitas: 0, acertos: 0, erros: 0 });
+      m.n++; g.feitas++;
+      if (r === undefined) { m.b++; br++; return; }
+      const ok = r === q.resp; qProg(b)[q.n] = { r, ok, conf: Q.conf[q.n] || "Certeza", d: hoje() }; histQuestao(ok);
+      if (ok) { m.a++; ac++; g.acertos++; } else { m.e++; er++; g.erros++; erradas.push(q); }
+    });
+    qSalvarProg();
+    const liq = b.questoes.some((q) => q.tipo === "ce");
+    const nota = liq ? ac - er : ac;
+    simHist.push({ banco: b.id, d: hoje(), itens: Q.ids.length, acertos: ac, erros: er, brancos: br, nota, tempo }); simHist = simHist.slice(-30); LS.set("qsim", simHist);
+    erradas.forEach((q) => { const conf = Q.conf[q.n] || "Certeza"; enqueue("erro", { data: hoje(), topico: q.topico, tipo: conf === "Chute" ? "Chute que deu errado" : "Teoria que eu não sabia", confianca: conf, regra: q.just || ("Rever: " + q.topico), lei: "", fonte: fonteCurta(b) + " Q" + q.n }); });
+    Object.keys(grupo).forEach((g) => { const m = g.split("||"); enqueue("questoes", { data: hoje(), materia: m[0], topico: m[1], feitas: grupo[g].feitas, acertos: grupo[g].acertos, erros: grupo[g].erros, fonte: fonteCurta(b) + " (simulado)" }); });
+    if (b.sincroniza_simulado) enqueue("simulado", { data: hoje(), nome: b.titulo, itens: Q.ids.length, acertos: ac, erros: er, tempo });
+    qResultado(b, { ac, er, br, nota, tempo, liq, por, erradas, n: Q.ids.length });
+  }
+  function qResultado(b, r) {
+    $("q_tela").style.display = "none"; const box = $("q_res"); box.style.display = "block"; box.innerHTML = "";
+    const c = el("div", undefined, "card"); c.appendChild(el("b", "Resultado do simulado"));
+    c.appendChild(el("div", r.liq ? String(r.nota) : r.ac + " / " + r.n, "big"));
+    c.appendChild(el("div", r.liq ? "nota líquida (acertos − erros)" : "acertos", "sub"));
+    c.appendChild(el("div", r.ac + (r.ac === 1 ? " acerto" : " acertos") + " · " + r.er + (r.er === 1 ? " erro" : " erros") + " · " + r.br + " em branco · " + r.tempo + " min", "sub"));
+    const t = el("table", undefined, "tabela"); t.innerHTML = "<tr><th>Matéria</th><th>Acertos</th><th>Erros</th><th>Branco</th></tr>";
+    Object.keys(r.por).forEach((m) => { const x = r.por[m], tr = el("tr"); [m, x.a + "/" + x.n, x.e, x.b].forEach((v) => tr.appendChild(el("td", String(v)))); t.appendChild(tr); });
+    c.appendChild(t);
+    c.appendChild(el("div", r.er ? r.er + " erro(s) foram enviados ao caderno de erros." : "Nenhum erro para o caderno.", "note")).style.marginTop = "10px";
+    const rv = el("button", "Revisar as erradas agora"); rv.className = "ok"; rv.disabled = !r.er; rv.onclick = () => qIniciar(b, "treino", "", "erradas"); c.appendChild(rv);
+    const vl = el("button", "Voltar às questões"); vl.className = "sec"; vl.onclick = () => { box.style.display = "none"; $("q_lista").style.display = "block"; qDesenhaLista(); }; c.appendChild(vl);
+    box.appendChild(c); window.scrollTo(0, 0); pintarHoje();
+  }
+
   // ---------------------------------------------------------------- navegação e config
   function abrir(t) {
+    if (t !== "quest") { qFlushErro(); qFlushSessao(); }
     document.querySelectorAll(".tab").forEach((s) => s.classList.toggle("on", s.id === t));
     document.querySelectorAll("#nav button").forEach((b) => b.classList.toggle("on", b.dataset.t === t));
     window.scrollTo(0, 0);
     if (t === "cfg") pintarFila();
     if (t === "hoje") pintarHoje();
+    if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none") qDesenhaLista();
   }
   function pintarCfg() {
     $("g_url").value = cfg.url; $("g_token").value = cfg.token; $("g_foco").value = cfg.foco; $("g_pausa").value = cfg.pausa; $("g_longa").value = cfg.longa; $("g_desc").value = cfg.desc; $("g_atalho").value = cfg.atalho || "";
     $("g_voz").value = cfg.voz ? "1" : "0"; $("g_auto").value = cfg.autopausa ? "1" : "0";
     $("g_m_min").value = cfg.metaMin; $("g_m_horas").value = cfg.metaHoras; $("g_m_dias").value = cfg.metaDias; $("g_m_err").value = cfg.metaErros;
-    $("g_m_corr").value = cfg.metaCorr; $("g_m_km").value = cfg.metaKm; $("g_m_acad").value = cfg.metaAcad;
+    $("g_m_quest").value = cfg.metaQuest; $("g_m_corr").value = cfg.metaCorr; $("g_m_km").value = cfg.metaKm; $("g_m_acad").value = cfg.metaAcad;
   }
   function salvarCfg() {
     cfg.url = $("g_url").value.trim(); cfg.token = $("g_token").value.trim();
@@ -628,7 +828,7 @@
     cfg.voz = $("g_voz").value === "1"; cfg.autopausa = $("g_auto").value === "1";
     const pos = (id, d) => Math.max(0.5, num($(id).value) || d);
     cfg.metaMin = Math.round(pos("g_m_min", 90)); cfg.metaHoras = pos("g_m_horas", 10); cfg.metaDias = Math.min(7, Math.round(pos("g_m_dias", 5))); cfg.metaErros = Math.round(pos("g_m_err", 5));
-    cfg.metaCorr = Math.round(pos("g_m_corr", 3)); cfg.metaKm = pos("g_m_km", 12); cfg.metaAcad = Math.round(pos("g_m_acad", 2));
+    cfg.metaQuest = Math.round(pos("g_m_quest", 100)); cfg.metaCorr = Math.round(pos("g_m_corr", 3)); cfg.metaKm = pos("g_m_km", 12); cfg.metaAcad = Math.round(pos("g_m_acad", 2));
     LS.set("cfg", cfg); if (!P.total && !P.ativo) pintarPomo(); pintarHoje(); toast("Configuração salva.");
   }
 
@@ -637,6 +837,11 @@
     $("e_start").onclick = pomoIniciar; $("e_pause").onclick = pomoPausar; $("e_fim").onclick = pomoEncerrar; $("e_skip").onclick = () => { if (P.ativo) wakeOff(); pomoReset("foco"); };
     $("e_foco_sim").onclick = focoAtivar; $("e_foco_nao").onclick = () => { LS.set("focoAdiado", hoje()); $("e_convite").style.display = "none"; };
     $("e_foco_nunca").onclick = () => { cfg.convite = false; LS.set("cfg", cfg); $("e_convite").style.display = "none"; toast("Combinado. Reative em Ajustes se quiser."); };
+    document.querySelectorAll("#q_conf button").forEach((b) => b.addEventListener("click", () => { if (Q.trav) return; document.querySelectorAll("#q_conf button").forEach((x) => x.classList.toggle("on", x === b)); if (Q.modo === "sim" && Q.b && Q.resp[qAtual().n] !== undefined) Q.conf[qAtual().n] = b.dataset.c; }));
+    $("q_ant").onclick = () => qIr(Q.pos - 1); $("q_prox").onclick = qProx;
+    $("q_pular").onclick = () => { if (Q.modo === "sim") { const q = qAtual(); delete Q.resp[q.n]; delete Q.conf[q.n]; qRender(); } else qProx(); };
+    $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
+    $("q_manual").onclick = () => abrir("erro");
     $("c_visor").onclick = abrirVisor; $("v_min").onclick = fecharVisor;
     $("v_pause").onclick = () => { if (C.estado === "correndo") corridaPausar(); else if (C.estado === "pausada") corridaIniciar(); };
     $("v_fim").onclick = () => {
@@ -656,13 +861,13 @@
     setInterval(() => { pomoTick(); autoPausa(); if (C.estado === "correndo") { checar12(); pintarCorrida(); } }, 250);
     window.addEventListener("online", () => sync(false));
     setInterval(() => { if (fila.some((i) => !i.erro)) sync(false); }, 60000); // tenta de novo se a rede estava ruim
-    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") { pomoTick(); pintarHoje(); sync(false); if (C.estado === "correndo") { gpsLigar(); } } });
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") { qFlushErro(); qFlushSessao(); } if (document.visibilityState === "visible") { pomoTick(); pintarHoje(); sync(false); if (C.estado === "correndo") { gpsLigar(); } } });
     if (C.estado === "correndo" || C.estado === "pausada") { $("c_gps").textContent = "Corrida em andamento (retomada)."; if (C.estado === "correndo") gpsLigar(); }
     if (C.estado === "fim") { $("c_fechar").style.display = "block"; $("c_f_km").value = (C.geo.dist / 1000).toFixed(2).replace(".", ","); $("c_f_min").value = ((C.msFinal || 0) / 60000).toFixed(1).replace(".", ","); }
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => { /* sem SW */ });
     sync(false);
   }
 
-  window.__app = { stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
+  window.__app = { Q, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar); else iniciar();
 })();
