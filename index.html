@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Estudo PRF</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1f3a5f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Estudo PRF">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root{--bg:#f3f6fa;--card:#fff;--ink:#14202e;--mut:#5b6b7d;--pri:#1f3a5f;--acc:#2e7d32;--warn:#c62828;--line:#d5dde7}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1720;--card:#18222e;--ink:#e8eef5;--mut:#9fb0c3;--pri:#6ea6ea;--acc:#66bb6a;--warn:#ef5350;--line:#2b3a4a}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body{padding:env(safe-area-inset-top) 0 calc(76px + env(safe-area-inset-bottom)) 0}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px 6px}
+header h1{font-size:18px;margin:0}
+#chip{font-size:13px;padding:5px 10px;border-radius:99px;background:var(--card);border:1px solid var(--line);color:var(--mut)}
+#chip.pend{color:var(--warn);border-color:var(--warn)}
+main{padding:0 16px}
+.tab{display:none}.tab.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:10px 0}
+label{display:block;font-size:13px;color:var(--mut);margin:10px 0 4px}
+select,input,textarea{width:100%;font-size:17px;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+textarea{min-height:84px}
+.row{display:flex;gap:10px}.row>*{flex:1}
+button{font-size:17px;font-weight:600;padding:14px;border-radius:14px;border:0;background:var(--pri);color:#fff;width:100%;margin-top:10px}
+button.sec{background:transparent;color:var(--pri);border:1.5px solid var(--pri)}
+button.ok{background:var(--acc)}button.bad{background:var(--warn)}
+button:disabled{opacity:.45}
+.big{font-size:68px;font-weight:700;text-align:center;letter-spacing:1px;font-variant-numeric:tabular-nums;margin:6px 0}
+.mid{font-size:34px;font-weight:700;text-align:center;font-variant-numeric:tabular-nums}
+.sub{text-align:center;color:var(--mut);font-size:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+.grid3 b{display:block;font-size:24px;font-variant-numeric:tabular-nums}.grid3 span{font-size:12px;color:var(--mut)}
+.note{font-size:13px;color:var(--mut);line-height:1.4}
+.warnbox{background:rgba(198,40,40,.12);border:1px solid var(--warn);border-radius:12px;padding:10px;font-size:13px;margin-top:10px}
+.list div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav button{margin:0;border-radius:0;background:transparent;color:var(--mut);font-size:12px;padding:10px 2px;font-weight:600}
+nav button.on{color:var(--pri)}
+nav button i{display:block;font-style:normal;font-size:21px}
+#toast{position:fixed;left:16px;right:16px;bottom:calc(88px + env(safe-area-inset-bottom));background:#222;color:#fff;padding:12px 14px;border-radius:12px;font-size:14px;display:none;z-index:9}
+.counter{font-size:96px;font-weight:800;text-align:center;line-height:1.1;margin:6px 0}
+.tapbtn{height:120px;font-size:34px}
+</style>
+</head>
+<body>
+<header><h1>Estudo PRF</h1><div id="chip">sincronizado</div></header>
+<main>
+
+<section id="estudo" class="tab on">
+ <div class="card">
+  <label>Matéria</label><select id="e_mat"></select>
+  <div class="sub" id="e_fase" style="margin-top:14px">Foco</div>
+  <div class="big" id="e_tempo">25:00</div>
+  <div class="sub" id="e_info"></div>
+  <button id="e_start" class="ok">Iniciar foco</button>
+  <div class="row"><button id="e_pause" class="sec">Pausar</button><button id="e_fim" class="sec">Encerrar e registrar</button></div>
+  <button id="e_skip" class="sec" style="display:none">Pular pausa</button>
+ </div>
+ <div class="note">O tempo de foco concluído vai para a aba Horas da planilha. Pausas não contam.</div>
+</section>
+
+<section id="corrida" class="tab">
+ <div class="card">
+  <label>Tipo</label>
+  <select id="c_tipo"><option>Livre</option><option>Teste 12 min</option><option>Intervalado</option><option>Longo</option><option>Regenerativo</option></select>
+  <div class="big" id="c_tempo">00:00</div>
+  <div class="grid3"><div><b id="c_km">0,00</b><span>km</span></div><div><b id="c_pace">--:--</b><span>pace atual</span></div><div><b id="c_pmed">--:--</b><span>pace médio</span></div></div>
+  <div class="sub" id="c_gps" style="margin-top:10px">GPS desligado</div>
+  <button id="c_start" class="ok">Iniciar corrida</button>
+  <div class="row"><button id="c_pause" class="sec">Pausar</button><button id="c_fim" class="bad">Finalizar</button></div>
+  <div id="c_warn" class="warnbox" style="display:none"></div>
+ </div>
+ <div class="card" id="c_fechar" style="display:none">
+  <b>Salvar corrida</b>
+  <div class="row"><div><label>Distância (km)</label><input id="c_f_km" inputmode="decimal"></div><div><label>Tempo (min)</label><input id="c_f_min" inputmode="decimal"></div></div>
+  <button id="c_salvar" class="ok">Salvar na planilha</button><button id="c_descartar" class="sec">Descartar</button>
+ </div>
+ <details class="card"><summary>Registrar corrida sem GPS (esteira, outro app)</summary>
+  <label>Tipo</label><select id="m_tipo"><option>Livre</option><option>Teste 12 min</option><option>Intervalado</option><option>Longo</option><option>Regenerativo</option></select>
+  <div class="row"><div><label>Distância (km)</label><input id="m_km" inputmode="decimal"></div><div><label>Tempo (min)</label><input id="m_min" inputmode="decimal"></div></div>
+  <label>Origem</label><select id="m_orig"><option>Manual</option><option>Esteira</option><option>Outro app</option></select>
+  <button id="m_salvar">Registrar</button>
+ </details>
+ <div class="note">Mantenha o app aberto e a tela ligada durante a corrida. No iPhone o GPS pode parar com a tela bloqueada; se isso acontecer, o app avisa e soma a distância em linha reta do trecho sem sinal.</div>
+</section>
+
+<section id="taf" class="tab">
+ <div class="card">
+  <label>Exercício do TAF</label><select id="t_ex"></select>
+  <div id="t_area"></div>
+ </div>
+ <div class="note">A marca vai para o registro da aba TAF e entra na comparação com a sua meta.</div>
+</section>
+
+<section id="academia" class="tab">
+ <div class="card">
+  <div class="row"><div><label>Treino</label><select id="a_treino"><option>Superiores</option><option>Inferiores</option><option>Full body</option><option>Core</option><option>Barra e flexão (TAF)</option><option>Livre</option></select></div></div>
+  <label>Exercício</label><input id="a_ex" list="a_lista" autocomplete="off" placeholder="Ex.: Supino reto">
+  <datalist id="a_lista"></datalist>
+  <div class="sub" id="a_dica"></div>
+  <div class="row"><div><label>Reps</label><input id="a_reps" inputmode="numeric"></div><div><label>Carga (kg)</label><input id="a_carga" inputmode="decimal"></div><div><label>RPE</label><input id="a_rpe" inputmode="numeric" placeholder="1-10"></div></div>
+  <button id="a_add" class="ok">Registrar série</button>
+  <div class="row"><button id="a_undo" class="sec">Desfazer última</button><button id="a_rest" class="sec">Descanso 90s</button></div>
+  <div class="mid" id="a_timer"></div>
+ </div>
+ <div class="card"><b>Séries de hoje</b><div class="list" id="a_hoje"></div></div>
+</section>
+
+<section id="erro" class="tab">
+ <div class="card">
+  <label>Tópico</label><select id="r_top"></select>
+  <label>Tipo do erro</label><select id="r_tipo"></select>
+  <label>Confiança</label><select id="r_conf"><option>Certeza</option><option>Dúvida</option><option>Chute</option></select>
+  <label>Regra para não errar de novo</label><textarea id="r_regra" placeholder="Quando aparecer X, lembre que Y"></textarea>
+  <div class="row"><div><label>Lei / artigo</label><input id="r_lei"></div><div><label>Fonte / nº da questão</label><input id="r_fonte"></div></div>
+  <button id="r_salvar" class="ok">Salvar erro</button>
+ </div>
+</section>
+
+<section id="cfg" class="tab">
+ <div class="card">
+  <label>URL do Apps Script</label><input id="g_url" placeholder="https://script.google.com/macros/s/.../exec" autocapitalize="off" autocorrect="off">
+  <label>Chave</label><input id="g_token" type="password" autocapitalize="off" autocorrect="off">
+  <div class="row"><div><label>Foco (min)</label><input id="g_foco" inputmode="numeric"></div><div><label>Pausa (min)</label><input id="g_pausa" inputmode="numeric"></div><div><label>Pausa longa</label><input id="g_longa" inputmode="numeric"></div></div>
+  <label>Descanso da academia (s)</label><input id="g_desc" inputmode="numeric">
+  <button id="g_salvar">Salvar configuração</button>
+  <button id="g_listas" class="sec">Testar conexão e baixar listas</button>
+  <button id="g_sync" class="sec">Enviar pendências agora</button>
+  <div class="note" id="g_status" style="margin-top:10px"></div>
+ </div>
+ <div class="card"><b>Pendências</b><div class="list" id="g_fila"></div></div>
+ <div class="note">Os dados ficam neste aparelho até serem enviados. Sem internet o app guarda e envia depois.</div>
+</section>
+
+</main>
+<nav id="nav">
+ <button data-t="estudo" class="on"><i>⏱</i>Estudo</button>
+ <button data-t="corrida"><i>🏃</i>Corrida</button>
+ <button data-t="taf"><i>🎯</i>TAF</button>
+ <button data-t="academia"><i>🏋️</i>Academia</button>
+ <button data-t="erro"><i>📝</i>Erro</button>
+ <button data-t="cfg"><i>⚙️</i>Ajustes</button>
+</nav>
+<div id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
