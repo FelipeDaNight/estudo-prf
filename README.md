@@ -63,3 +63,10 @@ O script grava na primeira linha vazia das colunas azuis e não mexe nas colunas
 
 ## Testes
 Na pasta `tests`: `node test_codegs.js` (script, com planilha simulada) e `node test_app.js` (app com navegador simulado, GPS simulado e relógio acelerado; precisa de Playwright e de um servidor local na porta 8765).
+
+
+## Tela Hoje, desafios e visor de corrida
+
+- **Hoje** é a primeira tela: anéis de estudo (dia), corridas e academia (semana), próxima ação sugerida, sequência de dias de estudo (1 folga por semana não quebra), desafios da semana e recordes. Os números vêm dos registros feitos neste aparelho.
+- As metas ficam em **Ajustes > Metas dos desafios**.
+- **Visor de corrida**: abre em tela cheia ao iniciar. Mostra tempo, km, pace atual e médio, trajeto, aviso por voz a cada km e pausa automática ao parar. Mantenha a tela ligada.

@@ -54,7 +54,7 @@
 
   // ---------------------------------------------------------------- configuração e listas
   const DEF = {
-    cfg: { url: "", token: "", foco: 25, pausa: 5, longa: 15, desc: 90, atalho: "Foco Estudo", convite: true },
+    cfg: { url: "", token: "", foco: 25, pausa: 5, longa: 15, desc: 90, atalho: "Foco Estudo", convite: true, voz: true, autopausa: true, metaMin: 90, metaHoras: 10, metaDias: 5, metaErros: 5, metaCorr: 3, metaKm: 12, metaAcad: 2 },
     listas: {
       materias: ["Língua Portuguesa", "Raciocínio Lógico", "Informática", "Física", "Ética e Cidadania", "Geopolítica", "Legislação de Trânsito", "Legislação Especial", "Direito Constitucional", "Direito Administrativo", "Direito Penal", "Processo Penal", "Direitos Humanos", "Legislação da PRF"],
       topicos: [],
@@ -91,7 +91,10 @@
   }
   function enqueue(tipo, dados) {
     const item = { id: uid(), tipo, dados, t: Date.now() };
+    const rec = registrarHist(item);
     fila.push(item); salvarFila(); sync(false);
+    if (rec) setTimeout(() => toast("🏆 " + rec), 1500);
+    pintarHoje();
     return item;
   }
   async function chamar(corpo) {
@@ -143,6 +146,123 @@
       $("g_status").textContent = "Conectado. Listas atualizadas: " + (listas.materias || []).length + " matérias, " + (listas.topicos || []).length + " tópicos.";
       toast("Conectado.");
     } catch (e) { $("g_status").textContent = "Falha na conexão: " + e.message; toast("Falha na conexão."); }
+  }
+
+
+  // ---------------------------------------------------------------- histórico local, desafios, sequência, recordes
+  const fmtData = (dt) => dt.getFullYear() + "-" + pad(dt.getMonth() + 1) + "-" + pad(dt.getDate());
+  const paraData = (s) => { const p = s.split("-").map(Number); return new Date(p[0], p[1] - 1, p[2], 12); };
+  const addDias = (s, n) => { const dt = paraData(s); dt.setDate(dt.getDate() + n); return fmtData(dt); };
+  const iniSemana = (s) => addDias(s, -((paraData(s).getDay() + 6) % 7));
+  const diasEntre = (a, b) => Math.round((paraData(b) - paraData(a)) / 86400000);
+  const fmt1 = (n) => String(Math.round(n * 10) / 10).replace(".", ",");
+  let hist = LS.get("hist", []);
+
+  function recordes() {
+    const r = { maiorKm: 0, cooper: 0, cargas: {} };
+    hist.forEach((x) => {
+      if (x.k === "corrida" && x.v > r.maiorKm) r.maiorKm = x.v;
+      if (x.k === "taf" && /12 min/i.test(x.ex || "") && x.v > r.cooper) r.cooper = x.v;
+      if (x.k === "academia" && x.v > 0 && !(r.cargas[x.ex] >= x.v)) r.cargas[x.ex] = x.v;
+    });
+    return r;
+  }
+  function registrarHist(item) {
+    const d = item.dados || {}; const prev = recordes(); let ev = null, rec = "";
+    if (item.tipo === "estudo") ev = { k: "estudo", v: d.minutos };
+    else if (item.tipo === "corrida") {
+      ev = { k: "corrida", v: d.km, m: d.min };
+      if (prev.maiorKm > 0 && d.km > prev.maiorKm) rec = "Novo recorde: maior corrida (" + fmt1(d.km) + " km)";
+    } else if (item.tipo === "academia") {
+      ev = { k: "academia", ex: d.exercicio, v: d.carga || 0 };
+      if (prev.cargas[d.exercicio] > 0 && d.carga > prev.cargas[d.exercicio]) rec = "Novo recorde de carga em " + d.exercicio + ": " + fmt1(d.carga) + " kg";
+    } else if (item.tipo === "taf") {
+      ev = { k: "taf", ex: d.exercicio, v: d.marca };
+      if (/12 min/i.test(d.exercicio || "") && prev.cooper > 0 && d.marca > prev.cooper) rec = "Novo recorde no teste de 12 min: " + d.marca + " m";
+    } else if (item.tipo === "erro") ev = { k: "erro" };
+    if (!ev) return "";
+    ev.id = item.id; ev.d = d.data || hoje(); hist.push(ev);
+    const corte = addDias(hoje(), -200); hist = hist.filter((x) => x.d >= corte); LS.set("hist", hist);
+    return rec;
+  }
+  function stats() {
+    const h = hoje(), ini = iniSemana(h);
+    const sem = hist.filter((x) => x.d >= ini && x.d <= h);
+    const soma = (a) => a.reduce((t, x) => t + (x.v || 0), 0);
+    const dias = (a) => new Set(a.map((x) => x.d)).size;
+    const est = sem.filter((x) => x.k === "estudo"), cor = sem.filter((x) => x.k === "corrida"), ac = sem.filter((x) => x.k === "academia"), er = sem.filter((x) => x.k === "erro");
+    return { estudoHoje: soma(est.filter((x) => x.d === h)), estudoSem: soma(est), diasEstudo: dias(est), corridas: cor.length, km: soma(cor), acad: dias(ac), erros: er.length, treinoHoje: ac.some((x) => x.d === h), ini };
+  }
+  function diasDesde(k) {
+    let u = ""; hist.forEach((x) => { if (x.k === k && x.d > u) u = x.d; });
+    return u ? diasEntre(u, hoje()) : null;
+  }
+  // dias seguidos de estudo; cada semana (seg-dom) tem 1 folga que não quebra a sequência; hoje sem estudo ainda não conta como falta
+  function sequencia() {
+    const dias = new Set(hist.filter((x) => x.k === "estudo").map((x) => x.d));
+    let d = hoje(), n = 0; const folga = {};
+    if (!dias.has(d)) d = addDias(d, -1);
+    for (let i = 0; i < 200; i++) {
+      if (dias.has(d)) n++;
+      else { const w = iniSemana(d); if (folga[w]) break; folga[w] = 1; }
+      d = addDias(d, -1);
+    }
+    return n;
+  }
+  let hAba = "estudo";
+  function anel(i, pct, txt) {
+    const c = $("h_a" + i); c.setAttribute("stroke-dasharray", Math.min(100, Math.round(pct)) + " 100");
+    c.setAttribute("class", "fg" + (pct >= 100 ? " feito" : "")); $("h_t" + i).textContent = txt;
+  }
+  function proximaAcao(s) {
+    const dc = diasDesde("corrida");
+    if (s.estudoHoje < cfg.metaMin) return { aba: "estudo", btn: "Estudar agora", msg: s.estudoHoje ? "Faltam " + (cfg.metaMin - s.estudoHoje) + " min de estudo para a meta de hoje." : "Comece pelo estudo de hoje: meta de " + cfg.metaMin + " min." };
+    if (s.corridas < cfg.metaCorr && (dc === null || dc >= 2)) return { aba: "corrida", btn: "Correr agora", msg: dc === null ? "Você ainda não registrou nenhuma corrida." : "Você não corre há " + dc + " dias. Meta da semana: " + cfg.metaCorr + " corridas." };
+    if (s.acad < cfg.metaAcad && !s.treinoHoje) return { aba: "academia", btn: "Registrar treino", msg: "Treino de academia da semana: " + s.acad + " de " + cfg.metaAcad + "." };
+    return { aba: "estudo", btn: "Estudar mais", msg: "Metas do dia em dia. Abra a aba Revisar erros da planilha e revise o que venceu." };
+  }
+  function pintarHoje() {
+    if (!$("h_data")) return;
+    const s = stats(), h = hoje();
+    try { const tx = paraData(h).toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }); $("h_data").textContent = tx.charAt(0).toUpperCase() + tx.slice(1); } catch (e) { $("h_data").textContent = h; }
+    anel(1, s.estudoHoje / cfg.metaMin * 100, s.estudoHoje + "/" + cfg.metaMin);
+    anel(2, s.corridas / cfg.metaCorr * 100, s.corridas + "/" + cfg.metaCorr);
+    anel(3, s.acad / cfg.metaAcad * 100, s.acad + "/" + cfg.metaAcad);
+    const pa = proximaAcao(s); hAba = pa.aba; $("h_msg").textContent = pa.msg; $("h_go").textContent = pa.btn;
+    $("h_seq").textContent = sequencia(); $("h_km").textContent = fmt1(s.km); $("h_hs").textContent = fmt1(s.estudoSem / 60);
+    const al = [];
+    const de = diasDesde("estudo"), dc = diasDesde("corrida"), da = diasDesde("academia");
+    if (de !== null && de >= 2) al.push("Você não estuda há " + de + " dias.");
+    if (dc !== null && dc >= 3) al.push("Você não corre há " + dc + " dias.");
+    if (da !== null && da >= 4) al.push("Você não treina academia há " + da + " dias.");
+    const ca = $("h_alertas"); ca.style.display = al.length ? "block" : "none";
+    ca.innerHTML = ""; al.forEach((t) => { const p = document.createElement("div"); p.className = "note"; p.style.cssText = "font-size:14px;color:var(--warn)"; p.textContent = "⚠ " + t; ca.appendChild(p); });
+    const des = [
+      { n: "Estudar " + fmt1(cfg.metaHoras) + " h", a: s.estudoSem / 60, m: cfg.metaHoras, f: (v) => fmt1(v) + " h" },
+      { n: "Estudar em " + cfg.metaDias + " dias", a: s.diasEstudo, m: cfg.metaDias, f: (v) => String(v) },
+      { n: "Correr " + cfg.metaCorr + " vezes", a: s.corridas, m: cfg.metaCorr, f: (v) => String(v) },
+      { n: "Somar " + fmt1(cfg.metaKm) + " km", a: s.km, m: cfg.metaKm, f: (v) => fmt1(v) + " km" },
+      { n: cfg.metaAcad + " treinos de academia", a: s.acad, m: cfg.metaAcad, f: (v) => String(v) },
+      { n: "Registrar " + cfg.metaErros + " erros no caderno", a: s.erros, m: cfg.metaErros, f: (v) => String(v) },
+    ];
+    const box = $("h_desafios"); box.innerHTML = ""; let feitos = 0;
+    des.forEach((x) => {
+      const ok = x.a >= x.m; if (ok) feitos++;
+      const d = document.createElement("div"); d.className = "desafio";
+      d.innerHTML = '<div class="l"><span></span><em></em></div><div class="barra"><i></i></div>';
+      d.querySelector("span").textContent = (ok ? "✅ " : "") + x.n;
+      d.querySelector("em").textContent = x.f(Math.min(x.a, 999999)) + " / " + x.f(x.m);
+      const i = d.querySelector("i"); i.style.width = Math.min(100, x.a / x.m * 100) + "%"; if (ok) i.className = "feito";
+      box.appendChild(d);
+    });
+    const fim = addDias(s.ini, 6);
+    $("h_cont").textContent = feitos + " de " + des.length + " · termina em " + diasEntre(h, fim) + " dia(s)";
+    const r = recordes(), rl = $("h_rec"); rl.innerHTML = ""; let n = 0;
+    const lin = (a, b) => { const d = document.createElement("div"); d.innerHTML = "<span></span><b></b>"; d.firstChild.textContent = a; d.lastChild.textContent = b; rl.appendChild(d); n++; };
+    if (r.maiorKm) lin("Maior corrida", fmt1(r.maiorKm) + " km");
+    if (r.cooper) lin("Teste de 12 min", r.cooper + " m");
+    Object.keys(r.cargas).sort((a, b) => r.cargas[b] - r.cargas[a]).slice(0, 3).forEach((k) => lin(k, fmt1(r.cargas[k]) + " kg"));
+    if (!n) rl.innerHTML = "<div><span>Sem recordes ainda. Registre corridas e treinos.</span></div>";
   }
 
   // ---------------------------------------------------------------- POMODORO
@@ -240,7 +360,7 @@
     },
   };
 
-  const C = Object.assign({ estado: "parado", ini: 0, pausaIni: 0, pausado: 0, geo: Geo.novo(), tipo: "Livre", fim: 0 }, LS.get("corrida", {}));
+  const C = Object.assign({ estado: "parado", ini: 0, pausaIni: 0, pausado: 0, geo: Geo.novo(), tipo: "Livre", fim: 0, trilha: [], kmAnun: 0, ultMove: 0, auto: false }, LS.get("corrida", {}));
   let watchId = null, ultimoPonto = 0;
   function cElapsed() {
     if (C.estado === "parado") return 0;
@@ -248,6 +368,57 @@
     return Math.max(0, ref - C.ini - C.pausado);
   }
   function salvarCorrida() { LS.set("corrida", C); }
+
+  // ---------------------------------------------------------------- visor de corrida (tela cheia)
+  let desenhoN = -1, confFim = 0;
+  function falar(txt) {
+    try { if (cfg.voz && "speechSynthesis" in window) { const u = new SpeechSynthesisUtterance(txt); u.lang = "pt-BR"; window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); } } catch (e) { /* sem voz */ }
+  }
+  function anunciarKm(km) {
+    const el = cElapsed(), s = Math.round(el / 1000), pm = C.geo.dist > 50 ? (el / 1000) / (C.geo.dist / 1000) : NaN;
+    let txt = km + (km === 1 ? " quilômetro" : " quilômetros") + ". Tempo " + Math.floor(s / 60) + " minutos e " + (s % 60) + " segundos.";
+    if (isFinite(pm)) { const p = Math.round(pm); txt += " Pace médio " + Math.floor(p / 60) + " e " + pad(p % 60) + " por quilômetro."; }
+    if (cfg.voz) falar(txt); else beep(1);
+    toast(km + " km · " + mmss(el));
+  }
+  function desenharTrilha() {
+    const cv = $("v_map"), t = C.trilha || [], g = cv.getContext("2d"), W = cv.width, H = cv.height;
+    g.clearRect(0, 0, W, H);
+    if (t.length < 2) { g.fillStyle = "#5b6b7d"; g.font = "20px sans-serif"; g.textAlign = "center"; g.fillText("O trajeto aparece quando você começar a correr", W / 2, H / 2); return; }
+    let la0 = Infinity, la1 = -Infinity, lo0 = Infinity, lo1 = -Infinity;
+    t.forEach((p) => { la0 = Math.min(la0, p[0]); la1 = Math.max(la1, p[0]); lo0 = Math.min(lo0, p[1]); lo1 = Math.max(lo1, p[1]); });
+    const kx = Math.cos(((la0 + la1) / 2) * Math.PI / 180);
+    const w = Math.max((lo1 - lo0) * kx, 0.0005), h = Math.max(la1 - la0, 0.0005), pad2 = 18;
+    const esc = Math.min((W - 2 * pad2) / w, (H - 2 * pad2) / h), ox = (W - w * esc) / 2, oy = (H - h * esc) / 2;
+    const X = (p) => ox + (p[1] - lo0) * kx * esc, Y = (p) => H - (oy + (p[0] - la0) * esc);
+    g.strokeStyle = "#6ea6ea"; g.lineWidth = 4; g.lineJoin = "round"; g.beginPath();
+    t.forEach((p, i) => { if (i) g.lineTo(X(p), Y(p)); else g.moveTo(X(p), Y(p)); }); g.stroke();
+    const f = t[t.length - 1]; g.fillStyle = "#66bb6a"; g.beginPath(); g.arc(X(f), Y(f), 7, 0, 7); g.fill();
+  }
+  function pintarVisor() {
+    if (!$("visor").classList.contains("on")) return;
+    const el = cElapsed(), teste = C.tipo === "Teste 12 min";
+    $("v_tipo").textContent = C.tipo;
+    $("v_lab").textContent = teste && C.estado !== "fim" ? "restante do teste" : "tempo";
+    $("v_tempo").textContent = teste && C.estado !== "fim" ? mmss(720000 - el) : mmss(el);
+    $("v_km").textContent = fmtKm(C.geo.dist);
+    $("v_pace").textContent = paceStr(Geo.paceAtual(C.geo));
+    $("v_pmed").textContent = C.geo.dist > 50 ? paceStr((el / 1000) / (C.geo.dist / 1000)) : "--:--";
+    $("v_gps").textContent = $("c_gps").textContent;
+    $("v_aviso").textContent = $("c_warn").style.display === "block" ? $("c_warn").textContent : "";
+    $("v_pause").textContent = C.estado === "pausada" ? (C.auto ? "Pausa automática: volte a correr" : "Continuar") : "Pausar";
+    $("v_pause").disabled = C.estado === "parado" || C.estado === "fim";
+    const n = (C.trilha || []).length; if (n !== desenhoN) { desenhoN = n; desenharTrilha(); }
+  }
+  function abrirVisor() { $("visor").classList.add("on"); desenhoN = -1; pintarVisor(); }
+  function fecharVisor() { $("visor").classList.remove("on"); }
+  function autoPausa() {
+    if (!cfg.autopausa || C.estado !== "correndo" || C.tipo === "Teste 12 min") return;
+    const ag = Date.now();
+    if (C.ultMove && ag - C.ultMove > 20000 && ag - ultimoPonto < 6000) {
+      C.estado = "pausada"; C.pausaIni = ag; C.auto = true; salvarCorrida(); falar("Corrida pausada"); pintarCorrida();
+    }
+  }
   function pintarCorrida() {
     const el = cElapsed();
     const teste = $("c_tipo").value === "Teste 12 min" && C.tipo === "Teste 12 min";
@@ -264,16 +435,29 @@
     if (C.geo.gap > 0) msgs.push("O GPS ficou " + Math.round(C.geo.gap) + " s sem sinal; a distância desse trecho foi estimada em linha reta e pode estar subestimada.");
     if (C.geo.ignorados > 5) msgs.push("Muitos pontos ruins ignorados (" + C.geo.ignorados + "). Em local aberto o sinal melhora.");
     w.style.display = msgs.length ? "block" : "none"; w.textContent = msgs.join(" ");
+    $("c_visor").style.display = (C.estado === "correndo" || C.estado === "pausada") ? "block" : "none";
+    pintarVisor();
   }
   function gpsPonto(pos) {
     const p = { lat: pos.coords.latitude, lon: pos.coords.longitude, acc: pos.coords.accuracy, ts: pos.timestamp || Date.now() };
     ultimoPonto = Date.now();
     const gps = $("c_gps");
     gps.textContent = "GPS ativo · precisão " + Math.round(p.acc) + " m" + (p.acc > 30 ? " (fraca, ignorando)" : "");
-    if (C.estado !== "correndo") return;
-    Geo.add(C.geo, p);
+    const auto = C.estado === "pausada" && C.auto;
+    if (C.estado !== "correndo" && !auto) return;
+    const r = Geo.add(C.geo, p);
+    if (r.aceito) {
+      C.trilha = C.trilha || []; C.trilha.push([Math.round(p.lat * 1e5) / 1e5, Math.round(p.lon * 1e5) / 1e5]);
+      if (C.trilha.length > 1500) { const n0 = C.trilha.length; C.trilha = C.trilha.filter((_, i) => i % 2 === 0 || i === n0 - 1); }
+      if (r.d > 0 || !C.ultMove) C.ultMove = Date.now();
+      if (auto && r.d > 0) { C.pausado += Date.now() - C.pausaIni; C.estado = "correndo"; C.auto = false; falar("Retomando"); }
+    }
     salvarCorrida();
-    checar12();
+    if (C.estado === "correndo") {
+      const km = Math.floor(C.geo.dist / 1000);
+      if (km > (C.kmAnun || 0)) { C.kmAnun = km; anunciarKm(km); }
+      checar12();
+    }
     pintarCorrida();
   }
   function gpsErro(err) {
@@ -286,12 +470,14 @@
   }
   function gpsDesligar() { if (watchId !== null) { navigator.geolocation.clearWatch(watchId); watchId = null; } }
   function corridaIniciar() {
-    if (C.estado === "parado") { C.geo = Geo.novo(); C.ini = Date.now(); C.pausado = 0; C.tipo = $("c_tipo").value; C.fim = 0; wakeOn(); }
+    if (C.estado === "parado") { C.geo = Geo.novo(); C.ini = Date.now(); C.pausado = 0; C.tipo = $("c_tipo").value; C.fim = 0; C.trilha = []; C.kmAnun = 0; wakeOn(); falar("Corrida iniciada"); }
     else if (C.estado === "pausada") { C.pausado += Date.now() - C.pausaIni; }
-    C.estado = "correndo"; salvarCorrida(); gpsLigar(); pintarCorrida();
+    C.auto = false; C.ultMove = Date.now();
+    C.estado = "correndo"; salvarCorrida(); gpsLigar();
     $("c_fechar").style.display = "none";
+    abrirVisor(); pintarCorrida();
   }
-  function corridaPausar() { C.estado = "pausada"; C.pausaIni = Date.now(); salvarCorrida(); pintarCorrida(); }
+  function corridaPausar() { C.estado = "pausada"; C.auto = false; C.pausaIni = Date.now(); salvarCorrida(); pintarCorrida(); }
   function corridaFinalizar() {
     if (C.estado === "correndo" || C.estado === "pausada") { if (C.estado === "pausada") C.pausado += Date.now() - C.pausaIni; C.fim = Date.now(); }
     gpsDesligar(); wakeOff();
@@ -300,7 +486,7 @@
     C.estado = "fim"; C.msFinal = ms; salvarCorrida();
     $("c_f_km").value = (C.geo.dist / 1000).toFixed(2).replace(".", ",");
     $("c_f_min").value = (ms / 60000).toFixed(1).replace(".", ",");
-    $("c_fechar").style.display = "block"; pintarCorrida();
+    $("c_fechar").style.display = "block"; fecharVisor(); abrir("corrida"); pintarCorrida();
   }
   function checar12() {
     if (C.tipo === "Teste 12 min" && C.estado === "correndo" && cElapsed() >= 720000) { C.fim = C.ini + C.pausado + 720000; beep(4); notify("12 minutos! Pare."); corridaFinalizar(); }
@@ -313,7 +499,7 @@
     if (C.tipo === "Teste 12 min") enqueue("taf", { data: d, exercicio: (listas.taf.find((x) => /12 min/i.test(x)) || "Corrida de 12 minutos (m)"), marca: Math.round(km * 1000) });
     corridaLimpar(); toast("Corrida salva.");
   }
-  function corridaLimpar() { C.estado = "parado"; C.geo = Geo.novo(); C.ini = 0; C.pausado = 0; C.fim = 0; salvarCorrida(); $("c_fechar").style.display = "none"; pintarCorrida(); }
+  function corridaLimpar() { C.estado = "parado"; C.geo = Geo.novo(); C.ini = 0; C.pausado = 0; C.fim = 0; C.trilha = []; C.kmAnun = 0; C.auto = false; fecharVisor(); salvarCorrida(); $("c_fechar").style.display = "none"; pintarCorrida(); }
   function corridaManual() {
     const km = num($("m_km").value), min = num($("m_min").value);
     if (km === null || min === null || km <= 0 || min <= 0) { toast("Preencha distância e tempo."); return; }
@@ -405,7 +591,7 @@
   function acUndo() {
     const u = hojeAc.series[hojeAc.series.length - 1]; if (!u) return;
     if (!fila.some((i) => i.id === u.id)) { toast("Essa série já foi enviada. Corrija direto na planilha."); return; }
-    fila = fila.filter((i) => i.id !== u.id); salvarFila(); hojeAc.series.pop(); LS.set("acHoje", hojeAc); pintarAcademia();
+    fila = fila.filter((i) => i.id !== u.id); hist = hist.filter((x) => x.id !== u.id); LS.set("hist", hist); salvarFila(); pintarHoje(); hojeAc.series.pop(); LS.set("acHoje", hojeAc); pintarAcademia();
   }
   function acDescanso() {
     clearInterval(descAt); const fim = Date.now() + (cfg.desc || 90) * 1000; const el = $("a_timer");
@@ -428,14 +614,22 @@
     document.querySelectorAll("#nav button").forEach((b) => b.classList.toggle("on", b.dataset.t === t));
     window.scrollTo(0, 0);
     if (t === "cfg") pintarFila();
+    if (t === "hoje") pintarHoje();
   }
   function pintarCfg() {
     $("g_url").value = cfg.url; $("g_token").value = cfg.token; $("g_foco").value = cfg.foco; $("g_pausa").value = cfg.pausa; $("g_longa").value = cfg.longa; $("g_desc").value = cfg.desc; $("g_atalho").value = cfg.atalho || "";
+    $("g_voz").value = cfg.voz ? "1" : "0"; $("g_auto").value = cfg.autopausa ? "1" : "0";
+    $("g_m_min").value = cfg.metaMin; $("g_m_horas").value = cfg.metaHoras; $("g_m_dias").value = cfg.metaDias; $("g_m_err").value = cfg.metaErros;
+    $("g_m_corr").value = cfg.metaCorr; $("g_m_km").value = cfg.metaKm; $("g_m_acad").value = cfg.metaAcad;
   }
   function salvarCfg() {
     cfg.url = $("g_url").value.trim(); cfg.token = $("g_token").value.trim();
     cfg.foco = Math.max(1, num($("g_foco").value) || 25); cfg.pausa = Math.max(1, num($("g_pausa").value) || 5); cfg.longa = Math.max(1, num($("g_longa").value) || 15); cfg.desc = Math.max(10, num($("g_desc").value) || 90); cfg.atalho = $("g_atalho").value.trim(); if (cfg.atalho) cfg.convite = true;
-    LS.set("cfg", cfg); if (!P.total && !P.ativo) pintarPomo(); toast("Configuração salva.");
+    cfg.voz = $("g_voz").value === "1"; cfg.autopausa = $("g_auto").value === "1";
+    const pos = (id, d) => Math.max(0.5, num($(id).value) || d);
+    cfg.metaMin = Math.round(pos("g_m_min", 90)); cfg.metaHoras = pos("g_m_horas", 10); cfg.metaDias = Math.min(7, Math.round(pos("g_m_dias", 5))); cfg.metaErros = Math.round(pos("g_m_err", 5));
+    cfg.metaCorr = Math.round(pos("g_m_corr", 3)); cfg.metaKm = pos("g_m_km", 12); cfg.metaAcad = Math.round(pos("g_m_acad", 2));
+    LS.set("cfg", cfg); if (!P.total && !P.ativo) pintarPomo(); pintarHoje(); toast("Configuração salva.");
   }
 
   function iniciar() {
@@ -443,6 +637,14 @@
     $("e_start").onclick = pomoIniciar; $("e_pause").onclick = pomoPausar; $("e_fim").onclick = pomoEncerrar; $("e_skip").onclick = () => { if (P.ativo) wakeOff(); pomoReset("foco"); };
     $("e_foco_sim").onclick = focoAtivar; $("e_foco_nao").onclick = () => { LS.set("focoAdiado", hoje()); $("e_convite").style.display = "none"; };
     $("e_foco_nunca").onclick = () => { cfg.convite = false; LS.set("cfg", cfg); $("e_convite").style.display = "none"; toast("Combinado. Reative em Ajustes se quiser."); };
+    $("c_visor").onclick = abrirVisor; $("v_min").onclick = fecharVisor;
+    $("v_pause").onclick = () => { if (C.estado === "correndo") corridaPausar(); else if (C.estado === "pausada") corridaIniciar(); };
+    $("v_fim").onclick = () => {
+      if (Date.now() - confFim < 3000) { confFim = 0; $("v_fim").textContent = "Finalizar"; corridaFinalizar(); return; }
+      confFim = Date.now(); $("v_fim").textContent = "Toque de novo para finalizar";
+      setTimeout(() => { if (confFim) { confFim = 0; $("v_fim").textContent = "Finalizar"; } }, 3000);
+    };
+    $("h_go").onclick = () => abrir(hAba);
     $("c_start").onclick = corridaIniciar; $("c_pause").onclick = corridaPausar; $("c_fim").onclick = corridaFinalizar;
     $("c_salvar").onclick = corridaSalvar; $("c_descartar").onclick = () => { corridaLimpar(); toast("Corrida descartada."); };
     $("m_salvar").onclick = corridaManual;
@@ -450,17 +652,17 @@
     $("a_add").onclick = acAdd; $("a_undo").onclick = acUndo; $("a_rest").onclick = acDescanso; $("a_ex").oninput = dicaAcademia;
     $("r_salvar").onclick = erroSalvar;
     $("g_salvar").onclick = salvarCfg; $("g_listas").onclick = () => { salvarCfg(); baixarListas(); }; $("g_sync").onclick = () => sync(true);
-    pintarListas(); pintarCfg(); pintarPomo(); pintarCorrida(); pintarAcademia(); chip(); pintarFila();
-    setInterval(() => { pomoTick(); if (C.estado === "correndo") { checar12(); pintarCorrida(); } }, 250);
+    pintarListas(); pintarCfg(); pintarPomo(); pintarCorrida(); pintarAcademia(); chip(); pintarFila(); pintarHoje();
+    setInterval(() => { pomoTick(); autoPausa(); if (C.estado === "correndo") { checar12(); pintarCorrida(); } }, 250);
     window.addEventListener("online", () => sync(false));
     setInterval(() => { if (fila.some((i) => !i.erro)) sync(false); }, 60000); // tenta de novo se a rede estava ruim
-    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") { pomoTick(); sync(false); if (C.estado === "correndo") { gpsLigar(); } } });
+    document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") { pomoTick(); pintarHoje(); sync(false); if (C.estado === "correndo") { gpsLigar(); } } });
     if (C.estado === "correndo" || C.estado === "pausada") { $("c_gps").textContent = "Corrida em andamento (retomada)."; if (C.estado === "correndo") gpsLigar(); }
     if (C.estado === "fim") { $("c_fechar").style.display = "block"; $("c_f_km").value = (C.geo.dist / 1000).toFixed(2).replace(".", ","); $("c_f_min").value = ((C.msFinal || 0) / 60000).toFixed(1).replace(".", ","); }
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => { /* sem SW */ });
     sync(false);
   }
 
-  window.__app = { urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
+  window.__app = { stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar); else iniciar();
 })();

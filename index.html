@@ -40,20 +40,78 @@ button:disabled{opacity:.45}
 .note{font-size:13px;color:var(--mut);line-height:1.4}
 .warnbox{background:rgba(198,40,40,.12);border:1px solid var(--warn);border-radius:12px;padding:10px;font-size:13px;margin-top:10px}
 .list div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
-nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.list div{gap:8px}.list span{min-width:0;overflow-wrap:anywhere}.list button{flex:none}
+html,body{overflow-x:hidden}
+nav{position:fixed;z-index:10;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
 nav button{margin:0;border-radius:0;background:transparent;color:var(--mut);font-size:12px;padding:10px 2px;font-weight:600}
 nav button.on{color:var(--pri)}
 nav button i{display:block;font-style:normal;font-size:21px}
 #toast{position:fixed;left:16px;right:16px;bottom:calc(88px + env(safe-area-inset-bottom));background:#222;color:#fff;padding:12px 14px;border-radius:12px;font-size:14px;display:none;z-index:9}
 .counter{font-size:96px;font-weight:800;text-align:center;line-height:1.1;margin:6px 0}
 .tapbtn{height:120px;font-size:34px}
+
+nav button{font-size:10.5px}
+nav button i{font-size:19px}
+.rings{display:flex;justify-content:space-around;text-align:center}
+.anel{width:30%}
+.aro{position:relative}
+.aro svg{display:block;width:100%;transform:rotate(-90deg)}
+.aro circle{fill:none;stroke-width:3.6}
+.aro .bg{stroke:var(--line)}
+.aro .fg{stroke:var(--pri);stroke-linecap:round}
+.aro .fg.feito{stroke:var(--acc)}
+.aro b{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);font-size:16px;font-variant-numeric:tabular-nums}
+.anel span{display:block;font-size:12px;color:var(--mut);margin-top:4px}
+.barra{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:6px}
+.barra i{display:block;height:100%;background:var(--pri);border-radius:99px}
+.barra i.feito{background:var(--acc)}
+.desafio{padding:9px 0;border-bottom:1px solid var(--line)}
+.desafio:last-child{border-bottom:0}
+.desafio .l{display:flex;justify-content:space-between;gap:8px;font-size:15px}
+.desafio .l em{font-style:normal;color:var(--mut);font-variant-numeric:tabular-nums}
+.kpi{display:flex;gap:6px}.kpi>div{flex:1;text-align:center}
+#visor{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:20;background:#000;color:#fff;padding:calc(12px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom));overflow:auto}
+#visor.on{display:block}
+#visor .v_top{display:flex;justify-content:space-between;gap:10px;font-size:13px;color:#9fb0c3}
+#visor .v_lab{text-align:center;color:#9fb0c3;font-size:13px;margin-top:8px}
+#visor .v_big{font-size:84px;font-weight:800;text-align:center;font-variant-numeric:tabular-nums;line-height:1.05}
+#visor .v_km{text-align:center;font-size:28px;color:#9fb0c3}
+#visor .v_km b{font-size:58px;color:#fff;font-variant-numeric:tabular-nums}
+#visor .v_row{display:grid;grid-template-columns:1fr 1fr;text-align:center;margin:6px 0}
+#visor .v_row b{display:block;font-size:40px;font-variant-numeric:tabular-nums}
+#visor .v_row span{font-size:12px;color:#9fb0c3}
+#v_map{display:block;width:100%;height:auto;background:#0c141d;border-radius:14px;margin:6px 0}
+#v_aviso{font-size:12px;color:#ffb74d;min-height:16px}
+#visor button.sec{color:#9fb0c3;border-color:#3a4a5c}
 </style>
 </head>
 <body>
 <header><h1>Estudo PRF</h1><div id="chip">sincronizado</div></header>
 <main>
 
-<section id="estudo" class="tab on">
+<section id="hoje" class="tab on">
+ <div class="sub" id="h_data" style="margin:6px 0 0"></div>
+ <div class="card">
+  <div class="rings">
+   <div class="anel"><div class="aro"><svg viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="15.9155"/><circle class="fg" id="h_a1" cx="18" cy="18" r="15.9155" pathLength="100" stroke-dasharray="0 100"/></svg><b id="h_t1">0</b></div><span>Estudo hoje (min)</span></div>
+   <div class="anel"><div class="aro"><svg viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="15.9155"/><circle class="fg" id="h_a2" cx="18" cy="18" r="15.9155" pathLength="100" stroke-dasharray="0 100"/></svg><b id="h_t2">0</b></div><span>Corridas na semana</span></div>
+   <div class="anel"><div class="aro"><svg viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="15.9155"/><circle class="fg" id="h_a3" cx="18" cy="18" r="15.9155" pathLength="100" stroke-dasharray="0 100"/></svg><b id="h_t3">0</b></div><span>Academia na semana</span></div>
+  </div>
+  <div class="note" id="h_msg" style="text-align:center;margin-top:14px;font-size:15px"></div>
+  <button id="h_go" class="ok">Estudar agora</button>
+ </div>
+ <div class="card" id="h_alertas" style="display:none"></div>
+ <div class="card kpi">
+  <div><div class="mid" id="h_seq">0</div><div class="sub">dias seguidos</div></div>
+  <div><div class="mid" id="h_km">0</div><div class="sub">km na semana</div></div>
+  <div><div class="mid" id="h_hs">0</div><div class="sub">h estudadas na semana</div></div>
+ </div>
+ <div class="card"><b>Desafios da semana</b> <span id="h_cont" class="note"></span><div id="h_desafios"></div></div>
+ <div class="card"><b>Recordes</b><div class="list" id="h_rec"></div></div>
+ <div class="note">Os números vêm dos registros feitos neste aparelho. A planilha continua sendo o arquivo completo.</div>
+</section>
+
+<section id="estudo" class="tab">
  <div class="card">
   <label>Matéria</label><select id="e_mat"></select>
   <div class="sub" id="e_fase" style="margin-top:14px">Foco</div>
@@ -82,6 +140,7 @@ nav button i{display:block;font-style:normal;font-size:21px}
   <button id="c_start" class="ok">Iniciar corrida</button>
   <div class="row"><button id="c_pause" class="sec">Pausar</button><button id="c_fim" class="bad">Finalizar</button></div>
   <div id="c_warn" class="warnbox" style="display:none"></div>
+  <button id="c_visor" class="sec" style="display:none">Abrir visor</button>
  </div>
  <div class="card" id="c_fechar" style="display:none">
   <b>Salvar corrida</b>
@@ -137,6 +196,13 @@ nav button i{display:block;font-style:normal;font-size:21px}
   <div class="row"><div><label>Foco (min)</label><input id="g_foco" inputmode="numeric"></div><div><label>Pausa (min)</label><input id="g_pausa" inputmode="numeric"></div><div><label>Pausa longa</label><input id="g_longa" inputmode="numeric"></div></div>
   <label>Descanso da academia (s)</label><input id="g_desc" inputmode="numeric">
   <label>Nome do atalho de Foco (app Atalhos do iPhone)</label><input id="g_atalho" placeholder="Foco Estudo" autocapitalize="off" autocorrect="off">
+  <label>Aviso por voz a cada km (corrida)</label><select id="g_voz"><option value="1">Ligado</option><option value="0">Desligado</option></select>
+  <label>Pausa automática ao parar de correr</label><select id="g_auto"><option value="1">Ligada</option><option value="0">Desligada</option></select>
+  <details style="margin-top:10px"><summary>Metas dos desafios</summary>
+   <div class="row"><div><label>Estudo por dia (min)</label><input id="g_m_min" inputmode="numeric"></div><div><label>Horas por semana</label><input id="g_m_horas" inputmode="decimal"></div></div>
+   <div class="row"><div><label>Dias de estudo/sem.</label><input id="g_m_dias" inputmode="numeric"></div><div><label>Erros/sem.</label><input id="g_m_err" inputmode="numeric"></div></div>
+   <div class="row"><div><label>Corridas/sem.</label><input id="g_m_corr" inputmode="numeric"></div><div><label>Km/sem.</label><input id="g_m_km" inputmode="decimal"></div><div><label>Academia/sem.</label><input id="g_m_acad" inputmode="numeric"></div></div>
+  </details>
   <div class="note">Crie no app Atalhos um atalho com a ação "Definir Foco" (ligar o Foco que você quiser) e coloque o nome dele aqui. Deixe em branco para não receber o convite.</div>
   <button id="g_salvar">Salvar configuração</button>
   <button id="g_listas" class="sec">Testar conexão e baixar listas</button>
@@ -149,13 +215,25 @@ nav button i{display:block;font-style:normal;font-size:21px}
 
 </main>
 <nav id="nav">
- <button data-t="estudo" class="on"><i>⏱</i>Estudo</button>
+ <button data-t="hoje" class="on"><i>🏠</i>Hoje</button>
+ <button data-t="estudo"><i>⏱</i>Estudo</button>
  <button data-t="corrida"><i>🏃</i>Corrida</button>
  <button data-t="taf"><i>🎯</i>TAF</button>
  <button data-t="academia"><i>🏋️</i>Academia</button>
  <button data-t="erro"><i>📝</i>Erro</button>
  <button data-t="cfg"><i>⚙️</i>Ajustes</button>
 </nav>
+<div id="visor">
+ <div class="v_top"><span id="v_tipo">Livre</span><span id="v_gps">GPS</span></div>
+ <div class="v_lab" id="v_lab">tempo</div>
+ <div class="v_big" id="v_tempo">00:00</div>
+ <div class="v_km"><b id="v_km">0,00</b> km</div>
+ <div class="v_row"><div><b id="v_pace">--:--</b><span>pace atual</span></div><div><b id="v_pmed">--:--</b><span>pace médio</span></div></div>
+ <canvas id="v_map" width="600" height="250"></canvas>
+ <div id="v_aviso"></div>
+ <div class="row"><button id="v_pause">Pausar</button><button id="v_fim" class="bad">Finalizar</button></div>
+ <button id="v_min" class="sec">Minimizar (a corrida continua)</button>
+</div>
 <div id="toast"></div>
 <script src="app.js"></script>
 </body>
