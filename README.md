@@ -36,6 +36,14 @@ Opção simples e gratuita, GitHub Pages:
 3. Abra o app pelo ícone. Vá em **Ajustes**, cole a URL do script e a chave, toque em "Testar conexão e baixar listas". Deve aparecer "Conectado".
 4. Quando o app pedir localização, permita (use "Ao usar o app").
 
+## Modo Foco do iPhone (opcional)
+O app não consegue ligar o Foco sozinho (o iOS não permite a sites). Ele convida: ao iniciar um foco, aparece "Ligar o modo Foco do iPhone?". Se você tocar em **Ativar Foco**, o app chama um atalho seu do app Atalhos.
+1. App **Atalhos** > + (novo atalho) > adicionar a ação **Definir Foco** > Ativar > escolha o seu Foco (por exemplo "Estudo") e defina até quando (por exemplo "Até eu desligar").
+2. Dê ao atalho o nome **Foco Estudo** (ou outro, e escreva o mesmo nome em Ajustes do app, no campo "Nome do atalho de Foco").
+3. No app, ao iniciar o foco, toque em Ativar Foco. O iPhone abre o Atalhos por um instante; volte ao app (o cronômetro continua contando).
+"Agora não" silencia o convite até amanhã; "Não perguntar mais" desliga o convite (reative em Ajustes). Para desligar o Foco depois, use o Centro de Controle.
+Isto foi testado só no navegador simulado (o convite aparece e monta o link certo). Se o iPhone reclamar que não achou o atalho, confira o nome.
+
 ## Uso no dia a dia
 - **Estudo:** escolha a matéria e toque em Iniciar foco. Ao fim dos 25 minutos o registro vai sozinho para a planilha.
 - **Corrida:** toque em Iniciar, corra com o app aberto e a tela ligada, e em Finalizar confira distância e tempo antes de salvar. No tipo "Teste 12 min" o app para sozinho aos 12:00 e grava a marca em metros no TAF.

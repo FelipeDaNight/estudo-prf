@@ -63,6 +63,12 @@ nav button i{display:block;font-style:normal;font-size:21px}
   <div class="row"><button id="e_pause" class="sec">Pausar</button><button id="e_fim" class="sec">Encerrar e registrar</button></div>
   <button id="e_skip" class="sec" style="display:none">Pular pausa</button>
  </div>
+ <div class="card" id="e_convite" style="display:none">
+  <b>Ligar o modo Foco do iPhone?</b>
+  <div class="note" style="margin-top:6px">Silencia notificações enquanto você estuda. O app abre o seu atalho de Foco e você volta para cá. O cronômetro continua rodando.</div>
+  <button id="e_foco_sim" class="ok">Ativar Foco</button>
+  <div class="row"><button id="e_foco_nao" class="sec">Agora não</button><button id="e_foco_nunca" class="sec">Não perguntar mais</button></div>
+ </div>
  <div class="note">O tempo de foco concluído vai para a aba Horas da planilha. Pausas não contam.</div>
 </section>
 
@@ -130,6 +136,8 @@ nav button i{display:block;font-style:normal;font-size:21px}
   <label>Chave</label><input id="g_token" type="password" autocapitalize="off" autocorrect="off">
   <div class="row"><div><label>Foco (min)</label><input id="g_foco" inputmode="numeric"></div><div><label>Pausa (min)</label><input id="g_pausa" inputmode="numeric"></div><div><label>Pausa longa</label><input id="g_longa" inputmode="numeric"></div></div>
   <label>Descanso da academia (s)</label><input id="g_desc" inputmode="numeric">
+  <label>Nome do atalho de Foco (app Atalhos do iPhone)</label><input id="g_atalho" placeholder="Foco Estudo" autocapitalize="off" autocorrect="off">
+  <div class="note">Crie no app Atalhos um atalho com a ação "Definir Foco" (ligar o Foco que você quiser) e coloque o nome dele aqui. Deixe em branco para não receber o convite.</div>
   <button id="g_salvar">Salvar configuração</button>
   <button id="g_listas" class="sec">Testar conexão e baixar listas</button>
   <button id="g_sync" class="sec">Enviar pendências agora</button>

@@ -54,7 +54,7 @@
 
   // ---------------------------------------------------------------- configuração e listas
   const DEF = {
-    cfg: { url: "", token: "", foco: 25, pausa: 5, longa: 15, desc: 90 },
+    cfg: { url: "", token: "", foco: 25, pausa: 5, longa: 15, desc: 90, atalho: "Foco Estudo", convite: true },
     listas: {
       materias: ["Língua Portuguesa", "Raciocínio Lógico", "Informática", "Física", "Ética e Cidadania", "Geopolítica", "Legislação de Trânsito", "Legislação Especial", "Direito Constitucional", "Direito Administrativo", "Direito Penal", "Processo Penal", "Direitos Humanos", "Legislação da PRF"],
       topicos: [],
@@ -171,11 +171,20 @@
     dia.min += min; salvarPomo();
     toast(min + " min registrados em " + $("e_mat").value);
   }
+  function urlFoco() { return "shortcuts://run-shortcut?name=" + encodeURIComponent((cfg.atalho || "").trim()); }
+  function conviteFoco() {
+    const c = $("e_convite");
+    const hojeStr = hoje();
+    if (!cfg.convite || !(cfg.atalho || "").trim() || LS.get("focoAdiado", "") === hojeStr || P.fase !== "foco") { c.style.display = "none"; return; }
+    c.style.display = "block";
+  }
+  function focoAtivar() { $("e_convite").style.display = "none"; LS.set("focoAdiado", hoje()); window.location.href = urlFoco(); }
   function pomoIniciar() {
     if (!$("e_mat").value) { toast("Escolha a matéria."); return; }
     LS.set("ultMat", $("e_mat").value);
     if (!P.total) { P.total = durFase(); P.rest = P.total; }
     P.endAt = Date.now() + P.rest; P.ativo = true; salvarPomo(); wakeOn(); pintarPomo();
+    if (P.fase === "foco" && P.rest === P.total) conviteFoco();
     try { if ("Notification" in window && Notification.permission === "default") Notification.requestPermission(); } catch (e) { /* ok */ }
   }
   function pomoPausar() { P.rest = P.endAt - Date.now(); P.ativo = false; salvarPomo(); wakeOff(); pintarPomo(); }
@@ -421,17 +430,19 @@
     if (t === "cfg") pintarFila();
   }
   function pintarCfg() {
-    $("g_url").value = cfg.url; $("g_token").value = cfg.token; $("g_foco").value = cfg.foco; $("g_pausa").value = cfg.pausa; $("g_longa").value = cfg.longa; $("g_desc").value = cfg.desc;
+    $("g_url").value = cfg.url; $("g_token").value = cfg.token; $("g_foco").value = cfg.foco; $("g_pausa").value = cfg.pausa; $("g_longa").value = cfg.longa; $("g_desc").value = cfg.desc; $("g_atalho").value = cfg.atalho || "";
   }
   function salvarCfg() {
     cfg.url = $("g_url").value.trim(); cfg.token = $("g_token").value.trim();
-    cfg.foco = Math.max(1, num($("g_foco").value) || 25); cfg.pausa = Math.max(1, num($("g_pausa").value) || 5); cfg.longa = Math.max(1, num($("g_longa").value) || 15); cfg.desc = Math.max(10, num($("g_desc").value) || 90);
+    cfg.foco = Math.max(1, num($("g_foco").value) || 25); cfg.pausa = Math.max(1, num($("g_pausa").value) || 5); cfg.longa = Math.max(1, num($("g_longa").value) || 15); cfg.desc = Math.max(10, num($("g_desc").value) || 90); cfg.atalho = $("g_atalho").value.trim(); if (cfg.atalho) cfg.convite = true;
     LS.set("cfg", cfg); if (!P.total && !P.ativo) pintarPomo(); toast("Configuração salva.");
   }
 
   function iniciar() {
     document.querySelectorAll("#nav button").forEach((b) => b.addEventListener("click", () => abrir(b.dataset.t)));
     $("e_start").onclick = pomoIniciar; $("e_pause").onclick = pomoPausar; $("e_fim").onclick = pomoEncerrar; $("e_skip").onclick = () => { if (P.ativo) wakeOff(); pomoReset("foco"); };
+    $("e_foco_sim").onclick = focoAtivar; $("e_foco_nao").onclick = () => { LS.set("focoAdiado", hoje()); $("e_convite").style.display = "none"; };
+    $("e_foco_nunca").onclick = () => { cfg.convite = false; LS.set("cfg", cfg); $("e_convite").style.display = "none"; toast("Combinado. Reative em Ajustes se quiser."); };
     $("c_start").onclick = corridaIniciar; $("c_pause").onclick = corridaPausar; $("c_fim").onclick = corridaFinalizar;
     $("c_salvar").onclick = corridaSalvar; $("c_descartar").onclick = () => { corridaLimpar(); toast("Corrida descartada."); };
     $("m_salvar").onclick = corridaManual;
@@ -450,6 +461,6 @@
     sync(false);
   }
 
-  window.__app = { Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
+  window.__app = { urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar); else iniciar();
 })();
