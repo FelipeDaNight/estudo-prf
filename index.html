@@ -51,6 +51,11 @@ nav button i{display:block;font-style:normal;font-size:21px}
 .tapbtn{height:120px;font-size:34px}
 
 nav button{font-size:10.5px}
+#k_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}
+#k_bar{position:fixed;z-index:9;left:0;right:0;bottom:var(--navh,64px);padding:8px 16px;background:var(--card);border-top:1px solid var(--line)}
+#k_bar button{margin:0}#k_notas{display:flex;gap:6px}#k_notas button{flex:1;padding:8px 2px;font-size:15px;line-height:1.2}#k_notas small{display:block;font-size:11px;font-weight:500;opacity:.85}
+#k_tela{padding-bottom:84px}.kbanner{display:flex;align-items:center;gap:10px}.kbanner b{flex:1}.kbanner button{width:auto;margin:0;padding:10px 14px;flex:none}
+.kv{margin-top:12px;padding:12px;border-radius:12px;background:rgba(102,187,106,.16);border:1px solid var(--acc);font-size:15px;line-height:1.45}.kv p{margin:6px 0}
 .qtopr{display:flex;align-items:center;gap:10px}.qtopr #q_cab{flex:1;font-weight:600}.qtopr #q_fim,.qtopr #q_auto{width:auto;margin:0;padding:8px 10px;font-size:13px;flex:none}
 #q_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}
 .qbar{height:6px;border-radius:9px;background:var(--line);margin-top:8px;overflow:hidden}.qbar i{display:block;height:100%;width:0;background:var(--pri);transition:width .25s}
@@ -243,6 +248,21 @@ nav button i{font-size:19px}
   </div>
   <details class="card" id="q_mapa_box"><summary><b>Mapa das questões</b></summary><div class="mapa" id="q_mapa"></div></details>
   <div id="q_bar"><button id="q_ant" class="sec">Anterior</button><button id="q_pular" class="sec">Pular</button><button id="q_prox">Próxima</button></div>
+ </div>
+ <div id="k_tela" style="display:none">
+  <div id="k_top">
+   <div class="qtopr"><button id="k_sair" class="sec">Sair</button><div class="note" id="k_cab"></div></div>
+   <div class="qbar"><i id="k_prog"></i></div>
+  </div>
+  <div class="card qcard">
+   <div class="note" id="k_tag"></div>
+   <div id="k_frente"></div>
+   <div id="k_verso" style="display:none"></div>
+  </div>
+  <div id="k_bar">
+   <button id="k_mostrar">Mostrar resposta</button>
+   <div id="k_notas" style="display:none"><button data-r="errei" class="no">Errei<small></small></button><button data-r="dificil" class="sec">Difícil<small></small></button><button data-r="bom" class="ok">Bom<small></small></button><button data-r="facil" class="ok">Fácil<small></small></button></div>
+  </div>
  </div>
  <div id="q_res" style="display:none"></div>
  <div class="card" id="q_manual_box"><button id="q_manual" class="sec" style="margin-top:0">Registrar um erro manualmente</button></div>

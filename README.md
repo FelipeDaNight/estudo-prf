@@ -83,3 +83,6 @@ Aba **Questões**: escolha um banco (ex.: CBMGO 2022) e use **Treinar** (por mat
 
 ### Questões (v2)
 Lista com progresso, "Continuar", matérias em um toque (filtro Todas/Novas/Erradas), barra fixa Anterior/Pular/Próxima, botão "Salvar no caderno de erros" e "Auto" (avança sozinho ao acertar, exceto chute).
+
+### Cartões (flashcards dos erros)
+Todo erro (questão errada em treino/simulado ou erro manual) vira um cartão automaticamente. Em Questões → "Cartões de revisão": mostra a questão, "Mostrar resposta", e avalia Errei/Difícil/Bom/Fácil (revisão em 0/1/3/7/15/30/60 dias). Os cartões ficam no aparelho (localStorage); a planilha continua com o caderno de erros e a revisão dela. A Hoje sugere "Revisar cartões" quando há vencidos.

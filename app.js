@@ -219,6 +219,7 @@
     if (s.estudoHoje < cfg.metaMin) return { aba: "estudo", btn: "Estudar agora", msg: s.estudoHoje ? "Faltam " + (cfg.metaMin - s.estudoHoje) + " min de estudo para a meta de hoje." : "Comece pelo estudo de hoje: meta de " + cfg.metaMin + " min." };
     if (s.corridas < cfg.metaCorr && (dc === null || dc >= 2)) return { aba: "corrida", btn: "Correr agora", msg: dc === null ? "Você ainda não registrou nenhuma corrida." : "Você não corre há " + dc + " dias. Meta da semana: " + cfg.metaCorr + " corridas." };
     if (s.acad < cfg.metaAcad && !s.treinoHoje) return { aba: "academia", btn: "Registrar treino", msg: "Treino de academia da semana: " + s.acad + " de " + cfg.metaAcad + "." };
+    const kv = kVencidos().length; if (kv) return { aba: "quest", btn: "Revisar cartões", msg: kv + (kv === 1 ? " cartão de erro vence" : " cartões de erro vencem") + " hoje. Leva poucos minutos." };
     return { aba: "estudo", btn: "Estudar mais", msg: "Metas do dia em dia. Abra a aba Revisar erros da planilha e revise o que venceu." };
   }
   function pintarHoje() {
@@ -606,7 +607,8 @@
     const top = $("r_top").value;
     if (!top || /baixe as listas/.test(top)) { toast("Baixe as listas em Ajustes primeiro."); return; }
     enqueue("erro", { data: hoje(), topico: top, tipo: $("r_tipo").value, confianca: $("r_conf").value, regra, lei: $("r_lei").value.trim(), fonte: $("r_fonte").value.trim() });
-    $("r_regra").value = ""; $("r_lei").value = ""; $("r_fonte").value = ""; toast("Erro salvo.");
+    kAddManual(top, regra, $("r_lei").value.trim(), $("r_fonte").value.trim());
+    $("r_regra").value = ""; $("r_lei").value = ""; $("r_fonte").value = ""; toast("Erro salvo (virou cartão).");
   }
 
   // ---------------------------------------------------------------- QUESTÕES (treino com resposta na hora e simulado)
@@ -635,7 +637,7 @@
   const qSeg = { v: "todas" };
   async function qDesenhaLista() {
     const box = document.createDocumentFragment();
-    await qIndice();
+    await qIndice(); box.appendChild(kBanner());
     if (!Q.bancos.length) { box.appendChild(el("div", "Nenhum banco de questões disponível. Conecte-se à internet uma vez para baixar.", "note")); $("q_lista").replaceChildren(box); return; }
     for (const info of Q.bancos) {
       let b; try { b = await qBanco(info); } catch (e) { box.appendChild(el("div", "Não foi possível carregar " + info.titulo + ". Tente com internet.", "note")); continue; }
@@ -751,7 +753,7 @@
     const g = q.materia + "||" + q.topico; const s = (Q.sessao[g] = Q.sessao[g] || { feitas: 0, acertos: 0, erros: 0 });
     s.feitas++; if (ok) s.acertos++; else s.erros++;
     if (!ok) {
-      Q.pend = { q, conf, b: Q.b };
+      Q.pend = { q, conf, b: Q.b }; kAddQuestao(Q.b, q, q.just || "");
       opts($("q_e_tipo"), listas.tipos, conf === "Chute" ? "Chute que deu errado" : "Teoria que eu não sabia");
       $("q_e_regra").value = q.just || "";
     }
@@ -765,7 +767,7 @@
   function qFlushErro() {
     const p = Q.pend; if (!p) return; Q.pend = null; $("q_erro").style.display = "none";
     const regra = ($("q_e_regra").value || "").trim() || ("Rever: " + (p.q.just || p.q.topico));
-    enqueue("erro", { data: hoje(), topico: p.q.topico, tipo: $("q_e_tipo").value, confianca: p.conf, regra, lei: "", fonte: fonteCurta(p.b) + " Q" + p.q.n });
+    enqueue("erro", { data: hoje(), topico: p.q.topico, tipo: $("q_e_tipo").value, confianca: p.conf, regra, lei: "", fonte: fonteCurta(p.b) + " Q" + p.q.n }); kRegra(p.b, p.q, regra);
   }
   function qFlushSessao() {
     const b = Q.b; if (!b) return; const ks = Object.keys(Q.sessao); if (!ks.length) return;
@@ -803,7 +805,7 @@
     const liq = b.questoes.some((q) => q.tipo === "ce");
     const nota = liq ? ac - er : ac;
     simHist.push({ banco: b.id, d: hoje(), itens: Q.ids.length, acertos: ac, erros: er, brancos: br, nota, tempo }); simHist = simHist.slice(-30); LS.set("qsim", simHist);
-    erradas.forEach((q) => { const conf = Q.conf[q.n] || "Certeza"; enqueue("erro", { data: hoje(), topico: q.topico, tipo: conf === "Chute" ? "Chute que deu errado" : "Teoria que eu não sabia", confianca: conf, regra: q.just || ("Rever: " + q.topico), lei: "", fonte: fonteCurta(b) + " Q" + q.n }); });
+    erradas.forEach((q) => { kAddQuestao(b, q, q.just || ""); const conf = Q.conf[q.n] || "Certeza"; enqueue("erro", { data: hoje(), topico: q.topico, tipo: conf === "Chute" ? "Chute que deu errado" : "Teoria que eu não sabia", confianca: conf, regra: q.just || ("Rever: " + q.topico), lei: "", fonte: fonteCurta(b) + " Q" + q.n }); });
     Object.keys(grupo).forEach((g) => { const m = g.split("||"); enqueue("questoes", { data: hoje(), materia: m[0], topico: m[1], feitas: grupo[g].feitas, acertos: grupo[g].acertos, erros: grupo[g].erros, fonte: fonteCurta(b) + " (simulado)" }); });
     if (b.sincroniza_simulado) enqueue("simulado", { data: hoje(), nome: b.titulo, itens: Q.ids.length, acertos: ac, erros: er, tempo });
     qResultado(b, { ac, er, br, nota, tempo, liq, por, erradas, n: Q.ids.length });
@@ -823,6 +825,92 @@
     box.appendChild(c); window.scrollTo(0, 0); pintarHoje();
   }
 
+  // ---------------------------------------------------------------- CARTÕES (erros viram flashcards com repetição espaçada)
+  let cards = LS.get("cards", []);          // [{id,tipo:"q"|"m",bank,n,topico,materia,front,back,regra,caixa,prox,criado,vezes}]
+  const KINT = [0, 1, 3, 7, 15, 30, 60];    // dias até rever, por caixa
+  const K = { fila: [], pos: 0, total: 0, mostrou: false };
+  const kSalvar = () => LS.set("cards", cards);
+  const kVencidos = () => cards.filter((c) => c.prox <= hoje());
+  function kAddQuestao(b, q, regra) {
+    let c = cards.find((x) => x.tipo === "q" && x.bank === b.id && x.n === q.n);
+    if (!c) { c = { id: "k" + uid(), tipo: "q", bank: b.id, n: q.n, topico: q.topico, materia: q.materia, regra: regra || "", caixa: 0, prox: addDias(hoje(), 1), criado: hoje(), vezes: 0 }; cards.push(c); }
+    else { c.caixa = 0; c.prox = addDias(hoje(), 1); if (regra) c.regra = regra; }
+    kSalvar(); pintarHoje();
+  }
+  function kAddManual(topico, regra, lei, fonte) {
+    cards.push({ id: "k" + uid(), tipo: "m", topico, materia: "", front: "Qual é a regra? " + topico + (fonte ? " (" + fonte + ")" : ""), back: regra + (lei ? "\n" + lei : ""), regra: "", caixa: 0, prox: addDias(hoje(), 1), criado: hoje(), vezes: 0 });
+    kSalvar();
+  }
+  function kRegra(b, q, regra) { const c = cards.find((x) => x.tipo === "q" && x.bank === b.id && x.n === q.n); if (c) { c.regra = regra; kSalvar(); } }
+  function kAtual() { return K.fila[K.pos]; }
+  async function kFrente(c) {
+    const f = $("k_frente"); f.replaceChildren(); $("k_verso").replaceChildren();
+    let q = null, b = null;
+    if (c.tipo === "q") { const info = Q.bancos.find((x) => x.id === c.bank) || (await qIndice()).find((x) => x.id === c.bank); try { b = info && await qBanco(info); } catch (e) { b = null; } q = b && b.questoes.find((x) => x.n === c.n); }
+    $("k_tag").textContent = (c.materia ? c.materia + " · " : "") + c.topico + " · caixa " + c.caixa + "/6";
+    if (!q) { f.appendChild(el("div", c.front || "Questão indisponível offline. Revise o tópico: " + c.topico, "qenun")); return { q, b }; }
+    if (q.apoio) { const d = el("details", undefined, "qapoio"); d.appendChild(el("summary", "Texto de apoio: " + q.apoio.titulo)); q.apoio.paragrafos.forEach((t) => d.appendChild(el("p", t))); f.appendChild(d); }
+    f.appendChild(el("div", q.enunciado, "qenun"));
+    (q.itens || []).forEach((t) => f.appendChild(el("div", t, "qitem")));
+    if (q.img) { const im = el("img", undefined, "qimg"); im.src = q.img; im.alt = "Figura"; f.appendChild(im); }
+    if (q.enunciado2) f.appendChild(el("div", q.enunciado2, "qenun"));
+    if (q.fecho) f.appendChild(el("div", q.fecho, "qenun"));
+    if (q.tipo === "mc") Object.keys(q.alternativas).forEach((k2) => f.appendChild(el("div", k2 + ") " + q.alternativas[k2], "qitem")));
+    return { q, b };
+  }
+  async function kRender() {
+    const c = kAtual();
+    if (!c) { kFim(); return; }
+    K.mostrou = false; $("k_cab").textContent = "Cartão " + (K.pos + 1) + " de " + K.fila.length; $("k_prog").style.width = (100 * K.pos / K.fila.length) + "%";
+    $("k_mostrar").style.display = "block"; $("k_notas").style.display = "none"; $("k_verso").style.display = "none";
+    K.ctx = await kFrente(c); window.scrollTo(0, 0);
+  }
+  function kMostrar() {
+    const c = kAtual(); if (!c || K.mostrou) return; K.mostrou = true;
+    const v = $("k_verso"); v.replaceChildren(); v.style.display = "block"; const box = el("div", undefined, "kv");
+    const { q } = K.ctx || {};
+    if (q) {
+      const rot = q.tipo === "ce" ? (q.resp === "C" ? "Certo" : "Errado") : q.resp + ") " + q.alternativas[q.resp];
+      box.appendChild(el("b", "✅ Resposta: " + rot));
+      if (q.just) box.appendChild(el("p", q.just));
+      if (q.conf === "media") box.appendChild(el("p", "⚠ Gabarito próprio com confiança média.", "note"));
+    } else box.appendChild(el("p", c.back || ""));
+    if (c.regra) { const r = el("p", "📌 Sua regra: " + c.regra); box.appendChild(r); }
+    v.appendChild(box);
+    $("k_mostrar").style.display = "none"; $("k_notas").style.display = "flex";
+    const prev = { errei: 0, dificil: Math.max(1, KINT[Math.max(1, c.caixa)]), bom: KINT[Math.min(6, c.caixa + 1)], facil: KINT[Math.min(6, c.caixa + 2)] };
+    $("k_notas").querySelectorAll("button").forEach((bt) => { const d = prev[bt.dataset.r]; bt.querySelector("small").textContent = d === 0 ? "hoje" : d + (d === 1 ? " dia" : " dias"); });
+    v.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+  function kNota(r) {
+    const c = kAtual(); if (!c || !K.mostrou) return;
+    c.vezes++;
+    if (r === "errei") { c.caixa = 0; c.prox = hoje(); K.fila.push(c); }
+    else if (r === "dificil") { c.caixa = Math.max(1, c.caixa); c.prox = addDias(hoje(), Math.max(1, KINT[c.caixa])); }
+    else { c.caixa = Math.min(6, c.caixa + (r === "bom" ? 1 : 2)); c.prox = addDias(hoje(), Math.max(1, KINT[c.caixa])); }
+    kSalvar(); K.pos++; pintarHoje(); kRender();
+  }
+  function kIniciar(todos) {
+    const ord = (todos ? cards.slice() : kVencidos()).sort((a, b) => (a.prox < b.prox ? -1 : a.prox > b.prox ? 1 : a.caixa - b.caixa));
+    if (!ord.length) { toast("Nenhum cartão para revisar."); return; }
+    qFlushErro(); qFlushSessao();
+    Object.assign(K, { fila: ord, pos: 0, mostrou: false });
+    $("q_lista").style.display = "none"; $("q_res").style.display = "none"; $("q_tela").style.display = "none"; $("q_manual_box").style.display = "none"; $("k_tela").style.display = "block";
+    kRender();
+  }
+  function kFim(sair) {
+    $("k_tela").style.display = "none"; $("q_lista").style.display = "block"; $("q_manual_box").style.display = "block"; qDesenhaLista();
+    if (!sair) toast("Revisão concluída. 🎉");
+  }
+  function kBanner() {
+    const c = el("div", undefined, "card"); c.id = "k_banner";
+    const v = kVencidos().length, dom = cards.filter((x) => x.caixa >= 4).length;
+    const row = el("div", undefined, "kbanner"); const t = el("b", "🃏 Cartões de revisão"); row.appendChild(t);
+    const bt = el("button", v ? "Revisar " + v : "Revisar todos"); bt.className = v ? "ok" : "sec"; bt.id = "k_revisar"; bt.disabled = !cards.length; bt.onclick = () => kIniciar(!v); row.appendChild(bt); c.appendChild(row);
+    c.appendChild(el("div", cards.length ? v + " para hoje · " + cards.length + " no total · " + dom + " dominados. Cada erro vira um cartão automaticamente." : "Quando você errar uma questão ou registrar um erro, ele vira um cartão aqui, revisado em 1, 3, 7, 15… dias.", "note")).style.marginTop = "6px";
+    return c;
+  }
+
   // ---------------------------------------------------------------- navegação e config
   function abrir(t) {
     if (t !== "quest") { qFlushErro(); qFlushSessao(); }
@@ -831,7 +919,7 @@
     window.scrollTo(0, 0);
     if (t === "cfg") pintarFila();
     if (t === "hoje") pintarHoje();
-    if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none") qDesenhaLista();
+    if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none" && $("k_tela").style.display === "none") qDesenhaLista();
   }
   function pintarCfg() {
     $("g_url").value = cfg.url; $("g_token").value = cfg.token; $("g_foco").value = cfg.foco; $("g_pausa").value = cfg.pausa; $("g_longa").value = cfg.longa; $("g_desc").value = cfg.desc; $("g_atalho").value = cfg.atalho || "";
@@ -860,6 +948,8 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
+    $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
+    document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });
     $("q_auto").onclick = () => { qAuto = !qAuto; LS.set("qauto", qAuto); $("q_auto").textContent = "Auto: " + (qAuto ? "sim" : "não"); };
     const navh = () => document.documentElement.style.setProperty("--navh", $("nav").offsetHeight + "px"); navh(); window.addEventListener("resize", navh);
     $("c_visor").onclick = abrirVisor; $("v_min").onclick = fecharVisor;
@@ -888,6 +978,6 @@
     sync(false);
   }
 
-  window.__app = { Q, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
+  window.__app = { Q, getCards: () => cards, setCards: (c) => { cards = c; kSalvar(); }, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar); else iniciar();
 })();
