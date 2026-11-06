@@ -632,31 +632,41 @@
     const p = qProg(b); let r = 0, a = 0; b.questoes.forEach((q) => { if (p[q.n]) { r++; if (p[q.n].ok) a++; } });
     return { r, a, e: r - a };
   }
+  const qSeg = { v: "todas" };
   async function qDesenhaLista() {
     const box = document.createDocumentFragment();
     await qIndice();
     if (!Q.bancos.length) { box.appendChild(el("div", "Nenhum banco de questões disponível. Conecte-se à internet uma vez para baixar.", "note")); $("q_lista").replaceChildren(box); return; }
     for (const info of Q.bancos) {
       let b; try { b = await qBanco(info); } catch (e) { box.appendChild(el("div", "Não foi possível carregar " + info.titulo + ". Tente com internet.", "note")); continue; }
-      const c = el("div", undefined, "card"); c.dataset.banco = b.id;
+      const p = qProg(b), c = el("div", undefined, "card"); c.dataset.banco = b.id;
       c.appendChild(el("b", b.titulo));
-      if (b.aviso) { const a = el("div", b.aviso, "note"); a.style.marginTop = "6px"; c.appendChild(a); }
-      const s = qResumoProg(b);
-      const pr = el("div", "Respondidas " + s.r + "/" + b.questoes.length + " · acertos " + s.a + " · erradas " + s.e, "sub"); pr.style.marginTop = "8px"; c.appendChild(pr);
+      if (b.aviso) { const d = el("details", undefined, "qapoio"); d.appendChild(el("summary", "ℹ️ Sobre o gabarito")); d.appendChild(el("div", b.aviso, "note")); c.appendChild(d); }
+      const s = qResumoProg(b), tot = b.questoes.length, novas = tot - s.r;
+      const pct = s.r ? Math.round(100 * s.a / s.r) : 0;
+      const pr = el("div", "Respondidas " + s.r + "/" + tot + " · acertos " + s.a + " · erradas " + s.e + (s.r ? " · " + pct + "% de acerto" : ""), "sub"); pr.style.marginTop = "8px"; c.appendChild(pr);
+      const pb = el("div", undefined, "pbar"); const ia = el("i", undefined, "a"), ie = el("i", undefined, "e"); ia.style.width = (100 * s.a / tot) + "%"; ie.style.width = (100 * s.e / tot) + "%"; pb.appendChild(ia); pb.appendChild(ie); c.appendChild(pb);
+      const bc = el("button", novas ? "▶ Continuar (" + novas + " novas)" : "✔ Todas respondidas"); bc.className = "ok q_continuar"; bc.disabled = !novas; bc.onclick = () => qIniciar(b, "treino", "", "novas"); c.appendChild(bc);
+      const bs = el("button", "⏱ Simulado completo (" + tot + " questões)"); bs.className = "q_sim"; bs.onclick = () => qIniciar(b, "sim", "", "todas"); c.appendChild(bs);
+      c.appendChild(el("label", "Treinar por matéria — quais questões?"));
+      const seg = el("div", undefined, "seg"); const linhas = [];
+      [["todas", "Todas"], ["novas", "Novas"], ["erradas", "Erradas"]].forEach((x) => { const bt = el("button", x[1]); bt.className = "q_quais" + (qSeg.v === x[0] ? " on" : ""); bt.dataset.v = x[0]; bt.onclick = () => { qSeg.v = x[0]; seg.querySelectorAll("button").forEach((y) => y.classList.toggle("on", y === bt)); }; seg.appendChild(bt); });
+      c.appendChild(seg);
       const mats = Array.from(new Set(b.questoes.map((q) => q.materia)));
-      c.appendChild(el("label", "Matéria"));
-      const sm = el("select"); sm.className = "q_mat"; [["", "Todas as matérias"]].concat(mats.map((m) => [m, m])).forEach((p) => { const o = el("option", p[1]); o.value = p[0]; sm.appendChild(o); }); c.appendChild(sm);
-      c.appendChild(el("label", "Quais questões"));
-      const sq = el("select"); sq.className = "q_quais"; [["todas", "Todas"], ["novas", "Ainda não respondidas"], ["erradas", "As que errei"]].forEach((p) => { const o = el("option", p[1]); o.value = p[0]; sq.appendChild(o); }); c.appendChild(sq);
-      const bt = el("button", "Treinar (resposta na hora)", "ok"); bt.className = "ok q_treino"; bt.onclick = () => qIniciar(b, "treino", sm.value, sq.value); c.appendChild(bt);
-      const bs = el("button", "Simulado completo (" + b.questoes.length + " questões)"); bs.className = "q_sim"; bs.onclick = () => qIniciar(b, "sim", "", "todas"); c.appendChild(bs);
+      [""].concat(mats).forEach((m) => {
+        const qs = b.questoes.filter((q) => !m || q.materia === m), rs = qs.filter((q) => p[q.n]), ac = rs.filter((q) => p[q.n].ok).length, er = rs.length - ac;
+        const bt = el("button"); bt.className = "mrow q_mat"; bt.dataset.m = m;
+        const nm = el("span", m || "Todas as matérias"); if (er) nm.appendChild(el("span", String(er), "bd"));
+        bt.appendChild(nm); bt.appendChild(el("small", rs.length + "/" + qs.length + (rs.length ? " · " + Math.round(100 * ac / rs.length) + "%" : "")));
+        bt.onclick = () => qIniciar(b, "treino", m, qSeg.v); c.appendChild(bt);
+      });
       const ult = simHist.filter((x) => x.banco === b.id).pop();
-      if (ult) { const u = el("div", "Último simulado (" + ult.d.split("-").reverse().join("/") + "): " + ult.acertos + " acertos, " + ult.erros + " erros, " + ult.brancos + " em branco · " + ult.tempo + " min", "note"); u.style.marginTop = "8px"; c.appendChild(u); }
+      if (ult) { const u = el("div", "Último simulado (" + ult.d.split("-").reverse().join("/") + "): " + ult.acertos + " acertos, " + ult.erros + " erros, " + ult.brancos + " em branco · " + ult.tempo + " min", "note"); u.style.marginTop = "10px"; c.appendChild(u); }
       const bz = el("button", "Zerar progresso deste banco"); bz.className = "sec"; bz.onclick = () => { if (bz.dataset.c) { delete prog[b.id]; qSalvarProg(); qDesenhaLista(); return; } bz.dataset.c = "1"; bz.textContent = "Toque de novo para zerar"; setTimeout(() => { bz.dataset.c = ""; bz.textContent = "Zerar progresso deste banco"; }, 3000); };
       c.appendChild(bz);
       box.appendChild(c);
     }
-    $("q_lista").replaceChildren(box);
+    $("q_lista").replaceChildren(box); $("q_manual_box").style.display = "block";
   }
   function qIniciar(b, modo, mat, quais) {
     qFlushErro(); qFlushSessao();
@@ -670,13 +680,16 @@
     Object.assign(Q, { b, modo, ids, pos: 0, resp: {}, conf: {}, ini: Date.now(), trav: false, pend: null, sessao: {}, confFim: 0 });
     clearInterval(Q.tmr); Q.tmr = null;
     if (modo === "sim") { Q.tmr = setInterval(() => { $("q_tmr").textContent = "⏱ " + mmss(Date.now() - Q.ini); }, 1000); wakeOn(); Q.wake = true; }
-    $("q_lista").style.display = "none"; $("q_res").style.display = "none"; $("q_tela").style.display = "block";
+    $("q_lista").style.display = "none"; $("q_res").style.display = "none"; $("q_tela").style.display = "block"; $("q_manual_box").style.display = "none"; $("q_mapa_box").open = false;
     qRender(); window.scrollTo(0, 0);
   }
   const qAtual = () => Q.b.questoes[Q.ids[Q.pos]];
   function qRender() {
     const q = qAtual(), b = Q.b, sim = Q.modo === "sim", p = qProg(b);
     $("q_cab").textContent = (sim ? "Simulado" : "Treino") + " · questão " + q.n + " (" + (Q.pos + 1) + "/" + Q.ids.length + ")";
+    const feitas = Q.ids.filter((i) => Q.resp[Q.b.questoes[i].n] !== undefined).length; $("q_prog").style.width = (100 * feitas / Q.ids.length) + "%";
+    $("q_auto").style.display = sim ? "none" : "block"; $("q_auto").textContent = "Auto: " + (qAuto ? "sim" : "não"); $("q_salvo").style.display = "none";
+    $("q_e_nota").textContent = "Também é salvo sozinho quando você avança."; $("q_e_ok").disabled = false;
     $("q_tmr").textContent = sim ? "⏱ " + mmss(Date.now() - Q.ini) : "";
     $("q_tag").textContent = q.materia + " · " + q.topico;
     const ap = $("q_apoio");
@@ -743,8 +756,12 @@
       $("q_e_regra").value = q.just || "";
     }
     document.querySelectorAll("#q_conf button").forEach((x) => { x.disabled = true; });
-    qMostrarFb(q, k); qMapa(); pintarHoje();
+    qMostrarFb(q, k); qMapa(); pintarHoje(); qRolaFb();
+    if (ok && qAuto && conf !== "Chute" && Q.pos < Q.ids.length - 1) { const alvo = Q.pos, tk = (Q.autoTk = (Q.autoTk || 0) + 1); setTimeout(() => { if (Q.autoTk === tk && Q.pos === alvo && Q.modo === "treino" && $("q_tela").style.display !== "none") qProx(); }, 1100); }
   }
+  function qRolaFb() { setTimeout(() => { const e = $("q_erro").style.display !== "none" ? $("q_erro") : $("q_fb"); if (e && e.scrollIntoView) e.scrollIntoView({ behavior: "smooth", block: "nearest" }); }, 60); }
+  let qAuto = LS.get("qauto", false);
+  function qSalvarErroAgora() { if (!Q.pend) return; qFlushErro(); $("q_salvo").style.display = "block"; }
   function qFlushErro() {
     const p = Q.pend; if (!p) return; Q.pend = null; $("q_erro").style.display = "none";
     const regra = ($("q_e_regra").value || "").trim() || ("Rever: " + (p.q.just || p.q.topico));
@@ -755,14 +772,14 @@
     const s = Q.sessao; Q.sessao = {};
     ks.forEach((g) => { const m = g.split("||"); enqueue("questoes", { data: hoje(), materia: m[0], topico: m[1], feitas: s[g].feitas, acertos: s[g].acertos, erros: s[g].erros, fonte: fonteCurta(b) }); });
   }
-  function qIr(pos) { qFlushErro(); if (pos < 0 || pos >= Q.ids.length) return; Q.pos = pos; qRender(); window.scrollTo(0, 0); }
+  function qIr(pos) { Q.autoTk = (Q.autoTk || 0) + 1; qFlushErro(); if (pos < 0 || pos >= Q.ids.length) return; Q.pos = pos; qRender(); window.scrollTo(0, 0); }
   function qProx() {
     if (Q.pos < Q.ids.length - 1) { qIr(Q.pos + 1); return; }
     if (Q.modo === "sim") qFinalizar(false); else qEncerrar();
   }
   function qEncerrar() {
     qFlushErro(); qFlushSessao(); clearInterval(Q.tmr); Q.tmr = null; if (Q.wake) { wakeOff(); Q.wake = false; }
-    $("q_tela").style.display = "none"; $("q_res").style.display = "none"; $("q_lista").style.display = "block"; qDesenhaLista();
+    $("q_tela").style.display = "none"; $("q_res").style.display = "none"; $("q_lista").style.display = "block"; $("q_manual_box").style.display = "block"; qDesenhaLista();
   }
   function qFinalizar(forcar) {
     if (Q.modo !== "sim") { qEncerrar(); return; }
@@ -792,7 +809,7 @@
     qResultado(b, { ac, er, br, nota, tempo, liq, por, erradas, n: Q.ids.length });
   }
   function qResultado(b, r) {
-    $("q_tela").style.display = "none"; const box = $("q_res"); box.style.display = "block"; box.innerHTML = "";
+    $("q_tela").style.display = "none"; $("q_manual_box").style.display = "none"; const box = $("q_res"); box.style.display = "block"; box.innerHTML = "";
     const c = el("div", undefined, "card"); c.appendChild(el("b", "Resultado do simulado"));
     c.appendChild(el("div", r.liq ? String(r.nota) : r.ac + " / " + r.n, "big"));
     c.appendChild(el("div", r.liq ? "nota líquida (acertos − erros)" : "acertos", "sub"));
@@ -802,7 +819,7 @@
     c.appendChild(t);
     c.appendChild(el("div", r.er ? r.er + " erro(s) foram enviados ao caderno de erros." : "Nenhum erro para o caderno.", "note")).style.marginTop = "10px";
     const rv = el("button", "Revisar as erradas agora"); rv.className = "ok"; rv.disabled = !r.er; rv.onclick = () => qIniciar(b, "treino", "", "erradas"); c.appendChild(rv);
-    const vl = el("button", "Voltar às questões"); vl.className = "sec"; vl.onclick = () => { box.style.display = "none"; $("q_lista").style.display = "block"; qDesenhaLista(); }; c.appendChild(vl);
+    const vl = el("button", "Voltar às questões"); vl.className = "sec"; vl.onclick = () => { box.style.display = "none"; $("q_lista").style.display = "block"; $("q_manual_box").style.display = "block"; qDesenhaLista(); }; c.appendChild(vl);
     box.appendChild(c); window.scrollTo(0, 0); pintarHoje();
   }
 
@@ -842,6 +859,9 @@
     $("q_pular").onclick = () => { if (Q.modo === "sim") { const q = qAtual(); delete Q.resp[q.n]; delete Q.conf[q.n]; qRender(); } else qProx(); };
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
+    $("q_e_ok").onclick = qSalvarErroAgora;
+    $("q_auto").onclick = () => { qAuto = !qAuto; LS.set("qauto", qAuto); $("q_auto").textContent = "Auto: " + (qAuto ? "sim" : "não"); };
+    const navh = () => document.documentElement.style.setProperty("--navh", $("nav").offsetHeight + "px"); navh(); window.addEventListener("resize", navh);
     $("c_visor").onclick = abrirVisor; $("v_min").onclick = fecharVisor;
     $("v_pause").onclick = () => { if (C.estado === "correndo") corridaPausar(); else if (C.estado === "pausada") corridaIniciar(); };
     $("v_fim").onclick = () => {

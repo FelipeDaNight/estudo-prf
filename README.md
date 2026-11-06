@@ -80,3 +80,6 @@ Aba **Questões**: escolha um banco (ex.: CBMGO 2022) e use **Treinar** (por mat
 - Tipos suportados: `mc` (A–E) e `ce` (Certo/Errado). Bancos ficam em `bancos/` (`index.json` + um JSON por prova).
 - **Atenção:** depois de atualizar, cole o novo `apps-script/Code.gs` no Apps Script e implante uma *nova versão* (Implantar → Gerenciar implantações → editar → Nova versão).
 - O gabarito do banco CBMGO 2022 é feito por mim (não oficial). Questões marcadas ⚠ têm confiança média.
+
+### Questões (v2)
+Lista com progresso, "Continuar", matérias em um toque (filtro Todas/Novas/Erradas), barra fixa Anterior/Pular/Próxima, botão "Salvar no caderno de erros" e "Auto" (avança sozinho ao acertar, exceto chute).

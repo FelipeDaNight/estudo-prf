@@ -51,6 +51,21 @@ nav button i{display:block;font-style:normal;font-size:21px}
 .tapbtn{height:120px;font-size:34px}
 
 nav button{font-size:10.5px}
+.qtopr{display:flex;align-items:center;gap:10px}.qtopr #q_cab{flex:1;font-weight:600}.qtopr #q_fim,.qtopr #q_auto{width:auto;margin:0;padding:8px 10px;font-size:13px;flex:none}
+#q_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}
+.qbar{height:6px;border-radius:9px;background:var(--line);margin-top:8px;overflow:hidden}.qbar i{display:block;height:100%;width:0;background:var(--pri);transition:width .25s}
+.qcard{margin-top:4px}
+.qconf{display:flex;align-items:center;gap:8px;margin-top:12px}.qconf .chips{flex:1;margin-top:0}.qconf .chips button{font-size:13px;padding:7px 2px}
+.qerro{margin-top:12px;border-top:1px dashed var(--line);padding-top:4px}
+#q_fb{scroll-margin-bottom:170px}#q_erro{scroll-margin-bottom:170px}
+#q_bar{position:fixed;z-index:9;left:0;right:0;bottom:var(--navh,64px);display:flex;gap:8px;padding:8px 16px;background:var(--card);border-top:1px solid var(--line)}
+#q_bar button{margin:0;flex:1;white-space:nowrap;padding:12px 4px}textarea{font-family:inherit}.qerro textarea{min-height:72px;font-size:15px}#q_bar #q_prox{flex:1.6}
+#q_tela{padding-bottom:78px}
+.seg{display:flex;gap:6px;margin-top:10px}.seg button{margin:0;flex:1;padding:8px 2px;font-size:14px;background:transparent;color:var(--mut);border:1.5px solid var(--line)}.seg button.on{color:var(--pri);border-color:var(--pri);background:rgba(110,166,234,.14)}
+.mrow{display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;font-weight:500;font-size:15px;background:var(--bg);color:var(--ink);border:1.5px solid var(--line);margin-top:6px;padding:11px 12px}
+.mrow small{color:var(--mut);font-size:12px;white-space:nowrap}.mrow .bd{background:var(--warn);color:#fff;border-radius:99px;font-size:12px;padding:1px 7px;margin-left:6px}
+.pbar{height:8px;border-radius:9px;background:var(--line);overflow:hidden;margin-top:8px;display:flex}.pbar i{display:block;height:100%}.pbar .a{background:var(--acc)}.pbar .e{background:var(--warn)}
+
 .alt{display:block;text-align:left;font-weight:500;font-size:16px;line-height:1.35;background:var(--bg);color:var(--ink);border:1.5px solid var(--line);margin-top:8px;padding:12px}
 .alt b{display:inline-block;min-width:22px;color:var(--pri)}
 .alt.sel{border-color:var(--pri);background:rgba(110,166,234,.16)}
@@ -203,31 +218,34 @@ nav button i{font-size:19px}
 <section id="quest" class="tab">
  <div id="q_lista"></div>
  <div id="q_tela" style="display:none">
-  <div class="card">
-   <div class="row" style="align-items:center"><div class="note" id="q_cab" style="flex:2"></div><div class="note" id="q_tmr" style="text-align:right"></div></div>
-   <div class="note" id="q_tag" style="margin-top:4px"></div>
+  <div id="q_top">
+   <div class="qtopr"><button id="q_fim" class="sec">Encerrar</button><div class="note" id="q_cab"></div><div class="note" id="q_tmr"></div><button id="q_auto" class="sec" title="Avançar sozinho ao acertar">Auto: não</button></div>
+   <div class="qbar"><i id="q_prog"></i></div>
+  </div>
+  <div class="card qcard">
+   <div class="note" id="q_tag"></div>
    <details id="q_apoio" class="qapoio" style="margin-top:8px"><summary id="q_apoio_t">Texto de apoio</summary><div id="q_apoio_c"></div></details>
    <div class="qenun" id="q_enun"></div>
    <div id="q_itens"></div>
    <img id="q_img" class="qimg" style="display:none" alt="">
    <div class="qenun" id="q_enun2"></div>
    <div id="q_fecho" class="qenun"></div>
-   <div class="note" style="margin-top:10px">Quanta certeza você tem?</div>
-   <div class="chips" id="q_conf"><button data-c="Certeza" class="on">Certeza</button><button data-c="Dúvida">Dúvida</button><button data-c="Chute">Chute</button></div>
+   <div class="qconf"><span class="note">Certeza?</span><div class="chips" id="q_conf"><button data-c="Certeza" class="on">Certeza</button><button data-c="Dúvida">Dúvida</button><button data-c="Chute">Chute</button></div></div>
    <div id="q_alts"></div>
    <div id="q_fb"></div>
-   <div id="q_erro" style="display:none">
-    <label>Tipo do erro</label><select id="q_e_tipo"></select>
+   <div id="q_erro" class="qerro" style="display:none">
+    <div class="row"><div style="flex:1.3"><label>Tipo do erro</label><select id="q_e_tipo"></select></div></div>
     <label>Regra para não errar de novo (edite com suas palavras)</label><textarea id="q_e_regra"></textarea>
-    <div class="note">Vai para o caderno de erros da planilha quando você tocar em Próxima.</div>
+    <button id="q_e_ok" class="ok">Salvar no caderno de erros</button>
+    <div class="note" id="q_e_nota">Também é salvo sozinho quando você avança.</div>
    </div>
-   <div class="row"><button id="q_ant" class="sec">Anterior</button><button id="q_pular" class="sec">Pular</button><button id="q_prox">Próxima</button></div>
-   <button id="q_fim" class="sec">Encerrar</button>
+   <div id="q_salvo" class="note" style="display:none;margin-top:10px">✔ Erro salvo no caderno.</div>
   </div>
-  <div class="card"><b>Mapa</b><div class="mapa" id="q_mapa"></div></div>
+  <details class="card" id="q_mapa_box"><summary><b>Mapa das questões</b></summary><div class="mapa" id="q_mapa"></div></details>
+  <div id="q_bar"><button id="q_ant" class="sec">Anterior</button><button id="q_pular" class="sec">Pular</button><button id="q_prox">Próxima</button></div>
  </div>
  <div id="q_res" style="display:none"></div>
- <div class="card"><button id="q_manual" class="sec" style="margin-top:0">Registrar um erro manualmente</button></div>
+ <div class="card" id="q_manual_box"><button id="q_manual" class="sec" style="margin-top:0">Registrar um erro manualmente</button></div>
 </section>
 
 <section id="erro" class="tab">
