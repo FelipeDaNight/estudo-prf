@@ -199,7 +199,7 @@
   }
   // dias seguidos de estudo; cada semana (seg-dom) tem 1 folga que não quebra a sequência; hoje sem estudo ainda não conta como falta
   function sequencia() {
-    const dias = new Set(hist.filter((x) => x.k === "estudo").map((x) => x.d));
+    const dias = new Set(hist.filter((x) => x.k === "estudo" || x.k === "lei").map((x) => x.d));
     let d = hoje(), n = 0; const folga = {};
     if (!dias.has(d)) d = addDias(d, -1);
     for (let i = 0; i < 200; i++) {
@@ -216,10 +216,11 @@
   }
   function proximaAcao(s) {
     const dc = diasDesde("corrida");
+    if (LS.get("lei_ini", 0)) { const lv = kVencidos("lei").length; if (lv || !leiFeitoHoje()) return { aba: "lei", btn: "Lei seca de hoje", msg: lv ? "Lei seca: " + lv + " lacunas para revisar hoje." : "Faça a lei seca de hoje: leitura e lacunas (10–15 min)." }; }
     if (s.estudoHoje < cfg.metaMin) return { aba: "estudo", btn: "Estudar agora", msg: s.estudoHoje ? "Faltam " + (cfg.metaMin - s.estudoHoje) + " min de estudo para a meta de hoje." : "Comece pelo estudo de hoje: meta de " + cfg.metaMin + " min." };
     if (s.corridas < cfg.metaCorr && (dc === null || dc >= 2)) return { aba: "corrida", btn: "Correr agora", msg: dc === null ? "Você ainda não registrou nenhuma corrida." : "Você não corre há " + dc + " dias. Meta da semana: " + cfg.metaCorr + " corridas." };
     if (s.acad < cfg.metaAcad && !s.treinoHoje) return { aba: "academia", btn: "Registrar treino", msg: "Treino de academia da semana: " + s.acad + " de " + cfg.metaAcad + "." };
-    const kv = kVencidos().length; if (kv) return { aba: "quest", btn: "Revisar cartões", msg: kv + (kv === 1 ? " cartão de erro vence" : " cartões de erro vencem") + " hoje. Leva poucos minutos." };
+    const kv = kVencidos("erro").length; if (kv) return { aba: "quest", btn: "Revisar cartões", msg: kv + (kv === 1 ? " cartão de erro vence" : " cartões de erro vencem") + " hoje. Leva poucos minutos." };
     return { aba: "estudo", btn: "Estudar mais", msg: "Metas do dia em dia. Abra a aba Revisar erros da planilha e revise o que venceu." };
   }
   function pintarHoje() {
@@ -231,6 +232,9 @@
     anel(3, s.acad / cfg.metaAcad * 100, s.acad + "/" + cfg.metaAcad);
     const pa = proximaAcao(s); hAba = pa.aba; $("h_msg").textContent = pa.msg; $("h_go").textContent = pa.btn;
     $("h_seq").textContent = sequencia(); $("h_km").textContent = fmt1(s.km); $("h_hs").textContent = fmt1(s.estudoSem / 60);
+    { const bt = LS.get("lei_total", 0), lv = cards.filter((c) => c.origem === "lei" && c.prox <= hoje()).length, nl = Object.keys(lido).length;
+      $("h_lei_t").textContent = LS.get("lei_ini", 0) ? (leiFeitoHoje() ? "✅ Lei seca de hoje feita. " : "Lei seca de hoje pendente. ") + lv + " lacunas para revisar · trechos lidos " + nl + (bt ? "/" + bt : "") : "Caderno de lei seca (Código Penal, Lei 14.133 e CPP) com leitura por artigo e lacunas de revisão. Toque para começar.";
+      $("h_lei_go").textContent = LS.get("lei_ini", 0) ? "Abrir lei seca" : "Começar a lei seca"; }
     const al = [];
     const de = diasDesde("estudo"), dc = diasDesde("corrida"), da = diasDesde("academia");
     if (de !== null && de >= 2) al.push("Você não estuda há " + de + " dias.");
@@ -830,7 +834,7 @@
   const KINT = [0, 1, 3, 7, 15, 30, 60];    // dias até rever, por caixa
   const K = { fila: [], pos: 0, total: 0, mostrou: false };
   const kSalvar = () => LS.set("cards", cards);
-  const kVencidos = () => cards.filter((c) => c.prox <= hoje());
+  const kVencidos = (esc) => cards.filter((c) => c.prox <= hoje() && (esc === "lei" ? c.origem === "lei" : esc === "erro" ? !c.origem : true));
   function kAddQuestao(b, q, regra) {
     let c = cards.find((x) => x.tipo === "q" && x.bank === b.id && x.n === q.n);
     if (!c) { c = { id: "k" + uid(), tipo: "q", bank: b.id, n: q.n, topico: q.topico, materia: q.materia, regra: regra || "", caixa: 0, prox: addDias(hoje(), 1), criado: hoje(), vezes: 0 }; cards.push(c); }
@@ -874,6 +878,9 @@
       box.appendChild(el("b", "✅ Resposta: " + rot));
       if (q.just) box.appendChild(el("p", q.just));
       if (q.conf === "media") box.appendChild(el("p", "⚠ Gabarito próprio com confiança média.", "note"));
+    } else if (c.tipo === "l") {
+      box.appendChild(el("b", "✅ " + c.back));
+      const p = el("p"); const partes = String(c.front).split("____"); p.appendChild(document.createTextNode(partes[0])); const mk = el("span", c.back, "dest"); p.appendChild(mk); p.appendChild(document.createTextNode(partes.slice(1).join("____"))); box.appendChild(p);
     } else box.appendChild(el("p", c.back || ""));
     if (c.regra) { const r = el("p", "📌 Sua regra: " + c.regra); box.appendChild(r); }
     v.appendChild(box);
@@ -885,30 +892,128 @@
   function kNota(r) {
     const c = kAtual(); if (!c || !K.mostrou) return;
     c.vezes++;
+    if (K.volta === "lei" && !K.reg) { K.reg = true; hist.push({ k: "lei", v: 1, d: hoje(), id: "l" + uid() }); LS.set("hist", hist); }
     if (r === "errei") { c.caixa = 0; c.prox = hoje(); K.fila.push(c); }
     else if (r === "dificil") { c.caixa = Math.max(1, c.caixa); c.prox = addDias(hoje(), Math.max(1, KINT[c.caixa])); }
     else { c.caixa = Math.min(6, c.caixa + (r === "bom" ? 1 : 2)); c.prox = addDias(hoje(), Math.max(1, KINT[c.caixa])); }
     kSalvar(); K.pos++; pintarHoje(); kRender();
   }
   function kIniciar(todos) {
-    const ord = (todos ? cards.slice() : kVencidos()).sort((a, b) => (a.prox < b.prox ? -1 : a.prox > b.prox ? 1 : a.caixa - b.caixa));
+    const ord = (todos ? cards.filter((c) => !c.origem) : kVencidos("erro")).sort((a, b) => (a.prox < b.prox ? -1 : a.prox > b.prox ? 1 : a.caixa - b.caixa));
+    kComecar(ord, "quest");
+  }
+  function kComecar(ord, volta) {
     if (!ord.length) { toast("Nenhum cartão para revisar."); return; }
     qFlushErro(); qFlushSessao();
-    Object.assign(K, { fila: ord, pos: 0, mostrou: false });
+    Object.assign(K, { fila: ord, pos: 0, mostrou: false, volta, reg: false });
     $("q_lista").style.display = "none"; $("q_res").style.display = "none"; $("q_tela").style.display = "none"; $("q_manual_box").style.display = "none"; $("k_tela").style.display = "block";
     kRender();
   }
   function kFim(sair) {
+    if (K.volta === "lei") { $("k_tela").style.display = "none"; abrir("lei"); if (!sair) toast("Lacunas concluídas. 🎉"); return; }
     $("k_tela").style.display = "none"; $("q_lista").style.display = "block"; $("q_manual_box").style.display = "block"; qDesenhaLista();
     if (!sair) toast("Revisão concluída. 🎉");
   }
   function kBanner() {
     const c = el("div", undefined, "card"); c.id = "k_banner";
-    const v = kVencidos().length, dom = cards.filter((x) => x.caixa >= 4).length;
+    const v = kVencidos("erro").length, dom = cards.filter((x) => !x.origem && x.caixa >= 4).length, tot = cards.filter((x) => !x.origem).length;
     const row = el("div", undefined, "kbanner"); const t = el("b", "🃏 Cartões de revisão"); row.appendChild(t);
-    const bt = el("button", v ? "Revisar " + v : "Revisar todos"); bt.className = v ? "ok" : "sec"; bt.id = "k_revisar"; bt.disabled = !cards.length; bt.onclick = () => kIniciar(!v); row.appendChild(bt); c.appendChild(row);
-    c.appendChild(el("div", cards.length ? v + " para hoje · " + cards.length + " no total · " + dom + " dominados. Cada erro vira um cartão automaticamente." : "Quando você errar uma questão ou registrar um erro, ele vira um cartão aqui, revisado em 1, 3, 7, 15… dias.", "note")).style.marginTop = "6px";
+    const bt = el("button", v ? "Revisar " + v : "Revisar todos"); bt.className = v ? "ok" : "sec"; bt.id = "k_revisar"; bt.disabled = !tot; bt.onclick = () => kIniciar(!v); row.appendChild(bt); c.appendChild(row);
+    c.appendChild(el("div", tot ? v + " para hoje · " + tot + " no total · " + dom + " dominados. Cada erro vira um cartão automaticamente." : "Quando você errar uma questão ou registrar um erro, ele vira um cartão aqui, revisado em 1, 3, 7, 15… dias.", "note")).style.marginTop = "6px";
     return c;
+  }
+
+  // ---------------------------------------------------------------- LEI SECA (leitura por artigo + lacunas com revisão espaçada)
+  const LEI = { bancos: [], carregou: false, bloco: null };
+  const NOME_LEI = { CP: "Código Penal", L14133: "Lei 14.133/2021", CPP: "Código de Processo Penal" };
+  let lido = LS.get("lei_lido", {});
+  async function leiCarrega() {
+    if (LEI.carregou) return true;
+    try {
+      const idx = await (await fetch("bancos/lei-index.json", { cache: "no-cache" })).json(); LS.set("lei_idx", idx);
+      LEI.bancos = await Promise.all(idx.map(async (u) => (await fetch(u)).json()));
+    } catch (e) { LEI.bancos = []; }
+    LEI.carregou = LEI.bancos.length > 0; if (LEI.carregou) LS.set("lei_total", leiBlocos().length);
+    return LEI.carregou;
+  }
+  const leiBlocos = () => LEI.bancos.reduce((a, b) => a.concat(b.blocos), []);
+  const leiNLac = (b) => b.artigos.reduce((n, a) => n + a.lacunas.length, 0);
+  const leiFeitoHoje = () => hist.some((x) => x.k === "lei" && x.d === hoje());
+  function pintaDestaque(box, texto) {
+    const rx = /[A-ZÀ-Ý][A-ZÀ-Ý\-]{3,}(?:(?:\s+(?:OU|DE|DA|DO|E|A|À|AO|AS|OS|NO|NA|EM))?\s+[A-ZÀ-Ý][A-ZÀ-Ý\-]{2,})*/g;
+    let i = 0, m;
+    while ((m = rx.exec(texto))) {
+      if (/^[IVXLC]+$/.test(m[0])) continue;
+      if (m.index > i) box.appendChild(document.createTextNode(texto.slice(i, m.index)));
+      box.appendChild(el("span", m[0], "dest")); i = m.index + m[0].length;
+    }
+    if (i < texto.length) box.appendChild(document.createTextNode(texto.slice(i)));
+  }
+  function leiNovasDe(blocos, max) {
+    const ja = new Set(cards.map((c) => c.id)); const out = [];
+    for (const b of blocos) for (const a of b.artigos) for (const l of a.lacunas) {
+      const id = "l|" + b.id + "|" + a.art + "|" + l.i; if (ja.has(id)) continue;
+      out.push({ id, tipo: "l", origem: "lei", bloco: b.id, topico: (NOME_LEI[b.lei] || b.lei) + " · " + a.art, materia: "Lei seca", front: l.c, back: l.r, regra: "", caixa: 0, prox: hoje(), criado: hoje(), vezes: 0 });
+      if (out.length >= max) return out;
+    }
+    return out;
+  }
+  function leiLacunas(bloco) {
+    const alvo = bloco ? [bloco] : (() => { const l = leiBlocos().filter((b) => lido[b.id]); return l.length ? l : leiBlocos().slice(0, 1); })();
+    const ids = new Set(alvo.map((b) => b.id));
+    const venc = cards.filter((c) => c.origem === "lei" && c.prox <= hoje() && (!bloco || c.bloco === bloco.id));
+    const novas = leiNovasDe(alvo, 12); novas.forEach((c) => cards.push(c)); if (novas.length) kSalvar();
+    const fila = venc.concat(novas).sort((a, b) => (a.prox < b.prox ? -1 : a.prox > b.prox ? 1 : a.caixa - b.caixa));
+    if (!fila.length) { toast(bloco ? "Sem lacunas novas ou vencidas neste trecho." : "Nada para revisar agora. Leia o próximo trecho."); return; }
+    kComecar(fila, "lei"); abrir("quest");
+  }
+  async function leiHome() {
+    $("lei_home").style.display = "block"; $("lei_leitor").style.display = "none"; LS.set("lei_ini", 1);
+    const ok = await leiCarrega(), h = $("lei_hoje"); h.replaceChildren();
+    if (!ok) { h.appendChild(el("div", "Não foi possível carregar o caderno. Conecte-se à internet uma vez.", "note")); $("lei_dias").replaceChildren(); return; }
+    const bl = leiBlocos(), nl = bl.filter((b) => lido[b.id]).length, prox = bl.find((b) => !lido[b.id]);
+    const venc = cards.filter((c) => c.origem === "lei" && c.prox <= hoje()).length, tot = cards.filter((c) => c.origem === "lei").length, dom = cards.filter((c) => c.origem === "lei" && c.caixa >= 4).length;
+    h.appendChild(el("b", "Hoje"));
+    h.appendChild(el("div", "Trechos lidos " + nl + "/" + bl.length + " · lacunas no baralho " + tot + " (" + dom + " dominadas)" + (leiFeitoHoje() ? " · ✅ treino de hoje feito" : ""), "sub")).style.marginTop = "6px";
+    const pb = el("div", undefined, "pbar"); const ia = el("i", undefined, "a"); ia.style.width = (100 * nl / bl.length) + "%"; pb.appendChild(ia); h.appendChild(pb);
+    if (prox) { const b1 = el("button", "📖 Ler: " + NOME_LEI[prox.lei] + " — " + prox.rotulo + " (" + prox.dia + ")"); b1.className = "lei_ler_prox"; b1.onclick = () => leiAbrir(prox); h.appendChild(b1); }
+    else h.appendChild(el("div", "✅ Todos os trechos desta semana foram lidos.", "note")).style.marginTop = "10px";
+    const novasN = leiNovasDe(nl ? bl.filter((b) => lido[b.id]) : bl.slice(0, 1), 12).length;
+    const b2 = el("button", "🧩 Lacunas de hoje (" + venc + " para revisar + " + novasN + " novas)"); b2.className = "ok lei_lac_hoje"; b2.onclick = () => leiLacunas(null); h.appendChild(b2);
+    const dias = []; bl.forEach((b) => { let d = dias.find((x) => x.nome === b.dia); if (!d) { d = { nome: b.dia, bl: [] }; dias.push(d); } d.bl.push(b); });
+    const box = document.createDocumentFragment();
+    dias.forEach((d) => {
+      const c = el("div", undefined, "card"); c.appendChild(el("b", d.nome));
+      d.bl.forEach((b) => { const bt = el("button"); bt.className = "leilin lei_bloco"; bt.dataset.id = b.id; bt.appendChild(el("span", (lido[b.id] ? "✅ " : "○ ") + (NOME_LEI[b.lei] || b.lei) + " — " + b.rotulo)); bt.appendChild(el("small", leiNLac(b) + (leiNLac(b) === 1 ? " lacuna" : " lacunas"))); bt.onclick = () => leiAbrir(b); c.appendChild(bt); });
+      box.appendChild(c);
+    });
+    $("lei_dias").replaceChildren(box);
+  }
+  function leiAbrir(b) {
+    LEI.bloco = b; $("lei_home").style.display = "none"; $("lei_leitor").style.display = "block";
+    $("lei_cab").textContent = (NOME_LEI[b.lei] || b.lei) + " · " + b.rotulo; $("lei_lido").textContent = lido[b.id] ? "✅ Lido (toque p/ desmarcar)" : "Marcar como lido";
+    const box = document.createDocumentFragment();
+    b.artigos.forEach((a) => {
+      const c = el("div", undefined, "card");
+      const top = el("div", undefined, "lei-art"); const tt = el("div"); tt.appendChild(el("div", a.art + (a.titulo ? " — " + a.titulo : ""), "lei-t"));
+      if (a.secao) tt.appendChild(el("div", a.secao, "lei-s")); top.appendChild(tt);
+      const st = el("button", "⭐ Cartão"); st.className = "sec"; st.onclick = () => { kAddLei(b, a); st.textContent = "✔ No baralho"; st.disabled = true; }; top.appendChild(st); c.appendChild(top);
+      a.itens.forEach((it) => { const d = el("div", undefined, it.k === "lei" ? "lei-l" : "lei-n"); pintaDestaque(d, it.t); c.appendChild(d); });
+      box.appendChild(c);
+    });
+    $("lei_arts").replaceChildren(box); window.scrollTo(0, 0);
+  }
+  function kAddLei(b, a) {
+    const id = "m|" + b.id + "|" + a.art; if (cards.some((c) => c.id === id)) return;
+    const lei = a.itens.filter((i) => i.k === "lei").map((i) => i.t).join("\n");
+    cards.push({ id, tipo: "m", origem: "lei", bloco: b.id, topico: (NOME_LEI[b.lei] || b.lei) + " · " + a.art, materia: "Lei seca", front: (NOME_LEI[b.lei] || b.lei) + ", " + a.art + (a.titulo ? " (" + a.titulo.replace(/\.$/, "") + ")" : "") + ": o que diz a lei?", back: lei, regra: "", caixa: 0, prox: hoje(), criado: hoje(), vezes: 0 });
+    kSalvar(); toast("Artigo no baralho de revisão.");
+  }
+  function leiMarcarLido() {
+    const b = LEI.bloco; if (!b) return;
+    if (lido[b.id]) { delete lido[b.id]; LS.set("lei_lido", lido); $("lei_lido").textContent = "Marcar como lido"; toast("Desmarcado."); return; }
+    lido[b.id] = hoje(); LS.set("lei_lido", lido); hist.push({ k: "lei", v: 1, d: hoje(), id: "l" + uid() }); LS.set("hist", hist);
+    toast("Trecho lido. ✅"); pintarHoje(); leiHome();
   }
 
   // ---------------------------------------------------------------- navegação e config
@@ -919,6 +1024,7 @@
     window.scrollTo(0, 0);
     if (t === "cfg") pintarFila();
     if (t === "hoje") pintarHoje();
+    if (t === "lei") { const kt = $("k_tela"); if (kt) kt.style.display = "none"; leiHome(); }
     if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none" && $("k_tela").style.display === "none") qDesenhaLista();
   }
   function pintarCfg() {
@@ -948,6 +1054,8 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
+    $("h_lei_go").onclick = () => abrir("lei"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
+    $("lei_lido").onclick = leiMarcarLido; $("lei_lac").onclick = () => leiLacunas(LEI.bloco);
     $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
     document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });
     $("q_auto").onclick = () => { qAuto = !qAuto; LS.set("qauto", qAuto); $("q_auto").textContent = "Auto: " + (qAuto ? "sim" : "não"); };
@@ -978,6 +1086,6 @@
     sync(false);
   }
 
-  window.__app = { Q, getCards: () => cards, setCards: (c) => { cards = c; kSalvar(); }, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
+  window.__app = { Q, getLido: () => lido, setLido: (l) => { lido = l; LS.set("lei_lido", lido); }, getCards: () => cards, setCards: (c) => { cards = c; kSalvar(); }, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar); else iniciar();
 })();

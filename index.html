@@ -51,12 +51,19 @@ nav button i{display:block;font-style:normal;font-size:21px}
 .tapbtn{height:120px;font-size:34px}
 
 nav button{font-size:10.5px}
+.dest{background:rgba(255,213,79,.38);color:inherit;border-radius:4px;padding:0 2px;font-weight:600}
+.lei-l{font-size:16px;line-height:1.5;margin:8px 0}.lei-n{font-size:14px;line-height:1.45;color:var(--mut);border-left:3px solid var(--line);padding-left:9px;margin:6px 0}
+.lei-t{font-weight:700;font-size:16px}.lei-s{font-size:12px;color:var(--mut);letter-spacing:.03em;margin-top:2px}
+.lei-art{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.lei-art button{width:auto;margin:0;flex:none;padding:6px 10px;font-size:13px}
+#lei_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}#lei_top #lei_sair{width:auto;margin:0;flex:none;padding:8px 12px;font-size:14px}
+#lei_bar{position:fixed;z-index:9;left:0;right:0;bottom:var(--navh,64px);display:flex;gap:8px;padding:8px 16px;background:var(--card);border-top:1px solid var(--line)}#lei_bar button{margin:0;flex:1;white-space:nowrap;padding:12px 4px}
+#lei_leitor{padding-bottom:78px}.leilin{display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;font-weight:500;font-size:15px;background:var(--bg);color:var(--ink);border:1.5px solid var(--line);margin-top:6px;padding:11px 12px}.leilin small{color:var(--mut);font-size:12px}
 #k_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}
 #k_bar{position:fixed;z-index:9;left:0;right:0;bottom:var(--navh,64px);padding:8px 16px;background:var(--card);border-top:1px solid var(--line)}
 #k_bar button{margin:0}#k_notas{display:flex;gap:6px}#k_notas button{flex:1;padding:8px 2px;font-size:15px;line-height:1.2}#k_notas small{display:block;font-size:11px;font-weight:500;opacity:.85}
 #k_tela{padding-bottom:84px}.kbanner{display:flex;align-items:center;gap:10px}.kbanner b{flex:1}.kbanner button{width:auto;margin:0;padding:10px 14px;flex:none}
 .kv{margin-top:12px;padding:12px;border-radius:12px;background:rgba(102,187,106,.16);border:1px solid var(--acc);font-size:15px;line-height:1.45}.kv p{margin:6px 0}
-.qtopr{display:flex;align-items:center;gap:10px}.qtopr #q_cab{flex:1;font-weight:600}.qtopr #q_fim,.qtopr #q_auto{width:auto;margin:0;padding:8px 10px;font-size:13px;flex:none}
+.qtopr{display:flex;align-items:center;gap:10px}.qtopr #q_cab,.qtopr #k_cab,.qtopr #lei_cab{flex:1;font-weight:600}.qtopr #q_fim,.qtopr #q_auto,.qtopr #k_sair{width:auto;margin:0;padding:8px 10px;font-size:13px;flex:none}
 #q_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}
 .qbar{height:6px;border-radius:9px;background:var(--line);margin-top:8px;overflow:hidden}.qbar i{display:block;height:100%;width:0;background:var(--pri);transition:width .25s}
 .qcard{margin-top:4px}
@@ -142,6 +149,7 @@ nav button i{font-size:19px}
   <div class="note" id="h_msg" style="text-align:center;margin-top:14px;font-size:15px"></div>
   <button id="h_go" class="ok">Estudar agora</button>
  </div>
+ <div class="card" id="h_lei"><b>📖 Lei seca</b><div class="note" id="h_lei_t" style="margin-top:6px"></div><button id="h_lei_go" class="sec">Abrir lei seca</button></div>
  <div class="card" id="h_alertas" style="display:none"></div>
  <div class="card kpi">
   <div><div class="mid" id="h_seq">0</div><div class="sub">dias seguidos</div></div>
@@ -266,6 +274,19 @@ nav button i{font-size:19px}
  </div>
  <div id="q_res" style="display:none"></div>
  <div class="card" id="q_manual_box"><button id="q_manual" class="sec" style="margin-top:0">Registrar um erro manualmente</button></div>
+</section>
+
+<section id="lei" class="tab">
+ <div id="lei_home">
+  <div class="row" style="align-items:center;margin-top:8px"><button id="lei_voltar" class="sec" style="width:auto;margin:0;flex:none;padding:8px 12px">Hoje</button><b style="flex:1;font-size:18px">📖 Lei seca</b></div>
+  <div class="card" id="lei_hoje"></div>
+  <div id="lei_dias"></div>
+ </div>
+ <div id="lei_leitor" style="display:none">
+  <div id="lei_top"><div class="qtopr"><button id="lei_sair" class="sec">Voltar</button><div class="note" id="lei_cab"></div></div></div>
+  <div id="lei_arts"></div>
+  <div id="lei_bar"><button id="lei_lido" class="ok">Marcar como lido</button><button id="lei_lac" class="sec">Lacunas deste trecho</button></div>
+ </div>
 </section>
 
 <section id="erro" class="tab">

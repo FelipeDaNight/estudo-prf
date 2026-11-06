@@ -86,3 +86,6 @@ Lista com progresso, "Continuar", matérias em um toque (filtro Todas/Novas/Erra
 
 ### Cartões (flashcards dos erros)
 Todo erro (questão errada em treino/simulado ou erro manual) vira um cartão automaticamente. Em Questões → "Cartões de revisão": mostra a questão, "Mostrar resposta", e avalia Errei/Difícil/Bom/Fácil (revisão em 0/1/3/7/15/30/60 dias). Os cartões ficam no aparelho (localStorage); a planilha continua com o caderno de erros e a revisão dela. A Hoje sugere "Revisar cartões" quando há vencidos.
+
+### Lei seca
+Card na aba Hoje abre a tela "📖 Lei seca": plano por dia (semana 1: CP, Lei 14.133 e CPP), leitor por artigo com palavras-chave em destaque, ⭐ para mandar um artigo ao baralho, "Marcar como lido" e **Lacunas de hoje** (12 novas + as vencidas, com revisão espaçada). Os dados ficam em `bancos/leiseca-sem01.json` (listado em `bancos/lei-index.json`); novas semanas entram como novos arquivos.
