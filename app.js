@@ -998,6 +998,12 @@
       const top = el("div", undefined, "lei-art"); const tt = el("div"); tt.appendChild(el("div", a.art + (a.titulo ? " — " + a.titulo : ""), "lei-t"));
       if (a.secao) tt.appendChild(el("div", a.secao, "lei-s")); top.appendChild(tt);
       const st = el("button", "⭐ Cartão"); st.className = "sec"; st.onclick = () => { kAddLei(b, a); st.textContent = "✔ No baralho"; st.disabled = true; }; top.appendChild(st); c.appendChild(top);
+      if (a.resumo) {
+        const r = el("div", undefined, "lei-res"); r.appendChild(el("div", "💡 Em resumo", "lei-res-t")); r.appendChild(el("div", a.resumo));
+        if (a.pontos && a.pontos.length) { const ul = el("ul"); a.pontos.forEach((p) => ul.appendChild(el("li", p))); r.appendChild(ul); }
+        if (a.dica) r.appendChild(el("div", "🧠 " + a.dica, "lei-dica"));
+        c.appendChild(r);
+      }
       a.itens.forEach((it) => {
         if (it.k === "sub") { c.appendChild(el("div", it.t, "lei-sub")); return; }
         const d = el("div", undefined, it.k === "lei" ? "lei-l" : "lei-n");
