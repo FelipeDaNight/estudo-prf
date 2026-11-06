@@ -998,7 +998,12 @@
       const top = el("div", undefined, "lei-art"); const tt = el("div"); tt.appendChild(el("div", a.art + (a.titulo ? " — " + a.titulo : ""), "lei-t"));
       if (a.secao) tt.appendChild(el("div", a.secao, "lei-s")); top.appendChild(tt);
       const st = el("button", "⭐ Cartão"); st.className = "sec"; st.onclick = () => { kAddLei(b, a); st.textContent = "✔ No baralho"; st.disabled = true; }; top.appendChild(st); c.appendChild(top);
-      a.itens.forEach((it) => { const d = el("div", undefined, it.k === "lei" ? "lei-l" : "lei-n"); pintaDestaque(d, it.t); c.appendChild(d); });
+      a.itens.forEach((it) => {
+        if (it.k === "sub") { c.appendChild(el("div", it.t, "lei-sub")); return; }
+        const d = el("div", undefined, it.k === "lei" ? "lei-l" : "lei-n");
+        if (it.k === "nota" && it.t.length > 450) { const dt = el("details", undefined, "lei-n"); dt.appendChild(el("summary", it.t.slice(0, 90).replace(/\s+\S*$/, "") + "… (ver tudo)")); const p = el("div"); pintaDestaque(p, it.t); dt.appendChild(p); c.appendChild(dt); return; }
+        pintaDestaque(d, it.t); c.appendChild(d);
+      });
       box.appendChild(c);
     });
     $("lei_arts").replaceChildren(box); window.scrollTo(0, 0);
