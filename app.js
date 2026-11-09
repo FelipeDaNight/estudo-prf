@@ -626,10 +626,42 @@
     try {
       const r = await fetch("bancos/index.json", { cache: "no-cache" }); Q.bancos = await r.json(); LS.set("qidx", Q.bancos);
     } catch (e) { Q.bancos = LS.get("qidx", []); }
+    Q.bancos = Q.bancos.filter((x) => !x.privado);
+    const pv = LS.get("qpriv", null);
+    if (pv && pv.questoes && pv.questoes.length) Q.bancos.push({ id: pv.id, titulo: pv.titulo, privado: true, n: pv.questoes.length });
     return Q.bancos;
+  }
+  // Banco privado: fica só no aparelho (localStorage), nunca no repositório público.
+  function qImportar(txt) {
+    let d = JSON.parse(txt); const novas = Array.isArray(d) ? d : (d.questoes || []);
+    if (!novas.length) throw new Error("Nenhuma questão encontrada no texto.");
+    const pv = LS.get("qpriv", null) || { id: "meus-erros", titulo: "Meus erros (Gran Questões)", tipo: "mix", sincroniza_simulado: false, aviso: "Questões suas, guardadas só neste aparelho. Os comentários são do material de origem.", questoes: [] };
+    const chave = (q) => String(q.enunciado || "").replace(/\s+/g, " ").trim().slice(0, 160).toLowerCase();
+    const ja = new Set(pv.questoes.map(chave)); let add = 0, rep = 0;
+    novas.forEach((q) => {
+      if (!q.enunciado || !q.resp || !q.tipo) throw new Error("Questão sem enunciado, resposta ou tipo.");
+      if (ja.has(chave(q))) { rep++; return; }
+      const n = pv.questoes.reduce((m, x) => Math.max(m, x.n), 0) + 1;
+      pv.questoes.push(Object.assign({ materia: "Sem matéria", topico: "—" }, q, { n })); ja.add(chave(q)); add++;
+    });
+    LS.set("qpriv", pv); delete Q.carregados[pv.id];
+    return { add, rep, total: pv.questoes.length };
+  }
+  function qImportCard() {
+    const d = el("details", undefined, "card"); d.id = "q_imp"; d.appendChild(el("summary", "➕ Importar questões (meus erros)"));
+    d.appendChild(el("div", "Cole aqui o texto que o Claude enviou, ou escolha o arquivo. Fica só neste aparelho.", "note"));
+    const ta = el("textarea"); ta.id = "q_imp_txt"; ta.rows = 5; ta.placeholder = "Cole o JSON das questões"; ta.style.width = "100%"; d.appendChild(ta);
+    const msg = el("div", "", "note"); msg.id = "q_imp_msg";
+    const go = el("button", "Importar"); go.className = "ok"; go.id = "q_imp_go";
+    go.onclick = () => { try { const r = qImportar(ta.value); ta.value = ""; toast("✅ " + r.add + " nova(s)" + (r.rep ? ", " + r.rep + " já existia(m)" : "") + ". Total: " + r.total); qDesenhaLista(); } catch (e) { msg.textContent = "❌ " + e.message; } };
+    const fi = el("input"); fi.type = "file"; fi.accept = ".json,application/json,text/plain"; fi.onchange = () => { const f = fi.files[0]; if (f) f.text().then((t) => { ta.value = t; }); };
+    d.appendChild(fi); d.appendChild(go);
+    const ex = el("button", "Copiar backup dos meus erros"); ex.className = "sec"; ex.onclick = async () => { try { await navigator.clipboard.writeText(JSON.stringify(LS.get("qpriv", {}))); msg.textContent = "Backup copiado."; } catch (e) { msg.textContent = "Não consegui copiar."; } };
+    d.appendChild(ex); d.appendChild(msg); return d;
   }
   async function qBanco(info) {
     if (Q.carregados[info.id]) return Q.carregados[info.id];
+    if (info.privado) { const pv = LS.get("qpriv", null); Q.carregados[info.id] = pv; return pv; }
     const r = await fetch(info.arquivo); const b = await r.json(); Q.carregados[info.id] = b; return b;
   }
   const qProg = (b) => (prog[b.id] = prog[b.id] || {});
@@ -642,7 +674,7 @@
   async function qDesenhaLista() {
     const box = document.createDocumentFragment();
     await qIndice(); box.appendChild(kBanner());
-    if (!Q.bancos.length) { box.appendChild(el("div", "Nenhum banco de questões disponível. Conecte-se à internet uma vez para baixar.", "note")); $("q_lista").replaceChildren(box); return; }
+    if (!Q.bancos.length) { box.appendChild(el("div", "Nenhum banco de questões disponível. Conecte-se à internet uma vez para baixar.", "note")); box.appendChild(qImportCard()); $("q_lista").replaceChildren(box); return; }
     for (const info of Q.bancos) {
       let b; try { b = await qBanco(info); } catch (e) { box.appendChild(el("div", "Não foi possível carregar " + info.titulo + ". Tente com internet.", "note")); continue; }
       const p = qProg(b), c = el("div", undefined, "card"); c.dataset.banco = b.id;
@@ -672,7 +704,7 @@
       c.appendChild(bz);
       box.appendChild(c);
     }
-    $("q_lista").replaceChildren(box); $("q_manual_box").style.display = "block";
+    box.appendChild(qImportCard()); $("q_lista").replaceChildren(box); $("q_manual_box").style.display = "block";
   }
   function qIniciar(b, modo, mat, quais) {
     qFlushErro(); qFlushSessao();
@@ -740,7 +772,7 @@
     const d = el("div", undefined, "fb " + (ok ? "ok" : "no"));
     const rot = q.tipo === "ce" ? (q.resp === "C" ? "Certo" : "Errado") : q.resp;
     d.appendChild(el("b", ok ? "✅ Acertou!" : "❌ Errou. Resposta correta: " + rot));
-    if (q.just) { const j = el("div", q.just); j.style.marginTop = "6px"; d.appendChild(j); }
+    if (q.just) { const j = el("div", q.just); j.style.marginTop = "6px"; j.style.whiteSpace = "pre-wrap"; d.appendChild(j); }
     if (q.conf === "media") { const w = el("div", "⚠ Gabarito próprio com confiança média: confira no oficial.", "note"); w.style.marginTop = "6px"; d.appendChild(w); }
     if (ok && (Q.conf[q.n] === "Chute")) { const w = el("div", "Acertou no chute: revise esse assunto mesmo assim.", "note"); w.style.marginTop = "6px"; d.appendChild(w); }
     f.appendChild(d);

@@ -89,3 +89,6 @@ Todo erro (questão errada em treino/simulado ou erro manual) vira um cartão au
 
 ### Lei seca
 Card na aba Hoje abre a tela "📖 Lei seca": plano por dia (semana 1: CP, Lei 14.133 e CPP), leitor por artigo com palavras-chave em destaque, ⭐ para mandar um artigo ao baralho, "Marcar como lido" e **Lacunas de hoje** (12 novas + as vencidas, com revisão espaçada). Os dados ficam em `bancos/leiseca-sem01.json` (listado em `bancos/lei-index.json`); novas semanas entram como novos arquivos.
+
+## Meus erros (Gran Questões) — banco privado
+Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). As questões ficam só no aparelho (localStorage `ep_qpriv`), não no repositório público. Formato: `{"questoes":[{materia, topico, tipo:"ce"|"mc", resp, enunciado, alternativas?, just}]}`. Duplicadas são ignoradas. "Copiar backup" copia o banco.
