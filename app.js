@@ -957,7 +957,7 @@
 
   // ---------------------------------------------------------------- LEI SECA (leitura por artigo + lacunas com revisão espaçada)
   const LEI = { bancos: [], carregou: false, bloco: null };
-  const NOME_LEI = { CP: "Código Penal", L14133: "Lei 14.133/2021", CPP: "Código de Processo Penal" };
+  const NOME_LEI = { CP: "Código Penal", L14133: "Lei 14.133/2021", CPP: "Código de Processo Penal", CTB: "CTB (Lei 9.503/97)" };
   let lido = LS.get("lei_lido", {});
   async function leiCarrega() {
     if (LEI.carregou) return true;
@@ -969,9 +969,22 @@
     return LEI.carregou;
   }
   const leiBlocos = () => LEI.bancos.reduce((a, b) => a.concat(b.blocos), []);
+  let leiSel = LS.get("lei_sel", "todos");   // todos | sem1 | ctb
+  const leiBlocosSel = () => leiBlocos().filter((b) => leiSel === "todos" || (leiSel === "ctb") === (b.lei === "CTB"));
   const leiNLac = (b) => b.artigos.reduce((n, a) => n + a.lacunas.length, 0);
   const leiFeitoHoje = () => hist.some((x) => x.k === "lei" && x.d === hoje());
-  function pintaDestaque(box, texto) {
+  function pintaDestaque(box, texto, dest) {
+    if (dest && dest.length) {
+      const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const rd = new RegExp(dest.slice().sort((a, b) => b.length - a.length).map(esc).join("|"), "gi");
+      let j = 0, k;
+      while ((k = rd.exec(texto))) {
+        if (k.index > j) box.appendChild(document.createTextNode(texto.slice(j, k.index)));
+        box.appendChild(el("span", k[0], "dest")); j = k.index + k[0].length;
+      }
+      if (j < texto.length) box.appendChild(document.createTextNode(texto.slice(j)));
+      return;
+    }
     const rx = /[A-ZÀ-Ý][A-ZÀ-Ý\-]{3,}(?:(?:\s+(?:OU|DE|DA|DO|E|A|À|AO|AS|OS|NO|NA|EM))?\s+[A-ZÀ-Ý][A-ZÀ-Ý\-]{2,})*/g;
     let i = 0, m;
     while ((m = rx.exec(texto))) {
@@ -1003,7 +1016,10 @@
     $("lei_home").style.display = "block"; $("lei_leitor").style.display = "none"; LS.set("lei_ini", 1);
     const ok = await leiCarrega(), h = $("lei_hoje"); h.replaceChildren();
     if (!ok) { h.appendChild(el("div", "Não foi possível carregar o caderno. Conecte-se à internet uma vez.", "note")); $("lei_dias").replaceChildren(); return; }
-    const bl = leiBlocos(), nl = bl.filter((b) => lido[b.id]).length, prox = bl.find((b) => !lido[b.id]);
+    const bl = leiBlocosSel(), nl = bl.filter((b) => lido[b.id]).length, prox = bl.find((b) => !lido[b.id]);
+    { const seg = el("div", undefined, "seg"); seg.id = "lei_sel";
+      [["todos", "Tudo"], ["sem1", "Semana 1"], ["ctb", "CTB"]].forEach((x) => { const bt = el("button", x[1]); bt.className = "lei_sel_b" + (leiSel === x[0] ? " on" : ""); bt.dataset.v = x[0]; bt.onclick = () => { leiSel = x[0]; LS.set("lei_sel", leiSel); leiHome(); }; seg.appendChild(bt); });
+      h.appendChild(seg); }
     const venc = cards.filter((c) => c.origem === "lei" && c.prox <= hoje()).length, tot = cards.filter((c) => c.origem === "lei").length, dom = cards.filter((c) => c.origem === "lei" && c.caixa >= 4).length;
     h.appendChild(el("b", "Hoje"));
     h.appendChild(el("div", "Trechos lidos " + nl + "/" + bl.length + " · lacunas no baralho " + tot + " (" + dom + " dominadas)" + (leiFeitoHoje() ? " · ✅ treino de hoje feito" : ""), "sub")).style.marginTop = "6px";
@@ -1030,6 +1046,14 @@
       const top = el("div", undefined, "lei-art"); const tt = el("div"); tt.appendChild(el("div", a.art + (a.titulo ? " — " + a.titulo : ""), "lei-t"));
       if (a.secao) tt.appendChild(el("div", a.secao, "lei-s")); top.appendChild(tt);
       const st = el("button", "⭐ Cartão"); st.className = "sec"; st.onclick = () => { kAddLei(b, a); st.textContent = "✔ No baralho"; st.disabled = true; }; top.appendChild(st); c.appendChild(top);
+      if (a.mudou && a.mudou.length) c.appendChild(el("div", "🔄 Texto alterado por: " + a.mudou.join(", "), "lei-mud"));
+      if (a.ficha) {
+        const f = a.ficha, t = el("div", undefined, "lei-ficha");
+        const lin = (k, v) => { if (!v) return; const r = el("div"); r.appendChild(el("b", k + ": ")); r.appendChild(document.createTextNode(v)); t.appendChild(r); };
+        if (f.natureza) lin("Natureza", f.natureza + (f.pontos ? " · " + f.pontos + " pontos" : "") + (f.multa_base ? " · multa-base " + f.multa_base : ""));
+        lin("Penalidade", f.penalidade); lin("Medida administrativa", f.medida); lin("Pena", f.pena);
+        c.appendChild(t);
+      }
       if (a.resumo) {
         const r = el("div", undefined, "lei-res"); r.appendChild(el("div", "💡 Em resumo", "lei-res-t")); r.appendChild(el("div", a.resumo));
         if (a.pontos && a.pontos.length) { const ul = el("ul"); a.pontos.forEach((p) => ul.appendChild(el("li", p))); r.appendChild(ul); }
@@ -1040,7 +1064,7 @@
         if (it.k === "sub") { c.appendChild(el("div", it.t, "lei-sub")); return; }
         const d = el("div", undefined, it.k === "lei" ? "lei-l" : "lei-n");
         if (it.k === "nota" && it.t.length > 450) { const dt = el("details", undefined, "lei-n"); dt.appendChild(el("summary", it.t.slice(0, 90).replace(/\s+\S*$/, "") + "… (ver tudo)")); const p = el("div"); pintaDestaque(p, it.t); dt.appendChild(p); c.appendChild(dt); return; }
-        pintaDestaque(d, it.t); c.appendChild(d);
+        pintaDestaque(d, it.t, a.dest); c.appendChild(d);
       });
       box.appendChild(c);
     });

@@ -92,3 +92,6 @@ Card na aba Hoje abre a tela "📖 Lei seca": plano por dia (semana 1: CP, Lei 1
 
 ## Meus erros (Gran Questões) — banco privado
 Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). As questões ficam só no aparelho (localStorage `ep_qpriv`), não no repositório público. Formato: `{"questoes":[{materia, topico, tipo:"ce"|"mc", resp, enunciado, alternativas?, just}]}`. Duplicadas são ignoradas. "Copiar backup" copia o banco.
+
+## CTB (Lei 9.503/97)
+`bancos/ctb-prf.json`: texto compilado do Planalto (04/11/2026), 364 artigos + 124 definições do Anexo I, em 43 dias. Cada infração tem ficha (natureza, pontos, multa-base, penalidade, medida administrativa); artigos alterados desde 2018 trazem "🔄 Texto alterado por". Na lei seca, o filtro Tudo / Semana 1 / CTB escolhe o caderno.

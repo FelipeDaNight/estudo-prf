@@ -405,8 +405,8 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await page.evaluate(() => window.__app.abrir("hoje"));
     assert.ok((await page.locator("#h_lei_go").innerText()).includes("Começar"));
     await page.click("#h_lei_go");
-    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 13);
-    assert.ok((await page.locator("#lei_hoje").innerText()).includes("Trechos lidos 0/13"));
+    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 56);
+    assert.ok((await page.locator("#lei_hoje").innerText()).includes("Trechos lidos 0/56"));
     await page.click(".lei_ler_prox");
     assert.ok(await page.locator("#lei_arts").isVisible());
     const txt = await page.locator("#lei_arts").innerText();
@@ -416,7 +416,7 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await page.locator("#lei_arts button").first().click();                   // ⭐ cartão do Art. 1º
     assert.ok((await page.evaluate(() => window.__app.getCards())).some((c) => c.origem === "lei" && c.tipo === "m"));
     await page.click("#lei_lido");
-    await espera(() => document.getElementById("lei_hoje") && document.getElementById("lei_hoje").innerText.includes("Trechos lidos 1/13"));
+    await espera(() => document.getElementById("lei_hoje") && document.getElementById("lei_hoje").innerText.includes("Trechos lidos 1/56"));
     assert.ok((await page.evaluate(() => window.__app.getHist())).some((h) => h.k === "lei"));
     await page.click(".lei_lac_hoje");
     assert.ok(await page.locator("#k_tela").isVisible());
