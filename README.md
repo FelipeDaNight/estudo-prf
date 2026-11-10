@@ -95,3 +95,7 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 
 ## CTB (Lei 9.503/97)
 `bancos/ctb-prf.json`: texto compilado do Planalto (04/11/2026), 364 artigos + 124 definições do Anexo I, em 43 dias. Cada infração tem ficha (natureza, pontos, multa-base, penalidade, medida administrativa); artigos alterados desde 2018 trazem "🔄 Texto alterado por". Na lei seca, o filtro Tudo / Semana 1 / CTB escolhe o caderno.
+
+## Tela Hoje reorganizada
+- **Checklist PRF 2021** no topo: o que caiu em cada item da prova objetiva (9/5/2021), por matéria, com gabarito (C, E ou anulada) e caixa para marcar o que já estudou. Funciona sem internet; o progresso fica no aparelho.
+- **Lei seca (Semana 1)** e **CTB** agora são páginas separadas, cada uma com seus trechos, progresso e lacunas. O filtro "Tudo / Semana 1 / CTB" foi removido.

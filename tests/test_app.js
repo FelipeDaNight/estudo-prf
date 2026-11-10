@@ -405,8 +405,8 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await page.evaluate(() => window.__app.abrir("hoje"));
     assert.ok((await page.locator("#h_lei_go").innerText()).includes("Começar"));
     await page.click("#h_lei_go");
-    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 56);
-    assert.ok((await page.locator("#lei_hoje").innerText()).includes("Trechos lidos 0/56"));
+    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 13);
+    assert.ok((await page.locator("#lei_hoje").innerText()).includes("Trechos lidos 0/13"));
     await page.click(".lei_ler_prox");
     assert.ok(await page.locator("#lei_arts").isVisible());
     const txt = await page.locator("#lei_arts").innerText();
@@ -416,7 +416,7 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await page.locator("#lei_arts button").first().click();                   // ⭐ cartão do Art. 1º
     assert.ok((await page.evaluate(() => window.__app.getCards())).some((c) => c.origem === "lei" && c.tipo === "m"));
     await page.click("#lei_lido");
-    await espera(() => document.getElementById("lei_hoje") && document.getElementById("lei_hoje").innerText.includes("Trechos lidos 1/56"));
+    await espera(() => document.getElementById("lei_hoje") && document.getElementById("lei_hoje").innerText.includes("Trechos lidos 1/13"));
     assert.ok((await page.evaluate(() => window.__app.getHist())).some((h) => h.k === "lei"));
     await page.click(".lei_lac_hoje");
     assert.ok(await page.locator("#k_tela").isVisible());
@@ -429,6 +429,32 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await page.click("#k_sair");
     await espera(() => document.getElementById("lei_home").style.display !== "none" && document.getElementById("lei").classList.contains("on"));
     assert.ok((await page.locator("#lei_hoje").innerText()).includes("treino de hoje feito"));
+  });
+
+
+  await t("Checklist PRF 2021 e CTB separado da Lei seca", async () => {
+    await page.evaluate(() => window.__app.abrir("hoje"));
+    assert.ok((await page.locator("#h_chk_t").innerText()).includes("0/112"));
+    assert.ok(await page.locator("#h_ctb_go").isVisible());
+    await page.click("#h_ctb_go");
+    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 43);
+    assert.ok((await page.locator("#lei_tit").innerText()).includes("CTB"));
+    const nomes = await page.locator("#lei_dias .lei_bloco").allInnerTexts();
+    assert.ok(nomes.every((x) => x.includes("CTB")), "só CTB nesta página");
+    assert.strictEqual(await page.locator("#lei_sel").count(), 0, "sem filtro misturado");
+    await page.click("#lei_voltar"); await page.click("#h_lei_go");
+    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 13);
+    assert.ok(!(await page.locator("#lei_dias").innerText()).includes("CTB —"));
+    await page.click("#lei_voltar");
+    await page.click("#h_chk_go");
+    await espera(() => document.querySelectorAll("#chk_corpo .chk_item").length >= 0 && document.querySelectorAll("#chk_corpo .chk_bloco").length === 12);
+    await page.locator("#chk_corpo .chk_bloco summary").first().click();
+    await page.locator("#chk_corpo .chk_item input").first().check();
+    await espera(() => document.getElementById("chk_corpo").innerText.includes("1 de 112"));
+    await page.click('#chk_corpo .chk_f[data-f="X"]');
+    await espera(() => document.querySelectorAll("#chk_corpo .chk_item").length === 10 - 1 + 0 || document.querySelectorAll("#chk_corpo .chk_item").length === 9);
+    await page.click("#chk_voltar");
+    assert.ok((await page.locator("#h_chk_t").innerText()).includes("1/112"));
   });
 
   await t("Lei seca: Hoje sugere lei seca quando há lacunas vencidas e sequência conta o dia", async () => {
