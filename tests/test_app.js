@@ -276,9 +276,9 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
   });
   await ctx.route("**/bancos/teste-ce.json", (route) => route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(BANCO_CE) }));
 
-  await t("Questões: lista dois bancos e o treino filtra por matéria", async () => {
+  await t("Questões: lista os bancos e o treino filtra por matéria", async () => {
     await page.click('[data-t="quest"]');
-    await espera(() => document.querySelectorAll("#q_lista .card[data-banco]").length === 2);
+    await espera(() => document.querySelectorAll("#q_lista .card[data-banco]").length === 3);
     const card = page.locator('#q_lista .card[data-banco="cbmgo-2022-soldado"]');
     assert.ok((await card.textContent()).includes("gabarito é de elaboração própria"), "aviso do gabarito");
     await card.locator('.q_mat[data-m="Raciocínio Lógico"]').click();
