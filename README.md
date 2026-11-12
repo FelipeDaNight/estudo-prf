@@ -99,3 +99,9 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 ## Tela Hoje reorganizada
 - **Checklist PRF 2021** no topo: o que caiu em cada item da prova objetiva (9/5/2021), por matéria, com gabarito (C, E ou anulada) e caixa para marcar o que já estudou. Funciona sem internet; o progresso fica no aparelho.
 - **Lei seca (Semana 1)** e **CTB** agora são páginas separadas, cada uma com seus trechos, progresso e lacunas. O filtro "Tudo / Semana 1 / CTB" foi removido.
+
+## CTB: revisão do texto (12/11/2026)
+- Conferido artigo por artigo contra o texto compilado do Planalto: os 364 artigos em vigor e as 126 definições do Anexo I estão no app.
+- Dispositivos **vetados ou revogados** agora aparecem em cinza (ex.: "Art. 11. (VETADO)", "§ 4º (VETADO)"), para a numeração não pular sem aviso. São 27 artigos e 132 parágrafos/incisos.
+- Corrigidos: rótulo do Art. 7º-A, duas definições do Anexo I que estavam coladas em outras (luz de posição e luz indicadora de direção), a definição revogada de "patrulhamento" e pequenos erros de digitalização ("§ 2o", "Lei no").
+- Capítulos I e II (dias 1 a 6) ganharam 98 lacunas escritas à mão, incluindo cartões "De quem é a competência?".

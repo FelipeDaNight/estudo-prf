@@ -457,6 +457,42 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     assert.ok((await page.locator("#h_chk_t").innerText()).includes("1/112"));
   });
 
+  await t("CTB: vetados e revogados aparecem; cartões antigos com id repetido são separados", async () => {
+    await page.evaluate(() => window.__app.abrir("hoje"));
+    await page.click("#h_ctb_go");
+    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 43);
+    await page.locator('#lei_dias .lei_bloco[data-id="ctb-1"]').click();
+    await espera(() => document.querySelectorAll("#lei_arts .card").length === 4);
+    const a1 = await page.locator("#lei_arts .card").first().innerText();
+    assert.ok(a1.includes("§ 3º") && a1.includes("§ 4º (VETADO)") && a1.includes("§ 5º"), "§ 4º do art. 1º aparece como vetado");
+    assert.ok((await page.locator("#lei_arts .card").nth(3).innerText()).includes("Art. 4º"), "art. 4º está no dia 1");
+    await page.click("#lei_sair");
+    await page.locator('#lei_dias .lei_bloco[data-id="ctb-2"]').click();
+    await espera(() => document.querySelectorAll("#lei_arts .lei-morto").length === 1);
+    const m = page.locator("#lei_arts .lei-morto");
+    assert.ok((await m.innerText()).includes("Art. 11. (VETADO)"));
+    assert.strictEqual(await m.locator("button").count(), 0, "artigo vetado não vira cartão");
+    const rot = await page.locator("#lei_arts .card .lei-t").allInnerTexts();
+    assert.deepStrictEqual(rot.slice(0, 9), ["Art. 5º", "Art. 6º", "Art. 7º", "Art. 7º-A", "Art. 8º", "Art. 9º", "Art. 10", "Art. 10-A", "Art. 12"]);
+    // cartões antigos: três lacunas do art. 165 nasceram com o mesmo id
+    const guardados = await page.evaluate(() => window.__app.getCards());
+    const ids = await page.evaluate(async () => {
+      const b = await (await fetch("bancos/ctb-prf.json")).json(), bl = b.blocos.find((x) => x.id === "ctb-26"), a = bl.artigos.find((x) => x.art === "Art. 165");
+      const antigos = a.lacunas.map((l) => ({ id: "l|ctb-26|Art. 165|0", tipo: "l", origem: "lei", bloco: "ctb-26", topico: "CTB · Art. 165", materia: "Lei seca", front: l.c, back: l.r, regra: "", caixa: 2, prox: "2099-01-01", criado: "2026-11-01", vezes: 3 }));
+      antigos.push({ id: "l|ctb-9|Patrulhamento|0", tipo: "l", origem: "lei", bloco: "ctb-9", topico: "CTB · Patrulhamento", materia: "Lei seca", front: "____ - Revogado pela Lei nº 14.599, de 2023", back: "PATRULHAMENTO", regra: "", caixa: 0, prox: "2099-01-01", criado: "2026-11-01", vezes: 0 });
+      const outros = window.__app.getCards().filter((c) => c.origem !== "lei");
+      window.__app.setCards(outros.concat(antigos));
+      return a.lacunas.map((l) => "l|ctb-26|Art. 165|" + l.i);
+    });
+    assert.strictEqual(new Set(ids).size, 3, "ids distintos no banco");
+    await page.reload(); await page.click("#h_ctb_go");
+    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 43);
+    const depois = await page.evaluate(() => window.__app.getCards().filter((c) => c.origem === "lei").map((c) => c.id + "#" + c.caixa));
+    assert.deepStrictEqual(depois.sort(), ids.map((x) => x + "#2").sort(), "cada cartão com o seu id, progresso mantido, revogado removido");
+    await page.evaluate((g) => window.__app.setCards(g), guardados);
+    await page.click("#lei_voltar");
+  });
+
   await t("Lei seca: Hoje sugere lei seca quando há lacunas vencidas e sequência conta o dia", async () => {
     await page.evaluate(() => { const c = window.__app.getCards(); c.forEach((x) => { if (x.origem === "lei") x.prox = "2000-01-01"; }); window.__app.setCards(c); window.__app.abrir("hoje"); window.__app.pintarHoje(); });
     assert.ok((await page.locator("#h_msg").innerText()).includes("Lei seca"));

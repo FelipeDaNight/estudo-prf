@@ -9,6 +9,16 @@ d.blocos.forEach(b=>{assert.ok(b.id&&b.dia&&b.rotulo&&b.lei==="CTB");b.artigos.f
   if(a.resumo!==undefined) assert.ok(a.resumo.length>15,"resumo curto "+a.art);
 });});
 assert.ok(n>=480,"artigos "+n);
+// vetados e revogados aparecem, para a numeração não "pular" sem aviso
+assert.strictEqual(A["Art. 11"].morto,"VETADO");assert.ok(A["Art. 112"].morto.startsWith("Revogado"));
+assert.ok(A["Art. 1º"].itens.some(i=>i.k==="vet"&&i.t==="§ 4º (VETADO)"),"§ 4º do art. 1º");
+assert.deepStrictEqual(A["Art. 1º"].itens.map(i=>i.t.slice(0,4)),["Art.","§ 1º","§ 2º","§ 3º","§ 4º","§ 5º"]);
+{const nums=new Set();d.blocos.forEach(b=>b.artigos.forEach(a=>{const m=/^Art\. (\d+)/.exec(a.art);if(m)nums.add(+m[1]);}));for(let i=1;i<=341;i++)assert.ok(nums.has(i),"falta o art. "+i);}
+assert.ok(A["Art. 7º-A"],"art. 7º-A com rótulo próprio");
+d.blocos.forEach(b=>{const v=new Set(),ids=new Set();b.artigos.forEach(a=>{assert.ok(!v.has(a.art),"rótulo repetido "+a.art);v.add(a.art);a.lacunas.forEach(l=>{const id=a.art+"|"+l.i;assert.ok(!ids.has(id),"id de lacuna repetido "+id);ids.add(id);});if(a.morto)assert.strictEqual(a.lacunas.length,0);});});
+assert.ok(A["Luz de Posição (Lanterna)"]&&A["Luz Indicadora de Direção (Pisca-Pisca)"],"definições do Anexo I separadas");
+assert.ok(!/Download para Anexo|Iris Rezende|Parte promulgada/.test(JSON.stringify(d)));
+assert.ok(!/§ ?\d+o\b|\bLei no \d/.test(JSON.stringify(d)),"ordinal digitalizado errado");
 assert.ok(A["Art. 267"].itens[0].t.includes("Deverá ser imposta"));
 assert.ok(!JSON.stringify(d).includes("Poderá ser imposta a penalidade de advertência"));
 assert.strictEqual(A["Art. 165"].ficha.natureza,"gravíssima");assert.strictEqual(A["Art. 165"].ficha.pontos,7);

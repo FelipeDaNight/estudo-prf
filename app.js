@@ -968,10 +968,20 @@
       const idx = await (await fetch("bancos/lei-index.json", { cache: "no-cache" })).json(); LS.set("lei_idx", idx);
       LEI.bancos = await Promise.all(idx.map(async (u) => (await fetch(u)).json()));
     } catch (e) { LEI.bancos = []; }
-    LEI.carregou = LEI.bancos.length > 0; if (LEI.carregou) { LS.set("lei_total", leiBlocos().length); LS.set("lei_tot_sem1", leiBlocos().filter((b) => modoDe(b.id) === "sem1").length); LS.set("lei_tot_ctb", leiBlocos().filter((b) => modoDe(b.id) === "ctb").length); }
+    LEI.carregou = LEI.bancos.length > 0; if (LEI.carregou) { LS.set("lei_total", leiBlocos().length); LS.set("lei_tot_sem1", leiBlocos().filter((b) => modoDe(b.id) === "sem1").length); LS.set("lei_tot_ctb", leiBlocos().filter((b) => modoDe(b.id) === "ctb").length); leiArrumaIds(); }
     return LEI.carregou;
   }
   const leiBlocos = () => LEI.bancos.reduce((a, b) => a.concat(b.blocos), []);
+  // Cartões de lacuna antigos que nasceram com o mesmo id (infrações do CTB): cada um passa a ter o seu.
+  function leiArrumaIds() {
+    const mapa = {}; leiBlocos().forEach((b) => b.artigos.forEach((a) => a.lacunas.forEach((l) => { mapa[b.id + "|" + l.c] = "l|" + b.id + "|" + a.art + "|" + l.i; })));
+    const vis = new Set(); let mud = 0;
+    cards.forEach((c) => { if (c.tipo !== "l" || c.origem !== "lei") return; if (vis.has(c.id)) { const nid = mapa[c.bloco + "|" + c.front]; if (nid && !vis.has(nid)) { c.id = nid; mud++; } } vis.add(c.id); });
+    // dispositivo que a lei revogou (ex.: definição de "patrulhamento"): o cartão antigo dele sai do baralho
+    const mortos = []; leiBlocos().forEach((b) => b.artigos.forEach((a) => { if (a.morto) mortos.push("l|" + b.id + "|" + a.art + "|"); }));
+    for (let i = cards.length - 1; i >= 0; i--) if (cards[i].tipo === "l" && cards[i].origem === "lei" && mortos.some((p) => cards[i].id.indexOf(p) === 0)) { cards.splice(i, 1); mud++; }
+    if (mud) kSalvar();
+  }
   let leiModo = "sem1";   // sem1 = Lei seca (Semana 1) | ctb = CTB: cada um tem a sua página
   const modoDe = (id) => (String(id).indexOf("ctb-") === 0 ? "ctb" : "sem1");
   const leiBlocosSel = () => leiBlocos().filter((b) => modoDe(b.id) === leiModo);
@@ -1046,6 +1056,7 @@
     $("lei_cab").textContent = (NOME_LEI[b.lei] || b.lei) + " · " + b.rotulo; $("lei_lido").textContent = lido[b.id] ? "✅ Lido (toque p/ desmarcar)" : "Marcar como lido";
     const box = document.createDocumentFragment();
     b.artigos.forEach((a) => {
+      if (a.morto) { const m = el("div", undefined, "card lei-morto"); m.appendChild(el("div", a.itens[0].t, "lei-vet")); m.appendChild(el("div", /^Art\./.test(a.art) ? "Sem texto em vigor: a numeração do Código pula este artigo." : "Definição revogada: não está mais em vigor.", "note")); box.appendChild(m); return; }
       const c = el("div", undefined, "card");
       const top = el("div", undefined, "lei-art"); const tt = el("div"); tt.appendChild(el("div", a.art + (a.titulo ? " — " + a.titulo : ""), "lei-t"));
       if (a.secao) tt.appendChild(el("div", a.secao, "lei-s")); top.appendChild(tt);
@@ -1066,6 +1077,7 @@
       }
       a.itens.forEach((it) => {
         if (it.k === "sub") { c.appendChild(el("div", it.t, "lei-sub")); return; }
+        if (it.k === "vet") { c.appendChild(el("div", it.t, "lei-vet")); return; }
         const d = el("div", undefined, it.k === "lei" ? "lei-l" : "lei-n");
         if (it.k === "nota" && it.t.length > 450) { const dt = el("details", undefined, "lei-n"); dt.appendChild(el("summary", it.t.slice(0, 90).replace(/\s+\S*$/, "") + "… (ver tudo)")); const p = el("div"); pintaDestaque(p, it.t); dt.appendChild(p); c.appendChild(dt); return; }
         pintaDestaque(d, it.t, a.dest); c.appendChild(d);
