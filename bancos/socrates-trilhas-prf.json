@@ -1,12 +1,12 @@
 {
  "id": "socrates-trilhas-prf",
- "titulo": "Sócrates · Fixação PRF (Penal, Processo Penal e Legislação Especial)",
+ "titulo": "Sócrates · Fixação PRF",
  "banca": "Cebraspe (estilo)",
  "ano": 2026,
  "tipo": "ce",
  "sincroniza_simulado": false,
  "origem": "socrates",
- "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
+ "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Matérias: Direito Penal, Legislação Especial, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
  "questoes": [
   {
    "n": 1,
@@ -1917,6 +1917,666 @@
    "resp": "C",
    "enunciado": "Ao defensor é assegurado o acesso amplo aos elementos de prova já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária.",
    "just": "Súmula Vinculante 14."
+  },
+  {
+   "n": 192,
+   "ref": "trilha:prf-transito:ctb-snt:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: disposições preliminares e Sistema Nacional de Trânsito",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O CONTRAN é o coordenador do Sistema Nacional de Trânsito e o seu órgão máximo executivo.",
+   "just": "Art. 7º, I: órgão máximo normativo e consultivo."
+  },
+  {
+   "n": 193,
+   "ref": "trilha:prf-transito:ctb-snt:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: disposições preliminares e Sistema Nacional de Trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As vias internas pertencentes a condomínios constituídos por unidades autônomas são consideradas vias terrestres para os efeitos do CTB.",
+   "just": "Art. 2º, parágrafo único."
+  },
+  {
+   "n": 194,
+   "ref": "trilha:prf-transito:ctb-snt:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: disposições preliminares e Sistema Nacional de Trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Compete à PRF, no âmbito das rodovias federais, aplicar a penalidade de suspensão do direito de dirigir quando prevista de forma específica para a infração cometida.",
+   "just": "Art. 20, XII."
+  },
+  {
+   "n": 195,
+   "ref": "trilha:prf-transito:ctb-snt:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: disposições preliminares e Sistema Nacional de Trânsito",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os órgãos do Sistema Nacional de Trânsito respondem subjetivamente, mediante prova de culpa, pelos danos causados por falhas na manutenção de serviços que garantam o trânsito seguro.",
+   "just": "Art. 1º, § 3º: respondem objetivamente."
+  },
+  {
+   "n": 196,
+   "ref": "trilha:prf-transito:ctb-snt:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: disposições preliminares e Sistema Nacional de Trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Compete às JARI julgar os recursos interpostos pelos infratores.",
+   "just": "Art. 17, I."
+  },
+  {
+   "n": 197,
+   "ref": "trilha:prf-transito:ctb-snt:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: disposições preliminares e Sistema Nacional de Trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Compete à PRF realizar perícia administrativa nos locais de sinistros de trânsito.",
+   "just": "Art. 20, XIII."
+  },
+  {
+   "n": 198,
+   "ref": "trilha:prf-transito:ctb-circulacao:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: normas gerais de circulação e conduta",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em rodovia de pista simples sem sinalização regulamentadora, a velocidade máxima para automóveis é de 110 km/h.",
+   "just": "Art. 61, § 1º, II, b: 100 km/h."
+  },
+  {
+   "n": 199,
+   "ref": "trilha:prf-transito:ctb-circulacao:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: normas gerais de circulação e conduta",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Nas rodovias de pista dupla sem sinalização regulamentadora, automóveis, camionetas e motocicletas têm o mesmo limite máximo de velocidade.",
+   "just": "Art. 61, § 1º, II, a, 1: 110 km/h. Item 56 da PRF 2021."
+  },
+  {
+   "n": 200,
+   "ref": "trilha:prf-transito:ctb-circulacao:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: normas gerais de circulação e conduta",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A velocidade mínima não pode ser inferior à metade da velocidade máxima estabelecida para a via.",
+   "just": "Art. 62."
+  },
+  {
+   "n": 201,
+   "ref": "trilha:prf-transito:ctb-circulacao:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: normas gerais de circulação e conduta",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em cruzamento não sinalizado entre uma rodovia e outra via, tem preferência o veículo que vem pela direita.",
+   "just": "Art. 29, III, a: tem preferência quem circula pela rodovia."
+  },
+  {
+   "n": 202,
+   "ref": "trilha:prf-transito:ctb-circulacao:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: normas gerais de circulação e conduta",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "É permitido ao motorista profissional de transporte de cargas dirigir por até seis horas e meia ininterruptas.",
+   "just": "Art. 67-C: no máximo 5 horas e meia. Item 78 da PRF 2021."
+  },
+  {
+   "n": 203,
+   "ref": "trilha:prf-transito:ctb-circulacao:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: normas gerais de circulação e conduta",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A fiscalização do tempo de direção pode ser feita pelo diário de bordo, pela papeleta ou pela ficha de trabalho externo.",
+   "just": "Art. 67-E, § 2º. Item 77 da PRF 2021."
+  },
+  {
+   "n": 204,
+   "ref": "trilha:prf-transito:ctb-circulacao:7",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: normas gerais de circulação e conduta",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Veículos sem luzes de rodagem diurna devem manter os faróis acesos, mesmo durante o dia, nas rodovias de pista simples situadas fora do perímetro urbano.",
+   "just": "Art. 40, § 2º."
+  },
+  {
+   "n": 205,
+   "ref": "trilha:prf-transito:ctb-pedestres:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: pedestres, ciclistas, cidadão e educação para o trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O ciclista desmontado empurrando a bicicleta equipara-se ao pedestre em direitos e deveres.",
+   "just": "Art. 68, § 1º."
+  },
+  {
+   "n": 206,
+   "ref": "trilha:prf-transito:ctb-pedestres:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: pedestres, ciclistas, cidadão e educação para o trânsito",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Nas vias rurais, a circulação de pedestres deve ocorrer preferencialmente pela pista de rolamento, no sentido contrário ao dos veículos.",
+   "just": "Art. 68: nas vias rurais, o pedestre usa o acostamento; só quando não houver acostamento anda pelos bordos da pista, em fila única, no sentido contrário (§ 3º)."
+  },
+  {
+   "n": 207,
+   "ref": "trilha:prf-transito:ctb-pedestres:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: pedestres, ciclistas, cidadão e educação para o trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Nas vias rurais sem acostamento, a circulação de pedestres na pista é feita pelos bordos, em fila única, em sentido contrário ao deslocamento dos veículos.",
+   "just": "Art. 68, § 3º."
+  },
+  {
+   "n": 208,
+   "ref": "trilha:prf-transito:ctb-pedestres:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: pedestres, ciclistas, cidadão e educação para o trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Nos locais com semáforo, o pedestre que não concluiu a travessia tem preferência, mesmo que o sinal mude para liberar os veículos.",
+   "just": "Art. 70, parágrafo único."
+  },
+  {
+   "n": 209,
+   "ref": "trilha:prf-transito:ctb-pedestres:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: pedestres, ciclistas, cidadão e educação para o trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Compete ao CONTRAN estabelecer, anualmente, os temas e os cronogramas das campanhas nacionais de trânsito.",
+   "just": "Art. 75."
+  },
+  {
+   "n": 210,
+   "ref": "trilha:prf-transito:ctb-sinalizacao:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: sinalização de trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As ordens do agente de trânsito prevalecem sobre as indicações do semáforo.",
+   "just": "Art. 89, I."
+  },
+  {
+   "n": 211,
+   "ref": "trilha:prf-transito:ctb-sinalizacao:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: sinalização de trânsito",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "As indicações dos sinais prevalecem sobre as do semáforo.",
+   "just": "Art. 89, II: o semáforo prevalece sobre os demais sinais."
+  },
+  {
+   "n": 212,
+   "ref": "trilha:prf-transito:ctb-sinalizacao:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: sinalização de trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Não serão aplicadas as sanções do CTB por inobservância à sinalização quando esta for insuficiente ou incorreta.",
+   "just": "Art. 90."
+  },
+  {
+   "n": 213,
+   "ref": "trilha:prf-transito:ctb-fiscalizacao:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: engenharia, fiscalização e obras na via",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Salvo em casos de emergência, a interdição da via deve ser comunicada à comunidade com quarenta e oito horas de antecedência, com indicação de caminhos alternativos.",
+   "just": "Art. 95, § 2º."
+  },
+  {
+   "n": 214,
+   "ref": "trilha:prf-transito:ctb-fiscalizacao:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: engenharia, fiscalização e obras na via",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A obrigação de sinalizar a obra na via é sempre do órgão de trânsito com circunscrição sobre ela.",
+   "just": "Art. 95, § 1º: é do responsável pela execução ou manutenção da obra."
+  },
+  {
+   "n": 215,
+   "ref": "trilha:prf-transito:ctb-veiculos:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: veículos, equipamentos, registro e licenciamento",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Veículos em movimento que possuam espelhos retrovisores em ambos os lados poderão usar cortinas nas áreas envidraçadas.",
+   "just": "Art. 111, II. Item 57 da PRF 2021."
+  },
+  {
+   "n": 216,
+   "ref": "trilha:prf-transito:ctb-veiculos:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: veículos, equipamentos, registro e licenciamento",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A expedição de novo Certificado de Registro de Veículo é obrigatória na transferência de propriedade, mas dispensável quando o proprietário muda de município de residência.",
+   "just": "Art. 123, I e II: obrigatória nos dois casos. Item 62 da PRF 2021."
+  },
+  {
+   "n": 217,
+   "ref": "trilha:prf-transito:ctb-veiculos:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: veículos, equipamentos, registro e licenciamento",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O registrador instantâneo inalterável de velocidade e tempo é equipamento obrigatório nos veículos de carga com peso bruto total superior a 4.536 kg.",
+   "just": "Art. 105, II."
+  },
+  {
+   "n": 218,
+   "ref": "trilha:prf-transito:ctb-veiculos:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: veículos, equipamentos, registro e licenciamento",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O porte do Certificado de Licenciamento Anual é dispensado quando, no momento da fiscalização, for possível verificar no sistema informatizado se o veículo está licenciado.",
+   "just": "Art. 133, parágrafo único."
+  },
+  {
+   "n": 219,
+   "ref": "trilha:prf-transito:ctb-veiculos:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: veículos, equipamentos, registro e licenciamento",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os caracteres das placas podem ser reaproveitados em outro veículo após a baixa do registro.",
+   "just": "Art. 115, § 1º: vedado o reaproveitamento."
+  },
+  {
+   "n": 220,
+   "ref": "trilha:prf-transito:ctb-escolares:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: condução de escolares e motofrete",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Para conduzir veículo de transporte de escolares, o condutor deve ter mais de vinte e um anos e ser habilitado na categoria D.",
+   "just": "Art. 138, I e II."
+  },
+  {
+   "n": 221,
+   "ref": "trilha:prf-transito:ctb-escolares:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: condução de escolares e motofrete",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O veículo de condução de escolares deve passar por inspeção anual para verificação dos equipamentos obrigatórios e de segurança.",
+   "just": "Art. 136, II: inspeção semestral."
+  },
+  {
+   "n": 222,
+   "ref": "trilha:prf-transito:ctb-escolares:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: condução de escolares e motofrete",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Entre as exigências para o motofrete está a instalação de aparador de linha antena corta-pipas.",
+   "just": "Art. 139-A, III."
+  },
+  {
+   "n": 223,
+   "ref": "trilha:prf-transito:ctb-habilitacao:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: habilitação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Cidadão penalmente inimputável não pode obter habilitação para conduzir veículo automotor.",
+   "just": "Art. 140, I. Item 60 da PRF 2021."
+  },
+  {
+   "n": 224,
+   "ref": "trilha:prf-transito:ctb-habilitacao:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: habilitação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Permissão para Dirigir tem validade de dois anos.",
+   "just": "Art. 148, § 2º: um ano."
+  },
+  {
+   "n": 225,
+   "ref": "trilha:prf-transito:ctb-habilitacao:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: habilitação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O condutor com Permissão para Dirigir que cometer uma infração de natureza média não receberá a Carteira Nacional de Habilitação ao final do período.",
+   "just": "Art. 148, § 3º: só a média reincidente impede; uma média não."
+  },
+  {
+   "n": 226,
+   "ref": "trilha:prf-transito:ctb-habilitacao:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: habilitação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Para habilitar-se na categoria D, o candidato deve ser maior de 21 anos.",
+   "just": "Art. 145, I."
+  },
+  {
+   "n": 227,
+   "ref": "trilha:prf-transito:ctb-habilitacao:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: habilitação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O exame de aptidão física e mental deve ser renovado a cada dez anos para condutores com menos de cinquenta anos.",
+   "just": "Art. 147, § 2º, I."
+  },
+  {
+   "n": 228,
+   "ref": "trilha:prf-transito:ctb-habilitacao:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: habilitação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os condutores das categorias C, D e E devem comprovar resultado negativo em exame toxicológico para obter e renovar a CNH.",
+   "just": "Art. 148-A."
+  },
+  {
+   "n": 229,
+   "ref": "trilha:prf-transito:ctb-infracoes:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: infrações",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Recusar-se a ser submetido a teste de alcoolemia é infração gravíssima, punida com multa (dez vezes) e suspensão do direito de dirigir por doze meses.",
+   "just": "Art. 165-A."
+  },
+  {
+   "n": 230,
+   "ref": "trilha:prf-transito:ctb-infracoes:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: infrações",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Transitar em velocidade superior à máxima permitida em mais de 20% até 50% é infração gravíssima.",
+   "just": "Art. 218, II: grave. Gravíssima é acima de 50%."
+  },
+  {
+   "n": 231,
+   "ref": "trilha:prf-transito:ctb-infracoes:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: infrações",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Dirigir segurando o telefone celular é infração gravíssima.",
+   "just": "Art. 252, parágrafo único."
+  },
+  {
+   "n": 232,
+   "ref": "trilha:prf-transito:ctb-infracoes:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: infrações",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O condutor envolvido em sinistro sem vítima, apenas com danos materiais, deve preservar o local para a perícia, sob pena de infração grave.",
+   "just": "Art. 178: sem vítima, a infração é deixar de remover o veículo (média). Item 58 da PRF 2021."
+  },
+  {
+   "n": 233,
+   "ref": "trilha:prf-transito:ctb-infracoes:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: infrações",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Dirigir com a CNH vencida há mais de trinta dias é infração gravíssima.",
+   "just": "Art. 162, V."
+  },
+  {
+   "n": 234,
+   "ref": "trilha:prf-transito:ctb-infracoes:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: infrações",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A infração de natureza média corresponde a cinco pontos no prontuário do condutor.",
+   "just": "Art. 259: média é 4 pontos; grave é 5."
+  },
+  {
+   "n": 235,
+   "ref": "trilha:prf-transito:ctb-infracoes:7",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: infrações",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Para a infração de dirigir sob influência de álcool, somente a concentração acima de 0,3 mg de álcool por litro de ar alveolar sujeita o condutor às penalidades administrativas.",
+   "just": "Art. 276: qualquer concentração; o CONTRAN disciplina a margem de tolerância do aparelho."
+  },
+  {
+   "n": 236,
+   "ref": "trilha:prf-transito:ctb-penalidades:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: penalidades",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A penalidade de suspensão do direito de dirigir será imposta quando o infrator atingir 20 pontos em 12 meses, caso constem duas ou mais infrações gravíssimas.",
+   "just": "Art. 261, I, a."
+  },
+  {
+   "n": 237,
+   "ref": "trilha:prf-transito:ctb-penalidades:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: penalidades",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Sem nenhuma infração gravíssima na pontuação, a suspensão ocorre ao atingir 30 pontos em 12 meses.",
+   "just": "Art. 261, I, c: 40 pontos. 30 pontos é quando há uma gravíssima."
+  },
+  {
+   "n": 238,
+   "ref": "trilha:prf-transito:ctb-penalidades:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: penalidades",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A autoridade de trânsito pode, a seu critério, aplicar advertência por escrito à infração grave cometida por condutor sem outra infração nos últimos 12 meses.",
+   "just": "Art. 267: a advertência é para leve ou média, e deve ser imposta."
+  },
+  {
+   "n": 239,
+   "ref": "trilha:prf-transito:ctb-penalidades:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: penalidades",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Será cassado o documento de habilitação do condutor que, com o direito de dirigir suspenso, conduzir qualquer veículo.",
+   "just": "Art. 263, I."
+  },
+  {
+   "n": 240,
+   "ref": "trilha:prf-transito:ctb-penalidades:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: penalidades",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Quando o infrator cometer, simultaneamente, duas ou mais infrações, ser-lhe-ão aplicadas cumulativamente as respectivas penalidades.",
+   "just": "Art. 266."
+  },
+  {
+   "n": 241,
+   "ref": "trilha:prf-transito:ctb-medidas:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: medidas administrativas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Quando a irregularidade não puder ser sanada no local, o veículo em condições de segurança poderá ser liberado a condutor habilitado mediante recolhimento do Certificado de Licenciamento Anual, com prazo não superior a 30 dias para regularização.",
+   "just": "Art. 270, § 2º."
+  },
+  {
+   "n": 242,
+   "ref": "trilha:prf-transito:ctb-medidas:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: medidas administrativas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A infração de dirigir sob influência de álcool só pode ser comprovada por etilômetro ou exame de sangue.",
+   "just": "Art. 277, § 2º: também por imagem, vídeo, sinais de alteração da capacidade psicomotora e outras provas."
+  },
+  {
+   "n": 243,
+   "ref": "trilha:prf-transito:ctb-medidas:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: medidas administrativas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Não se apresentando condutor habilitado no local, o veículo retido será removido ao depósito.",
+   "just": "Art. 270, § 4º."
+  },
+  {
+   "n": 244,
+   "ref": "trilha:prf-transito:ctb-medidas:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: medidas administrativas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O transbordo do excesso de carga é uma das medidas administrativas previstas no CTB.",
+   "just": "Art. 269, VIII."
+  },
+  {
+   "n": 245,
+   "ref": "trilha:prf-transito:ctb-processo:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: auto de infração e processo administrativo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O auto de infração será arquivado se, no prazo máximo de trinta dias, não for expedida a notificação da autuação.",
+   "just": "Art. 281, § 1º, II."
+  },
+  {
+   "n": 246,
+   "ref": "trilha:prf-transito:ctb-processo:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: auto de infração e processo administrativo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A notificação devolvida por desatualização do endereço do proprietário é considerada inválida, devendo ser renovada.",
+   "just": "Art. 282, § 1º: é válida para todos os efeitos."
+  },
+  {
+   "n": 247,
+   "ref": "trilha:prf-transito:ctb-processo:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: auto de infração e processo administrativo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A multa pode ser paga até o vencimento por oitenta por cento do seu valor.",
+   "just": "Art. 284."
+  },
+  {
+   "n": 248,
+   "ref": "trilha:prf-transito:ctb-processo:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: auto de infração e processo administrativo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O pagamento da multa implica renúncia ao direito de recorrer.",
+   "just": "Art. 284, § 2º."
+  },
+  {
+   "n": 249,
+   "ref": "trilha:prf-transito:ctb-crimes:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: crimes de trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ao condutor de veículo que, em sinistro com vítima, prestar pronto e integral socorro, não se imporá prisão em flagrante nem se exigirá fiança.",
+   "just": "Art. 301."
+  },
+  {
+   "n": 250,
+   "ref": "trilha:prf-transito:ctb-crimes:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: crimes de trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O homicídio culposo na direção de veículo automotor praticado sob a influência de álcool é punido com reclusão de cinco a oito anos.",
+   "just": "Art. 302, § 3º."
+  },
+  {
+   "n": 251,
+   "ref": "trilha:prf-transito:ctb-crimes:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: crimes de trânsito",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Dirigir veículo automotor em via pública sem habilitação é crime, ainda que não gere perigo de dano.",
+   "just": "Art. 309 exige perigo de dano; sem ele, é a infração do art. 162."
+  },
+  {
+   "n": 252,
+   "ref": "trilha:prf-transito:ctb-crimes:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: crimes de trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O crime de embriaguez ao volante pode ser constatado por sinais que indiquem alteração da capacidade psicomotora, mesmo sem teste de alcoolemia.",
+   "just": "Art. 306, § 1º, II, e § 2º."
+  },
+  {
+   "n": 253,
+   "ref": "trilha:prf-transito:ctb-crimes:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: crimes de trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Responde pela omissão de socorro o condutor cuja omissão foi suprida por terceiros.",
+   "just": "Art. 304, parágrafo único."
+  },
+  {
+   "n": 254,
+   "ref": "trilha:prf-transito:ctb-crimes:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: crimes de trânsito",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na lesão corporal culposa no trânsito praticada sob influência de álcool, aplica-se normalmente a transação penal.",
+   "just": "Art. 291, § 1º, I: a exceção afasta os arts. 74, 76 e 88 da Lei 9.099."
+  },
+  {
+   "n": 255,
+   "ref": "trilha:prf-transito:ctb-crimes:7",
+   "materia": "Legislação de Trânsito",
+   "topico": "CTB: crimes de trânsito",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A penalidade de suspensão ou proibição de obter a habilitação tem duração de dois meses a cinco anos.",
+   "just": "Art. 293."
+  },
+  {
+   "n": 256,
+   "ref": "trilha:prf-transito:lei-5970:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "Lei 5.970/1973: remoção de vítimas e veículos em sinistro",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Para que a autoridade policial autorize a remoção de veículos envolvidos em sinistro no leito da via, é necessário que antes tenha sido realizada a perícia no local.",
+   "just": "Lei 5.970/1973, art. 1º: independentemente de exame do local. Item 59 da PRF 2021."
+  },
+  {
+   "n": 257,
+   "ref": "trilha:prf-transito:lei-5970:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "Lei 5.970/1973: remoção de vítimas e veículos em sinistro",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ao autorizar a remoção, a autoridade ou o agente policial lavrará boletim da ocorrência, nele consignando o fato e as testemunhas que o presenciaram.",
+   "just": "Art. 1º, parágrafo único."
   }
  ]
 }
