@@ -6,8 +6,578 @@
  "tipo": "ce",
  "sincroniza_simulado": false,
  "origem": "socrates",
- "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Matérias: Direito Penal, Legislação Especial, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
+ "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Matérias: Direito Constitucional, Direito Penal, Legislação Especial, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
  "questoes": [
+  {
+   "n": 268,
+   "ref": "trilha:prf-constitucional:poder-constituinte:1",
+   "materia": "Direito Constitucional",
+   "topico": "Poder constituinte e emendas à Constituição",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A emenda à Constituição é promulgada pelas Mesas da Câmara dos Deputados e do Senado Federal, sem sanção do Presidente da República.",
+   "just": "CF, art. 60, § 3º."
+  },
+  {
+   "n": 269,
+   "ref": "trilha:prf-constitucional:poder-constituinte:2",
+   "materia": "Direito Constitucional",
+   "topico": "Poder constituinte e emendas à Constituição",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A forma republicana de governo e o voto obrigatório estão entre as cláusulas pétreas da Constituição Federal.",
+   "just": "CF, art. 60, § 4º: forma federativa; voto direto, secreto, universal e periódico; separação dos Poderes; direitos e garantias individuais."
+  },
+  {
+   "n": 270,
+   "ref": "trilha:prf-constitucional:poder-constituinte:3",
+   "materia": "Direito Constitucional",
+   "topico": "Poder constituinte e emendas à Constituição",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Constituição pode ser emendada durante o estado de defesa, desde que a proposta não trate das medidas coercitivas adotadas.",
+   "just": "CF, art. 60, § 1º: não pode na vigência de intervenção federal, estado de defesa ou estado de sítio."
+  },
+  {
+   "n": 271,
+   "ref": "trilha:prf-constitucional:poder-constituinte:4",
+   "materia": "Direito Constitucional",
+   "topico": "Poder constituinte e emendas à Constituição",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A matéria de proposta de emenda rejeitada pode ser objeto de nova proposta na mesma sessão legislativa, mediante proposta da maioria absoluta de qualquer das Casas.",
+   "just": "CF, art. 60, § 5º. A ressalva da maioria absoluta é do projeto de lei (art. 67)."
+  },
+  {
+   "n": 272,
+   "ref": "trilha:prf-constitucional:poder-constituinte:5",
+   "materia": "Direito Constitucional",
+   "topico": "Poder constituinte e emendas à Constituição",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Mais da metade das Assembleias Legislativas, manifestando-se cada uma pela maioria relativa de seus membros, pode propor emenda à Constituição.",
+   "just": "CF, art. 60, III."
+  },
+  {
+   "n": 273,
+   "ref": "trilha:prf-constitucional:poder-constituinte:6",
+   "materia": "Direito Constitucional",
+   "topico": "Poder constituinte e emendas à Constituição",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O poder constituinte originário é juridicamente ilimitado, não estando subordinado à ordem jurídica anterior.",
+   "just": "Doutrina: característica do poder originário; o titular é o povo (CF, art. 1º, parágrafo único)."
+  },
+  {
+   "n": 274,
+   "ref": "trilha:prf-constitucional:direitos-individuais:1",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos e deveres individuais e coletivos (art. 5º)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A casa é asilo inviolável, mas nela se pode entrar sem consentimento do morador, durante a noite, em caso de flagrante delito, desastre ou para prestar socorro.",
+   "just": "CF, art. 5º, XI."
+  },
+  {
+   "n": 275,
+   "ref": "trilha:prf-constitucional:direitos-individuais:2",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos e deveres individuais e coletivos (art. 5º)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O direito de reunião em local aberto ao público depende de autorização da autoridade competente.",
+   "just": "CF, art. 5º, XVI: independe de autorização; exige apenas prévio aviso."
+  },
+  {
+   "n": 276,
+   "ref": "trilha:prf-constitucional:direitos-individuais:3",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos e deveres individuais e coletivos (art. 5º)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O brasileiro naturalizado pode ser extraditado por comprovado envolvimento em tráfico ilícito de entorpecentes, na forma da lei.",
+   "just": "CF, art. 5º, LI."
+  },
+  {
+   "n": 277,
+   "ref": "trilha:prf-constitucional:direitos-individuais:4",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos e deveres individuais e coletivos (art. 5º)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A dissolução compulsória de associação pode ser determinada por decisão administrativa fundamentada.",
+   "just": "CF, art. 5º, XIX: só por decisão judicial transitada em julgado."
+  },
+  {
+   "n": 278,
+   "ref": "trilha:prf-constitucional:direitos-individuais:5",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos e deveres individuais e coletivos (art. 5º)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão.",
+   "just": "CF, art. 5º, XLII."
+  },
+  {
+   "n": 279,
+   "ref": "trilha:prf-constitucional:direitos-individuais:6",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos e deveres individuais e coletivos (art. 5º)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os crimes hediondos são inafiançáveis e imprescritíveis.",
+   "just": "CF, art. 5º, XLIII: inafiançáveis e insuscetíveis de graça ou anistia; imprescritíveis são o racismo e a ação de grupos armados (XLII e XLIV)."
+  },
+  {
+   "n": 280,
+   "ref": "trilha:prf-constitucional:direitos-individuais:7",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos e deveres individuais e coletivos (art. 5º)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o STF, a entrada forçada em domicílio sem mandado judicial é lícita, mesmo à noite, quando amparada em fundadas razões, justificadas a posteriori, de que dentro da casa ocorre flagrante delito.",
+   "just": "STF, RE 603.616 (Tema 280); CF, art. 5º, XI."
+  },
+  {
+   "n": 281,
+   "ref": "trilha:prf-constitucional:remedios:1",
+   "materia": "Direito Constitucional",
+   "topico": "Remédios constitucionais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O habeas corpus pode ser impetrado por qualquer pessoa, independentemente de advogado, em favor de quem sofra coação ilegal em sua liberdade de locomoção.",
+   "just": "CF, art. 5º, LXVIII; CPP, art. 654."
+  },
+  {
+   "n": 282,
+   "ref": "trilha:prf-constitucional:remedios:2",
+   "materia": "Direito Constitucional",
+   "topico": "Remédios constitucionais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Partido político com representação no Congresso Nacional pode impetrar mandado de segurança coletivo.",
+   "just": "CF, art. 5º, LXX, a."
+  },
+  {
+   "n": 283,
+   "ref": "trilha:prf-constitucional:remedios:3",
+   "materia": "Direito Constitucional",
+   "topico": "Remédios constitucionais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Associação legalmente constituída e em funcionamento há pelo menos seis meses pode impetrar mandado de segurança coletivo em defesa de seus associados.",
+   "just": "CF, art. 5º, LXX, b: há pelo menos um ano."
+  },
+  {
+   "n": 284,
+   "ref": "trilha:prf-constitucional:remedios:4",
+   "materia": "Direito Constitucional",
+   "topico": "Remédios constitucionais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O habeas data é o instrumento adequado para obter a identidade de terceiros que tenham feito denúncias contra o impetrante.",
+   "just": "CF, art. 5º, LXXII: informações relativas à pessoa do impetrante; entendimento do STF."
+  },
+  {
+   "n": 285,
+   "ref": "trilha:prf-constitucional:remedios:5",
+   "materia": "Direito Constitucional",
+   "topico": "Remédios constitucionais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A ação popular pode ser proposta por qualquer cidadão para anular ato lesivo à moralidade administrativa, ficando o autor isento de custas, salvo comprovada má-fé.",
+   "just": "CF, art. 5º, LXXIII."
+  },
+  {
+   "n": 286,
+   "ref": "trilha:prf-constitucional:direitos-sociais:1",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos sociais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O transporte é direito social previsto expressamente na Constituição Federal.",
+   "just": "CF, art. 6º (EC 90/2015)."
+  },
+  {
+   "n": 287,
+   "ref": "trilha:prf-constitucional:direitos-sociais:2",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos sociais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "É proibido qualquer trabalho a menores de dezesseis anos, salvo na condição de aprendiz, a partir de quatorze anos.",
+   "just": "CF, art. 7º, XXXIII."
+  },
+  {
+   "n": 288,
+   "ref": "trilha:prf-constitucional:direitos-sociais:3",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos sociais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A licença à gestante, prevista na Constituição, tem duração de cento e oitenta dias.",
+   "just": "CF, art. 7º, XVIII: cento e vinte dias."
+  },
+  {
+   "n": 289,
+   "ref": "trilha:prf-constitucional:direitos-sociais:4",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos sociais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o STF, os policiais civis podem exercer o direito de greve, desde que mantido percentual mínimo do efetivo em atividade.",
+   "just": "STF, ARE 654.432 (Tema 541): a greve é vedada aos policiais e a quem atue diretamente na segurança pública."
+  },
+  {
+   "n": 290,
+   "ref": "trilha:prf-constitucional:direitos-sociais:5",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos sociais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "É vedada a criação de mais de uma organização sindical representativa da mesma categoria na mesma base territorial, que não pode ser inferior à área de um Município.",
+   "just": "CF, art. 8º, II."
+  },
+  {
+   "n": 291,
+   "ref": "trilha:prf-constitucional:nacionalidade:1",
+   "materia": "Direito Constitucional",
+   "topico": "Nacionalidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Perde a nacionalidade brasileira quem adquirir outra nacionalidade por naturalização voluntária.",
+   "just": "CF, art. 12, § 4º, com a EC 131/2023: só cancelamento judicial da naturalização ou pedido expresso."
+  },
+  {
+   "n": 292,
+   "ref": "trilha:prf-constitucional:nacionalidade:2",
+   "materia": "Direito Constitucional",
+   "topico": "Nacionalidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "É privativo de brasileiro nato o cargo de Ministro de Estado da Defesa.",
+   "just": "CF, art. 12, § 3º, VII."
+  },
+  {
+   "n": 293,
+   "ref": "trilha:prf-constitucional:nacionalidade:3",
+   "materia": "Direito Constitucional",
+   "topico": "Nacionalidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O cargo de Ministro do Superior Tribunal de Justiça é privativo de brasileiro nato.",
+   "just": "CF, art. 12, § 3º: Ministro do STF (o STJ não está na lista)."
+  },
+  {
+   "n": 294,
+   "ref": "trilha:prf-constitucional:nacionalidade:4",
+   "materia": "Direito Constitucional",
+   "topico": "Nacionalidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As hipóteses de perda da nacionalidade brasileira previstas na Constituição são taxativas, não podendo ser ampliadas por tratado internacional.",
+   "just": "CF, art. 12, § 4º."
+  },
+  {
+   "n": 295,
+   "ref": "trilha:prf-constitucional:nacionalidade:5",
+   "materia": "Direito Constitucional",
+   "topico": "Nacionalidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O brasileiro que renunciar expressamente à nacionalidade pode readquirir sua nacionalidade brasileira originária, nos termos da lei.",
+   "just": "CF, art. 12, § 5º (EC 131/2023)."
+  },
+  {
+   "n": 296,
+   "ref": "trilha:prf-constitucional:nacionalidade:6",
+   "materia": "Direito Constitucional",
+   "topico": "Nacionalidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Dos originários de países de língua portuguesa, a naturalização exige residência no Brasil por quinze anos ininterruptos.",
+   "just": "CF, art. 12, II, a: residência por um ano ininterrupto e idoneidade moral."
+  },
+  {
+   "n": 297,
+   "ref": "trilha:prf-constitucional:direitos-politicos:1",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos políticos e partidos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O voto é facultativo para os maiores de setenta anos e para os maiores de dezesseis e menores de dezoito anos.",
+   "just": "CF, art. 14, § 1º, II."
+  },
+  {
+   "n": 298,
+   "ref": "trilha:prf-constitucional:direitos-politicos:2",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos políticos e partidos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A idade mínima para concorrer ao cargo de Senador é de trinta anos.",
+   "just": "CF, art. 14, § 3º, VI, a: trinta e cinco anos."
+  },
+  {
+   "n": 299,
+   "ref": "trilha:prf-constitucional:direitos-politicos:3",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos políticos e partidos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "É vedada a cassação de direitos políticos, cuja perda ou suspensão só ocorre nos casos previstos na Constituição.",
+   "just": "CF, art. 15."
+  },
+  {
+   "n": 300,
+   "ref": "trilha:prf-constitucional:direitos-politicos:4",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos políticos e partidos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A lei que alterar o processo eleitoral só entra em vigor um ano após a data de sua publicação.",
+   "just": "CF, art. 16: entra em vigor na publicação; não se aplica à eleição que ocorra até um ano da vigência."
+  },
+  {
+   "n": 301,
+   "ref": "trilha:prf-constitucional:direitos-politicos:5",
+   "materia": "Direito Constitucional",
+   "topico": "Direitos políticos e partidos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os conscritos, durante o período do serviço militar obrigatório, não podem alistar-se como eleitores.",
+   "just": "CF, art. 14, § 2º."
+  },
+  {
+   "n": 302,
+   "ref": "trilha:prf-constitucional:organizacao-estado:1",
+   "materia": "Direito Constitucional",
+   "topico": "Organização do Estado: federação, bens e competências",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Compete privativamente à União legislar sobre trânsito e transporte.",
+   "just": "CF, art. 22, XI."
+  },
+  {
+   "n": 303,
+   "ref": "trilha:prf-constitucional:organizacao-estado:2",
+   "materia": "Direito Constitucional",
+   "topico": "Organização do Estado: federação, bens e competências",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Compete concorrentemente à União, aos Estados e ao Distrito Federal legislar sobre a competência da polícia rodoviária federal.",
+   "just": "CF, art. 22, XXII: competência privativa da União."
+  },
+  {
+   "n": 304,
+   "ref": "trilha:prf-constitucional:organizacao-estado:3",
+   "materia": "Direito Constitucional",
+   "topico": "Organização do Estado: federação, bens e competências",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A superveniência de lei federal sobre normas gerais revoga a lei estadual que dispunha de forma contrária.",
+   "just": "CF, art. 24, § 4º: suspende a eficácia da lei estadual no que lhe for contrário."
+  },
+  {
+   "n": 305,
+   "ref": "trilha:prf-constitucional:organizacao-estado:4",
+   "materia": "Direito Constitucional",
+   "topico": "Organização do Estado: federação, bens e competências",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A faixa de até cento e cinquenta quilômetros de largura ao longo das fronteiras terrestres é considerada fundamental para a defesa do território nacional.",
+   "just": "CF, art. 20, § 2º."
+  },
+  {
+   "n": 306,
+   "ref": "trilha:prf-constitucional:organizacao-estado:5",
+   "materia": "Direito Constitucional",
+   "topico": "Organização do Estado: federação, bens e competências",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Estabelecer e implantar política de educação para a segurança do trânsito é competência comum da União, dos Estados, do Distrito Federal e dos Municípios.",
+   "just": "CF, art. 23, XII."
+  },
+  {
+   "n": 307,
+   "ref": "trilha:prf-constitucional:organizacao-estado:6",
+   "materia": "Direito Constitucional",
+   "topico": "Organização do Estado: federação, bens e competências",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Lei complementar pode autorizar os Estados a legislar sobre questões específicas das matérias de competência privativa da União.",
+   "just": "CF, art. 22, parágrafo único."
+  },
+  {
+   "n": 308,
+   "ref": "trilha:prf-constitucional:poder-executivo:1",
+   "materia": "Direito Constitucional",
+   "topico": "Poder Executivo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O mandato do Presidente da República é de quatro anos e tem início em 5 de janeiro do ano seguinte ao de sua eleição.",
+   "just": "CF, art. 82 (EC 111/2021)."
+  },
+  {
+   "n": 309,
+   "ref": "trilha:prf-constitucional:poder-executivo:2",
+   "materia": "Direito Constitucional",
+   "topico": "Poder Executivo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Vagando os cargos de Presidente e Vice nos últimos dois anos do mandato, far-se-á eleição direta noventa dias depois de aberta a última vaga.",
+   "just": "CF, art. 81, § 1º: eleição indireta pelo Congresso, trinta dias depois da última vaga."
+  },
+  {
+   "n": 310,
+   "ref": "trilha:prf-constitucional:poder-executivo:3",
+   "materia": "Direito Constitucional",
+   "topico": "Poder Executivo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Presidente da República pode delegar aos Ministros de Estado a concessão de indulto e a comutação de penas.",
+   "just": "CF, art. 84, XII e parágrafo único."
+  },
+  {
+   "n": 311,
+   "ref": "trilha:prf-constitucional:poder-executivo:4",
+   "materia": "Direito Constitucional",
+   "topico": "Poder Executivo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Presidente da República, na vigência do mandato, não pode ser responsabilizado por atos estranhos ao exercício de suas funções.",
+   "just": "CF, art. 86, § 4º."
+  },
+  {
+   "n": 312,
+   "ref": "trilha:prf-constitucional:poder-executivo:5",
+   "materia": "Direito Constitucional",
+   "topico": "Poder Executivo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Presidente e o Vice-Presidente não podem ausentar-se do País por mais de quinze dias sem licença do Congresso Nacional, sob pena de perda do cargo.",
+   "just": "CF, art. 83."
+  },
+  {
+   "n": 313,
+   "ref": "trilha:prf-constitucional:poder-executivo:6",
+   "materia": "Direito Constitucional",
+   "topico": "Poder Executivo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Admitida a acusação contra o Presidente pela maioria absoluta da Câmara dos Deputados, ele será julgado pelo STF nos crimes de responsabilidade.",
+   "just": "CF, art. 86: dois terços da Câmara; nos crimes de responsabilidade, o julgamento é do Senado."
+  },
+  {
+   "n": 314,
+   "ref": "trilha:prf-constitucional:seguranca-publica:1",
+   "materia": "Direito Constitucional",
+   "topico": "Segurança pública e defesa do Estado",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A polícia rodoviária federal, órgão permanente, organizado e mantido pela União e estruturado em carreira, destina-se, na forma da lei, ao patrulhamento ostensivo das rodovias federais.",
+   "just": "CF, art. 144, § 2º."
+  },
+  {
+   "n": 315,
+   "ref": "trilha:prf-constitucional:seguranca-publica:2",
+   "materia": "Direito Constitucional",
+   "topico": "Segurança pública e defesa do Estado",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As polícias penais federal, estaduais e distrital integram o rol de órgãos de segurança pública do art. 144 da Constituição.",
+   "just": "CF, art. 144, VI (EC 104/2019)."
+  },
+  {
+   "n": 316,
+   "ref": "trilha:prf-constitucional:seguranca-publica:3",
+   "materia": "Direito Constitucional",
+   "topico": "Segurança pública e defesa do Estado",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O estado de defesa depende de autorização prévia do Congresso Nacional, por maioria absoluta.",
+   "just": "CF, art. 136: decretado pelo Presidente e submetido ao Congresso em 24 horas; a autorização prévia é exigida para o estado de sítio (art. 137)."
+  },
+  {
+   "n": 317,
+   "ref": "trilha:prf-constitucional:seguranca-publica:4",
+   "materia": "Direito Constitucional",
+   "topico": "Segurança pública e defesa do Estado",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No estado de defesa, a prisão por crime contra o Estado não pode exceder dez dias, salvo quando autorizada pelo Poder Judiciário.",
+   "just": "CF, art. 136, § 3º, III."
+  },
+  {
+   "n": 318,
+   "ref": "trilha:prf-constitucional:seguranca-publica:5",
+   "materia": "Direito Constitucional",
+   "topico": "Segurança pública e defesa do Estado",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Cabe habeas corpus contra punição disciplinar militar sempre que o militar alegar injustiça da sanção.",
+   "just": "CF, art. 142, § 2º."
+  },
+  {
+   "n": 319,
+   "ref": "trilha:prf-constitucional:seguranca-publica:6",
+   "materia": "Direito Constitucional",
+   "topico": "Segurança pública e defesa do Estado",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As polícias militares e os corpos de bombeiros militares, forças auxiliares e reserva do Exército, subordinam-se aos Governadores dos Estados, do Distrito Federal e dos Territórios.",
+   "just": "CF, art. 144, § 6º."
+  },
+  {
+   "n": 320,
+   "ref": "trilha:prf-constitucional:ordem-social:1",
+   "materia": "Direito Constitucional",
+   "topico": "Ordem social",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A assistência social será prestada a quem dela necessitar, independentemente de contribuição à seguridade social.",
+   "just": "CF, art. 203."
+  },
+  {
+   "n": 321,
+   "ref": "trilha:prf-constitucional:ordem-social:2",
+   "materia": "Direito Constitucional",
+   "topico": "Ordem social",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A educação básica obrigatória e gratuita compreende a faixa dos seis aos quatorze anos de idade.",
+   "just": "CF, art. 208, I: dos 4 aos 17 anos."
+  },
+  {
+   "n": 322,
+   "ref": "trilha:prf-constitucional:ordem-social:3",
+   "materia": "Direito Constitucional",
+   "topico": "Ordem social",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Aos maiores de sessenta anos é garantida, pela Constituição, a gratuidade dos transportes coletivos urbanos.",
+   "just": "CF, art. 230, § 2º: maiores de sessenta e cinco anos."
+  },
+  {
+   "n": 323,
+   "ref": "trilha:prf-constitucional:ordem-social:4",
+   "materia": "Direito Constitucional",
+   "topico": "Ordem social",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As condutas lesivas ao meio ambiente sujeitam os infratores, pessoas físicas ou jurídicas, a sanções penais e administrativas, independentemente da obrigação de reparar o dano.",
+   "just": "CF, art. 225, § 3º."
+  },
+  {
+   "n": 324,
+   "ref": "trilha:prf-constitucional:ordem-social:5",
+   "materia": "Direito Constitucional",
+   "topico": "Ordem social",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "São penalmente inimputáveis os menores de dezoito anos, sujeitos às normas da legislação especial.",
+   "just": "CF, art. 228."
+  },
   {
    "n": 1,
    "ref": "trilha:prf-penal:principios:1",
