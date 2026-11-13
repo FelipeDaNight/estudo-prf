@@ -105,3 +105,9 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Dispositivos **vetados ou revogados** agora aparecem em cinza (ex.: "Art. 11. (VETADO)", "§ 4º (VETADO)"), para a numeração não pular sem aviso. São 27 artigos e 132 parágrafos/incisos.
 - Corrigidos: rótulo do Art. 7º-A, duas definições do Anexo I que estavam coladas em outras (luz de posição e luz indicadora de direção), a definição revogada de "patrulhamento" e pequenos erros de digitalização ("§ 2o", "Lei no").
 - Capítulos I e II (dias 1 a 6) ganharam 98 lacunas escritas à mão, incluindo cartões "De quem é a competência?".
+
+## Banco do Sócrates: fixação de Penal, Processo Penal e Legislação Especial (13/11/2026)
+- Aba **Questões** → card **"Sócrates · Fixação PRF"**: 191 itens Certo/Errado no estilo Cebraspe, com justificativa citando o artigo. São os mesmos itens das aulas do Sócrates (assistente de voz), escritos e conferidos nas fontes oficiais, com as leis atualizadas até 13/11/2026 (Lei Antifacção, Leis 15.245/2025, 15.397/2026 e 15.487/2026, TCO pela PRF no STF, Decreto 11.348/2023).
+- Matérias: Direito Penal (79), Direito Processual Penal (50) e Legislação Especial (62). Use **Treinar por matéria**; a etiqueta mostra o tópico (ex.: "Prisão em flagrante e audiência de custódia").
+- Não são questões de prova (essas estão no banco PRF 2021) e não entram em Simulados da planilha.
+- O arquivo `bancos/socrates-trilhas-prf.json` é gerado pelo Sócrates (`python -m socrates.estudo.exportar_app CAMINHO_DO_APP`). O número de cada item não muda entre versões, então o progresso e os cartões continuam valendo; item novo entra no fim. O Sócrates não baixa este banco de volta (já tem os itens nas trilhas).

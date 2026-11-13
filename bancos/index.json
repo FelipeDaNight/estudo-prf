@@ -10,5 +10,12 @@
   "arquivo": "bancos/prf-2021-p1.json",
   "titulo": "PRF 2021 · Policial Rodoviário Federal (Cebraspe)",
   "n": 103
+ },
+ {
+  "id": "socrates-trilhas-prf",
+  "arquivo": "bancos/socrates-trilhas-prf.json",
+  "titulo": "Sócrates · Fixação PRF (Penal, Processo Penal e Legislação Especial)",
+  "n": 191,
+  "origem": "socrates"
  }
 ]

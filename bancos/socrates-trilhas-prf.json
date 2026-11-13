@@ -1,0 +1,1922 @@
+{
+ "id": "socrates-trilhas-prf",
+ "titulo": "Sócrates · Fixação PRF (Penal, Processo Penal e Legislação Especial)",
+ "banca": "Cebraspe (estilo)",
+ "ano": 2026,
+ "tipo": "ce",
+ "sincroniza_simulado": false,
+ "origem": "socrates",
+ "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
+ "questoes": [
+  {
+   "n": 1,
+   "ref": "trilha:prf-penal:principios:1",
+   "materia": "Direito Penal",
+   "topico": "Princípios do Direito Penal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Medida provisória pode criar tipo penal desde que haja relevância e urgência.",
+   "just": "A Constituição proíbe medida provisória sobre direito penal (art. 62, § 1º, I, b). Crime e pena só por lei em sentido estrito."
+  },
+  {
+   "n": 2,
+   "ref": "trilha:prf-penal:principios:2",
+   "materia": "Direito Penal",
+   "topico": "Princípios do Direito Penal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O princípio da insignificância, quando aplicado, afasta a tipicidade material da conduta.",
+   "just": "A bagatela exclui a tipicidade material: a lesão ao bem jurídico é tão pequena que não justifica a intervenção penal."
+  },
+  {
+   "n": 3,
+   "ref": "trilha:prf-penal:principios:3",
+   "materia": "Direito Penal",
+   "topico": "Princípios do Direito Penal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o STJ, o princípio da insignificância é aplicável aos crimes contra a administração pública quando o prejuízo ao erário for irrisório.",
+   "just": "Súmula 599 do STJ: a insignificância é inaplicável aos crimes contra a administração pública. A exceção reconhecida é o descaminho."
+  },
+  {
+   "n": 4,
+   "ref": "trilha:prf-penal:principios:4",
+   "materia": "Direito Penal",
+   "topico": "Princípios do Direito Penal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Pelo princípio da intranscendência, a obrigação de reparar o dano pode ser estendida aos sucessores do condenado até o limite do patrimônio transferido.",
+   "just": "CF, art. 5º, XLV: a pena não passa do condenado, mas a reparação do dano e o perdimento de bens podem alcançar os sucessores até o limite da herança."
+  },
+  {
+   "n": 5,
+   "ref": "trilha:prf-penal:principios:5",
+   "materia": "Direito Penal",
+   "topico": "Princípios do Direito Penal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A reincidência impede, por si só, a aplicação do princípio da insignificância.",
+   "just": "Para o STF, a reincidência não afasta automaticamente a bagatela; é preciso analisar o caso concreto."
+  },
+  {
+   "n": 6,
+   "ref": "trilha:prf-penal:lei-penal-tempo:1",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no tempo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em relação ao tempo do crime, o Código Penal adotou a teoria do resultado.",
+   "just": "O art. 4º adota a teoria da atividade: o crime se considera praticado no momento da ação ou omissão."
+  },
+  {
+   "n": 7,
+   "ref": "trilha:prf-penal:lei-penal-tempo:2",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no tempo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A lei posterior que deixa de considerar o fato como crime faz cessar a execução e os efeitos penais da sentença condenatória, mas não afasta a obrigação de reparar o dano.",
+   "just": "Art. 2º, caput: a abolitio criminis extingue os efeitos penais; os efeitos civis permanecem."
+  },
+  {
+   "n": 8,
+   "ref": "trilha:prf-penal:lei-penal-tempo:3",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no tempo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A lei penal mais benéfica retroage somente até o trânsito em julgado da sentença condenatória.",
+   "just": "Art. 2º, parágrafo único: retroage ainda que o fato tenha sido decidido por sentença transitada em julgado."
+  },
+  {
+   "n": 9,
+   "ref": "trilha:prf-penal:lei-penal-tempo:4",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no tempo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A lei temporária aplica-se ao fato praticado durante sua vigência, embora decorrido o período de sua duração.",
+   "just": "Art. 3º: a lei excepcional ou temporária é ultra-ativa."
+  },
+  {
+   "n": 10,
+   "ref": "trilha:prf-penal:lei-penal-tempo:5",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no tempo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ao crime permanente aplica-se a lei penal mais grave se a sua vigência for anterior à cessação da permanência.",
+   "just": "Súmula 711 do STF, que vale também para o crime continuado."
+  },
+  {
+   "n": 11,
+   "ref": "trilha:prf-penal:lei-penal-espaco:1",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no espaço e contagem de prazo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Quanto ao lugar do crime, o Código Penal adotou a teoria da ubiquidade.",
+   "just": "Art. 6º: considera-se praticado o crime tanto onde ocorreu a ação ou omissão quanto onde se produziu ou deveria produzir-se o resultado."
+  },
+  {
+   "n": 12,
+   "ref": "trilha:prf-penal:lei-penal-espaco:2",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no espaço e contagem de prazo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Crime praticado dentro de embaixada estrangeira situada em Brasília é considerado cometido em território estrangeiro.",
+   "just": "A embaixada é inviolável, mas faz parte do território brasileiro."
+  },
+  {
+   "n": 13,
+   "ref": "trilha:prf-penal:lei-penal-espaco:3",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no espaço e contagem de prazo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na contagem dos prazos penais, exclui-se o dia do começo e inclui-se o do vencimento.",
+   "just": "Art. 10 do CP: o dia do começo inclui-se no cômputo do prazo. A regra de excluir o primeiro dia é do processo penal."
+  },
+  {
+   "n": 14,
+   "ref": "trilha:prf-penal:lei-penal-espaco:4",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no espaço e contagem de prazo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O crime contra o patrimônio da União praticado no exterior sujeita-se à lei brasileira, ainda que o agente tenha sido absolvido no estrangeiro.",
+   "just": "Art. 7º, I, b, e § 1º: extraterritorialidade incondicionada."
+  },
+  {
+   "n": 15,
+   "ref": "trilha:prf-penal:lei-penal-espaco:5",
+   "materia": "Direito Penal",
+   "topico": "Lei penal no espaço e contagem de prazo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Para que a lei brasileira se aplique ao crime cometido por brasileiro no exterior, é suficiente que o agente entre no território nacional.",
+   "just": "É extraterritorialidade condicionada: além da entrada no território, exigem-se as demais condições do art. 7º, § 2º, como a dupla tipicidade."
+  },
+  {
+   "n": 16,
+   "ref": "trilha:prf-penal:fato-tipico:1",
+   "materia": "Direito Penal",
+   "topico": "Fato típico: dolo, culpa e nexo causal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Age com dolo eventual o agente que prevê o resultado e acredita sinceramente que poderá evitá-lo com sua habilidade.",
+   "just": "Isso é culpa consciente. No dolo eventual, o agente assume o risco e é indiferente ao resultado."
+  },
+  {
+   "n": 17,
+   "ref": "trilha:prf-penal:fato-tipico:2",
+   "materia": "Direito Penal",
+   "topico": "Fato típico: dolo, culpa e nexo causal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Salvo os casos expressos em lei, ninguém pode ser punido por fato previsto como crime senão quando o pratica dolosamente.",
+   "just": "Art. 18, parágrafo único: a forma culposa só existe se a lei a previr expressamente."
+  },
+  {
+   "n": 18,
+   "ref": "trilha:prf-penal:fato-tipico:3",
+   "materia": "Direito Penal",
+   "topico": "Fato típico: dolo, culpa e nexo causal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A superveniência de causa relativamente independente que, por si só, produziu o resultado exclui a imputação desse resultado ao agente.",
+   "just": "Art. 13, § 1º: os fatos anteriores, porém, imputam-se a quem os praticou."
+  },
+  {
+   "n": 19,
+   "ref": "trilha:prf-penal:fato-tipico:4",
+   "materia": "Direito Penal",
+   "topico": "Fato típico: dolo, culpa e nexo causal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O policial rodoviário em serviço que, podendo agir sem risco pessoal, assiste a um roubo e nada faz pode responder pelo resultado.",
+   "just": "Art. 13, § 2º, a: quem tem por lei o dever de proteção e vigilância é garantidor e responde pelo resultado que devia e podia evitar."
+  },
+  {
+   "n": 20,
+   "ref": "trilha:prf-penal:fato-tipico:5",
+   "materia": "Direito Penal",
+   "topico": "Fato típico: dolo, culpa e nexo causal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A coação moral irresistível exclui a conduta e, por consequência, o fato típico.",
+   "just": "A coação moral irresistível exclui a culpabilidade (art. 22). Quem exclui a conduta é a coação física irresistível."
+  },
+  {
+   "n": 21,
+   "ref": "trilha:prf-penal:erro-de-tipo:1",
+   "materia": "Direito Penal",
+   "topico": "Erro de tipo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O erro sobre elemento constitutivo do tipo legal exclui o dolo, mas permite a punição por crime culposo, se previsto em lei.",
+   "just": "Art. 20, caput."
+  },
+  {
+   "n": 22,
+   "ref": "trilha:prf-penal:erro-de-tipo:2",
+   "materia": "Direito Penal",
+   "topico": "Erro de tipo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No erro sobre a pessoa, consideram-se as condições ou qualidades da vítima efetivamente atingida.",
+   "just": "Art. 20, § 3º: consideram-se as condições da pessoa contra quem o agente queria praticar o crime."
+  },
+  {
+   "n": 23,
+   "ref": "trilha:prf-penal:erro-de-tipo:3",
+   "materia": "Direito Penal",
+   "topico": "Erro de tipo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Quem, por erro plenamente justificado pelas circunstâncias, supõe estar sofrendo agressão injusta iminente e reage para se defender fica isento de pena.",
+   "just": "Legítima defesa putativa: descriminante putativa por erro plenamente justificado (art. 20, § 1º)."
+  },
+  {
+   "n": 24,
+   "ref": "trilha:prf-penal:erro-de-tipo:4",
+   "materia": "Direito Penal",
+   "topico": "Erro de tipo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Responde pelo crime o terceiro que determina o erro.",
+   "just": "Art. 20, § 2º."
+  },
+  {
+   "n": 25,
+   "ref": "trilha:prf-penal:iter-criminis:1",
+   "materia": "Direito Penal",
+   "topico": "Consumação, tentativa e crime impossível",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se o policial rodoviário recusa o dinheiro oferecido pelo condutor para não ser autuado, a conduta do condutor configura corrupção ativa tentada.",
+   "just": "A corrupção ativa é crime formal e se consuma com a simples oferta, ainda que recusada."
+  },
+  {
+   "n": 26,
+   "ref": "trilha:prf-penal:iter-criminis:2",
+   "materia": "Direito Penal",
+   "topico": "Consumação, tentativa e crime impossível",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Salvo disposição em contrário, pune-se a tentativa com a pena do crime consumado, diminuída de um a dois terços.",
+   "just": "Art. 14, parágrafo único."
+  },
+  {
+   "n": 27,
+   "ref": "trilha:prf-penal:iter-criminis:3",
+   "materia": "Direito Penal",
+   "topico": "Consumação, tentativa e crime impossível",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O agente que, por ato voluntário, desiste de prosseguir na execução responde apenas pelos atos já praticados.",
+   "just": "Art. 15 (desistência voluntária)."
+  },
+  {
+   "n": 28,
+   "ref": "trilha:prf-penal:iter-criminis:4",
+   "materia": "Direito Penal",
+   "topico": "Consumação, tentativa e crime impossível",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No crime de roubo, se o agente devolve o bem à vítima antes do recebimento da denúncia, terá direito à redução de pena do arrependimento posterior.",
+   "just": "O art. 16 só vale para crimes cometidos sem violência ou grave ameaça à pessoa, o que exclui o roubo."
+  },
+  {
+   "n": 29,
+   "ref": "trilha:prf-penal:iter-criminis:5",
+   "materia": "Direito Penal",
+   "topico": "Consumação, tentativa e crime impossível",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A existência de sistema de vigilância eletrônica em estabelecimento comercial torna impossível a configuração do crime de furto.",
+   "just": "Súmula 567 do STJ: a vigilância, por si só, não torna impossível o furto."
+  },
+  {
+   "n": 30,
+   "ref": "trilha:prf-penal:iter-criminis:6",
+   "materia": "Direito Penal",
+   "topico": "Consumação, tentativa e crime impossível",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Não se admite tentativa nos crimes culposos.",
+   "just": "Na tentativa o agente quer o resultado; no crime culposo, não. (A exceção doutrinária é a culpa imprópria.)"
+  },
+  {
+   "n": 31,
+   "ref": "trilha:prf-penal:punibilidade:1",
+   "materia": "Direito Penal",
+   "topico": "Punibilidade e extinção da punibilidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A anistia, a graça e o indulto são concedidos por decreto do Presidente da República.",
+   "just": "Graça e indulto, sim; a anistia é concedida por lei do Congresso Nacional."
+  },
+  {
+   "n": 32,
+   "ref": "trilha:prf-penal:punibilidade:2",
+   "materia": "Direito Penal",
+   "topico": "Punibilidade e extinção da punibilidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Crime cuja pena máxima é de 4 anos prescreve, em abstrato, em 8 anos.",
+   "just": "Art. 109, IV: pena máxima superior a 2 e até 4 anos prescreve em 8 anos."
+  },
+  {
+   "n": 33,
+   "ref": "trilha:prf-penal:punibilidade:3",
+   "materia": "Direito Penal",
+   "topico": "Punibilidade e extinção da punibilidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A sentença que concede o perdão judicial não será considerada para efeitos de reincidência.",
+   "just": "Art. 120 e Súmula 18 do STJ: a sentença é declaratória da extinção da punibilidade."
+  },
+  {
+   "n": 34,
+   "ref": "trilha:prf-penal:punibilidade:4",
+   "materia": "Direito Penal",
+   "topico": "Punibilidade e extinção da punibilidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A redução pela metade do prazo prescricional para o agente menor de 21 anos aplica-se a qualquer crime.",
+   "just": "Desde a Lei 15.160/2025 a redução não vale para crimes que envolvam violência sexual contra a mulher."
+  },
+  {
+   "n": 35,
+   "ref": "trilha:prf-penal:ilicitude:1",
+   "materia": "Direito Penal",
+   "topico": "Ilicitude: excludentes e excesso punível",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Não pode alegar estado de necessidade quem tinha o dever legal de enfrentar o perigo.",
+   "just": "Art. 24, § 1º."
+  },
+  {
+   "n": 36,
+   "ref": "trilha:prf-penal:ilicitude:2",
+   "materia": "Direito Penal",
+   "topico": "Ilicitude: excludentes e excesso punível",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Age em legítima defesa quem repele agressão injusta já cessada, para evitar que o agressor volte a agir no futuro.",
+   "just": "A agressão precisa ser atual ou iminente (art. 25). Agressão cessada não autoriza a reação."
+  },
+  {
+   "n": 37,
+   "ref": "trilha:prf-penal:ilicitude:3",
+   "materia": "Direito Penal",
+   "topico": "Ilicitude: excludentes e excesso punível",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Considera-se em legítima defesa o agente de segurança pública que repele agressão ou risco de agressão a vítima mantida refém durante a prática de crimes.",
+   "just": "Art. 25, parágrafo único, incluído pela Lei 13.964/2019, observados os requisitos do caput."
+  },
+  {
+   "n": 38,
+   "ref": "trilha:prf-penal:ilicitude:4",
+   "materia": "Direito Penal",
+   "topico": "Ilicitude: excludentes e excesso punível",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O excesso punível somente é admitido na forma dolosa.",
+   "just": "Art. 23, parágrafo único: o agente responde pelo excesso doloso ou culposo."
+  },
+  {
+   "n": 39,
+   "ref": "trilha:prf-penal:ilicitude:5",
+   "materia": "Direito Penal",
+   "topico": "Ilicitude: excludentes e excesso punível",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Quem mata um cão que o ataca espontaneamente na rua age em legítima defesa.",
+   "just": "Ataque espontâneo de animal não é agressão humana injusta; a reação configura estado de necessidade."
+  },
+  {
+   "n": 40,
+   "ref": "trilha:prf-penal:culpabilidade:1",
+   "materia": "Direito Penal",
+   "topico": "Culpabilidade: imputabilidade e erro de proibição",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A embriaguez completa, voluntária ou culposa, exclui a imputabilidade penal.",
+   "just": "Art. 28, II: a embriaguez voluntária ou culposa não exclui a imputabilidade. Só a completa por caso fortuito ou força maior isenta (§ 1º)."
+  },
+  {
+   "n": 41,
+   "ref": "trilha:prf-penal:culpabilidade:2",
+   "materia": "Direito Penal",
+   "topico": "Culpabilidade: imputabilidade e erro de proibição",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A emoção e a paixão não excluem a imputabilidade penal.",
+   "just": "Art. 28, I."
+  },
+  {
+   "n": 42,
+   "ref": "trilha:prf-penal:culpabilidade:3",
+   "materia": "Direito Penal",
+   "topico": "Culpabilidade: imputabilidade e erro de proibição",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No erro de proibição evitável, o agente responde por crime culposo.",
+   "just": "O erro de proibição evitável apenas diminui a pena de um sexto a um terço (art. 21). Quem leva à forma culposa é o erro de tipo evitável."
+  },
+  {
+   "n": 43,
+   "ref": "trilha:prf-penal:culpabilidade:4",
+   "materia": "Direito Penal",
+   "topico": "Culpabilidade: imputabilidade e erro de proibição",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se o fato é cometido sob coação moral irresistível, só é punível o autor da coação.",
+   "just": "Art. 22."
+  },
+  {
+   "n": 44,
+   "ref": "trilha:prf-penal:culpabilidade:5",
+   "materia": "Direito Penal",
+   "topico": "Culpabilidade: imputabilidade e erro de proibição",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O empregado que cumpre ordem não manifestamente ilegal do patrão, em empresa privada, beneficia-se da obediência hierárquica.",
+   "just": "A obediência hierárquica do art. 22 exige relação de direito público."
+  },
+  {
+   "n": 45,
+   "ref": "trilha:prf-penal:crimes-pessoa:1",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a pessoa",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Desde a Lei 14.994/2024, o feminicídio deixou de ser qualificadora do homicídio e passou a ser crime autônomo, punido com reclusão de 20 a 40 anos.",
+   "just": "Art. 121-A do CP, com a revogação do inciso VI do § 2º do art. 121."
+  },
+  {
+   "n": 46,
+   "ref": "trilha:prf-penal:crimes-pessoa:2",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a pessoa",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O motorista que, por imprudência na direção de veículo automotor, mata um pedestre responde por homicídio culposo previsto no Código Penal.",
+   "just": "Pelo princípio da especialidade, aplica-se o art. 302 do CTB."
+  },
+  {
+   "n": 47,
+   "ref": "trilha:prf-penal:crimes-pessoa:3",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a pessoa",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Matar policial rodoviário federal no exercício da função configura homicídio qualificado e hediondo.",
+   "just": "Art. 121, § 2º, VII, e Lei 8.072/90, art. 1º, I."
+  },
+  {
+   "n": 48,
+   "ref": "trilha:prf-penal:crimes-pessoa:4",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a pessoa",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A lesão corporal que causa incapacidade para as ocupações habituais por mais de trinta dias é classificada como gravíssima.",
+   "just": "É lesão grave (art. 129, § 1º, I). A gravíssima envolve, por exemplo, incapacidade PERMANENTE para o trabalho."
+  },
+  {
+   "n": 49,
+   "ref": "trilha:prf-penal:crimes-pessoa:5",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a pessoa",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A omissão de socorro é crime omissivo próprio e, por isso, não admite tentativa.",
+   "just": "Nos crimes omissivos próprios, ou o agente omite e o crime se consuma, ou age e não há crime."
+  },
+  {
+   "n": 50,
+   "ref": "trilha:prf-penal:crimes-pessoa:6",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a pessoa",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A injúria qualificada pela utilização de elementos referentes a raça ou cor continua prevista no § 3º do art. 140 do Código Penal.",
+   "just": "A Lei 14.532/2023 levou a injúria racial para a Lei 7.716/89 (art. 2º-A), equiparando-a ao racismo."
+  },
+  {
+   "n": 51,
+   "ref": "trilha:prf-penal:crimes-patrimonio:1",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra o patrimônio",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Após a Lei 15.397/2026, o crime de furto simples passou a ser punido com reclusão de 1 a 6 anos e multa.",
+   "just": "A pena do caput do art. 155 era de 1 a 4 anos."
+  },
+  {
+   "n": 52,
+   "ref": "trilha:prf-penal:crimes-patrimonio:2",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra o patrimônio",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O crime de roubo se consuma com a inversão da posse do bem, mediante violência ou grave ameaça, ainda que por breve tempo e sem posse mansa e pacífica.",
+   "just": "Súmula 582 do STJ."
+  },
+  {
+   "n": 53,
+   "ref": "trilha:prf-penal:crimes-patrimonio:3",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra o patrimônio",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O latrocínio, por envolver morte dolosa, é julgado pelo tribunal do júri.",
+   "just": "Súmula 603 do STF: o latrocínio é crime contra o patrimônio, julgado por juiz singular."
+  },
+  {
+   "n": 54,
+   "ref": "trilha:prf-penal:crimes-patrimonio:4",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra o patrimônio",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O crime de extorsão consuma-se independentemente da obtenção da vantagem indevida.",
+   "just": "Súmula 96 do STJ: crime formal."
+  },
+  {
+   "n": 55,
+   "ref": "trilha:prf-penal:crimes-patrimonio:5",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra o patrimônio",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Atualmente, o estelionato comum somente se processa mediante representação da vítima.",
+   "just": "A Lei 15.397/2026 revogou o § 5º do art. 171; a regra voltou a ser a ação penal pública incondicionada."
+  },
+  {
+   "n": 56,
+   "ref": "trilha:prf-penal:crimes-patrimonio:6",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra o patrimônio",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O filho que, sem violência, subtrai dinheiro do pai de 65 anos fica isento de pena pela imunidade absoluta.",
+   "just": "Art. 183, III: a imunidade não se aplica se a vítima tem 60 anos ou mais."
+  },
+  {
+   "n": 57,
+   "ref": "trilha:prf-penal:dignidade-sexual:1",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a dignidade sexual",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No crime de estupro de vulnerável, o consentimento da vítima menor de 14 anos e sua experiência sexual anterior são irrelevantes para a configuração do crime.",
+   "just": "Art. 217-A, § 5º, e Súmula 593 do STJ."
+  },
+  {
+   "n": 58,
+   "ref": "trilha:prf-penal:dignidade-sexual:2",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a dignidade sexual",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Nos crimes contra a liberdade sexual, a ação penal é pública condicionada à representação.",
+   "just": "Desde a Lei 13.718/2018, é pública incondicionada (art. 225)."
+  },
+  {
+   "n": 59,
+   "ref": "trilha:prf-penal:dignidade-sexual:3",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a dignidade sexual",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Praticar, sem anuência da vítima, ato libidinoso em transporte coletivo para satisfazer a própria lascívia pode configurar importunação sexual.",
+   "just": "Art. 215-A, se o ato não constituir crime mais grave."
+  },
+  {
+   "n": 60,
+   "ref": "trilha:prf-penal:dignidade-sexual:4",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a dignidade sexual",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O estupro de vulnerável é punido com reclusão de 10 a 18 anos.",
+   "just": "Pena dada pela Lei 15.280/2025."
+  },
+  {
+   "n": 61,
+   "ref": "trilha:prf-penal:incolumidade:1",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a incolumidade pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Arremessar pedra contra ônibus de transporte coletivo em movimento em uma rodovia configura crime contra a incolumidade pública.",
+   "just": "Art. 264 do CP (arremesso de projétil)."
+  },
+  {
+   "n": 62,
+   "ref": "trilha:prf-penal:incolumidade:2",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a incolumidade pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o STF, a importação de medicamento sem registro sanitário deve ser punida com a pena de 10 a 15 anos do art. 273.",
+   "just": "Tema 1003 do STF: para essa hipótese (§ 1º-B, I) aplica-se a pena original de 1 a 3 anos."
+  },
+  {
+   "n": 63,
+   "ref": "trilha:prf-penal:incolumidade:3",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a incolumidade pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O crime de incêndio é de perigo concreto.",
+   "just": "O art. 250 exige que o fogo exponha a perigo a vida, a integridade física ou o patrimônio de outrem."
+  },
+  {
+   "n": 64,
+   "ref": "trilha:prf-penal:fe-publica:1",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a fé pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A remarcação de novo número no chassi e a falsificação do certificado de registro do veículo caracterizam crime único de falsificação de documento público.",
+   "just": "São crimes distintos: adulteração de sinal identificador (art. 311) e falsificação de documento público (art. 297). Item 100 da PRF 2021."
+  },
+  {
+   "n": 65,
+   "ref": "trilha:prf-penal:fe-publica:2",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a fé pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Não se configura o crime de uso de documento falso quando o condutor apresenta a CNH falsificada somente após exigência do policial rodoviário.",
+   "just": "A jurisprudência considera o crime consumado com a apresentação, mesmo quando exigida pela autoridade."
+  },
+  {
+   "n": 66,
+   "ref": "trilha:prf-penal:fe-publica:3",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a fé pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "É típica a conduta de atribuir-se falsa identidade perante autoridade policial, ainda que em situação de alegada autodefesa.",
+   "just": "Súmula 522 do STJ."
+  },
+  {
+   "n": 67,
+   "ref": "trilha:prf-penal:fe-publica:4",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a fé pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A competência para julgar o uso de CNH falsa, expedida por Detran, apresentada a policial rodoviário federal é da Justiça Estadual, por ser estadual o órgão expedidor.",
+   "just": "Súmula 546 do STJ: importa o órgão a quem o documento foi apresentado (federal), não o expedidor."
+  },
+  {
+   "n": 68,
+   "ref": "trilha:prf-penal:fe-publica:5",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a fé pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Conduzir veículo que devia saber estar com o chassi adulterado sujeita o agente às mesmas penas da adulteração de sinal identificador.",
+   "just": "Art. 311, § 2º, III, na redação da Lei 14.562/2023."
+  },
+  {
+   "n": 69,
+   "ref": "trilha:prf-penal:fe-publica:6",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a fé pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Cartão de crédito equipara-se a documento particular para fins do crime de falsificação.",
+   "just": "Art. 298, parágrafo único."
+  },
+  {
+   "n": 70,
+   "ref": "trilha:prf-penal:adm-publica:1",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a Administração Pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ao oferecer dinheiro para ser irregularmente liberado da blitz, o condutor pratica o crime de corrupção ativa.",
+   "just": "Art. 333: oferecer vantagem indevida a funcionário para omitir ato de ofício. Item 102 da PRF 2021."
+  },
+  {
+   "n": 71,
+   "ref": "trilha:prf-penal:adm-publica:2",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a Administração Pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O policial que exige dinheiro de um motorista para não lavrar o auto de infração pratica corrupção passiva.",
+   "just": "Exigir é o verbo da concussão (art. 316). Corrupção passiva é solicitar, receber ou aceitar promessa."
+  },
+  {
+   "n": 72,
+   "ref": "trilha:prf-penal:adm-publica:3",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a Administração Pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No peculato culposo, a reparação do dano, se anterior à sentença irrecorrível, extingue a punibilidade.",
+   "just": "Art. 312, § 3º. Se posterior, reduz a pena pela metade."
+  },
+  {
+   "n": 73,
+   "ref": "trilha:prf-penal:adm-publica:4",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a Administração Pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o STJ, a desobediência à ordem legal de parada emanada por agentes públicos em contexto de policiamento ostensivo constitui o crime do art. 330 do CP.",
+   "just": "Tese do Tema 1060 (REsp 1.859.933/SC, 2022)."
+  },
+  {
+   "n": 74,
+   "ref": "trilha:prf-penal:adm-publica:5",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a Administração Pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O princípio da insignificância não se aplica ao crime de descaminho, por ser crime contra a Administração Pública.",
+   "just": "O STF e o STJ aplicam a insignificância ao descaminho quando o tributo iludido não supera R$ 20 mil."
+  },
+  {
+   "n": 75,
+   "ref": "trilha:prf-penal:adm-publica:6",
+   "materia": "Direito Penal",
+   "topico": "Crimes contra a Administração Pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Equipara-se a funcionário público, para fins penais, quem trabalha para empresa prestadora de serviço contratada para a execução de atividade típica da Administração.",
+   "just": "Art. 327, § 1º."
+  },
+  {
+   "n": 76,
+   "ref": "trilha:prf-penal:concurso:1",
+   "materia": "Direito Penal",
+   "topico": "Concurso de pessoas e concurso de crimes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O concurso de pessoas exige prévio ajuste entre os agentes.",
+   "just": "Basta o liame subjetivo, a vontade de participar do crime do outro; não é necessário acordo prévio."
+  },
+  {
+   "n": 77,
+   "ref": "trilha:prf-penal:concurso:2",
+   "materia": "Direito Penal",
+   "topico": "Concurso de pessoas e concurso de crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As circunstâncias e as condições de caráter pessoal comunicam-se aos demais agentes quando elementares do crime.",
+   "just": "Art. 30."
+  },
+  {
+   "n": 78,
+   "ref": "trilha:prf-penal:concurso:3",
+   "materia": "Direito Penal",
+   "topico": "Concurso de pessoas e concurso de crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No concurso formal próprio, aplica-se a mais grave das penas cabíveis, aumentada de um sexto até metade.",
+   "just": "Art. 70, caput, primeira parte."
+  },
+  {
+   "n": 79,
+   "ref": "trilha:prf-penal:concurso:4",
+   "materia": "Direito Penal",
+   "topico": "Concurso de pessoas e concurso de crimes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O auxílio a um crime que não chegou a ser tentado é punível como participação.",
+   "just": "Art. 31: ajuste, determinação, instigação e auxílio não são puníveis se o crime não chega a ser tentado."
+  },
+  {
+   "n": 80,
+   "ref": "trilha:prf-legislacao-especial:documentos:1",
+   "materia": "Legislação Especial",
+   "topico": "Retenção de documentos (Lei 5.553/1968)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Pessoa jurídica de direito privado pode reter a carteira de identidade de um visitante enquanto ele estiver nas suas dependências.",
+   "just": "Art. 2º, § 2º: na entrada de órgãos públicos ou particulares, os dados são anotados e o documento é devolvido imediatamente."
+  },
+  {
+   "n": 81,
+   "ref": "trilha:prf-legislacao-especial:documentos:2",
+   "materia": "Legislação Especial",
+   "topico": "Retenção de documentos (Lei 5.553/1968)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Quem exige documento de identificação para realizar um ato deve extrair os dados e devolvê-lo no prazo de até cinco dias.",
+   "just": "Art. 2º da Lei 5.553/1968."
+  },
+  {
+   "n": 82,
+   "ref": "trilha:prf-legislacao-especial:documentos:3",
+   "materia": "Legislação Especial",
+   "topico": "Retenção de documentos (Lei 5.553/1968)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A retenção indevida de documento de identificação pessoal configura crime punido com detenção.",
+   "just": "Art. 3º: é contravenção penal, com prisão simples de 1 a 3 meses ou multa."
+  },
+  {
+   "n": 83,
+   "ref": "trilha:prf-legislacao-especial:documentos:4",
+   "materia": "Legislação Especial",
+   "topico": "Retenção de documentos (Lei 5.553/1968)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ultrapassado o prazo legal, a retenção de documento de identificação pessoal só é possível por ordem judicial.",
+   "just": "Art. 2º, § 1º."
+  },
+  {
+   "n": 84,
+   "ref": "trilha:prf-legislacao-especial:eca:1",
+   "materia": "Legislação Especial",
+   "topico": "ECA: viagem, ato infracional e crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Adolescente de dezesseis anos de idade pode viajar desacompanhado para outra comarca do país sem autorização judicial.",
+   "just": "Art. 83: a exigência é para menores de 16 anos."
+  },
+  {
+   "n": 85,
+   "ref": "trilha:prf-legislacao-especial:eca:2",
+   "materia": "Legislação Especial",
+   "topico": "ECA: viagem, ato infracional e crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Criança de dez anos acompanhada de um tio maior de idade, com o parentesco comprovado por documento, pode viajar para outro estado sem autorização judicial.",
+   "just": "Art. 83, § 1º, b, 1: colateral maior até o 3º grau, com parentesco comprovado."
+  },
+  {
+   "n": 86,
+   "ref": "trilha:prf-legislacao-especial:eca:3",
+   "materia": "Legislação Especial",
+   "topico": "ECA: viagem, ato infracional e crimes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O adolescente apreendido em flagrante de ato infracional pode ser transportado no compartimento fechado da viatura, desde que algemado.",
+   "just": "Art. 178: é vedado o transporte em compartimento fechado em condições atentatórias à dignidade ou de risco à integridade."
+  },
+  {
+   "n": 87,
+   "ref": "trilha:prf-legislacao-especial:eca:4",
+   "materia": "Legislação Especial",
+   "topico": "ECA: viagem, ato infracional e crimes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O crime de corrupção de menores exige prova de que o menor foi efetivamente corrompido.",
+   "just": "Súmula 500 do STJ: é crime formal."
+  },
+  {
+   "n": 88,
+   "ref": "trilha:prf-legislacao-especial:eca:5",
+   "materia": "Legislação Especial",
+   "topico": "ECA: viagem, ato infracional e crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Servir bebida alcoólica a adolescente, ainda que gratuitamente, é crime previsto no ECA.",
+   "just": "Art. 243 (Lei 13.106/2015): detenção de 2 a 4 anos e multa."
+  },
+  {
+   "n": 89,
+   "ref": "trilha:prf-legislacao-especial:eca:6",
+   "materia": "Legislação Especial",
+   "topico": "ECA: viagem, ato infracional e crimes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Com doze anos completos, a pessoa ainda é considerada criança para o ECA.",
+   "just": "Art. 2º: criança é até 12 anos incompletos."
+  },
+  {
+   "n": 90,
+   "ref": "trilha:prf-legislacao-especial:hediondos:1",
+   "materia": "Legislação Especial",
+   "topico": "Crimes hediondos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Caso três pessoas associadas, com divisão de tarefas, subtraiam substância explosiva, estará configurado crime hediondo.",
+   "just": "Hediondo é o furto qualificado pelo emprego de explosivo (art. 155, § 4º-A), não a subtração de explosivo. Item 110 da PRF 2021."
+  },
+  {
+   "n": 91,
+   "ref": "trilha:prf-legislacao-especial:hediondos:2",
+   "materia": "Legislação Especial",
+   "topico": "Crimes hediondos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A tortura e o tráfico de drogas integram o rol de crimes hediondos previsto no art. 1º da Lei 8.072/1990.",
+   "just": "São equiparados a hediondos (CF, art. 5º, XLIII), não estão no rol do art. 1º."
+  },
+  {
+   "n": 92,
+   "ref": "trilha:prf-legislacao-especial:hediondos:3",
+   "materia": "Legislação Especial",
+   "topico": "Crimes hediondos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os crimes hediondos são insuscetíveis de anistia, graça, indulto e fiança.",
+   "just": "Art. 2º, I e II, da Lei 8.072/1990."
+  },
+  {
+   "n": 93,
+   "ref": "trilha:prf-legislacao-especial:hediondos:4",
+   "materia": "Legislação Especial",
+   "topico": "Crimes hediondos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o STF, é inconstitucional a imposição obrigatória do regime inicial fechado aos condenados por crime hediondo.",
+   "just": "STF, HC 111.840: o § 1º do art. 2º é inconstitucional."
+  },
+  {
+   "n": 94,
+   "ref": "trilha:prf-legislacao-especial:hediondos:5",
+   "materia": "Legislação Especial",
+   "topico": "Crimes hediondos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O porte ilegal de arma de fogo de uso restrito é crime hediondo.",
+   "just": "Só a posse ou o porte de arma de uso PROIBIDO é hediondo (Lei 8.072, parágrafo único, após a Lei 13.964/2019)."
+  },
+  {
+   "n": 95,
+   "ref": "trilha:prf-legislacao-especial:hediondos:6",
+   "materia": "Legislação Especial",
+   "topico": "Crimes hediondos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Nos crimes hediondos, a prisão temporária pode durar até trinta dias, prorrogáveis por igual período em caso de extrema e comprovada necessidade.",
+   "just": "Art. 2º, § 4º."
+  },
+  {
+   "n": 96,
+   "ref": "trilha:prf-legislacao-especial:prf-competencias:1",
+   "materia": "Legislação Especial",
+   "topico": "Competências da PRF",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Compete à PRF, no âmbito das rodovias federais, realizar o patrulhamento ostensivo, executando operações relacionadas com a segurança pública.",
+   "just": "Decreto 1.655/1995, art. 1º, I; CF, art. 144, § 2º."
+  },
+  {
+   "n": 97,
+   "ref": "trilha:prf-legislacao-especial:prf-competencias:2",
+   "materia": "Legislação Especial",
+   "topico": "Competências da PRF",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o STF, a lavratura do termo circunstanciado de ocorrência é atribuição exclusiva das polícias judiciárias, razão pela qual a PRF não pode lavrá-lo.",
+   "just": "ADIs 6245 e 6264 (2023): o TCO pode ser lavrado por polícia judiciária ou administrativa."
+  },
+  {
+   "n": 98,
+   "ref": "trilha:prf-legislacao-especial:prf-competencias:3",
+   "materia": "Legislação Especial",
+   "topico": "Competências da PRF",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A identidade funcional do policial rodoviário federal assegura, quando em serviço, prioridade em todos os tipos de transporte e comunicação.",
+   "just": "Decreto 1.655/1995, art. 2º."
+  },
+  {
+   "n": 99,
+   "ref": "trilha:prf-legislacao-especial:prf-competencias:4",
+   "materia": "Legislação Especial",
+   "topico": "Competências da PRF",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A PRF exerce funções de polícia judiciária da União, cabendo-lhe presidir inquéritos sobre crimes cometidos em rodovias federais.",
+   "just": "Polícia judiciária da União é a Polícia Federal (CF, art. 144, § 1º, IV); a PRF é polícia ostensiva."
+  },
+  {
+   "n": 100,
+   "ref": "trilha:prf-legislacao-especial:prf-competencias:5",
+   "materia": "Legislação Especial",
+   "topico": "Competências da PRF",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Entre as competências da PRF está a fiscalização e o controle do tráfico de menores nas rodovias federais.",
+   "just": "Decreto 1.655/1995, art. 1º."
+  },
+  {
+   "n": 101,
+   "ref": "trilha:prf-legislacao-especial:juizados:1",
+   "materia": "Legislação Especial",
+   "topico": "Juizados especiais criminais: transação e suspensão",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Consideram-se infrações de menor potencial ofensivo as contravenções penais e os crimes cuja pena máxima não seja superior a dois anos, cumulada ou não com multa.",
+   "just": "Art. 61 da Lei 9.099/1995."
+  },
+  {
+   "n": 102,
+   "ref": "trilha:prf-legislacao-especial:juizados:2",
+   "materia": "Legislação Especial",
+   "topico": "Juizados especiais criminais: transação e suspensão",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A suspensão condicional do processo é cabível nos crimes cuja pena máxima seja igual ou inferior a um ano.",
+   "just": "Art. 89: o critério é a pena MÍNIMA igual ou inferior a um ano."
+  },
+  {
+   "n": 103,
+   "ref": "trilha:prf-legislacao-especial:juizados:3",
+   "materia": "Legislação Especial",
+   "topico": "Juizados especiais criminais: transação e suspensão",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Nos crimes praticados com violência doméstica e familiar contra a mulher, é cabível a transação penal se a pena máxima não superar dois anos.",
+   "just": "Lei 11.340, art. 41, e Súmula 536 do STJ."
+  },
+  {
+   "n": 104,
+   "ref": "trilha:prf-legislacao-especial:juizados:4",
+   "materia": "Legislação Especial",
+   "topico": "Juizados especiais criminais: transação e suspensão",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na ação penal pública condicionada à representação, o acordo de composição civil homologado acarreta a renúncia ao direito de representação.",
+   "just": "Art. 74, parágrafo único."
+  },
+  {
+   "n": 105,
+   "ref": "trilha:prf-legislacao-especial:juizados:5",
+   "materia": "Legislação Especial",
+   "topico": "Juizados especiais criminais: transação e suspensão",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A lesão corporal culposa depende de representação do ofendido.",
+   "just": "Art. 88 da Lei 9.099/1995."
+  },
+  {
+   "n": 106,
+   "ref": "trilha:prf-legislacao-especial:tortura:1",
+   "materia": "Legislação Especial",
+   "topico": "Tortura",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Praticam o crime de tortura policiais rodoviários federais que, dentro de um posto policial, submetem o autor de crime a sofrimento físico, independentemente de sua intensidade.",
+   "just": "Art. 1º, II, exige INTENSO sofrimento físico ou mental. Item 115 da PRF 2021."
+  },
+  {
+   "n": 107,
+   "ref": "trilha:prf-legislacao-especial:tortura:2",
+   "materia": "Legislação Especial",
+   "topico": "Tortura",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Aquele que se omite em face das condutas de tortura, quando tinha o dever de evitá-las ou apurá-las, incorre na pena de detenção de um a quatro anos.",
+   "just": "Art. 1º, § 2º, da Lei 9.455/1997."
+  },
+  {
+   "n": 108,
+   "ref": "trilha:prf-legislacao-especial:tortura:3",
+   "materia": "Legislação Especial",
+   "topico": "Tortura",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A condenação por crime de tortura acarreta a perda do cargo público e a interdição para o seu exercício pelo dobro do prazo da pena aplicada.",
+   "just": "Art. 1º, § 5º."
+  },
+  {
+   "n": 109,
+   "ref": "trilha:prf-legislacao-especial:tortura:4",
+   "materia": "Legislação Especial",
+   "topico": "Tortura",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O crime de tortura é afiançável, mas insuscetível de graça ou anistia.",
+   "just": "Art. 1º, § 6º: é inafiançável e insuscetível de graça ou anistia."
+  },
+  {
+   "n": 110,
+   "ref": "trilha:prf-legislacao-especial:tortura:5",
+   "materia": "Legislação Especial",
+   "topico": "Tortura",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Constranger alguém, com emprego de grave ameaça, causando-lhe sofrimento mental, em razão de discriminação religiosa, configura tortura.",
+   "just": "Art. 1º, I, c."
+  },
+  {
+   "n": 111,
+   "ref": "trilha:prf-legislacao-especial:ambientais:1",
+   "materia": "Legislação Especial",
+   "topico": "Crimes ambientais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Nos crimes ambientais da Lei 9.605/1998, a ação penal é pública condicionada à representação do órgão ambiental.",
+   "just": "Art. 26: é pública incondicionada."
+  },
+  {
+   "n": 112,
+   "ref": "trilha:prf-legislacao-especial:ambientais:2",
+   "materia": "Legislação Especial",
+   "topico": "Crimes ambientais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Transportar carvão vegetal sem licença válida para todo o tempo da viagem configura crime contra a flora.",
+   "just": "Art. 46, parágrafo único, da Lei 9.605/1998."
+  },
+  {
+   "n": 113,
+   "ref": "trilha:prf-legislacao-especial:ambientais:3",
+   "materia": "Legislação Especial",
+   "topico": "Crimes ambientais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Praticar maus-tratos contra cão sujeita o agente à pena de reclusão de dois a cinco anos, multa e proibição da guarda.",
+   "just": "Art. 32, § 1º-A (Lei 14.064/2020)."
+  },
+  {
+   "n": 114,
+   "ref": "trilha:prf-legislacao-especial:ambientais:4",
+   "materia": "Legislação Especial",
+   "topico": "Crimes ambientais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os animais apreendidos devem ser, obrigatoriamente, destinados a jardins zoológicos.",
+   "just": "Art. 25, § 1º: prioritariamente libertados no seu hábitat; zoológicos e entidades assemelhadas quando a soltura for inviável."
+  },
+  {
+   "n": 115,
+   "ref": "trilha:prf-legislacao-especial:ambientais:5",
+   "materia": "Legislação Especial",
+   "topico": "Crimes ambientais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No caso de guarda doméstica de espécie silvestre não ameaçada de extinção, o juiz pode, consideradas as circunstâncias, deixar de aplicar a pena.",
+   "just": "Art. 29, § 2º."
+  },
+  {
+   "n": 116,
+   "ref": "trilha:prf-legislacao-especial:armas:1",
+   "materia": "Legislação Especial",
+   "topico": "Estatuto do Desarmamento: crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Conduzir arma de fogo, no exercício de atividade comercial, sem autorização, configura comércio ilegal de arma de fogo.",
+   "just": "Art. 17 da Lei 10.826/2003. Item 114 da PRF 2021."
+  },
+  {
+   "n": 117,
+   "ref": "trilha:prf-legislacao-especial:armas:2",
+   "materia": "Legislação Especial",
+   "topico": "Estatuto do Desarmamento: crimes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A posse irregular de arma de fogo de uso permitido é punida com reclusão de dois a quatro anos.",
+   "just": "Art. 12: detenção de 1 a 3 anos e multa; reclusão de 2 a 4 é o porte (art. 14)."
+  },
+  {
+   "n": 118,
+   "ref": "trilha:prf-legislacao-especial:armas:3",
+   "materia": "Legislação Especial",
+   "topico": "Estatuto do Desarmamento: crimes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O porte ilegal de arma de fogo de uso restrito é crime hediondo.",
+   "just": "Só o de uso PROIBIDO (Lei 8.072, parágrafo único, II)."
+  },
+  {
+   "n": 119,
+   "ref": "trilha:prf-legislacao-especial:armas:4",
+   "materia": "Legislação Especial",
+   "topico": "Estatuto do Desarmamento: crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o STF, é inconstitucional a vedação de liberdade provisória prevista no Estatuto do Desarmamento.",
+   "just": "ADI 3112: art. 21 declarado inconstitucional."
+  },
+  {
+   "n": 120,
+   "ref": "trilha:prf-legislacao-especial:armas:5",
+   "materia": "Legislação Especial",
+   "topico": "Estatuto do Desarmamento: crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O porte de arma de fogo desmuniciada configura crime, por se tratar de delito de perigo abstrato.",
+   "just": "Entendimento do STF e do STJ."
+  },
+  {
+   "n": 121,
+   "ref": "trilha:prf-legislacao-especial:armas:6",
+   "materia": "Legislação Especial",
+   "topico": "Estatuto do Desarmamento: crimes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No tráfico internacional de arma de fogo, a pena é aumentada da metade se a arma for de uso proibido ou restrito.",
+   "just": "Art. 19 da Lei 10.826/2003."
+  },
+  {
+   "n": 122,
+   "ref": "trilha:prf-legislacao-especial:drogas:1",
+   "materia": "Legislação Especial",
+   "topico": "Lei de Drogas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ao usuário de drogas não se impõe prisão em flagrante, devendo ser lavrado termo circunstanciado quando não for possível o encaminhamento imediato ao juízo.",
+   "just": "Art. 48, § 2º, da Lei 11.343/2006."
+  },
+  {
+   "n": 123,
+   "ref": "trilha:prf-legislacao-especial:drogas:2",
+   "materia": "Legislação Especial",
+   "topico": "Lei de Drogas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A associação de duas pessoas para a prática reiterada do tráfico de drogas configura o crime de associação para o tráfico.",
+   "just": "Art. 35: duas ou mais pessoas, reiteradamente ou não."
+  },
+  {
+   "n": 124,
+   "ref": "trilha:prf-legislacao-especial:drogas:3",
+   "materia": "Legislação Especial",
+   "topico": "Lei de Drogas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A incidência da majorante do tráfico interestadual exige a efetiva transposição da divisa entre os estados.",
+   "just": "Súmula 587 do STJ: basta a prova de que a droga se destinava a outro estado."
+  },
+  {
+   "n": 125,
+   "ref": "trilha:prf-legislacao-especial:drogas:4",
+   "materia": "Legislação Especial",
+   "topico": "Lei de Drogas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O tráfico privilegiado é equiparado a crime hediondo.",
+   "just": "LEP, art. 112, § 5º: não é hediondo nem equiparado."
+  },
+  {
+   "n": 126,
+   "ref": "trilha:prf-legislacao-especial:drogas:5",
+   "materia": "Legislação Especial",
+   "topico": "Lei de Drogas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Entre as atividades de prevenção do uso indevido de drogas está o fortalecimento da autonomia e da responsabilidade individual em relação ao uso indevido dessas substâncias.",
+   "just": "Art. 19 da Lei 11.343/2006. Item 113 da PRF 2021."
+  },
+  {
+   "n": 127,
+   "ref": "trilha:prf-legislacao-especial:drogas:6",
+   "materia": "Legislação Especial",
+   "topico": "Lei de Drogas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o STF, presume-se usuário quem traz consigo até 40 gramas de cannabis, presunção absoluta que impede a prisão por tráfico abaixo desse limite.",
+   "just": "RE 635.659: a presunção é relativa; havendo indícios de mercancia, cabe flagrante por tráfico."
+  },
+  {
+   "n": 128,
+   "ref": "trilha:prf-legislacao-especial:organizacoes-criminosas:1",
+   "materia": "Legislação Especial",
+   "topico": "Organizações criminosas e Lei Antifacção",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Para a caracterização de organização criminosa, exige-se a associação de, no mínimo, três pessoas.",
+   "just": "Art. 1º, § 1º: quatro ou mais pessoas. Três é a associação criminosa do art. 288 do CP."
+  },
+  {
+   "n": 129,
+   "ref": "trilha:prf-legislacao-especial:organizacoes-criminosas:2",
+   "materia": "Legislação Especial",
+   "topico": "Organizações criminosas e Lei Antifacção",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A ação controlada prevista na Lei 12.850/2013 depende de prévia autorização judicial.",
+   "just": "Art. 8º, § 1º: exige comunicação prévia ao juiz, que pode estabelecer limites."
+  },
+  {
+   "n": 130,
+   "ref": "trilha:prf-legislacao-especial:organizacoes-criminosas:3",
+   "materia": "Legislação Especial",
+   "topico": "Organizações criminosas e Lei Antifacção",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Nenhuma sentença condenatória será proferida com fundamento apenas nas declarações do colaborador.",
+   "just": "Art. 4º, § 16, da Lei 12.850/2013."
+  },
+  {
+   "n": 131,
+   "ref": "trilha:prf-legislacao-especial:organizacoes-criminosas:4",
+   "materia": "Legislação Especial",
+   "topico": "Organizações criminosas e Lei Antifacção",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A pena por integrar organização criminosa é agravada para quem exerce o comando, ainda que não pratique pessoalmente atos de execução.",
+   "just": "Art. 2º, § 3º."
+  },
+  {
+   "n": 132,
+   "ref": "trilha:prf-legislacao-especial:organizacoes-criminosas:5",
+   "materia": "Legislação Especial",
+   "topico": "Organizações criminosas e Lei Antifacção",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "De acordo com a Lei 15.358/2026, obstruir a atuação policial com barricadas ou com a destruição de vias, por integrante de organização criminosa ultraviolenta, configura domínio social estruturado, punido com reclusão de 20 a 40 anos.",
+   "just": "Lei 15.358/2026, art. 2º, III."
+  },
+  {
+   "n": 133,
+   "ref": "trilha:prf-legislacao-especial:susp:1",
+   "materia": "Legislação Especial",
+   "topico": "SUSP: Sistema Único de Segurança Pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Polícia Rodoviária Federal é integrante operacional do Sistema Único de Segurança Pública.",
+   "just": "Lei 13.675/2018, art. 9º, § 2º."
+  },
+  {
+   "n": 134,
+   "ref": "trilha:prf-legislacao-especial:susp:2",
+   "materia": "Legislação Especial",
+   "topico": "SUSP: Sistema Único de Segurança Pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os conselhos de segurança pública e defesa social são integrantes operacionais do SUSP.",
+   "just": "São integrantes estratégicos (art. 9º, § 1º)."
+  },
+  {
+   "n": 135,
+   "ref": "trilha:prf-legislacao-especial:susp:3",
+   "materia": "Legislação Especial",
+   "topico": "SUSP: Sistema Único de Segurança Pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Lei 13.675/2018 instituiu o SUSP e criou a Política Nacional de Segurança Pública e Defesa Social.",
+   "just": "Art. 1º."
+  },
+  {
+   "n": 136,
+   "ref": "trilha:prf-legislacao-especial:abuso-autoridade:1",
+   "materia": "Legislação Especial",
+   "topico": "Abuso de autoridade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Qualquer agente público, ainda que não seja servidor e não perceba remuneração, pode ser sujeito ativo do crime de abuso de autoridade.",
+   "just": "Art. 2º da Lei 13.869/2019. Item 111 da PRF 2021."
+  },
+  {
+   "n": 137,
+   "ref": "trilha:prf-legislacao-especial:abuso-autoridade:2",
+   "materia": "Legislação Especial",
+   "topico": "Abuso de autoridade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A divergência na interpretação de lei, por si só, configura abuso de autoridade quando prejudica o investigado.",
+   "just": "Art. 1º, § 2º: não configura abuso."
+  },
+  {
+   "n": 138,
+   "ref": "trilha:prf-legislacao-especial:abuso-autoridade:3",
+   "materia": "Legislação Especial",
+   "topico": "Abuso de autoridade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A perda do cargo é efeito automático da condenação por crime de abuso de autoridade.",
+   "just": "Art. 4º, parágrafo único: exige reincidência e declaração motivada na sentença."
+  },
+  {
+   "n": 139,
+   "ref": "trilha:prf-legislacao-especial:abuso-autoridade:4",
+   "materia": "Legislação Especial",
+   "topico": "Abuso de autoridade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Cumprir mandado de busca e apreensão domiciliar às 22 horas configura crime de abuso de autoridade.",
+   "just": "Art. 22, § 1º, III: após as 21h ou antes das 5h."
+  },
+  {
+   "n": 140,
+   "ref": "trilha:prf-legislacao-especial:abuso-autoridade:5",
+   "materia": "Legislação Especial",
+   "topico": "Abuso de autoridade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os crimes de abuso de autoridade são de ação penal pública condicionada à representação do ofendido.",
+   "just": "Art. 3º: ação penal pública incondicionada."
+  },
+  {
+   "n": 141,
+   "ref": "trilha:prf-legislacao-especial:abuso-autoridade:6",
+   "materia": "Legislação Especial",
+   "topico": "Abuso de autoridade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Deixar de se identificar ao preso por ocasião de sua captura pode configurar crime de abuso de autoridade.",
+   "just": "Art. 16 da Lei 13.869/2019."
+  },
+  {
+   "n": 142,
+   "ref": "trilha:prf-processo-penal:acao-penal:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Ação penal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A representação do ofendido é retratável até o recebimento da denúncia.",
+   "just": "Art. 25 do CPP: é irretratável depois de OFERECIDA a denúncia."
+  },
+  {
+   "n": 143,
+   "ref": "trilha:prf-processo-penal:acao-penal:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Ação penal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Ministério Público não pode desistir da ação penal pública que tiver proposto.",
+   "just": "Art. 42 do CPP (indisponibilidade)."
+  },
+  {
+   "n": 144,
+   "ref": "trilha:prf-processo-penal:acao-penal:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Ação penal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em regra, o direito de queixa decai em seis meses, contados do dia em que o ofendido vier a saber quem é o autor do crime.",
+   "just": "Art. 38 do CPP."
+  },
+  {
+   "n": 145,
+   "ref": "trilha:prf-processo-penal:acao-penal:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Ação penal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A ação penal privada subsidiária da pública é cabível quando o Ministério Público requer o arquivamento do inquérito policial.",
+   "just": "Só cabe se o MP fica inerte no prazo legal; pedir arquivamento não é inércia."
+  },
+  {
+   "n": 146,
+   "ref": "trilha:prf-processo-penal:acao-penal:5",
+   "materia": "Direito Processual Penal",
+   "topico": "Ação penal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A renúncia ao exercício do direito de queixa em relação a um dos autores do crime se estende a todos.",
+   "just": "Art. 49 do CPP (indivisibilidade)."
+  },
+  {
+   "n": 147,
+   "ref": "trilha:prf-processo-penal:acao-penal:6",
+   "materia": "Direito Processual Penal",
+   "topico": "Ação penal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O acordo de não persecução penal pode ser celebrado em crime cometido com grave ameaça, desde que a pena mínima seja inferior a quatro anos.",
+   "just": "Art. 28-A: exige infração sem violência ou grave ameaça."
+  },
+  {
+   "n": 148,
+   "ref": "trilha:prf-processo-penal:tco:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Termo circunstanciado e infrações de menor potencial ofensivo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ao autor do fato que, após a lavratura do termo circunstanciado, assumir o compromisso de comparecer ao juizado, não se imporá prisão em flagrante nem se exigirá fiança.",
+   "just": "Art. 69, parágrafo único, da Lei 9.099/1995."
+  },
+  {
+   "n": 149,
+   "ref": "trilha:prf-processo-penal:tco:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Termo circunstanciado e infrações de menor potencial ofensivo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o STF, a PRF pode lavrar termo circunstanciado de ocorrência, pois este não é ato de investigação criminal.",
+   "just": "ADIs 6245 e 6264 (2023)."
+  },
+  {
+   "n": 150,
+   "ref": "trilha:prf-processo-penal:tco:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Termo circunstanciado e infrações de menor potencial ofensivo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O termo circunstanciado é cabível em qualquer crime cuja pena mínima não supere dois anos.",
+   "just": "O critério é a pena MÁXIMA não superior a dois anos (art. 61)."
+  },
+  {
+   "n": 151,
+   "ref": "trilha:prf-processo-penal:tco:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Termo circunstanciado e infrações de menor potencial ofensivo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Nos crimes de violência doméstica e familiar contra a mulher, ainda que de menor potencial ofensivo, aplica-se a Lei 9.099/1995.",
+   "just": "Lei 11.340, art. 41: não se aplica."
+  },
+  {
+   "n": 152,
+   "ref": "trilha:prf-processo-penal:atos-processuais:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Atos processuais: forma, lugar e tempo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No processo penal, os prazos são contínuos e peremptórios, não se interrompendo por férias, domingo ou feriado.",
+   "just": "Art. 798 do CPP."
+  },
+  {
+   "n": 153,
+   "ref": "trilha:prf-processo-penal:atos-processuais:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Atos processuais: forma, lugar e tempo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na contagem dos prazos processuais penais, computa-se o dia do começo e exclui-se o do vencimento.",
+   "just": "Art. 798, § 1º: não se computa o dia do começo; inclui-se o do vencimento."
+  },
+  {
+   "n": 154,
+   "ref": "trilha:prf-processo-penal:atos-processuais:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Atos processuais: forma, lugar e tempo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A suspensão dos prazos processuais entre 20 de dezembro e 20 de janeiro não se aplica aos processos que envolvam réus presos.",
+   "just": "Art. 798-A, I."
+  },
+  {
+   "n": 155,
+   "ref": "trilha:prf-processo-penal:atos-processuais:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Atos processuais: forma, lugar e tempo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O prazo processual penal que terminar em feriado considera-se prorrogado até o dia útil imediato.",
+   "just": "Art. 798, § 3º."
+  },
+  {
+   "n": 156,
+   "ref": "trilha:prf-processo-penal:prova:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Prova: conceito, ônus, provas ilícitas e local de crime",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Quando a infração deixar vestígios, a confissão do acusado poderá suprir a falta do exame de corpo de delito.",
+   "just": "Art. 158 do CPP: a confissão não supre o exame."
+  },
+  {
+   "n": 157,
+   "ref": "trilha:prf-processo-penal:prova:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Prova: conceito, ônus, provas ilícitas e local de crime",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O início da cadeia de custódia se dá com a preservação do local de crime ou com procedimentos policiais ou periciais nos quais seja detectada a existência de vestígio.",
+   "just": "Art. 158-A, § 1º."
+  },
+  {
+   "n": 158,
+   "ref": "trilha:prf-processo-penal:prova:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Prova: conceito, ônus, provas ilícitas e local de crime",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em caso de acidente de trânsito, o agente policial que primeiro tomar conhecimento do fato poderá autorizar a remoção imediata dos veículos que estiverem no leito da via prejudicando o tráfego, independentemente de exame do local.",
+   "just": "Lei 5.970/1973, art. 1º."
+  },
+  {
+   "n": 159,
+   "ref": "trilha:prf-processo-penal:prova:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Prova: conceito, ônus, provas ilícitas e local de crime",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "São admissíveis as provas derivadas das ilícitas quando puderem ser obtidas por uma fonte independente das primeiras.",
+   "just": "Art. 157, §§ 1º e 2º."
+  },
+  {
+   "n": 160,
+   "ref": "trilha:prf-processo-penal:prova:5",
+   "materia": "Direito Processual Penal",
+   "topico": "Prova: conceito, ônus, provas ilícitas e local de crime",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O juiz pode fundamentar a condenação exclusivamente nos elementos informativos colhidos no inquérito policial.",
+   "just": "Art. 155: não pode, ressalvadas as provas cautelares, não repetíveis e antecipadas."
+  },
+  {
+   "n": 161,
+   "ref": "trilha:prf-processo-penal:meios-de-prova:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Meios de prova: interrogatório, testemunhas, reconhecimento",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O policial que efetuou a prisão pode ser arrolado como testemunha, e seu depoimento terá valor probatório superior ao do interrogatório do acusado.",
+   "just": "Pode ser testemunha, mas sem valor superior a priori. Item 108 da PRF 2021."
+  },
+  {
+   "n": 162,
+   "ref": "trilha:prf-processo-penal:meios-de-prova:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Meios de prova: interrogatório, testemunhas, reconhecimento",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O silêncio do acusado no interrogatório não importará confissão e não poderá ser interpretado em prejuízo da defesa.",
+   "just": "Art. 186, parágrafo único, do CPP."
+  },
+  {
+   "n": 163,
+   "ref": "trilha:prf-processo-penal:meios-de-prova:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Meios de prova: interrogatório, testemunhas, reconhecimento",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A confissão do acusado é indivisível e irretratável.",
+   "just": "Art. 200: é divisível e retratável."
+  },
+  {
+   "n": 164,
+   "ref": "trilha:prf-processo-penal:meios-de-prova:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Meios de prova: interrogatório, testemunhas, reconhecimento",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Não se deferirá o compromisso de dizer a verdade aos menores de quatorze anos.",
+   "just": "Art. 208 do CPP."
+  },
+  {
+   "n": 165,
+   "ref": "trilha:prf-processo-penal:meios-de-prova:5",
+   "materia": "Direito Processual Penal",
+   "topico": "Meios de prova: interrogatório, testemunhas, reconhecimento",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O ofendido que, intimado, deixar de comparecer sem motivo justo poderá ser conduzido à presença da autoridade.",
+   "just": "Art. 201, § 1º."
+  },
+  {
+   "n": 166,
+   "ref": "trilha:prf-processo-penal:busca-apreensao:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Busca e apreensão pessoal e domiciliar",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A busca e a apreensão em veículo, realizadas por policial rodoviário durante fiscalização, são ilícitas se feitas sem autorização judicial.",
+   "just": "Busca veicular equipara-se à pessoal e dispensa mandado com fundada suspeita (art. 244). Item 105 da PRF 2021."
+  },
+  {
+   "n": 167,
+   "ref": "trilha:prf-processo-penal:busca-apreensao:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Busca e apreensão pessoal e domiciliar",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A busca domiciliar determinada por mandado judicial pode ser executada durante a noite, desde que o morador consinta.",
+   "just": "Art. 245 do CPP."
+  },
+  {
+   "n": 168,
+   "ref": "trilha:prf-processo-penal:busca-apreensao:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Busca e apreensão pessoal e domiciliar",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em situação de flagrante delito, a entrada em domicílio sem mandado judicial somente é permitida durante o dia.",
+   "just": "CF, art. 5º, XI: em flagrante, a qualquer hora."
+  },
+  {
+   "n": 169,
+   "ref": "trilha:prf-processo-penal:busca-apreensao:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Busca e apreensão pessoal e domiciliar",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A busca pessoal independe de mandado quando houver fundada suspeita de que a pessoa esteja na posse de arma proibida.",
+   "just": "Art. 244 do CPP."
+  },
+  {
+   "n": 170,
+   "ref": "trilha:prf-processo-penal:busca-apreensao:5",
+   "materia": "Direito Processual Penal",
+   "topico": "Busca e apreensão pessoal e domiciliar",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o STF, a busca pessoal pode ser motivada pela cor da pele do abordado, desde que haja nervosismo aparente.",
+   "just": "STF, HC 208.240 (2024): exige elementos objetivos; é ilícita a busca baseada em raça ou aparência."
+  },
+  {
+   "n": 171,
+   "ref": "trilha:prf-processo-penal:prisao-flagrante:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão em flagrante e audiência de custódia",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O policial que surpreende o autor logo após a prática do crime, com a mercadoria proibida no veículo, realiza prisão em flagrante próprio, devendo a nota de culpa ser entregue ao preso em até vinte e quatro horas.",
+   "just": "Arts. 302, II, e 306, § 2º, do CPP. Item 106 da PRF 2021."
+  },
+  {
+   "n": 172,
+   "ref": "trilha:prf-processo-penal:prisao-flagrante:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão em flagrante e audiência de custódia",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A prisão em flagrante é uma espécie de prisão provisória, dispensa a expedição de mandado, e o condutor deve receber o recibo de entrega do preso.",
+   "just": "Arts. 301 e 304 do CPP. Item 109 da PRF 2021."
+  },
+  {
+   "n": 173,
+   "ref": "trilha:prf-processo-penal:prisao-flagrante:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão em flagrante e audiência de custódia",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Considera-se em flagrante delito quem é perseguido, logo após, pela autoridade, em situação que faça presumir ser autor da infração.",
+   "just": "Art. 302, III (flagrante impróprio)."
+  },
+  {
+   "n": 174,
+   "ref": "trilha:prf-processo-penal:prisao-flagrante:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão em flagrante e audiência de custódia",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Qualquer do povo deverá prender quem quer que seja encontrado em flagrante delito.",
+   "just": "Art. 301: qualquer do povo PODERÁ; as autoridades policiais e seus agentes DEVERÃO."
+  },
+  {
+   "n": 175,
+   "ref": "trilha:prf-processo-penal:prisao-flagrante:5",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão em flagrante e audiência de custódia",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Nos crimes permanentes, entende-se o agente em flagrante delito enquanto não cessar a permanência.",
+   "just": "Art. 303 do CPP."
+  },
+  {
+   "n": 176,
+   "ref": "trilha:prf-processo-penal:prisao-flagrante:6",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão em flagrante e audiência de custódia",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O flagrante preparado pela polícia, que torna impossível a consumação do crime, é válido.",
+   "just": "Súmula 145 do STF."
+  },
+  {
+   "n": 177,
+   "ref": "trilha:prf-processo-penal:prisao-cautelar:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão: regras gerais, preventiva e temporária",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O juiz pode decretar a prisão preventiva de ofício, no curso da ação penal.",
+   "just": "Art. 311 do CPP (Lei 13.964/2019): só a requerimento ou por representação."
+  },
+  {
+   "n": 178,
+   "ref": "trilha:prf-processo-penal:prisao-cautelar:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão: regras gerais, preventiva e temporária",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A prisão temporária pode ser decretada durante a ação penal, para assegurar a instrução criminal.",
+   "just": "Lei 7.960/1989: só na investigação."
+  },
+  {
+   "n": 179,
+   "ref": "trilha:prf-processo-penal:prisao-cautelar:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão: regras gerais, preventiva e temporária",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A autoridade policial pode conceder fiança nos casos de infração cuja pena privativa de liberdade máxima não seja superior a quatro anos.",
+   "just": "Art. 322 do CPP."
+  },
+  {
+   "n": 180,
+   "ref": "trilha:prf-processo-penal:prisao-cautelar:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão: regras gerais, preventiva e temporária",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo a Súmula Vinculante 11, o uso de algemas exige justificativa por escrito da excepcionalidade.",
+   "just": "Súmula Vinculante 11 do STF."
+  },
+  {
+   "n": 181,
+   "ref": "trilha:prf-processo-penal:prisao-cautelar:5",
+   "materia": "Direito Processual Penal",
+   "topico": "Prisão: regras gerais, preventiva e temporária",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Encontrando-se o procurado em casa, durante a noite, e não atendida a intimação ao morador, o executor do mandado poderá arrombar as portas imediatamente.",
+   "just": "Art. 293: à noite, guarda as saídas e só entra ao amanhecer."
+  },
+  {
+   "n": 182,
+   "ref": "trilha:prf-processo-penal:identificacao-criminal:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Identificação criminal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A identificação criminal do condutor não poderá ser feita se ele tiver sido identificado civilmente pela CNH.",
+   "just": "Art. 3º da Lei 12.037/2009: há hipóteses de identificação criminal mesmo com documento civil. Item 107 da PRF 2021."
+  },
+  {
+   "n": 183,
+   "ref": "trilha:prf-processo-penal:identificacao-criminal:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Identificação criminal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Mesmo em caso de apresentação do documento de identificação civil, é possível a identificação criminal se constar de registros policiais o uso de outros nomes ou diferentes qualificações.",
+   "just": "Art. 3º, V. Item 112 da PRF 2021."
+  },
+  {
+   "n": 184,
+   "ref": "trilha:prf-processo-penal:identificacao-criminal:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Identificação criminal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A identificação criminal compreende o processo datiloscópico e o fotográfico.",
+   "just": "Art. 5º da Lei 12.037/2009."
+  },
+  {
+   "n": 185,
+   "ref": "trilha:prf-processo-penal:identificacao-criminal:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Identificação criminal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Antes do trânsito em julgado da sentença condenatória, a identificação criminal pode constar de atestados de antecedentes fornecidos a empregadores.",
+   "just": "Art. 6º: é vedado."
+  },
+  {
+   "n": 186,
+   "ref": "trilha:prf-processo-penal:identificacao-criminal:5",
+   "materia": "Direito Processual Penal",
+   "topico": "Identificação criminal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O passaporte é documento apto à identificação civil.",
+   "just": "Art. 2º, IV."
+  },
+  {
+   "n": 187,
+   "ref": "trilha:prf-processo-penal:diligencias:1",
+   "materia": "Direito Processual Penal",
+   "topico": "Inquérito e diligências investigatórias",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A autoridade policial poderá mandar arquivar autos de inquérito quando concluir pela inexistência de crime.",
+   "just": "Art. 17 do CPP: não poderá."
+  },
+  {
+   "n": 188,
+   "ref": "trilha:prf-processo-penal:diligencias:2",
+   "materia": "Direito Processual Penal",
+   "topico": "Inquérito e diligências investigatórias",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Logo que tiver conhecimento da infração penal, a autoridade policial deverá dirigir-se ao local, providenciando para que não se alterem o estado e a conservação das coisas até a chegada dos peritos criminais.",
+   "just": "Art. 6º, I, do CPP."
+  },
+  {
+   "n": 189,
+   "ref": "trilha:prf-processo-penal:diligencias:3",
+   "materia": "Direito Processual Penal",
+   "topico": "Inquérito e diligências investigatórias",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Estando o indiciado preso, o inquérito policial deverá terminar no prazo de trinta dias.",
+   "just": "Art. 10: dez dias com o indiciado preso; trinta se solto."
+  },
+  {
+   "n": 190,
+   "ref": "trilha:prf-processo-penal:diligencias:4",
+   "materia": "Direito Processual Penal",
+   "topico": "Inquérito e diligências investigatórias",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Nos crimes de ação penal pública condicionada, o inquérito policial não poderá ser iniciado sem a representação do ofendido.",
+   "just": "Art. 5º, § 4º, do CPP."
+  },
+  {
+   "n": 191,
+   "ref": "trilha:prf-processo-penal:diligencias:5",
+   "materia": "Direito Processual Penal",
+   "topico": "Inquérito e diligências investigatórias",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ao defensor é assegurado o acesso amplo aos elementos de prova já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária.",
+   "just": "Súmula Vinculante 14."
+  }
+ ]
+}
