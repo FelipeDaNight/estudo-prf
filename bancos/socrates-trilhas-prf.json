@@ -2577,6 +2577,106 @@
    "resp": "C",
    "enunciado": "Ao autorizar a remoção, a autoridade ou o agente policial lavrará boletim da ocorrência, nele consignando o fato e as testemunhas que o presenciaram.",
    "just": "Art. 1º, parágrafo único."
+  },
+  {
+   "n": 258,
+   "ref": "trilha:prf-transito:contran:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A largura máxima permitida para os veículos em circulação, sem autorização especial, é de 2,60 m.",
+   "just": "Res. CONTRAN 882/2021, art. 4º."
+  },
+  {
+   "n": 259,
+   "ref": "trilha:prf-transito:contran:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na pesagem por balança, a tolerância admitida sobre o peso por eixo é de 10%.",
+   "just": "Lei 7.408/1985, art. 1º, II, com a Lei 14.229/2021, e Res. CONTRAN 882/2021, art. 50: 12,5%."
+  },
+  {
+   "n": 260,
+   "ref": "trilha:prf-transito:contran:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Veículo com peso bruto total regulamentar de até 50 toneladas é fiscalizado apenas quanto ao PBT ou PBTC, salvo se ultrapassar essa tolerância, caso em que responde também pelo excesso por eixo.",
+   "just": "Lei 7.408/1985, art. 1º, §§ 1º e 2º."
+  },
+  {
+   "n": 261,
+   "ref": "trilha:prf-transito:contran:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em caso de sinistro, as informações das últimas vinte e quatro horas do tacógrafo devem ficar à disposição das autoridades por noventa dias.",
+   "just": "Res. CONTRAN 938/2022, art. 9º: um ano. Noventa dias é a regra geral do art. 8º."
+  },
+  {
+   "n": 262,
+   "ref": "trilha:prf-transito:contran:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A fiscalização por videomonitoramento dispensa sinalização na via, bastando que o agente registre no auto como constatou a infração.",
+   "just": "Res. CONTRAN 909/2022, art. 3º: só em vias devidamente sinalizadas."
+  },
+  {
+   "n": 263,
+   "ref": "trilha:prf-transito:contran:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Entre os medidores de velocidade do tipo fixo, somente o redutor deve ser obrigatoriamente dotado de display.",
+   "just": "Res. CONTRAN 798/2020, art. 3º."
+  },
+  {
+   "n": 264,
+   "ref": "trilha:prf-transito:contran:7",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os dispositivos de amarração de carga devem respeitar fator de segurança de, no mínimo, duas vezes o peso da carga.",
+   "just": "Res. CONTRAN 945/2022, art. 4º."
+  },
+  {
+   "n": 265,
+   "ref": "trilha:prf-transito:contran:8",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "É permitido o uso de cordas na amarração da carga, desde que estejam em bom estado de conservação.",
+   "just": "Res. CONTRAN 945/2022, art. 4º, § 3º: cordas só para fixar a lona."
+  },
+  {
+   "n": 266,
+   "ref": "trilha:prf-transito:contran:9",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No transporte de passageiros em veículo de carga autorizado a título precário, é vedado transportar passageiros com menos de dez anos de idade.",
+   "just": "Res. CONTRAN 508/2014, art. 5º."
+  },
+  {
+   "n": 267,
+   "ref": "trilha:prf-transito:contran:10",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do CONTRAN mais cobradas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ônibus, micro-ônibus e caminhões podem circular com até três danos no para-brisa fora da área crítica de visão, com trinca de até 20 cm ou fratura circular de até 4 cm.",
+   "just": "Res. CONTRAN 960/2022, art. 15."
   }
  ]
 }

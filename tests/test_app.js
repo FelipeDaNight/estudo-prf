@@ -279,7 +279,7 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
   await t("Questões: lista os bancos e o treino filtra por matéria", async () => {
     await page.click('[data-t="quest"]');
     await espera(() => document.querySelectorAll("#q_lista .card[data-banco]").length === 4);
-    assert.ok((await page.locator('#q_lista .card[data-banco="socrates-trilhas-prf"]').innerText()).includes("Respondidas 0/257"), "banco do Sócrates");
+    assert.ok((await page.locator('#q_lista .card[data-banco="socrates-trilhas-prf"]').innerText()).includes("Respondidas 0/267"), "banco do Sócrates");
     const card = page.locator('#q_lista .card[data-banco="cbmgo-2022-soldado"]');
     assert.ok((await card.textContent()).includes("gabarito é de elaboração própria"), "aviso do gabarito");
     await card.locator('.q_mat[data-m="Raciocínio Lógico"]').click();
@@ -516,6 +516,18 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await page.reload();
     assert.strictEqual((await fila()).length, 1);
     assert.strictEqual(await page.inputValue("#g_url") === SCRIPT || true, true);
+  });
+
+  await t("Questões: item cuja lei mudou depois da prova vale o gabarito de hoje no treino, com aviso", async () => {
+    await page.click('[data-t="quest"]');
+    await espera(() => document.querySelectorAll("#q_lista .card[data-banco]").length >= 3);
+    await page.locator('#q_lista .card[data-banco="prf-2021-p1"] .q_mat[data-m="Legislação de Trânsito"]').click();
+    await page.click("#q_mapa_box summary");                                    // abre o mapa das questões
+    await page.locator("#q_mapa button", { hasText: /^69$/ }).click();          // item 82: oficial E, hoje C
+    await page.locator('#q_alts .alt[data-k="C"]').click();
+    const fb = await page.locator("#q_fb").innerText();
+    assert.ok(fb.includes("Acertou") && fb.includes("A lei mudou depois da prova") && fb.includes("Gabarito oficial: Errado") && fb.includes("12,5%"), fb);
+    assert.ok(await page.locator('#q_alts .alt[data-k="C"].certa').count() === 1);
   });
 
   await page.click('[data-t="estudo"]');

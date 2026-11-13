@@ -765,17 +765,25 @@
       const q = Q.b.questoes[i], bt = el("button", String(q.n)); let cl = "";
       if (pos === Q.pos) cl += " atual";
       if (sim) { if (Q.resp[q.n] !== undefined) cl += " resp"; }
-      else if (Q.resp[q.n] !== undefined) cl += Q.resp[q.n] === q.resp ? " ok" : " no";
+      else if (Q.resp[q.n] !== undefined) cl += Q.resp[q.n] === qGab(q) ? " ok" : " no";
       bt.className = cl.trim(); bt.onclick = () => qIr(pos); m.appendChild(bt);
     });
   }
+  // Gabarito para estudar: o de hoje quando a lei mudou depois da prova (q.atual); no simulado vale o oficial.
+  function qGab(q) { return q.atual || q.resp; }
+  function qRotulo(q, g) { return q.tipo === "ce" ? (g === "C" ? "Certo" : "Errado") : g; }
+  function qAvisoLei(q) {
+    if (!q.atual || q.atual === q.resp) return null;
+    const w = el("div", "⚖ A lei mudou depois da prova. Gabarito oficial: " + qRotulo(q, q.resp) + "; pela regra de hoje: " + qRotulo(q, q.atual) + ". " + (q.atualizacao || ""), "note lei_mudou");
+    w.style.marginTop = "6px"; return w;
+  }
   function qMostrarFb(q, r) {
-    const ok = r === q.resp, f = $("q_fb"); f.innerHTML = "";
-    document.querySelectorAll("#q_alts .alt").forEach((x) => { x.classList.remove("sel"); if (x.dataset.k === q.resp) x.classList.add("certa"); else if (x.dataset.k === r) x.classList.add("errada"); });
+    const g = qGab(q), ok = r === g, f = $("q_fb"); f.innerHTML = "";
+    document.querySelectorAll("#q_alts .alt").forEach((x) => { x.classList.remove("sel"); if (x.dataset.k === g) x.classList.add("certa"); else if (x.dataset.k === r) x.classList.add("errada"); });
     const d = el("div", undefined, "fb " + (ok ? "ok" : "no"));
-    const rot = q.tipo === "ce" ? (q.resp === "C" ? "Certo" : "Errado") : q.resp;
-    d.appendChild(el("b", ok ? "✅ Acertou!" : "❌ Errou. Resposta correta: " + rot));
+    d.appendChild(el("b", ok ? "✅ Acertou!" : "❌ Errou. Resposta correta: " + qRotulo(q, g)));
     if (q.just) { const j = el("div", q.just); j.style.marginTop = "6px"; j.style.whiteSpace = "pre-wrap"; d.appendChild(j); }
+    const aviso = qAvisoLei(q); if (aviso) d.appendChild(aviso);
     if (q.conf === "media") { const w = el("div", "⚠ Gabarito próprio com confiança média: confira no oficial.", "note"); w.style.marginTop = "6px"; d.appendChild(w); }
     if (ok && (Q.conf[q.n] === "Chute")) { const w = el("div", "Acertou no chute: revise esse assunto mesmo assim.", "note"); w.style.marginTop = "6px"; d.appendChild(w); }
     f.appendChild(d);
@@ -787,7 +795,7 @@
     const conf = ((document.querySelector("#q_conf button.on") || {}).dataset || {}).c || "Certeza";
     if (sim) { Q.resp[q.n] = Q.resp[q.n] === k ? undefined : k; if (Q.resp[q.n] === undefined) delete Q.conf[q.n]; else Q.conf[q.n] = conf; qRender(); return; }
     if (Q.trav) return;
-    const ok = k === q.resp; Q.resp[q.n] = k; Q.conf[q.n] = conf; Q.trav = true;
+    const ok = k === qGab(q); Q.resp[q.n] = k; Q.conf[q.n] = conf; Q.trav = true;
     qProg(Q.b)[q.n] = { r: k, ok, conf, d: hoje() }; qSalvarProg(); histQuestao(ok);
     const g = q.materia + "||" + q.topico; const s = (Q.sessao[g] = Q.sessao[g] || { feitas: 0, acertos: 0, erros: 0 });
     s.feitas++; if (ok) s.acertos++; else s.erros++;
@@ -909,9 +917,10 @@
     const v = $("k_verso"); v.replaceChildren(); v.style.display = "block"; const box = el("div", undefined, "kv");
     const { q } = K.ctx || {};
     if (q) {
-      const rot = q.tipo === "ce" ? (q.resp === "C" ? "Certo" : "Errado") : q.resp + ") " + q.alternativas[q.resp];
+      const g = qGab(q), rot = q.tipo === "ce" ? (g === "C" ? "Certo" : "Errado") : g + ") " + q.alternativas[g];
       box.appendChild(el("b", "✅ Resposta: " + rot));
       if (q.just) box.appendChild(el("p", q.just));
+      const aviso = qAvisoLei(q); if (aviso) box.appendChild(aviso);
       if (q.conf === "media") box.appendChild(el("p", "⚠ Gabarito próprio com confiança média.", "note"));
     } else if (c.tipo === "l") {
       box.appendChild(el("b", "✅ " + c.back));
