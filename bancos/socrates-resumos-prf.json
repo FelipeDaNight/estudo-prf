@@ -1,0 +1,1467 @@
+{
+ "id": "socrates-resumos-prf",
+ "titulo": "Resumos do Sócrates · PRF",
+ "atualizado": "2026-11-13",
+ "aviso": "A teoria das trilhas conferidas do Sócrates, tópico por tópico, na ordem do edital (leis atualizadas até 13/11/2026). Os itens de fixação de cada tópico estão no banco \"Sócrates · Fixação PRF\".",
+ "materias": [
+  {
+   "materia": "Legislação de Trânsito",
+   "trilha": "prf-transito",
+   "fonte": "CTB (Lei 9.503/1997) compilado do Planalto em 04/11/2026 (o mesmo do app estudo-prf), com as Leis 14.071/2020, 14.229/2021 e 14.599/2023; Lei 5.970/1973.",
+   "atualizado": "2026-11-13",
+   "topicos": [
+    {
+     "id": "ctb-snt",
+     "titulo": "CTB: disposições preliminares e Sistema Nacional de Trânsito",
+     "edital": "CTB arts. 1º a 25-A",
+     "peso": 2,
+     "pontos": [
+      "Trânsito é a utilização das vias por pessoas, veículos e animais, isolados ou em grupos, conduzidos ou não, para circulação, parada, estacionamento e operação de carga ou descarga (CTB, art. 1º, § 1º). O trânsito seguro é direito de todos e dever dos órgãos do Sistema Nacional de Trânsito (SNT), que respondem OBJETIVAMENTE por danos causados por ação, omissão ou erro na execução e manutenção de programas, projetos e serviços de trânsito seguro (§§ 2º e 3º). A prioridade é a defesa da vida, incluídas a saúde e o meio ambiente (§ 5º).",
+      "Vias terrestres (art. 2º): ruas, avenidas, logradouros, caminhos, passagens, estradas e rodovias. Também são vias terrestres as praias abertas à circulação pública, as vias internas de condomínios constituídos por unidades autônomas e as vias e áreas de estacionamento de estabelecimentos privados de uso coletivo (parágrafo único).",
+      "Compõem o SNT (art. 7º): o CONTRAN, coordenador do sistema e órgão máximo NORMATIVO e CONSULTIVO; os CETRAN e o CONTRANDIFE; os órgãos executivos de trânsito e os executivos rodoviários da União, dos estados, do DF e dos municípios; a Polícia Rodoviária Federal; as Polícias Militares; e as JARI.",
+      "JARI (arts. 16 e 17): funcionam junto a cada órgão executivo de trânsito ou rodoviário e julgam os recursos dos infratores contra as penalidades impostas por esse órgão.",
+      "PRF (art. 20, nas rodovias e estradas federais): cumprir e fazer cumprir a legislação de trânsito; patrulhamento ostensivo; fiscalizar, aplicar advertência por escrito e multa e as medidas administrativas, notificar e arrecadar multas e valores de estadia, remoção e escolta de cargas superdimensionadas ou perigosas; levantamento dos locais de sinistros e dos serviços de socorro; credenciar escoltas; assegurar a livre circulação; coletar dados sobre sinistros; fiscalizar emissão de poluentes e ruído; aplicar a SUSPENSÃO do direito de dirigir quando prevista de forma específica para a infração (XII); e fazer perícia administrativa nos locais de sinistros (XIII).",
+      "Órgãos executivos rodoviários (art. 21): entre outras, fiscalizar e autuar as infrações por excesso de peso, dimensões e lotação. DETRAN (art. 22): formação e habilitação de condutores (expedir e cassar a Permissão para Dirigir e a CNH) e vistoria, registro, emplacamento e licenciamento de veículos, por delegação do órgão máximo executivo da União. Municípios (art. 24): planejar e operar o trânsito urbano, sinalizar, fiscalizar e manter o estacionamento rotativo."
+     ],
+     "pegadinhas": [
+      "O CONTRAN é órgão máximo NORMATIVO e CONSULTIVO, não executivo.",
+      "Vias internas de condomínio e estacionamento de shopping ou supermercado também são vias terrestres para o CTB.",
+      "O CTB atual fala em 'sinistro de trânsito', não mais em 'acidente'."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "ctb-circulacao",
+     "titulo": "CTB: normas gerais de circulação e conduta",
+     "edital": "CTB arts. 26 a 67-E",
+     "peso": 3,
+     "pontos": [
+      "Circula-se pela direita, guardando distância lateral e frontal (art. 29, I e II). Em cruzamento não sinalizado, tem preferência: quem vem pela RODOVIA; na rotatória, quem circula NELA; nos demais casos, quem vem pela DIREITA do condutor (art. 29, III). As faixas da direita são dos veículos mais lentos e de maior porte; as da esquerda, da ultrapassagem e dos mais rápidos (IV). Veículo só transita sobre passeio, calçada ou acostamento para entrar ou sair de imóvel ou de área especial de estacionamento (V).",
+      "Luzes (art. 40): luz baixa à noite e, mesmo de dia, em túneis e sob chuva, neblina ou cerração; luz alta em via não iluminada, salvo ao cruzar ou seguir outro veículo; pisca-alerta só em imobilização ou emergência, ou quando a regulamentação da via mandar. Motocicletas e ônibus em faixa própria usam luz baixa de dia e de noite (§ 1º). Veículo SEM luz de rodagem diurna (DRL) mantém os faróis acesos, mesmo de dia, nas rodovias de pista simples fora do perímetro urbano (§ 2º).",
+      "Velocidade onde não há sinalização (art. 61): vias urbanas — 80 km/h (trânsito rápido), 60 (arterial), 40 (coletora), 30 (local); rodovia de pista DUPLA — 110 km/h para automóveis, camionetas, caminhonetes e motocicletas e 90 para os demais; pista SIMPLES — 100 e 90; estradas — 60 km/h. A mínima não pode ser inferior à metade da máxima (art. 62).",
+      "Criança com menos de 10 anos que não atingiu 1,45 m vai no banco traseiro, em dispositivo de retenção adequado à idade, ao peso e à altura, salvo exceções do CONTRAN (art. 64). O cinto é obrigatório para condutor e passageiros em todas as vias (art. 65).",
+      "Motocicleta (arts. 54 e 55): o condutor usa capacete com viseira ou óculos protetores, segura o guidom com as duas mãos e usa vestuário de proteção; o passageiro usa capacete e vai no assento suplementar atrás do condutor ou em carro lateral.",
+      "Motorista profissional (art. 67-C): é vedado dirigir mais de 5 horas e meia ininterruptas (passageiros ou cargas). Carga: 30 minutos de descanso a cada 6 horas de direção, fracionáveis; passageiros: 30 minutos a cada 4 horas. A cada 24 horas, 11 horas de descanso, fracionáveis, com 8 horas ininterruptas no primeiro período.",
+      "Controle do tempo de direção (art. 67-E): o motorista profissional controla e registra o tempo; o controle é feito pelo registrador instantâneo inalterável de velocidade e tempo (tacógrafo), por diário de bordo, papeleta ou ficha de trabalho externo, ou por meios eletrônicos. A guarda, a preservação e a exatidão das informações do registrador são responsabilidade do CONDUTOR (§ 4º)."
+     ],
+     "pegadinhas": [
+      "110 km/h é para pista DUPLA; em pista simples, automóveis e motos vão a 100 km/h.",
+      "Tempo de direção: no máximo 5h30 ininterruptas — a banca troca por 6h30 (PRF 2021, item 78).",
+      "Quem responde pela guarda e exatidão dos dados do tacógrafo é o condutor, não o proprietário (PRF 2021, item 79)."
+     ],
+     "novidades": [],
+     "itens": 7,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 56
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 77
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 78
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 79
+      }
+     ]
+    },
+    {
+     "id": "ctb-pedestres",
+     "titulo": "CTB: pedestres, ciclistas, cidadão e educação para o trânsito",
+     "edital": "CTB arts. 68 a 79",
+     "peso": 1,
+     "pontos": [
+      "O pedestre usa os passeios e passagens apropriadas nas vias urbanas e os ACOSTAMENTOS nas vias rurais (art. 68). O ciclista desmontado empurrando a bicicleta equipara-se ao pedestre em direitos e deveres (§ 1º).",
+      "Sem passeio (via urbana) ou sem acostamento (via rural), o pedestre anda pela pista com prioridade sobre os veículos, pelos bordos, em fila única; na via RURAL, no sentido CONTRÁRIO ao dos veículos (art. 68, §§ 2º e 3º). Nos trechos urbanos de vias rurais deve haver passeio, e o pedestre não usa o acostamento (§ 5º).",
+      "Na faixa de pedestres, quem atravessa tem prioridade, exceto onde houver semáforo; mesmo com semáforo, quem não terminou a travessia tem preferência quando o sinal abre para os veículos (art. 70).",
+      "Bicicletas (art. 58): nas vias urbanas e nas rurais de pista dupla, sem ciclovia, ciclofaixa ou acostamento, circulam nos bordos da pista, no mesmo sentido dos veículos, com preferência sobre os veículos automotores. A autoridade pode autorizar a circulação no sentido contrário se houver ciclofaixa.",
+      "Campanhas (art. 75): o CONTRAN define todo ano os temas e cronogramas das campanhas nacionais, em especial nas férias escolares, feriados prolongados e na Semana Nacional de Trânsito; as campanhas são permanentes, e as rádios e TVs públicas devem difundi-las gratuitamente.",
+      "Educação para o trânsito (art. 76): promovida da pré-escola ao ensino superior, por ações coordenadas entre os órgãos do SNT e os de educação."
+     ],
+     "pegadinhas": [
+      "Na via rural, o pedestre anda pelo acostamento; só sem acostamento vai pelos bordos da pista, em fila única e no sentido CONTRÁRIO ao dos veículos.",
+      "Sentido contrário é regra do PEDESTRE na via rural; a bicicleta anda no MESMO sentido dos veículos (art. 58).",
+      "Ciclista empurrando a bicicleta é pedestre."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 63
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 80
+      }
+     ]
+    },
+    {
+     "id": "ctb-sinalizacao",
+     "titulo": "CTB: sinalização de trânsito",
+     "edital": "CTB arts. 80 a 90",
+     "peso": 2,
+     "pontos": [
+      "Ordem de prevalência (art. 89): 1º as ordens do agente de trânsito sobre as normas de circulação e outros sinais; 2º as indicações do semáforo sobre os demais sinais; 3º as indicações dos sinais sobre as demais normas de trânsito.",
+      "Não se aplicam sanções por desrespeito à sinalização quando ela for insuficiente ou incorreta (art. 90). O órgão com circunscrição sobre a via responde pela falta, insuficiência ou colocação incorreta da sinalização (§ 1º).",
+      "A sinalização é colocada em posição e condições que a tornem visível e legível, de dia e de noite, em distância compatível com a segurança do trânsito (art. 80). Só se usa a sinalização prevista no CTB e nas normas do CONTRAN."
+     ],
+     "pegadinhas": [
+      "Ordem de prevalência: AGENTE > SEMÁFORO > SINAIS > normas de circulação.",
+      "Sinalização insuficiente ou incorreta afasta a penalidade."
+     ],
+     "novidades": [],
+     "itens": 3,
+     "questoes": []
+    },
+    {
+     "id": "ctb-fiscalizacao",
+     "titulo": "CTB: engenharia, fiscalização e obras na via",
+     "edital": "CTB arts. 91 a 95",
+     "peso": 1,
+     "pontos": [
+      "Nenhuma obra ou evento que possa perturbar ou interromper a livre circulação, ou pôr em risco a segurança, começa sem permissão prévia do órgão com circunscrição sobre a via (art. 95). A obrigação de sinalizar é de quem executa ou mantém a obra ou o evento (§ 1º).",
+      "Salvo emergência, a autoridade avisa a comunidade, pelos meios de comunicação, com 48 horas de antecedência, de qualquer interdição da via, indicando os caminhos alternativos (art. 95, § 2º)."
+     ],
+     "pegadinhas": [
+      "O aviso de interdição é com 48 horas de antecedência (salvo emergência)."
+     ],
+     "novidades": [],
+     "itens": 2,
+     "questoes": []
+    },
+    {
+     "id": "ctb-veiculos",
+     "titulo": "CTB: veículos, equipamentos, registro e licenciamento",
+     "edital": "CTB arts. 96 a 135",
+     "peso": 2,
+     "pontos": [
+      "Equipamentos obrigatórios (art. 105), entre outros do CONTRAN: cinto de segurança (exceto nos veículos de passageiros em que se permite viajar em pé); encosto de cabeça; controle de emissão de gases e ruído; e o registrador instantâneo inalterável de velocidade e tempo (tacógrafo) nos veículos de transporte e condução escolar, nos de passageiros com mais de 10 lugares e nos de carga com peso bruto total superior a 4.536 kg. Também: air bag frontal para condutor e passageiro do banco dianteiro e luzes de rodagem diurna (VII e VIII); nas bicicletas, campainha, sinalização noturna dianteira, traseira, lateral e nos pedais e retrovisor do lado esquerdo (VI).",
+      "Áreas envidraçadas (art. 111): é vedado o uso de cortinas, persianas fechadas ou similares com o veículo em movimento, SALVO nos que tenham espelhos retrovisores em ambos os lados; películas, inscrições e pinturas só quando não comprometerem a segurança, conforme o CONTRAN.",
+      "Placas (art. 115): o veículo é identificado por placas dianteira e traseira, esta lacrada na estrutura; os caracteres acompanham o veículo até a baixa do registro, vedado o reaproveitamento. Placas verde-amarelas só para veículos de representação de altas autoridades (Presidente e Vice, presidentes do Senado, da Câmara e do STF, ministros do STF e de Estado, AGU e PGR).",
+      "Registro (arts. 120 e 123): todo veículo automotor, reboque ou semirreboque é registrado no DETRAN do município de domicílio ou residência do proprietário. É obrigatório novo Certificado de Registro (CRV) quando: houver transferência de propriedade; o proprietário mudar de MUNICÍPIO; mudar característica do veículo; ou mudar a categoria. Na transferência, o prazo é de 30 dias; nos demais casos, as providências são imediatas.",
+      "Licenciamento (arts. 130 a 133): anual, no DETRAN onde o veículo está registrado; o certificado pode ser físico ou digital; só é licenciado com tributos, encargos e multas quitados. O porte do Certificado de Licenciamento Anual é obrigatório, mas dispensado quando o agente puder consultar o sistema no momento da fiscalização (art. 133)."
+     ],
+     "pegadinhas": [
+      "Mudar de município exige NOVO CRV; mudar de endereço no MESMO município só exige comunicar em 30 dias.",
+      "Tacógrafo é obrigatório no veículo de carga com PBT acima de 4.536 kg e no de passageiros com mais de 10 lugares.",
+      "Cortina com o veículo em movimento é permitida se houver retrovisores dos dois lados (PRF 2021, item 57)."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 57
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 62
+      }
+     ]
+    },
+    {
+     "id": "ctb-escolares",
+     "titulo": "CTB: condução de escolares e motofrete",
+     "edital": "CTB arts. 136 a 139-B",
+     "peso": 1,
+     "pontos": [
+      "Veículo de condução coletiva de escolares só circula com autorização do DETRAN e exige (art. 136): registro como veículo de passageiros; inspeção SEMESTRAL; faixa amarela de 40 cm à meia altura, com o dístico ESCOLAR em preto (cores invertidas se o veículo for amarelo); tacógrafo; lanternas próprias; e cintos para todos os passageiros, entre outros.",
+      "O condutor de escolares deve (art. 138): ter mais de 21 anos; ser habilitado na categoria D; não ter cometido mais de UMA infração gravíssima nos últimos 12 meses; e ser aprovado em curso especializado.",
+      "Motofrete (art. 139-A): motocicleta ou motoneta de transporte remunerado de mercadorias só circula com autorização do DETRAN, exigindo registro como veículo de aluguel, protetor de motor 'mata-cachorro', aparador de linha (antena corta-pipas) e inspeção semestral."
+     ],
+     "pegadinhas": [
+      "Condutor de escolares: categoria D e mais de 21 anos; a regra atual tolera UMA gravíssima nos últimos 12 meses (não pode ter mais de uma).",
+      "Inspeção do escolar e do motofrete é SEMESTRAL."
+     ],
+     "novidades": [],
+     "itens": 3,
+     "questoes": []
+    },
+    {
+     "id": "ctb-habilitacao",
+     "titulo": "CTB: habilitação",
+     "edital": "CTB arts. 140 a 160",
+     "peso": 3,
+     "pontos": [
+      "Requisitos para habilitar-se (art. 140): ser penalmente imputável, saber ler e escrever e possuir carteira de identidade ou equivalente.",
+      "Categorias (art. 143): A — veículo motorizado de duas ou três rodas; B — veículo não abrangido pela A, com PBT até 3.500 kg e até 8 lugares além do motorista; C — carga com PBT acima de 3.500 kg; D — passageiros com mais de 8 lugares além do motorista; E — combinação cuja unidade acoplada tenha 6.000 kg ou mais, ou lotação acima de 8 lugares. A categoria B também dirige motor-casa de até 6.000 kg e veículo elétrico ou híbrido (tração predominantemente elétrica) de até 4.250 kg de PBT.",
+      "Para C (art. 143, § 1º): 1 ano na categoria B e não mais de uma gravíssima nos últimos 12 meses. Para D e E (e para transporte coletivo, escolar, emergência ou produto perigoso — art. 145): mais de 21 anos; 2 anos na B ou 1 na C (para D); 1 ano na C (para E); não mais de uma gravíssima em 12 meses; e cursos especializado e de prática veicular em situação de risco.",
+      "Permissão para Dirigir (art. 148): o aprovado recebe a PPD com validade de 1 ano; a CNH vem ao fim desse ano se não houver infração GRAVE ou GRAVÍSSIMA nem reincidência em MÉDIA; se houver, reinicia todo o processo.",
+      "Exame de aptidão física e mental (art. 147, § 2º): a cada 10 anos para menores de 50 anos; a cada 5 anos de 50 a 69; a cada 3 anos a partir de 70. Exame toxicológico (art. 148-A): obrigatório para C, D e E na obtenção e renovação e, para quem tem menos de 70 anos, a cada 2 anos e 6 meses.",
+      "CNH (art. 159): física ou digital; tem fé pública e vale como documento de identidade. O porte é obrigatório ao dirigir, mas dispensado se o agente puder consultar o sistema; só vale apresentada em original."
+     ],
+     "pegadinhas": [
+      "Penalmente INIMPUTÁVEL não se habilita (PRF 2021, item 60).",
+      "Na PPD basta UMA infração grave ou gravíssima (ou reincidir em média) para perder a CNH definitiva.",
+      "A categoria D exige mais de 21 anos; a C não exige 21."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 60
+      }
+     ]
+    },
+    {
+     "id": "ctb-infracoes",
+     "titulo": "CTB: infrações",
+     "edital": "CTB arts. 161 a 255",
+     "peso": 3,
+     "pontos": [
+      "Classificação e pontos (arts. 258 e 259): gravíssima — 7 pontos e multa de R$ 293,47; grave — 5 pontos e R$ 195,23; média — 4 pontos e R$ 130,16; leve — 3 pontos e R$ 88,38. Multa agravada usa o fator multiplicador previsto no artigo da infração.",
+      "Álcool (art. 165): dirigir sob influência de álcool ou outra substância psicoativa — gravíssima, multa (10 vezes) e suspensão do direito de dirigir por 12 meses; recolhimento do documento e retenção do veículo; multa em dobro se reincidir em 12 meses. Qualquer concentração de álcool já caracteriza a infração (art. 276). Recusar o teste, exame ou perícia (art. 165-A): as MESMAS penalidades.",
+      "Habilitação (art. 162): dirigir sem CNH, PPD ou ACC — gravíssima, multa (3 vezes), retenção até apresentar condutor habilitado; com o direito de dirigir suspenso ou cassado — gravíssima, multa (3 vezes); com categoria diferente — gravíssima, multa (2 vezes); com CNH vencida há mais de 30 dias — gravíssima, multa.",
+      "Velocidade (art. 218): até 20% acima da máxima — média; de 20% a 50% — grave; mais de 50% — gravíssima, multa (3 vezes) e suspensão do direito de dirigir.",
+      "Outras muito cobradas: sem cinto (art. 167) — grave, retenção até colocar o cinto; criança sem as normas de segurança (art. 168) — gravíssima; manobra perigosa com arrancada brusca, derrapagem ou frenagem com arrastamento de pneus (art. 175) — gravíssima, multa (10 vezes) e suspensão; avançar o sinal vermelho (art. 208) — gravíssima; moto sem capacete ou com passageiro sem capacete (art. 244) — gravíssima, multa e suspensão.",
+      "Celular (art. 252): dirigir usando fones ou o celular — média; SEGURANDO ou MANUSEANDO o celular — gravíssima (parágrafo único).",
+      "Sinistro (arts. 176 e 178): com VÍTIMA, deixar de socorrer, de preservar o local, de identificar-se ao policial etc. — gravíssima, multa (5 vezes) e suspensão do direito de dirigir; SEM vítima, deixar de remover o veículo quando necessário à segurança e à fluidez — média.",
+      "Exame toxicológico (arts. 165-B a 165-D, Lei 14.599/2023): dirigir sem o exame exigido, ou com resultado positivo — gravíssima, multa (5 vezes); deixar de fazer o exame periódico 30 dias após o vencimento — gravíssima, multa (5 vezes)."
+     ],
+     "pegadinhas": [
+      "Recusar o bafômetro tem a MESMA punição de dirigir alcoolizado (multa 10 vezes e suspensão por 12 meses).",
+      "Celular: só usar é média; SEGURAR ou MANUSEAR é gravíssima.",
+      "Em sinistro SEM vítima, a obrigação é remover o veículo (infração média), não preservar o local (PRF 2021, item 58)."
+     ],
+     "novidades": [],
+     "itens": 7,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 58
+      }
+     ]
+    },
+    {
+     "id": "ctb-penalidades",
+     "titulo": "CTB: penalidades",
+     "edital": "CTB arts. 256 a 268-A",
+     "peso": 3,
+     "pontos": [
+      "Penalidades (art. 256): advertência por escrito; multa; suspensão do direito de dirigir; cassação da CNH; cassação da Permissão para Dirigir; frequência obrigatória em curso de reciclagem. A 'apreensão do veículo' deixou de ser penalidade (inciso revogado). As penalidades administrativas não afastam as penais (§ 1º).",
+      "Suspensão por pontos (art. 261, I), somados em 12 meses: 20 pontos se houver 2 ou mais gravíssimas; 30 pontos se houver 1 gravíssima; 40 pontos se não houver gravíssima. Prazo: 6 meses a 1 ano (reincidente em 12 meses: 8 meses a 2 anos).",
+      "Suspensão específica (art. 261, II), quando a infração já prevê a suspensão: 2 a 8 meses, salvo prazo próprio (ex.: álcool, 12 meses); reincidência em 12 meses: 8 a 18 meses. A CNH volta após cumprida a suspensão e o curso de reciclagem (§ 2º). A suspensão zera os pontos computados para a contagem seguinte (§ 3º), e quem dirige depois de notificado da suspensão comete a infração do art. 162, II (§ 9º).",
+      "Condutor que exerce atividade remunerada: suspensão só com 40 pontos, qualquer que seja a natureza das infrações, podendo fazer curso preventivo de reciclagem ao atingir 30 pontos em 12 meses, o que zera os pontos; quem optar pelo curso não pode repetir a opção em 12 meses (art. 261, §§ 5º a 7º).",
+      "Cassação (art. 263): dirigir qualquer veículo com o direito de dirigir suspenso; reincidir, em 12 meses, em dirigir com categoria diferente (art. 162, III), entregar ou permitir a direção a quem não pode (arts. 163 e 164), álcool (art. 165), racha, competição sem permissão ou manobra perigosa (arts. 173, 174 e 175); ou condenação judicial por delito de trânsito. Reabilitação: depois de 2 anos, refazendo todos os exames.",
+      "Advertência por escrito (art. 267): DEVE ser imposta à infração leve ou média, punível com multa, se o infrator não cometeu outra infração nos últimos 12 meses. Infrações simultâneas: as penalidades são aplicadas cumulativamente (art. 266)."
+     ],
+     "pegadinhas": [
+      "Pontos para suspensão: 20 (duas ou mais gravíssimas), 30 (uma gravíssima), 40 (nenhuma). A banca troca a ordem.",
+      "Advertência por escrito é OBRIGATÓRIA (deverá) para leve ou média sem outra infração em 12 meses — não é faculdade.",
+      "Apreensão do veículo não é mais penalidade do CTB."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 66
+      }
+     ]
+    },
+    {
+     "id": "ctb-medidas",
+     "titulo": "CTB: medidas administrativas",
+     "edital": "CTB arts. 269 a 279-A",
+     "peso": 3,
+     "pontos": [
+      "Medidas administrativas (art. 269): retenção do veículo; remoção do veículo; recolhimento da CNH, da Permissão para Dirigir, do Certificado de Registro e do Certificado de Licenciamento Anual; transbordo do excesso de carga; teste de alcoolemia ou perícia de substância entorpecente; recolhimento de animais soltos nas vias; e realização de exames de aptidão e de direção.",
+      "Retenção (art. 270): se a irregularidade puder ser sanada no local, o veículo é liberado assim que regularizado. Se não puder, e o veículo tiver condições de segurança, é liberado a condutor habilitado mediante recolhimento do Certificado de Licenciamento Anual, com prazo de até 30 dias para regularizar. Sem condutor habilitado no local, o veículo é removido ao depósito.",
+      "Remoção (art. 271): o veículo vai ao depósito do órgão com circunscrição sobre a via e só é restituído com o pagamento prévio de multas, taxas e despesas de remoção e estada; a liberação depende do reparo de equipamento obrigatório.",
+      "Álcool (arts. 276 e 277): qualquer concentração de álcool sujeita às penalidades do art. 165 (o CONTRAN fixa a tolerância do aparelho). O condutor envolvido em sinistro ou fiscalizado pode ser submetido a teste, exame clínico ou perícia; a infração também pode ser provada por imagem, vídeo, sinais de alteração da capacidade psicomotora ou outras provas. Quem se recusa sofre as penalidades do art. 165-A."
+     ],
+     "pegadinhas": [
+      "Na retenção, se não der para sanar no local, o CLA (licenciamento) é recolhido e o prazo para regularizar é de até 30 DIAS.",
+      "Bafômetro não é a única prova: imagem, vídeo e sinais de embriaguez também caracterizam a infração."
+     ],
+     "novidades": [],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "ctb-processo",
+     "titulo": "CTB: auto de infração e processo administrativo",
+     "edital": "CTB arts. 280 a 290-A",
+     "peso": 2,
+     "pontos": [
+      "O auto de infração contém (art. 280): tipificação; local, data e hora; placa, marca e espécie do veículo; prontuário do condutor, sempre que possível; identificação do órgão e do agente ou do equipamento; e assinatura do infrator, sempre que possível, valendo como notificação. A infração é comprovada pela declaração do agente, por aparelho eletrônico ou equipamento audiovisual regulamentado pelo CONTRAN (§ 2º).",
+      "O auto é arquivado e julgado insubsistente se for inconsistente ou irregular, ou se a notificação da autuação não for expedida em até 30 DIAS (art. 281, § 1º).",
+      "Indeferida a defesa prévia (ou não apresentada), aplica-se a penalidade e o responsável é notificado (art. 282); a notificação devolvida por endereço desatualizado ou recusa é válida (§ 1º).",
+      "Pagamento (art. 284): até o vencimento, por 80% do valor (20% de desconto); quem aderir ao sistema de notificação eletrônica e renunciar à defesa e ao recurso paga 60% (40% de desconto). Pagar não impede recorrer, e enquanto não termina a instância administrativa não há cobrança de mora nem restrição ao licenciamento e à transferência."
+     ],
+     "pegadinhas": [
+      "O prazo para expedir a notificação da autuação é de 30 dias; passou disso, o auto é arquivado.",
+      "Descontos: 20% pagando até o vencimento; 40% com a adesão ao sistema eletrônico e renúncia à defesa."
+     ],
+     "novidades": [],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "ctb-crimes",
+     "titulo": "CTB: crimes de trânsito",
+     "edital": "CTB arts. 291 a 312-B",
+     "peso": 3,
+     "pontos": [
+      "Aplicam-se aos crimes de trânsito as regras gerais do CP e do CPP e a Lei 9.099, no que couber (art. 291). Na lesão corporal culposa valem a composição civil, a transação e a representação (arts. 74, 76 e 88 da Lei 9.099), EXCETO se o agente estiver sob influência de álcool, participando de racha ou a mais de 50 km/h acima da máxima — nesses casos, instaura-se inquérito (§§ 1º e 2º).",
+      "Ao condutor que presta pronto e integral socorro à vítima não se impõe prisão em flagrante nem se exige fiança (art. 301).",
+      "Homicídio culposo na direção (art. 302): detenção de 2 a 4 anos e suspensão ou proibição de obter a habilitação; aumento de 1/3 à metade se não tem habilitação, se ocorre na faixa de pedestres ou na calçada, se deixa de socorrer, ou se é motorista profissional de transporte de passageiros. Sob influência de álcool: reclusão de 5 a 8 anos (§ 3º). Lesão culposa (art. 303): detenção de 6 meses a 2 anos; com álcool e lesão grave ou gravíssima, reclusão de 2 a 5 anos (§ 2º).",
+      "Embriaguez ao volante (art. 306): conduzir com capacidade psicomotora alterada por álcool ou outra substância — detenção de 6 meses a 3 anos, multa e suspensão ou proibição. Constata-se por concentração igual ou superior a 6 decigramas por litro de sangue ou 0,3 mg por litro de ar alveolar, OU por sinais de alteração da capacidade psicomotora; vale também vídeo, prova testemunhal e outros meios.",
+      "Outros crimes: omissão de socorro (art. 304, detenção de 6 meses a 1 ano ou multa, mesmo que terceiros socorram ou a vítima tenha morrido na hora); fuga do local para escapar da responsabilidade (art. 305, mesma pena); violar a suspensão (art. 307); racha com risco (art. 308, detenção de 6 meses a 3 anos; com lesão grave, reclusão de 3 a 6; com morte, reclusão de 5 a 10); dirigir sem habilitação GERANDO PERIGO DE DANO (art. 309); entregar a direção a quem não pode (art. 310); velocidade incompatível perto de escolas e hospitais gerando perigo de dano (art. 311); fraude processual em sinistro (art. 312).",
+      "Penas: a suspensão ou proibição de obter habilitação vai de 2 meses a 5 anos (art. 293), e o condenado entrega o documento em 48 horas após o trânsito em julgado. A pena substitutiva é prestação de serviços ligada a vítimas de trânsito (art. 312-A). No homicídio e na lesão grave com álcool (arts. 302, § 3º, e 303, § 2º) não cabe substituição por restritiva de direitos (art. 312-B)."
+     ],
+     "pegadinhas": [
+      "Dirigir sem habilitação só é CRIME se gerar perigo de dano (art. 309); sem perigo, é infração administrativa (art. 162).",
+      "Socorrer a vítima afasta o flagrante e a fiança (art. 301), não o crime.",
+      "Omissão de socorro existe mesmo se a vítima morreu na hora ou foi socorrida por terceiros."
+     ],
+     "novidades": [],
+     "itens": 7,
+     "questoes": []
+    },
+    {
+     "id": "lei-5970",
+     "titulo": "Lei 5.970/1973: remoção de vítimas e veículos em sinistro",
+     "edital": "Lei 5.970/1973",
+     "peso": 1,
+     "pontos": [
+      "Em sinistro de trânsito, a autoridade ou o agente policial que primeiro tomar conhecimento pode autorizar, INDEPENDENTEMENTE de exame do local, a imediata remoção das pessoas feridas e dos veículos que estejam no leito da via e prejudiquem o tráfego (Lei 5.970/1973, art. 1º).",
+      "Para autorizar a remoção, lavra-se boletim de ocorrência com o fato, as testemunhas e as demais circunstâncias necessárias ao esclarecimento da verdade (art. 1º, parágrafo único).",
+      "A lei excepciona, nesses casos, a regra do CPP de preservar o local até a chegada dos peritos (arts. 6º, I, 64 e 169 do CPP)."
+     ],
+     "pegadinhas": [
+      "A remoção NÃO depende de perícia prévia nem de socorro anterior às vítimas como condição (PRF 2021, item 59)."
+     ],
+     "novidades": [],
+     "itens": 2,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 59
+      }
+     ]
+    },
+    {
+     "id": "contran",
+     "titulo": "Resoluções do CONTRAN mais cobradas",
+     "edital": "Resoluções do CONTRAN (pesos e dimensões, tacógrafo, videomonitoramento, medidores de velocidade, placas, vidros, amarração de carga, passageiros em veículo de carga)",
+     "peso": 3,
+     "pontos": [
+      "O CONTRAN revisou e consolidou suas resoluções entre 2020 e 2022, e muitas que caíram em provas antigas foram revogadas. As mais cobradas hoje: 882/2021 (pesos e dimensões), 909/2022 (videomonitoramento), 938/2022 (tacógrafo), 945/2022 (amarração de carga), 960/2022 (vidros e películas), 969/2022 (placas), 798/2020 (medidores de velocidade) e 508/2014 (passageiros em veículo de carga).",
+      "Dimensões máximas (Res. 882/2021, art. 4º): largura 2,60 m; altura 4,40 m; comprimento do veículo não articulado 14,00 m; caminhão-trator com semirreboque 19,30 m (era 18,60 m até dezembro de 2023); caminhão ou ônibus com reboque e articulados com mais de duas unidades, 19,80 m. Fora dos limites, só com Autorização Especial de Trânsito, com prazo certo, por viagem ou por período (CTB, art. 101).",
+      "Pesos (Res. 882/2021, art. 6º): veículo não articulado, até 29 t de PBT; combinação com mais de duas unidades, incluída a tratora, até 57 t de PBTC (com no máximo 7 eixos e comprimento de 17,5 a 19,8 m, entre outros requisitos). Por eixo: isolado de 2 pneus, 6 t; isolado de 4 pneus, 10 t; dois eixos em tandem, 17 t; três eixos em tandem, 25,5 t.",
+      "Tolerância na pesagem (Lei 7.408/1985, art. 1º, com a Lei 14.229/2021; Res. 882/2021, art. 50): 5% sobre o PBT ou PBTC e 12,5% sobre o peso por eixo (era 10% até 2021). Veículo com PBT regulamentar de até 50 t é fiscalizado só pelo PBT/PBTC; se passar da tolerância do PBT, responde também pelo excesso por eixo, com penalidades cumulativas. Biodiesel B100 em veículo não adaptado: 7,5%. Só há autuação acima do limite somado à tolerância (CTB, art. 99, § 4º).",
+      "Excesso de peso (Res. 882/2021, arts. 52 a 55): dentro do PBT + 5%, mas com eixo acima da tolerância, a multa incide sobre o excesso e a carga é remanejada ou transbordada; acima do PBT + 5%, multa e transbordo do excesso. O veículo só segue com a irregularidade sanada, mas o agente pode dispensar o remanejamento ou o transbordo de produtos perigosos, perecíveis, cargas vivas e passageiros, avaliados os riscos.",
+      "Tacógrafo (Res. 938/2022, que revogou a 92/1999), obrigatório nos veículos do art. 105, II, do CTB: registra, das últimas 24 horas, velocidades, distância, tempo de movimentação e suas interrupções, data e hora de início, identificação do veículo e do condutor e a abertura do compartimento do disco ou da fita. Na fiscalização, o agente se identifica e assina o verso do disco ou da fita, com local, data e horário. Os dados de cada 24 horas ficam à disposição por 90 dias; em caso de sinistro, os das últimas 24 horas ficam por 1 ano.",
+      "Videomonitoramento (Res. 909/2022, que revogou as 471/2013 e 532/2015): a autoridade ou o agente pode autuar à distância, em tempo real, infrações às normas gerais de circulação e conduta vistas pelas câmeras, desde que a via esteja devidamente sinalizada para esse fim. No auto, o campo 'observação' informa como a infração foi constatada.",
+      "Medidores de velocidade (Res. 798/2020): fixo, que pode ser controlador (fiscaliza o limite da via) ou redutor (trechos críticos), e portátil. Só o redutor tem display obrigatório. O medidor fixo é precedido de placa R-19 fixa, e o órgão publica no site a lista dos seus medidores (com o local, no caso do fixo). Da velocidade medida desconta-se o erro admitido: 7 km/h até 100 km/h e 7% acima disso.",
+      "Placas (Res. 969/2022, padrão Mercosul): reboques, semirreboques, motocicletas, motonetas, ciclomotores, triciclos, quadriciclos e guindastes só têm placa traseira. Veículo com engate de reboque ou carroceria intercambiável usa uma segunda placa traseira quando a carga cobre a original. O QR Code dinâmico funciona como o lacre eletrônico da placa.",
+      "Vidros (Res. 960/2022, que revogou a 216/2006): nenhuma trinca ou fratura circular na área crítica de visão do condutor nem na faixa de 2,5 cm das bordas, e ali o dano não pode ser recuperado. Fora delas: ônibus, micro-ônibus e caminhões, até 3 danos (trinca de até 20 cm, fratura circular de até 4 cm); demais veículos, até 2 danos (trinca de até 10 cm, fratura de até 4 cm). Películas: transmitância mínima de 70% no para-brisa e nos vidros laterais dianteiros e de 28% nos demais; película refletiva é proibida; na autuação, soma-se 7% ao valor medido.",
+      "Amarração de carga (Res. 945/2022, que revogou a 552/2015): cintas têxteis, correntes ou cabos de aço com fator de segurança de no mínimo 2 vezes o peso da carga; sem pontos de amarração adequados ou suficientes, podem ser presos no próprio chassi; em prancha ou carroceria aberta, cada unidade de carga vai presa em pelo menos 4 terminais. Corda é proibida para amarrar carga (só serve para a lona).",
+      "Passageiros em veículo de carga ou misto (CTB, art. 108; Res. 508/2014): onde não houver linha regular de ônibus, a autoridade com circunscrição sobre a via pode autorizar, a título precário e por até 12 meses, o transporte no compartimento de carga, no mesmo município ou entre municípios limítrofes. É vedado levar passageiros com menos de 10 anos, em pé ou nas partes externas, levar carga no mesmo ambiente e usar veículo basculante, boiadeiro ou combinação de veículos."
+     ],
+     "pegadinhas": [
+      "Tolerância por eixo hoje é 12,5% (Lei 14.229/2021). O item 82 da PRF 2021 deu ERRADO porque, na época, era 10%: hoje ele seria CERTO.",
+      "Largura máxima 2,60 m (não 2,50 m — item 74) e combinação com mais de duas unidades até 57 t (não 60 t — item 75).",
+      "Tacógrafo após sinistro: dados das últimas 24 horas por 1 ANO (não 6 meses — item 73); 90 dias é a regra do uso normal.",
+      "Videomonitoramento EXIGE via sinalizada (item 61). Amarração: 2 vezes o peso da carga, não 1,5 (item 85).",
+      "O agente pode dispensar o transbordo também de produtos PERIGOSOS (item 81); e a fratura circular é tolerada fora da área crítica, até 4 cm (item 70).",
+      "Passageiro em veículo de carga: a vedação é para menores de 10 anos, não de 18 (item 68)."
+     ],
+     "novidades": [
+      "Lei 14.229/2021 (conversão da MP 1.050/2021): a tolerância por eixo passou de 10% para 12,5%, e veículos de até 50 t passaram a ser fiscalizados só pelo PBT/PBTC.",
+      "Dezembro de 2023 (Res. CONTRAN 1.005/2024): o caminhão-trator com semirreboque passou de 18,60 m para 19,30 m.",
+      "Consolidação de 2021 e 2022: 882/2021 substituiu a 210/2006; 909/2022, a 471/2013; 938/2022, a 92/1999; 945/2022, a 552/2015; 960/2022, a 216/2006; 969/2022, a 780/2019."
+     ],
+     "itens": 10,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 61
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 64
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 65
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 68
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 70
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 71
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 72
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 73
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 74
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 75
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 81
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 82
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 84
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 85
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "materia": "Direito Penal",
+   "trilha": "prf-penal",
+   "fonte": "Conteúdo do edital PRF 2021 (Cebraspe), o último publicado. Leis conferidas até a Lei 15.397/2026 e a Lei Antifacção (Lei 15.358/2026).",
+   "atualizado": "2026-11-13",
+   "topicos": [
+    {
+     "id": "principios",
+     "titulo": "Princípios do Direito Penal",
+     "edital": "1 Princípios básicos",
+     "peso": 2,
+     "pontos": [
+      "Legalidade (CF, art. 5º, XXXIX, e CP, art. 1º): não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal. Só lei em sentido estrito, federal (CF, art. 22, I), cria crime e pena; medida provisória não pode tratar de direito penal (CF, art. 62, § 1º, I, b). A lei também precisa ser clara: é a taxatividade.",
+      "Irretroatividade (CF, art. 5º, XL): a lei penal mais grave nunca retroage; a mais benéfica sempre retroage, até depois do trânsito em julgado.",
+      "Intervenção mínima: o Direito Penal é a última ratio. Subsidiariedade: só entra quando os outros ramos do Direito não bastam. Fragmentariedade: protege só os bens mais importantes, contra os ataques mais graves.",
+      "Lesividade (ou ofensividade): só há crime se houver lesão ou perigo de lesão a bem jurídico de outra pessoa. Não se pune o pensamento, nem a autolesão em si.",
+      "Insignificância (bagatela): exclui a tipicidade material. O STF exige quatro vetores: mínima ofensividade da conduta, nenhuma periculosidade social da ação, reduzido grau de reprovabilidade e inexpressividade da lesão jurídica.",
+      "A insignificância não vale para crimes com violência ou grave ameaça (como o roubo), para crimes contra a administração pública (Súmula 599 do STJ, com exceção do descaminho na jurisprudência), para violência doméstica contra a mulher (Súmula 589 do STJ), nem para moeda falsa e tráfico de drogas. A reincidência, sozinha, não a afasta automaticamente: o juiz analisa o caso (STF).",
+      "Culpabilidade: não existe responsabilidade penal objetiva; precisa haver dolo ou culpa. Intranscendência (CF, art. 5º, XLV): a pena não passa da pessoa do condenado; só a obrigação de reparar o dano e o perdimento de bens podem alcançar os sucessores, até o limite do patrimônio transferido.",
+      "Humanidade (CF, art. 5º, XLVII): não há pena de morte (salvo em guerra declarada), de caráter perpétuo, de trabalhos forçados, de banimento ou cruéis. Individualização da pena (art. 5º, XLVI): cada condenado recebe a pena adequada ao seu caso."
+     ],
+     "pegadinhas": [
+      "Medida provisória não cria crime nem pena. Se a banca disser que MP pode tipificar conduta, está errado.",
+      "Adequação social não descriminaliza pirataria: vender CD ou DVD pirata é crime (Súmula 502 do STJ).",
+      "Insignificância exclui a tipicidade material, e não a ilicitude ou a culpabilidade."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "lei-penal-tempo",
+     "titulo": "Lei penal no tempo",
+     "edital": "2.2 Lei penal no tempo: tempo do crime; conflito de leis penais no tempo",
+     "peso": 3,
+     "pontos": [
+      "Tempo do crime (art. 4º): teoria da atividade. Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado. Por isso a idade do agente é medida na data da conduta: quem atira aos 17 anos não é imputável, mesmo que a vítima morra depois de ele completar 18.",
+      "Abolitio criminis (art. 2º, caput): lei nova que deixa de considerar o fato crime. Cessam a execução e os efeitos PENAIS da condenação, inclusive a reincidência; os efeitos CIVIS, como o dever de indenizar, permanecem. É causa de extinção da punibilidade (art. 107, III).",
+      "Novatio legis in mellius (art. 2º, parágrafo único): a lei posterior que de qualquer modo favorece o agente retroage, ainda que o fato já tenha sido decidido por sentença condenatória transitada em julgado. Depois do trânsito, quem aplica é o juízo da execução (Súmula 611 do STF).",
+      "Novatio legis in pejus e lei que cria crime novo não retroagem. Entre várias leis sucessivas, aplica-se sempre a mais benéfica, inclusive uma lei intermediária que já foi revogada.",
+      "Lei excepcional e lei temporária (art. 3º) são ultra-ativas: aplicam-se aos fatos praticados durante a sua vigência, mesmo depois de terminado o período ou cessadas as circunstâncias que as justificaram.",
+      "Crime permanente e crime continuado: aplica-se a lei mais grave se a sua vigência é anterior à cessação da permanência ou da continuidade (Súmula 711 do STF).",
+      "Não se pode combinar as partes favoráveis de duas leis para criar uma terceira: a lei é aplicada por inteiro (Súmula 501 do STJ, sobre a Lei de Drogas). E, se a conduta só mudou de artigo, não houve abolitio: é a continuidade normativo-típica (ex.: o atentado violento ao pudor passou a ser estupro em 2009)."
+     ],
+     "pegadinhas": [
+      "LUTA: Lugar do crime = Ubiquidade; Tempo do crime = Atividade. A banca troca as teorias.",
+      "A abolitio criminis apaga os efeitos penais, mas não os civis: a vítima continua podendo cobrar a indenização.",
+      "A lei benéfica retroage mesmo depois do trânsito em julgado; quem disser que só até a sentença está errado."
+     ],
+     "novidades": [
+      "Exemplo atual de lei mais grave, que só vale para fatos posteriores: a Lei 15.397/2026 aumentou as penas de furto, roubo e receptação a partir de 4/5/2026."
+     ],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "lei-penal-espaco",
+     "titulo": "Lei penal no espaço e contagem de prazo",
+     "edital": "2.3 Lei penal no espaço: lugar do crime; territorialidade; extraterritorialidade",
+     "peso": 2,
+     "pontos": [
+      "Territorialidade temperada (art. 5º): aplica-se a lei brasileira ao crime cometido no território nacional, sem prejuízo de tratados e regras de direito internacional (ex.: imunidade diplomática).",
+      "Território por extensão (art. 5º, § 1º): embarcações e aeronaves brasileiras públicas ou a serviço do governo, onde quer que estejam; e as mercantes ou privadas brasileiras em alto-mar ou no espaço aéreo correspondente. Também vale a lei brasileira para crimes a bordo de aeronaves ou embarcações estrangeiras privadas em território brasileiro (§ 2º).",
+      "Lugar do crime (art. 6º): teoria da ubiquidade. É tanto o lugar da ação ou omissão, no todo ou em parte, quanto o lugar onde se produziu ou deveria produzir-se o resultado. Atenção: a competência territorial do processo penal usa outra regra (CPP, art. 70).",
+      "Extraterritorialidade incondicionada (art. 7º, I): crimes contra a vida ou a liberdade do Presidente da República; contra o patrimônio ou a fé pública da União, dos Estados, do DF, dos Municípios e de suas entidades; contra a administração pública, por quem está a seu serviço; e genocídio, se o agente for brasileiro ou domiciliado no Brasil. Aplica-se a lei brasileira ainda que o agente tenha sido absolvido ou condenado no estrangeiro.",
+      "Extraterritorialidade condicionada (art. 7º, II): crimes que o Brasil se obrigou a reprimir por tratado, crimes praticados por brasileiro e crimes em aeronaves ou embarcações brasileiras privadas no estrangeiro, quando lá não julgados. Condições (§ 2º): o agente entrar no território nacional, o fato ser punível também no outro país, estar entre os crimes que admitem extradição, não ter sido absolvido nem cumprido pena lá, e não estar extinta a punibilidade.",
+      "Crime de estrangeiro contra brasileiro fora do Brasil (art. 7º, § 3º): além das condições do § 2º, é preciso que a extradição não tenha sido pedida ou tenha sido negada e que haja requisição do Ministro da Justiça.",
+      "Pena cumprida no estrangeiro (art. 8º): atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou nela é computada, quando idênticas. Sentença estrangeira (art. 9º) precisa de homologação (pelo STJ) para obrigar à reparação do dano ou sujeitar a medida de segurança.",
+      "Contagem de prazo (art. 10): o dia do começo inclui-se no cômputo, e dias, meses e anos contam-se pelo calendário comum. Frações (art. 11): desprezam-se as frações de dia nas penas privativas de liberdade e restritivas de direitos, e as frações de real na multa."
+     ],
+     "pegadinhas": [
+      "Embaixada estrangeira no Brasil NÃO é território estrangeiro: é território brasileiro, apenas inviolável.",
+      "Prazo penal (art. 10) inclui o dia do começo; prazo processual (CPP, art. 798, § 1º) exclui. A banca adora trocar.",
+      "Na extraterritorialidade incondicionada, a lei brasileira se aplica mesmo que o agente já tenha sido absolvido no estrangeiro."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "fato-tipico",
+     "titulo": "Fato típico: dolo, culpa e nexo causal",
+     "edital": "3 Tipicidade. 3.1 Crime doloso e crime culposo",
+     "peso": 2,
+     "pontos": [
+      "O fato típico tem quatro elementos: conduta, resultado, nexo causal e tipicidade. Sem conduta voluntária não há crime; por isso a coação FÍSICA irresistível e os atos reflexos afastam a própria conduta.",
+      "Dolo (art. 18, I): direto, quando o agente quer o resultado; eventual, quando assume o risco de produzi-lo. Culpa (art. 18, II): resultado não querido, causado por imprudência (agir sem cuidado), negligência (deixar de tomar o cuidado devido) ou imperícia (falta de aptidão técnica).",
+      "Na culpa consciente o agente prevê o resultado, mas acredita sinceramente que ele não vai acontecer; no dolo eventual ele prevê e não se importa. Em crimes de trânsito com racha ou embriaguez, os tribunais analisam caso a caso se houve dolo eventual.",
+      "O crime culposo é excepcional: só existe se a lei previr a forma culposa expressamente (art. 18, parágrafo único). Não existe, por exemplo, furto culposo.",
+      "Crime preterdoloso (art. 19): dolo na conduta inicial e culpa no resultado mais grave, como a lesão corporal seguida de morte. O agente só responde pelo resultado que agrava a pena se o causou ao menos culposamente.",
+      "Nexo causal (art. 13): causa é toda ação ou omissão sem a qual o resultado não teria ocorrido (equivalência dos antecedentes). Mas a causa superveniente relativamente independente que, por si só, produz o resultado exclui a imputação dele; o agente responde só pelos atos já praticados (§ 1º). Exemplo clássico: a vítima ferida morre no acidente da ambulância.",
+      "Omissão penalmente relevante (art. 13, § 2º): responde pelo resultado quem devia e podia agir para evitá-lo. O dever de agir é de quem tem por lei obrigação de cuidado, proteção ou vigilância (como o policial em serviço); de quem assumiu a responsabilidade de impedir o resultado; e de quem, com seu comportamento anterior, criou o risco."
+     ],
+     "pegadinhas": [
+      "Coação física irresistível exclui a conduta (fato típico); coação moral irresistível exclui a culpabilidade. A banca troca.",
+      "Omissão de socorro (art. 135) é crime omissivo próprio e não admite tentativa.",
+      "Culpa consciente não é dolo eventual: na primeira o agente confia que o resultado não ocorrerá."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "erro-de-tipo",
+     "titulo": "Erro de tipo",
+     "edital": "3.2 Erro de tipo",
+     "peso": 2,
+     "pontos": [
+      "Erro de tipo essencial (art. 20, caput): o agente se engana sobre um elemento do tipo; não sabe o que faz. Exemplo: leva a mala de outra pessoa achando que é a sua. O erro sempre exclui o dolo; se era evitável, permite punir por culpa, se houver forma culposa.",
+      "Erro inevitável (escusável) exclui dolo e culpa. Erro evitável (inescusável) exclui só o dolo, e o agente responde por crime culposo, se previsto em lei.",
+      "Descriminante putativa (art. 20, § 1º): o agente imagina, por erro plenamente justificado, uma situação de fato que, se existisse, tornaria a ação legítima (ex.: legítima defesa putativa contra quem só ia pegar o celular). Fica isento de pena; se o erro derivou de culpa, responde por crime culposo (é a chamada culpa imprópria).",
+      "Erro determinado por terceiro (art. 20, § 2º): responde pelo crime o terceiro que provocou o erro.",
+      "Erro sobre a pessoa (art. 20, § 3º): o agente confunde a vítima. Não isenta de pena e consideram-se as condições da vítima que ele queria atingir, e não da atingida.",
+      "Erro na execução (aberratio ictus, art. 73): por acidente ou erro no uso dos meios, atinge pessoa diversa da pretendida. Responde como se tivesse atingido a pretendida; se atingir as duas, aplica-se o concurso formal. Resultado diverso do pretendido (aberratio criminis, art. 74): responde por culpa, se houver forma culposa.",
+      "Diferença essencial: no erro de tipo o agente não sabe o que faz; no erro de proibição (art. 21) ele sabe o que faz, mas acha que é permitido."
+     ],
+     "pegadinhas": [
+      "Erro sobre a pessoa não exclui o crime: consideram-se as qualidades da vítima pretendida (ex.: quis matar o pai e matou um estranho: incide a agravante de crime contra ascendente).",
+      "Erro de tipo evitável exclui o dolo, não a culpa. Erro de proibição evitável não exclui nada: apenas reduz a pena."
+     ],
+     "novidades": [],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "iter-criminis",
+     "titulo": "Consumação, tentativa e crime impossível",
+     "edital": "3.3 Crime consumado e tentado; 3.4 Crime impossível",
+     "peso": 3,
+     "pontos": [
+      "Iter criminis: cogitação, preparação, execução e consumação. Cogitar nunca é crime; os atos preparatórios, em regra, também não, salvo quando a lei os transforma em crime autônomo (ex.: petrechos para falsificação de moeda, associação criminosa).",
+      "Crime consumado (art. 14, I): reúne todos os elementos do tipo. Crime formal se consuma com a conduta, mesmo sem o resultado: a corrupção ativa se consuma com a oferta, ainda que o policial recuse, e a concussão com a exigência.",
+      "Tentativa (art. 14, II): iniciada a execução, o crime não se consuma por circunstâncias alheias à vontade do agente. Pena do consumado diminuída de um a dois terços (parágrafo único); quanto mais perto da consumação, menor a redução.",
+      "Não admitem tentativa: crimes culposos, preterdolosos, omissivos próprios, unissubsistentes e habituais, e as contravenções penais (a tentativa de contravenção não é punível).",
+      "Desistência voluntária e arrependimento eficaz (art. 15): o agente que voluntariamente desiste de prosseguir na execução ou impede que o resultado se produza só responde pelos atos já praticados. Basta ser voluntário; não precisa ser espontâneo.",
+      "Arrependimento posterior (art. 16): nos crimes sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, por ato voluntário, até o recebimento da denúncia ou queixa, a pena é reduzida de um a dois terços. Depois do recebimento, vira só atenuante.",
+      "Crime impossível (art. 17): não se pune a tentativa quando, por ineficácia ABSOLUTA do meio ou absoluta impropriedade do objeto, é impossível consumar o crime. Se a ineficácia é relativa, há tentativa punível.",
+      "Súmula 145 do STF: não há crime quando a preparação do flagrante pela polícia torna impossível a consumação (flagrante preparado). O flagrante esperado é válido. Súmula 567 do STJ: vigilância ou monitoramento eletrônico na loja, por si só, não torna impossível o furto."
+     ],
+     "pegadinhas": [
+      "Corrupção ativa recusada pelo policial é crime CONSUMADO, não tentado (PRF 2021, item 103).",
+      "A banca considerou que a adulteração grosseira do chassi NÃO caracteriza crime impossível (PRF 2021, item 104).",
+      "Desistência voluntária exige voluntariedade, não espontaneidade: desistir porque alguém aconselhou ainda vale."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 103
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 104
+      }
+     ]
+    },
+    {
+     "id": "punibilidade",
+     "titulo": "Punibilidade e extinção da punibilidade",
+     "edital": "3.5 Punibilidade e causas de extinção",
+     "peso": 1,
+     "pontos": [
+      "Extinguem a punibilidade (art. 107): morte do agente; anistia, graça ou indulto; lei que deixa de considerar o fato crime (abolitio); prescrição, decadência ou perempção; renúncia ao direito de queixa ou perdão aceito, nos crimes de ação privada; retratação do agente, quando a lei admite; e perdão judicial, nos casos previstos em lei. A lista não é exaustiva (ex.: reparação do dano no peculato culposo).",
+      "Anistia é concedida por lei do Congresso e apaga os efeitos penais do fato; graça (individual) e indulto (coletivo) são concedidos por decreto do Presidente e só extinguem a pena.",
+      "Prescrição (art. 109), pelo máximo da pena em abstrato: mais de 12 anos prescreve em 20; mais de 8 até 12, em 16; mais de 4 até 8, em 12; mais de 2 até 4, em 8; de 1 até 2, em 4; menos de 1 ano, em 3 anos.",
+      "Os prazos de prescrição caem pela metade se o agente tinha menos de 21 anos na data do fato ou mais de 70 na data da sentença (art. 115). Desde a Lei 15.160/2025 essa redução (e a atenuante de idade do art. 65, I) não vale quando o crime envolver violência sexual contra a mulher.",
+      "Prescrição da pretensão punitiva ocorre antes do trânsito em julgado e apaga tudo; a da pretensão executória ocorre depois e só impede a execução da pena. A reincidência aumenta de um terço o prazo da prescrição executória (art. 110), mas não influi na punitiva (Súmula 220 do STJ).",
+      "São imprescritíveis, pela Constituição, o racismo e a ação de grupos armados contra a ordem constitucional e o Estado Democrático (art. 5º, XLII e XLIV).",
+      "Decadência: perda do direito de queixa ou representação, em regra 6 meses do dia em que a vítima soube quem é o autor (art. 103). Perempção: só na ação privada, por desídia do querelante. Perdão judicial: a sentença é declaratória e não gera reincidência nem efeitos da condenação (Súmula 18 do STJ)."
+     ],
+     "pegadinhas": [
+      "Graça e indulto extinguem a pena, mas não apagam os efeitos secundários da condenação, como a reincidência. A anistia apaga.",
+      "Perdão do ofendido só extingue a punibilidade se for aceito; perdão judicial independe de aceitação."
+     ],
+     "novidades": [
+      "Lei 15.160/2025: a redução da prescrição pela metade e a atenuante para menores de 21 e maiores de 70 não se aplicam aos crimes que envolvam violência sexual contra a mulher."
+     ],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "ilicitude",
+     "titulo": "Ilicitude: excludentes e excesso punível",
+     "edital": "4 Ilicitude: causas de exclusão; excesso punível",
+     "peso": 3,
+     "pontos": [
+      "Não há crime quando o agente pratica o fato em estado de necessidade, em legítima defesa, em estrito cumprimento de dever legal ou no exercício regular de direito (art. 23). São as excludentes de ilicitude.",
+      "Estado de necessidade (art. 24): salvar de perigo ATUAL, que o agente não provocou por sua vontade e não podia evitar de outro modo, direito próprio ou alheio, cujo sacrifício não era razoável exigir. Quem tem o dever legal de enfrentar o perigo, como o policial ou o bombeiro, não pode alegá-lo (§ 1º). Se era razoável exigir o sacrifício, a pena pode ser reduzida de um a dois terços (§ 2º).",
+      "Legítima defesa (art. 25): repelir, usando moderadamente os meios necessários, injusta agressão, atual ou iminente, a direito seu ou de outrem. A agressão pode vir até de um inimputável. Contra ataque espontâneo de animal, a reação é estado de necessidade; se alguém atiçou o animal, é legítima defesa.",
+      "Desde o Pacote Anticrime (art. 25, parágrafo único), também está em legítima defesa o agente de segurança pública que repele agressão ou risco de agressão a vítima mantida refém durante a prática de crimes, observados os requisitos do caput.",
+      "Estrito cumprimento do dever legal: o agente público age nos limites que a lei impõe (ex.: o policial que prende em flagrante e usa a força necessária). Exercício regular de direito: qualquer pessoa pode prender em flagrante (CPP, art. 301); lutas esportivas e intervenções médicas dentro das regras.",
+      "Excesso punível (art. 23, parágrafo único): em qualquer das excludentes, o agente responde pelo excesso doloso ou culposo. Ex.: depois de desarmar o agressor caído, continua batendo.",
+      "O consentimento do ofendido é causa supralegal de exclusão da ilicitude, válido só para bens disponíveis e com consentimento de pessoa capaz, dado antes ou durante o fato."
+     ],
+     "pegadinhas": [
+      "Legítima defesa exige agressão ATUAL ou IMINENTE; agressão passada (vingança) ou futura e incerta não autoriza.",
+      "Policial e bombeiro não podem alegar estado de necessidade para fugir do perigo que têm o dever legal de enfrentar.",
+      "Não cabe legítima defesa real contra legítima defesa real; cabe contra legítima defesa putativa e contra o excesso (legítima defesa sucessiva)."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "culpabilidade",
+     "titulo": "Culpabilidade: imputabilidade e erro de proibição",
+     "edital": "5 Culpabilidade: causas de exclusão; imputabilidade; erro de proibição",
+     "peso": 2,
+     "pontos": [
+      "A culpabilidade tem três elementos: imputabilidade, potencial consciência da ilicitude e exigibilidade de conduta diversa. Faltando um, o agente fica isento de pena.",
+      "Inimputável por doença mental (art. 26): quem era, ao tempo da ação, inteiramente incapaz de entender o caráter ilícito do fato ou de se determinar de acordo com esse entendimento. É isento de pena e recebe medida de segurança (absolvição imprópria). O semi-imputável (parágrafo único) tem a pena reduzida de um a dois terços.",
+      "Menores de 18 anos são inimputáveis (art. 27 e CF, art. 228), pelo critério biológico, e ficam sujeitos ao ECA. A idade é medida na data da conduta.",
+      "Emoção e paixão não excluem a imputabilidade (art. 28, I). A embriaguez voluntária ou culposa também não exclui (art. 28, II): o agente responde porque se colocou nesse estado (actio libera in causa).",
+      "Só a embriaguez COMPLETA, proveniente de caso fortuito ou força maior, isenta de pena (art. 28, § 1º); se for incompleta, a pena é reduzida de um a dois terços (§ 2º). A embriaguez preordenada, para tomar coragem para o crime, é agravante (art. 61, II, l).",
+      "Erro de proibição (art. 21): o agente sabe o que faz, mas acredita que a conduta é permitida. Se inevitável, isenta de pena; se evitável, reduz a pena de um sexto a um terço. O desconhecimento da lei é inescusável.",
+      "Coação moral irresistível e obediência hierárquica (art. 22): só é punível o autor da coação ou da ordem. A obediência exige ordem não manifestamente ilegal de superior, em relação de direito público; se a ordem é manifestamente ilegal, os dois respondem."
+     ],
+     "pegadinhas": [
+      "Embriaguez voluntária completa NÃO isenta de pena. Só isenta a completa por caso fortuito ou força maior.",
+      "Obediência hierárquica não vale para relações privadas (patrão e empregado), nem para ordens manifestamente ilegais.",
+      "Erro de proibição evitável não exclui o crime: reduz a pena de 1/6 a 1/3."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "crimes-pessoa",
+     "titulo": "Crimes contra a pessoa",
+     "edital": "6 Crimes contra a pessoa",
+     "peso": 2,
+     "pontos": [
+      "Homicídio (art. 121): simples, 6 a 20 anos; privilegiado (relevante valor social ou moral, ou violenta emoção logo após injusta provocação da vítima), pena reduzida de um sexto a um terço; qualificado, 12 a 30 anos e hediondo.",
+      "Qualificadoras do homicídio (art. 121, § 2º): paga ou motivo torpe; motivo fútil; veneno, fogo, explosivo, asfixia, tortura ou meio cruel; traição, emboscada ou recurso que dificulte a defesa; para assegurar outro crime; contra integrantes da segurança pública (como o PRF) e do sistema de justiça, no exercício da função ou em razão dela, e seus familiares; arma de fogo de uso restrito ou proibido; vítima menor de 14 anos; e, desde a Lei 15.159/2025, nas dependências de instituição de ensino.",
+      "Feminicídio virou crime autônomo (art. 121-A, Lei 14.994/2024): matar mulher por razões da condição do sexo feminino (violência doméstica e familiar ou menosprezo e discriminação), com pena de 20 a 40 anos, hediondo. Vicaricídio (art. 121-B, Lei 15.384/2026): matar descendente (como o filho), ascendente, enteado, dependente ou pessoa sob a guarda da mulher, em contexto de violência doméstica, para fazê-la sofrer, puni-la ou controlá-la; também 20 a 40 anos e hediondo.",
+      "Homicídio culposo do CP (art. 121, § 3º): detenção de 1 a 3 anos, com perdão judicial possível (§ 5º). Mas, na direção de veículo automotor, o homicídio e a lesão culposos são os do CTB (arts. 302 e 303), pelo princípio da especialidade.",
+      "Lesão corporal (art. 129): leve, detenção de 3 meses a 1 ano; grave, 1 a 5 anos (incapacidade para as ocupações habituais por mais de 30 dias, perigo de vida, debilidade permanente, aceleração de parto); gravíssima, 2 a 8 anos (incapacidade permanente para o trabalho, enfermidade incurável, perda ou inutilização de membro, sentido ou função, deformidade permanente, aborto); seguida de morte, 4 a 12 anos. Violência doméstica e lesão contra a mulher por razões do sexo feminino: reclusão de 2 a 5 anos (Lei 14.994/2024).",
+      "Omissão de socorro (art. 135) é crime omissivo próprio: não admite tentativa. Expor a perigo a vida de trabalhadores transportados em desacordo com as normas aumenta a pena do art. 132. Abandono de incapaz e maus-tratos passaram a ser punidos com reclusão de 2 a 5 anos (Lei 15.163/2025).",
+      "Liberdade individual: ameaça (art. 147), com pena em dobro e ação incondicionada se contra a mulher por razões do sexo feminino; perseguição ou stalking (art. 147-A); violência psicológica contra a mulher (art. 147-B); sequestro e cárcere privado (art. 148); redução a condição análoga à de escravo (art. 149, 2 a 8 anos); tráfico de pessoas (art. 149-A, 4 a 8 anos), muito fiscalizado nas rodovias.",
+      "Honra: calúnia é imputar falsamente fato definido como crime; difamação, fato ofensivo à reputação; injúria, ofender a dignidade ou o decoro, sem fato. A injúria racial saiu do CP e virou crime de racismo na Lei 7.716/89 (art. 2º-A), imprescritível e inafiançável. Ofensa a servidor em razão da função: ação pública condicionada à representação, ou queixa do próprio ofendido (Súmula 714 do STF)."
+     ],
+     "pegadinhas": [
+      "Feminicídio não é mais qualificadora do homicídio: desde a Lei 14.994/2024 é o crime autônomo do art. 121-A.",
+      "Homicídio culposo ao volante é crime do CTB (art. 302), não do art. 121, § 3º, do CP.",
+      "Matar policial rodoviário federal em razão da função é homicídio qualificado e hediondo (art. 121, § 2º, VII)."
+     ],
+     "novidades": [
+      "Lei 14.994/2024: feminicídio como crime autônomo (art. 121-A, 20 a 40 anos); lesão em violência doméstica e contra a mulher, 2 a 5 anos; ameaça contra a mulher, pena em dobro.",
+      "Lei 15.134/2025: a qualificadora do inciso VII passou a proteger também membros do Judiciário, do MP, da Defensoria, da Advocacia Pública e oficiais de justiça.",
+      "Lei 15.159/2025: homicídio nas dependências de instituição de ensino é qualificado (inciso X).",
+      "Lei 15.163/2025: abandono de incapaz e maus-tratos, reclusão de 2 a 5 anos.",
+      "Lei 15.384/2026: vicaricídio (art. 121-B), 20 a 40 anos, hediondo.",
+      "Lei 15.358/2026 (Lei Antifacção, em vigor desde 25/3/2026): homicídio doloso cometido por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada tem pena de reclusão de 20 a 40 anos (art. 121, § 2º-D); sequestro ou cárcere privado cometido por eles, reclusão de 12 a 20 anos (art. 148, § 3º); a lei também criou a ameaça ligada a esses grupos (art. 147-C) e penas maiores para a lesão corporal (art. 129, §§ 3º-A e 8º-A)."
+     ],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "crimes-patrimonio",
+     "titulo": "Crimes contra o patrimônio",
+     "edital": "6 Crimes contra o patrimônio",
+     "peso": 3,
+     "pontos": [
+      "Furto (art. 155): subtrair coisa alheia móvel, sem violência nem grave ameaça. Pena de 1 a 6 anos e multa desde a Lei 15.397/2026 (antes, 1 a 4). Durante o repouso noturno, a pena aumenta de METADE (antes, um terço). Consuma-se com a inversão da posse, ainda que breve, sem exigir posse mansa e pacífica (STJ).",
+      "Furto privilegiado (§ 2º): agente primário e coisa de pequeno valor (a jurisprudência usa até um salário mínimo). O juiz pode trocar reclusão por detenção, reduzir de um a dois terços ou aplicar só multa; é compatível com qualificadora objetiva (Súmula 511 do STJ). Furto qualificado (§ 4º), 2 a 8 anos: rompimento de obstáculo, abuso de confiança, fraude, escalada, destreza, chave falsa ou concurso de duas ou mais pessoas.",
+      "Furtos com pena de 4 a 10 anos: com explosivo (§ 4º-A, hediondo); mediante fraude eletrônica (§ 4º-B); de veículo levado para outro Estado ou para o exterior (§ 5º); de celular, computador e semovente (§ 6º); de explosivos (§ 7º). Fios e cabos de energia e telecomunicação: 2 a 8 anos (§ 8º).",
+      "Roubo (art. 157): subtração com grave ameaça ou violência à pessoa, ou depois de reduzir a vítima à impossibilidade de resistência. Pena de 6 a 10 anos desde a Lei 15.397/2026 (antes, 4 a 10). Roubo impróprio (§ 1º): a violência vem logo depois da subtração, para garantir a coisa ou a fuga. Consuma-se com a inversão da posse, ainda que breve (Súmula 582 do STJ). Não cabe insignificância.",
+      "Aumentos do roubo: de um terço até metade (§ 2º) para concurso de pessoas, restrição da liberdade da vítima, arma branca, veículo levado a outro Estado e outras hipóteses; de dois terços com arma de fogo (§ 2º-A); em dobro com arma de fogo de uso restrito ou proibido (§ 2º-B). Lesão grave: 7 a 18 anos.",
+      "Latrocínio (art. 157, § 3º, II): roubo com morte, 24 a 30 anos desde a Lei 15.397/2026 (antes, 20 a 30), hediondo. É julgado por juiz singular, não pelo júri (Súmula 603 do STF). Há latrocínio consumado quando a morte se consuma, ainda que a subtração não se realize (Súmula 610 do STF).",
+      "Extorsão (art. 158): constranger a vítima, com violência ou grave ameaça, a fazer algo para dar vantagem econômica (ex.: entregar a senha). É crime formal: consuma-se independentemente de obter a vantagem (Súmula 96 do STJ). Sequestro-relâmpago (§ 3º): 6 a 12 anos. Extorsão mediante sequestro (art. 159): 8 a 15 anos, hedionda.",
+      "Estelionato (art. 171): obter vantagem ilícita induzindo ou mantendo alguém em erro, mediante fraude; 1 a 5 anos. Fraude eletrônica (§ 2º-A): 4 a 8 anos. Ceder conta bancária como 'conta laranja' para receber dinheiro do crime virou figura equiparada (§ 2º, VII). A Lei 15.397/2026 revogou o § 5º: o estelionato voltou a ser, como regra, crime de ação penal pública INCONDICIONADA. O falso que se esgota no estelionato é absorvido (Súmula 17 do STJ).",
+      "Apropriação indébita (art. 168): o agente já tinha a posse lícita e passa a agir como dono. Receptação (art. 180): adquirir, receber, transportar, conduzir ou ocultar coisa que sabe ser produto de crime, 2 a 6 anos (Lei 15.397/2026; antes, 1 a 4); qualificada no comércio, 3 a 8 anos; punível ainda que o autor do crime anterior seja desconhecido ou isento de pena. Imunidades (arts. 181 a 183): isento de pena quem furta, sem violência, do cônjuge, ascendente ou descendente; não vale para roubo, extorsão, crime com violência ou grave ameaça, nem se a vítima tem 60 anos ou mais."
+     ],
+     "pegadinhas": [
+      "Penas de furto, roubo, latrocínio e receptação SUBIRAM em 2026 (Lei 15.397). Materiais antigos trazem os números velhos.",
+      "Estelionato voltou a ser de ação pública incondicionada (§ 5º do art. 171 revogado em 2026).",
+      "Latrocínio é crime contra o patrimônio: juiz singular, não júri, ainda que haja morte dolosa."
+     ],
+     "novidades": [
+      "Lei 15.397/2026 (vigente desde 4/5/2026): furto 1 a 6 anos e repouso noturno com aumento de metade; furto de celular, computador ou semovente, de veículo para outro Estado e por fraude eletrônica, 4 a 10 anos; roubo 6 a 10 anos; latrocínio 24 a 30 anos; receptação 2 a 6 anos; receptação de animal (art. 180-A) 3 a 8 anos; 'conta laranja' no estelionato; revogação do § 5º do art. 171.",
+      "Lei 15.358/2026 (Lei Antifacção): roubo e extorsão cometidos por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada têm a pena aplicada em triplo; extorsão mediante sequestro e receptação praticadas por esses integrantes, aumento de 2/3. Confira no Planalto a redação atual, que também foi mexida pela Lei 15.397/2026."
+     ],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "dignidade-sexual",
+     "titulo": "Crimes contra a dignidade sexual",
+     "edital": "6 Crimes contra a dignidade sexual",
+     "peso": 1,
+     "pontos": [
+      "Estupro (art. 213): constranger alguém, mediante violência ou grave ameaça, a ter conjunção carnal ou a praticar ou permitir outro ato libidinoso. Pena de 6 a 10 anos; 8 a 12 se resulta lesão grave ou a vítima tem entre 14 e 18 anos; 12 a 30 se resulta morte. É hediondo, e homem ou mulher podem ser autor ou vítima.",
+      "Estupro de vulnerável (art. 217-A): conjunção carnal ou outro ato libidinoso com menor de 14 anos, ou com quem não tem discernimento por enfermidade ou deficiência mental, ou não pode oferecer resistência. Pena de 10 a 18 anos desde a Lei 15.280/2025 (antes, 8 a 15); 12 a 24 com lesão grave; 20 a 40 com morte. O consentimento e a experiência sexual anterior são irrelevantes (§ 5º e Súmula 593 do STJ).",
+      "Importunação sexual (art. 215-A): praticar contra alguém, sem anuência, ato libidinoso para satisfazer a própria lascívia ou a de terceiro (ex.: no transporte público), 1 a 5 anos, se não constituir crime mais grave. Assédio sexual (art. 216-A): constranger alguém para obter vantagem sexual, valendo-se de superioridade hierárquica ou ascendência no emprego.",
+      "Exploração sexual de vulnerável (art. 218-B): submeter, induzir ou atrair à prostituição ou outra forma de exploração sexual menor de 18 anos ou vulnerável, ou impedir que a abandone. Pena de 7 a 16 anos desde a Lei 15.280/2025, hediondo. Respondem também quem pratica o ato com o adolescente entre 14 e 18 anos nessa situação e o dono ou gerente do local. A PRF mapeia esses pontos nas rodovias.",
+      "Também aumentados pela Lei 15.280/2025: induzir menor de 14 a satisfazer a lascívia de outrem (art. 218), 6 a 14 anos; praticar ato libidinoso na presença de menor de 14 (art. 218-A), 5 a 12; divulgar cena de estupro, de sexo ou pornografia sem consentimento (art. 218-C), 4 a 10.",
+      "A ação penal nos crimes contra a liberdade sexual e nos crimes sexuais contra vulnerável é pública incondicionada (art. 225, Lei 13.718/2018)."
+     ],
+     "pegadinhas": [
+      "No estupro de vulnerável, o 'consentimento' do menor de 14 anos não afasta o crime.",
+      "Desde 2018 a ação penal nesses crimes não depende de representação: é incondicionada.",
+      "Estupro de vulnerável hoje é punido com 10 a 18 anos; materiais anteriores a dezembro de 2025 trazem 8 a 15."
+     ],
+     "novidades": [
+      "Lei 15.280/2025: estupro de vulnerável 10 a 18 anos (12 a 24 com lesão grave; 20 a 40 com morte); art. 218, 6 a 14; art. 218-A, 5 a 12; art. 218-B, 7 a 16; art. 218-C, 4 a 10."
+     ],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "incolumidade",
+     "titulo": "Crimes contra a incolumidade pública",
+     "edital": "6 Crimes contra a incolumidade pública",
+     "peso": 1,
+     "pontos": [
+      "Crimes de perigo comum expõem a perigo um número indeterminado de pessoas. Incêndio (art. 250) e explosão (art. 251): 3 a 6 anos e multa, com aumento de um terço em casa habitada, edifício público, veículo de transporte coletivo e outros locais do § 1º. O incêndio é crime de perigo concreto: precisa ter exposto alguém ou algo a perigo real.",
+      "Atentado contra a segurança de outro meio de transporte (art. 262): expor a perigo transporte público, impedir ou dificultar seu funcionamento, detenção de 1 a 2 anos; se resulta desastre, reclusão de 2 a 5. Arremesso de projétil (art. 264): arremessar projétil contra veículo EM MOVIMENTO destinado ao transporte público por terra, água ou ar, detenção de 1 a 6 meses, mais grave se causa lesão ou morte.",
+      "Interrupção ou perturbação de serviço telefônico, telegráfico, informático, telemático ou de informação de utilidade pública (art. 266): 2 a 4 anos e multa desde a Lei 15.397/2026, em dobro em calamidade pública ou quando há subtração ou dano de equipamento de telecomunicação. Furtar fios e cabos é furto qualificado (art. 155, § 8º).",
+      "Saúde pública: falsificar, corromper ou adulterar produto terapêutico ou medicinal (art. 273) é hediondo. Para quem só importa medicamento sem registro na Anvisa (§ 1º-B, I), o STF (Tema 1003) considerou desproporcional a pena de 10 a 15 anos e mandou aplicar a pena original de 1 a 3 anos.",
+      "Epidemia com resultado morte (art. 267, § 1º) é hediondo. Porte e comércio de armas e drogas NÃO estão aqui: são da legislação especial (Estatuto do Desarmamento e Lei de Drogas)."
+     ],
+     "pegadinhas": [
+      "Arremesso de projétil exige veículo de transporte PÚBLICO em movimento; contra carro particular estacionado não se encaixa no art. 264.",
+      "Incêndio é crime de perigo concreto: sem perigo real a outras pessoas ou bens, pode ser apenas dano."
+     ],
+     "novidades": [
+      "Lei 15.397/2026: interrupção de serviço de telecomunicação (art. 266) passou a 2 a 4 anos e multa, em dobro em calamidade ou com subtração de equipamento."
+     ],
+     "itens": 3,
+     "questoes": []
+    },
+    {
+     "id": "fe-publica",
+     "titulo": "Crimes contra a fé pública",
+     "edital": "6 Crimes contra a fé pública",
+     "peso": 3,
+     "pontos": [
+      "Moeda falsa (art. 289): fabricar ou alterar moeda metálica ou papel-moeda de curso legal, 3 a 12 anos e multa. Quem recebe de boa-fé e repassa depois de saber da falsidade responde pela forma privilegiada (§ 2º). Falsificação grosseira, incapaz de enganar, não é moeda falsa: pode ser estelionato, da Justiça Estadual (Súmula 73 do STJ). Não cabe insignificância.",
+      "Falsificação de documento público (art. 297): 2 a 6 anos e multa. Equiparam-se a público o documento de entidade paraestatal, o título ao portador ou transmissível por endosso, as ações de sociedade comercial, os livros mercantis e o testamento particular. CNH e CRLV são documentos públicos. Documento particular (art. 298): 1 a 5 anos; cartão de crédito ou débito equipara-se a documento particular.",
+      "Falsidade material x ideológica: na material, a forma do documento é forjada ou alterada; na ideológica (art. 299), o documento é verdadeiro na forma, mas o conteúdo é falso (ex.: declarar endereço falso para obter um registro), com o fim de prejudicar direito, criar obrigação ou alterar a verdade sobre fato juridicamente relevante.",
+      "Uso de documento falso (art. 304): mesma pena da falsificação. Consuma-se com a apresentação, ainda que o documento tenha sido exigido pelo policial na fiscalização. Quem falsificou e usou responde só pela falsificação. A competência é definida pelo órgão a quem o documento foi apresentado (Súmula 546 do STJ): CNH falsa apresentada à PRF é caso da Justiça Federal.",
+      "Falsa identidade (art. 307): atribuir-se falsa identidade para obter vantagem ou causar dano, se não constituir crime mais grave. É crime mesmo para tentar escapar da prisão; a autodefesa não justifica (Súmula 522 do STJ). Usar como próprio documento de identidade alheio é o art. 308.",
+      "Adulteração de sinal identificador de veículo (art. 311, redação da Lei 14.562/2023): adulterar, remarcar ou suprimir número de chassi, monobloco, motor, placa ou qualquer sinal identificador de veículo automotor, elétrico, híbrido, reboque ou semirreboque, e de seus componentes, sem autorização do órgão competente. Pena de 3 a 6 anos e multa, aumentada de um terço se for funcionário público no exercício da função. Colocar fita isolante na placa para alterar o número configura o crime (STJ).",
+      "Pelo § 2º do art. 311, com as mesmas penas, responde também quem adquire, recebe, transporta, CONDUZ, oculta, desmonta, vende ou usa veículo ou peça que devia saber estar adulterado ou remarcado; quem fabrica ou guarda instrumento para adulterar; e o funcionário que contribui para licenciar ou registrar o veículo adulterado. No comércio, 4 a 8 anos (§ 3º).",
+      "Na prova da PRF 2021 (Cebraspe): remarcar o chassi com número novo e falsificar o CRV são dois crimes (arts. 311 e 297), e não crime único (item 100); e a adulteração grosseira do chassi NÃO foi considerada crime impossível (item 104). Fraude em certames (art. 311-A): divulgar ou usar conteúdo sigiloso de concurso público, 1 a 4 anos."
+     ],
+     "pegadinhas": [
+      "Apresentar CNH falsa porque o policial pediu continua sendo uso de documento falso.",
+      "Mentir o nome para fugir do flagrante é falsa identidade (Súmula 522 do STJ), não autodefesa.",
+      "Depois da Lei 14.562/2023, reboque e semirreboque estão expressamente no art. 311."
+     ],
+     "novidades": [
+      "Lei 14.562/2023: nova redação do art. 311, incluindo veículos elétricos, híbridos, reboques e semirreboques, as condutas de quem conduz ou comercializa veículo adulterado e a forma qualificada no comércio (4 a 8 anos)."
+     ],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 100
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 101
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 104
+      }
+     ]
+    },
+    {
+     "id": "adm-publica",
+     "titulo": "Crimes contra a Administração Pública",
+     "edital": "6 Crimes contra a Administração Pública",
+     "peso": 3,
+     "pontos": [
+      "Funcionário público para fins penais (art. 327): quem exerce cargo, emprego ou função pública, ainda que transitoriamente ou sem remuneração. Equipara-se quem trabalha em entidade paraestatal e em empresa contratada ou conveniada para atividade típica da Administração. A pena aumenta de um terço para ocupantes de cargo em comissão ou função de direção ou assessoramento.",
+      "Peculato (art. 312), 2 a 12 anos: apropriar-se ou desviar dinheiro, valor ou bem de que tem a posse em razão do cargo; ou subtraí-lo valendo-se da facilidade do cargo (peculato-furto). Peculato culposo (§ 2º): reparar o dano antes da sentença irrecorrível extingue a punibilidade; depois, reduz a pena pela metade.",
+      "Concussão (art. 316): EXIGIR vantagem indevida em razão da função, 2 a 12 anos. Corrupção passiva (art. 317): SOLICITAR, RECEBER ou ACEITAR PROMESSA de vantagem indevida, 2 a 12 anos, com aumento de um terço se o funcionário retarda, deixa de praticar ou pratica o ato infringindo dever. Os dois são formais: consumam-se com a exigência ou a solicitação.",
+      "Corrupção ativa (art. 333): OFERECER ou PROMETER vantagem indevida a funcionário para que pratique, omita ou retarde ato de ofício, 2 a 12 anos. Consuma-se com a oferta, mesmo que o policial recuse (PRF 2021, itens 102 e 103). Como 'dar' não é verbo do tipo, o particular que apenas entrega o que o funcionário solicitou não comete corrupção ativa; e quem paga o que foi EXIGIDO é vítima de concussão.",
+      "Prevaricação (art. 319): retardar ou deixar de praticar ato de ofício, ou praticá-lo contra a lei, para satisfazer interesse ou sentimento pessoal (ex.: deixar de autuar um amigo), detenção de 3 meses a 1 ano. Condescendência criminosa (art. 320): deixar, por indulgência, de responsabilizar subordinado. Advocacia administrativa (art. 321): patrocinar interesse privado perante a Administração valendo-se da qualidade de funcionário.",
+      "Crimes de particular contra a Administração: resistência (art. 329) exige violência ou ameaça contra o funcionário que executa ato legal; desobediência (art. 330) é não cumprir ordem legal, e fugir de ordem de parada em policiamento ostensivo é desobediência (STJ, Tema 1060); desacato (art. 331) é ofender o funcionário no exercício da função ou em razão dela, e o STF o considera compatível com a Constituição. Se a lei já prevê sanção administrativa específica, sem ressalvar a penal, não há desobediência (ex.: recusa ao bafômetro é a infração do art. 165-A do CTB).",
+      "Descaminho (art. 334, 1 a 4 anos): iludir o pagamento de imposto devido pela entrada ou saída de mercadoria permitida. Contrabando (art. 334-A, 2 a 5 anos): importar ou exportar mercadoria proibida. A insignificância vale para o descaminho até R$ 20 mil de tributo (STF e STJ), mas, em regra, não para o contrabando. Fora o descaminho, não cabe insignificância nos crimes contra a Administração (Súmula 599 do STJ).",
+      "Contra a administração da justiça: denunciação caluniosa (art. 339, dar causa a investigação ou processo contra quem sabe inocente); comunicação falsa de crime (art. 340); falso testemunho (art. 342; a retratação antes da sentença extingue a punibilidade); favorecimento pessoal (art. 348; isento o cônjuge, ascendente, descendente ou irmão); e, desde a Lei 15.280/2025, descumprir medida protetiva de urgência (art. 338-A), reclusão de 2 a 5 anos, com fiança só pelo juiz."
+     ],
+     "pegadinhas": [
+      "Exigir = concussão; solicitar = corrupção passiva; oferecer = corrupção ativa. A banca troca os verbos.",
+      "Corrupção ativa não admite a forma 'tentada' só porque o policial recusou: já se consumou na oferta.",
+      "Insignificância cabe no descaminho (até R$ 20 mil), mas não nos demais crimes contra a Administração."
+     ],
+     "novidades": [
+      "Lei 15.280/2025: novo art. 338-A, descumprir decisão que defere medidas protetivas de urgência (em qualquer contexto), reclusão de 2 a 5 anos e multa; só o juiz pode conceder fiança."
+     ],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 102
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 103
+      }
+     ]
+    },
+    {
+     "id": "concurso",
+     "titulo": "Concurso de pessoas e concurso de crimes",
+     "edital": "Fora da lista de 2021, mas cobrado em situações (PRF 2021, item 100)",
+     "peso": 1,
+     "pontos": [
+      "Teoria monista (art. 29): quem, de qualquer modo, concorre para o crime incide nas penas a ele cominadas, na medida de sua culpabilidade. Requisitos do concurso de pessoas: pluralidade de agentes, relevância causal das condutas, liame subjetivo (vontade de participar da obra comum, sem precisar de acordo prévio) e identidade de infração.",
+      "Autor executa o verbo do tipo ou tem o domínio do fato; partícipe induz, instiga ou auxilia. Participação de menor importância reduz a pena de um sexto a um terço (§ 1º). Cooperação dolosamente distinta (§ 2º): quem quis participar de crime menos grave responde por ele, com pena aumentada até metade se o resultado mais grave era previsível.",
+      "Comunicabilidade (art. 30): circunstâncias e condições pessoais não se comunicam, salvo quando elementares do crime. Por isso o particular que ajuda o funcionário a desviar bem público, sabendo dessa condição, responde por peculato.",
+      "O ajuste, a determinação, a instigação e o auxílio não são puníveis se o crime não chega, pelo menos, a ser tentado (art. 31).",
+      "Concurso material (art. 69): mais de uma ação, dois ou mais crimes, e as penas se somam. Ex.: remarcar o chassi e depois falsificar o CRV (PRF 2021, item 100).",
+      "Concurso formal (art. 70): uma só ação, dois ou mais crimes. No próprio, aplica-se a pena mais grave aumentada de um sexto até metade; no impróprio, com desígnios autônomos, as penas se somam. O formal nunca pode resultar em pena maior que a soma (concurso material benéfico).",
+      "Crime continuado (art. 71): vários crimes da mesma espécie, em condições semelhantes de tempo, lugar e modo de execução, tratados como continuação do primeiro. Pena de um só, aumentada de um sexto a dois terços; com violência ou grave ameaça contra vítimas diferentes, pode chegar ao triplo (parágrafo único). O tempo máximo de cumprimento de pena é de 40 anos (art. 75)."
+     ],
+     "pegadinhas": [
+      "Concurso de pessoas não exige acordo prévio; basta o liame subjetivo, mesmo que só um saiba que está ajudando.",
+      "Condição pessoal elementar (ser funcionário público) se comunica ao comparsa que a conhece."
+     ],
+     "novidades": [],
+     "itens": 4,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 100
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "materia": "Legislação Especial",
+   "trilha": "prf-legislacao-especial",
+   "fonte": "Conteúdo do edital PRF 2021 (Cebraspe). Leis conferidas nas fontes oficiais (Câmara, Senado, STF) até 13/11/2026: Leis 15.245/2025, 15.358/2026, 15.384/2026, 15.474/2026 e 15.487/2026; PEC 18/2025 aprovada pelo Senado em 3/11/2026.",
+   "atualizado": "2026-11-13",
+   "topicos": [
+    {
+     "id": "documentos",
+     "titulo": "Retenção de documentos (Lei 5.553/1968)",
+     "edital": "1 Lei 5.553/1968 e Lei 12.037/2009",
+     "peso": 1,
+     "pontos": [
+      "Ninguém, pessoa física ou jurídica, pública ou privada, pode reter documento de identificação pessoal, nem mesmo a fotocópia autenticada ou a pública-forma (Lei 5.553/1968, art. 1º). Exemplos da lei: carteira de identidade, título de eleitor, carteira profissional, certidão de nascimento ou de casamento, comprovante de quitação militar.",
+      "Quem exige o documento para um ato tem até 5 dias para extrair os dados e devolver (art. 2º). Depois desse prazo, só ordem judicial permite ficar com o documento (art. 2º, § 1º).",
+      "Na portaria de órgão público ou de empresa, os dados são anotados no ato e o documento volta na hora para o interessado (art. 2º, § 2º).",
+      "Reter o documento é contravenção penal, punida com prisão simples de 1 a 3 meses ou multa (art. 3º). Se quem reteve foi um empregado da empresa, responde quem deu a ordem; o empregado só responde se desobedeceu a ordens expressas (art. 3º, parágrafo único).",
+      "A identificação criminal (fotografia e digitais) é assunto da Lei 12.037/2009, vista no Processo Penal: o civilmente identificado só é identificado criminalmente nos casos da lei (CF, art. 5º, LVIII)."
+     ],
+     "pegadinhas": [
+      "A banca troca o prazo: são 5 dias para extrair os dados e devolver, não 48 horas nem 30 dias.",
+      "Reter documento é CONTRAVENÇÃO (prisão simples), e não crime com detenção ou reclusão.",
+      "Fotocópia autenticada também não pode ser retida: a proibição vale para ela."
+     ],
+     "novidades": [],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "eca",
+     "titulo": "ECA: viagem, ato infracional e crimes",
+     "edital": "2 Lei 8.069/1990 (ECA)",
+     "peso": 2,
+     "pontos": [
+      "Criança é quem tem até 12 anos incompletos; adolescente, de 12 a 18 anos (ECA, art. 2º).",
+      "Viagem dentro do país: menor de 16 anos não viaja para fora da comarca onde mora, desacompanhado dos pais ou responsáveis, sem autorização judicial (art. 83, redação da Lei 13.812/2019). Não precisa de autorização se: for comarca vizinha na mesma UF ou na mesma região metropolitana; ou se estiver com ascendente ou colateral maior até o 3º grau (parentesco provado por documento), ou com pessoa maior expressamente autorizada pelo pai, mãe ou responsável (art. 83, § 1º).",
+      "Viagem ao exterior: dispensa autorização judicial quando a criança ou o adolescente está com os dois pais (ou o responsável), ou com um deles autorizado expressamente pelo outro em documento com firma reconhecida (art. 84). Sair do país com estrangeiro que mora no exterior sempre exige autorização judicial prévia (art. 85).",
+      "Ato infracional é a conduta descrita como crime ou contravenção; menores de 18 anos são penalmente inimputáveis (arts. 103 e 104). À criança aplicam-se medidas de proteção (art. 105); ao adolescente, medidas socioeducativas.",
+      "Nenhum adolescente é privado da liberdade senão em flagrante de ato infracional ou por ordem escrita e fundamentada do juiz (art. 106). A apreensão e o local onde ele está são comunicados na hora ao juiz e à família ou à pessoa que ele indicar (art. 107). Apreendido em flagrante, vai desde logo para a autoridade policial competente (art. 172).",
+      "O adolescente não pode ser conduzido ou transportado em compartimento fechado de veículo policial (o 'camburão'), em condições que atentem contra a sua dignidade ou que ponham em risco a sua integridade física ou mental (art. 178).",
+      "Crimes do ECA mais cobrados: vender, fornecer ou entregar, ainda que de graça, bebida alcoólica a criança ou adolescente — detenção de 2 a 4 anos e multa, se o fato não for crime mais grave (art. 243); corrupção de menores — corromper ou facilitar a corrupção de menor de 18 anos, praticando infração penal com ele ou induzindo-o a praticá-la, reclusão de 1 a 4 anos (art. 244-B); apreender criança ou adolescente sem flagrante nem ordem judicial — detenção de 6 meses a 2 anos (art. 230)."
+     ],
+     "pegadinhas": [
+      "Até 12 anos INCOMPLETOS é criança: quem tem 12 anos completos já é adolescente.",
+      "A corrupção de menores (art. 244-B) é crime FORMAL: não precisa provar que o menor foi efetivamente corrompido (Súmula 500 do STJ).",
+      "Para viajar dentro do país, a regra vale para menores de 16 anos; a banca troca por 'menores de 18' ou por 'menores de 12'."
+     ],
+     "novidades": [
+      "A Lei 15.487/2026 (6/8/2026) endureceu os crimes sexuais contra crianças e adolescentes no ambiente digital: os arts. 240, 241 e 241-A passaram a ter pena de 4 a 10 anos de reclusão, o 241-B (adquirir ou possuir o material) de 3 a 6 anos, o 241-C (simular, inclusive com inteligência artificial) e o 241-D (aliciar menor de 14) de 3 a 5 anos; e tornou hediondos os arts. 240, 241, 241-A, 241-B, 241-D e 244-A.",
+      "A mesma Lei 15.487/2026 ampliou a infiltração de agentes na internet (arts. 190-A e seguintes do ECA, que vêm da Lei 13.441/2017), criou a 'ronda virtual' (art. 190-F: a polícia pode usar programas para identificar e coletar arquivos em ambientes digitais públicos, sem ordem judicial prévia) e incluiu esses crimes entre as hipóteses que admitem prisão preventiva (CPP, art. 313, VI)."
+     ],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "hediondos",
+     "titulo": "Crimes hediondos",
+     "edital": "3 Lei 8.072/1990",
+     "peso": 3,
+     "pontos": [
+      "Só é hediondo o que está no rol da Lei 8.072/1990 (critério legal). Entre os crimes do Código Penal estão, por exemplo: homicídio qualificado e o praticado em atividade típica de grupo de extermínio; feminicídio; latrocínio e roubo com restrição da liberdade da vítima ou com emprego de arma de fogo; extorsão mediante sequestro; estupro e estupro de vulnerável; furto qualificado pelo emprego de explosivo; favorecimento da prostituição de criança, adolescente ou vulnerável.",
+      "Fora do Código Penal, também são hediondos: genocídio; posse ou porte ilegal de arma de fogo de USO PROIBIDO; comércio ilegal e tráfico internacional de arma de fogo, acessório ou munição; organização criminosa voltada a crime hediondo ou equiparado; e os crimes do CPM que correspondem aos hediondos do Código Penal.",
+      "Tortura, tráfico de drogas e terrorismo não estão no rol: são EQUIPARADOS a hediondos pela Constituição (art. 5º, XLIII), que os torna inafiançáveis e insuscetíveis de graça ou anistia.",
+      "Hediondos e equiparados são insuscetíveis de anistia, graça e indulto, e de fiança (Lei 8.072, art. 2º, I e II). Liberdade provisória SEM fiança é possível, conforme o caso.",
+      "O § 1º do art. 2º (regime inicial fechado obrigatório) foi declarado inconstitucional pelo STF: o regime inicial segue as regras gerais do Código Penal. A progressão de regime segue os percentuais da LEP (art. 112).",
+      "A prisão temporária nos crimes hediondos e equiparados é de até 30 dias, prorrogável por mais 30 em caso de extrema e comprovada necessidade (art. 2º, § 4º).",
+      "O tráfico privilegiado (Lei 11.343, art. 33, § 4º) não é hediondo nem equiparado (LEP, art. 112, § 5º)."
+     ],
+     "pegadinhas": [
+      "Furtar EXPLOSIVO não é hediondo; hediondo é o furto qualificado pelo EMPREGO de explosivo ou artefato análogo que cause perigo comum (CP, art. 155, § 4º-A). Foi cobrado na PRF 2021.",
+      "Tortura, tráfico e terrorismo são EQUIPARADOS, não estão no rol da Lei 8.072.",
+      "Porte de arma de uso RESTRITO não é hediondo; só a posse ou o porte de arma de uso PROIBIDO (desde a Lei 13.964/2019)."
+     ],
+     "novidades": [
+      "Lei 15.358/2026 (Lei Antifacção, em vigor desde 25/3/2026): passaram a ser hediondos os crimes de domínio social estruturado e de favorecimento ao domínio social estruturado.",
+      "Lei 15.487/2026: incluiu no rol os crimes do ECA dos arts. 240, 241, 241-A, 241-B, 241-D e 244-A (exploração sexual e material de abuso sexual de crianças e adolescentes).",
+      "Lei 15.384/2026: o vicaricídio (CP, art. 121-B) é hediondo. Desde a Lei 14.994/2024, o feminicídio é crime autônomo (art. 121-A), também hediondo."
+     ],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 110
+      }
+     ]
+    },
+    {
+     "id": "prf-competencias",
+     "titulo": "Competências da PRF",
+     "edital": "4 Decreto 1.655/1995; art. 47 do Decreto 9.662/2019 (hoje, art. 58 do Anexo I do Decreto 11.348/2023)",
+     "peso": 2,
+     "pontos": [
+      "A PRF é órgão permanente, organizado e mantido pela União e estruturado em carreira, destinado, na forma da lei, ao patrulhamento ostensivo das rodovias federais (CF, art. 144, § 2º). Também tem as competências do art. 20 do CTB.",
+      "Decreto 1.655/1995, art. 1º: no âmbito das rodovias federais, compete à PRF, entre outras coisas, realizar o patrulhamento ostensivo para preservar a ordem, a incolumidade das pessoas, o patrimônio da União e o de terceiros; exercer os poderes de autoridade de polícia de trânsito; aplicar e arrecadar multas; atender acidentes e salvar vítimas; fazer levantamentos de local, perícias, boletins de ocorrência e testes de alcoolemia para elucidar acidentes; assegurar a livre circulação; escoltar autoridades; fiscalizar o tráfico de menores; e colaborar na prevenção e repressão de crimes (contra a vida, o patrimônio, o meio ambiente, roubo de veículos, tráfico de drogas, contrabando, descaminho e outros).",
+      "Decreto 1.655/1995, art. 2º: a identidade funcional do policial rodoviário federal dá livre porte de arma e franco acesso aos locais sob fiscalização do órgão e, em serviço, prioridade em todos os tipos de transporte e comunicação.",
+      "O edital de 2021 cita o art. 47 do Decreto 9.662/2019 (estrutura do Ministério da Justiça). Hoje a estrutura é a do Decreto 11.348/2023: o art. 58 do Anexo I lista as competências da PRF em 12 incisos, e o inciso XII é 'lavrar o termo circunstanciado de que trata o art. 69 da Lei 9.099/1995'.",
+      "O STF decidiu que a PRF pode lavrar termo circunstanciado de ocorrência (TCO): o TCO não é ato de investigação e pode ser lavrado por polícia judiciária ou administrativa (ADIs 6245 e 6264, julgadas em 17/2/2023).",
+      "A PRF é polícia administrativa (ostensiva), não polícia judiciária: não preside inquérito policial. Na prisão em flagrante, apresenta o preso à autoridade policial competente (delegado da Polícia Federal ou da Polícia Civil, conforme o crime)."
+     ],
+     "pegadinhas": [
+      "A PRF não faz 'policiamento ostensivo de todas as rodovias': a Constituição fala em rodovias FEDERAIS.",
+      "TCO pela PRF é constitucional (STF, 2023); a banca pode dizer que é atribuição exclusiva da polícia judiciária — está errado.",
+      "Livre porte de arma decorre da identidade funcional (Decreto 1.655, art. 2º)."
+     ],
+     "novidades": [
+      "PEC 18/2025 (PEC da Segurança Pública): aprovada pelo Senado em dois turnos em 3/11/2026, depois de aprovada na Câmara; vai à promulgação. Mantém o nome Polícia Rodoviária Federal, amplia a atuação para ferrovias e hidrovias federais e põe o SUSP na Constituição. Confira se já foi promulgada e o texto final do art. 144."
+     ],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "juizados",
+     "titulo": "Juizados especiais criminais: transação e suspensão",
+     "edital": "5 Lei 9.099/1995",
+     "peso": 2,
+     "pontos": [
+      "Infrações de menor potencial ofensivo: todas as contravenções penais e os crimes com pena máxima não superior a 2 anos, cumulada ou não com multa (Lei 9.099, art. 61).",
+      "Composição civil dos danos (art. 74): acordo entre autor e vítima, homologado pelo juiz. Na ação privada ou pública condicionada à representação, o acordo homologado é renúncia ao direito de queixa ou de representação.",
+      "Transação penal (art. 76): o MP propõe a aplicação imediata de pena restritiva de direitos ou multa, sem processo. Não cabe se o autor já foi condenado por crime a pena privativa de liberdade por sentença definitiva, se foi beneficiado por transação nos últimos 5 anos, ou se os antecedentes e as circunstâncias não a recomendam. Não gera reincidência nem consta de certidão de antecedentes.",
+      "Lesão corporal leve e lesão culposa dependem de representação (art. 88).",
+      "Suspensão condicional do processo (art. 89): cabe nos crimes com pena MÍNIMA igual ou inferior a 1 ano (mesmo fora do juizado), se o acusado não está sendo processado nem foi condenado por outro crime. O processo fica suspenso por 2 a 4 anos (período de prova); cumpridas as condições, extingue-se a punibilidade.",
+      "A Lei 9.099 não se aplica aos crimes de violência doméstica e familiar contra a mulher (Lei 11.340, art. 41): nesses casos não cabem transação penal nem suspensão condicional do processo (Súmula 536 do STJ)."
+     ],
+     "pegadinhas": [
+      "Transação penal olha a pena MÁXIMA (até 2 anos); suspensão condicional do processo olha a pena MÍNIMA (até 1 ano). A banca troca uma pela outra.",
+      "No concurso de crimes, para a suspensão condicional do processo soma-se a pena mínima (ou aplica-se o aumento); se passar de 1 ano, não cabe (Súmula 243 do STJ e Súmula 723 do STF).",
+      "Maria da Penha: nada de Lei 9.099, mesmo que a pena máxima seja pequena."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "tortura",
+     "titulo": "Tortura",
+     "edital": "6 Lei 9.455/1997",
+     "peso": 2,
+     "pontos": [
+      "Tortura-prova, tortura-crime e tortura-discriminação (art. 1º, I): constranger alguém com violência ou grave ameaça, causando sofrimento físico ou mental, a) para obter informação, declaração ou confissão; b) para provocar ação ou omissão de natureza criminosa; c) em razão de discriminação racial ou religiosa. Reclusão de 2 a 8 anos.",
+      "Tortura-castigo (art. 1º, II): submeter alguém sob sua guarda, poder ou autoridade, com violência ou grave ameaça, a INTENSO sofrimento físico ou mental, como castigo pessoal ou medida de caráter preventivo. Reclusão de 2 a 8 anos.",
+      "Na mesma pena incorre quem submete pessoa presa ou sujeita a medida de segurança a sofrimento físico ou mental, por ato não previsto em lei ou não resultante de medida legal (§ 1º).",
+      "Tortura por omissão (§ 2º): quem se omite diante dessas condutas, quando tinha o dever de evitá-las ou apurá-las, responde com detenção de 1 a 4 anos.",
+      "Resultado: lesão grave ou gravíssima, reclusão de 4 a 10 anos; morte, reclusão de 8 a 16 anos (§ 3º). Aumento de 1/6 a 1/3 se o crime é cometido por agente público; contra criança, gestante, pessoa com deficiência, adolescente ou maior de 60 anos; ou mediante sequestro (§ 4º).",
+      "A condenação acarreta a perda do cargo, função ou emprego público e a interdição para o seu exercício pelo dobro do prazo da pena aplicada (§ 5º), efeito automático. O crime é inafiançável e insuscetível de graça ou anistia (§ 6º), e o condenado, salvo no caso do § 2º, inicia o cumprimento em regime fechado (§ 7º).",
+      "A lei se aplica mesmo ao crime cometido fora do Brasil, se a vítima é brasileira ou se o agente está em local sob jurisdição brasileira (art. 2º)."
+     ],
+     "pegadinhas": [
+      "Na tortura-castigo (inciso II), o sofrimento tem de ser INTENSO; não é 'qualquer sofrimento, independentemente da intensidade' (PRF 2021, item 115).",
+      "A omissão (§ 2º) tem pena menor e é de DETENÇÃO (1 a 4 anos); não tem a mesma pena da tortura.",
+      "A tortura do inciso I pode ser praticada por qualquer pessoa (crime comum); a perda do cargo é efeito automático da condenação."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 115
+      }
+     ]
+    },
+    {
+     "id": "ambientais",
+     "titulo": "Crimes ambientais",
+     "edital": "7 Lei 9.605/1998 (capítulos III e V)",
+     "peso": 2,
+     "pontos": [
+      "Verificada a infração, são apreendidos os produtos e instrumentos, lavrando-se os autos (Lei 9.605, art. 25). Os animais são, de preferência, libertados no seu hábitat ou, se isso não for viável, entregues a jardins zoológicos, fundações ou entidades assemelhadas; até a entrega, o órgão autuante zela pelo bem-estar deles (art. 25, §§ 1º e 2º).",
+      "Produtos perecíveis ou madeiras apreendidos são avaliados e doados a instituições científicas, hospitalares, penais e outras com fins beneficentes; os instrumentos usados na infração são vendidos, garantida a descaracterização por reciclagem (art. 25, §§ 3º a 5º).",
+      "Nos crimes da Lei 9.605, a ação penal é pública incondicionada (art. 26). A pessoa jurídica também responde penalmente (art. 3º; CF, art. 225, § 3º).",
+      "Fauna (art. 29): matar, perseguir, caçar, apanhar ou utilizar espécimes da fauna silvestre sem permissão, licença ou autorização: detenção de 6 meses a 1 ano e multa. Na mesma pena incorre quem vende, guarda, tem em cativeiro ou TRANSPORTA ovos, larvas ou espécimes da fauna silvestre sem autorização (§ 1º, III). Na guarda doméstica de espécie silvestre não ameaçada de extinção, o juiz pode deixar de aplicar a pena (§ 2º).",
+      "Maus-tratos (art. 32): praticar abuso, maus-tratos, ferir ou mutilar animais silvestres, domésticos ou domesticados: detenção de 3 meses a 1 ano e multa. Se for cão ou gato: reclusão de 2 a 5 anos, multa e proibição da guarda (§ 1º-A, Lei 14.064/2020). A pena aumenta de 1/6 a 1/3 se o animal morre.",
+      "Flora (art. 46, parágrafo único): vender, ter em depósito, TRANSPORTAR ou guardar madeira, lenha, carvão e outros produtos de origem vegetal sem licença válida para todo o tempo da viagem ou do armazenamento: detenção de 6 meses a 1 ano e multa. É o flagrante ambiental típico da fiscalização em rodovia."
+     ],
+     "pegadinhas": [
+      "Maus-tratos a cão ou gato tem pena de RECLUSÃO de 2 a 5 anos; para os demais animais, detenção de 3 meses a 1 ano.",
+      "A licença da carga de madeira ou carvão tem de valer para TODO o tempo da viagem; licença vencida no meio do trajeto também configura o crime.",
+      "A ação penal nos crimes ambientais é pública INCONDICIONADA."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "armas",
+     "titulo": "Estatuto do Desarmamento: crimes",
+     "edital": "8 Lei 10.826/2003 (capítulo IV)",
+     "peso": 3,
+     "pontos": [
+      "Posse irregular de arma de uso permitido (art. 12): ter em casa ou no local de trabalho (se for o titular ou responsável pela empresa), em desacordo com a lei: detenção de 1 a 3 anos e multa. Porte ilegal de arma de uso permitido (art. 14): portar, transportar, trazer consigo etc. fora desses lugares: reclusão de 2 a 4 anos e multa.",
+      "Omissão de cautela (art. 13): deixar de cuidar para que menor de 18 anos ou pessoa com deficiência mental se apodere de arma de fogo: detenção de 1 a 2 anos e multa. Disparo de arma de fogo (art. 15) em lugar habitado ou em via pública: reclusão de 2 a 4 anos, se a conduta não tiver como finalidade a prática de outro crime.",
+      "Arma de uso restrito (art. 16): posse ou porte, reclusão de 3 a 6 anos. Na mesma pena: suprimir ou alterar marca ou numeração; portar arma com numeração raspada; vender ou entregar arma, munição ou explosivo a criança ou adolescente; produzir ou recarregar munição sem autorização. Se a arma for de uso PROIBIDO: reclusão de 4 a 12 anos (§ 2º, Lei 13.964/2019).",
+      "Comércio ilegal (art. 17): adquirir, transportar, CONDUZIR, ter em depósito, vender etc., no exercício de atividade comercial ou industrial, arma, acessório ou munição sem autorização: reclusão de 6 a 12 anos. Tráfico internacional (art. 18): importar, exportar ou favorecer a entrada ou saída do país sem autorização: reclusão de 8 a 16 anos. Nos dois, a pena aumenta de metade se a arma, acessório ou munição for de uso proibido ou restrito (art. 19).",
+      "A pena dos crimes dos arts. 14 a 18 aumenta de metade se o agente integra os órgãos e empresas dos arts. 6º, 7º e 8º (como as polícias e as empresas de segurança) ou se é reincidente específico (art. 20).",
+      "O STF declarou inconstitucionais a inafiançabilidade do porte ilegal (art. 14, parágrafo único) e do disparo (art. 15, parágrafo único) e a proibição de liberdade provisória (art. 21) (ADI 3112).",
+      "São hediondos: a posse ou o porte de arma de uso PROIBIDO, o comércio ilegal (art. 17) e o tráfico internacional (art. 18). Porte de arma DESMUNICIADA é crime (perigo abstrato); arma inapta, atestada por perícia, não é."
+     ],
+     "pegadinhas": [
+      "Posse é em casa ou no trabalho (detenção); porte é fora deles (reclusão). A banca troca as penas.",
+      "Conduzir arma no exercício de atividade comercial, sem autorização, é COMÉRCIO ILEGAL (art. 17), e não simples porte (PRF 2021, item 114).",
+      "Abolitio criminis temporária: só alcançou a POSSE (inclusive com numeração raspada) praticada até 23/10/2005 (Súmula 513 do STJ); não alcança o porte."
+     ],
+     "novidades": [
+      "Lei 15.358/2026 (Lei Antifacção): novo art. 21-A — nos crimes dos arts. 12, 14 e 16, a pena aumenta de 2/3 se o crime é praticado em concurso com crime da Lei de Drogas (Lei 11.343/2006).",
+      "Lei 15.474/2026: passou a disciplinar a comercialização, a aquisição e a posse do aerossol de extratos vegetais (spray de pimenta) e alterou o Estatuto do Desarmamento."
+     ],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 114
+      }
+     ]
+    },
+    {
+     "id": "drogas",
+     "titulo": "Lei de Drogas",
+     "edital": "9 Lei 11.343/2006",
+     "peso": 3,
+     "pontos": [
+      "Usuário (art. 28): adquirir, guardar, ter em depósito, transportar ou trazer consigo droga para consumo pessoal sujeita a advertência, prestação de serviços à comunidade ou medida educativa — não há pena de prisão. Não se impõe prisão em flagrante ao usuário: ele é levado ao juízo ou, na falta, lavra-se termo circunstanciado (art. 48, § 2º).",
+      "Maconha para consumo: o STF (RE 635.659, Tema 506, 2024) decidiu que portar cannabis para uso pessoal não é infração penal (é ilícito extrapenal: a droga é apreendida e as sanções do art. 28, I e III, são aplicadas em procedimento não penal). Presume-se usuário quem tem até 40 gramas ou 6 plantas-fêmeas; a presunção é relativa: a polícia pode prender por tráfico abaixo disso se houver indícios de venda.",
+      "Tráfico (art. 33): importar, exportar, transportar, trazer consigo, guardar, vender, fornecer ainda que gratuitamente etc.: reclusão de 5 a 15 anos e 500 a 1.500 dias-multa. Oferecer droga eventualmente e sem lucro a pessoa do seu relacionamento, para juntos consumirem: detenção de 6 meses a 1 ano (§ 3º).",
+      "Tráfico privilegiado (art. 33, § 4º): redução de 1/6 a 2/3 para o agente primário, de bons antecedentes, que não se dedica a atividades criminosas nem integra organização criminosa. Não é hediondo.",
+      "Associação para o tráfico (art. 35): associarem-se DUAS ou mais pessoas para traficar, reiteradamente ou não: reclusão de 3 a 10 anos (exige vínculo estável e permanente). Financiar ou custear o tráfico (art. 36): reclusão de 8 a 20 anos. Colaborar como informante (art. 37): reclusão de 2 a 6 anos.",
+      "Aumento de 1/6 a 2/3 (art. 40): tráfico transnacional; entre estados ou com o DF (não precisa cruzar a divisa: Súmula 587 do STJ); com abuso de função pública; nas imediações de escolas, hospitais, unidades policiais ou em transporte público; com violência, grave ameaça ou arma de fogo; envolvendo criança ou adolescente.",
+      "Prevenção (art. 19): entre os princípios e diretrizes da prevenção do uso indevido está o fortalecimento da autonomia e da responsabilidade individual em relação ao uso de drogas (cobrado na PRF 2021)."
+     ],
+     "pegadinhas": [
+      "Associação para o tráfico precisa de só DUAS pessoas (art. 35); organização criminosa, de quatro (Lei 12.850).",
+      "Para STF e STJ, só usar o ônibus para levar a droga não atrai o aumento do 'transporte público': é preciso vender dentro dele.",
+      "Usuário nunca é preso em flagrante pelo art. 28; quem é preso em flagrante com pouca droga responde por tráfico se houver indícios de venda."
+     ],
+     "novidades": [
+      "Lei 15.358/2026 (Lei Antifacção): novo art. 40-A — as penas dos arts. 33 a 37 são aplicadas em DOBRO se o crime é praticado por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, no contexto da atuação do grupo."
+     ],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 113
+      }
+     ]
+    },
+    {
+     "id": "organizacoes-criminosas",
+     "titulo": "Organizações criminosas e Lei Antifacção",
+     "edital": "10 Lei 12.850/2013",
+     "peso": 3,
+     "pontos": [
+      "Organização criminosa (Lei 12.850, art. 1º, § 1º): associação de 4 ou mais pessoas, estruturalmente ordenada, com divisão de tarefas, ainda que informal, para obter vantagem de qualquer natureza por meio de infrações penais com pena máxima superior a 4 anos ou de caráter transnacional.",
+      "Promover, constituir, financiar ou integrar organização criminosa: reclusão de 3 a 8 anos e multa, sem prejuízo das penas dos demais crimes (art. 2º). A pena aumenta até a metade se houver emprego de arma de fogo (§ 2º) e é agravada para quem exerce o comando, mesmo sem praticar atos de execução (§ 3º).",
+      "Meios de obtenção de prova (art. 3º): colaboração premiada, captação ambiental, ação controlada, acesso a registros e dados, interceptação, afastamento de sigilos, infiltração de agentes e cooperação entre órgãos.",
+      "Ação controlada (art. 8º): retardar a intervenção policial para agir no momento mais eficaz. Basta COMUNICAÇÃO prévia ao juiz, que pode fixar limites e comunica o MP; não é necessária autorização. Infiltração de agentes (art. 10): depende de autorização judicial, por até 6 meses, renováveis; a infiltração virtual pode chegar a 720 dias no total (art. 10-A).",
+      "Colaboração premiada (art. 4º): pode render perdão judicial, redução de até 2/3 da pena ou substituição por restritiva de direitos. Nenhuma medida cautelar, recebimento de denúncia ou sentença condenatória pode se basear apenas nas declarações do colaborador (§ 16).",
+      "Lei 15.245/2025: quem impede ou embaraça a investigação de infração penal que envolva organização criminosa sofre as mesmas penas do art. 2º (§ 1º); novos crimes de obstrução de ações contra o crime organizado (art. 21-A) e de conspiração para essa obstrução (art. 21-B): reclusão de 4 a 12 anos e multa, com cumprimento em presídio federal de segurança máxima.",
+      "Lei 15.358/2026 (Lei Antifacção, em vigor desde 25/3/2026): crime de domínio social estruturado, para integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada (agrupamento de 3 ou mais pessoas que usa violência, grave ameaça ou coação para impor controle territorial ou social): reclusão de 20 a 40 anos. Entre as condutas: obstruir a ação policial com barricadas, bloqueios, incêndios ou destruição de vias; interromper o fluxo de transporte com explosivos ou armas; apoderar-se de meios de transporte ou destruí-los. Favorecimento ao domínio social estruturado: reclusão de 12 a 20 anos. Ambos são hediondos (sem anistia, graça, indulto ou fiança); no domínio social estruturado também não cabe livramento condicional."
+     ],
+     "pegadinhas": [
+      "Organização criminosa: 4 ou mais pessoas. Associação criminosa (CP, art. 288): 3 ou mais. Associação para o tráfico: 2 ou mais. Domínio social estruturado: agrupamento de 3 ou mais.",
+      "Na ação controlada da Lei 12.850 basta COMUNICAR o juiz; na infiltração, é preciso AUTORIZAÇÃO judicial.",
+      "A pena do art. 2º é sem prejuízo das penas dos crimes praticados pela organização (concurso material)."
+     ],
+     "novidades": [
+      "Lei 15.245/2025 (30/10/2025): também criou o § 2º do art. 288 do CP — responde por associação criminosa quem solicita ou contrata crime a integrante de associação criminosa.",
+      "Lei 15.358/2026: para os crimes de domínio social estruturado, o inquérito tem prazo de 90 dias (preso) ou 270 dias (solto); a prática do crime basta para a prisão preventiva (constitucionalidade questionada no STF); homicídios cometidos por membros dessas organizações passam às varas criminais colegiadas (CPP, art. 78, I, com constitucionalidade discutida).",
+      "Lei 15.487/2026: a pena da organização criminosa aumenta (art. 2º, § 4º, I) se há participação de criança ou adolescente ou se a organização se destina a crimes do ECA."
+     ],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "susp",
+     "titulo": "SUSP: Sistema Único de Segurança Pública",
+     "edital": "11 Lei 13.675/2018",
+     "peso": 1,
+     "pontos": [
+      "A Lei 13.675/2018 instituiu o Sistema Único de Segurança Pública (SUSP) e criou a Política Nacional de Segurança Pública e Defesa Social (PNSPDS), para preservar a ordem pública e a incolumidade das pessoas e do patrimônio pela atuação conjunta, coordenada, sistêmica e integrada dos órgãos de segurança pública da União, dos estados, do DF e dos municípios, em articulação com a sociedade (art. 1º).",
+      "O SUSP reúne os órgãos do art. 144 da Constituição e outros integrantes, que atuam nos limites das suas competências, de forma cooperativa, sistêmica e harmônica (art. 9º).",
+      "Integrantes estratégicos: a União, os estados, o DF e os municípios, por meio dos seus Poderes Executivos, e os conselhos de segurança pública e defesa social. Integrantes operacionais: entre outros, a Polícia Federal, a Polícia Rodoviária Federal, as polícias civis e militares, os corpos de bombeiros militares, as guardas municipais, os órgãos do sistema penitenciário, os institutos oficiais de criminalística, medicina legal e identificação, a Senasp e os agentes de trânsito (art. 9º, §§ 1º e 2º).",
+      "A atuação integrada pode ocorrer por operações combinadas, aceitação mútua de registros de ocorrência, compartilhamento de informações e intercâmbio de conhecimentos, entre outras formas (art. 10).",
+      "O Sinesp (Sistema Nacional de Informações de Segurança Pública) reúne e compartilha os dados de segurança pública; os entes que não fornecem os dados podem deixar de receber recursos federais da área."
+     ],
+     "pegadinhas": [
+      "A PRF é integrante OPERACIONAL do SUSP; integrantes estratégicos são os entes federados (por seus Executivos) e os conselhos.",
+      "O SUSP não tira a autonomia das polícias: cada órgão atua nos limites das suas competências."
+     ],
+     "novidades": [
+      "A PEC da Segurança Pública (PEC 18/2025), aprovada pelo Senado em 3/11/2026 e enviada à promulgação, põe o SUSP na Constituição (art. 144), com atuação integrada e descentralizada em regime de cooperação federativa. Confira se já foi promulgada."
+     ],
+     "itens": 3,
+     "questoes": []
+    },
+    {
+     "id": "abuso-autoridade",
+     "titulo": "Abuso de autoridade",
+     "edital": "12 Lei 13.869/2019",
+     "peso": 3,
+     "pontos": [
+      "Sujeito ativo: qualquer agente público, servidor ou não, da administração direta, indireta ou fundacional de qualquer dos Poderes, inclusive quem exerce, ainda que transitoriamente ou sem remuneração, mandato, cargo, emprego ou função (art. 2º).",
+      "Só há crime se o agente age com a finalidade específica de prejudicar outrem ou beneficiar a si mesmo ou a terceiro, ou por mero capricho ou satisfação pessoal (art. 1º, § 1º). A divergência na interpretação da lei ou na avaliação de fatos e provas, por si só, não configura abuso (§ 2º).",
+      "A ação penal é pública incondicionada, admitida a ação privada subsidiária se o MP não agir no prazo (art. 3º). A inabilitação para cargo público (1 a 5 anos) e a perda do cargo dependem de reincidência em crime de abuso de autoridade e não são automáticas: o juiz declara na sentença, de forma motivada (art. 4º).",
+      "Prisão e preso: deixar de comunicar a prisão ao juiz no prazo legal, de comunicar a família, de entregar a nota de culpa em 24 horas ou prolongar a prisão sem motivo (art. 12, detenção de 6 meses a 2 anos); constranger o preso a exibir-se à curiosidade pública, a vexame ou a produzir prova contra si (art. 13, detenção de 1 a 4 anos); deixar de identificar-se, ou identificar-se falsamente, ao preso na captura (art. 16); interrogar o preso durante o repouso noturno, salvo flagrante ou consentimento dele, assistido (art. 18).",
+      "Domicílio (art. 22): invadir ou permanecer em imóvel alheio sem ordem judicial ou fora das condições legais: detenção de 1 a 4 anos e multa. Também é crime cumprir mandado de busca domiciliar depois das 21h ou antes das 5h. Não há crime se o ingresso for para prestar socorro ou houver fundados indícios de flagrante delito ou desastre.",
+      "Violência institucional (art. 15-A, Lei 14.321/2022): submeter a vítima de crime ou a testemunha de crimes violentos a procedimentos desnecessários, repetitivos ou invasivos que a façam reviver a violência: detenção de 3 meses a 1 ano e multa.",
+      "Também é abuso obter prova por meio manifestamente ilícito (art. 25) e antecipar, por meio de comunicação, inclusive rede social, a atribuição de culpa antes de concluídas as apurações e formalizada a acusação (art. 38)."
+     ],
+     "pegadinhas": [
+      "Não basta abusar: é preciso o dolo específico (prejudicar, beneficiar, capricho ou satisfação pessoal).",
+      "A perda do cargo NÃO é automática na Lei de Abuso de Autoridade (exige reincidência e declaração motivada); na Lei de Tortura, É automática.",
+      "Mandado de busca domiciliar: crime cumpri-lo depois das 21h ou antes das 5h (art. 22, § 1º, III)."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 111
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "materia": "Direito Processual Penal",
+   "trilha": "prf-processo-penal",
+   "fonte": "Conteúdo do edital PRF 2021 (Cebraspe). CPP e leis conferidos nas fontes oficiais até 13/11/2026 (Leis 15.358/2026 e 15.487/2026; STF: ADIs 6245/6264, RE 603.616, HC 208.240).",
+   "atualizado": "2026-11-13",
+   "topicos": [
+    {
+     "id": "acao-penal",
+     "titulo": "Ação penal",
+     "edital": "1 Ação penal: conceito, características, espécies e condições",
+     "peso": 3,
+     "pontos": [
+      "Ação penal pública: o titular é o Ministério Público, por denúncia (CF, art. 129, I). Pode ser incondicionada (a regra) ou condicionada à representação do ofendido ou à requisição do Ministro da Justiça (CPP, art. 24). Ação penal privada: o ofendido age por queixa (art. 30).",
+      "Princípios da ação pública: obrigatoriedade (havendo indícios, o MP deve denunciar, ressalvados os acordos legais) e indisponibilidade (o MP não pode desistir da ação: art. 42). Na privada valem a oportunidade e a disponibilidade (renúncia, perdão, perempção) e a indivisibilidade: a queixa contra um obriga ao processo de todos (art. 48), e a renúncia a um se estende a todos (art. 49).",
+      "Representação: pode ser feita ao juiz, ao MP ou à autoridade policial, sem forma especial. É retratável só até o OFERECIMENTO da denúncia (art. 25). O direito de queixa ou de representação decai em 6 meses, contados do dia em que o ofendido soube quem é o autor do crime (art. 38).",
+      "Ação privada subsidiária da pública: se o MP não oferece a denúncia no prazo legal (5 dias com réu preso, 15 dias solto — art. 46), o ofendido pode oferecer queixa (art. 29; CF, art. 5º, LIX). Não cabe se o MP pediu o arquivamento ou novas diligências.",
+      "Morrendo o ofendido ou sendo declarado ausente, o direito de queixa ou de representação passa ao cônjuge, ascendente, descendente ou irmão (art. 31 e art. 24, § 1º).",
+      "Condições da ação e rejeição da denúncia: a denúncia ou queixa é rejeitada se for inepta, se faltar pressuposto processual ou condição para a ação, ou se faltar justa causa (art. 395).",
+      "Acordo de não persecução penal (art. 28-A): cabível se não for caso de arquivamento e o investigado confessar formal e circunstanciadamente infração sem violência ou grave ameaça, com pena mínima inferior a 4 anos. Não cabe, entre outros casos, se couber transação penal, se o investigado for reincidente ou tiver conduta criminal habitual, se tiver recebido ANPP, transação ou suspensão nos 5 anos anteriores, ou em crime de violência doméstica ou contra a mulher por razões da condição de sexo feminino."
+     ],
+     "pegadinhas": [
+      "A representação é retratável até o OFERECIMENTO da denúncia (não até o recebimento).",
+      "Na ação privada subsidiária da pública, o MP continua podendo aditar a queixa, repudiá-la e oferecer denúncia substitutiva e retomar a ação se o querelante for negligente (art. 29).",
+      "ANPP: pena MÍNIMA inferior a 4 anos e sem violência ou grave ameaça; a confissão é requisito."
+     ],
+     "novidades": [
+      "Lei 15.397/2026 (Código Penal): revogou o § 5º do art. 171; o estelionato voltou a ser, como regra, crime de ação penal pública incondicionada."
+     ],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "tco",
+     "titulo": "Termo circunstanciado e infrações de menor potencial ofensivo",
+     "edital": "2 Termo circunstanciado de ocorrência (Lei 9.099/1995)",
+     "peso": 3,
+     "pontos": [
+      "Na infração de menor potencial ofensivo (contravenções e crimes com pena máxima de até 2 anos — Lei 9.099, art. 61), a autoridade policial que toma conhecimento da ocorrência lavra termo circunstanciado e o encaminha imediatamente ao Juizado, com o autor do fato e a vítima, providenciando as requisições dos exames periciais necessários (art. 69).",
+      "Se o autor do fato, depois da lavratura do termo, for imediatamente encaminhado ao Juizado ou assumir o compromisso de comparecer, não se impõe prisão em flagrante nem se exige fiança (art. 69, parágrafo único). Se ele se recusa a assumir o compromisso, cabe a lavratura do auto de prisão em flagrante.",
+      "Em violência doméstica, o juiz pode determinar, como medida de cautela, o afastamento do autor do lar, domicílio ou local de convivência com a vítima (art. 69, parágrafo único). Mas aos crimes de violência doméstica e familiar contra a mulher não se aplica a Lei 9.099 (Lei 11.340, art. 41).",
+      "O TCO substitui o inquérito policial nessas infrações: é um registro simplificado do fato, com a qualificação dos envolvidos, o resumo das versões e a indicação de testemunhas e exames.",
+      "A PRF pode lavrar TCO: o STF decidiu que o termo circunstanciado não é ato de investigação e pode ser lavrado por integrantes da polícia judiciária ou da polícia administrativa (ADIs 6245 e 6264, 17/2/2023). Hoje a atribuição consta do art. 58, XII, do Anexo I do Decreto 11.348/2023.",
+      "O usuário de drogas (Lei 11.343, art. 28) também não é preso em flagrante: vai ao juízo ou, na falta, lavra-se termo circunstanciado (art. 48, § 2º)."
+     ],
+     "pegadinhas": [
+      "Sem o compromisso de comparecer ao Juizado, o autor do fato pode ser preso em flagrante.",
+      "TCO não é exclusivo de delegado: a PRF pode lavrá-lo (STF, 2023).",
+      "Menor potencial ofensivo olha a pena MÁXIMA (até 2 anos), não a mínima."
+     ],
+     "novidades": [],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "atos-processuais",
+     "titulo": "Atos processuais: forma, lugar e tempo",
+     "edital": "2 Atos processuais: forma, lugar e tempo",
+     "peso": 1,
+     "pontos": [
+      "Forma e lugar: as audiências, sessões e atos processuais são, em regra, públicos e se realizam nas sedes dos juízos e tribunais, em dia e hora certos ou previamente designados (CPP, art. 792). Em caso de necessidade, podem ocorrer em outra casa designada pelo juiz.",
+      "Tempo: salvo as sessões de julgamento, que não são marcadas para domingo ou feriado, os demais atos podem ser praticados em período de férias, em domingos e feriados; o julgamento iniciado em dia útil não se interrompe por causa de feriado ou domingo (art. 797).",
+      "Prazos (art. 798): são contínuos e peremptórios, sem interrupção por férias, domingo ou feriado. Não se conta o dia do começo; conta-se o do vencimento (§ 1º). O prazo que termina em domingo ou feriado é prorrogado até o dia útil seguinte (§ 3º).",
+      "Suspensão de prazos (art. 798-A, Lei 14.365/2022): o curso dos prazos fica suspenso de 20 de dezembro a 20 de janeiro, salvo nos processos com réu preso (ligados à prisão), nos da Lei Maria da Penha e nas medidas urgentes, por despacho fundamentado.",
+      "Prazo penal x prazo processual: no prazo PENAL (Código Penal, art. 10) conta-se o dia do começo; no prazo PROCESSUAL (CPP, art. 798, § 1º), não."
+     ],
+     "pegadinhas": [
+      "No prazo processual NÃO se conta o dia do começo; no prazo penal (decadência, prescrição) conta-se.",
+      "A suspensão de 20/12 a 20/1 não vale para processos com réu preso nem para os da Lei Maria da Penha."
+     ],
+     "novidades": [],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "prova",
+     "titulo": "Prova: conceito, ônus, provas ilícitas e local de crime",
+     "edital": "3 Prova: conceito, objeto, classificação, preservação de local de crime, ônus, provas ilícitas",
+     "peso": 3,
+     "pontos": [
+      "O juiz forma a convicção pela livre apreciação da prova produzida em contraditório judicial; não pode fundamentar a decisão exclusivamente nos elementos informativos da investigação, ressalvadas as provas cautelares, não repetíveis e antecipadas (CPP, art. 155).",
+      "Ônus: a prova da alegação incumbe a quem a fizer (art. 156). Provas ilícitas — obtidas com violação de normas constitucionais ou legais — são inadmissíveis e devem ser desentranhadas (art. 157). As derivadas também, salvo quando não houver nexo de causalidade ou puderem ser obtidas por fonte independente (§§ 1º e 2º). O STF declarou inconstitucional o § 5º (juiz que conheceu a prova ilícita impedido de sentenciar).",
+      "Quando a infração deixa vestígios, o exame de corpo de delito, direto ou indireto, é indispensável e a confissão não o supre (art. 158). Têm prioridade os casos de violência doméstica e familiar contra a mulher e de violência contra criança, adolescente, idoso ou pessoa com deficiência (parágrafo único). Desaparecidos os vestígios, a prova testemunhal pode suprir a falta (art. 167).",
+      "Cadeia de custódia (art. 158-A): é o conjunto de procedimentos para manter e documentar a história cronológica do vestígio, da coleta ao descarte. Começa com a preservação do local de crime, e o agente público que reconhece um elemento de potencial interesse pericial fica responsável pela sua preservação (§§ 1º e 2º). Etapas: reconhecimento, isolamento, fixação, coleta, acondicionamento, transporte, recebimento, processamento, armazenamento e descarte (art. 158-B).",
+      "Local de crime: a autoridade providencia para que não se altere o estado das coisas até a chegada dos peritos (arts. 6º, I, e 169). É proibido entrar em locais isolados ou remover vestígios antes da liberação pelo perito; fazê-lo é fraude processual (art. 158-C, § 2º).",
+      "Acidente de trânsito (Lei 5.970/1973): a autoridade ou o agente policial que primeiro tomar conhecimento pode autorizar, independentemente de exame do local, a imediata remoção das vítimas e dos veículos que estejam no leito da via e prejudiquem o tráfego, lavrando boletim com o fato, as testemunhas e as circunstâncias."
+     ],
+     "pegadinhas": [
+      "A confissão NÃO supre o exame de corpo de delito; a prova testemunhal só supre se os vestígios desapareceram.",
+      "Em acidente de trânsito, a remoção das vítimas e dos veículos que atrapalham o tráfego pode ser autorizada antes da perícia (Lei 5.970/1973); a banca diz que isso é sempre proibido.",
+      "Entrar no local isolado antes da liberação pelo perito é fraude processual (art. 158-C, § 2º)."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "meios-de-prova",
+     "titulo": "Meios de prova: interrogatório, testemunhas, reconhecimento",
+     "edital": "3.6 Meios de prova",
+     "peso": 2,
+     "pontos": [
+      "Interrogatório: o acusado é informado do direito de permanecer calado e de não responder às perguntas; o silêncio não importa confissão e não pode ser interpretado em prejuízo da defesa (art. 186). A presença do defensor é obrigatória (art. 185); a videoconferência é excepcional (§ 2º).",
+      "Confissão: o valor é aferido junto com as demais provas; é divisível e retratável, sem prejuízo do livre convencimento do juiz (arts. 197 e 200).",
+      "Testemunhas: toda pessoa pode ser testemunha (art. 202), inclusive o policial que participou da prisão; o depoimento dele vale como o de qualquer testemunha, sem valor superior a priori. Parentes do acusado (cônjuge, ascendente, descendente, irmão) podem recusar-se a depor, salvo se não houver outro modo de obter a prova (art. 206); não prestam compromisso, nem os doentes mentais e os menores de 14 anos (art. 208). São proibidas de depor as pessoas que, por função, ministério, ofício ou profissão, devam guardar segredo, salvo se, desobrigadas pela parte, quiserem depor (art. 207).",
+      "Ofendido: é ouvido sobre as circunstâncias da infração e quem seja o autor; não presta compromisso e, se não comparecer sem justo motivo, pode ser conduzido (art. 201).",
+      "Reconhecimento de pessoas (art. 226): quem vai reconhecer descreve antes a pessoa; esta é colocada, se possível, ao lado de outras parecidas; lavra-se auto assinado pela autoridade, por quem reconheceu e por duas testemunhas. Para o STJ (HC 598.886, 2020), o procedimento é garantia mínima: o reconhecimento feito sem ele não serve, sozinho, para condenar.",
+      "Acareação (art. 229): entre acusados, testemunhas e ofendidos que divergirem sobre fatos relevantes. Documentos podem ser juntados em qualquer fase do processo, salvo exceções legais (art. 231). Indício é a circunstância conhecida e provada que, ligada ao fato, autoriza por indução concluir outras circunstâncias (art. 239)."
+     ],
+     "pegadinhas": [
+      "O depoimento do policial não tem valor SUPERIOR ao interrogatório nem às demais provas (PRF 2021, item 108).",
+      "O silêncio do acusado não pode ser usado contra ele.",
+      "Parente do acusado PODE recusar-se a depor; quem tem dever de sigilo profissional é PROIBIDO de depor, salvo se desobrigado e quiser."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 108
+      }
+     ]
+    },
+    {
+     "id": "busca-apreensao",
+     "titulo": "Busca e apreensão pessoal e domiciliar",
+     "edital": "3.7 Busca e apreensão: pessoal, domiciliar, requisitos, restrições, horários",
+     "peso": 3,
+     "pontos": [
+      "Busca domiciliar (CPP, art. 240, § 1º): quando fundadas razões a autorizarem, para prender criminosos, apreender coisas obtidas por meios criminosos, instrumentos de crime, armas e munições, objetos necessários à prova, cartas, pessoas vítimas de crime e qualquer elemento de convicção.",
+      "Domicílio (CF, art. 5º, XI): a casa é asilo inviolável; só se entra sem consentimento do morador em flagrante delito ou desastre, para prestar socorro, ou, durante o dia, por determinação judicial. Sem mandado, a entrada forçada só é lícita, mesmo à noite, se houver fundadas razões, justificadas depois, de que dentro da casa ocorre flagrante (STF, RE 603.616, Tema 280).",
+      "Mandado e horário: a busca domiciliar por mandado é feita de dia, salvo consentimento do morador para fazê-la à noite (art. 245). O mandado indica a casa e o morador, os motivos e os fins da diligência (art. 243). Cumprir mandado de busca domiciliar depois das 21h ou antes das 5h é crime de abuso de autoridade (Lei 13.869, art. 22, § 1º, III).",
+      "Busca pessoal (art. 244): independe de mandado no caso de prisão, quando houver fundada suspeita de que a pessoa esteja com arma proibida ou com objetos ou papéis que constituam corpo de delito, ou quando feita no curso de busca domiciliar. A fundada suspeita exige elementos objetivos; não basta impressão subjetiva ou nervosismo (STJ, RHC 158.580, 2022), e é ilícita a busca motivada por raça, sexo, orientação sexual, cor da pele ou aparência física (STF, HC 208.240, 2024).",
+      "Veículo: a busca em veículo equipara-se, como regra, à busca pessoal e dispensa mandado se houver fundada suspeita; a exceção é o veículo usado como moradia.",
+      "A busca em mulher é feita por outra mulher, se não importar retardamento ou prejuízo da diligência (art. 249). Em casa habitada, a busca não deve molestar os moradores mais do que o indispensável (art. 248)."
+     ],
+     "pegadinhas": [
+      "Busca no veículo, durante fiscalização, com fundada suspeita, NÃO precisa de autorização judicial (PRF 2021, item 105).",
+      "Em flagrante delito, a casa pode ser invadida a qualquer hora, dia ou noite; com mandado judicial, só de dia (salvo consentimento).",
+      "Busca em mulher por policial homem é possível quando esperar uma policial atrasaria ou prejudicaria a diligência."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 105
+      }
+     ]
+    },
+    {
+     "id": "prisao-flagrante",
+     "titulo": "Prisão em flagrante e audiência de custódia",
+     "edital": "4 Prisão em flagrante",
+     "peso": 3,
+     "pontos": [
+      "Qualquer do povo PODE e as autoridades policiais e seus agentes DEVEM prender quem for encontrado em flagrante delito (CPP, art. 301): flagrante facultativo e flagrante obrigatório.",
+      "Espécies (art. 302): próprio — está cometendo a infração ou acaba de cometê-la (I e II); impróprio ou quase flagrante — é perseguido, logo após, em situação que faça presumir ser o autor (III); presumido ou ficto — é encontrado, logo depois, com instrumentos, armas, objetos ou papéis que façam presumir ser o autor (IV). No crime permanente, há flagrante enquanto não cessar a permanência (art. 303).",
+      "Flagrante preparado (provocado) não vale: não há crime quando a preparação torna impossível a consumação (Súmula 145 do STF). O esperado é válido. O diferido ou retardado (ação controlada) depende de previsão legal (Leis 12.850 e 11.343). O forjado é ilegal e crime de quem o forja.",
+      "Lavratura (art. 304): apresentado o preso, a autoridade ouve o condutor e entrega a ele cópia do termo e recibo de entrega do preso; depois ouve as testemunhas e interroga o preso. A prisão em flagrante é prisão provisória e dispensa mandado.",
+      "Comunicação (art. 306): a prisão e o local são comunicados imediatamente ao juiz, ao MP e à família do preso ou à pessoa por ele indicada. Em até 24 horas, o auto vai ao juiz (e à Defensoria, se não houver advogado) e o preso recebe a nota de culpa, com o motivo da prisão, o nome do condutor e os das testemunhas (§§ 1º e 2º).",
+      "Audiência de custódia (art. 310): em até 24 horas o juiz ouve o preso e, fundamentadamente: relaxa a prisão ilegal; converte o flagrante em preventiva, se presentes os requisitos do art. 312 e insuficientes outras cautelares; ou concede liberdade provisória, com ou sem fiança.",
+      "Perseguição: se o perseguido passa para outro município ou comarca, o executor pode prendê-lo onde o alcançar, apresentando-o à autoridade local (art. 290)."
+     ],
+     "pegadinhas": [
+      "A nota de culpa é entregue em até 24 HORAS, ao PRESO, mediante recibo (PRF 2021, item 106).",
+      "Quem é perseguido 'logo após' está em flagrante IMPRÓPRIO; quem é encontrado 'logo depois' com objetos do crime, em flagrante PRESUMIDO.",
+      "A prisão em flagrante dispensa mandado e é espécie de prisão provisória (cautelar) — PRF 2021, item 109."
+     ],
+     "novidades": [
+      "Lei 15.358/2026: a audiência de custódia, em até 24 horas, passou a ser feita preferencialmente por videoconferência, com conversa prévia e reservada do preso com o defensor; presencial em situações excepcionais (CPP, arts. 3º-B, § 1º, e 310)."
+     ],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 106
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 109
+      }
+     ]
+    },
+    {
+     "id": "prisao-cautelar",
+     "titulo": "Prisão: regras gerais, preventiva e temporária",
+     "edital": "4 Prisão: conceito, formalidades, espécies, mandado e cumprimento",
+     "peso": 2,
+     "pontos": [
+      "Ninguém é preso senão em flagrante delito ou por ordem escrita e fundamentada do juiz competente, em prisão cautelar ou por condenação transitada em julgado (CPP, art. 283). A prisão pode ser feita em qualquer dia e hora, respeitada a inviolabilidade do domicílio (§ 2º).",
+      "Força e algemas: só se usa a força indispensável no caso de resistência ou tentativa de fuga (art. 284); havendo resistência, podem-se usar os meios necessários, lavrando-se auto assinado por duas testemunhas (art. 292). Algemas só em caso de resistência, fundado receio de fuga ou perigo à integridade física, justificando por escrito (Súmula Vinculante 11); são vedadas em mulheres durante o parto e no puerpério imediato (art. 292, parágrafo único).",
+      "Captura em casa (art. 293): se o procurado está numa casa, o morador é intimado a entregá-lo; não obedecendo, de dia o executor entra à força, com duas testemunhas; de noite, guarda todas as saídas e, ao amanhecer, entra e prende.",
+      "Prisão preventiva: decretada pelo juiz, a requerimento do MP, do querelante ou do assistente, ou por representação da autoridade policial — nunca de ofício (art. 311). Requisitos (art. 312): garantia da ordem pública ou econômica, conveniência da instrução criminal ou garantia da aplicação da lei penal, com prova do crime, indício suficiente de autoria e perigo gerado pela liberdade. Cabe, entre outros, em crimes dolosos com pena máxima superior a 4 anos e para o reincidente em crime doloso (art. 313). A necessidade é revista a cada 90 dias (art. 316, parágrafo único).",
+      "Prisão temporária (Lei 7.960/1989): só na investigação, decretada pelo juiz a requerimento do MP ou por representação da autoridade policial; prazo de 5 dias, prorrogável por mais 5 em caso de extrema e comprovada necessidade (30 + 30 nos hediondos). Para o STF (ADIs 3360 e 4109), os requisitos são cumulativos: imprescindível para a investigação, fundadas razões de autoria em crime da lista legal, fatos novos ou contemporâneos e cautelares insuficientes.",
+      "Fiança: o delegado só pode conceder fiança em infração com pena máxima de até 4 anos; nos demais casos, ela é pedida ao juiz, que decide em 48 horas (art. 322). Não cabe fiança em racismo, tortura, tráfico, terrorismo, crimes hediondos e ação de grupos armados contra a ordem constitucional (art. 323)."
+     ],
+     "pegadinhas": [
+      "Preventiva NUNCA de ofício pelo juiz (desde a Lei 13.964/2019); temporária, só na fase de INVESTIGAÇÃO.",
+      "Mandado à noite: a prisão pode ocorrer a qualquer hora, mas a entrada na casa para cumprir mandado só de dia.",
+      "Delegado concede fiança até pena MÁXIMA de 4 anos; acima disso, só o juiz."
+     ],
+     "novidades": [
+      "Lei 15.358/2026: a preventiva passou a ser admitida também quando o crime é cometido por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada (CPP, art. 313, V), exigido o vínculo do crime com a atuação do grupo e os requisitos do art. 312.",
+      "Lei 15.487/2026: a preventiva passou a ser admitida nos crimes contra a dignidade sexual de criança ou adolescente e nos crimes dos arts. 240 a 241-D e 244-A do ECA (CPP, art. 313, VI)."
+     ],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "identificacao-criminal",
+     "titulo": "Identificação criminal",
+     "edital": "5 Identificação criminal (CF, art. 5º, LVIII; Lei 12.037/2009, art. 3º)",
+     "peso": 2,
+     "pontos": [
+      "O civilmente identificado não é submetido a identificação criminal, salvo nas hipóteses previstas em lei (CF, art. 5º, LVIII; Lei 12.037, art. 1º). A antiga Súmula 568 do STF, que dizia o contrário, está superada.",
+      "Identificam civilmente: carteira de identidade, carteira de trabalho, carteira profissional, passaporte, carteira de identificação funcional ou outro documento público que permita a identificação; os documentos militares se equiparam (art. 2º).",
+      "Mesmo com documento civil, cabe identificação criminal quando (art. 3º): I — o documento tiver rasura ou indício de falsificação; II — for insuficiente para identificar cabalmente o indiciado; III — o indiciado portar documentos de identidade distintos, com informações conflitantes; IV — for essencial às investigações, por despacho do juiz (de ofício ou a pedido da autoridade policial, do MP ou da defesa); V — constar de registros policiais o uso de outros nomes ou diferentes qualificações; VI — o estado de conservação, a distância temporal ou a localidade da expedição do documento impossibilitar a completa identificação dos caracteres essenciais.",
+      "A identificação criminal inclui o processo datiloscópico e o fotográfico (art. 5º). Na hipótese do inciso IV, pode incluir a coleta de material biológico para obter o perfil genético (art. 5º, parágrafo único). A autoridade toma as providências para evitar constrangimento do identificado (art. 4º).",
+      "Antes do trânsito em julgado da condenação, é vedado mencionar a identificação criminal em atestados de antecedentes ou em informações não destinadas ao juízo criminal (art. 6º). Com o arquivamento, a rejeição da denúncia ou a absolvição, o interessado pode pedir a retirada da identificação fotográfica (art. 7º). O perfil genético é excluído na absolvição ou, se houver condenação, a pedido, 20 anos após o cumprimento da pena (art. 7º-A)."
+     ],
+     "pegadinhas": [
+      "Ter a CNH não impede a identificação criminal se houver suspeita de falsificação ou outra hipótese do art. 3º (PRF 2021, itens 107 e 112).",
+      "A coleta de material biológico para perfil genético na Lei 12.037 depende da hipótese do inciso IV (essencial às investigações, com despacho judicial).",
+      "As cópias dos documentos apresentados são juntadas aos autos mesmo se consideradas insuficientes (art. 3º, parágrafo único)."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 107
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 112
+      }
+     ]
+    },
+    {
+     "id": "diligencias",
+     "titulo": "Inquérito e diligências investigatórias",
+     "edital": "6 Diligências investigatórias (arts. 6º e 13 do CPP)",
+     "peso": 2,
+     "pontos": [
+      "Polícia judiciária: exercida pelas autoridades policiais nas suas circunscrições, apura as infrações penais e a sua autoria (art. 4º). A PRF não é polícia judiciária: prende em flagrante, preserva o local, apreende objetos e apresenta o caso ao delegado da Polícia Federal ou da Polícia Civil.",
+      "Logo que tiver conhecimento da infração, a autoridade policial deve (art. 6º): ir ao local e preservar o estado das coisas até a chegada dos peritos; apreender os objetos relacionados ao fato, depois de liberados pelos peritos; colher as provas; ouvir o ofendido e o indiciado; fazer reconhecimento de pessoas e coisas e acareações; determinar o exame de corpo de delito e outras perícias; ordenar a identificação datiloscópica e juntar a folha de antecedentes; averiguar a vida pregressa do indiciado; e colher informações sobre a existência de filhos, idades, deficiência e quem cuida deles.",
+      "Cabe ainda à autoridade policial (art. 13): fornecer informações aos juízes, realizar as diligências requisitadas pelo juiz ou pelo MP, cumprir os mandados de prisão e representar acerca da prisão preventiva. Nos crimes de sequestro, cárcere privado, redução a condição análoga à de escravo, tráfico de pessoas, extorsão com restrição da liberdade e extorsão mediante sequestro, o delegado e o MP podem requisitar diretamente dados cadastrais da vítima ou de suspeitos, a serem enviados em 24 horas (art. 13-A).",
+      "Instauração: na ação pública, de ofício, por requisição do MP ou a requerimento do ofendido; qualquer do povo pode comunicar a infração à autoridade (art. 5º, § 3º). Na ação pública condicionada, o inquérito não começa sem representação; na privada, só a requerimento de quem pode propor a queixa (§§ 4º e 5º).",
+      "Prazos (art. 10): 10 dias com o indiciado preso (a partir da prisão) e 30 dias se solto, prorrogável neste caso. A autoridade policial não pode mandar arquivar o inquérito (art. 17). O inquérito tem o sigilo necessário à elucidação do fato (art. 20), mas o defensor tem acesso aos elementos de prova já documentados (Súmula Vinculante 14)."
+     ],
+     "pegadinhas": [
+      "O DELEGADO não arquiva inquérito (art. 17).",
+      "Preso: 10 dias; solto: 30 dias (no inquérito do CPP). Leis especiais têm prazos próprios (Lei de Drogas, Polícia Federal, Lei Antifacção).",
+      "A apreensão dos objetos ocorre depois de liberados pelos peritos (art. 6º, II)."
+     ],
+     "novidades": [
+      "Lei 15.358/2026 (Lei Antifacção): nos crimes de domínio social estruturado, o inquérito deve terminar em 90 dias se o investigado estiver preso e em 270 dias se solto, prorrogáveis; o atraso não solta o preso automaticamente."
+     ],
+     "itens": 5,
+     "questoes": []
+    }
+   ]
+  }
+ ]
+}

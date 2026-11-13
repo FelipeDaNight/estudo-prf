@@ -28,4 +28,18 @@ idx.filter((x) => x.arquivo && x.origem !== "socrates").forEach((x) => {
 const prf = JSON.parse(fs.readFileSync(raiz + "bancos/prf-2021-p1.json", "utf8"));
 const q82 = prf.questoes.find((q) => q.topico === "PRF 2021 · item 82");
 assert.ok(q82.resp === "E" && q82.atual === "C" && q82.atualizacao.includes("14.229/2021"), "item 82 (tolerância por eixo)");
-console.log("Sócrates (dados): ok,", b.questoes.length, "itens:", JSON.stringify(mats));
+// Resumos (teoria das trilhas): cada tópico acha seus itens no banco pelo título e suas questões da prova.
+const res = JSON.parse(fs.readFileSync(raiz + "bancos/socrates-resumos-prf.json", "utf8"));
+assert.strictEqual(res.id, "socrates-resumos-prf"); assert.ok(res.materias.length >= 4 && res.aviso);
+let nTop = 0;
+res.materias.forEach((m) => {
+  const ids = new Set();
+  m.topicos.forEach((t) => {
+    nTop++; assert.ok(!ids.has(t.id), "tópico repetido " + t.id); ids.add(t.id);
+    assert.ok(t.titulo && t.pontos.length >= 2 && [1, 2, 3].includes(t.peso), "tópico " + t.id);
+    assert.strictEqual(t.itens, b.questoes.filter((q) => q.materia === m.materia && q.topico === t.titulo).length, "itens de " + t.id);
+    t.questoes.forEach((x) => assert.ok(prf.questoes.some((q) => q.topico === "PRF 2021 · item " + x.item), "questão " + x.item + " de " + t.id));
+  });
+});
+assert.ok(fs.readFileSync(raiz + "sw.js", "utf8").includes("./bancos/socrates-resumos-prf.json"), "resumos fora do cache offline");
+console.log("Sócrates (dados): ok,", b.questoes.length, "itens:", JSON.stringify(mats), "·", nTop, "resumos");

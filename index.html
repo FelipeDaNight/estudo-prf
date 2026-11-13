@@ -60,6 +60,9 @@ nav button{font-size:10.5px}
 .lei-art{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.lei-art button{width:auto;margin:0;flex:none;padding:6px 10px;font-size:13px}
 #lei_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}#lei_top #lei_sair{width:auto;margin:0;flex:none;padding:8px 12px;font-size:14px}
 #lei_bar{position:fixed;z-index:9;left:0;right:0;bottom:var(--navh,64px);display:flex;gap:8px;padding:8px 16px;background:var(--card);border-top:1px solid var(--line)}#lei_bar button{margin:0;flex:1;white-space:nowrap;padding:12px 4px}
+#res_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}#res_top #res_sair{width:auto;margin:0;flex:none;padding:8px 12px;font-size:14px}
+#res_bar{position:fixed;z-index:9;left:0;right:0;bottom:var(--navh,64px);display:flex;gap:8px;padding:8px 16px;background:var(--card);border-top:1px solid var(--line)}#res_bar button{margin:0;flex:1;white-space:nowrap;padding:12px 4px}
+#res_topico{padding-bottom:78px}.res_sec{margin-top:14px}.res_sec ol,.res_sec ul{margin:6px 0 0;padding-left:20px}.res_sec li{font-size:15px;line-height:1.5;margin:8px 0}.res_peg li{list-style:"⚠️ "}.res_nov li{list-style:"🆕 "}
 #lei_leitor{padding-bottom:78px}.leilin{display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;font-weight:500;font-size:15px;background:var(--bg);color:var(--ink);border:1.5px solid var(--line);margin-top:6px;padding:11px 12px}.leilin small{color:var(--mut);font-size:12px}
 #k_top{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0 6px}
 #k_bar{position:fixed;z-index:9;left:0;right:0;bottom:var(--navh,64px);padding:8px 16px;background:var(--card);border-top:1px solid var(--line)}
@@ -158,6 +161,7 @@ nav button i{font-size:19px}
  </div>
  <div class="card" id="h_lei"><b>📖 Lei seca (Semana 1)</b><div class="note" id="h_lei_t" style="margin-top:6px"></div><button id="h_lei_go" class="sec">Começar</button></div>
  <div class="card" id="h_ctb"><b>🚔 CTB</b><div class="note" id="h_ctb_t" style="margin-top:6px"></div><button id="h_ctb_go" class="sec">Começar</button></div>
+ <div class="card" id="h_res"><b>📚 Resumos</b><div class="note" id="h_res_t" style="margin-top:6px">A teoria de cada tópico do edital, com as pegadinhas e o que mudou na lei.</div><button id="h_res_go" class="sec">Abrir resumos</button></div>
  <div class="card" id="h_alertas" style="display:none"></div>
  <div class="card kpi">
   <div><div class="mid" id="h_seq">0</div><div class="sub">dias seguidos</div></div>
@@ -299,6 +303,18 @@ nav button i{font-size:19px}
   <div id="lei_top"><div class="qtopr"><button id="lei_sair" class="sec">Voltar</button><div class="note" id="lei_cab"></div></div></div>
   <div id="lei_arts"></div>
   <div id="lei_bar"><button id="lei_lido" class="ok">Marcar como lido</button><button id="lei_lac" class="sec">Lacunas deste trecho</button></div>
+ </div>
+</section>
+
+<section id="res" class="tab">
+ <div id="res_home">
+  <div class="row" style="align-items:center;margin-top:8px"><button id="res_voltar" class="sec" style="width:auto;margin:0;flex:none;padding:8px 12px">Hoje</button><b style="flex:1;font-size:18px">📚 Resumos</b></div>
+  <div id="res_lista"></div>
+ </div>
+ <div id="res_topico" style="display:none">
+  <div id="res_top"><div class="qtopr"><button id="res_sair" class="sec">Voltar</button><div class="note" id="res_cab"></div></div></div>
+  <div id="res_corpo"></div>
+  <div id="res_bar"><button id="res_lido" class="ok">Marcar como lido</button><button id="res_treinar" class="sec">Treinar este tópico</button></div>
  </div>
 </section>
 

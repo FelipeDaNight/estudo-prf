@@ -703,16 +703,17 @@
       });
       const ult = simHist.filter((x) => x.banco === b.id).pop();
       if (ult) { const u = el("div", "Último simulado (" + ult.d.split("-").reverse().join("/") + "): " + ult.acertos + " acertos, " + ult.erros + " erros, " + ult.brancos + " em branco · " + ult.tempo + " min", "note"); u.style.marginTop = "10px"; c.appendChild(u); }
+      if (b.origem === "socrates") { const br = el("button", "📚 Ler os resumos dos tópicos"); br.className = "sec q_resumos"; br.onclick = () => abrir("res"); c.appendChild(br); }
       const bz = el("button", "Zerar progresso deste banco"); bz.className = "sec"; bz.onclick = () => { if (bz.dataset.c) { delete prog[b.id]; qSalvarProg(); qDesenhaLista(); return; } bz.dataset.c = "1"; bz.textContent = "Toque de novo para zerar"; setTimeout(() => { bz.dataset.c = ""; bz.textContent = "Zerar progresso deste banco"; }, 3000); };
       c.appendChild(bz);
       box.appendChild(c);
     }
     box.appendChild(qImportCard()); $("q_lista").replaceChildren(box); $("q_manual_box").style.display = "block";
   }
-  function qIniciar(b, modo, mat, quais) {
+  function qIniciar(b, modo, mat, quais, filtro) {
     qFlushErro(); qFlushSessao();
     const p = qProg(b);
-    let ids = b.questoes.map((q, i) => i).filter((i) => !mat || b.questoes[i].materia === mat);
+    let ids = b.questoes.map((q, i) => i).filter((i) => (!mat || b.questoes[i].materia === mat) && (!filtro || filtro(b.questoes[i])));
     if (modo === "treino") {
       if (quais === "novas") ids = ids.filter((i) => !p[b.questoes[i].n]);
       if (quais === "erradas") ids = ids.filter((i) => p[b.questoes[i].n] && !p[b.questoes[i].n].ok);
@@ -1153,6 +1154,87 @@
   }
   const chkAbertos = {};
 
+  // ---------------------------------------------------------------- resumos (teoria das trilhas do Sócrates)
+  const RES = { dados: null, mat: null, top: null };
+  let resLido = LS.get("reslido", {});
+  const resChave = (m, t) => m.trilha + ":" + t.id;
+  async function resCarrega() {
+    if (RES.dados) return true;
+    try { const r = await fetch("bancos/socrates-resumos-prf.json"); if (!r.ok) throw new Error(String(r.status)); RES.dados = await r.json(); return true; } catch (e) { return false; }
+  }
+  function resPintaHoje() {
+    const d = RES.dados, h = $("h_res_t"); if (!d || !h) return;
+    const tops = d.materias.flatMap((m) => m.topicos.map((t) => resChave(m, t))), nl = tops.filter((k) => resLido[k]).length;
+    h.textContent = tops.length + " tópicos de " + d.materias.length + " matérias, conferidos até " + d.atualizado.split("-").reverse().join("/") + " · lidos " + nl + "/" + tops.length;
+  }
+  async function resHome() {
+    $("res_home").style.display = "block"; $("res_topico").style.display = "none";
+    const ok = await resCarrega(), box = document.createDocumentFragment();
+    if (!ok) { box.appendChild(el("div", "Não foi possível carregar os resumos. Conecte-se à internet uma vez.", "note")); $("res_lista").replaceChildren(box); return; }
+    const d = RES.dados, todos = [];
+    d.materias.forEach((m) => m.topicos.forEach((t) => todos.push([m, t])));
+    const nl = todos.filter(([m, t]) => resLido[resChave(m, t)]).length, prox = todos.find(([m, t]) => !resLido[resChave(m, t)]);
+    const topo = el("div", undefined, "card"); topo.appendChild(el("b", d.titulo));
+    topo.appendChild(el("div", "Tópicos lidos " + nl + "/" + todos.length + " · leis conferidas até " + d.atualizado.split("-").reverse().join("/"), "sub")).style.marginTop = "6px";
+    const pb = el("div", undefined, "pbar"); const ia = el("i", undefined, "a"); ia.style.width = (100 * nl / Math.max(1, todos.length)) + "%"; pb.appendChild(ia); topo.appendChild(pb);
+    if (prox) { const b1 = el("button", "📖 Próximo: " + prox[0].materia + " — " + prox[1].titulo); b1.className = "ok res_prox"; b1.onclick = () => resAbrir(prox[0], prox[1]); topo.appendChild(b1); }
+    else topo.appendChild(el("div", "✅ Todos os tópicos foram lidos.", "note")).style.marginTop = "10px";
+    if (d.aviso) { const a = el("details", undefined, "qapoio"); a.appendChild(el("summary", "ℹ️ Sobre os resumos")); a.appendChild(el("div", d.aviso, "note")); topo.appendChild(a); }
+    box.appendChild(topo);
+    d.materias.forEach((m) => {
+      const c = el("div", undefined, "card"); c.dataset.trilha = m.trilha; c.appendChild(el("b", m.materia));
+      const lidos = m.topicos.filter((t) => resLido[resChave(m, t)]).length;
+      c.appendChild(el("div", lidos + "/" + m.topicos.length + " tópicos lidos · ★ = quanto cai", "note")).style.marginTop = "4px";
+      m.topicos.forEach((t) => {
+        const bt = el("button"); bt.className = "leilin res_item"; bt.dataset.id = t.id;
+        bt.appendChild(el("span", (resLido[resChave(m, t)] ? "✅ " : "○ ") + t.titulo));
+        bt.appendChild(el("small", "★".repeat(t.peso || 1) + " · " + t.itens + " itens" + (t.questoes && t.questoes.length ? " · " + t.questoes.length + " da prova" : "")));
+        bt.onclick = () => resAbrir(m, t); c.appendChild(bt);
+      });
+      box.appendChild(c);
+    });
+    $("res_lista").replaceChildren(box); resPintaHoje();
+  }
+  function resLista(titulo, itens, cls, tag) {
+    const sec = el("div", undefined, "res_sec " + cls); sec.appendChild(el("b", titulo));
+    const l = el(tag); itens.forEach((x) => l.appendChild(el("li", x))); sec.appendChild(l); return sec;
+  }
+  function resAbrir(m, t) {
+    RES.mat = m; RES.top = t; $("res_home").style.display = "none"; $("res_topico").style.display = "block";
+    $("res_cab").textContent = m.materia + " · " + "★".repeat(t.peso || 1);
+    const c = el("div", undefined, "card"); c.appendChild(el("b", t.titulo)).style.fontSize = "18px";
+    if (t.edital) c.appendChild(el("div", "Edital: " + t.edital, "note")).style.marginTop = "4px";
+    c.appendChild(resLista("Pontos-chave", t.pontos || [], "res_pts", "ol"));
+    if (t.pegadinhas && t.pegadinhas.length) c.appendChild(resLista("Pegadinhas da banca", t.pegadinhas, "res_peg", "ul"));
+    if (t.novidades && t.novidades.length) c.appendChild(resLista("O que mudou na lei", t.novidades, "res_nov", "ul"));
+    if (t.questoes && t.questoes.length) {
+      const bq = el("button", "📝 Questões da prova deste tópico (" + t.questoes.length + ")"); bq.className = "sec res_prova"; bq.onclick = () => resTreinar(true); c.appendChild(bq);
+    }
+    $("res_corpo").replaceChildren(c);
+    $("res_treinar").textContent = "🎯 Treinar (" + t.itens + " itens)"; $("res_treinar").disabled = !t.itens;
+    $("res_lido").textContent = resLido[resChave(m, t)] ? "✅ Lido" : "Marcar como lido";
+    window.scrollTo(0, 0);
+  }
+  function resMarcarLido() {
+    const k = resChave(RES.mat, RES.top);
+    if (resLido[k]) delete resLido[k]; else resLido[k] = hoje();
+    LS.set("reslido", resLido); $("res_lido").textContent = resLido[k] ? "✅ Lido" : "Marcar como lido"; resPintaHoje();
+  }
+  async function resTreinar(daProva) {
+    const m = RES.mat, t = RES.top; await qIndice();
+    if (daProva) {
+      const bid = t.questoes[0].banco, itens = new Set(t.questoes.filter((x) => x.banco === bid).map((x) => x.item));
+      const info = Q.bancos.find((x) => x.id === bid); if (!info) { toast("O banco da prova não está disponível."); return; }
+      const b = await qBanco(info);
+      qIniciar(b, "treino", "", "todas", (q) => { const x = /· item (\d+)$/.exec(q.topico || ""); return !!x && itens.has(Number(x[1])); });
+    } else {
+      const info = Q.bancos.find((x) => x.id === "socrates-trilhas-prf"); if (!info) { toast("O banco do Sócrates não está disponível."); return; }
+      const b = await qBanco(info);
+      qIniciar(b, "treino", m.materia, "todas", (q) => q.topico === t.titulo);
+    }
+    if ($("q_tela").style.display === "block") abrir("quest");
+  }
+
   // ---------------------------------------------------------------- navegação e config
   function abrir(t) {
     if (t !== "quest") { qFlushErro(); qFlushSessao(); }
@@ -1162,6 +1244,7 @@
     if (t === "cfg") pintarFila();
     if (t === "hoje") pintarHoje();
     if (t === "chk") chkRender();
+    if (t === "res") resHome();
     if (t === "lei") { const kt = $("k_tela"); if (kt) kt.style.display = "none"; leiHome(); }
     if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none" && $("k_tela").style.display === "none") qDesenhaLista();
   }
@@ -1192,7 +1275,7 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
-    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
+    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_res_go").onclick = () => abrir("res"); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => resHome(); $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
     $("lei_lido").onclick = leiMarcarLido; $("lei_lac").onclick = () => leiLacunas(LEI.bloco);
     $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
     document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });

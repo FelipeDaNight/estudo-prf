@@ -528,6 +528,33 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     const fb = await page.locator("#q_fb").innerText();
     assert.ok(fb.includes("Acertou") && fb.includes("A lei mudou depois da prova") && fb.includes("Gabarito oficial: Errado") && fb.includes("12,5%"), fb);
     assert.ok(await page.locator('#q_alts .alt[data-k="C"].certa').count() === 1);
+    await page.click("#q_fim");
+  });
+
+  await t("Resumos: matérias e tópicos, pontos e pegadinhas, marcar lido e treinar o tópico", async () => {
+    await page.click('[data-t="hoje"]');
+    await espera(() => /tópicos de \d+ matérias/.test(document.getElementById("h_res_t").textContent));
+    await page.click("#h_res_go");
+    await espera(() => document.querySelectorAll("#res_lista .res_item").length > 40);
+    assert.strictEqual(await page.locator("#res_lista .card[data-trilha]").first().getAttribute("data-trilha"), "prf-transito");
+    await page.locator('#res_lista .card[data-trilha="prf-transito"] .res_item[data-id="contran"]').click();
+    const corpo = await page.locator("#res_corpo").innerText();
+    assert.ok(corpo.includes("Pontos-chave") && corpo.includes("12,5%") && corpo.includes("Pegadinhas da banca") && corpo.includes("O que mudou na lei"), corpo.slice(0, 300));
+    await page.click("#res_lido");
+    assert.ok((await page.locator("#res_lido").innerText()).includes("Lido"));
+    await page.click("#res_treinar");                                          // itens de fixação do tópico
+    await espera(() => document.getElementById("q_tela").style.display === "block" && document.getElementById("q_tag").textContent.includes("CONTRAN"));
+    assert.ok((await page.locator("#q_tag").innerText()).includes("Resoluções do CONTRAN mais cobradas"), await page.locator("#q_tag").innerText());
+    assert.ok((await page.locator("#q_cab").innerText()).includes("(1/10)"), await page.locator("#q_cab").innerText());
+    await page.click("#q_fim");
+    await page.click('[data-t="hoje"]'); await page.click("#h_res_go");
+    await espera(() => document.querySelectorAll("#res_lista .res_item").length > 40);
+    assert.ok((await page.locator('#res_lista .res_item[data-id="contran"]').innerText()).startsWith("✅"), "lido fica marcado");
+    await page.locator('#res_lista .card[data-trilha="prf-transito"] .res_item[data-id="contran"]').click();
+    await page.click("#res_corpo .res_prova");                                // as 14 questões da prova ligadas a ele
+    await espera(() => document.getElementById("q_tela").style.display === "block" && document.getElementById("q_tag").textContent.includes("PRF 2021"));
+    assert.ok((await page.locator("#q_cab").innerText()).includes("(1/14)"), await page.locator("#q_cab").innerText());
+    await page.click("#q_fim");
   });
 
   await page.click('[data-t="estudo"]');

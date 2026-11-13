@@ -117,3 +117,11 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Quando a lei muda depois da prova, a questão ganha `atual` (o gabarito de hoje) e `atualizacao` (o porquê). No **treino** e nos **cartões** vale o gabarito de hoje, com o aviso "⚖ A lei mudou depois da prova" mostrando o oficial; no **simulado** continua valendo o oficial, para a nota ser comparável à da prova.
 - PRF 2021, item 82: o gabarito oficial foi Errado (a tolerância por eixo era 10%), mas a Lei 14.229/2021 subiu para 12,5% (Lei 7.408/1985, art. 1º, II; Resolução CONTRAN 882/2021, art. 50). Hoje o item é Certo.
 - Os outros 13 itens de resoluções do CONTRAN da PRF 2021 foram conferidos nas resoluções em vigor e continuam com o gabarito oficial.
+
+## Resumos do Sócrates (13/11/2026)
+- **Hoje → 📚 Resumos** (ou o botão "Ler os resumos dos tópicos" no card do Sócrates, em Questões): a teoria de cada tópico do edital, por matéria e na ordem do que mais cai (★ a ★★★). São 53 tópicos de Trânsito, Penal, Legislação Especial e Processo Penal.
+- Cada tópico traz **pontos-chave** (com o artigo), **pegadinhas da banca** e **o que mudou na lei**, conferidos nas fontes oficiais até 13/11/2026.
+- **🎯 Treinar** abre só os itens de fixação daquele tópico; **📝 Questões da prova deste tópico** abre as questões reais da PRF 2021 ligadas a ele.
+- "Marcar como lido" fica guardado no aparelho e aparece na lista (✅) e no card da Hoje.
+- O arquivo `bancos/socrates-resumos-prf.json` é gerado pelo Sócrates junto com o banco (`python -m socrates.estudo.exportar_app CAMINHO_DO_APP`) e funciona offline.
+
