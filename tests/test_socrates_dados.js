@@ -13,7 +13,7 @@ b.questoes.forEach((q) => {
   assert.ok(q.enunciado.length > 20 && q.just.length > 3 && q.materia && q.topico, "campos " + q.n);
   mats[q.materia] = (mats[q.materia] || 0) + 1;
 });
-assert.deepStrictEqual(Object.keys(mats).sort(), ["Direito Constitucional", "Direito Penal", "Direito Processual Penal", "Legislação Especial", "Legislação de Trânsito"]);
+assert.deepStrictEqual(Object.keys(mats).sort(), ["Direito Administrativo", "Direito Constitucional", "Direito Penal", "Direito Processual Penal", "Legislação Especial", "Legislação de Trânsito"]);
 const e = idx.find((x) => x.id === b.id);
 assert.ok(e && e.arquivo === "bancos/socrates-trilhas-prf.json" && e.n === b.questoes.length && e.origem === "socrates");
 assert.ok(fs.readFileSync(raiz + "sw.js", "utf8").includes("./bancos/socrates-trilhas-prf.json"), "fora do cache offline");

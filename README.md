@@ -107,8 +107,9 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Capítulos I e II (dias 1 a 6) ganharam 98 lacunas escritas à mão, incluindo cartões "De quem é a competência?".
 
 ## Banco do Sócrates: fixação de Trânsito, Penal, Processo Penal e Legislação Especial (13/11/2026)
-- Aba **Questões** → card **"Sócrates · Fixação PRF"**: 324 itens Certo/Errado no estilo Cebraspe, com justificativa citando o artigo. São os mesmos itens das aulas do Sócrates (assistente de voz), escritos e conferidos nas fontes oficiais, com as leis atualizadas até 13/11/2026 (Lei Antifacção, Leis 15.245/2025, 15.397/2026 e 15.487/2026, TCO pela PRF no STF, Decreto 11.348/2023).
-- Matérias: Legislação de Trânsito (76), Direito Penal (79), Direito Processual Penal (50), Legislação Especial (62) e Direito Constitucional (57).
+- Aba **Questões** → card **"Sócrates · Fixação PRF"**: 373 itens Certo/Errado no estilo Cebraspe, com justificativa citando o artigo. São os mesmos itens das aulas do Sócrates (assistente de voz), escritos e conferidos nas fontes oficiais, com as leis atualizadas até 13/11/2026 (Lei Antifacção, Leis 15.245/2025, 15.397/2026 e 15.487/2026, TCO pela PRF no STF, Decreto 11.348/2023).
+- Matérias: Legislação de Trânsito (76), Direito Penal (79), Direito Processual Penal (50), Legislação Especial (62), Direito Constitucional (57) e Direito Administrativo (49).
+- Administrativo: organização, ato administrativo (Lei 9.784), agentes públicos e PAD (Lei 8.112), carreira de PRF (Lei 9.654 e Decreto 8.282: 120/150/360 horas para promoção), poderes e poder de polícia (STF, Tema 532), licitações pela Lei 14.133, controle, responsabilidade civil (dupla garantia, Tema 940) e princípios (nepotismo, SV 13).
 - Constitucional (CF atualizada até 13/11/2026): poder constituinte, art. 5º com as teses do STF (domicílio, reunião, confisco), remédios, direitos sociais (greve de policial), nacionalidade pela EC 131/2023, direitos políticos, competências (trânsito é privativa da União), Executivo (posse em 5 de janeiro, EC 111/2021), segurança pública e estados de defesa e sítio (com a PEC 18/2025 aguardando promulgação) e ordem social.
 - Trânsito cobre o CTB inteiro, conferido no texto compilado deste app (04/11/2026): SNT e competências da PRF, circulação (velocidades, tempo de direção), pedestres, sinalização, veículos, escolares e motofrete, habilitação, infrações, penalidades (20/30/40 pontos), medidas administrativas, processo, crimes de trânsito e a Lei 5.970/1973. Inclui as resoluções do CONTRAN em vigor (pesos e dimensões 882/2021, videomonitoramento 909/2022, tacógrafo 938/2022, amarração 945/2022, vidros 960/2022, placas 969/2022, radares 798/2020 e passageiros em veículo de carga 508/2014). Use **Treinar por matéria**; a etiqueta mostra o tópico (ex.: "Prisão em flagrante e audiência de custódia").
 - Não são questões de prova (essas estão no banco PRF 2021) e não entram em Simulados da planilha.
@@ -120,7 +121,7 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Os outros 13 itens de resoluções do CONTRAN da PRF 2021 foram conferidos nas resoluções em vigor e continuam com o gabarito oficial.
 
 ## Resumos do Sócrates (13/11/2026)
-- **Hoje → 📚 Resumos** (ou o botão "Ler os resumos dos tópicos" no card do Sócrates, em Questões): a teoria de cada tópico do edital, por matéria e na ordem do que mais cai (★ a ★★★). São 63 tópicos de Trânsito, Penal, Legislação Especial, Processo Penal e Constitucional.
+- **Hoje → 📚 Resumos** (ou o botão "Ler os resumos dos tópicos" no card do Sócrates, em Questões): a teoria de cada tópico do edital, por matéria e na ordem do que mais cai (★ a ★★★). São 72 tópicos de Trânsito, Penal, Legislação Especial, Processo Penal, Constitucional e Administrativo.
 - Cada tópico traz **pontos-chave** (com o artigo), **pegadinhas da banca** e **o que mudou na lei**, conferidos nas fontes oficiais até 13/11/2026.
 - **🎯 Treinar** abre só os itens de fixação daquele tópico; **📝 Questões da prova deste tópico** abre as questões reais da PRF 2021 ligadas a ele.
 - "Marcar como lido" fica guardado no aparelho e aparece na lista (✅) e no card da Hoje.

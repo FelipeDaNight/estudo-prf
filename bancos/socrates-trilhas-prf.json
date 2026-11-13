@@ -6,8 +6,498 @@
  "tipo": "ce",
  "sincroniza_simulado": false,
  "origem": "socrates",
- "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Matérias: Direito Constitucional, Direito Penal, Legislação Especial, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
+ "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Legislação Especial, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
  "questoes": [
+  {
+   "n": 325,
+   "ref": "trilha:prf-administrativo:organizacao:1",
+   "materia": "Direito Administrativo",
+   "topico": "Organização administrativa",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Órgão público é ente descentralizado da administração indireta, dotado de personalidade jurídica de direito público.",
+   "just": "Doutrina (teoria do órgão): órgão não tem personalidade jurídica; é parte da pessoa jurídica. PRF 2021, item 87."
+  },
+  {
+   "n": 326,
+   "ref": "trilha:prf-administrativo:organizacao:2",
+   "materia": "Direito Administrativo",
+   "topico": "Organização administrativa",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Há desconcentração quando a pessoa jurídica distribui competências entre órgãos de sua própria estrutura.",
+   "just": "Doutrina: desconcentração ocorre dentro da mesma pessoa jurídica."
+  },
+  {
+   "n": 327,
+   "ref": "trilha:prf-administrativo:organizacao:3",
+   "materia": "Direito Administrativo",
+   "topico": "Organização administrativa",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A autarquia é criada por lei específica, ao passo que a criação de empresa pública é autorizada por lei específica.",
+   "just": "CF, art. 37, XIX."
+  },
+  {
+   "n": 328,
+   "ref": "trilha:prf-administrativo:organizacao:4",
+   "materia": "Direito Administrativo",
+   "topico": "Organização administrativa",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A sociedade de economia mista pode adotar qualquer forma societária admitida em direito.",
+   "just": "Lei 13.303/2016, art. 4º: sempre sociedade anônima."
+  },
+  {
+   "n": 329,
+   "ref": "trilha:prf-administrativo:organizacao:5",
+   "materia": "Direito Administrativo",
+   "topico": "Organização administrativa",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Entre o ministério e a autarquia a ele vinculada há relação de hierarquia.",
+   "just": "Doutrina: há supervisão ministerial (tutela), sem hierarquia."
+  },
+  {
+   "n": 330,
+   "ref": "trilha:prf-administrativo:ato-administrativo:1",
+   "materia": "Direito Administrativo",
+   "topico": "Ato administrativo: requisitos, atributos, anulação e revogação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Administração deve anular seus próprios atos quando eivados de vício de legalidade e pode revogá-los por motivo de conveniência ou oportunidade, respeitados os direitos adquiridos.",
+   "just": "Lei 9.784/1999, art. 53; Súmula 473 do STF."
+  },
+  {
+   "n": 331,
+   "ref": "trilha:prf-administrativo:ato-administrativo:2",
+   "materia": "Direito Administrativo",
+   "topico": "Ato administrativo: requisitos, atributos, anulação e revogação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O direito de a Administração anular atos de que decorram efeitos favoráveis aos destinatários decai em dez anos, contados da data em que foram praticados.",
+   "just": "Lei 9.784/1999, art. 54: cinco anos, salvo comprovada má-fé."
+  },
+  {
+   "n": 332,
+   "ref": "trilha:prf-administrativo:ato-administrativo:3",
+   "materia": "Direito Administrativo",
+   "topico": "Ato administrativo: requisitos, atributos, anulação e revogação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A revogação do ato administrativo produz efeitos retroativos à data da sua edição.",
+   "just": "Doutrina: a revogação opera efeitos para o futuro (ex nunc); Lei 9.784/1999, art. 53."
+  },
+  {
+   "n": 333,
+   "ref": "trilha:prf-administrativo:ato-administrativo:4",
+   "materia": "Direito Administrativo",
+   "topico": "Ato administrativo: requisitos, atributos, anulação e revogação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os atos administrativos que decidam recursos administrativos devem ser motivados.",
+   "just": "Lei 9.784/1999, art. 50, V."
+  },
+  {
+   "n": 334,
+   "ref": "trilha:prf-administrativo:ato-administrativo:5",
+   "materia": "Direito Administrativo",
+   "topico": "Ato administrativo: requisitos, atributos, anulação e revogação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O ato com defeito sanável pode ser convalidado pela própria Administração, desde que não acarrete lesão ao interesse público nem prejuízo a terceiros.",
+   "just": "Lei 9.784/1999, art. 55."
+  },
+  {
+   "n": 335,
+   "ref": "trilha:prf-administrativo:ato-administrativo:6",
+   "materia": "Direito Administrativo",
+   "topico": "Ato administrativo: requisitos, atributos, anulação e revogação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A presunção de legitimidade dos atos administrativos é absoluta, não admitindo prova em contrário.",
+   "just": "Doutrina: a presunção é relativa (juris tantum)."
+  },
+  {
+   "n": 336,
+   "ref": "trilha:prf-administrativo:agentes-publicos:1",
+   "materia": "Direito Administrativo",
+   "topico": "Agentes públicos e Lei 8.112/1990",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A posse em cargo público ocorrerá no prazo de trinta dias contados da publicação do ato de provimento.",
+   "just": "Lei 8.112/1990, art. 13, § 1º."
+  },
+  {
+   "n": 337,
+   "ref": "trilha:prf-administrativo:agentes-publicos:2",
+   "materia": "Direito Administrativo",
+   "topico": "Agentes públicos e Lei 8.112/1990",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A penalidade de suspensão não pode exceder sessenta dias.",
+   "just": "Lei 8.112/1990, art. 130: até noventa dias."
+  },
+  {
+   "n": 338,
+   "ref": "trilha:prf-administrativo:agentes-publicos:3",
+   "materia": "Direito Administrativo",
+   "topico": "Agentes públicos e Lei 8.112/1990",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A ação disciplinar prescreve em cinco anos quanto às infrações puníveis com demissão, contados da data em que o fato se tornou conhecido.",
+   "just": "Lei 8.112/1990, art. 142, I e § 1º."
+  },
+  {
+   "n": 339,
+   "ref": "trilha:prf-administrativo:agentes-publicos:4",
+   "materia": "Direito Administrativo",
+   "topico": "Agentes públicos e Lei 8.112/1990",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A absolvição criminal por insuficiência de provas afasta a responsabilidade administrativa do servidor.",
+   "just": "Lei 8.112/1990, art. 126: só a absolvição que negue a existência do fato ou a autoria."
+  },
+  {
+   "n": 340,
+   "ref": "trilha:prf-administrativo:agentes-publicos:5",
+   "materia": "Direito Administrativo",
+   "topico": "Agentes públicos e Lei 8.112/1990",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A comissão do processo administrativo disciplinar é composta de três servidores estáveis designados pela autoridade competente.",
+   "just": "Lei 8.112/1990, art. 149."
+  },
+  {
+   "n": 341,
+   "ref": "trilha:prf-administrativo:agentes-publicos:6",
+   "materia": "Direito Administrativo",
+   "topico": "Agentes públicos e Lei 8.112/1990",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O servidor não está obrigado a cumprir ordens superiores manifestamente ilegais.",
+   "just": "Lei 8.112/1990, art. 116, IV."
+  },
+  {
+   "n": 342,
+   "ref": "trilha:prf-administrativo:carreira-prf:1",
+   "materia": "Direito Administrativo",
+   "topico": "Carreira de policial rodoviário federal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O ingresso na carreira de policial rodoviário federal ocorre no padrão inicial da Terceira Classe.",
+   "just": "Lei 9.654/1998, art. 3º, § 3º."
+  },
+  {
+   "n": 343,
+   "ref": "trilha:prf-administrativo:carreira-prf:2",
+   "materia": "Direito Administrativo",
+   "topico": "Carreira de policial rodoviário federal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A promoção à Segunda Classe exige participação em cursos de capacitação com carga horária mínima de 120 horas.",
+   "just": "Decreto 8.282/2014, art. 4º, II, c, e Anexo."
+  },
+  {
+   "n": 344,
+   "ref": "trilha:prf-administrativo:carreira-prf:3",
+   "materia": "Direito Administrativo",
+   "topico": "Carreira de policial rodoviário federal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A carreira de policial rodoviário federal é estruturada em três classes: Terceira, Segunda e Primeira.",
+   "just": "Lei 9.654/1998, art. 2º-A: quatro classes, incluída a Especial."
+  },
+  {
+   "n": 345,
+   "ref": "trilha:prf-administrativo:carreira-prf:4",
+   "materia": "Direito Administrativo",
+   "topico": "Carreira de policial rodoviário federal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O concurso para policial rodoviário federal tem duas fases eliminatórias e classificatórias, sendo a segunda o curso de formação.",
+   "just": "Lei 9.654/1998, art. 3º."
+  },
+  {
+   "n": 346,
+   "ref": "trilha:prf-administrativo:carreira-prf:5",
+   "materia": "Direito Administrativo",
+   "topico": "Carreira de policial rodoviário federal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A promoção exige doze meses de efetivo exercício no último padrão da classe e resultado satisfatório na avaliação de desempenho.",
+   "just": "Decreto 8.282/2014, art. 4º, II, a e b."
+  },
+  {
+   "n": 347,
+   "ref": "trilha:prf-administrativo:poderes:1",
+   "materia": "Direito Administrativo",
+   "topico": "Poderes administrativos e abuso de poder",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O poder de polícia tem como atributos a discricionariedade, a autoexecutoriedade e a coercibilidade.",
+   "just": "Doutrina; CTN, art. 78."
+  },
+  {
+   "n": 348,
+   "ref": "trilha:prf-administrativo:poderes:2",
+   "materia": "Direito Administrativo",
+   "topico": "Poderes administrativos e abuso de poder",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A decisão de recursos administrativos pode ser objeto de delegação.",
+   "just": "Lei 9.784/1999, art. 13, II."
+  },
+  {
+   "n": 349,
+   "ref": "trilha:prf-administrativo:poderes:3",
+   "materia": "Direito Administrativo",
+   "topico": "Poderes administrativos e abuso de poder",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Há desvio de finalidade quando o agente, embora competente, pratica o ato visando a fim diverso daquele previsto na regra de competência.",
+   "just": "Lei 4.717/1965, art. 2º, parágrafo único, e; doutrina."
+  },
+  {
+   "n": 350,
+   "ref": "trilha:prf-administrativo:poderes:4",
+   "materia": "Direito Administrativo",
+   "topico": "Poderes administrativos e abuso de poder",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o STF, a fase de ordem de polícia pode ser delegada a empresa pública que preste serviço público em regime não concorrencial.",
+   "just": "STF, RE 633.782 (Tema 532): delegáveis consentimento, fiscalização e sanção; a ordem de polícia não."
+  },
+  {
+   "n": 351,
+   "ref": "trilha:prf-administrativo:poderes:5",
+   "materia": "Direito Administrativo",
+   "topico": "Poderes administrativos e abuso de poder",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O poder disciplinar autoriza a Administração a punir particulares sem vínculo especial com ela, como o condutor autuado em fiscalização de trânsito.",
+   "just": "Doutrina: a sanção ao particular sem vínculo é poder de polícia."
+  },
+  {
+   "n": 352,
+   "ref": "trilha:prf-administrativo:licitacao:1",
+   "materia": "Direito Administrativo",
+   "topico": "Licitações (Lei 14.133/2021)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Lei 14.133/2021 prevê como modalidades de licitação o pregão, a concorrência, o concurso, o leilão e o diálogo competitivo, vedada a criação de outras.",
+   "just": "Lei 14.133/2021, art. 28."
+  },
+  {
+   "n": 353,
+   "ref": "trilha:prf-administrativo:licitacao:2",
+   "materia": "Direito Administrativo",
+   "topico": "Licitações (Lei 14.133/2021)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A contratação de treinamento de pessoal com empresa de notória especialização caracteriza dispensa de licitação.",
+   "just": "Lei 14.133/2021, art. 74, III, f: é caso de inexigibilidade."
+  },
+  {
+   "n": 354,
+   "ref": "trilha:prf-administrativo:licitacao:3",
+   "materia": "Direito Administrativo",
+   "topico": "Licitações (Lei 14.133/2021)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na Lei 14.133/2021, em regra, a fase de habilitação antecede a de julgamento das propostas.",
+   "just": "Lei 14.133/2021, art. 17: julgamento e, depois, habilitação."
+  },
+  {
+   "n": 355,
+   "ref": "trilha:prf-administrativo:licitacao:4",
+   "materia": "Direito Administrativo",
+   "topico": "Licitações (Lei 14.133/2021)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na contratação emergencial por dispensa, o contrato pode durar até um ano, vedada a prorrogação.",
+   "just": "Lei 14.133/2021, art. 75, VIII."
+  },
+  {
+   "n": 356,
+   "ref": "trilha:prf-administrativo:licitacao:5",
+   "materia": "Direito Administrativo",
+   "topico": "Licitações (Lei 14.133/2021)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A declaração de inidoneidade para licitar ou contratar tem prazo mínimo de três e máximo de seis anos.",
+   "just": "Lei 14.133/2021, art. 156, § 5º."
+  },
+  {
+   "n": 357,
+   "ref": "trilha:prf-administrativo:licitacao:6",
+   "materia": "Direito Administrativo",
+   "topico": "Licitações (Lei 14.133/2021)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O pregão é a modalidade obrigatória para a aquisição de bens e serviços comuns.",
+   "just": "Lei 14.133/2021, art. 6º, XLI."
+  },
+  {
+   "n": 358,
+   "ref": "trilha:prf-administrativo:controle:1",
+   "materia": "Direito Administrativo",
+   "topico": "Controle da Administração",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O mandado de segurança impetrado contra multa contratual permite ao Judiciário rever o mérito administrativo da penalidade.",
+   "just": "Doutrina: o controle judicial é de legalidade, não de mérito (PRF 2021, item 86)."
+  },
+  {
+   "n": 359,
+   "ref": "trilha:prf-administrativo:controle:2",
+   "materia": "Direito Administrativo",
+   "topico": "Controle da Administração",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O prazo para interpor recurso administrativo é de dez dias, contado da ciência ou da divulgação oficial da decisão recorrida.",
+   "just": "Lei 9.784/1999, art. 59."
+  },
+  {
+   "n": 360,
+   "ref": "trilha:prf-administrativo:controle:3",
+   "materia": "Direito Administrativo",
+   "topico": "Controle da Administração",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O recurso administrativo tramitará, salvo disposição legal diversa, por no máximo três instâncias administrativas.",
+   "just": "Lei 9.784/1999, art. 57."
+  },
+  {
+   "n": 361,
+   "ref": "trilha:prf-administrativo:controle:4",
+   "materia": "Direito Administrativo",
+   "topico": "Controle da Administração",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Da revisão do processo administrativo que resultou em sanção poderá resultar o agravamento da penalidade, se surgirem fatos novos.",
+   "just": "Lei 9.784/1999, art. 65, parágrafo único."
+  },
+  {
+   "n": 362,
+   "ref": "trilha:prf-administrativo:controle:5",
+   "materia": "Direito Administrativo",
+   "topico": "Controle da Administração",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O controle externo, a cargo do Congresso Nacional, é exercido com o auxílio do Tribunal de Contas da União.",
+   "just": "CF, art. 71."
+  },
+  {
+   "n": 363,
+   "ref": "trilha:prf-administrativo:responsabilidade-civil:1",
+   "materia": "Direito Administrativo",
+   "topico": "Responsabilidade civil do Estado",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As pessoas jurídicas de direito privado prestadoras de serviço público respondem objetivamente pelos danos que seus agentes, nessa qualidade, causarem a terceiros.",
+   "just": "CF, art. 37, § 6º."
+  },
+  {
+   "n": 364,
+   "ref": "trilha:prf-administrativo:responsabilidade-civil:2",
+   "materia": "Direito Administrativo",
+   "topico": "Responsabilidade civil do Estado",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o STF, a vítima pode escolher ajuizar a ação de indenização diretamente contra o agente público causador do dano.",
+   "just": "STF, RE 1.027.633 (Tema 940): a ação é contra o Estado ou a prestadora; o agente é parte ilegítima."
+  },
+  {
+   "n": 365,
+   "ref": "trilha:prf-administrativo:responsabilidade-civil:3",
+   "materia": "Direito Administrativo",
+   "topico": "Responsabilidade civil do Estado",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na responsabilidade objetiva do Estado, a culpa exclusiva da vítima rompe o nexo causal e afasta o dever de indenizar.",
+   "just": "Doutrina: teoria do risco administrativo admite excludentes."
+  },
+  {
+   "n": 366,
+   "ref": "trilha:prf-administrativo:responsabilidade-civil:4",
+   "materia": "Direito Administrativo",
+   "topico": "Responsabilidade civil do Estado",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O direito de regresso do Estado contra o agente depende da comprovação de dolo ou culpa.",
+   "just": "CF, art. 37, § 6º."
+  },
+  {
+   "n": 367,
+   "ref": "trilha:prf-administrativo:responsabilidade-civil:5",
+   "materia": "Direito Administrativo",
+   "topico": "Responsabilidade civil do Estado",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A responsabilidade civil do Estado adota, como regra, a teoria do risco integral.",
+   "just": "Doutrina: a regra é o risco administrativo; o risco integral é exceção."
+  },
+  {
+   "n": 368,
+   "ref": "trilha:prf-administrativo:regime-juridico:1",
+   "materia": "Direito Administrativo",
+   "topico": "Regime jurídico-administrativo e princípios",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A eficiência foi inserida entre os princípios expressos da administração pública pela Emenda Constitucional 19/1998.",
+   "just": "CF, art. 37, caput (EC 19/1998)."
+  },
+  {
+   "n": 369,
+   "ref": "trilha:prf-administrativo:regime-juridico:2",
+   "materia": "Direito Administrativo",
+   "topico": "Regime jurídico-administrativo e princípios",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O prazo de validade do concurso público é de até dois anos, prorrogável uma vez, por igual período.",
+   "just": "CF, art. 37, III."
+  },
+  {
+   "n": 370,
+   "ref": "trilha:prf-administrativo:regime-juridico:3",
+   "materia": "Direito Administrativo",
+   "topico": "Regime jurídico-administrativo e princípios",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Viola a Súmula Vinculante 13 a nomeação, para cargo em comissão, de primo da autoridade nomeante.",
+   "just": "STF, Súmula Vinculante 13: alcança parentes até o terceiro grau; o primo é parente de quarto grau."
+  },
+  {
+   "n": 371,
+   "ref": "trilha:prf-administrativo:regime-juridico:4",
+   "materia": "Direito Administrativo",
+   "topico": "Regime jurídico-administrativo e princípios",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "É permitida a acumulação remunerada de dois cargos de professor, desde que haja compatibilidade de horários.",
+   "just": "CF, art. 37, XVI, a."
+  },
+  {
+   "n": 372,
+   "ref": "trilha:prf-administrativo:regime-juridico:5",
+   "materia": "Direito Administrativo",
+   "topico": "Regime jurídico-administrativo e princípios",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os cargos em comissão destinam-se apenas às atribuições de direção, chefia e assessoramento.",
+   "just": "CF, art. 37, V."
+  },
+  {
+   "n": 373,
+   "ref": "trilha:prf-administrativo:regime-juridico:6",
+   "materia": "Direito Administrativo",
+   "topico": "Regime jurídico-administrativo e princípios",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Pelo princípio da legalidade, o administrador público pode fazer tudo o que a lei não proíbe.",
+   "just": "Doutrina: na Administração, só se faz o que a lei autoriza (legalidade estrita)."
+  },
   {
    "n": 268,
    "ref": "trilha:prf-constitucional:poder-constituinte:1",
