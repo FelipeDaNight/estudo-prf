@@ -1464,6 +1464,193 @@
    ]
   },
   {
+   "materia": "Ética e Cidadania",
+   "trilha": "prf-etica",
+   "fonte": "Decretos 1.171/1994, 6.029/2007, 7.203/2010, 7.724/2012 (com o 11.527/2023) e 9.203/2017; Leis 12.527/2011 e 12.813/2013 (textos da Câmara dos Deputados e compilações conferidas em 13/11/2026); CF, arts. 1º e 37.",
+   "atualizado": "2026-11-13",
+   "topicos": [
+    {
+     "id": "etica-moral",
+     "titulo": "Ética, moral, princípios e valores",
+     "edital": "1 a 3 Ética e moral; ética e democracia; cidadania",
+     "peso": 2,
+     "pontos": [
+      "Moral é o conjunto de normas, costumes e valores que orientam o comportamento de um grupo em determinado tempo e lugar — é prática, concreta e variável. Ética é a reflexão teórica, filosófica, sobre a moral: estuda os fundamentos do agir correto e busca princípios mais universais. A moral diz o que fazer; a ética pergunta por quê.",
+      "Valores são o que uma pessoa ou sociedade considera importante (honestidade, justiça, solidariedade); princípios são regras gerais de conduta que nascem desses valores; virtudes são disposições do caráter adquiridas pelo hábito — para Aristóteles, a virtude é o justo meio entre dois extremos.",
+      "Ética não se confunde com Direito: a norma jurídica é coercitiva e imposta pelo Estado; a norma moral depende da adesão da consciência. Nem tudo que é legal é moral, e o Código de Ética do servidor pede que ele escolha entre o honesto e o desonesto, não só entre o legal e o ilegal.",
+      "Ética e democracia: a democracia depende de valores compartilhados — liberdade, igualdade, tolerância, participação, respeito à diversidade — e do controle do poder pelos cidadãos; a ética pública dá legitimidade às instituições.",
+      "Cidadania é o exercício de direitos e deveres civis, políticos e sociais. A cidadania e a dignidade da pessoa humana estão entre os fundamentos da República (CF, art. 1º, II e III)."
+     ],
+     "pegadinhas": [
+      "Moral é a prática (os costumes de um grupo); ética é a reflexão teórica sobre a moral.",
+      "O que é legal nem sempre é moral: o servidor decide também entre o honesto e o desonesto."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "etica-funcao-publica",
+     "titulo": "Ética e função pública",
+     "edital": "4 Ética e função pública",
+     "peso": 1,
+     "pontos": [
+      "Ética na função pública é o compromisso do agente com o interesse público acima de interesses pessoais: o cargo é um encargo a serviço da sociedade, não um privilégio. Liga-se aos princípios da moralidade, da impessoalidade e da eficiência (CF, art. 37).",
+      "A moralidade administrativa é princípio jurídico: o ato imoral é inválido mesmo que formalmente legal, e a improbidade gera suspensão dos direitos políticos, perda da função pública, indisponibilidade dos bens e ressarcimento ao erário (CF, art. 37, § 4º).",
+      "O sistema de ética do Executivo federal combina normas de conduta (Código de Ética do Decreto 1.171/1994 e Código de Conduta da Alta Administração Federal), órgãos de ética (Comissão de Ética Pública e comissões setoriais, Decreto 6.029/2007), regras de conflito de interesses (Lei 12.813/2013), transparência (Lei 12.527/2011) e governança e integridade (Decreto 9.203/2017).",
+      "Para a apuração ética, servidor público é todo aquele que, por lei, contrato ou qualquer ato jurídico, presta serviço de natureza permanente, temporária ou excepcional, ainda que sem retribuição financeira, ligado direta ou indiretamente a órgão do poder estatal (Decreto 1.171/1994, Anexo, XXIV) — um conceito amplo.",
+      "As responsabilidades são independentes: a mesma conduta pode gerar censura ética, sanção disciplinar (Lei 8.112/1990), indenização e pena criminal; a comissão de ética pode encaminhar o caso ao sistema correcional (Decreto 6.029/2007, art. 12, § 5º)."
+     ],
+     "pegadinhas": [
+      "Para a ética, 'servidor' inclui quem presta serviço temporário, excepcional ou sem remuneração.",
+      "A censura ética não impede o processo disciplinar pela mesma conduta."
+     ],
+     "novidades": [],
+     "itens": 4,
+     "questoes": []
+    },
+    {
+     "id": "codigo-etica",
+     "titulo": "Código de Ética do servidor (Decreto 1.171/1994)",
+     "edital": "5 Decreto 1.171/1994",
+     "peso": 3,
+     "pontos": [
+      "O Decreto 1.171/1994 aprova o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal (Anexo): regras deontológicas (I a XIII), deveres (XIV), vedações (XV) e comissões de ética (XVI a XXV, em parte revogados pelo Decreto 6.029/2007).",
+      "Regras deontológicas: dignidade, decoro, zelo, eficácia e consciência dos princípios morais norteiam o servidor (I); ele decide não só entre o legal e o ilegal, mas principalmente entre o honesto e o desonesto (II); a moralidade não se limita à distinção entre o bem e o mal — o fim é sempre o bem comum, e o equilíbrio entre a legalidade e a finalidade consolida a moralidade do ato (III).",
+      "A publicidade de qualquer ato administrativo é requisito de eficácia e moralidade, salvo nos casos de segurança nacional, investigações policiais ou interesse superior do Estado e da Administração, em processo previamente declarado sigiloso (VII).",
+      "Tratar mal quem paga tributos causa dano moral (IX); deixar alguém à espera, permitindo longas filas ou atraso no serviço, é grave dano moral aos usuários (X). Toda ausência INJUSTIFICADA do servidor de seu local de trabalho é fator de desmoralização do serviço público, o que quase sempre conduz à desordem nas relações humanas (XII).",
+      "Deveres (XIV), entre outros: desempenhar a tempo as atribuições; ser probo, reto, leal e justo, escolhendo sempre a opção mais vantajosa para o bem comum; respeitar a hierarquia, sem temor de representar contra comprometimento indevido; resistir a pressões de superiores, contratantes e interessados que busquem vantagens indevidas e denunciá-las; abster-se de exercer a função com finalidade estranha ao interesse público, mesmo observando as formalidades legais.",
+      "Vedações (XV), entre outras: usar o cargo, amizades, tempo, posição e influências para obter favorecimento para si ou para outrem; ser conivente com erro ou infração por espírito de solidariedade; usar artifícios para procrastinar ou dificultar o exercício regular de direito; permitir que perseguições, simpatias, antipatias ou interesses pessoais interfiram no trato com o público ou com os colegas; pleitear ou receber qualquer vantagem para cumprir sua missão.",
+      "A pena aplicável pela Comissão de Ética é a de CENSURA, fundamentada em parecer assinado por todos os integrantes, com ciência do faltoso (XXII)."
+     ],
+     "pegadinhas": [
+      "É a ausência INJUSTIFICADA que desmoraliza o serviço público (XII) — a PRF 2021 (item 46) tirou o 'injustificada' e o gabarito foi Errado.",
+      "Comissão de Ética aplica CENSURA; advertência, suspensão e demissão são da Lei 8.112.",
+      "Publicidade é a regra; o sigilo vale para segurança nacional, investigação policial ou interesse superior, em processo previamente declarado sigiloso."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 46
+      }
+     ]
+    },
+    {
+     "id": "gestao-etica",
+     "titulo": "Sistema de Gestão da Ética (Decreto 6.029/2007)",
+     "edital": "5 Decreto 6.029/2007",
+     "peso": 2,
+     "pontos": [
+      "O Decreto 6.029/2007 institui o Sistema de Gestão da Ética do Poder Executivo Federal, integrado pela Comissão de Ética Pública (CEP), pelas comissões de ética do Decreto 1.171/1994 e pelas demais comissões de ética e equivalentes dos órgãos e entidades.",
+      "CEP (art. 3º): sete brasileiros de idoneidade moral, reputação ilibada e notória experiência em administração pública, designados pelo Presidente da República, com mandato de três anos, permitida uma única recondução; a atuação não é remunerada e é considerada prestação de relevante serviço público.",
+      "Comissões de ética dos órgãos (art. 5º): três membros titulares e três suplentes, escolhidos entre servidores e empregados do quadro permanente e designados pelo dirigente máximo, com mandatos não coincidentes de três anos. Os trabalhos nas comissões têm prioridade sobre as atribuições dos cargos de seus membros (art. 19).",
+      "Processo (art. 12): instaurado de ofício ou por denúncia fundamentada; o investigado é notificado para se manifestar por escrito em 10 dias. O procedimento fica com a chancela de 'reservado' até ser concluído (art. 13).",
+      "Direitos do investigado (art. 14): saber o que lhe é imputado, conhecer o teor da acusação e ter vista dos autos no recinto das comissões, MESMO QUE AINDA NÃO TENHA SIDO NOTIFICADO da existência do procedimento; inclui obter cópia dos autos e certidão do seu teor.",
+      "Conclusão: verificada a falta ética, a comissão pode, conforme o caso, sugerir a exoneração de cargo ou função de confiança ou a devolução ao órgão de origem, encaminhar o caso à CGU ou ao sistema correcional e recomendar procedimento administrativo (art. 12, § 5º). As decisões viram ementas, sem o nome do investigado, divulgadas no sítio do órgão (art. 18), e ninguém pode alegar sigilo para deixar de informar às comissões (art. 20)."
+     ],
+     "pegadinhas": [
+      "Vista dos autos mesmo ANTES de ser notificado, com direito a cópia (PRF 2021, item 48).",
+      "O procedimento é 'reservado' até a conclusão; depois, deixa de ser.",
+      "Comissão setorial: 3 titulares e 3 suplentes, do quadro permanente, com mandato de 3 anos."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 48
+      }
+     ]
+    },
+    {
+     "id": "lai",
+     "titulo": "Lei de Acesso à Informação e Decreto 7.724/2012",
+     "edital": "5 Lei 12.527/2011",
+     "peso": 2,
+     "pontos": [
+      "A Lei 12.527/2011 (LAI) regula o acesso a informações públicas (CF, art. 5º, XXXIII): a publicidade é a regra e o sigilo, a exceção. Transparência ativa: os órgãos divulgam na internet, sem pedido, informações de interesse coletivo — inclusive procedimentos licitatórios, com editais e resultados, e os contratos celebrados (art. 8º, § 1º, IV). Municípios de até 10 mil habitantes estão dispensados da divulgação na internet, mas não da execução orçamentária em tempo real (§ 4º).",
+      "Transparência passiva: qualquer interessado pode pedir informação por qualquer meio legítimo, com identificação e especificação do que quer (art. 10); são vedadas exigências relativas aos motivos do pedido (§ 3º). O serviço é gratuito, salvo o custo de reprodução, do qual é isento quem não puder pagar sem prejuízo do sustento (art. 12).",
+      "Prazos (art. 11): acesso imediato à informação disponível; não sendo possível, até 20 dias, prorrogáveis por mais 10 com justificativa. Se a informação já estiver disponível ao público, o órgão indica por escrito o lugar e a forma de consultá-la (§ 6º).",
+      "Recurso (art. 15): em 10 dias da ciência da negativa, à autoridade hierarquicamente superior à que decidiu, que se manifesta em 5 dias. No Executivo federal, cabe ainda recurso à Controladoria-Geral da União (art. 16) e há a Comissão Mista de Reavaliação de Informações.",
+      "Sigilo (art. 24): ultrassecreta, 25 anos; secreta, 15 anos; reservada, 5 anos, contados da produção. Informações pessoais ligadas à intimidade, vida privada, honra e imagem têm acesso restrito por até 100 anos, independentemente de classificação (art. 31).",
+      "No Executivo federal (Decreto 7.724/2012, com o Decreto 11.527/2023), o pedido é feito em formulário padrão, por sistema eletrônico mantido pela CGU ou presencialmente no Serviço de Informação ao Cidadão (SIC); é FACULTADO ao órgão receber pedidos por telefone ou correspondência, se atenderem aos requisitos (art. 11, § 3º). Não são atendidos pedidos genéricos, desproporcionais ou que exijam trabalho adicional de análise ou consolidação de dados (art. 13).",
+      "Condutas ilícitas (art. 32): negar, retardar deliberadamente ou fornecer de forma incorreta a informação; ocultar ou destruir informação; divulgar indevidamente informação sigilosa ou pessoal; impor sigilo para obter proveito pessoal ou ocultar ato ilegal. Para o servidor federal, a punição mínima é a suspensão, e a conduta pode ser improbidade."
+     ],
+     "pegadinhas": [
+      "Não se exige o MOTIVO do pedido (art. 10, § 3º).",
+      "Licitações e contratos são de transparência ATIVA: o servidor indica onde estão publicados; e receber pedido por telefone é faculdade do órgão, não dever (PRF 2021, item 49).",
+      "Sigilo: 25 (ultrassecreta), 15 (secreta), 5 (reservada); informações pessoais, até 100 anos."
+     ],
+     "novidades": [
+      "Decreto 11.527/2023: o pedido no Executivo federal passou a ser feito pelo sistema eletrônico da CGU ou presencialmente, e o requerente identificado pode pedir a preservação da sua identidade perante o órgão."
+     ],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 49
+      }
+     ]
+    },
+    {
+     "id": "conflito-interesses",
+     "titulo": "Conflito de interesses e nepotismo",
+     "edital": "5 Lei 12.813/2013 e Decreto 7.203/2010",
+     "peso": 2,
+     "pontos": [
+      "Conflito de interesses é a situação gerada pelo confronto entre interesses públicos e privados que possa comprometer o interesse coletivo ou influenciar, de maneira imprópria, o desempenho da função pública. Informação privilegiada é a que trata de assunto sigiloso ou relevante para decisão do Executivo federal, com repercussão econômica ou financeira, e não é de amplo conhecimento público (Lei 12.813/2013, art. 3º).",
+      "Alcance (art. 2º): Ministros de Estado; cargos de natureza especial; presidentes, vice-presidentes e diretores de autarquias, fundações, empresas públicas e sociedades de economia mista; ocupantes de DAS 6 e 5 ou equivalentes; e quem tem acesso a informação privilegiada capaz de trazer vantagem econômica.",
+      "Configuram conflito no exercício (art. 5º), entre outros: divulgar ou usar informação privilegiada; prestar serviço ou manter negócio com quem tenha interesse em decisão do agente; atuar, ainda que informalmente, como intermediário de interesses privados nos órgãos públicos; praticar ato em benefício de pessoa jurídica de que participe o agente, seu cônjuge, companheiro ou parentes até o terceiro grau; receber presente de quem tenha interesse em sua decisão, fora dos limites do regulamento.",
+      "Após o exercício (art. 6º): a qualquer tempo, é vedado divulgar ou usar informação privilegiada; por 6 meses (quarentena), salvo autorização da CEP ou da CGU, é vedado, entre outros, prestar serviço a quem teve relacionamento relevante com o agente em razão do cargo e aceitar cargo de administrador ou conselheiro em entidade que atue na área de competência do cargo ocupado.",
+      "Fiscalização (art. 8º): a Comissão de Ética Pública cuida da alta administração (ministros, natureza especial, dirigentes e DAS 6 e 5); a CGU, dos demais agentes. A prática configura improbidade administrativa (art. 11 da Lei 8.429/1992) e sujeita o agente à demissão (art. 12).",
+      "Nepotismo no Executivo federal (Decreto 7.203/2010): familiar é o cônjuge, o companheiro ou o parente em linha reta ou colateral, por consanguinidade ou afinidade, até o terceiro grau (art. 2º, III). É vedado nomear familiar para cargo em comissão ou função de confiança, inclusive por designações recíprocas, e contratar diretamente, sem licitação, empresa cujo administrador ou sócio com poder de direção seja familiar de ocupante de cargo em comissão ou função de confiança da área contratante ou de autoridade superior a ele (art. 3º, § 3º).",
+      "Primo é parente colateral de QUARTO grau: fica fora do conceito de familiar. Por isso o diretor-geral da PRF pode, cumpridos os requisitos legais, contratar diretamente empresa da qual um primo seja sócio (PRF 2021, item 50)."
+     ],
+     "pegadinhas": [
+      "Familiar vai até o TERCEIRO grau; primo é de QUARTO grau.",
+      "Quarentena de 6 meses depois de deixar o cargo; a vedação de usar informação privilegiada é PARA SEMPRE.",
+      "CEP cuida da alta administração; CGU, dos demais agentes."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 50
+      }
+     ]
+    },
+    {
+     "id": "governanca",
+     "titulo": "Governança pública (Decreto 9.203/2017)",
+     "edital": "5 Decreto 9.203/2017",
+     "peso": 1,
+     "pontos": [
+      "O Decreto 9.203/2017 trata da política de governança da administração pública federal direta, autárquica e fundacional (art. 1º). Governança pública é o conjunto de mecanismos de liderança, estratégia e controle postos em prática para avaliar, direcionar e monitorar a gestão, com vistas à condução de políticas públicas e à prestação de serviços de interesse da sociedade (art. 2º, I).",
+      "Valor público: produtos e resultados gerados, preservados ou entregues pelas atividades da organização que representem respostas efetivas e úteis às necessidades de interesse público (art. 2º, II). Gestão de riscos: processo de natureza permanente, estabelecido, direcionado e monitorado pela alta administração (art. 2º, IV).",
+      "Princípios (art. 3º): capacidade de resposta; integridade; confiabilidade; melhoria regulatória; prestação de contas e responsabilidade; transparência.",
+      "Mecanismos (art. 5º): liderança — práticas de natureza humana ou comportamental exercidas nos principais cargos (integridade, competência, responsabilidade e motivação); estratégia — definição de diretrizes, objetivos, planos e ações, com critérios de priorização e alinhamento, para que os serviços alcancem o resultado pretendido; controle — processos estruturados para mitigar os riscos e assegurar a execução ordenada, ética, econômica, eficiente e eficaz das atividades.",
+      "Programa de integridade (art. 19), em quatro eixos: comprometimento e apoio da alta administração; unidade responsável pela implementação; análise, avaliação e gestão dos riscos de integridade; e monitoramento contínuo do programa."
+     ],
+     "pegadinhas": [
+      "Os mecanismos de governança são TRÊS: liderança, estratégia e controle.",
+      "'Estratégia' é definir diretrizes, objetivos, planos e ações (PRF 2021, item 47).",
+      "O decreto vale para a administração direta, autárquica e fundacional — não para as estatais."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 47
+      }
+     ]
+    }
+   ]
+  },
+  {
    "materia": "Direito Constitucional",
    "trilha": "prf-constitucional",
    "fonte": "Constituição Federal atualizada (texto da Câmara dos Deputados conferido em 13/11/2026), com as EC 111/2021, 114/2021, 115/2022 e 131/2023; teses do STF (Temas 280, 541, 647 e 855; ADPF 187); situação da PEC 18/2025 no Senado.",
@@ -1729,6 +1916,122 @@
       "Novembro de 2026: a redução da maioridade penal foi retirada da PEC da Segurança Pública e segue em propostas separadas; a inimputabilidade continua aos 18 anos (art. 228)."
      ],
      "itens": 5,
+     "questoes": []
+    }
+   ]
+  },
+  {
+   "materia": "Direitos Humanos",
+   "trilha": "prf-direitos-humanos",
+   "fonte": "CF (art. 5º, §§ 2º a 4º; art. 109, § 5º); Convenção Americana (Decreto 678/1992, texto conferido em 13/11/2026); DUDH (1948); Declaração de Viena (1993); STF (RE 466.343, SV 25, ADI 4275, ADO 26, Temas 280 e 855).",
+   "atualizado": "2026-11-13",
+   "topicos": [
+    {
+     "id": "dh-teoria",
+     "titulo": "Teoria geral dos direitos humanos",
+     "edital": "Direitos humanos: conceito, características, gerações",
+     "peso": 2,
+     "pontos": [
+      "Direitos humanos são direitos essenciais à vida digna, reconhecidos a toda pessoa pelo simples fato de ser humana; positivados na Constituição, costumam ser chamados de direitos fundamentais. O fundamento comum é a dignidade da pessoa humana (CF, art. 1º, III).",
+      "Características: universalidade (valem para todos); indivisibilidade e interdependência (civis, políticos, sociais, econômicos e culturais formam um todo — Declaração de Viena, 1993); inalienabilidade, irrenunciabilidade e imprescritibilidade; historicidade (surgem e se ampliam ao longo da história); relatividade (podem ser limitados quando colidem com outros direitos); vedação do retrocesso.",
+      "Dimensões: 1ª — direitos civis e políticos, liberdades diante do Estado (liberdade); 2ª — direitos sociais, econômicos e culturais, que exigem prestações do Estado (igualdade); 3ª — direitos difusos, como paz, desenvolvimento e meio ambiente (fraternidade ou solidariedade). Parte da doutrina fala em 4ª e 5ª dimensões. Prefere-se 'dimensões' porque uma não substitui a anterior.",
+      "Eficácia: vertical (entre o Estado e o particular) e horizontal (entre particulares) — o STF aplica os direitos fundamentais também às relações privadas, como na exclusão de associado sem direito de defesa (RE 201.819).",
+      "Sistemas de proteção: global (ONU — DUDH de 1948 e os Pactos de 1966 sobre direitos civis e políticos e sobre direitos econômicos, sociais e culturais) e regionais (nas Américas, a OEA, com a Convenção Americana, a Comissão e a Corte Interamericanas). Os sistemas se complementam e prevalece a norma mais favorável à pessoa (princípio pro homine)."
+     ],
+     "pegadinhas": [
+      "1ª dimensão = liberdade; 2ª = igualdade; 3ª = fraternidade ou solidariedade.",
+      "As dimensões se somam: a nova não substitui a anterior.",
+      "Direitos humanos são relativos: podem ser limitados quando colidem com outros direitos."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": []
+    },
+    {
+     "id": "dh-cf-tratados",
+     "titulo": "A Constituição e os tratados de direitos humanos",
+     "edital": "1 CF e tratados internacionais",
+     "peso": 3,
+     "pontos": [
+      "Os direitos e garantias da Constituição não excluem outros decorrentes do regime e dos princípios por ela adotados ou dos tratados internacionais de que o Brasil seja parte (CF, art. 5º, § 2º).",
+      "Hierarquia dos tratados: (1) os de direitos humanos aprovados em cada Casa do Congresso, em dois turnos, por três quintos dos votos dos membros, equivalem às emendas constitucionais (§ 3º, EC 45/2004); (2) os demais tratados de direitos humanos têm status supralegal — abaixo da Constituição e acima das leis (STF, RE 466.343); (3) os tratados comuns equivalem a lei ordinária.",
+      "Já aprovados com status de emenda: a Convenção sobre os Direitos das Pessoas com Deficiência e seu Protocolo Facultativo (Decreto 6.949/2009), o Tratado de Marraqueche, sobre acesso a obras publicadas por pessoas cegas ou com deficiência visual (Decreto 9.522/2018), e a Convenção Interamericana contra o Racismo e formas correlatas de intolerância (Decreto 10.932/2022). Nenhum tratado é 'supraconstitucional'.",
+      "Pelo status supralegal do Pacto de São José, a prisão civil do depositário infiel tornou-se ilícita, qualquer que seja a modalidade do depósito (Súmula Vinculante 25); resta só a do devedor de alimentos.",
+      "O Brasil se submete à jurisdição do Tribunal Penal Internacional a cuja criação tenha manifestado adesão (§ 4º). Nas hipóteses de grave violação de direitos humanos, o Procurador-Geral da República pode suscitar, perante o STJ, o incidente de deslocamento de competência para a Justiça Federal (art. 109, § 5º).",
+      "STF: a pessoa trans pode alterar prenome e gênero no registro civil sem cirurgia e sem tratamentos hormonais ou patologizantes, diretamente no cartório (ADI 4275); homofobia e transfobia se enquadram na Lei do Racismo até que o Congresso legisle (ADO 26 e MI 4733); ingresso em domicílio sem mandado exige fundadas razões de flagrante (Tema 280); e o aviso prévio do direito de reunião não é pedido de autorização (Tema 855)."
+     ],
+     "pegadinhas": [
+      "A Convenção sobre os Direitos das Pessoas com Deficiência tem status de EMENDA constitucional, não supraconstitucional (PRF 2021, item 120).",
+      "Tratado de direitos humanos sem o rito do § 3º: SUPRALEGAL (abaixo da CF, acima das leis).",
+      "Pessoa trans altera nome e gênero sem cirurgia e sem laudo (item 118)."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 116
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 117
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 118
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 120
+      }
+     ]
+    },
+    {
+     "id": "dudh",
+     "titulo": "Declaração Universal dos Direitos Humanos",
+     "edital": "2 Declaração Universal (1948)",
+     "peso": 2,
+     "pontos": [
+      "A Declaração Universal dos Direitos Humanos foi proclamada pela Assembleia Geral da ONU em 10 de dezembro de 1948, em Paris (Resolução 217 A). É uma resolução, não um tratado — não foi ratificada pelos Estados —, mas é a base do sistema global e é vista como expressão do costume internacional.",
+      "Tem 30 artigos e põe a dignidade da pessoa humana no centro: 'Todos os seres humanos nascem livres e iguais em dignidade e em direitos' (art. 1º). Foi um dos primeiros instrumentos gerais de direitos humanos adotados por uma organização internacional e reúne direitos civis e políticos e direitos econômicos, sociais e culturais.",
+      "Direitos civis e políticos, por exemplo: vida, liberdade e segurança pessoal (art. 3º); proibição da escravidão (4º) e da tortura e de penas cruéis (5º); ninguém será arbitrariamente preso, detido ou exilado (9º); presunção de inocência (11); liberdade de locomoção (13); asilo contra perseguição, salvo por crime comum (14); direito a uma nacionalidade (15); liberdade de pensamento, consciência e religião (18) e de opinião e expressão (19); reunião e associação pacíficas, sem obrigação de se associar (20); participar do governo e votar (21).",
+      "Direitos econômicos, sociais e culturais: seguridade social (22); trabalho, com igual remuneração por igual trabalho (23); repouso e lazer (24); padrão de vida digno (25); educação gratuita ao menos nos graus elementares e fundamentais (26); vida cultural (27).",
+      "Deveres e limites (art. 29): toda pessoa tem deveres para com a comunidade, e os direitos só sofrem as limitações da lei para assegurar os direitos dos outros e as justas exigências da moral, da ordem pública e do bem-estar numa sociedade democrática. Nenhuma disposição pode ser interpretada para destruir os direitos nela previstos (art. 30)."
+     ],
+     "pegadinhas": [
+      "A DUDH é RESOLUÇÃO da Assembleia Geral (1948), não tratado ratificado.",
+      "Asilo não protege quem é perseguido por crime comum (art. 14).",
+      "Ninguém é obrigado a fazer parte de associação (art. 20)."
+     ],
+     "novidades": [],
+     "itens": 5,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 119
+      }
+     ]
+    },
+    {
+     "id": "pacto-sao-jose",
+     "titulo": "Convenção Americana (Pacto de São José)",
+     "edital": "3 Convenção Americana (Decreto 678/1992)",
+     "peso": 3,
+     "pontos": [
+      "A Convenção Americana sobre Direitos Humanos (Pacto de São José da Costa Rica) foi assinada em 22 de novembro de 1969, no âmbito da OEA. O Brasil aderiu em 1992 e a promulgou pelo Decreto 678/1992; como tratado de direitos humanos anterior à EC 45/2004, tem status supralegal.",
+      "Vida (art. 4º): protegida pela lei, em geral, desde o momento da concepção; ninguém pode ser privado dela arbitrariamente; a pena de morte não pode ser restabelecida nos Estados que a aboliram. Integridade (art. 5º): ninguém deve ser submetido a torturas nem a penas ou tratos cruéis, desumanos ou degradantes; as penas privativas de liberdade visam à reforma e à readaptação social dos condenados.",
+      "Liberdade pessoal (art. 7º): toda pessoa detida deve ser conduzida, sem demora, à presença de um juiz ou de outra autoridade autorizada por lei — base da audiência de custódia (7.5); ninguém deve ser detido por dívida, salvo por inadimplemento de obrigação alimentar (7.7) — o que levou à Súmula Vinculante 25.",
+      "Garantias judiciais (art. 8º): presunção de inocência enquanto não se comprove legalmente a culpa; direito de recorrer da sentença a juiz ou tribunal superior (8.2, h). Expressão (art. 13): sem censura prévia, mas com responsabilidades ulteriores; só os espetáculos públicos podem ter censura prévia, para proteger a moral da infância e da adolescência (13.4). É proibida a expulsão coletiva de estrangeiros (22.9).",
+      "Órgãos (art. 33): Comissão Interamericana de Direitos Humanos (7 membros, sede em Washington) e Corte Interamericana de Direitos Humanos (7 juízes, sede em San José). Qualquer pessoa, grupo de pessoas ou entidade não governamental pode peticionar à Comissão (art. 44), mas só os Estados Partes e a Comissão podem submeter caso à Corte (art. 61).",
+      "O Brasil reconheceu a competência contenciosa da Corte para fatos posteriores a 10 de dezembro de 1998 e já foi condenado em casos como Ximenes Lopes (2006), Gomes Lund — Guerrilha do Araguaia (2010), Trabalhadores da Fazenda Brasil Verde (2016) e Favela Nova Brasília (2017). Na adesão, declarou que visitas e inspeções in loco da Comissão dependem de anuência expressa do Estado."
+     ],
+     "pegadinhas": [
+      "Só os Estados Partes e a Comissão levam casos à Corte; o indivíduo peticiona à COMISSÃO (art. 61 e art. 44).",
+      "Prisão por dívida: só a do devedor de ALIMENTOS (7.7); a do depositário infiel, nunca (SV 25).",
+      "A vida é protegida 'em geral' desde a concepção."
+     ],
+     "novidades": [],
+     "itens": 6,
      "questoes": []
     }
    ]

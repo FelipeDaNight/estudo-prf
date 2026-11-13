@@ -6,7 +6,7 @@
  "tipo": "ce",
  "sincroniza_simulado": false,
  "origem": "socrates",
- "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Legislação Especial, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
+ "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Direitos Humanos, Ética e Cidadania, Legislação Especial, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
  "questoes": [
   {
    "n": 325,
@@ -1857,6 +1857,576 @@
    "resp": "E",
    "enunciado": "O auxílio a um crime que não chegou a ser tentado é punível como participação.",
    "just": "Art. 31: ajuste, determinação, instigação e auxílio não são puníveis se o crime não chega a ser tentado."
+  },
+  {
+   "n": 374,
+   "ref": "trilha:prf-direitos-humanos:dh-teoria:1",
+   "materia": "Direitos Humanos",
+   "topico": "Teoria geral dos direitos humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os direitos de segunda dimensão relacionam-se ao valor da igualdade e exigem prestações positivas do Estado.",
+   "just": "Doutrina."
+  },
+  {
+   "n": 375,
+   "ref": "trilha:prf-direitos-humanos:dh-teoria:2",
+   "materia": "Direitos Humanos",
+   "topico": "Teoria geral dos direitos humanos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os direitos humanos são absolutos, não admitindo qualquer limitação.",
+   "just": "Doutrina: são relativos e podem ser limitados quando colidem com outros direitos."
+  },
+  {
+   "n": 376,
+   "ref": "trilha:prf-direitos-humanos:dh-teoria:3",
+   "materia": "Direitos Humanos",
+   "topico": "Teoria geral dos direitos humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Declaração de Viena de 1993 afirma que todos os direitos humanos são universais, indivisíveis, interdependentes e inter-relacionados.",
+   "just": "Doutrina: Declaração e Programa de Ação de Viena (1993), § 5º."
+  },
+  {
+   "n": 377,
+   "ref": "trilha:prf-direitos-humanos:dh-teoria:4",
+   "materia": "Direitos Humanos",
+   "topico": "Teoria geral dos direitos humanos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O direito ao meio ambiente ecologicamente equilibrado é exemplo de direito de primeira dimensão.",
+   "just": "Doutrina: é direito de terceira dimensão (solidariedade)."
+  },
+  {
+   "n": 378,
+   "ref": "trilha:prf-direitos-humanos:dh-teoria:5",
+   "materia": "Direitos Humanos",
+   "topico": "Teoria geral dos direitos humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o STF, os direitos fundamentais também se aplicam às relações entre particulares.",
+   "just": "STF, RE 201.819 (eficácia horizontal)."
+  },
+  {
+   "n": 379,
+   "ref": "trilha:prf-direitos-humanos:dh-cf-tratados:1",
+   "materia": "Direitos Humanos",
+   "topico": "A Constituição e os tratados de direitos humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os tratados e convenções internacionais sobre direitos humanos aprovados, em cada Casa do Congresso Nacional, em dois turnos, por três quintos dos votos dos respectivos membros, serão equivalentes às emendas constitucionais.",
+   "just": "CF, art. 5º, § 3º."
+  },
+  {
+   "n": 380,
+   "ref": "trilha:prf-direitos-humanos:dh-cf-tratados:2",
+   "materia": "Direitos Humanos",
+   "topico": "A Constituição e os tratados de direitos humanos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Convenção Internacional sobre os Direitos das Pessoas com Deficiência tem status supraconstitucional no ordenamento brasileiro.",
+   "just": "CF, art. 5º, § 3º: equivale a emenda constitucional (Decreto 6.949/2009)."
+  },
+  {
+   "n": 381,
+   "ref": "trilha:prf-direitos-humanos:dh-cf-tratados:3",
+   "materia": "Direitos Humanos",
+   "topico": "A Constituição e os tratados de direitos humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o STF, os tratados de direitos humanos não aprovados pelo rito do § 3º do art. 5º da Constituição têm status supralegal.",
+   "just": "STF, RE 466.343."
+  },
+  {
+   "n": 382,
+   "ref": "trilha:prf-direitos-humanos:dh-cf-tratados:4",
+   "materia": "Direitos Humanos",
+   "topico": "A Constituição e os tratados de direitos humanos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "É lícita a prisão civil do depositário infiel, desde que o depósito seja judicial.",
+   "just": "STF, Súmula Vinculante 25: é ilícita qualquer que seja a modalidade do depósito."
+  },
+  {
+   "n": 383,
+   "ref": "trilha:prf-direitos-humanos:dh-cf-tratados:5",
+   "materia": "Direitos Humanos",
+   "topico": "A Constituição e os tratados de direitos humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o STF, a pessoa trans pode alterar prenome e gênero no registro civil independentemente de cirurgia de redesignação ou de tratamentos hormonais.",
+   "just": "STF, ADI 4275."
+  },
+  {
+   "n": 384,
+   "ref": "trilha:prf-direitos-humanos:dh-cf-tratados:6",
+   "materia": "Direitos Humanos",
+   "topico": "A Constituição e os tratados de direitos humanos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O incidente de deslocamento de competência é suscitado pelo Procurador-Geral da República perante o STF.",
+   "just": "CF, art. 109, § 5º: perante o STJ."
+  },
+  {
+   "n": 385,
+   "ref": "trilha:prf-direitos-humanos:dudh:1",
+   "materia": "Direitos Humanos",
+   "topico": "Declaração Universal dos Direitos Humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Declaração Universal dos Direitos Humanos foi adotada pela Assembleia Geral da ONU em 1948, sob a forma de resolução, e não de tratado.",
+   "just": "Doutrina: Resolução 217 A (III), de 10/12/1948."
+  },
+  {
+   "n": 386,
+   "ref": "trilha:prf-direitos-humanos:dudh:2",
+   "materia": "Direitos Humanos",
+   "topico": "Declaração Universal dos Direitos Humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Declaração Universal dos Direitos Humanos põe a dignidade da pessoa humana como fundamento da liberdade, da justiça e da paz no mundo.",
+   "just": "Doutrina: DUDH, preâmbulo e art. 1º."
+  },
+  {
+   "n": 387,
+   "ref": "trilha:prf-direitos-humanos:dudh:3",
+   "materia": "Direitos Humanos",
+   "topico": "Declaração Universal dos Direitos Humanos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo a Declaração Universal, o direito de asilo pode ser invocado em caso de perseguição motivada por crime de direito comum.",
+   "just": "Doutrina: DUDH, art. 14.2."
+  },
+  {
+   "n": 388,
+   "ref": "trilha:prf-direitos-humanos:dudh:4",
+   "materia": "Direitos Humanos",
+   "topico": "Declaração Universal dos Direitos Humanos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Declaração Universal prevê que a instrução será gratuita, ao menos nos graus elementares e fundamentais.",
+   "just": "Doutrina: DUDH, art. 26."
+  },
+  {
+   "n": 389,
+   "ref": "trilha:prf-direitos-humanos:dudh:5",
+   "materia": "Direitos Humanos",
+   "topico": "Declaração Universal dos Direitos Humanos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Declaração Universal contempla apenas direitos civis e políticos.",
+   "just": "Doutrina: traz também direitos econômicos, sociais e culturais (arts. 22 a 27)."
+  },
+  {
+   "n": 390,
+   "ref": "trilha:prf-direitos-humanos:pacto-sao-jose:1",
+   "materia": "Direitos Humanos",
+   "topico": "Convenção Americana (Pacto de São José)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Pela Convenção Americana, toda pessoa detida deve ser conduzida, sem demora, à presença de um juiz ou de outra autoridade autorizada por lei a exercer funções judiciais.",
+   "just": "Decreto 678/1992, art. 7.5."
+  },
+  {
+   "n": 391,
+   "ref": "trilha:prf-direitos-humanos:pacto-sao-jose:2",
+   "materia": "Direitos Humanos",
+   "topico": "Convenção Americana (Pacto de São José)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Qualquer pessoa pode submeter diretamente um caso à decisão da Corte Interamericana de Direitos Humanos.",
+   "just": "Decreto 678/1992, art. 61: somente os Estados Partes e a Comissão."
+  },
+  {
+   "n": 392,
+   "ref": "trilha:prf-direitos-humanos:pacto-sao-jose:3",
+   "materia": "Direitos Humanos",
+   "topico": "Convenção Americana (Pacto de São José)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Convenção Americana admite a prisão por dívida em caso de inadimplemento de obrigação alimentar.",
+   "just": "Decreto 678/1992, art. 7.7."
+  },
+  {
+   "n": 393,
+   "ref": "trilha:prf-direitos-humanos:pacto-sao-jose:4",
+   "materia": "Direitos Humanos",
+   "topico": "Convenção Americana (Pacto de São José)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Convenção Americana permite que o Estado que aboliu a pena de morte volte a adotá-la para crimes de extrema gravidade.",
+   "just": "Decreto 678/1992, art. 4.3."
+  },
+  {
+   "n": 394,
+   "ref": "trilha:prf-direitos-humanos:pacto-sao-jose:5",
+   "materia": "Direitos Humanos",
+   "topico": "Convenção Americana (Pacto de São José)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Comissão Interamericana e a Corte Interamericana de Direitos Humanos são compostas, cada uma, por sete membros.",
+   "just": "Decreto 678/1992, arts. 34 e 52."
+  },
+  {
+   "n": 395,
+   "ref": "trilha:prf-direitos-humanos:pacto-sao-jose:6",
+   "materia": "Direitos Humanos",
+   "topico": "Convenção Americana (Pacto de São José)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A lei pode submeter os espetáculos públicos a censura prévia com o objetivo exclusivo de regular o acesso a eles, para proteção moral da infância e da adolescência.",
+   "just": "Decreto 678/1992, art. 13.4."
+  },
+  {
+   "n": 396,
+   "ref": "trilha:prf-etica:etica-moral:1",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética, moral, princípios e valores",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A moral corresponde ao conjunto de normas e costumes que regulam o comportamento em uma sociedade, enquanto a ética é a reflexão teórica sobre esses comportamentos.",
+   "just": "Doutrina."
+  },
+  {
+   "n": 397,
+   "ref": "trilha:prf-etica:etica-moral:2",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética, moral, princípios e valores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A norma moral, assim como a jurídica, é imposta coercitivamente pelo Estado.",
+   "just": "Doutrina: a norma moral depende da adesão da consciência; a coerção estatal é da norma jurídica."
+  },
+  {
+   "n": 398,
+   "ref": "trilha:prf-etica:etica-moral:3",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética, moral, princípios e valores",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A cidadania e a dignidade da pessoa humana estão entre os fundamentos da República Federativa do Brasil.",
+   "just": "CF, art. 1º, II e III."
+  },
+  {
+   "n": 399,
+   "ref": "trilha:prf-etica:etica-moral:4",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética, moral, princípios e valores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os valores morais são universais e imutáveis, não variando entre sociedades e épocas.",
+   "just": "Doutrina: a moral é histórica e variável."
+  },
+  {
+   "n": 400,
+   "ref": "trilha:prf-etica:etica-moral:5",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética, moral, princípios e valores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Para o Código de Ética do servidor federal, basta ao servidor decidir entre o legal e o ilegal.",
+   "just": "Decreto 1.171/1994, Anexo, II: principalmente entre o honesto e o desonesto."
+  },
+  {
+   "n": 401,
+   "ref": "trilha:prf-etica:etica-funcao-publica:1",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética e função pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A moralidade é princípio expresso da administração pública, e o ato imoral pode ser invalidado ainda que formalmente legal.",
+   "just": "CF, art. 37, caput."
+  },
+  {
+   "n": 402,
+   "ref": "trilha:prf-etica:etica-funcao-publica:2",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética e função pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Para fins de apuração ética, só é considerado servidor público quem ocupa cargo efetivo remunerado.",
+   "just": "Decreto 1.171/1994, Anexo, XXIV: inclui serviço temporário ou excepcional, ainda que sem retribuição."
+  },
+  {
+   "n": 403,
+   "ref": "trilha:prf-etica:etica-funcao-publica:3",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética e função pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A responsabilização ética do servidor impede a apuração da mesma conduta na esfera disciplinar.",
+   "just": "Decreto 6.029/2007, art. 12, § 5º: a comissão pode encaminhar o caso ao sistema correcional; as esferas são independentes."
+  },
+  {
+   "n": 404,
+   "ref": "trilha:prf-etica:etica-funcao-publica:4",
+   "materia": "Ética e Cidadania",
+   "topico": "Ética e função pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os atos de improbidade importam a suspensão dos direitos políticos, a perda da função pública, a indisponibilidade dos bens e o ressarcimento ao erário.",
+   "just": "CF, art. 37, § 4º."
+  },
+  {
+   "n": 405,
+   "ref": "trilha:prf-etica:codigo-etica:1",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Ética do servidor (Decreto 1.171/1994)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o Código de Ética, toda ausência do servidor de seu local de trabalho é fator de desmoralização do serviço público.",
+   "just": "Decreto 1.171/1994, Anexo, XII: toda ausência injustificada."
+  },
+  {
+   "n": 406,
+   "ref": "trilha:prf-etica:codigo-etica:2",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Ética do servidor (Decreto 1.171/1994)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A pena aplicável ao servidor pela Comissão de Ética é a de censura.",
+   "just": "Decreto 1.171/1994, Anexo, XXII."
+  },
+  {
+   "n": 407,
+   "ref": "trilha:prf-etica:codigo-etica:3",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Ética do servidor (Decreto 1.171/1994)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A publicidade de qualquer ato administrativo constitui requisito de eficácia e moralidade, ressalvados casos como os de segurança nacional e investigações policiais.",
+   "just": "Decreto 1.171/1994, Anexo, VII."
+  },
+  {
+   "n": 408,
+   "ref": "trilha:prf-etica:codigo-etica:4",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Ética do servidor (Decreto 1.171/1994)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "É dever do servidor resistir às pressões de superiores hierárquicos que visem obter vantagens indevidas em decorrência de ações imorais, ilegais ou aéticas e denunciá-las.",
+   "just": "Decreto 1.171/1994, Anexo, XIV, i."
+  },
+  {
+   "n": 409,
+   "ref": "trilha:prf-etica:codigo-etica:5",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Ética do servidor (Decreto 1.171/1994)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O espírito de solidariedade autoriza o servidor a ser conivente com erro de colega, desde que não haja prejuízo ao erário.",
+   "just": "Decreto 1.171/1994, Anexo, XV, c: é vedado ser conivente."
+  },
+  {
+   "n": 410,
+   "ref": "trilha:prf-etica:codigo-etica:6",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Ética do servidor (Decreto 1.171/1994)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Deixar o cidadão à espera, permitindo a formação de longas filas, caracteriza grave dano moral aos usuários dos serviços públicos.",
+   "just": "Decreto 1.171/1994, Anexo, X."
+  },
+  {
+   "n": 411,
+   "ref": "trilha:prf-etica:gestao-etica:1",
+   "materia": "Ética e Cidadania",
+   "topico": "Sistema de Gestão da Ética (Decreto 6.029/2007)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "À pessoa investigada é assegurado ter vista dos autos no recinto das comissões de ética, mesmo que ainda não tenha sido notificada do procedimento, com direito a cópia.",
+   "just": "Decreto 6.029/2007, art. 14."
+  },
+  {
+   "n": 412,
+   "ref": "trilha:prf-etica:gestao-etica:2",
+   "materia": "Ética e Cidadania",
+   "topico": "Sistema de Gestão da Ética (Decreto 6.029/2007)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Comissão de Ética Pública é integrada por sete brasileiros designados pelo Presidente da República, com mandato de três anos.",
+   "just": "Decreto 6.029/2007, art. 3º."
+  },
+  {
+   "n": 413,
+   "ref": "trilha:prf-etica:gestao-etica:3",
+   "materia": "Ética e Cidadania",
+   "topico": "Sistema de Gestão da Ética (Decreto 6.029/2007)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "As comissões de ética dos órgãos são compostas por cinco membros titulares, ocupantes de cargos em comissão.",
+   "just": "Decreto 6.029/2007, art. 5º: três titulares e três suplentes, do quadro permanente."
+  },
+  {
+   "n": 414,
+   "ref": "trilha:prf-etica:gestao-etica:4",
+   "materia": "Ética e Cidadania",
+   "topico": "Sistema de Gestão da Ética (Decreto 6.029/2007)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O procedimento de apuração ética é público desde a sua instauração.",
+   "just": "Decreto 6.029/2007, art. 13: fica com a chancela de reservado até a conclusão."
+  },
+  {
+   "n": 415,
+   "ref": "trilha:prf-etica:gestao-etica:5",
+   "materia": "Ética e Cidadania",
+   "topico": "Sistema de Gestão da Ética (Decreto 6.029/2007)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Os trabalhos nas comissões de ética têm prioridade sobre as atribuições próprias dos cargos de seus membros.",
+   "just": "Decreto 6.029/2007, art. 19."
+  },
+  {
+   "n": 416,
+   "ref": "trilha:prf-etica:lai:1",
+   "materia": "Ética e Cidadania",
+   "topico": "Lei de Acesso à Informação e Decreto 7.724/2012",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "São vedadas quaisquer exigências relativas aos motivos determinantes da solicitação de informações de interesse público.",
+   "just": "Lei 12.527/2011, art. 10, § 3º."
+  },
+  {
+   "n": 417,
+   "ref": "trilha:prf-etica:lai:2",
+   "materia": "Ética e Cidadania",
+   "topico": "Lei de Acesso à Informação e Decreto 7.724/2012",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Não sendo possível o acesso imediato, o órgão tem até vinte dias para atender ao pedido, prorrogáveis por mais dez, mediante justificativa expressa.",
+   "just": "Lei 12.527/2011, art. 11, §§ 1º e 2º."
+  },
+  {
+   "n": 418,
+   "ref": "trilha:prf-etica:lai:3",
+   "materia": "Ética e Cidadania",
+   "topico": "Lei de Acesso à Informação e Decreto 7.724/2012",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A informação classificada como secreta tem prazo máximo de restrição de acesso de vinte e cinco anos.",
+   "just": "Lei 12.527/2011, art. 24, § 1º: secreta, 15 anos; ultrassecreta, 25."
+  },
+  {
+   "n": 419,
+   "ref": "trilha:prf-etica:lai:4",
+   "materia": "Ética e Cidadania",
+   "topico": "Lei de Acesso à Informação e Decreto 7.724/2012",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O serviço de busca e de fornecimento de informação é gratuito, salvo o ressarcimento do custo de reprodução.",
+   "just": "Lei 12.527/2011, art. 12."
+  },
+  {
+   "n": 420,
+   "ref": "trilha:prf-etica:lai:5",
+   "materia": "Ética e Cidadania",
+   "topico": "Lei de Acesso à Informação e Decreto 7.724/2012",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No Poder Executivo federal, os órgãos são obrigados a receber pedidos de acesso à informação feitos por telefone.",
+   "just": "Decreto 7.724/2012, art. 11, § 3º: o recebimento por outros meios é facultado."
+  },
+  {
+   "n": 421,
+   "ref": "trilha:prf-etica:conflito-interesses:1",
+   "materia": "Ética e Cidadania",
+   "topico": "Conflito de interesses e nepotismo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Após deixar o cargo, o agente alcançado pela Lei 12.813/2013 fica impedido, por seis meses, de aceitar cargo de administrador ou conselheiro em entidade que atue na área de competência do cargo ocupado, salvo autorização.",
+   "just": "Lei 12.813/2013, art. 6º, II."
+  },
+  {
+   "n": 422,
+   "ref": "trilha:prf-etica:conflito-interesses:2",
+   "materia": "Ética e Cidadania",
+   "topico": "Conflito de interesses e nepotismo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A vedação de divulgar ou usar informação privilegiada obtida no cargo cessa seis meses após o desligamento.",
+   "just": "Lei 12.813/2013, art. 6º, I: a qualquer tempo."
+  },
+  {
+   "n": 423,
+   "ref": "trilha:prf-etica:conflito-interesses:3",
+   "materia": "Ética e Cidadania",
+   "topico": "Conflito de interesses e nepotismo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Para o Decreto 7.203/2010, familiar é o cônjuge, o companheiro ou o parente em linha reta ou colateral, por consanguinidade ou afinidade, até o terceiro grau.",
+   "just": "Decreto 7.203/2010, art. 2º, III."
+  },
+  {
+   "n": 424,
+   "ref": "trilha:prf-etica:conflito-interesses:4",
+   "materia": "Ética e Cidadania",
+   "topico": "Conflito de interesses e nepotismo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O diretor-geral da PRF, satisfeitos os requisitos legais, pode contratar diretamente empresa da qual seja sócio um primo seu.",
+   "just": "Decreto 7.203/2010, arts. 2º, III, e 3º, § 3º: o primo é parente de quarto grau. PRF 2021, item 50."
+  },
+  {
+   "n": 425,
+   "ref": "trilha:prf-etica:conflito-interesses:5",
+   "materia": "Ética e Cidadania",
+   "topico": "Conflito de interesses e nepotismo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A prática de ato que configure conflito de interesses constitui improbidade administrativa e sujeita o agente à pena de demissão.",
+   "just": "Lei 12.813/2013, art. 12."
+  },
+  {
+   "n": 426,
+   "ref": "trilha:prf-etica:governanca:1",
+   "materia": "Ética e Cidadania",
+   "topico": "Governança pública (Decreto 9.203/2017)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o Decreto 9.203/2017, os mecanismos para o exercício da governança pública são a liderança, a estratégia e o controle.",
+   "just": "Decreto 9.203/2017, art. 5º."
+  },
+  {
+   "n": 427,
+   "ref": "trilha:prf-etica:governanca:2",
+   "materia": "Ética e Cidadania",
+   "topico": "Governança pública (Decreto 9.203/2017)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A estratégia compreende a definição de diretrizes, objetivos, planos e ações, para que os serviços da organização alcancem o resultado pretendido.",
+   "just": "Decreto 9.203/2017, art. 5º, II."
+  },
+  {
+   "n": 428,
+   "ref": "trilha:prf-etica:governanca:3",
+   "materia": "Ética e Cidadania",
+   "topico": "Governança pública (Decreto 9.203/2017)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A transparência e a prestação de contas e responsabilidade estão entre os princípios da governança pública.",
+   "just": "Decreto 9.203/2017, art. 3º."
+  },
+  {
+   "n": 429,
+   "ref": "trilha:prf-etica:governanca:4",
+   "materia": "Ética e Cidadania",
+   "topico": "Governança pública (Decreto 9.203/2017)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O Decreto 9.203/2017 aplica-se às empresas públicas e às sociedades de economia mista federais.",
+   "just": "Decreto 9.203/2017, art. 1º: administração direta, autárquica e fundacional."
+  },
+  {
+   "n": 430,
+   "ref": "trilha:prf-etica:governanca:5",
+   "materia": "Ética e Cidadania",
+   "topico": "Governança pública (Decreto 9.203/2017)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A gestão de riscos é processo eventual, conduzido exclusivamente pelos servidores de nível operacional.",
+   "just": "Decreto 9.203/2017, art. 2º, IV: processo permanente, direcionado e monitorado pela alta administração."
   },
   {
    "n": 80,
