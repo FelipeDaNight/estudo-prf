@@ -169,7 +169,7 @@
   }
   function registrarHist(item) {
     const d = item.dados || {}; const prev = recordes(); let ev = null, rec = "";
-    if (item.tipo === "estudo") ev = { k: "estudo", v: d.minutos };
+    if (item.tipo === "estudo") ev = { k: "estudo", v: d.minutos, m: d.materia };
     else if (item.tipo === "corrida") {
       ev = { k: "corrida", v: d.km, m: d.min };
       if (prev.maiorKm > 0 && d.km > prev.maiorKm) rec = "Novo recorde: maior corrida (" + fmt1(d.km) + " km)";
@@ -237,7 +237,7 @@
       $(x[1] + "_t").textContent = nl || leiCardsDe(m).length ? (m === "sem1" && leiFeitoHoje() ? "✅ Treino de hoje feito. " : "") + lv + " lacunas para revisar · trechos lidos " + nl + "/" + bt : x[2];
       $(x[1] + "_go").textContent = nl || leiCardsDe(m).length ? "Continuar" : "Começar";
     });
-    pintarChkCard();
+    pintarChkCard(); planoPintaHoje();
     const al = [];
     const de = diasDesde("estudo"), dc = diasDesde("corrida"), da = diasDesde("academia");
     if (de !== null && de >= 2) al.push("Você não estuda há " + de + " dias.");
@@ -1235,6 +1235,85 @@
     if ($("q_tela").style.display === "block") abrir("quest");
   }
 
+  // ---------------------------------------------------------------- PLANO DA SEMANA (o que estudar em cada dia)
+  // Padrão = aba Estudos da planilha (planilha-concurso-v2.4). Questões: a meta diária de Ajustes (30); segunda usa os 15-20 do plano.
+  const PLANO_DIAS = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
+  const PLANO_PADRAO = [
+    { mats: ["Língua Portuguesa"], o: "Teoria (aula gratuita) + 15-20 questões", q: 20, t: "60-90 min" },
+    { mats: ["Raciocínio Lógico"], o: "Teoria + exercícios práticos", q: 30, t: "60-90 min" },
+    { mats: ["Direito Constitucional"], o: "Teoria + questões estilo Cebraspe", q: 30, t: "60-90 min" },
+    { mats: ["Legislação de Trânsito"], o: "Leitura seca da lei (CTB) + questões", q: 30, t: "60-90 min" },
+    { mats: ["Direito Penal", "Processo Penal"], o: "Teoria + questões", q: 30, t: "60-90 min" },
+    { mats: ["Direito Administrativo", "Informática", "Ética e Cidadania"], o: "Alternar entre as três a cada semana · Teoria + questões", q: 30, t: "60-90 min" },
+    { mats: ["Revisão geral"], o: "Simulado curto + refazer as questões erradas da semana", q: 30, t: "60-90 min" },
+  ];
+  const PLANO_EXTRAS = ["Revisão geral", "Simulado", "Lei seca", "Redação"];
+  let plano = LS.get("plano", null);
+  if (!plano || !Array.isArray(plano.dias) || plano.dias.length !== 7) plano = { dias: JSON.parse(JSON.stringify(PLANO_PADRAO)), fonte: "planilha" };
+  const planoSalvar = () => { LS.set("plano", plano); };
+  const planoIdx = (d) => (paraData(d || hoje()).getDay() + 6) % 7;   // 0 = segunda
+  const planoHoje = () => plano.dias[planoIdx()];
+  function planoFeitoHoje() {
+    const h = hoje(), est = hist.filter((x) => x.d === h && x.k === "estudo"), porMat = {};
+    est.forEach((x) => { if (x.m) porMat[x.m] = (porMat[x.m] || 0) + (x.v || 0); });
+    return { porMat, questoes: hist.filter((x) => x.d === h && x.k === "questao").length };
+  }
+  function planoPintaHoje() {
+    if (!$("h_plano")) return;
+    const i = planoIdx(), p = plano.dias[i], f = planoFeitoHoje();
+    $("h_plano_dia").textContent = "🗓 Plano de hoje · " + PLANO_DIAS[i];
+    const box = $("h_plano_mats"); box.replaceChildren();
+    if (!p.mats.length) box.appendChild(el("div", "Dia livre no seu plano.", "note"));
+    p.mats.forEach((m) => { const min = f.porMat[m] || 0, ch = el("span", (min ? "✅ " : "") + m + (min ? " · " + min + " min" : ""), "plano_chip" + (min ? " feito" : "")); box.appendChild(ch); });
+    $("h_plano_o").textContent = [p.o, p.t].filter(Boolean).join(" · ");
+    const meta = Number(p.q) || 0;
+    $("h_plano_q").textContent = meta ? "Questões hoje: " + f.questoes + " de " + meta + (f.questoes >= meta ? " ✅" : "") : "Questões hoje: " + f.questoes;
+    $("h_plano_qb").style.width = (meta ? Math.min(100, 100 * f.questoes / meta) : 0) + "%";
+    const prox = p.mats.find((m) => !f.porMat[m] && listas.materias.indexOf(m) >= 0);
+    const bt = $("h_plano_go"); bt.style.display = prox ? "block" : "none";
+    if (prox) { bt.textContent = "▶ Estudar " + prox; bt.dataset.m = prox; }
+  }
+  function planoEstudar(m) { LS.set("ultMat", m); pintarListas(); abrir("estudo"); }
+  function planoRender() {
+    const box = document.createDocumentFragment(), hj = planoIdx(), todas = listas.materias.concat(PLANO_EXTRAS.filter((x) => listas.materias.indexOf(x) < 0));
+    const topo = el("div", undefined, "card");
+    topo.appendChild(el("div", "O que estudar em cada dia. Fica salvo neste aparelho e aparece todo dia na tela Hoje. Toque nos campos para mudar.", "note"));
+    let q = 0; plano.dias.forEach((d) => { q += Number(d.q) || 0; });
+    topo.appendChild(el("div", "Total na semana: " + q + " questões", "sub")).style.marginTop = "8px";
+    box.appendChild(topo);
+    plano.dias.forEach((d, i) => {
+      const c = el("div", undefined, "card plano_dia" + (i === hj ? " hoje" : "")); c.dataset.i = i;
+      c.appendChild(el("b", PLANO_DIAS[i] + (i === hj ? " · hoje" : "")));
+      const ms = el("div", undefined, "plano_mats");
+      d.mats.forEach((m, k) => {
+        const ch = el("span", m + " ", "plano_chip"), x = el("button", "×"); x.className = "plano_x"; x.setAttribute("aria-label", "Tirar " + m);
+        x.onclick = () => { d.mats.splice(k, 1); planoSalvar(); planoRender(); toast("Plano salvo."); };
+        ch.appendChild(x); ms.appendChild(ch);
+      });
+      c.appendChild(ms);
+      const sel = el("select"); sel.className = "plano_add"; sel.id = "plano_add_" + i;
+      const o0 = el("option", "+ Adicionar matéria"); o0.value = ""; sel.appendChild(o0);
+      todas.filter((m) => d.mats.indexOf(m) < 0).forEach((m) => { const o = el("option", m); o.value = m; sel.appendChild(o); });
+      sel.onchange = () => { if (!sel.value) return; d.mats.push(sel.value); planoSalvar(); planoRender(); toast("Plano salvo."); };
+      c.appendChild(sel);
+      const lin = el("div", undefined, "row plano_lin");
+      const lq = el("label", "Questões"), iq = el("input"); iq.type = "number"; iq.min = "0"; iq.step = "5"; iq.inputMode = "numeric"; iq.value = d.q; iq.id = "plano_q_" + i; iq.className = "plano_q";
+      iq.onchange = () => { d.q = Math.max(0, parseInt(iq.value, 10) || 0); iq.value = d.q; planoSalvar(); planoRender(); toast("Plano salvo."); };
+      lq.appendChild(iq);
+      const lt = el("label", "Tempo"), it = el("input"); it.type = "text"; it.value = d.t || ""; it.id = "plano_t_" + i; it.placeholder = "ex.: 60-90 min";
+      it.onchange = () => { d.t = it.value.trim(); planoSalvar(); toast("Plano salvo."); };
+      lt.appendChild(it); lin.appendChild(lq); lin.appendChild(lt); c.appendChild(lin);
+      const lo = el("label", "O que fazer"), io = el("textarea"); io.rows = 2; io.value = d.o || ""; io.id = "plano_o_" + i;
+      io.onchange = () => { d.o = io.value.trim(); planoSalvar(); toast("Plano salvo."); };
+      lo.appendChild(io); c.appendChild(lo);
+      box.appendChild(c);
+    });
+    const rz = el("button", "Voltar ao plano da planilha"); rz.className = "sec"; rz.id = "plano_reset";
+    rz.onclick = () => { if (!rz.dataset.c) { rz.dataset.c = "1"; rz.textContent = "Toque de novo para restaurar"; setTimeout(() => { rz.dataset.c = ""; rz.textContent = "Voltar ao plano da planilha"; }, 3000); return; } plano = { dias: JSON.parse(JSON.stringify(PLANO_PADRAO)), fonte: "planilha" }; planoSalvar(); planoRender(); toast("Plano da planilha restaurado."); };
+    box.appendChild(rz);
+    $("plano_corpo").replaceChildren(box);
+  }
+
   // ---------------------------------------------------------------- navegação e config
   function abrir(t) {
     if (t !== "quest") { qFlushErro(); qFlushSessao(); }
@@ -1244,6 +1323,7 @@
     if (t === "cfg") pintarFila();
     if (t === "hoje") pintarHoje();
     if (t === "chk") chkRender();
+    if (t === "plano") planoRender();
     if (t === "res") resHome();
     if (t === "lei") { const kt = $("k_tela"); if (kt) kt.style.display = "none"; leiHome(); }
     if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none" && $("k_tela").style.display === "none") qDesenhaLista();
@@ -1275,7 +1355,7 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
-    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_res_go").onclick = () => abrir("res"); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => resHome(); $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
+    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_res_go").onclick = () => abrir("res"); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => resHome(); $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
     $("lei_lido").onclick = leiMarcarLido; $("lei_lac").onclick = () => leiLacunas(LEI.bloco);
     $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
     document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });
@@ -1307,6 +1387,6 @@
     sync(false);
   }
 
-  window.__app = { leiIr, chkRender, Q, getLido: () => lido, setLido: (l) => { lido = l; LS.set("lei_lido", lido); }, getCards: () => cards, setCards: (c) => { cards = c; kSalvar(); }, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
+  window.__app = { leiIr, getPlano: () => plano, planoPintaHoje, chkRender, Q, getLido: () => lido, setLido: (l) => { lido = l; LS.set("lei_lido", lido); }, getCards: () => cards, setCards: (c) => { cards = c; kSalvar(); }, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar); else iniciar();
 })();

@@ -128,3 +128,8 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - "Marcar como lido" fica guardado no aparelho e aparece na lista (✅) e no card da Hoje.
 - O arquivo `bancos/socrates-resumos-prf.json` é gerado pelo Sócrates junto com o banco (`python -m socrates.estudo.exportar_app CAMINHO_DO_APP`) e funciona offline.
 
+
+## Plano da semana (16/11/2026)
+- Card **🗓 Plano de hoje** no topo da tela Hoje: matérias do dia (✅ quando você registra estudo nelas), o que fazer, tempo e "Questões hoje: X de N".
+- **Ver a semana**: os 7 dias editáveis (adicionar/tirar matérias, nº de questões, tempo, o que fazer). Salvo no aparelho.
+- Começa com o plano da aba Estudos da planilha. Questões: 15-20 na segunda (do próprio plano) e a meta diária de Ajustes (30) nos outros dias. Botão "Voltar ao plano da planilha" restaura.

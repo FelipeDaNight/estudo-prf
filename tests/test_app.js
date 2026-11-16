@@ -433,6 +433,33 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
   });
 
 
+  await t("Plano da semana: vem da planilha, aparece no Hoje e fica salvo", async () => {
+    await page.evaluate(() => window.__app.abrir("hoje"));
+    const DIAS = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    const dia = await page.evaluate(() => new Date().getDay());
+    assert.ok((await page.locator("#h_plano_dia").innerText()).includes(DIAS[dia]));
+    const p = await page.evaluate(() => window.__app.getPlano());
+    assert.deepStrictEqual(p.dias[4].mats, ["Direito Penal", "Processo Penal"], "sexta = penal + processo penal (planilha)");
+    assert.strictEqual(p.dias[0].q, 20); assert.strictEqual(p.dias[3].mats[0], "Legislação de Trânsito");
+    await page.click("#h_plano_ver");
+    await espera(() => document.querySelectorAll("#plano_corpo .plano_dia").length === 7);
+    assert.strictEqual(await page.locator("#plano_corpo .plano_dia.hoje").count(), 1);
+    await page.selectOption("#plano_add_0", "Direito Penal");
+    await espera(() => window.__app.getPlano().dias[0].mats.join("+") === "Língua Portuguesa+Direito Penal");
+    await page.fill("#plano_q_0", "40"); await page.locator("#plano_q_0").dispatchEvent("change");
+    await espera(() => window.__app.getPlano().dias[0].q === 40);
+    await page.reload();
+    const p2 = await page.evaluate(() => window.__app.getPlano());
+    assert.deepStrictEqual(p2.dias[0].mats, ["Língua Portuguesa", "Direito Penal"]); assert.strictEqual(p2.dias[0].q, 40);
+    await page.evaluate(() => window.__app.abrir("plano"));
+    await page.locator('#plano_corpo .plano_dia[data-i="0"] .plano_x').nth(1).click();
+    await espera(() => window.__app.getPlano().dias[0].mats.length === 1);
+    await page.click("#plano_reset"); await page.click("#plano_reset");
+    await espera(() => window.__app.getPlano().dias[0].q === 20);
+    await page.click("#plano_voltar");
+    assert.ok((await page.locator("#h_plano_q").innerText()).startsWith("Questões hoje:"));
+  });
+
   await t("Checklist PRF 2021 e CTB separado da Lei seca", async () => {
     await page.evaluate(() => window.__app.abrir("hoje"));
     assert.ok((await page.locator("#h_chk_t").innerText()).includes("0/112"));
