@@ -161,6 +161,10 @@ nav button i{font-size:19px}
 .des_col i{display:block;width:100%;border-radius:4px 4px 0 0;min-height:2px}.des_col small{font-size:9px;color:var(--mut)}.des_col span{font-size:10px;color:var(--mut);margin-top:3px}
 .des_insight div{font-size:15px}
 #des_fora summary{font-weight:600;cursor:pointer}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0}
+.tiles .card{margin:0;padding:12px;display:flex;flex-direction:column;cursor:pointer}.tiles .card>b{font-size:15px}
+.tiles .note{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:12px;flex:1;margin-top:4px!important}
+.tiles button{margin-top:8px;padding:8px 6px;font-size:14px}
 </style>
 </head>
 <body>
@@ -170,9 +174,16 @@ nav button i{font-size:19px}
 <section id="hoje" class="tab on">
  <div class="sub" id="h_data" style="margin:6px 0 0"></div>
  <div class="card" id="h_plano"><b id="h_plano_dia">🗓 Plano de hoje</b><div id="h_plano_mats" class="plano_mats"></div><div class="note" id="h_plano_o"></div><div id="h_plano_tri"></div><div class="sub" id="h_plano_q" style="margin-top:10px"></div><div class="pbar"><i class="a" id="h_plano_qb"></i></div><div class="row" style="gap:8px"><button id="h_plano_go" class="ok" style="flex:2"></button><button id="h_plano_ver" class="sec" style="flex:1">Ver a semana</button></div></div>
- <div class="card" id="h_des"><b>📊 Desempenho</b><div class="note" id="h_des_t" style="margin-top:6px"></div><button id="h_des_go" class="sec">Ver desempenho</button></div>
- <div class="card" id="h_tri"><b>🧭 Trilha do edital</b><div class="note" id="h_tri_t" style="margin-top:6px"></div><button id="h_tri_go" class="sec">Abrir trilha</button></div>
- <div class="card" id="h_chk"><b>📋 Checklist PRF 2021</b><div class="note" id="h_chk_t" style="margin-top:6px"></div><button id="h_chk_go" class="ok">Abrir checklist</button></div>
+ <div class="card" id="h_alertas" style="display:none"></div>
+ <div class="tiles" id="h_tiles">
+  <div class="card" id="h_des"><b>📊 Desempenho</b><div class="note" id="h_des_t" style="margin-top:6px"></div><button id="h_des_go" class="sec">Ver desempenho</button></div>
+  <div class="card" id="h_tri"><b>🧭 Trilha do edital</b><div class="note" id="h_tri_t" style="margin-top:6px"></div><button id="h_tri_go" class="sec">Abrir trilha</button></div>
+  <div class="card" id="h_chk"><b>📋 Checklist PRF 2021</b><div class="note" id="h_chk_t" style="margin-top:6px"></div><button id="h_chk_go" class="sec">Abrir checklist</button></div>
+  <div class="card" id="h_lei"><b>📖 Lei seca (Semana 1)</b><div class="note" id="h_lei_t" style="margin-top:6px"></div><button id="h_lei_go" class="sec">Começar</button></div>
+  <div class="card" id="h_ctb"><b>🚔 CTB</b><div class="note" id="h_ctb_t" style="margin-top:6px"></div><button id="h_ctb_go" class="sec">Começar</button></div>
+  <div class="card" id="h_res"><b>📚 Resumos</b><div class="note" id="h_res_t" style="margin-top:6px">A teoria de cada tópico do edital, com as pegadinhas e o que mudou na lei.</div><button id="h_res_go" class="sec">Abrir resumos</button></div>
+  <div class="card" id="h_mac"><b>🧠 Macetes</b><div class="note" id="h_mac_t" style="margin-top:6px">Mnemônicos conferidos com a lei.</div><button id="h_mac_go" class="sec">Abrir macetes</button></div>
+ </div>
  <div class="card">
   <div class="rings">
    <div class="anel"><div class="aro"><svg viewBox="0 0 36 36"><circle class="bg" cx="18" cy="18" r="15.9155"/><circle class="fg" id="h_a1" cx="18" cy="18" r="15.9155" pathLength="100" stroke-dasharray="0 100"/></svg><b id="h_t1">0</b></div><span>Estudo hoje (min)</span></div>
@@ -182,11 +193,6 @@ nav button i{font-size:19px}
   <div class="note" id="h_msg" style="text-align:center;margin-top:14px;font-size:15px"></div>
   <button id="h_go" class="ok">Estudar agora</button>
  </div>
- <div class="card" id="h_lei"><b>📖 Lei seca (Semana 1)</b><div class="note" id="h_lei_t" style="margin-top:6px"></div><button id="h_lei_go" class="sec">Começar</button></div>
- <div class="card" id="h_ctb"><b>🚔 CTB</b><div class="note" id="h_ctb_t" style="margin-top:6px"></div><button id="h_ctb_go" class="sec">Começar</button></div>
- <div class="card" id="h_res"><b>📚 Resumos</b><div class="note" id="h_res_t" style="margin-top:6px">A teoria de cada tópico do edital, com as pegadinhas e o que mudou na lei.</div><button id="h_res_go" class="sec">Abrir resumos</button></div>
- <div class="card" id="h_mac"><b>🧠 Macetes</b><div class="note" id="h_mac_t" style="margin-top:6px">Mnemônicos conferidos com a lei.</div><button id="h_mac_go" class="sec">Abrir macetes</button></div>
- <div class="card" id="h_alertas" style="display:none"></div>
  <div class="card kpi">
   <div><div class="mid" id="h_seq">0</div><div class="sub">dias seguidos</div></div>
   <div><div class="mid" id="h_km">0</div><div class="sub">km na semana</div></div>
@@ -393,6 +399,13 @@ nav button i{font-size:19px}
   <button id="g_listas" class="sec">Testar conexão e baixar listas</button>
   <button id="g_sync" class="sec">Enviar pendências agora</button>
   <div class="note" id="g_status" style="margin-top:10px"></div>
+ </div>
+ <div class="card" id="bk_card"><b>💾 Backup dos seus dados</b>
+  <div class="note" style="margin-top:6px">Cartões de revisão, histórico, desempenho, trilha e progresso das questões ficam só neste celular. Faça o backup e guarde o arquivo no iCloud Drive ou no Google Drive. Para passar para outro celular, use Restaurar.</div>
+  <button id="bk_fazer" class="ok">Fazer backup agora</button>
+  <label for="bk_arq">Restaurar de um arquivo de backup</label><input id="bk_arq" type="file" accept="application/json,.json">
+  <button id="bk_confirma" class="bad" style="display:none">Restaurar e substituir os dados deste celular</button>
+  <div class="note" id="bk_status" style="margin-top:8px"></div>
  </div>
  <div class="card"><b>Pendências</b><div class="list" id="g_fila"></div></div>
  <div class="note">Os dados ficam neste aparelho até serem enviados. Sem internet o app guarda e envia depois.</div>

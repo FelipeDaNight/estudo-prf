@@ -696,6 +696,25 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     assert.ok(ev.m === "Direito Penal" && ev.b === "macetes-prf" && ev.ce === 1 && ev.c, JSON.stringify(ev));
   });
 
+  await t("Backup: lembrete na tela Hoje, gera o arquivo e restaura os dados", async () => {
+    await page.evaluate(() => { localStorage.removeItem("ep_backup_ult"); window.__app.abrir("hoje"); });
+    await espera(() => document.getElementById("h_bk") && document.getElementById("h_alertas").textContent.includes("ainda não fez backup"));
+    const antes = await page.evaluate(() => localStorage.getItem("ep_hist"));
+    const [dl] = await Promise.all([page.waitForEvent("download"), page.click("#h_bk")]);
+    assert.ok(/estudo-prf-backup-\d{4}-\d{2}-\d{2}\.json/.test(dl.suggestedFilename()), dl.suggestedFilename());
+    const arq = await dl.path(), pac = JSON.parse(require("fs").readFileSync(arq, "utf8"));
+    assert.ok(pac.app === "estudo-prf" && pac.dados.hist === antes && !("tri_dados" in pac.dados), Object.keys(pac.dados).join(","));
+    await espera(() => !document.getElementById("h_bk"));                       // lembrete some depois do backup
+    await page.evaluate(() => { localStorage.setItem("ep_hist", "[]"); localStorage.setItem("ep_lixo", "1"); });
+    await page.click('[data-t="cfg"]');
+    await page.setInputFiles("#bk_arq", arq);
+    await espera(() => document.getElementById("bk_confirma").style.display === "block" && document.getElementById("bk_status").textContent.includes("SUBSTITUI"));
+    await page.click("#bk_confirma");
+    await page.waitForLoadState("load"); await espera(() => window.__app);
+    assert.strictEqual(await page.evaluate(() => localStorage.getItem("ep_hist")), antes);
+    assert.strictEqual(await page.evaluate(() => localStorage.getItem("ep_lixo")), null);
+  });
+
   await page.click('[data-t="estudo"]');
   await page.screenshot({ path: "shot_estudo.png" });
   await page.click('[data-t="corrida"]'); await page.screenshot({ path: "shot_corrida.png" });

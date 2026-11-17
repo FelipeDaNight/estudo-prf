@@ -244,8 +244,10 @@
     if (de !== null && de >= 2) al.push("Você não estuda há " + de + " dias.");
     if (dc !== null && dc >= 3) al.push("Você não corre há " + dc + " dias.");
     if (da !== null && da >= 4) al.push("Você não treina academia há " + da + " dias.");
-    const ca = $("h_alertas"); ca.style.display = al.length ? "block" : "none";
+    const bkv = bkVencido();
+    const ca = $("h_alertas"); ca.style.display = al.length || bkv ? "block" : "none";
     ca.innerHTML = ""; al.forEach((t) => { const p = document.createElement("div"); p.className = "note"; p.style.cssText = "font-size:14px;color:var(--warn)"; p.textContent = "⚠ " + t; ca.appendChild(p); });
+    if (bkv) { const u = LS.get("backup_ult", ""), p = el("div", "💾 " + (u ? "Seu último backup tem " + diasEntre(u, hoje()) + " dias." : "Você ainda não fez backup.") + " Seus cartões, histórico e trilha ficam só neste celular.", "note"); p.style.fontSize = "14px"; ca.appendChild(p); const b = el("button", "Fazer backup agora"); b.className = "sec"; b.id = "h_bk"; b.onclick = bkFazer; ca.appendChild(b); }
     const des = [
       { n: "Estudar " + fmt1(cfg.metaHoras) + " h", a: s.estudoSem / 60, m: cfg.metaHoras, f: (v) => fmt1(v) + " h" },
       { n: "Estudar em " + cfg.metaDias + " dias", a: s.diasEstudo, m: cfg.metaDias, f: (v) => String(v) },
@@ -626,9 +628,12 @@
   const fonteCurta = (b) => String(b.titulo || b.id).split(" · ")[0];
   const el = (tag, txt, cls) => { const e = document.createElement(tag); if (txt !== undefined) e.textContent = txt; if (cls) e.className = cls; return e; };
 
+  // PRF primeiro: prova real, fixação do Sócrates e macetes; os outros concursos depois
+  const Q_ORDEM = ["prf-2021-p1", "socrates-trilhas-prf", "macetes-prf"];
+  const qOrdem = (l) => l.map((b, i) => [b, i]).sort((x, y) => { const a = Q_ORDEM.indexOf(x[0].id), b = Q_ORDEM.indexOf(y[0].id); return (a < 0 ? 99 : a) - (b < 0 ? 99 : b) || x[1] - y[1]; }).map((x) => x[0]);
   async function qIndice() {
     try {
-      const r = await fetch("bancos/index.json", { cache: "no-cache" }); Q.bancos = await r.json(); LS.set("qidx", Q.bancos);
+      const r = await fetch("bancos/index.json", { cache: "no-cache" }); Q.bancos = qOrdem(await r.json()); LS.set("qidx", Q.bancos);
     } catch (e) { Q.bancos = LS.get("qidx", []); }
     Q.bancos = Q.bancos.filter((x) => !x.privado);
     const pv = LS.get("qpriv", null);
@@ -1586,12 +1591,60 @@
     if ($("q_tela").style.display !== "block") toast("Ainda não há questões de " + m + " nos bancos do app.");
   }
 
+  // ---------------------------------------------------------------- BACKUP (os dados ficam só neste aparelho: salvar e restaurar por arquivo)
+  const BK_CACHE = ["qidx", "lei_idx", "tri_dados", "mac_dados", "chk_dados"];
+  let bkPendente = null;
+  function bkDados() {
+    const d = {};
+    for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (!k || !k.startsWith("ep_") || BK_CACHE.includes(k.slice(3))) continue; d[k.slice(3)] = localStorage.getItem(k); }
+    return d;
+  }
+  const bkTemDados = () => hist.length > 0 || cards.length > 0 || Object.keys(triFeito).length > 0 || Object.keys(prog).length > 0;
+  function bkVencido() { const u = LS.get("backup_ult", ""); return bkTemDados() && (!u || diasEntre(u, hoje()) >= 7); }
+  function bkPinta() {
+    const s = $("bk_status"); if (!s) return; const u = LS.get("backup_ult", "");
+    s.textContent = (u ? "Último backup: " + u.split("-").reverse().join("/") + "." : "Nenhum backup feito ainda.") + " O app lembra na tela Hoje quando passar de 7 dias.";
+  }
+  async function bkFazer() {
+    LS.set("backup_ult", hoje());
+    const pac = { app: "estudo-prf", versao: 1, criado: new Date().toISOString(), dados: bkDados() };
+    const txt = JSON.stringify(pac), nome = "estudo-prf-backup-" + hoje() + ".json";
+    let ok = false;
+    try {
+      const f = new File([txt], nome, { type: "application/json" });
+      if (navigator.canShare && navigator.canShare({ files: [f] })) { await navigator.share({ files: [f], title: "Backup do Estudo PRF" }); ok = true; }
+    } catch (e) { if (e && e.name === "AbortError") { toast("Backup cancelado."); return; } }
+    if (!ok) { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([txt], { type: "application/json" })); a.download = nome; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500); }
+    bkPinta(); pintarHoje(); toast("Backup pronto. Guarde o arquivo no iCloud Drive ou no Google Drive.");
+  }
+  function bkLer(file) {
+    if (!file) return;
+    const r = new FileReader();
+    r.onload = () => {
+      try {
+        const p = JSON.parse(r.result);
+        if (!p || p.app !== "estudo-prf" || !p.dados || typeof p.dados !== "object") throw new Error("formato");
+        bkPendente = p; const d = (p.criado || "").slice(0, 10).split("-").reverse().join("/");
+        $("bk_status").textContent = "Backup de " + d + " com " + Object.keys(p.dados).length + " registros. Restaurar SUBSTITUI os dados deste aparelho.";
+        $("bk_confirma").style.display = "block";
+      } catch (e) { bkPendente = null; $("bk_confirma").style.display = "none"; $("bk_status").textContent = "Esse arquivo não é um backup do app."; }
+    };
+    r.readAsText(file);
+  }
+  function bkAplicar() {
+    if (!bkPendente) return;
+    const apagar = []; for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith("ep_")) apagar.push(k); }
+    apagar.forEach((k) => localStorage.removeItem(k));
+    Object.keys(bkPendente.dados).forEach((k) => { try { localStorage.setItem("ep_" + k, bkPendente.dados[k]); } catch (e) { /* sem espaço */ } });
+    toast("Backup restaurado."); setTimeout(() => location.reload(), 600);
+  }
+
   function abrir(t) {
     if (t !== "quest") { qFlushErro(); qFlushSessao(); }
     document.querySelectorAll(".tab").forEach((s) => s.classList.toggle("on", s.id === t));
     document.querySelectorAll("#nav button").forEach((b) => b.classList.toggle("on", b.dataset.t === t));
     window.scrollTo(0, 0);
-    if (t === "cfg") pintarFila();
+    if (t === "cfg") { pintarFila(); bkPinta(); }
     if (t === "hoje") pintarHoje();
     if (t === "chk") chkRender();
     if (t === "plano") planoRender();
@@ -1629,7 +1682,7 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
-    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); $("h_mac_go").onclick = () => abrir("mac"); $("mac_voltar").onclick = () => abrir("hoje"); macCarrega().then(macPintaHoje); $("h_des_go").onclick = () => abrir("des"); $("des_voltar").onclick = () => abrir("hoje"); desPintaHoje(); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => { if (RES.volta) { const v = RES.volta; RES.volta = null; abrir(v); } else resHome(); }; $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
+    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); document.querySelectorAll("#h_tiles > .card").forEach((c) => { c.onclick = (e) => { if (e.target.tagName !== "BUTTON") { const b = c.querySelector("button"); if (b) b.click(); } }; }); $("bk_fazer").onclick = bkFazer; $("bk_arq").onchange = (e) => bkLer(e.target.files[0]); $("bk_confirma").onclick = bkAplicar; $("h_mac_go").onclick = () => abrir("mac"); $("mac_voltar").onclick = () => abrir("hoje"); macCarrega().then(macPintaHoje); $("h_des_go").onclick = () => abrir("des"); $("des_voltar").onclick = () => abrir("hoje"); desPintaHoje(); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => { if (RES.volta) { const v = RES.volta; RES.volta = null; abrir(v); } else resHome(); }; $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
     $("lei_lido").onclick = leiMarcarLido; $("lei_lac").onclick = () => leiLacunas(LEI.bloco);
     $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
     document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });

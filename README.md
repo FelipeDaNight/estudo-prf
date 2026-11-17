@@ -161,3 +161,8 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Dá para registrar questões feitas fora do app (Gran, QConcursos, livro): entram nas contas e vão para a planilha.
 - A partir desta versão cada resposta guarda matéria, banco e certeza no histórico do aparelho; as respostas anteriores aparecem como "Sem matéria".
 
+## Backup e tela Hoje mais curta (17/11/2026)
+- **💾 Backup** (Ajustes): gera um arquivo com cartões, histórico, desempenho, trilha e progresso das questões para guardar no iCloud Drive ou no Google Drive; **Restaurar** traz tudo de volta (ou passa para outro celular). A tela Hoje lembra quando o último backup passa de 7 dias.
+- Tela Hoje: o plano do dia continua no topo; Desempenho, Trilha, Checklist, Lei seca, CTB, Resumos e Macetes viraram blocos lado a lado.
+- Questões: os bancos da PRF (prova 2021, Sócrates e macetes) aparecem antes dos outros concursos.
+
