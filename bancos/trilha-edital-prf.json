@@ -118,79 +118,98 @@
   {
    "materia": "Raciocínio Lógico",
    "logica": "Começa pelas contas do dia a dia (porcentagem, proporção), passa para equações, conjuntos e sequências, depois leitura de dados e geometria, e termina em funções, contagem e probabilidade, que exigem tudo antes.",
-   "nota": "O edital de 2021 não pede lógica proposicional (que está na sua planilha). Confira quando sair o novo edital.",
+   "nota": "O edital de 2021 não pede lógica proposicional (que está na sua planilha). Ela ficou como último passo, extra, porque é clássica da Cebraspe e pode voltar.",
    "passos": [
     {
      "n": 1,
      "t": "Porcentagem",
      "ed": "4",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-rlm:porcentagem"
     },
     {
      "n": 2,
      "t": "Razão, proporção e regra de três simples e composta",
      "ed": "3, 3.1, 3.2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-rlm:razao-proporcao"
     },
     {
      "n": 3,
      "t": "Equações e sistemas lineares (modelar o problema)",
      "ed": "1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-rlm:equacoes"
     },
     {
      "n": 4,
      "t": "Teoria dos conjuntos",
      "ed": "8",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-rlm:conjuntos"
     },
     {
      "n": 5,
      "t": "Sequências numéricas, PA e PG",
      "ed": "5, 5.1, 5.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-rlm:sequencias"
     },
     {
      "n": 6,
      "t": "Tabelas e gráficos; médias e desvios",
      "ed": "7, 7.1, 7.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-rlm:estatistica"
     },
     {
      "n": 7,
      "t": "Escalas, mapas e plantas; figuras planas e espaciais",
      "ed": "9, 9.1 a 9.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-rlm:geometria"
     },
     {
      "n": 8,
      "t": "Áreas, volumes e estimativas",
      "ed": "10, 10.1 a 10.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-rlm:geometria"
     },
     {
      "n": 9,
      "t": "Noção de função, gráficos, função afim e quadrática",
      "ed": "2, 2.1, 2.2",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-rlm:funcoes"
     },
     {
      "n": 10,
      "t": "Funções exponencial e logarítmica e aplicações",
      "ed": "2.2, 2.3",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-rlm:funcoes"
     },
     {
      "n": 11,
      "t": "Contagem (análise combinatória)",
      "ed": "6",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-rlm:contagem"
     },
     {
      "n": 12,
      "t": "Probabilidade e estatística",
      "ed": "6",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-rlm:probabilidade"
+    },
+    {
+     "n": 13,
+     "t": "Lógica proposicional (extra: fora do edital de 2021)",
+     "ed": "não consta do edital de 2021",
+     "nv": 2,
+     "res": "prf-rlm:logica"
     }
    ]
   },
@@ -203,49 +222,57 @@
      "n": 1,
      "t": "Internet e intranet: conceitos",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-informatica:internet-intranet"
     },
     {
      "n": 2,
      "t": "Navegadores, correio eletrônico, busca e redes sociais",
      "ed": "2, 2.1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-informatica:internet-intranet"
     },
     {
      "n": 3,
      "t": "Windows: noções de sistema operacional",
      "ed": "2.2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-informatica:windows"
     },
     {
      "n": 4,
      "t": "Acesso remoto, transferência de arquivos e multimídia",
      "ed": "2.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-informatica:internet-intranet"
     },
     {
      "n": 5,
      "t": "Vírus, worms, phishing e outras pragas",
      "ed": "4, 4.1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-informatica:malwares"
     },
     {
      "n": 6,
      "t": "Antivírus, firewall, anti-spyware e VPN",
      "ed": "4.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-informatica:ferramentas-seguranca"
     },
     {
      "n": 7,
      "t": "Computação em nuvem",
      "ed": "5",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-informatica:backup-nuvem"
     },
     {
      "n": 8,
      "t": "Transformação digital: IoT, big data e inteligência artificial",
      "ed": "3, 3.1 a 3.3",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-informatica:transformacao-digital"
     }
    ]
   },
@@ -258,55 +285,64 @@
      "n": 1,
      "t": "Cinemática escalar (MRU e MRUV)",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-fisica:cinematica"
     },
     {
      "n": 2,
      "t": "Cinemática vetorial e lançamentos",
      "ed": "1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-fisica:cinematica"
     },
     {
      "n": 3,
      "t": "Movimento circular",
      "ed": "2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-fisica:movimento-circular"
     },
     {
      "n": 4,
      "t": "Leis de Newton e aplicações",
      "ed": "3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-fisica:newton"
     },
     {
      "n": 5,
      "t": "Trabalho e potência",
      "ed": "4, 5",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-fisica:trabalho-energia"
     },
     {
      "n": 6,
      "t": "Energia cinética, potencial e atrito",
      "ed": "6",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-fisica:trabalho-energia"
     },
     {
      "n": 7,
      "t": "Conservação de energia",
      "ed": "7",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-fisica:trabalho-energia"
     },
     {
      "n": 8,
      "t": "Quantidade de movimento e impulso",
      "ed": "8",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-fisica:impulso"
     },
     {
      "n": 9,
      "t": "Colisões",
      "ed": "9",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-fisica:impulso"
     }
    ]
   },
@@ -395,80 +431,92 @@
      "n": 1,
      "t": "Brasil político: nação e território",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-geopolitica:nacao-territorio"
     },
     {
      "n": 2,
      "t": "Organização do Estado brasileiro",
      "ed": "2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-geopolitica:estado-brasileiro"
     },
     {
      "n": 3,
      "t": "Biomas, domínios e ecossistemas",
      "ed": "10",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-geopolitica:biomas"
     },
     {
      "n": 4,
      "t": "Distribuição da população e migrações internas",
      "ed": "5",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-geopolitica:populacao"
     },
     {
      "n": 5,
      "t": "Estrutura urbana e grandes metrópoles",
      "ed": "4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-geopolitica:urbanizacao"
     },
     {
      "n": 6,
      "t": "Rede de transportes: modais e infraestrutura",
      "ed": "7",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-geopolitica:transportes"
     },
     {
      "n": 7,
      "t": "Divisão inter-regional do trabalho e da produção",
      "ed": "3",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-geopolitica:divisao-trabalho"
     },
     {
      "n": 8,
      "t": "Indústria, cidades e agronegócio",
      "ed": "6",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-geopolitica:industria-agro"
     },
     {
      "n": 9,
      "t": "Geografia e gestão ambiental",
      "ed": "9",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-geopolitica:gestao-ambiental"
     },
     {
      "n": 10,
      "t": "Brasil na economia internacional",
      "ed": "8",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-geopolitica:economia-global"
     }
    ]
   },
   {
    "materia": "Língua Estrangeira",
    "logica": "Gramática que ajuda a entender o texto primeiro; depois prática de leitura, que é o que a prova cobra (8 itens).",
-   "nota": null,
+   "nota": "Resumos em inglês. Se você for fazer a prova em espanhol, me avise que eu escrevo a versão em espanhol.",
    "passos": [
     {
      "n": 1,
      "t": "Itens gramaticais importantes para entender o texto",
      "ed": "2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-ingles:ingles-gramatica"
     },
     {
      "n": 2,
      "t": "Compreensão de textos (inglês ou espanhol)",
      "ed": "1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-ingles:ingles-texto"
     }
    ]
   },
@@ -488,7 +536,8 @@
      "n": 2,
      "t": "CTB: conceitos e definições (Anexo I)",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "lei": "ctb"
     },
     {
      "n": 3,
@@ -655,7 +704,8 @@
      "n": 9,
      "t": "Garantias dos direitos coletivos, sociais e políticos",
      "ed": "2.5",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:remedios"
     },
     {
      "n": 10,

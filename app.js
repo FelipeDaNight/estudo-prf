@@ -1249,7 +1249,8 @@
     if (!$("h_tri_t")) return;
     if (!TRI) { $("h_tri_t").textContent = "Cada matéria do edital em ordem, do mais básico ao mais difícil."; return; }
     const tot = TRI.materias.reduce((n, m) => n + m.passos.length, 0), ok = TRI.materias.reduce((n, m) => n + m.passos.filter((p) => triFeito[triChave(m, p)]).length, 0);
-    $("h_tri_t").textContent = "Cada matéria do edital em ordem, do mais básico ao mais difícil. Estudados: " + ok + "/" + tot + " tópicos de " + TRI.materias.length + " matérias.";
+    const cob = TRI.materias.reduce((n, m) => n + m.passos.filter((p) => p.res || p.lei).length, 0);
+    $("h_tri_t").textContent = "Cada matéria do edital em ordem, do mais básico ao mais difícil. Estudados: " + ok + "/" + tot + " tópicos de " + TRI.materias.length + " matérias. Conteúdo no app: " + Math.round(100 * cob / tot) + "% do edital.";
   }
   // Abre o resumo do Sócrates ligado ao passo ("trilha:tópico"), ou já começa o treino dele.
   async function triResumo(ref, treinar) {
@@ -1274,7 +1275,8 @@
     box.appendChild(seg);
     const m = triMateria(triMat), ok = m.passos.filter((p) => triFeito[triChave(m, p)]).length, prox = triProximo(m);
     const c = el("div", undefined, "card"); c.appendChild(el("b", m.materia)).style.fontSize = "18px";
-    c.appendChild(el("div", ok + " de " + m.passos.length + " tópicos estudados", "sub")).style.marginTop = "4px";
+    const cob = m.passos.filter((p) => p.res || p.lei).length;
+    c.appendChild(el("div", ok + " de " + m.passos.length + " tópicos estudados · " + cob + " de " + m.passos.length + " com conteúdo no app", "sub")).style.marginTop = "4px";
     const pb = el("div", undefined, "pbar"), ia = el("i", undefined, "a"); ia.style.width = (100 * ok / m.passos.length) + "%"; pb.appendChild(ia); c.appendChild(pb);
     c.appendChild(el("div", "Por que esta ordem: " + m.logica, "lei-res"));
     if (m.nota) c.appendChild(el("div", "⚠ " + m.nota, "note")).style.marginTop = "8px";
@@ -1293,6 +1295,7 @@
         const bt = el("button", "🎯 Treinar"); bt.className = "sec tri_trein"; bt.onclick = () => triResumo(p.res, true);
         acoes.appendChild(br); acoes.appendChild(bt); c.appendChild(acoes);
       }
+      if (p.lei) { const acoes = el("div", undefined, "tri_acoes"), bl = el("button", "📖 Ler no CTB do app (dias 3 a 6)"); bl.className = "sec tri_lei"; bl.onclick = () => leiIr(p.lei); acoes.appendChild(bl); c.appendChild(acoes); }
     });
     box.appendChild(c);
     box.appendChild(el("div", d.fonte, "note"));

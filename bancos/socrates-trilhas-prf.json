@@ -6,7 +6,7 @@
  "tipo": "ce",
  "sincroniza_simulado": false,
  "origem": "socrates",
- "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 16/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Direitos Humanos, Ética e Cidadania, Legislação Especial, Língua Portuguesa, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
+ "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 16/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Direitos Humanos, Ética e Cidadania, Física, Geopolítica, Informática, Língua Inglesa, Legislação Especial, Língua Portuguesa, Direito Processual Penal, Raciocínio Lógico-Matemático e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
  "questoes": [
   {
    "n": 325,
@@ -2429,6 +2429,1416 @@
    "just": "Decreto 9.203/2017, art. 2º, IV: processo permanente, direcionado e monitorado pela alta administração."
   },
   {
+   "n": 513,
+   "ref": "trilha:prf-fisica:cinematica:1",
+   "materia": "Física",
+   "topico": "Cinemática escalar e vetorial",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Um veículo a 72 km/h que freia com desaceleração constante de 5 m/s² percorre 40 m até parar.",
+   "just": "Cálculo: Torricelli: 0 = 20² − 2 × 5 × d → d = 40 m."
+  },
+  {
+   "n": 514,
+   "ref": "trilha:prf-fisica:cinematica:2",
+   "materia": "Física",
+   "topico": "Cinemática escalar e vetorial",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se a velocidade de um veículo dobra, a distância de frenagem, com a mesma desaceleração, também dobra.",
+   "just": "Fórmula: d = v²/(2a): a distância quadruplica."
+  },
+  {
+   "n": 515,
+   "ref": "trilha:prf-fisica:cinematica:3",
+   "materia": "Física",
+   "topico": "Cinemática escalar e vetorial",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No ponto mais alto da trajetória de um lançamento oblíquo, a velocidade do projétil é nula.",
+   "just": "Conceito: só a componente vertical se anula; a horizontal permanece."
+  },
+  {
+   "n": 516,
+   "ref": "trilha:prf-fisica:cinematica:4",
+   "materia": "Física",
+   "topico": "Cinemática escalar e vetorial",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Desprezada a resistência do ar, um corpo em queda livre a partir do repouso percorre 20 m nos primeiros 2 s (g = 10 m/s²).",
+   "just": "Cálculo: h = 10 × 2²/2 = 20 m."
+  },
+  {
+   "n": 517,
+   "ref": "trilha:prf-fisica:cinematica:5",
+   "materia": "Física",
+   "topico": "Cinemática escalar e vetorial",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No gráfico da velocidade em função do tempo, a área sob a curva representa o deslocamento.",
+   "just": "Conceito de cinemática."
+  },
+  {
+   "n": 518,
+   "ref": "trilha:prf-fisica:cinematica:6",
+   "materia": "Física",
+   "topico": "Cinemática escalar e vetorial",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Uma velocidade de 90 km/h equivale a 25 m/s.",
+   "just": "Cálculo: 90 ÷ 3,6 = 25."
+  },
+  {
+   "n": 519,
+   "ref": "trilha:prf-fisica:cinematica:7",
+   "materia": "Física",
+   "topico": "Cinemática escalar e vetorial",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No movimento retilíneo uniforme, a aceleração do móvel é constante e diferente de zero.",
+   "just": "Definição: no MRU a velocidade é constante e a aceleração é nula."
+  },
+  {
+   "n": 520,
+   "ref": "trilha:prf-fisica:movimento-circular:1",
+   "materia": "Física",
+   "topico": "Movimento circular",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No movimento circular uniforme, a aceleração do móvel é nula, pois o módulo da velocidade é constante.",
+   "just": "Conceito: existe aceleração centrípeta, porque a direção da velocidade varia."
+  },
+  {
+   "n": 521,
+   "ref": "trilha:prf-fisica:movimento-circular:2",
+   "materia": "Física",
+   "topico": "Movimento circular",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Um carro de 1.000 kg que percorre uma curva de raio 100 m a 20 m/s está sujeito a uma força resultante centrípeta de 4.000 N.",
+   "just": "Cálculo: Fc = 1.000 × 20²/100 = 4.000 N."
+  },
+  {
+   "n": 522,
+   "ref": "trilha:prf-fisica:movimento-circular:3",
+   "materia": "Física",
+   "topico": "Movimento circular",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em uma curva plana horizontal, a força de atrito entre os pneus e a pista atua como resultante centrípeta.",
+   "just": "Conceito de dinâmica do movimento circular."
+  },
+  {
+   "n": 523,
+   "ref": "trilha:prf-fisica:movimento-circular:4",
+   "materia": "Física",
+   "topico": "Movimento circular",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A velocidade máxima com que um veículo faz uma curva plana sem derrapar é tanto maior quanto maior for a massa do veículo.",
+   "just": "Fórmula: v = √(μ·g·R) não depende da massa."
+  },
+  {
+   "n": 524,
+   "ref": "trilha:prf-fisica:movimento-circular:5",
+   "materia": "Física",
+   "topico": "Movimento circular",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Uma roda que gira a 120 rpm tem frequência de 2 Hz e período de 0,5 s.",
+   "just": "Cálculo: 120 ÷ 60 = 2 Hz; T = 1/f = 0,5 s."
+  },
+  {
+   "n": 525,
+   "ref": "trilha:prf-fisica:movimento-circular:6",
+   "materia": "Física",
+   "topico": "Movimento circular",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em uma roda que gira, um ponto da borda tem velocidade linear maior que a de um ponto próximo ao centro.",
+   "just": "Fórmula: v = ω·R, com a mesma velocidade angular."
+  },
+  {
+   "n": 526,
+   "ref": "trilha:prf-fisica:newton:1",
+   "materia": "Física",
+   "topico": "Leis de Newton e aplicações (atrito, plano inclinado)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se a resultante das forças que atuam sobre um corpo é nula, ele está necessariamente em repouso.",
+   "just": "Lei da inércia: pode estar em movimento retilíneo uniforme."
+  },
+  {
+   "n": 527,
+   "ref": "trilha:prf-fisica:newton:2",
+   "materia": "Física",
+   "topico": "Leis de Newton e aplicações (atrito, plano inclinado)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na colisão entre um caminhão e um automóvel, a força que o caminhão exerce no automóvel tem a mesma intensidade da força que o automóvel exerce no caminhão.",
+   "just": "Lei da ação e reação."
+  },
+  {
+   "n": 528,
+   "ref": "trilha:prf-fisica:newton:3",
+   "materia": "Física",
+   "topico": "Leis de Newton e aplicações (atrito, plano inclinado)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Uma força resultante de 3.000 N aplicada a um veículo de 1.000 kg produz aceleração de 3 m/s².",
+   "just": "Cálculo: a = F/m = 3.000 ÷ 1.000."
+  },
+  {
+   "n": 529,
+   "ref": "trilha:prf-fisica:newton:4",
+   "materia": "Física",
+   "topico": "Leis de Newton e aplicações (atrito, plano inclinado)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "As forças de ação e reação se anulam, pois têm mesma intensidade e sentidos opostos.",
+   "just": "Conceito: atuam em corpos diferentes e, por isso, não se anulam."
+  },
+  {
+   "n": 530,
+   "ref": "trilha:prf-fisica:newton:5",
+   "materia": "Física",
+   "topico": "Leis de Newton e aplicações (atrito, plano inclinado)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em um plano inclinado sem atrito, a aceleração de um bloco que desliza é g·sen θ.",
+   "just": "Fórmula do plano inclinado."
+  },
+  {
+   "n": 531,
+   "ref": "trilha:prf-fisica:newton:6",
+   "materia": "Física",
+   "topico": "Leis de Newton e aplicações (atrito, plano inclinado)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em geral, o coeficiente de atrito cinético é menor que o coeficiente de atrito estático.",
+   "just": "Conceito de atrito."
+  },
+  {
+   "n": 532,
+   "ref": "trilha:prf-fisica:newton:7",
+   "materia": "Física",
+   "topico": "Leis de Newton e aplicações (atrito, plano inclinado)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Durante o voo de um projétil lançado obliquamente, desprezada a resistência do ar, a força resultante sobre ele é o próprio peso.",
+   "just": "Conceito: a única força que atua é a gravitacional."
+  },
+  {
+   "n": 533,
+   "ref": "trilha:prf-fisica:trabalho-energia:1",
+   "materia": "Física",
+   "topico": "Trabalho, potência e energia",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A energia cinética de um veículo de 1.000 kg a 20 m/s é de 200.000 J.",
+   "just": "Cálculo: 1.000 × 20²/2 = 200.000 J."
+  },
+  {
+   "n": 534,
+   "ref": "trilha:prf-fisica:trabalho-energia:2",
+   "materia": "Física",
+   "topico": "Trabalho, potência e energia",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se a velocidade de um veículo dobra, sua energia cinética também dobra.",
+   "just": "Fórmula: Ec = m·v²/2: a energia quadruplica."
+  },
+  {
+   "n": 535,
+   "ref": "trilha:prf-fisica:trabalho-energia:3",
+   "materia": "Física",
+   "topico": "Trabalho, potência e energia",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A força centrípeta não realiza trabalho sobre um corpo em movimento circular uniforme.",
+   "just": "Conceito: é perpendicular ao deslocamento."
+  },
+  {
+   "n": 536,
+   "ref": "trilha:prf-fisica:trabalho-energia:4",
+   "materia": "Física",
+   "topico": "Trabalho, potência e energia",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O quilowatt-hora (kWh) é unidade de potência.",
+   "just": "Definição: é unidade de energia (potência × tempo)."
+  },
+  {
+   "n": 537,
+   "ref": "trilha:prf-fisica:trabalho-energia:5",
+   "materia": "Física",
+   "topico": "Trabalho, potência e energia",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Desprezada a resistência do ar, um corpo abandonado de uma altura de 5 m atinge o solo com velocidade de 10 m/s (g = 10 m/s²).",
+   "just": "Cálculo: v = √(2 × 10 × 5) = 10 m/s."
+  },
+  {
+   "n": 538,
+   "ref": "trilha:prf-fisica:trabalho-energia:6",
+   "materia": "Física",
+   "topico": "Trabalho, potência e energia",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na presença de atrito, a energia mecânica de um sistema se conserva.",
+   "just": "Conceito: parte é dissipada em calor; conserva-se a energia total, não a mecânica."
+  },
+  {
+   "n": 539,
+   "ref": "trilha:prf-fisica:trabalho-energia:7",
+   "materia": "Física",
+   "topico": "Trabalho, potência e energia",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O trabalho realizado pela força resultante sobre um corpo é igual à variação de sua energia cinética.",
+   "just": "Conceito: teorema da energia cinética."
+  },
+  {
+   "n": 540,
+   "ref": "trilha:prf-fisica:impulso:1",
+   "materia": "Física",
+   "topico": "Impulso, quantidade de movimento e colisões",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em uma colisão perfeitamente inelástica entre dois veículos, a quantidade de movimento do sistema se conserva, mas a energia cinética não.",
+   "just": "Conceito de colisão inelástica."
+  },
+  {
+   "n": 541,
+   "ref": "trilha:prf-fisica:impulso:2",
+   "materia": "Física",
+   "topico": "Impulso, quantidade de movimento e colisões",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se um veículo de 1.000 kg a 20 m/s colide com outro de mesma massa, parado, e ambos seguem juntos, a velocidade do conjunto logo após a colisão é de 10 m/s.",
+   "just": "Cálculo: 1.000 × 20 = 2.000 × v → v = 10 m/s."
+  },
+  {
+   "n": 542,
+   "ref": "trilha:prf-fisica:impulso:3",
+   "materia": "Física",
+   "topico": "Impulso, quantidade de movimento e colisões",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Quando um veículo de 1.000 kg a 20 m/s colide com outro igual, parado, e os dois seguem juntos, a energia cinética do sistema após a colisão é igual à de antes.",
+   "just": "Cálculo: antes, 200.000 J; depois, 2.000 × 10²/2 = 100.000 J."
+  },
+  {
+   "n": 543,
+   "ref": "trilha:prf-fisica:impulso:4",
+   "materia": "Física",
+   "topico": "Impulso, quantidade de movimento e colisões",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O airbag reduz a força sobre o ocupante porque aumenta o tempo de desaceleração.",
+   "just": "Conceito: teorema do impulso (F = ΔQ/Δt)."
+  },
+  {
+   "n": 544,
+   "ref": "trilha:prf-fisica:impulso:5",
+   "materia": "Física",
+   "topico": "Impulso, quantidade de movimento e colisões",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A quantidade de movimento é uma grandeza escalar, medida em joules.",
+   "just": "Definição: é vetorial e medida em kg·m/s."
+  },
+  {
+   "n": 545,
+   "ref": "trilha:prf-fisica:impulso:6",
+   "materia": "Física",
+   "topico": "Impulso, quantidade de movimento e colisões",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em uma colisão perfeitamente elástica, conservam-se a quantidade de movimento e a energia cinética do sistema.",
+   "just": "Conceito de colisão elástica."
+  },
+  {
+   "n": 546,
+   "ref": "trilha:prf-geopolitica:nacao-territorio:1",
+   "materia": "Geopolítica",
+   "topico": "O Brasil político: nação e território",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Brasil faz fronteira com todos os países da América do Sul, exceto Chile e Equador.",
+   "just": "Geografia: são 10 países limítrofes."
+  },
+  {
+   "n": 547,
+   "ref": "trilha:prf-geopolitica:nacao-territorio:2",
+   "materia": "Geopolítica",
+   "topico": "O Brasil político: nação e território",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O ponto extremo norte do território brasileiro localiza-se no Oiapoque, no Amapá.",
+   "just": "IBGE: fica no Monte Caburaí, em Roraima."
+  },
+  {
+   "n": 548,
+   "ref": "trilha:prf-geopolitica:nacao-territorio:3",
+   "materia": "Geopolítica",
+   "topico": "O Brasil político: nação e território",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A faixa de até 150 km de largura ao longo das fronteiras terrestres é considerada fundamental para a defesa do território nacional.",
+   "just": "CF, art. 20, § 2º."
+  },
+  {
+   "n": 549,
+   "ref": "trilha:prf-geopolitica:nacao-territorio:4",
+   "materia": "Geopolítica",
+   "topico": "O Brasil político: nação e território",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Tratado de Madri (1750) adotou o princípio do uti possidetis, reconhecendo a Portugal terras ocupadas além da linha de Tordesilhas.",
+   "just": "Geografia: formação territorial do Brasil."
+  },
+  {
+   "n": 550,
+   "ref": "trilha:prf-geopolitica:nacao-territorio:5",
+   "materia": "Geopolítica",
+   "topico": "O Brasil político: nação e território",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A zona econômica exclusiva brasileira estende-se até 12 milhas náuticas da costa.",
+   "just": "Lei 8.617/1993: 12 milhas é o mar territorial; a ZEE vai até 200 milhas."
+  },
+  {
+   "n": 551,
+   "ref": "trilha:prf-geopolitica:nacao-territorio:6",
+   "materia": "Geopolítica",
+   "topico": "O Brasil político: nação e território",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A maior parte do território brasileiro situa-se no hemisfério norte.",
+   "just": "Geografia: cerca de 93% do território está no hemisfério sul."
+  },
+  {
+   "n": 552,
+   "ref": "trilha:prf-geopolitica:estado-brasileiro:1",
+   "materia": "Geopolítica",
+   "topico": "Organização do Estado brasileiro",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Amazônia Legal abrange apenas os sete estados da região Norte.",
+   "just": "IBGE: inclui também Mato Grosso e parte do Maranhão (9 estados)."
+  },
+  {
+   "n": 553,
+   "ref": "trilha:prf-geopolitica:estado-brasileiro:2",
+   "materia": "Geopolítica",
+   "topico": "Organização do Estado brasileiro",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A região Nordeste é a que possui o maior número de estados.",
+   "just": "IBGE: são 9 estados."
+  },
+  {
+   "n": 554,
+   "ref": "trilha:prf-geopolitica:estado-brasileiro:3",
+   "materia": "Geopolítica",
+   "topico": "Organização do Estado brasileiro",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na divisão em complexos regionais (regiões geoeconômicas), os limites das regiões não coincidem necessariamente com as divisas estaduais.",
+   "just": "Geografia: proposta de Pedro Geiger."
+  },
+  {
+   "n": 555,
+   "ref": "trilha:prf-geopolitica:estado-brasileiro:4",
+   "materia": "Geopolítica",
+   "topico": "Organização do Estado brasileiro",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Desde 2017, o IBGE adota as regiões geográficas intermediárias e imediatas, em substituição às mesorregiões e microrregiões.",
+   "just": "IBGE: 133 intermediárias e 510 imediatas."
+  },
+  {
+   "n": 556,
+   "ref": "trilha:prf-geopolitica:estado-brasileiro:5",
+   "materia": "Geopolítica",
+   "topico": "Organização do Estado brasileiro",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O Distrito Federal divide-se em municípios, sendo Brasília o principal deles.",
+   "just": "CF, art. 32: é vedada a divisão do Distrito Federal em municípios."
+  },
+  {
+   "n": 557,
+   "ref": "trilha:prf-geopolitica:estado-brasileiro:6",
+   "materia": "Geopolítica",
+   "topico": "Organização do Estado brasileiro",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O estado de Tocantins integra a região Centro-Oeste.",
+   "just": "IBGE: desde a sua criação, em 1988, pertence à região Norte."
+  },
+  {
+   "n": 558,
+   "ref": "trilha:prf-geopolitica:divisao-trabalho:1",
+   "materia": "Geopolítica",
+   "topico": "Divisão inter-regional do trabalho e da produção",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A concentração industrial no Sudeste, ao longo do século XX, relaciona-se à acumulação de capital da economia cafeeira e à infraestrutura por ela gerada.",
+   "just": "Geografia: industrialização brasileira."
+  },
+  {
+   "n": 559,
+   "ref": "trilha:prf-geopolitica:divisao-trabalho:2",
+   "materia": "Geopolítica",
+   "topico": "Divisão inter-regional do trabalho e da produção",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A desconcentração industrial iniciada no final do século XX retirou do Sudeste a condição de principal região industrial do país.",
+   "just": "Geografia: houve dispersão relativa, mas o Sudeste continua sendo o principal polo."
+  },
+  {
+   "n": 560,
+   "ref": "trilha:prf-geopolitica:divisao-trabalho:3",
+   "materia": "Geopolítica",
+   "topico": "Divisão inter-regional do trabalho e da produção",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A chamada guerra fiscal consiste na concessão de incentivos por estados e municípios para atrair empresas.",
+   "just": "Geografia: fator da desconcentração industrial."
+  },
+  {
+   "n": 561,
+   "ref": "trilha:prf-geopolitica:divisao-trabalho:4",
+   "materia": "Geopolítica",
+   "topico": "Divisão inter-regional do trabalho e da produção",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "MATOPIBA designa a área de expansão da fronteira agrícola que abrange partes do Maranhão, de Tocantins, do Piauí e da Bahia.",
+   "just": "Geografia: fronteira agrícola do Cerrado."
+  },
+  {
+   "n": 562,
+   "ref": "trilha:prf-geopolitica:divisao-trabalho:5",
+   "materia": "Geopolítica",
+   "topico": "Divisão inter-regional do trabalho e da produção",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Zona Franca de Manaus foi criada para estimular a ocupação e o desenvolvimento industrial da Amazônia por meio de incentivos fiscais.",
+   "just": "Geografia: criada em 1967; incentivos prorrogados até 2073 pela EC 83/2014."
+  },
+  {
+   "n": 563,
+   "ref": "trilha:prf-geopolitica:divisao-trabalho:6",
+   "materia": "Geopolítica",
+   "topico": "Divisão inter-regional do trabalho e da produção",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No período colonial, as regiões brasileiras formavam um mercado interno integrado, com intensa troca de mercadorias entre si.",
+   "just": "Geografia: eram 'arquipélagos econômicos' voltados para a exportação."
+  },
+  {
+   "n": 564,
+   "ref": "trilha:prf-geopolitica:urbanizacao:1",
+   "materia": "Geopolítica",
+   "topico": "Estrutura urbana e grandes metrópoles",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Segundo o Censo 2022, mais de 85% da população brasileira vive em áreas urbanas.",
+   "just": "IBGE: 87,4%."
+  },
+  {
+   "n": 565,
+   "ref": "trilha:prf-geopolitica:urbanizacao:2",
+   "materia": "Geopolítica",
+   "topico": "Estrutura urbana e grandes metrópoles",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na hierarquia urbana do IBGE (REGIC 2018), São Paulo, Rio de Janeiro e Brasília são classificadas como Grande Metrópole Nacional.",
+   "just": "IBGE: só São Paulo; Rio de Janeiro e Brasília são Metrópoles Nacionais."
+  },
+  {
+   "n": 566,
+   "ref": "trilha:prf-geopolitica:urbanizacao:3",
+   "materia": "Geopolítica",
+   "topico": "Estrutura urbana e grandes metrópoles",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As regiões metropolitanas são instituídas pelos estados, mediante lei complementar.",
+   "just": "CF, art. 25, § 3º."
+  },
+  {
+   "n": 567,
+   "ref": "trilha:prf-geopolitica:urbanizacao:4",
+   "materia": "Geopolítica",
+   "topico": "Estrutura urbana e grandes metrópoles",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Ribeirão Preto (SP) e Uberlândia (MG) ocupam o primeiro nível da hierarquia urbana brasileira.",
+   "just": "IBGE: são Capitais Regionais (segundo nível)."
+  },
+  {
+   "n": 568,
+   "ref": "trilha:prf-geopolitica:urbanizacao:5",
+   "materia": "Geopolítica",
+   "topico": "Estrutura urbana e grandes metrópoles",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Conurbação é o processo de junção física das áreas urbanas de municípios vizinhos.",
+   "just": "Geografia urbana: conceito de conurbação."
+  },
+  {
+   "n": 569,
+   "ref": "trilha:prf-geopolitica:urbanizacao:6",
+   "materia": "Geopolítica",
+   "topico": "Estrutura urbana e grandes metrópoles",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A região Nordeste é a mais urbanizada do país, segundo o Censo 2022.",
+   "just": "IBGE: é a menos urbanizada (77,6%); a mais urbanizada é o Sudeste (94,4%)."
+  },
+  {
+   "n": 570,
+   "ref": "trilha:prf-geopolitica:populacao:1",
+   "materia": "Geopolítica",
+   "topico": "População e migrações",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Brasil é um país populoso, mas com baixa densidade demográfica média.",
+   "just": "IBGE: 203,1 milhões de habitantes e cerca de 24 hab./km² (Censo 2022)."
+  },
+  {
+   "n": 571,
+   "ref": "trilha:prf-geopolitica:populacao:2",
+   "materia": "Geopolítica",
+   "topico": "População e migrações",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Entre os Censos de 2010 e 2022, a idade mediana da população brasileira diminuiu.",
+   "just": "IBGE: subiu de 29 para 35 anos."
+  },
+  {
+   "n": 572,
+   "ref": "trilha:prf-geopolitica:populacao:3",
+   "materia": "Geopolítica",
+   "topico": "População e migrações",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A região Sudeste concentra a maior parcela da população brasileira.",
+   "just": "IBGE: cerca de 42% (Censo 2022)."
+  },
+  {
+   "n": 573,
+   "ref": "trilha:prf-geopolitica:populacao:4",
+   "materia": "Geopolítica",
+   "topico": "População e migrações",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A taxa de fecundidade brasileira situa-se atualmente acima do nível de reposição populacional.",
+   "just": "IBGE: está abaixo de 2,1 filhos por mulher."
+  },
+  {
+   "n": 574,
+   "ref": "trilha:prf-geopolitica:populacao:5",
+   "materia": "Geopolítica",
+   "topico": "População e migrações",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No Censo 2022, as mulheres eram maioria na população brasileira.",
+   "just": "IBGE: 51,5%."
+  },
+  {
+   "n": 575,
+   "ref": "trilha:prf-geopolitica:populacao:6",
+   "materia": "Geopolítica",
+   "topico": "População e migrações",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Atualmente, o êxodo rural é o principal tipo de migração interna no Brasil.",
+   "just": "Geografia: predominam os fluxos urbano-urbano e pendulares; o êxodo rural marcou o século XX."
+  },
+  {
+   "n": 576,
+   "ref": "trilha:prf-geopolitica:industria-agro:1",
+   "materia": "Geopolítica",
+   "topico": "Indústria, cidade e campo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O agronegócio abrange, além da produção agropecuária, os setores de insumos, processamento e distribuição.",
+   "just": "Geografia agrária: conceito de complexo agroindustrial."
+  },
+  {
+   "n": 577,
+   "ref": "trilha:prf-geopolitica:industria-agro:2",
+   "materia": "Geopolítica",
+   "topico": "Indústria, cidade e campo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A modernização da agricultura brasileira, a partir da década de 1960, reduziu a concentração fundiária no país.",
+   "just": "Geografia agrária: a modernização foi conservadora e manteve a concentração de terras."
+  },
+  {
+   "n": 578,
+   "ref": "trilha:prf-geopolitica:industria-agro:3",
+   "materia": "Geopolítica",
+   "topico": "Indústria, cidade e campo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A expansão da fronteira agrícola no Cerrado esteve associada à correção da acidez dos solos e à pesquisa agropecuária.",
+   "just": "Geografia agrária: papel da pesquisa (Embrapa)."
+  },
+  {
+   "n": 579,
+   "ref": "trilha:prf-geopolitica:industria-agro:4",
+   "materia": "Geopolítica",
+   "topico": "Indústria, cidade e campo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A mecanização do campo contribuiu para o êxodo rural e para a aceleração da urbanização brasileira.",
+   "just": "Geografia: integração entre campo e cidade."
+  },
+  {
+   "n": 580,
+   "ref": "trilha:prf-geopolitica:industria-agro:5",
+   "materia": "Geopolítica",
+   "topico": "Indústria, cidade e campo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A agricultura familiar concentra a maior parte da área dos estabelecimentos agropecuários do país.",
+   "just": "IBGE (Censo Agropecuário 2017): reúne a maioria dos estabelecimentos, mas a menor parte da área."
+  },
+  {
+   "n": 581,
+   "ref": "trilha:prf-geopolitica:industria-agro:6",
+   "materia": "Geopolítica",
+   "topico": "Indústria, cidade e campo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A expansão da soja no Centro-Oeste dispensou a integração com a indústria, por se tratar de cultura de baixa tecnologia.",
+   "just": "Geografia agrária: é cultura mecanizada, dependente de insumos industriais."
+  },
+  {
+   "n": 582,
+   "ref": "trilha:prf-geopolitica:transportes:1",
+   "materia": "Geopolítica",
+   "topico": "Rede de transportes: modais e infraestrutura",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O modal rodoviário responde por mais da metade do transporte de cargas no Brasil.",
+   "just": "PNL 2035: cerca de 66%; Fundação Dom Cabral: cerca de 62%."
+  },
+  {
+   "n": 583,
+   "ref": "trilha:prf-geopolitica:transportes:2",
+   "materia": "Geopolítica",
+   "topico": "Rede de transportes: modais e infraestrutura",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Para o transporte de grandes volumes de minério e de grãos a longas distâncias, o modal rodoviário é o de menor custo por tonelada.",
+   "just": "Geografia dos transportes: o ferroviário e o aquaviário têm custo menor nessas condições."
+  },
+  {
+   "n": 584,
+   "ref": "trilha:prf-geopolitica:transportes:3",
+   "materia": "Geopolítica",
+   "topico": "Rede de transportes: modais e infraestrutura",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A prioridade dada ao transporte rodoviário no Brasil está associada à implantação da indústria automobilística, a partir da década de 1950.",
+   "just": "Geografia dos transportes: rodoviarismo."
+  },
+  {
+   "n": 585,
+   "ref": "trilha:prf-geopolitica:transportes:4",
+   "materia": "Geopolítica",
+   "topico": "Rede de transportes: modais e infraestrutura",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As rodovias federais cuja numeração começa por 1, como a BR-101 e a BR-116, são longitudinais, de sentido norte–sul.",
+   "just": "Geografia dos transportes: nomenclatura das rodovias federais."
+  },
+  {
+   "n": 586,
+   "ref": "trilha:prf-geopolitica:transportes:5",
+   "materia": "Geopolítica",
+   "topico": "Rede de transportes: modais e infraestrutura",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A cabotagem é a navegação realizada entre portos de países diferentes.",
+   "just": "Lei 9.432/1997: cabotagem é a navegação entre portos do território brasileiro."
+  },
+  {
+   "n": 587,
+   "ref": "trilha:prf-geopolitica:transportes:6",
+   "materia": "Geopolítica",
+   "topico": "Rede de transportes: modais e infraestrutura",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A malha ferroviária brasileira é extensa e bem distribuída, integrando todas as regiões com bitola padronizada.",
+   "just": "Geografia dos transportes: a malha é pequena, concentrada e de bitolas diferentes."
+  },
+  {
+   "n": 588,
+   "ref": "trilha:prf-geopolitica:economia-global:1",
+   "materia": "Geopolítica",
+   "topico": "O Brasil na economia internacional",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A China é, atualmente, o principal parceiro comercial do Brasil.",
+   "just": "Geografia econômica: posição ocupada desde 2009."
+  },
+  {
+   "n": 589,
+   "ref": "trilha:prf-geopolitica:economia-global:2",
+   "materia": "Geopolítica",
+   "topico": "O Brasil na economia internacional",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Mercosul foi criado em 1991 pelo Tratado de Assunção, firmado por Argentina, Brasil, Paraguai e Uruguai.",
+   "just": "Tratado de Assunção (1991)."
+  },
+  {
+   "n": 590,
+   "ref": "trilha:prf-geopolitica:economia-global:3",
+   "materia": "Geopolítica",
+   "topico": "O Brasil na economia internacional",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O BRICS é um bloco econômico que adota tarifa externa comum entre seus membros.",
+   "just": "Geografia econômica: é grupo de cooperação, sem tarifa comum; quem tem Tarifa Externa Comum é o Mercosul."
+  },
+  {
+   "n": 591,
+   "ref": "trilha:prf-geopolitica:economia-global:4",
+   "materia": "Geopolítica",
+   "topico": "O Brasil na economia internacional",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A pauta de exportações brasileira é dominada por produtos manufaturados de alta tecnologia.",
+   "just": "Geografia econômica: predominam commodities como soja, petróleo e minério de ferro."
+  },
+  {
+   "n": 592,
+   "ref": "trilha:prf-geopolitica:economia-global:5",
+   "materia": "Geopolítica",
+   "topico": "O Brasil na economia internacional",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Bolívia tornou-se Estado Parte do Mercosul em 2024.",
+   "just": "Tratado: o protocolo de adesão entrou em vigor em agosto de 2024."
+  },
+  {
+   "n": 593,
+   "ref": "trilha:prf-geopolitica:economia-global:6",
+   "materia": "Geopolítica",
+   "topico": "O Brasil na economia internacional",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A parte comercial do acordo entre o Mercosul e a União Europeia passou a ser aplicada provisoriamente em 2026.",
+   "just": "Tratado assinado em 17/1/2026, com vigência provisória da parte comercial desde 1º/5/2026."
+  },
+  {
+   "n": 594,
+   "ref": "trilha:prf-geopolitica:gestao-ambiental:1",
+   "materia": "Geopolítica",
+   "topico": "Geografia e gestão ambiental",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No Sistema Nacional de Unidades de Conservação, o parque nacional pertence ao grupo de proteção integral.",
+   "just": "Lei 9.985/2000 (SNUC)."
+  },
+  {
+   "n": 595,
+   "ref": "trilha:prf-geopolitica:gestao-ambiental:2",
+   "materia": "Geopolítica",
+   "topico": "Geografia e gestão ambiental",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A área de proteção ambiental (APA) é unidade de proteção integral, na qual é proibida a ocupação humana.",
+   "just": "Lei 9.985/2000: a APA é de uso sustentável e admite ocupação."
+  },
+  {
+   "n": 596,
+   "ref": "trilha:prf-geopolitica:gestao-ambiental:3",
+   "materia": "Geopolítica",
+   "topico": "Geografia e gestão ambiental",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em imóvel rural situado em área de floresta na Amazônia Legal, a reserva legal mínima é de 80%.",
+   "just": "Lei 12.651/2012, art. 12."
+  },
+  {
+   "n": 597,
+   "ref": "trilha:prf-geopolitica:gestao-ambiental:4",
+   "materia": "Geopolítica",
+   "topico": "Geografia e gestão ambiental",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A gestão das unidades de conservação federais compete ao ICMBio.",
+   "just": "Lei 11.516/2007, que criou o ICMBio."
+  },
+  {
+   "n": 598,
+   "ref": "trilha:prf-geopolitica:gestao-ambiental:5",
+   "materia": "Geopolítica",
+   "topico": "Geografia e gestão ambiental",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No Brasil, a principal fonte de emissões de gases de efeito estufa é a geração de energia elétrica.",
+   "just": "Geografia ambiental: são a mudança de uso da terra (desmatamento) e a agropecuária; a matriz elétrica é majoritariamente renovável."
+  },
+  {
+   "n": 599,
+   "ref": "trilha:prf-geopolitica:gestao-ambiental:6",
+   "materia": "Geopolítica",
+   "topico": "Geografia e gestão ambiental",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O CONAMA é o órgão consultivo e deliberativo do Sistema Nacional do Meio Ambiente.",
+   "just": "Lei 6.938/1981."
+  },
+  {
+   "n": 600,
+   "ref": "trilha:prf-geopolitica:biomas:1",
+   "materia": "Geopolítica",
+   "topico": "Biomas e domínios morfoclimáticos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Amazônia é o maior bioma brasileiro e ocupa quase metade do território nacional.",
+   "just": "IBGE: 49,5%."
+  },
+  {
+   "n": 601,
+   "ref": "trilha:prf-geopolitica:biomas:2",
+   "materia": "Geopolítica",
+   "topico": "Biomas e domínios morfoclimáticos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Caatinga é o único bioma exclusivamente brasileiro.",
+   "just": "Geografia: bioma do Semiárido."
+  },
+  {
+   "n": 602,
+   "ref": "trilha:prf-geopolitica:biomas:3",
+   "materia": "Geopolítica",
+   "topico": "Biomas e domínios morfoclimáticos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O Pantanal é o segundo maior bioma brasileiro em extensão.",
+   "just": "IBGE: é o menor (1,8%); o segundo maior é o Cerrado (23,3%)."
+  },
+  {
+   "n": 603,
+   "ref": "trilha:prf-geopolitica:biomas:4",
+   "materia": "Geopolítica",
+   "topico": "Biomas e domínios morfoclimáticos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O Cerrado abriga nascentes de importantes bacias hidrográficas brasileiras, sendo conhecido como berço das águas.",
+   "just": "Geografia: bacias do Tocantins-Araguaia, do São Francisco e do Paraná."
+  },
+  {
+   "n": 604,
+   "ref": "trilha:prf-geopolitica:biomas:5",
+   "materia": "Geopolítica",
+   "topico": "Biomas e domínios morfoclimáticos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Mata Atlântica é o bioma brasileiro mais preservado, por situar-se em áreas de baixa ocupação humana.",
+   "just": "Geografia: é o mais devastado e concentra a maior parte da população."
+  },
+  {
+   "n": 605,
+   "ref": "trilha:prf-geopolitica:biomas:6",
+   "materia": "Geopolítica",
+   "topico": "Biomas e domínios morfoclimáticos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na classificação dos domínios morfoclimáticos de Aziz Ab'Sáber, o domínio dos Mares de Morros corresponde à área de Mata Atlântica.",
+   "just": "Geografia: domínios morfoclimáticos."
+  },
+  {
+   "n": 606,
+   "ref": "trilha:prf-informatica:internet-intranet:1",
+   "materia": "Informática",
+   "topico": "Internet, intranet e navegadores",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A intranet utiliza os mesmos protocolos da Internet, mas seu acesso é restrito aos usuários autorizados de uma organização.",
+   "just": "Conceito de intranet."
+  },
+  {
+   "n": 607,
+   "ref": "trilha:prf-informatica:internet-intranet:2",
+   "materia": "Informática",
+   "topico": "Internet, intranet e navegadores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O protocolo SMTP é utilizado para o recebimento de mensagens de correio eletrônico pelo usuário.",
+   "just": "Conceito: SMTP envia; POP3 e IMAP recebem."
+  },
+  {
+   "n": 608,
+   "ref": "trilha:prf-informatica:internet-intranet:3",
+   "materia": "Informática",
+   "topico": "Internet, intranet e navegadores",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na pesquisa do Google, o uso de aspas faz que sejam buscadas páginas com a expressão exata digitada.",
+   "just": "Regra dos operadores de busca."
+  },
+  {
+   "n": 609,
+   "ref": "trilha:prf-informatica:internet-intranet:4",
+   "materia": "Informática",
+   "topico": "Internet, intranet e navegadores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A navegação anônima impede que o provedor de Internet e o administrador da rede saibam quais sítios foram acessados.",
+   "just": "Conceito: ela apenas deixa de gravar histórico e cookies no próprio computador."
+  },
+  {
+   "n": 610,
+   "ref": "trilha:prf-informatica:internet-intranet:5",
+   "materia": "Informática",
+   "topico": "Internet, intranet e navegadores",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O campo Cco de uma mensagem de correio eletrônico permite enviar cópia a um destinatário sem que os demais vejam o endereço dele.",
+   "just": "Conceito: cópia oculta."
+  },
+  {
+   "n": 611,
+   "ref": "trilha:prf-informatica:internet-intranet:6",
+   "materia": "Informática",
+   "topico": "Internet, intranet e navegadores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O cadeado exibido pelo navegador em páginas HTTPS garante que o conteúdo do sítio é verdadeiro e livre de golpes.",
+   "just": "Conceito: garante criptografia e identidade do servidor, não a honestidade do conteúdo."
+  },
+  {
+   "n": 612,
+   "ref": "trilha:prf-informatica:windows:1",
+   "materia": "Informática",
+   "topico": "Windows 10: arquivos, pastas e programas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No Explorador de Arquivos do Windows, arrastar um arquivo de uma pasta do disco C: para um pen drive cria uma cópia do arquivo no pen drive.",
+   "just": "Windows: entre unidades diferentes, arrastar copia."
+  },
+  {
+   "n": 613,
+   "ref": "trilha:prf-informatica:windows:2",
+   "materia": "Informática",
+   "topico": "Windows 10: arquivos, pastas e programas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Arquivos excluídos com as teclas Shift + Delete são enviados para a Lixeira.",
+   "just": "Windows: são excluídos diretamente, sem passar pela Lixeira."
+  },
+  {
+   "n": 614,
+   "ref": "trilha:prf-informatica:windows:3",
+   "materia": "Informática",
+   "topico": "Windows 10: arquivos, pastas e programas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O atalho Win + L bloqueia o computador.",
+   "just": "Windows: atalho de bloqueio."
+  },
+  {
+   "n": 615,
+   "ref": "trilha:prf-informatica:windows:4",
+   "materia": "Informática",
+   "topico": "Windows 10: arquivos, pastas e programas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No Windows, o nome de um arquivo pode conter o caractere de interrogação (?).",
+   "just": "Windows: os caracteres \\ / : * ? \" < > | são proibidos em nomes de arquivo."
+  },
+  {
+   "n": 616,
+   "ref": "trilha:prf-informatica:windows:5",
+   "materia": "Informática",
+   "topico": "Windows 10: arquivos, pastas e programas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O atalho Ctrl + Shift + Esc abre diretamente o Gerenciador de Tarefas.",
+   "just": "Windows: atalho do Gerenciador de Tarefas."
+  },
+  {
+   "n": 617,
+   "ref": "trilha:prf-informatica:windows:6",
+   "materia": "Informática",
+   "topico": "Windows 10: arquivos, pastas e programas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ao utilizar a mesma conta Microsoft em vários computadores, o usuário pode sincronizar configurações e senhas entre eles.",
+   "just": "Windows: sincronização de configurações pela conta Microsoft."
+  },
+  {
+   "n": 618,
+   "ref": "trilha:prf-informatica:transformacao-digital:1",
+   "materia": "Informática",
+   "topico": "Transformação digital: IoT, big data e IA",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Internet das Coisas refere-se à conexão de objetos físicos dotados de sensores à rede, o que permite a coleta e a troca de dados.",
+   "just": "Conceito de IoT."
+  },
+  {
+   "n": 619,
+   "ref": "trilha:prf-informatica:transformacao-digital:2",
+   "materia": "Informática",
+   "topico": "Transformação digital: IoT, big data e IA",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Volume, velocidade e variedade são características associadas ao big data.",
+   "just": "Conceito: os 3 Vs do big data."
+  },
+  {
+   "n": 620,
+   "ref": "trilha:prf-informatica:transformacao-digital:3",
+   "materia": "Informática",
+   "topico": "Transformação digital: IoT, big data e IA",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em big data, o termo variedade refere-se exclusivamente a dados estruturados, armazenados em tabelas.",
+   "just": "Conceito: abrange dados estruturados, semiestruturados e não estruturados."
+  },
+  {
+   "n": 621,
+   "ref": "trilha:prf-informatica:transformacao-digital:4",
+   "materia": "Informática",
+   "topico": "Transformação digital: IoT, big data e IA",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O aprendizado de máquina é um ramo da inteligência artificial em que o sistema aprende a partir de dados.",
+   "just": "Conceito de aprendizado de máquina."
+  },
+  {
+   "n": 622,
+   "ref": "trilha:prf-informatica:transformacao-digital:5",
+   "materia": "Informática",
+   "topico": "Transformação digital: IoT, big data e IA",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No aprendizado supervisionado, o algoritmo é treinado com dados que não possuem rótulos.",
+   "just": "Conceito: dados sem rótulo caracterizam o aprendizado não supervisionado."
+  },
+  {
+   "n": 623,
+   "ref": "trilha:prf-informatica:transformacao-digital:6",
+   "materia": "Informática",
+   "topico": "Transformação digital: IoT, big data e IA",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A inteligência artificial é uma subárea do aprendizado de máquina.",
+   "just": "Conceito: é o contrário: o aprendizado de máquina é subárea da IA."
+  },
+  {
+   "n": 624,
+   "ref": "trilha:prf-informatica:malwares:1",
+   "materia": "Informática",
+   "topico": "Segurança: vírus, worms e pragas virtuais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Worm é um programa capaz de se propagar automaticamente pelas redes, sem necessidade de ser executado pelo usuário nem de se anexar a outro arquivo.",
+   "just": "Conceito de worm."
+  },
+  {
+   "n": 625,
+   "ref": "trilha:prf-informatica:malwares:2",
+   "materia": "Informática",
+   "topico": "Segurança: vírus, worms e pragas virtuais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O vírus de computador dispensa arquivo hospedeiro e se propaga exclusivamente pela rede, sem ação do usuário.",
+   "just": "Conceito: essa é a descrição do worm; o vírus precisa de hospedeiro e de execução."
+  },
+  {
+   "n": 626,
+   "ref": "trilha:prf-informatica:malwares:3",
+   "materia": "Informática",
+   "topico": "Segurança: vírus, worms e pragas virtuais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Ransomware é um código malicioso que torna inacessíveis os dados do equipamento, geralmente por criptografia, e exige pagamento de resgate para restabelecer o acesso.",
+   "just": "Conceito de ransomware."
+  },
+  {
+   "n": 627,
+   "ref": "trilha:prf-informatica:malwares:4",
+   "materia": "Informática",
+   "topico": "Segurança: vírus, worms e pragas virtuais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Keylogger é um tipo de spyware capaz de capturar as teclas digitadas pelo usuário.",
+   "just": "Conceito de keylogger."
+  },
+  {
+   "n": 628,
+   "ref": "trilha:prf-informatica:malwares:5",
+   "materia": "Informática",
+   "topico": "Segurança: vírus, worms e pragas virtuais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Phishing é um malware que se instala automaticamente no computador e se replica pela rede.",
+   "just": "Conceito: é golpe de engenharia social por mensagens e páginas falsas."
+  },
+  {
+   "n": 629,
+   "ref": "trilha:prf-informatica:malwares:6",
+   "materia": "Informática",
+   "topico": "Segurança: vírus, worms e pragas virtuais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O cavalo de troia caracteriza-se por se replicar automaticamente, infectando outros arquivos do computador.",
+   "just": "Conceito: o trojan não se replica; disfarça-se de programa legítimo."
+  },
+  {
+   "n": 630,
+   "ref": "trilha:prf-informatica:ferramentas-seguranca:1",
+   "materia": "Informática",
+   "topico": "Antivírus, firewall e boas práticas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O firewall é capaz de filtrar o tráfego de rede com base em regras, bloqueando conexões não autorizadas.",
+   "just": "Conceito de firewall."
+  },
+  {
+   "n": 631,
+   "ref": "trilha:prf-informatica:ferramentas-seguranca:2",
+   "materia": "Informática",
+   "topico": "Antivírus, firewall e boas práticas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Um firewall dispensa o uso de antivírus, pois elimina os arquivos infectados já armazenados no computador.",
+   "just": "Conceito: o firewall filtra tráfego; não remove malware de arquivos."
+  },
+  {
+   "n": 632,
+   "ref": "trilha:prf-informatica:ferramentas-seguranca:3",
+   "materia": "Informática",
+   "topico": "Antivírus, firewall e boas práticas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A assinatura digital garante a autenticidade e a integridade de um documento eletrônico.",
+   "just": "Conceito de assinatura digital."
+  },
+  {
+   "n": 633,
+   "ref": "trilha:prf-informatica:ferramentas-seguranca:4",
+   "materia": "Informática",
+   "topico": "Antivírus, firewall e boas práticas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na criptografia assimétrica, a mesma chave é usada para cifrar e decifrar a mensagem.",
+   "just": "Conceito: essa é a simétrica; a assimétrica usa um par de chaves, pública e privada."
+  },
+  {
+   "n": 634,
+   "ref": "trilha:prf-informatica:ferramentas-seguranca:5",
+   "materia": "Informática",
+   "topico": "Antivírus, firewall e boas práticas",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A autenticação em dois fatores combina, por exemplo, uma senha com um código enviado ao celular do usuário.",
+   "just": "Conceito: dois fatores distintos de autenticação."
+  },
+  {
+   "n": 635,
+   "ref": "trilha:prf-informatica:ferramentas-seguranca:6",
+   "materia": "Informática",
+   "topico": "Antivírus, firewall e boas práticas",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A disponibilidade, princípio da segurança da informação, garante que a informação só seja acessada por pessoas autorizadas.",
+   "just": "Conceito: isso é confidencialidade; disponibilidade é estar acessível quando necessário."
+  },
+  {
+   "n": 636,
+   "ref": "trilha:prf-informatica:backup-nuvem:1",
+   "materia": "Informática",
+   "topico": "Backup e computação em nuvem",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O uso de um editor de textos pelo navegador, sem instalação no computador, é exemplo de Software como Serviço (SaaS).",
+   "just": "Conceito de SaaS."
+  },
+  {
+   "n": 637,
+   "ref": "trilha:prf-informatica:backup-nuvem:2",
+   "materia": "Informática",
+   "topico": "Backup e computação em nuvem",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No modelo PaaS, o provedor oferece um ambiente no qual o cliente pode desenvolver e disponibilizar seus aplicativos.",
+   "just": "Conceito de PaaS."
+  },
+  {
+   "n": 638,
+   "ref": "trilha:prf-informatica:backup-nuvem:3",
+   "materia": "Informática",
+   "topico": "Backup e computação em nuvem",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O backup incremental copia todos os arquivos alterados desde o último backup completo, independentemente de backups intermediários.",
+   "just": "Conceito: essa é a definição do diferencial; o incremental copia o que mudou desde o último backup de qualquer tipo."
+  },
+  {
+   "n": 639,
+   "ref": "trilha:prf-informatica:backup-nuvem:4",
+   "materia": "Informática",
+   "topico": "Backup e computação em nuvem",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A nuvem híbrida combina recursos de nuvem pública e de nuvem privada.",
+   "just": "Conceito de nuvem híbrida."
+  },
+  {
+   "n": 640,
+   "ref": "trilha:prf-informatica:backup-nuvem:5",
+   "materia": "Informática",
+   "topico": "Backup e computação em nuvem",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No modelo IaaS, o cliente utiliza apenas o software pronto, sem gerenciar sistemas operacionais ou aplicações.",
+   "just": "Conceito: isso é SaaS; no IaaS o cliente gerencia o sistema operacional e as aplicações."
+  },
+  {
+   "n": 641,
+   "ref": "trilha:prf-informatica:backup-nuvem:6",
+   "materia": "Informática",
+   "topico": "Backup e computação em nuvem",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Manter uma cópia de segurança desconectada da rede ajuda a recuperar os dados após um ataque de ransomware.",
+   "just": "Conceito: boa prática de backup."
+  },
+  {
+   "n": 642,
+   "ref": "trilha:prf-ingles:ingles-texto:1",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: compreensão de textos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em inglês, a palavra 'actually' equivale a 'atualmente' em português.",
+   "just": "Vocabulário: 'actually' significa 'na verdade'; 'atualmente' é 'currently'."
+  },
+  {
+   "n": 643,
+   "ref": "trilha:prf-ingles:ingles-texto:2",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: compreensão de textos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A palavra 'unimpeded' pode ser entendida como 'sem impedimento', pois o prefixo 'un-' indica negação.",
+   "just": "Vocabulário: formação de palavras por prefixo."
+  },
+  {
+   "n": 644,
+   "ref": "trilha:prf-ingles:ingles-texto:3",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: compreensão de textos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A técnica de scanning consiste em percorrer o texto em busca de uma informação específica, como um número ou um nome.",
+   "just": "Estratégia de leitura: scanning."
+  },
+  {
+   "n": 645,
+   "ref": "trilha:prf-ingles:ingles-texto:4",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: compreensão de textos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Na frase 'The police support the new policy', a palavra 'policy' significa 'polícia'.",
+   "just": "Vocabulário: 'policy' é 'política, diretriz'; 'polícia' é 'police'."
+  },
+  {
+   "n": 646,
+   "ref": "trilha:prf-ingles:ingles-texto:5",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: compreensão de textos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se o texto afirma que 'some states produce energy', é correto concluir que 'all states produce energy'.",
+   "just": "Interpretação: 'some' (alguns) não autoriza 'all' (todos): extrapolação."
+  },
+  {
+   "n": 647,
+   "ref": "trilha:prf-ingles:ingles-texto:6",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: compreensão de textos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A palavra 'parents' corresponde a 'pais' (pai e mãe), e não a 'parentes'.",
+   "just": "Vocabulário: falso cognato; 'parentes' é 'relatives'."
+  },
+  {
+   "n": 648,
+   "ref": "trilha:prf-ingles:ingles-gramatica:1",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: gramática para entender o texto",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O conector 'however' introduz uma ideia de contraste em relação ao que foi dito antes.",
+   "just": "Gramática: conectores de contraste."
+  },
+  {
+   "n": 649,
+   "ref": "trilha:prf-ingles:ingles-gramatica:2",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: gramática para entender o texto",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Despite the cold temperatures, energy production continued', o termo 'despite' expressa causa.",
+   "just": "Gramática: 'despite' expressa concessão (apesar de)."
+  },
+  {
+   "n": 650,
+   "ref": "trilha:prf-ingles:ingles-gramatica:3",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: gramática para entender o texto",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A frase 'The bridge was closed by the police' está na voz passiva.",
+   "just": "Gramática: to be + particípio, com o agente introduzido por 'by'."
+  },
+  {
+   "n": 651,
+   "ref": "trilha:prf-ingles:ingles-gramatica:4",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: gramática para entender o texto",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O verbo modal 'may' indica obrigação, equivalendo a 'must'.",
+   "just": "Gramática: 'may' indica possibilidade ou permissão."
+  },
+  {
+   "n": 652,
+   "ref": "trilha:prf-ingles:ingles-gramatica:5",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: gramática para entender o texto",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A forma 'colder' é o comparativo de superioridade do adjetivo 'cold'.",
+   "just": "Gramática: adjetivo curto + -er."
+  },
+  {
+   "n": 653,
+   "ref": "trilha:prf-ingles:ingles-gramatica:6",
+   "materia": "Língua Inglesa",
+   "topico": "Inglês: gramática para entender o texto",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A conjunção 'unless' equivale a 'if not' (a menos que).",
+   "just": "Gramática: conectores de condição."
+  },
+  {
    "n": 80,
    "ref": "trilha:prf-legislacao-especial:documentos:1",
    "materia": "Legislação Especial",
@@ -4367,6 +5777,666 @@
    "resp": "C",
    "enunciado": "Ao defensor é assegurado o acesso amplo aos elementos de prova já documentados em procedimento investigatório realizado por órgão com competência de polícia judiciária.",
    "just": "Súmula Vinculante 14."
+  },
+  {
+   "n": 654,
+   "ref": "trilha:prf-rlm:equacoes:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Equações, inequações e sistemas lineares",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se em um pátio há 20 veículos, entre carros e motos, e 64 rodas no total, então há 12 carros.",
+   "just": "Cálculo: c + m = 20 e 4c + 2m = 64 → 2c = 24 → c = 12."
+  },
+  {
+   "n": 655,
+   "ref": "trilha:prf-rlm:equacoes:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Equações, inequações e sistemas lineares",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A equação x² − 5x + 6 = 0 tem raízes 2 e 3.",
+   "just": "Cálculo: soma das raízes 5 e produto 6."
+  },
+  {
+   "n": 656,
+   "ref": "trilha:prf-rlm:equacoes:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Equações, inequações e sistemas lineares",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A solução da inequação −2x > 6 é x > −3.",
+   "just": "Regra: ao dividir por −2, o sinal inverte: x < −3."
+  },
+  {
+   "n": 657,
+   "ref": "trilha:prf-rlm:equacoes:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Equações, inequações e sistemas lineares",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A equação x² + 4x + 5 = 0 possui duas raízes reais distintas.",
+   "just": "Cálculo: Δ = 16 − 20 = −4 < 0: não há raiz real."
+  },
+  {
+   "n": 658,
+   "ref": "trilha:prf-rlm:equacoes:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Equações, inequações e sistemas lineares",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se o triplo de um número menos 5 é igual a 16, esse número é 7.",
+   "just": "Cálculo: 3x − 5 = 16 → x = 7."
+  },
+  {
+   "n": 659,
+   "ref": "trilha:prf-rlm:equacoes:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Equações, inequações e sistemas lineares",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No sistema x + y = 10 e x − y = 4, o valor de y é 7.",
+   "just": "Cálculo: somando as equações, x = 7; logo y = 3."
+  },
+  {
+   "n": 660,
+   "ref": "trilha:prf-rlm:funcoes:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Funções e gráficos (afim, quadrática, exponencial, logarítmica)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A função f(x) = −2x + 8 é decrescente e sua raiz é x = 4.",
+   "just": "Cálculo: a = −2 < 0 e −b/a = 4."
+  },
+  {
+   "n": 661,
+   "ref": "trilha:prf-rlm:funcoes:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Funções e gráficos (afim, quadrática, exponencial, logarítmica)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O valor máximo de f(p) = p·(1 − p), para p entre 0 e 1, é 0,5.",
+   "just": "Cálculo: o vértice está em p = 0,5 e f(0,5) = 0,25."
+  },
+  {
+   "n": 662,
+   "ref": "trilha:prf-rlm:funcoes:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Funções e gráficos (afim, quadrática, exponencial, logarítmica)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A parábola de f(x) = x² − 4x + 3 tem concavidade voltada para cima e vértice em x = 2.",
+   "just": "Cálculo: a = 1 > 0 e xv = −b/2a = 2."
+  },
+  {
+   "n": 663,
+   "ref": "trilha:prf-rlm:funcoes:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Funções e gráficos (afim, quadrática, exponencial, logarítmica)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O logaritmo de 32 na base 2 é igual a 5.",
+   "just": "Definição: 2⁵ = 32."
+  },
+  {
+   "n": 664,
+   "ref": "trilha:prf-rlm:funcoes:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Funções e gráficos (afim, quadrática, exponencial, logarítmica)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se uma grandeza triplica a cada hora, ela é descrita por uma função afim.",
+   "just": "Definição: multiplicar por fator constante a cada período é crescimento exponencial."
+  },
+  {
+   "n": 665,
+   "ref": "trilha:prf-rlm:funcoes:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Funções e gráficos (afim, quadrática, exponencial, logarítmica)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Para f(x) = 3x + 5, quando x aumenta 2 unidades, f(x) aumenta 6 unidades.",
+   "just": "Propriedade: a taxa de variação é 3 por unidade de x."
+  },
+  {
+   "n": 666,
+   "ref": "trilha:prf-rlm:razao-proporcao:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Razão, proporção e regra de três",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se 6 agentes concluem uma vistoria em 10 dias, 4 agentes, no mesmo ritmo, a concluirão em 15 dias.",
+   "just": "Cálculo: grandezas inversas: 6 × 10 = 4 × x → x = 15."
+  },
+  {
+   "n": 667,
+   "ref": "trilha:prf-rlm:razao-proporcao:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Razão, proporção e regra de três",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se 3 viaturas consomem 120 L de combustível, 5 viaturas, nas mesmas condições, consumirão 180 L.",
+   "just": "Cálculo: grandezas diretas: 120 × 5/3 = 200 L."
+  },
+  {
+   "n": 668,
+   "ref": "trilha:prf-rlm:razao-proporcao:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Razão, proporção e regra de três",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Para percorrer uma distância fixa, velocidade e tempo são grandezas inversamente proporcionais.",
+   "just": "Definição: o produto velocidade × tempo é constante."
+  },
+  {
+   "n": 669,
+   "ref": "trilha:prf-rlm:razao-proporcao:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Razão, proporção e regra de três",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Dividindo-se R$ 1.200 em partes diretamente proporcionais a 2, 3 e 5, a maior parte será de R$ 600.",
+   "just": "Cálculo: 1.200 ÷ 10 = 120; 5 × 120 = 600."
+  },
+  {
+   "n": 670,
+   "ref": "trilha:prf-rlm:razao-proporcao:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Razão, proporção e regra de três",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se 4 agentes fiscalizam 240 veículos em 6 horas, então 6 agentes, no mesmo ritmo, fiscalizarão 480 veículos em 8 horas.",
+   "just": "Cálculo: 240 × (6/4) × (8/6) = 480."
+  },
+  {
+   "n": 671,
+   "ref": "trilha:prf-rlm:razao-proporcao:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Razão, proporção e regra de três",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Um veículo a 90 km/h percorre 30 metros por segundo.",
+   "just": "Cálculo: 90 ÷ 3,6 = 25 m/s."
+  },
+  {
+   "n": 672,
+   "ref": "trilha:prf-rlm:porcentagem:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Porcentagem e juros",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Dois aumentos sucessivos de 10% equivalem a um único aumento de 21%.",
+   "just": "Cálculo: 1,1 × 1,1 = 1,21."
+  },
+  {
+   "n": 673,
+   "ref": "trilha:prf-rlm:porcentagem:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Porcentagem e juros",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Um produto que sofre aumento de 20% e, em seguida, desconto de 20% volta ao preço original.",
+   "just": "Cálculo: 1,2 × 0,8 = 0,96: fica 4% mais barato."
+  },
+  {
+   "n": 674,
+   "ref": "trilha:prf-rlm:porcentagem:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Porcentagem e juros",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se o número de acidentes passou de 80 para 100, o aumento foi de 25%.",
+   "just": "Cálculo: 20 ÷ 80 = 0,25."
+  },
+  {
+   "n": 675,
+   "ref": "trilha:prf-rlm:porcentagem:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Porcentagem e juros",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se, após um aumento de 25%, um produto passou a custar R$ 250, o preço original era R$ 187,50.",
+   "just": "Cálculo: 250 ÷ 1,25 = 200."
+  },
+  {
+   "n": 676,
+   "ref": "trilha:prf-rlm:porcentagem:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Porcentagem e juros",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "30% de 70% de uma população correspondem a 21% dessa população.",
+   "just": "Cálculo: 0,3 × 0,7 = 0,21."
+  },
+  {
+   "n": 677,
+   "ref": "trilha:prf-rlm:porcentagem:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Porcentagem e juros",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em juros simples, um capital de R$ 1.000 aplicado a 2% ao mês rende R$ 60 em 3 meses.",
+   "just": "Fórmula: J = 1.000 × 0,02 × 3 = 60."
+  },
+  {
+   "n": 678,
+   "ref": "trilha:prf-rlm:sequencias:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Sequências, PA e PG",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na sequência 20, 60, 120, 200, 300, as diferenças entre termos consecutivos formam uma progressão aritmética de razão 20.",
+   "just": "Cálculo: as diferenças são 40, 60, 80 e 100."
+  },
+  {
+   "n": 679,
+   "ref": "trilha:prf-rlm:sequencias:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Sequências, PA e PG",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O décimo termo da PA 5, 8, 11, ... é 35.",
+   "just": "Fórmula: a10 = 5 + 9 × 3 = 32."
+  },
+  {
+   "n": 680,
+   "ref": "trilha:prf-rlm:sequencias:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Sequências, PA e PG",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A soma dos 10 primeiros termos da PA 20, 40, 60, ... é 1.100.",
+   "just": "Fórmula: (20 + 200) × 10 / 2 = 1.100."
+  },
+  {
+   "n": 681,
+   "ref": "trilha:prf-rlm:sequencias:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Sequências, PA e PG",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na PG 3, 6, 12, ..., o sexto termo é 96.",
+   "just": "Fórmula: a6 = 3 × 2⁵ = 96."
+  },
+  {
+   "n": 682,
+   "ref": "trilha:prf-rlm:sequencias:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Sequências, PA e PG",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A sequência 2, 6, 18, 54 é uma progressão aritmética de razão 4.",
+   "just": "Definição: é PG de razão 3 (cada termo é o triplo do anterior)."
+  },
+  {
+   "n": 683,
+   "ref": "trilha:prf-rlm:sequencias:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Sequências, PA e PG",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em toda PA, cada termo, a partir do segundo, é a média aritmética entre o anterior e o seguinte.",
+   "just": "Propriedade da progressão aritmética."
+  },
+  {
+   "n": 684,
+   "ref": "trilha:prf-rlm:conjuntos:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Teoria dos conjuntos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se, de 100 motoristas, 60 estavam sem cinto, 30 usavam celular e 10 cometiam as duas infrações, então 20 não cometiam nenhuma das duas.",
+   "just": "Cálculo: 60 + 30 − 10 = 80; 100 − 80 = 20."
+  },
+  {
+   "n": 685,
+   "ref": "trilha:prf-rlm:conjuntos:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Teoria dos conjuntos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se 60 motoristas estavam sem cinto e 10 deles também usavam celular, então 60 motoristas cometiam apenas a infração de não usar o cinto.",
+   "just": "Cálculo: apenas sem cinto = 60 − 10 = 50."
+  },
+  {
+   "n": 686,
+   "ref": "trilha:prf-rlm:conjuntos:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Teoria dos conjuntos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se n(A) = 15, n(B) = 12 e n(A ∩ B) = 5, então n(A ∪ B) = 27.",
+   "just": "Fórmula: 15 + 12 − 5 = 22."
+  },
+  {
+   "n": 687,
+   "ref": "trilha:prf-rlm:conjuntos:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Teoria dos conjuntos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Um conjunto com 4 elementos possui 16 subconjuntos.",
+   "just": "Fórmula: 2⁴ = 16."
+  },
+  {
+   "n": 688,
+   "ref": "trilha:prf-rlm:conjuntos:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Teoria dos conjuntos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O conjunto vazio é subconjunto de qualquer conjunto.",
+   "just": "Propriedade da inclusão."
+  },
+  {
+   "n": 689,
+   "ref": "trilha:prf-rlm:conjuntos:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Teoria dos conjuntos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A interseção de dois conjuntos reúne os elementos que pertencem a pelo menos um deles.",
+   "just": "Definição: isso é a união; a interseção reúne os que pertencem aos dois."
+  },
+  {
+   "n": 690,
+   "ref": "trilha:prf-rlm:contagem:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Análise combinatória",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O número de equipes distintas de 2 agentes que podem ser formadas com 5 agentes é 20.",
+   "just": "Fórmula: a ordem não importa: C(5,2) = 10."
+  },
+  {
+   "n": 691,
+   "ref": "trilha:prf-rlm:contagem:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Análise combinatória",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Com 5 pessoas, há 20 maneiras de escolher um presidente e um vice-presidente.",
+   "just": "Cálculo: 5 × 4, pois a ordem importa."
+  },
+  {
+   "n": 692,
+   "ref": "trilha:prf-rlm:contagem:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Análise combinatória",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A sigla PRF tem 6 anagramas.",
+   "just": "Fórmula: 3! = 6."
+  },
+  {
+   "n": 693,
+   "ref": "trilha:prf-rlm:contagem:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Análise combinatória",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Há 5.040 senhas de 4 algarismos distintos.",
+   "just": "Cálculo: 10 × 9 × 8 × 7."
+  },
+  {
+   "n": 694,
+   "ref": "trilha:prf-rlm:contagem:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Análise combinatória",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O número de comissões de 3 pessoas escolhidas entre 10 é 720.",
+   "just": "Fórmula: C(10,3) = 120; 720 é o arranjo."
+  },
+  {
+   "n": 695,
+   "ref": "trilha:prf-rlm:contagem:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Análise combinatória",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Se há 3 rotas de ida e 4 rotas de volta, há 7 maneiras de fazer o percurso de ida e volta.",
+   "just": "Regra: 'e' multiplica: 3 × 4 = 12."
+  },
+  {
+   "n": 696,
+   "ref": "trilha:prf-rlm:probabilidade:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Probabilidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No lançamento de dois dados, a probabilidade de sair 6 em ambos é 1/36.",
+   "just": "Cálculo: 1/6 × 1/6."
+  },
+  {
+   "n": 697,
+   "ref": "trilha:prf-rlm:probabilidade:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Probabilidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em dois lançamentos de uma moeda, a probabilidade de sair pelo menos uma cara é 1/2.",
+   "just": "Cálculo: 1 − P(nenhuma cara) = 1 − 1/4 = 3/4."
+  },
+  {
+   "n": 698,
+   "ref": "trilha:prf-rlm:probabilidade:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Probabilidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "De uma urna com 3 bolas vermelhas e 2 azuis, retirando-se duas sem reposição, a probabilidade de ambas serem vermelhas é 3/10.",
+   "just": "Cálculo: 3/5 × 2/4 = 3/10."
+  },
+  {
+   "n": 699,
+   "ref": "trilha:prf-rlm:probabilidade:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Probabilidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Se a probabilidade de chover é 0,3, a de não chover é 0,7.",
+   "just": "Regra do evento complementar."
+  },
+  {
+   "n": 700,
+   "ref": "trilha:prf-rlm:probabilidade:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Probabilidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Sabendo-se que o resultado de um dado foi par, a probabilidade de ter saído o número 6 é 1/6.",
+   "just": "Cálculo: o universo se reduz a {2, 4, 6}: 1/3."
+  },
+  {
+   "n": 701,
+   "ref": "trilha:prf-rlm:probabilidade:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Probabilidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A probabilidade de um evento pode ser maior que 1 quando há muitos casos favoráveis.",
+   "just": "Definição: a probabilidade varia de 0 a 1."
+  },
+  {
+   "n": 702,
+   "ref": "trilha:prf-rlm:estatistica:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Estatística descritiva",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A mediana do conjunto 12, 3, 5, 2, 3 é 5.",
+   "just": "Regra: ordenando (2, 3, 3, 5, 12), o valor central é 3."
+  },
+  {
+   "n": 703,
+   "ref": "trilha:prf-rlm:estatistica:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Estatística descritiva",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A média aritmética de 4, 6, 8, 10 e 12 é 8.",
+   "just": "Cálculo: 40 ÷ 5."
+  },
+  {
+   "n": 704,
+   "ref": "trilha:prf-rlm:estatistica:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Estatística descritiva",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Somando-se 10 a todos os valores de um conjunto de dados, o desvio padrão aumenta 10 unidades.",
+   "just": "Propriedade: o desvio padrão não muda; só a média aumenta 10."
+  },
+  {
+   "n": 705,
+   "ref": "trilha:prf-rlm:estatistica:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Estatística descritiva",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A variância populacional do conjunto 4, 6, 8, 10, 12 é 8.",
+   "just": "Cálculo: (16 + 4 + 0 + 4 + 16) ÷ 5 = 8."
+  },
+  {
+   "n": 706,
+   "ref": "trilha:prf-rlm:estatistica:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Estatística descritiva",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A soma dos desvios de cada valor em relação à média aritmética é sempre igual a zero.",
+   "just": "Propriedade da média aritmética."
+  },
+  {
+   "n": 707,
+   "ref": "trilha:prf-rlm:estatistica:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Estatística descritiva",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em um conjunto de dados, a moda é o valor que ocupa a posição central.",
+   "just": "Definição: a moda é o valor mais frequente; o central é a mediana."
+  },
+  {
+   "n": 708,
+   "ref": "trilha:prf-rlm:geometria:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Geometria: escalas, áreas e volumes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em um mapa na escala 1:50.000, uma distância de 4 cm corresponde a 2 km reais.",
+   "just": "Cálculo: 4 × 50.000 cm = 200.000 cm = 2 km."
+  },
+  {
+   "n": 709,
+   "ref": "trilha:prf-rlm:geometria:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Geometria: escalas, áreas e volumes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Dobrando-se o lado de um quadrado, sua área dobra.",
+   "just": "Propriedade: a área é multiplicada por 4 (k²)."
+  },
+  {
+   "n": 710,
+   "ref": "trilha:prf-rlm:geometria:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Geometria: escalas, áreas e volumes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Um reservatório em forma de paralelepípedo com 2 m × 3 m × 1 m comporta 6.000 litros.",
+   "just": "Cálculo: 6 m³ × 1.000 L/m³."
+  },
+  {
+   "n": 711,
+   "ref": "trilha:prf-rlm:geometria:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Geometria: escalas, áreas e volumes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Um triângulo retângulo de catetos 6 cm e 8 cm tem hipotenusa de 10 cm.",
+   "just": "Fórmula: √(36 + 64) = 10."
+  },
+  {
+   "n": 712,
+   "ref": "trilha:prf-rlm:geometria:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Geometria: escalas, áreas e volumes",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A escala 1:100.000 é maior que a escala 1:10.000.",
+   "just": "Definição: 1/10.000 é fração maior, portanto escala maior (mais detalhe)."
+  },
+  {
+   "n": 713,
+   "ref": "trilha:prf-rlm:geometria:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Geometria: escalas, áreas e volumes",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A área de um círculo de raio 2 m é 4π m².",
+   "just": "Fórmula: π·r² = 4π."
+  },
+  {
+   "n": 714,
+   "ref": "trilha:prf-rlm:logica:1",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Lógica proposicional",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A negação de 'Se o motorista bebeu, então foi autuado' é 'O motorista bebeu e não foi autuado'.",
+   "just": "Regra: a negação de P → Q é P e não Q."
+  },
+  {
+   "n": 715,
+   "ref": "trilha:prf-rlm:logica:2",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Lógica proposicional",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A proposição 'Se chove, então a pista fica molhada' é equivalente a 'Se a pista não fica molhada, então não chove'.",
+   "just": "Regra: contrapositiva."
+  },
+  {
+   "n": 716,
+   "ref": "trilha:prf-rlm:logica:3",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Lógica proposicional",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A proposição composta 'P ou Q' é falsa sempre que uma das proposições simples é falsa.",
+   "just": "Definição: a disjunção só é falsa quando as duas são falsas."
+  },
+  {
+   "n": 717,
+   "ref": "trilha:prf-rlm:logica:4",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Lógica proposicional",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A negação de 'Todo policial é concursado' é 'Nenhum policial é concursado'.",
+   "just": "Regra: a negação é 'Algum policial não é concursado'."
+  },
+  {
+   "n": 718,
+   "ref": "trilha:prf-rlm:logica:5",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Lógica proposicional",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A tabela-verdade de uma proposição composta por 3 proposições simples tem 8 linhas.",
+   "just": "Fórmula: 2³ = 8."
+  },
+  {
+   "n": 719,
+   "ref": "trilha:prf-rlm:logica:6",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Lógica proposicional",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A frase 'Feche a porta!' é uma proposição.",
+   "just": "Definição: uma ordem não pode ser julgada verdadeira ou falsa."
   },
   {
    "n": 192,

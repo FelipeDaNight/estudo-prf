@@ -279,7 +279,7 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
   await t("Questões: lista os bancos e o treino filtra por matéria", async () => {
     await page.click('[data-t="quest"]');
     await espera(() => document.querySelectorAll("#q_lista .card[data-banco]").length === 4);
-    assert.ok((await page.locator('#q_lista .card[data-banco="socrates-trilhas-prf"]').innerText()).includes("Respondidas 0/512"), "banco do Sócrates");
+    assert.ok((await page.locator('#q_lista .card[data-banco="socrates-trilhas-prf"]').innerText()).includes("Respondidas 0/719"), "banco do Sócrates");
     const card = page.locator('#q_lista .card[data-banco="cbmgo-2022-soldado"]');
     assert.ok((await card.textContent()).includes("gabarito é de elaboração própria"), "aviso do gabarito");
     await card.locator('.q_mat[data-m="Raciocínio Lógico"]').click();
@@ -435,7 +435,7 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
 
   await t("Trilha do edital: ordem por matéria, marcar estudado e próximo no plano de hoje", async () => {
     await page.evaluate(() => window.__app.abrir("hoje"));
-    await espera(() => /\/151 tópicos de 15/.test(document.getElementById("h_tri_t").textContent));
+    await espera(() => /\/152 tópicos de 15.*Conteúdo no app: 99% do edital/.test(document.getElementById("h_tri_t").textContent));
     const dados = await page.evaluate(async () => (await fetch("bancos/trilha-edital-prf.json")).json());
     dados.materias.forEach((m) => { assert.ok(m.passos.length >= 2 && m.logica, m.materia); m.passos.forEach((p, i) => { assert.strictEqual(p.n, i + 1); assert.ok([1, 2, 3].includes(p.nv)); }); });
     const lp = dados.materias.find((m) => m.materia === "Direito Penal").passos.map((p) => p.t);
@@ -464,6 +464,22 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await espera(() => document.getElementById("q_tela").style.display === "block");
     assert.ok((await page.locator("#q_tela").innerText()).includes("Crase") || (await page.locator("#q_tela").innerText()).length > 50);
     await page.evaluate(() => window.__app.abrir("hoje"));
+    await page.evaluate(() => window.__app.abrir("trilha"));
+    // matérias novas do Sócrates (Bloco I) ligadas à trilha; Anexo I do CTB abre a leitura da lei
+    for (const [mat, n] of [["Raciocínio Lógico", 13], ["Informática", 8], ["Física", 9], ["Geopolítica", 10], ["Língua Estrangeira", 2]]) {
+      await page.click('#tri_corpo .tri_mat[data-m="' + mat + '"]');
+      await espera((n) => document.querySelectorAll("#tri_corpo .tri_res").length === n && document.querySelectorAll("#tri_corpo .tri_passo").length === n, n);
+    }
+    await page.click('#tri_corpo .tri_mat[data-m="Física"]');
+    await espera(() => document.querySelectorAll("#tri_corpo .tri_passo").length === 9);
+    await page.locator("#tri_corpo .tri_res").nth(8).click();   // 9. Colisões
+    await espera(() => document.getElementById("res_topico").style.display === "block" && document.getElementById("res_corpo").textContent.includes("Quantidade de movimento"));
+    await page.click("#res_sair");
+    await page.click('#tri_corpo .tri_mat[data-m="Legislação de Trânsito"]');
+    await espera(() => document.querySelectorAll("#tri_corpo .tri_lei").length === 1);
+    await page.click("#tri_corpo .tri_lei");
+    await espera(() => document.querySelectorAll("#lei_dias .lei_bloco").length === 43);
+    await page.click("#lei_voltar");
     await page.evaluate(() => window.__app.abrir("trilha"));
     await page.click("#tri_voltar");
   });

@@ -1599,6 +1599,470 @@
    ]
   },
   {
+   "materia": "Raciocínio Lógico-Matemático",
+   "trilha": "prf-rlm",
+   "fonte": "Matemática do ensino médio (conteúdo do edital PRF 2021, Cebraspe, itens 1 a 10 de Raciocínio Lógico-Matemático), com exemplos resolvidos e conferidos em 16/11/2026; questões da PRF 2021, itens 27 a 32.",
+   "atualizado": "2026-11-16",
+   "topicos": [
+    {
+     "id": "equacoes",
+     "titulo": "Equações, inequações e sistemas lineares",
+     "edital": "1 Modelagem de situações-problema por meio de equações do 1º e 2º graus e sistemas lineares",
+     "peso": 2,
+     "pontos": [
+      "Modelar é traduzir o texto em conta: escolha a incógnita (x = o que se pede), monte a equação com os dados e resolva. Ex.: 'o dobro de um número mais 6 é 20' → 2x + 6 = 20 → x = 7.",
+      "Equação do 1º grau (ax + b = 0): isole o x fazendo a mesma operação dos dois lados. Ex.: 3x − 5 = 16 → 3x = 21 → x = 7.",
+      "Sistema linear com duas incógnitas: resolva por substituição (isola uma letra e troca na outra equação) ou por adição (soma as equações para eliminar uma letra). Ex.: x + y = 10 e x − y = 4 → somando: 2x = 14 → x = 7 e y = 3.",
+      "Exemplo típico: num pátio há 20 veículos, entre carros (4 rodas) e motos (2 rodas), somando 64 rodas. c + m = 20 e 4c + 2m = 64 → 2c = 24 → c = 12 carros e m = 8 motos.",
+      "Equação do 2º grau (ax² + bx + c = 0): Δ = b² − 4ac e x = (−b ± √Δ) / 2a. Δ > 0: duas raízes reais diferentes; Δ = 0: uma raiz real (dupla); Δ < 0: não há raiz real.",
+      "Soma e produto das raízes: S = −b/a e P = c/a. Ex.: x² − 5x + 6 = 0 → soma 5 e produto 6 → raízes 2 e 3.",
+      "Inequação: resolve-se como equação, mas, ao multiplicar ou dividir por número NEGATIVO, o sinal da desigualdade inverte. Ex.: −2x > 6 → x < −3."
+     ],
+     "pegadinhas": [
+      "Em inequação, dividir por número negativo inverte o sinal — a banca 'esquece' de inverter.",
+      "Leia a pergunta final: às vezes o problema pede o dobro de x, ou a soma, e não o x.",
+      "Δ negativo significa que não há raiz REAL, e não que a conta está errada."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "funcoes",
+     "titulo": "Funções e gráficos (afim, quadrática, exponencial, logarítmica)",
+     "edital": "2 Noção de função; análise gráfica; funções afim, quadrática, exponencial e logarítmica; aplicações",
+     "peso": 3,
+     "pontos": [
+      "Função é uma regra que liga cada valor de x a um único valor de y. No gráfico, x fica na horizontal e y na vertical; lê-se onde a função cresce, onde decresce e onde corta os eixos.",
+      "Função afim: f(x) = ax + b; o gráfico é uma reta. 'a' é a taxa de variação (quanto y muda quando x aumenta 1): a > 0 cresce, a < 0 decresce; 'b' é onde a reta corta o eixo y; a raiz é x = −b/a. Ex.: corrida com tarifa fixa de R$ 5 mais R$ 3 por km: f(x) = 3x + 5.",
+      "Função quadrática: f(x) = ax² + bx + c; o gráfico é uma parábola. a > 0: boca para cima (tem MÍNIMO); a < 0: boca para baixo (tem MÁXIMO). Vértice: xv = −b/2a; o valor máximo ou mínimo é f(xv).",
+      "Exemplo da PRF 2021 (itens 27 a 30): espalhamento E = p·(1 − p) = p − p², com p entre 0 e 1. É parábola de boca para baixo: o máximo está em p = 0,5 e vale 0,25 (25%). Com p = 0,3: E = 0,3 × 0,7 = 0,21 (21%). Logo o espalhamento nunca passa de 25% e não cresce sempre com p; E = 16% ocorre tanto com p = 20% quanto com p = 80%.",
+      "Função exponencial: f(x) = a^x (a > 0 e a ≠ 1). Cresce se a > 1 e decresce se 0 < a < 1; passa sempre por (0, 1). Modela o que é multiplicado por um fator fixo a cada período: juros compostos, população, contágio. Ex.: valor que dobra a cada ano: V = V0·2^t.",
+      "Logaritmo é o expoente: log de b na base a é x quando a^x = b. Ex.: log₂ 8 = 3, porque 2³ = 8; log₁₀ 1000 = 3. Propriedades: log(A·B) = log A + log B; log(A/B) = log A − log B; log(A^n) = n·log A.",
+      "Como escolher o modelo: variação constante por unidade → afim; produto de duas quantidades que somam um total fixo → quadrática (tem máximo); multiplicação por fator constante a cada período → exponencial."
+     ],
+     "pegadinhas": [
+      "Função quadrática com a < 0 tem valor máximo: a banca afirma que a grandeza 'cresce sempre' (item 30 da PRF 2021, Errado).",
+      "O máximo de p·(1 − p) é 0,25, em p = 0,5 — não 0,5 nem 1.",
+      "log(A + B) NÃO é log A + log B: a propriedade vale para o produto."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 27
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 28
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 29
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 30
+      }
+     ]
+    },
+    {
+     "id": "razao-proporcao",
+     "titulo": "Razão, proporção e regra de três",
+     "edital": "3 Taxas de variação de grandezas; razão e proporção; regra de três simples e composta",
+     "peso": 2,
+     "pontos": [
+      "Razão é a divisão entre duas grandezas (a/b); proporção é a igualdade entre duas razões (a/b = c/d), em que vale a multiplicação cruzada: a·d = b·c.",
+      "Grandezas DIRETAMENTE proporcionais: uma aumenta, a outra aumenta na mesma proporção (distância e combustível). INVERSAMENTE proporcionais: uma aumenta, a outra diminui na mesma proporção, e o produto fica constante (velocidade e tempo; número de agentes e dias de trabalho).",
+      "Regra de três simples direta: 3 viaturas gastam 120 L; 5 viaturas gastam x → 3/5 = 120/x → x = 200 L. Inversa: 6 agentes fazem a tarefa em 10 dias; 4 agentes fazem em x → 6 × 10 = 4 × x → x = 15 dias.",
+      "Regra de três composta: compare cada grandeza com a da incógnita, uma de cada vez. Ex.: 4 agentes fiscalizam 240 veículos em 6 h; 6 agentes em 8 h fiscalizam x. Mais agentes → mais veículos (direta); mais horas → mais veículos (direta): x = 240 × (6/4) × (8/6) = 480.",
+      "Divisão proporcional: para dividir R$ 1.200 em partes proporcionais a 2, 3 e 5, some os pesos (10), ache a constante (1.200 ÷ 10 = 120) e multiplique: 240, 360 e 600.",
+      "Velocidade média = distância ÷ tempo. A 80 km/h, 240 km levam 3 h; a 120 km/h, levam 2 h. Conversão: km/h ÷ 3,6 = m/s (90 km/h = 25 m/s).",
+      "Taxas (km/L, veículos por hora, R$ por kg) são razões: deixe as unidades coerentes antes de montar a proporção."
+     ],
+     "pegadinhas": [
+      "Tratar grandeza inversa como direta: mais trabalhadores → MENOS dias.",
+      "Na regra de três composta, a banca mistura uma grandeza direta e uma inversa na mesma questão.",
+      "Esquecer de converter unidades (minutos em horas, km/h em m/s)."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "porcentagem",
+     "titulo": "Porcentagem e juros",
+     "edital": "4 Porcentagem",
+     "peso": 2,
+     "pontos": [
+      "Porcentagem é fração de denominador 100: 25% = 25/100 = 0,25. Para calcular x% de um valor, multiplique: 15% de 800 = 0,15 × 800 = 120.",
+      "Fator de aumento e de desconto: aumentar 20% é multiplicar por 1,20; descontar 20% é multiplicar por 0,80. Ex.: R$ 500 com 12% de aumento = 500 × 1,12 = 560.",
+      "Aumentos e descontos sucessivos NÃO se somam: multiplicam-se os fatores. Dois aumentos de 10% = 1,1 × 1,1 = 1,21 (21%, e não 20%). Aumento de 20% seguido de desconto de 20% = 1,2 × 0,8 = 0,96 (perda de 4%).",
+      "Variação percentual = (valor final − valor inicial) ÷ valor inicial. De 80 para 100 acidentes: 20/80 = 25% de aumento. De 100 para 80: 20/100 = 20% de queda — a base muda.",
+      "Descobrir o valor original: se depois de 25% de aumento o preço é R$ 250, o original é 250 ÷ 1,25 = 200 (não se tira 25% de 250).",
+      "Porcentagem de porcentagem: 30% de 70% = 0,3 × 0,7 = 0,21 = 21% (conta do item 27 da PRF 2021). Pontos percentuais: passar de 10% para 15% é subir 5 pontos percentuais, o que equivale a um aumento de 50%.",
+      "Juros simples: J = C·i·t (crescem em linha reta). Juros compostos: M = C·(1 + i)^t (juros sobre juros); para mais de um período, rendem mais que os simples."
+     ],
+     "pegadinhas": [
+      "Somar aumentos sucessivos (10% + 10% = 20%) é o erro que a banca espera: o certo é 21%.",
+      "Aumentar 25% e depois reduzir 25% não volta ao valor inicial.",
+      "Confundir 'pontos percentuais' com 'por cento'."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "sequencias",
+     "titulo": "Sequências, PA e PG",
+     "edital": "5 Regularidades e padrões em sequências; sequências numéricas; progressão aritmética e progressão geométrica",
+     "peso": 3,
+     "pontos": [
+      "Sequência é uma lista ordenada de números que segue um padrão. Para descobri-lo, calcule as diferenças entre termos vizinhos (se forem iguais, é PA) ou as divisões (se forem iguais, é PG).",
+      "PA (progressão aritmética): soma-se sempre a mesma razão r. Termo geral: an = a1 + (n − 1)·r. Ex.: 20, 40, 60... (r = 20): a10 = 20 + 9 × 20 = 200.",
+      "Soma dos n primeiros termos da PA: Sn = (a1 + an)·n / 2. Ex.: 20 + 40 + ... + 200 (10 termos) = (20 + 200) × 10 / 2 = 1.100.",
+      "PG (progressão geométrica): multiplica-se sempre pela mesma razão q. Termo geral: an = a1·q^(n − 1). Ex.: 3, 6, 12, 24... (q = 2): a6 = 3 × 2⁵ = 96. Soma: Sn = a1·(q^n − 1)/(q − 1).",
+      "Exemplo da PRF 2021 (itens 31 e 32): totais acumulados 20, 60, 120, 200, 300. O que se fiscalizou em cada hora foi 20, 40, 60, 80, 100: uma PA de razão 20 (item 32, Certo). Até a 7ª hora: 300 + 120 + 140 = 560 > 550 (item 31, Certo).",
+      "Quando as diferenças formam uma PA (como no exemplo), a sequência original NÃO é PA: é de segunda ordem. No exemplo, o acumulado até a hora n é 10·n·(n + 1).",
+      "Propriedade: na PA, cada termo é a média aritmética dos vizinhos (a2 = (a1 + a3)/2); na PG, o quadrado de cada termo é o produto dos vizinhos (a2² = a1·a3)."
+     ],
+     "pegadinhas": [
+      "Confundir a sequência dos totais acumulados com a do que acontece em cada período: leia o que o item pede.",
+      "No termo geral, usa-se (n − 1), não n: o primeiro termo ainda não recebeu a razão.",
+      "Diferenças constantes = PA; quocientes constantes = PG."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 31
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 32
+      }
+     ]
+    },
+    {
+     "id": "conjuntos",
+     "titulo": "Teoria dos conjuntos",
+     "edital": "8 Noções básicas de teoria dos conjuntos",
+     "peso": 1,
+     "pontos": [
+      "Conjunto é uma coleção de elementos. Pertinência (∈) liga elemento e conjunto; inclusão (⊂) liga conjunto e conjunto. O conjunto vazio é subconjunto de qualquer conjunto.",
+      "União (A ∪ B): elementos que estão em A OU em B (ou nos dois). Interseção (A ∩ B): os que estão em A E em B. Diferença (A − B): os que estão em A e não estão em B. Complementar: o que falta para completar o universo.",
+      "Número de elementos da união: n(A ∪ B) = n(A) + n(B) − n(A ∩ B) — desconta-se quem foi contado duas vezes.",
+      "Exemplo: de 100 motoristas abordados, 60 estavam sem cinto, 30 usavam o celular e 10 cometiam as duas infrações. Pelo menos uma: 60 + 30 − 10 = 80. Nenhuma: 100 − 80 = 20. SÓ sem cinto: 60 − 10 = 50.",
+      "Diagrama de Venn: comece SEMPRE pelo centro (a interseção) e preencha para fora, subtraindo o que já foi colocado.",
+      "Três conjuntos: n(A ∪ B ∪ C) = n(A) + n(B) + n(C) − n(A∩B) − n(A∩C) − n(B∩C) + n(A∩B∩C).",
+      "Um conjunto com n elementos tem 2^n subconjuntos (com 3 elementos: 8, contando o vazio e o próprio conjunto)."
+     ],
+     "pegadinhas": [
+      "'60 estavam sem cinto' inclui quem também usava o celular; 'SÓ sem cinto' exclui a interseção.",
+      "Somar os conjuntos sem descontar a interseção conta gente duas vezes.",
+      "União é 'ou' (pelo menos um); interseção é 'e' (os dois)."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "contagem",
+     "titulo": "Análise combinatória",
+     "edital": "6 Noções de contagem",
+     "peso": 2,
+     "pontos": [
+      "Princípio fundamental da contagem: se uma escolha tem m opções E a seguinte tem n, há m × n maneiras. Ex.: 3 camisas e 2 calças = 6 trajes. 'E' multiplica; 'OU' soma.",
+      "Fatorial: n! = n × (n − 1) × ... × 1; 5! = 120; 0! = 1. Permutação de n elementos distintos (todas as ordens possíveis): n!. Ex.: 4 viaturas em fila: 4! = 24.",
+      "Permutação com repetição: divide-se pelo fatorial das repetições. Anagramas de ARARA: 5!/(3!·2!) = 10.",
+      "Arranjo: escolhem-se p entre n e a ORDEM importa (pódio, senha, cargos diferentes): A(n,p) = n!/(n − p)!. Ex.: presidente e vice entre 5 pessoas: 5 × 4 = 20.",
+      "Combinação: escolhem-se p entre n e a ordem NÃO importa (equipe, comissão, dupla): C(n,p) = n!/[p!·(n − p)!]. Ex.: duplas entre 5 agentes: C(5,2) = 10; equipes de 3 entre 10: C(10,3) = 120.",
+      "Pergunta-chave: trocar a ordem dos escolhidos gera um resultado diferente? Sim → arranjo (ou princípio multiplicativo); não → combinação.",
+      "Placas e senhas: multiplique as opções de cada posição. Placa no padrão Mercosul (LLLNLNN): 26⁴ × 10³ combinações. Senha de 4 algarismos distintos: 10 × 9 × 8 × 7 = 5.040."
+     ],
+     "pegadinhas": [
+      "Usar arranjo quando a ordem não importa conta em dobro: a equipe {A, B} é a mesma que {B, A}.",
+      "'Pelo menos um' costuma sair mais fácil pelo complementar: total − nenhum.",
+      "'E' multiplica as possibilidades; 'ou' soma."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "probabilidade",
+     "titulo": "Probabilidade",
+     "edital": "6 Noções de probabilidade",
+     "peso": 2,
+     "pontos": [
+      "Probabilidade = casos favoráveis ÷ casos possíveis (quando todos têm a mesma chance). Vai de 0 (impossível) a 1 (certo), ou de 0% a 100%. Dado: P(número par) = 3/6 = 1/2.",
+      "Evento complementar: P(não A) = 1 − P(A). 'Pelo menos um' = 1 − P(nenhum). Ex.: em 2 lançamentos de moeda, P(pelo menos uma cara) = 1 − 1/4 = 3/4.",
+      "'E' multiplica (eventos independentes): P(A e B) = P(A) × P(B). Dois dados: P(6 e 6) = 1/6 × 1/6 = 1/36.",
+      "'OU' soma, descontando a interseção: P(A ou B) = P(A) + P(B) − P(A e B). Se os eventos não podem ocorrer juntos (mutuamente exclusivos), basta somar.",
+      "Sem reposição, a segunda probabilidade muda. Urna com 3 bolas vermelhas e 2 azuis: P(duas vermelhas) = 3/5 × 2/4 = 3/10.",
+      "Probabilidade condicional: P(A | B) = P(A e B) ÷ P(B) — o universo se reduz ao que já se sabe que ocorreu. Ex.: sabendo que o dado deu par, P(ser 6) = 1/3.",
+      "Com contagem: P = combinações favoráveis ÷ combinações possíveis. Sortear 2 agentes entre 5 (2 mulheres e 3 homens): P(duas mulheres) = C(2,2)/C(5,2) = 1/10."
+     ],
+     "pegadinhas": [
+      "Somar probabilidades de eventos que podem ocorrer juntos sem descontar a interseção.",
+      "Esquecer que, sem reposição, o total diminui na segunda retirada.",
+      "Probabilidade nunca é maior que 1 (100%)."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "estatistica",
+     "titulo": "Estatística descritiva",
+     "edital": "7 Descrição e análise de dados; leitura e interpretação de tabelas e gráficos; cálculo de médias e análise de desvios",
+     "peso": 1,
+     "pontos": [
+      "Média aritmética = soma dos valores ÷ quantidade. Ex.: 4, 6, 8, 10, 12 → 40/5 = 8. Média ponderada: multiplica-se cada valor pelo seu peso e divide-se pela soma dos pesos.",
+      "Mediana = valor central com os dados EM ORDEM. Quantidade ímpar: o do meio; par: a média dos dois centrais. Ex.: 2, 3, 3, 5, 12 → mediana 3. A mediana não é afetada por valores extremos; a média é (aqui, a média é 25/5 = 5).",
+      "Moda = valor que mais se repete (pode haver mais de uma, ou nenhuma). No exemplo acima, a moda é 3.",
+      "Dispersão: amplitude = maior − menor. Desvio = valor − média (a soma dos desvios é sempre zero). Variância = média dos quadrados dos desvios; desvio padrão = raiz quadrada da variância.",
+      "Exemplo: 4, 6, 8, 10, 12 (média 8). Desvios: −4, −2, 0, 2, 4. Quadrados: 16, 4, 0, 4, 16 (soma 40). Variância populacional = 40/5 = 8; desvio padrão = √8 ≈ 2,83. Quanto maior o desvio padrão, mais espalhados os dados.",
+      "Somar uma constante a todos os dados soma a mesma constante à média e NÃO muda o desvio padrão; multiplicar todos por k multiplica a média e o desvio padrão por k.",
+      "Tabelas e gráficos: leia título, eixos, unidade e escala antes dos números. Barras comparam categorias; linhas mostram evolução no tempo; setores (pizza) mostram partes de um todo (100%)."
+     ],
+     "pegadinhas": [
+      "Calcular a mediana sem ordenar os dados.",
+      "Gráfico cujo eixo vertical não começa no zero exagera as diferenças: confira a escala.",
+      "Média alta não significa que a maioria está acima dela: um valor extremo puxa a média."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "geometria",
+     "titulo": "Geometria: escalas, áreas e volumes",
+     "edital": "9 e 10 Figuras planas, mapas e plantas; escalas; figuras espaciais; métrica: áreas e volumes; estimativas",
+     "peso": 1,
+     "pontos": [
+      "Escala = medida no desenho ÷ medida real (na mesma unidade). Em 1:50.000, 1 cm no mapa = 50.000 cm = 500 m reais; então 4 cm no mapa = 2 km.",
+      "Escala 'maior' mostra mais detalhes de uma área menor: 1:10.000 é MAIOR que 1:100.000 (a fração é maior). Plantas de casa usam 1:50 ou 1:100; mapas rodoviários usam escalas pequenas.",
+      "Áreas: retângulo = base × altura; triângulo = base × altura ÷ 2; trapézio = (B + b) × h ÷ 2; círculo = π·r². Comprimento da circunferência = 2·π·r.",
+      "Teorema de Pitágoras (triângulo retângulo): hipotenusa² = cateto² + cateto². Triângulo 3-4-5 e seus múltiplos (6-8-10). Serve para distância em linha reta: 3 km ao norte e 4 km a leste = 5 km do ponto de partida.",
+      "Volumes: paralelepípedo = comprimento × largura × altura; cubo = aresta³; cilindro = π·r²·h. 1 m³ = 1.000 litros; 1 dm³ = 1 L; 1 cm³ = 1 mL.",
+      "Ampliar uma figura por um fator k multiplica os comprimentos por k, as ÁREAS por k² e os VOLUMES por k³. Dobrar o lado de um quadrado quadruplica a área.",
+      "Conversões: 1 km = 1.000 m; 1 m² = 10.000 cm²; 1 km² = 1.000.000 m²; 1 hectare = 10.000 m². Planificação é a figura espacial 'aberta' no plano (o cubo vira 6 quadrados); projeções e cortes mostram as vistas de frente, de lado e de cima."
+     ],
+     "pegadinhas": [
+      "Converter área como se fosse comprimento: 1 m² são 10.000 cm², não 100.",
+      "Dobrar as dimensões não dobra a área (quadruplica) nem o volume (multiplica por 8).",
+      "Escala 1:10.000 é maior que 1:100.000."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "logica",
+     "titulo": "Lógica proposicional",
+     "edital": "Proposições, conectivos, equivalências e negações (assunto clássico da Cebraspe; não constou do edital da PRF 2021)",
+     "peso": 2,
+     "pontos": [
+      "Proposição é uma frase declarativa que pode ser julgada verdadeira (V) ou falsa (F). Perguntas, ordens e exclamações não são proposições. (No edital da PRF 2021 este assunto não apareceu, mas é clássico da Cebraspe e pode voltar.)",
+      "Conectivos: conjunção 'e' (∧) só é V se as duas forem V; disjunção 'ou' (∨) só é F se as duas forem F; disjunção exclusiva 'ou... ou' é V quando só uma é V.",
+      "Condicional 'se P, então Q' (P → Q): só é F quando P é V e Q é F. P é condição suficiente para Q; Q é condição necessária para P.",
+      "Bicondicional 'P se e somente se Q' (P ↔ Q): é V quando as duas têm o mesmo valor (as duas V ou as duas F).",
+      "Negações (leis de De Morgan): não (P e Q) = não P ou não Q; não (P ou Q) = não P e não Q. Negação do condicional: não (P → Q) = P e não Q (mantém a primeira E nega a segunda).",
+      "Equivalências do condicional: P → Q equivale à contrapositiva não Q → não P (inverte e nega) e a 'não P ou Q' (nega a primeira OU mantém a segunda).",
+      "Quantificadores: a negação de 'todo A é B' é 'algum A não é B'; a negação de 'algum A é B' é 'nenhum A é B'. A tabela-verdade com n proposições simples tem 2^n linhas."
+     ],
+     "pegadinhas": [
+      "A negação de 'se P, então Q' NÃO é outro 'se... então': é 'P e não Q'.",
+      "'Se P, então Q' não equivale a 'se Q, então P' nem a 'se não P, então não Q'.",
+      "A negação de 'todos' não é 'nenhum': é 'pelo menos um não'."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    }
+   ]
+  },
+  {
+   "materia": "Informática",
+   "trilha": "prf-informatica",
+   "fonte": "Conceitos de informática do edital PRF 2021 (Cebraspe): internet e intranet, Windows, transformação digital, segurança e computação em nuvem. São definições usuais da área (as mesmas da Cartilha de Segurança para Internet, do CERT.br, e do modelo de nuvem do NIST), escritas em 16/11/2026; questões da PRF 2021, itens 33 a 38, com o gabarito oficial.",
+   "atualizado": "2026-11-16",
+   "topicos": [
+    {
+     "id": "internet-intranet",
+     "titulo": "Internet, intranet e navegadores",
+     "edital": "1 e 2 Conceito de internet e intranet; navegadores, correio eletrônico, busca, redes sociais; acesso a distância e transferência de arquivos",
+     "peso": 2,
+     "pontos": [
+      "Internet é a rede mundial pública de computadores; intranet é uma rede PRIVADA de uma organização que usa as mesmas tecnologias e protocolos da internet (TCP/IP, HTTP, navegador); extranet é a parte da intranet aberta a parceiros externos, com acesso controlado.",
+      "Protocolos: HTTP (páginas, porta 80) e HTTPS (HTTP com criptografia TLS, porta 443); DNS traduz o nome (gov.br) em endereço IP; FTP transfere arquivos; SMTP ENVIA e-mail; POP3 e IMAP RECEBEM (o IMAP mantém as mensagens sincronizadas no servidor).",
+      "Navegadores (Chrome, Edge, Firefox): guardam histórico, cache e cookies (pequenos arquivos que os sites gravam para lembrar o usuário); permitem salvar e sincronizar favoritos e SENHAS pela conta do usuário, em qualquer sítio — não só em intranet ou com HTTPS (item 33 da PRF 2021, Errado).",
+      "Navegação anônima (privativa) não guarda histórico, cookies nem dados de formulários no computador, mas NÃO esconde o acesso do provedor, do administrador da rede ou dos sítios visitados.",
+      "Busca no Google: aspas buscam a expressão exata; o sinal de menos exclui um termo (jaguar -carro); site: restringe a um sítio (site:gov.br prf); filetype: restringe o tipo de arquivo (filetype:pdf); @ busca em rede social (campanha PRF @twitter — item 35 da PRF 2021, Certo).",
+      "E-mail: endereço no formato usuario@dominio; campos Para, Cc (com cópia, visível a todos) e Cco (cópia oculta: os demais não veem o endereço). Webmail é o acesso pelo navegador; cliente de e-mail é o programa instalado (Outlook, Thunderbird).",
+      "Acesso a distância e transferência: VPN cria um túnel criptografado para acessar a rede interna pela internet; a Área de Trabalho Remota controla outro computador; download traz arquivos e upload envia; streaming reproduz áudio e vídeo sem baixar o arquivo inteiro."
+     ],
+     "pegadinhas": [
+      "Intranet não é uma rede 'fora da internet' nem de outra tecnologia: é rede privada que usa os protocolos da internet.",
+      "HTTPS garante criptografia e identidade do servidor, não que o sítio seja honesto: páginas de golpe também exibem o cadeado.",
+      "SMTP envia; POP3 e IMAP recebem — a banca troca."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 33
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 35
+      }
+     ]
+    },
+    {
+     "id": "windows",
+     "titulo": "Windows 10: arquivos, pastas e programas",
+     "edital": "2.2 Noções de sistema operacional (ambiente Windows)",
+     "peso": 2,
+     "pontos": [
+      "Sistema operacional é o programa que gerencia o hardware e os demais programas (processador, memória, arquivos e dispositivos). No Windows, cada usuário tem a sua conta, protegida por senha, PIN ou biometria (Windows Hello).",
+      "Explorador de Arquivos (Win + E): organiza unidades, pastas e arquivos. Nomes de arquivo não podem conter os caracteres \\ / : * ? \" < > |. A extensão indica o tipo do arquivo (.docx, .xlsx, .pdf, .jpg, .exe, .zip).",
+      "Arrastar com o mouse: na MESMA unidade, move; entre unidades DIFERENTES, copia. Com Ctrl pressionado, sempre copia; com Shift, sempre move.",
+      "Lixeira: guarda arquivos excluídos do disco local para possível restauração. Shift + Delete exclui direto, sem passar pela Lixeira; arquivos apagados de pen drive ou de pasta de rede também não vão para a Lixeira.",
+      "Atalhos essenciais: Ctrl+C copia, Ctrl+X recorta, Ctrl+V cola, Ctrl+Z desfaz, Ctrl+A seleciona tudo, Alt+Tab alterna janelas, Alt+F4 fecha a janela, Win+D mostra a área de trabalho, Win+L bloqueia o computador, Ctrl+Shift+Esc abre o Gerenciador de Tarefas, Win+V abre o histórico da área de transferência, Win+Shift+S captura a tela.",
+      "Conta Microsoft: sincroniza entre os computadores do usuário configurações como tema, idioma e preferências e também SENHAS (o item 34 da PRF 2021 é Errado justamente por negar a sincronização de senhas).",
+      "Segurança nativa: Windows Update (atualizações), Microsoft Defender (antivírus), Firewall do Windows e BitLocker (criptografia de disco)."
+     ],
+     "pegadinhas": [
+      "Arrastar entre unidades diferentes COPIA; na mesma unidade, MOVE.",
+      "Shift + Delete e arquivos de pen drive não passam pela Lixeira.",
+      "A banca troca atalhos: Ctrl+X é recortar; Alt+F4 fecha a janela; Win+L bloqueia."
+     ],
+     "novidades": [
+      "O suporte da Microsoft ao Windows 10 terminou em 14/10/2025; a versão atual do sistema é o Windows 11 (o edital fala apenas em 'ambiente Windows')."
+     ],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 34
+      }
+     ]
+    },
+    {
+     "id": "transformacao-digital",
+     "titulo": "Transformação digital: IoT, big data e IA",
+     "edital": "3 Transformação digital: internet das coisas (IoT), big data e inteligência artificial",
+     "peso": 2,
+     "pontos": [
+      "Transformação digital é o uso de tecnologias digitais para mudar processos, serviços e a forma de trabalhar das organizações (serviços do gov.br, CNH digital, auto de infração eletrônico) — não é só 'digitalizar papel'.",
+      "Internet das Coisas (IoT): objetos físicos com sensores e conexão à rede que coletam e trocam dados (câmeras, radares, rastreadores, relógios, sensores de veículos). Aumenta a quantidade e a complexidade dos dados e alimenta o big data (item 36 da PRF 2021, Certo).",
+      "Big data: conjuntos de dados grandes e complexos demais para as ferramentas tradicionais. Os 3 Vs clássicos: Volume (quantidade), Velocidade (geração e processamento rápidos) e Variedade (formatos diferentes). Costumam-se acrescentar Veracidade (confiabilidade) e Valor (utilidade).",
+      "Dados estruturados têm formato fixo (tabelas, bancos de dados); não estruturados não têm (vídeos, áudios, textos livres, postagens); semiestruturados ficam no meio (JSON, XML).",
+      "Inteligência artificial (IA): sistemas que executam tarefas que exigiriam inteligência humana (reconhecer imagens, entender linguagem, decidir). Aprendizado de máquina (machine learning) é a parte da IA em que o sistema APRENDE com dados, sem ser programado regra por regra; deep learning usa redes neurais de muitas camadas.",
+      "Tipos de aprendizado: supervisionado (dados com rótulo, isto é, com a resposta: classificar e-mail como spam), não supervisionado (sem rótulo: agrupar perfis parecidos) e por reforço (tentativa e erro com recompensa). A IA generativa cria textos, imagens e áudio novos a partir de modelos treinados.",
+      "Aplicações em segurança pública e trânsito: leitura automática de placas, análise de grandes bases de dados para direcionar a fiscalização e reconhecimento de padrões em rotas e ocorrências."
+     ],
+     "pegadinhas": [
+      "IoT não é sinônimo de internet rápida: é a conexão de OBJETOS à rede.",
+      "Big data não é só volume: velocidade e variedade também o caracterizam.",
+      "Aprendizado de máquina é subárea da IA, e não o contrário."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 36
+      }
+     ]
+    },
+    {
+     "id": "malwares",
+     "titulo": "Segurança: vírus, worms e pragas virtuais",
+     "edital": "4.1 Noções de vírus, worms, phishing e pragas virtuais",
+     "peso": 3,
+     "pontos": [
+      "Malware é qualquer programa malicioso. VÍRUS: precisa de um arquivo hospedeiro e de EXECUÇÃO pelo usuário; propaga-se inserindo cópias de si mesmo em outros arquivos e programas.",
+      "WORM (verme): NÃO precisa de hospedeiro nem de ação do usuário; propaga-se sozinho pelas redes, explorando vulnerabilidades, e consome banda e recursos.",
+      "CAVALO DE TROIA (trojan): parece um programa útil, mas executa funções maliciosas escondidas; não se replica. BACKDOOR abre uma 'porta dos fundos' para o invasor voltar; ROOTKIT esconde a presença do invasor e de outros malwares.",
+      "RANSOMWARE: sequestra os dados — criptografa os arquivos (ou bloqueia o equipamento) e exige resgate, geralmente em criptomoeda. Não se define por inserir cópias de si em arquivos (isso é vírus: item 37 da PRF 2021, Errado). A melhor defesa é o backup atualizado e desconectado.",
+      "SPYWARE espiona o usuário: KEYLOGGER grava as teclas digitadas; SCREENLOGGER grava a tela e os cliques; ADWARE exibe propagandas. BOT é o computador 'zumbi' controlado a distância; BOTNET é a rede de bots (usada em ataques e envio de spam).",
+      "PHISHING não é malware: é golpe de engenharia social — mensagem ou página falsa que imita instituição confiável para 'pescar' senhas e dados. PHARMING redireciona o usuário para sítio falso, alterando o DNS. Engenharia social é enganar a pessoa, não a máquina.",
+      "DoS e DDoS: ataques que sobrecarregam um serviço para tirá-lo do ar (o DDoS parte de muitas máquinas ao mesmo tempo, em geral de uma botnet)."
+     ],
+     "pegadinhas": [
+      "Vírus precisa de hospedeiro e de execução; worm se propaga sozinho pela rede — é a troca preferida da banca.",
+      "Ransomware criptografa e pede resgate; não é 'vírus que se copia em arquivos'.",
+      "Phishing é fraude (engenharia social), não um programa que se instala e se replica."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 37
+      }
+     ]
+    },
+    {
+     "id": "ferramentas-seguranca",
+     "titulo": "Antivírus, firewall e boas práticas",
+     "edital": "4.2 Aplicativos para segurança (antivírus, firewall, anti-spyware, VPN etc.)",
+     "peso": 2,
+     "pontos": [
+      "Princípios da segurança da informação: Confidencialidade (só quem pode acessa), Integridade (a informação não foi alterada), Disponibilidade (está acessível quando necessária) e Autenticidade (a origem é quem diz ser). O não repúdio impede o autor de negar o que fez.",
+      "ANTIVÍRUS (antimalware): detecta e remove códigos maliciosos por assinaturas (lista de malwares conhecidos) e por heurística ou comportamento (suspeitos ainda desconhecidos). Precisa estar sempre atualizado.",
+      "FIREWALL: filtra o tráfego de rede que entra e sai, conforme regras (portas, endereços, protocolos). Pode ser software ou hardware. NÃO é antivírus: não remove malware de arquivos já gravados nem impede o usuário de executar um programa malicioso. O firewall de próxima geração (NGFW) acrescenta inspeção de aplicações e prevenção de intrusão.",
+      "IDS detecta intrusões e alerta; IPS detecta e BLOQUEIA. ANTISPYWARE combate programas espiões. PROXY intermedeia o acesso à internet (filtra e registra).",
+      "VPN (rede privada virtual): cria um túnel CRIPTOGRAFADO sobre uma rede pública para acessar com segurança a rede interna da organização.",
+      "Criptografia simétrica usa UMA chave (a mesma cifra e decifra); a assimétrica usa um PAR (a chave pública cifra, a privada decifra). Assinatura digital: o autor assina com a sua chave PRIVADA e qualquer pessoa confere com a pública — garante autenticidade, integridade e não repúdio (não o sigilo). O certificado digital, emitido por autoridade certificadora (ICP-Brasil), liga a chave pública ao seu dono.",
+      "Boas práticas: senhas longas e diferentes para cada serviço, autenticação em dois fatores (algo que você sabe + algo que você tem ou é), sistema atualizado, desconfiança de links e anexos e backup."
+     ],
+     "pegadinhas": [
+      "Firewall não substitui antivírus (e vice-versa): um filtra tráfego de rede; o outro procura código malicioso.",
+      "Assinatura digital não cifra o conteúdo: garante autoria e integridade, não confidencialidade.",
+      "Na criptografia assimétrica, quem assina usa a chave PRIVADA; quem confere usa a pública."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "backup-nuvem",
+     "titulo": "Backup e computação em nuvem",
+     "edital": "5 Computação na nuvem (cloud computing)",
+     "peso": 2,
+     "pontos": [
+      "Computação em nuvem: uso de recursos de computação (servidores, armazenamento, programas) pela internet, sob demanda, pagando pelo que se usa, sem manter infraestrutura própria. Características: autosserviço sob demanda, amplo acesso pela rede, elasticidade rápida, recursos compartilhados e serviço medido.",
+      "Modelos de serviço: IaaS (Infraestrutura como Serviço) — aluga-se máquina virtual, rede e armazenamento, e o cliente instala e gerencia o resto; PaaS (Plataforma como Serviço) — ambiente pronto para DESENVOLVER e publicar aplicativos; SaaS (Software como Serviço) — o programa pronto, usado pelo navegador (webmail, editores on-line).",
+      "Item 38 da PRF 2021 (Errado): 'ambiente em nuvem no qual os usuários podem construir e disponibilizar aplicativos' é PaaS, não SaaS.",
+      "Modelos de implantação: nuvem pública (o provedor atende a vários clientes pela internet), privada (exclusiva de uma organização), híbrida (combina as duas) e comunitária (compartilhada por organizações com interesses comuns).",
+      "Armazenamento em nuvem (Google Drive, OneDrive, iCloud): arquivos acessíveis de qualquer dispositivo, com sincronização. Depende de conexão e da segurança da conta.",
+      "Backup é a cópia de segurança para recuperar dados. Completo: copia tudo. Incremental: copia o que mudou desde o ÚLTIMO backup de qualquer tipo (rápido de fazer; para restaurar, precisa do completo e de todos os incrementais). Diferencial: copia o que mudou desde o último backup COMPLETO (restaura com o completo e o último diferencial).",
+      "Boas práticas: guardar cópia em local diferente do original (regra 3-2-1: três cópias, em dois tipos de mídia, uma fora do local), testar a restauração e manter uma cópia desconectada (protege contra ransomware)."
+     ],
+     "pegadinhas": [
+      "SaaS = usar o programa pronto; PaaS = construir o programa; IaaS = alugar a infraestrutura. A banca troca as definições.",
+      "Incremental compara com o último backup de qualquer tipo; diferencial compara com o último completo.",
+      "Sincronização em nuvem não é backup: apagar o arquivo em um dispositivo apaga em todos."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 38
+      }
+     ]
+    }
+   ]
+  },
+  {
    "materia": "Direito Processual Penal",
    "trilha": "prf-processo-penal",
    "fonte": "Conteúdo do edital PRF 2021 (Cebraspe). CPP e leis conferidos nas fontes oficiais até 13/11/2026 (Leis 15.358/2026 e 15.487/2026; STF: ADIs 6245/6264, RE 603.616, HC 208.240).",
@@ -1862,6 +2326,152 @@
    ]
   },
   {
+   "materia": "Física",
+   "trilha": "prf-fisica",
+   "fonte": "Mecânica clássica do ensino médio (conteúdo do edital PRF 2021, Cebraspe, itens 1 a 9 de Física), com exemplos resolvidos e conferidos em 16/11/2026 (g = 10 m/s²); questões da PRF 2021, itens 40 a 44, com o gabarito oficial.",
+   "atualizado": "2026-11-16",
+   "topicos": [
+    {
+     "id": "cinematica",
+     "titulo": "Cinemática escalar e vetorial",
+     "edital": "1 Cinemática escalar, cinemática vetorial",
+     "peso": 3,
+     "pontos": [
+      "Velocidade média = deslocamento ÷ tempo (vm = Δs/Δt). Conversão: km/h ÷ 3,6 = m/s; m/s × 3,6 = km/h. 72 km/h = 20 m/s; 108 km/h = 30 m/s.",
+      "MRU (movimento retilíneo uniforme): velocidade constante e aceleração nula. s = s0 + v·t. O gráfico da posição pelo tempo é uma reta inclinada; o da velocidade é uma reta horizontal.",
+      "MRUV (uniformemente variado): aceleração constante. v = v0 + a·t; s = s0 + v0·t + a·t²/2; Torricelli (sem o tempo): v² = v0² + 2·a·Δs. No gráfico da velocidade pelo tempo, a ÁREA sob a curva é o deslocamento e a inclinação é a aceleração.",
+      "Frenagem (Torricelli com v = 0): d = v0²/(2a). A 20 m/s (72 km/h), freando a 5 m/s²: d = 400/10 = 40 m. A distância de frenagem cresce com o QUADRADO da velocidade: dobrar a velocidade quadruplica a distância.",
+      "Queda livre (sem resistência do ar): a = g ≈ 10 m/s², para baixo, igual para qualquer massa. h = g·t²/2 e v = g·t. Em 2 s: cai 20 m e chega a 20 m/s.",
+      "Grandezas vetoriais (deslocamento, velocidade, aceleração, força) têm módulo, direção e sentido. Lançamento oblíquo = MRU na horizontal + MRUV na vertical. A aceleração é a da gravidade o tempo todo, constante (item 40 da PRF 2021, Certo).",
+      "No ponto mais alto do lançamento oblíquo, só a componente VERTICAL da velocidade é zero; a horizontal continua. Logo a velocidade não é nula (item 42 da PRF 2021, Errado) e a aceleração continua sendo g. O alcance é máximo para lançamento a 45°."
+     ],
+     "pegadinhas": [
+      "No ponto mais alto, velocidade vertical zero NÃO significa velocidade zero nem aceleração zero.",
+      "Dobrar a velocidade quadruplica a distância de frenagem (não dobra).",
+      "Esquecer de converter km/h para m/s antes de usar as fórmulas."
+     ],
+     "novidades": [],
+     "itens": 7,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 40
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 42
+      }
+     ]
+    },
+    {
+     "id": "movimento-circular",
+     "titulo": "Movimento circular",
+     "edital": "2 Movimento circular",
+     "peso": 1,
+     "pontos": [
+      "Movimento circular uniforme (MCU): o módulo da velocidade é constante, mas a DIREÇÃO muda o tempo todo — por isso existe aceleração (centrípeta), que aponta para o centro.",
+      "Período (T) é o tempo de uma volta; frequência (f) é o número de voltas por unidade de tempo: f = 1/T (em hertz = voltas por segundo). 120 rpm = 2 Hz → T = 0,5 s.",
+      "Velocidade angular: ω = 2π/T = 2π·f (rad/s). Velocidade linear: v = ω·R = 2π·R/T. Pontos de uma mesma roda têm a mesma velocidade angular; quanto mais longe do centro, maior a velocidade linear.",
+      "Aceleração centrípeta: ac = v²/R = ω²·R. Resultante centrípeta: Fc = m·v²/R. Ex.: carro de 1.000 kg a 20 m/s numa curva de raio 100 m: ac = 4 m/s² e Fc = 4.000 N.",
+      "Na curva plana, quem faz o papel de força centrípeta é o ATRITO entre pneus e pista. Velocidade máxima sem derrapar: v = √(μ·g·R). Com μ = 0,5 e R = 80 m: v = √400 = 20 m/s = 72 km/h. Pista molhada (μ menor) ou curva fechada (R menor) reduzem a velocidade segura.",
+      "A velocidade máxima na curva NÃO depende da massa do veículo (a massa se cancela). 'Força centrífuga' é a sensação de quem está dentro do carro; para quem observa do solo, só existe a resultante centrípeta.",
+      "Transmissão: duas polias ligadas por correia têm a mesma velocidade LINEAR na borda; polias presas ao mesmo eixo têm a mesma velocidade ANGULAR."
+     ],
+     "pegadinhas": [
+      "No MCU a velocidade tem módulo constante, mas existe aceleração (centrípeta) — a banca diz que a aceleração é nula.",
+      "A força centrípeta não é uma força 'a mais': é a resultante (atrito, tração, normal, peso) apontando para o centro.",
+      "A velocidade máxima na curva não depende da massa do veículo."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "newton",
+     "titulo": "Leis de Newton e aplicações (atrito, plano inclinado)",
+     "edital": "3 Leis de Newton e suas aplicações",
+     "peso": 3,
+     "pontos": [
+      "1ª lei (inércia): se a força resultante é nula, o corpo permanece em repouso ou em movimento retilíneo uniforme. Em freada brusca, os ocupantes tendem a continuar em movimento — é a razão de ser do cinto de segurança.",
+      "2ª lei: força resultante = massa × aceleração (FR = m·a), em newtons (N). A aceleração tem a direção e o sentido da resultante. Ex.: FR = 3.000 N em carro de 1.000 kg → a = 3 m/s².",
+      "3ª lei (ação e reação): as forças vêm em pares de mesma intensidade, mesma direção e sentidos opostos, aplicadas em CORPOS DIFERENTES — por isso não se anulam. Na colisão entre caminhão e carro, as forças trocadas têm o mesmo módulo; o carro sofre mais porque tem menos massa (maior aceleração).",
+      "Peso: P = m·g, força da gravidade (para baixo); a massa não muda, o peso depende de g. Normal (N): força de contato perpendicular à superfície; em piso horizontal, sem outras forças verticais, N = P.",
+      "No voo de um projétil, sem resistência do ar, a única força é o peso: a resultante NÃO é nula em nenhum ponto, nem na altura máxima (item 41 da PRF 2021, Errado).",
+      "Atrito: o estático (sem deslizar) vai de zero até o máximo μe·N; o cinético (deslizando) vale μc·N, com μc < μe. Por isso frear sem travar as rodas (ABS) para em distância menor. Em pista plana, a desaceleração máxima na frenagem é a = μ·g.",
+      "Plano inclinado (ângulo θ): o peso se decompõe em P·sen θ (paralelo à rampa, faz descer) e P·cos θ (perpendicular, igual à normal). Sem atrito, a = g·sen θ."
+     ],
+     "pegadinhas": [
+      "Ação e reação não se cancelam: atuam em corpos diferentes.",
+      "Força resultante nula não significa corpo parado: pode estar em MRU.",
+      "O atrito estático não vale sempre μ·N: esse é o valor MÁXIMO."
+     ],
+     "novidades": [],
+     "itens": 7,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 41
+      }
+     ]
+    },
+    {
+     "id": "trabalho-energia",
+     "titulo": "Trabalho, potência e energia",
+     "edital": "4 a 7 Trabalho; potência; energia cinética, energia potencial, atrito; conservação de energia e suas transformações",
+     "peso": 2,
+     "pontos": [
+      "Trabalho de uma força constante: τ = F·d·cos θ (em joules, J). Força a favor do movimento: trabalho positivo (motor); contra: negativo (resistente, como o do atrito); perpendicular ao deslocamento (normal, centrípeta): trabalho ZERO.",
+      "Potência = trabalho ÷ tempo (P = τ/Δt), em watts (W = J/s); também P = F·v. 1 cv ≈ 735 W. O quilowatt-hora (1 kWh = 3,6 × 10⁶ J) é unidade de ENERGIA, não de potência.",
+      "Energia cinética: Ec = m·v²/2. Carro de 1.000 kg a 20 m/s: Ec = 200.000 J. Como depende de v², dobrar a velocidade QUADRUPLICA a energia a dissipar na frenagem ou na colisão.",
+      "Teorema da energia cinética: o trabalho da força resultante é igual à variação da energia cinética (τ = ΔEc). Na frenagem: Fat·d = m·v²/2 → d = v²/(2·μ·g).",
+      "Energia potencial gravitacional: Epg = m·g·h. Energia potencial elástica (mola): Epe = k·x²/2, em que k é a constante da mola e x a deformação.",
+      "Conservação da energia mecânica: se só atuam forças conservativas (peso, força elástica), Ec + Ep é constante. Ex.: corpo solto de 5 m chega ao solo com v = √(2·g·h) = 10 m/s.",
+      "Com atrito ou em colisões inelásticas, a energia mecânica NÃO se conserva: parte vira calor, som e deformação (a energia total, essa sim, sempre se conserva)."
+     ],
+     "pegadinhas": [
+      "kWh é unidade de energia; kW é unidade de potência.",
+      "Força perpendicular ao deslocamento não realiza trabalho (a normal e a centrípeta, por exemplo).",
+      "Dobrar a velocidade quadruplica a energia cinética."
+     ],
+     "novidades": [],
+     "itens": 7,
+     "questoes": []
+    },
+    {
+     "id": "impulso",
+     "titulo": "Impulso, quantidade de movimento e colisões",
+     "edital": "8 e 9 Quantidade de movimento e conservação da quantidade de movimento, impulso; colisões",
+     "peso": 2,
+     "pontos": [
+      "Quantidade de movimento (momento linear): Q = m·v, grandeza VETORIAL (kg·m/s), com a direção e o sentido da velocidade.",
+      "Impulso: I = F·Δt (N·s). Teorema do impulso: o impulso da resultante é igual à variação da quantidade de movimento (I = ΔQ). Para a mesma variação, aumentar o TEMPO de parada reduz a FORÇA — é o princípio do airbag, do cinto e da zona de deformação dos carros.",
+      "Conservação: em sistema isolado (sem força externa resultante), a quantidade de movimento total se conserva. Vale em TODA colisão, elástica ou não, porque as forças internas se cancelam aos pares (ação e reação).",
+      "Colisão perfeitamente ELÁSTICA: conserva a quantidade de movimento E a energia cinética. Parcialmente elástica: conserva só a quantidade de movimento. Perfeitamente INELÁSTICA: os corpos seguem juntos, e a perda de energia cinética é a maior possível.",
+      "Exemplo (inelástica): carro de 1.000 kg a 20 m/s bate em outro de 1.000 kg, parado, e os dois seguem juntos: 1.000 × 20 = 2.000 × v → v = 10 m/s. Energia cinética antes: 200.000 J; depois: 100.000 J — metade virou deformação, calor e som.",
+      "Itens 43 e 44 da PRF 2021 (projétil que se aloja em bloco preso a uma mola): na colisão conserva-se a quantidade de movimento, NÃO a energia cinética (item 44, Errado). Depois, a energia cinética do conjunto vira energia elástica da mola, que por isso é MENOR que a energia cinética inicial do projétil (item 43, Certo).",
+      "Coeficiente de restituição: e = velocidade relativa de afastamento ÷ velocidade relativa de aproximação. e = 1 (elástica), 0 < e < 1 (parcialmente elástica), e = 0 (perfeitamente inelástica). Na perícia de acidentes, a conservação da quantidade de movimento permite estimar as velocidades antes da batida."
+     ],
+     "pegadinhas": [
+      "Ausência de atrito NÃO garante conservação da energia cinética na colisão: só a colisão elástica a conserva.",
+      "Quantidade de movimento é vetor: em colisão frontal, sentidos opostos têm sinais opostos.",
+      "Na colisão inelástica a energia mecânica diminui, mas a quantidade de movimento do sistema se mantém."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 43
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 44
+      }
+     ]
+    }
+   ]
+  },
+  {
    "materia": "Ética e Cidadania",
    "trilha": "prf-etica",
    "fonte": "Decretos 1.171/1994, 6.029/2007, 7.203/2010, 7.724/2012 (com o 11.527/2023) e 9.203/2017; Leis 12.527/2011 e 12.813/2013 (textos da Câmara dos Deputados e compilações conferidas em 13/11/2026); CF, arts. 1º e 37.",
@@ -2045,6 +2655,274 @@
        "item": 47
       }
      ]
+    }
+   ]
+  },
+  {
+   "materia": "Geopolítica",
+   "trilha": "prf-geopolitica",
+   "fonte": "Geografia do Brasil conforme o edital PRF 2021 (Cebraspe), itens 1 a 10 de Geopolítica. Dados conferidos em 16/11/2026: IBGE (Censo 2022, estimativas de 2025, área territorial de 2024, biomas, REGIC 2018, Amazônia Legal e regiões geográficas), Plano Nacional de Logística 2035, CF, Leis 6.938/1981, 9.985/2000, 12.651/2012 e 15.190/2025, Mercosul e BRICS; questões da PRF 2021, itens 51 a 55, com o gabarito oficial.",
+   "atualizado": "2026-11-16",
+   "topicos": [
+    {
+     "id": "nacao-territorio",
+     "titulo": "O Brasil político: nação e território",
+     "edital": "1 O Brasil político: nação e território",
+     "peso": 1,
+     "pontos": [
+      "Estado é a organização político-jurídica (povo, território e governo soberano); nação é o conjunto de pessoas unidas por identidade cultural e histórica; território é o espaço sobre o qual o Estado exerce soberania (solo, subsolo, águas e espaço aéreo).",
+      "O Brasil tem cerca de 8,51 milhões de km² (8.509.379,576 km², segundo o IBGE, referência 2024): é o 5º maior país do mundo e ocupa quase metade da América do Sul.",
+      "Formação territorial: o Tratado de Tordesilhas (1494) dividia as terras entre Portugal e Espanha; a expansão para oeste (bandeiras, pecuária, missões, drogas do sertão) foi reconhecida pelo Tratado de Madri (1750), com base no uti possidetis (a terra é de quem a ocupa). O Acre foi incorporado pelo Tratado de Petrópolis (1903), com a Bolívia; as fronteiras atuais foram consolidadas na época do Barão do Rio Branco.",
+      "Fronteiras: o Brasil faz fronteira terrestre com 10 países — todos os da América do Sul, EXCETO Chile e Equador. A maior fronteira é com a Bolívia. A faixa de até 150 km de largura ao longo das fronteiras terrestres é a faixa de fronteira, considerada fundamental para a defesa do território (CF, art. 20, § 2º).",
+      "Pontos extremos: norte — nascente do rio Ailã, no Monte Caburaí (RR); sul — Arroio Chuí (RS); leste — Ponta do Seixas (PB); oeste — nascente do rio Moa, na Serra do Divisor (AC). O extremo norte NÃO é o Oiapoque (AP).",
+      "Posição: cortado pela linha do Equador (ao norte) e pelo Trópico de Capricórnio (ao sul), tem cerca de 93% do território no hemisfério sul e a maior parte na zona tropical. São 4 fusos horários (de UTC−2, nas ilhas oceânicas, a UTC−5, no Acre); a hora oficial é a de Brasília (UTC−3).",
+      "Mar: mar territorial de 12 milhas náuticas (soberania plena); zona contígua até 24 milhas; zona econômica exclusiva (ZEE) até 200 milhas, com direito exclusivo de explorar os recursos (Lei 8.617/1993). 'Amazônia Azul' é o nome dado a essa área marítima, onde está o pré-sal."
+     ],
+     "pegadinhas": [
+      "Chile e Equador são os dois países sul-americanos que NÃO fazem fronteira com o Brasil.",
+      "O ponto mais ao norte é o Monte Caburaí (RR), não o Oiapoque (AP).",
+      "Estado, nação e território não são sinônimos."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "estado-brasileiro",
+     "titulo": "Organização do Estado brasileiro",
+     "edital": "2 Organização do Estado brasileiro",
+     "peso": 1,
+     "pontos": [
+      "O Brasil é uma república federativa formada pela união indissolúvel de 26 estados, do Distrito Federal e dos municípios, todos autônomos (CF, arts. 1º e 18). Brasília é a capital federal; o DF não se divide em municípios (CF, art. 32).",
+      "São 5.569 municípios (o mais novo é Boa Esperança do Norte, em MT, que entrou na conta em 2025); somando o Distrito Federal e Fernando de Noronha, o IBGE trabalha com 5.571 unidades. Hoje não há territórios federais: Roraima e Amapá viraram estados em 1988, e Fernando de Noronha foi incorporado a Pernambuco.",
+      "As 5 grandes regiões do IBGE: Norte (7 estados, a maior em área), Nordeste (9 estados, a que tem mais estados), Centro-Oeste (3 estados e o DF), Sudeste (4 estados, a mais populosa e industrializada) e Sul (3 estados, a menor em área). Tocantins, criado em 1988, pertence à região Norte.",
+      "Desde 2017 o IBGE divide os estados em 133 regiões geográficas intermediárias e 510 imediatas, que substituíram as mesorregiões e microrregiões de 1989.",
+      "Complexos regionais (regiões geoeconômicas, de Pedro Geiger): Amazônia, Nordeste e Centro-Sul. Não seguem as divisas dos estados: o norte de Minas fica no complexo Nordeste; o oeste do Maranhão, na Amazônia; o sul de Mato Grosso e de Tocantins, no Centro-Sul.",
+      "Amazônia Legal: área de planejamento criada por lei em 1953. Abrange 9 estados — AC, AP, AM, PA, RO, RR, TO, MT e parte do MA —, com 772 municípios e cerca de 59% do território nacional. Não é o mesmo que o bioma Amazônia (49,5% do território) nem que a região Norte.",
+      "Outras regionalizações: Milton Santos propôs os 'quatro Brasis' — Região Concentrada (Sudeste e Sul), Centro-Oeste, Nordeste e Amazônia —, conforme a densidade de técnica, ciência e informação no território."
+     ],
+     "pegadinhas": [
+      "Amazônia Legal ≠ bioma Amazônia ≠ região Norte: inclui Mato Grosso e parte do Maranhão.",
+      "Os complexos regionais não respeitam as divisas dos estados; as regiões do IBGE respeitam.",
+      "O Nordeste é a região com mais estados (9); o Norte é a maior em área."
+     ],
+     "novidades": [
+      "Boa Esperança do Norte (MT) passou a constar como o 5.569º município nas estimativas do IBGE de 2025."
+     ],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "divisao-trabalho",
+     "titulo": "Divisão inter-regional do trabalho e da produção",
+     "edital": "3 A divisão inter-regional do trabalho e da produção no Brasil",
+     "peso": 1,
+     "pontos": [
+      "Divisão inter-regional do trabalho é a especialização produtiva de cada região e a troca entre elas. No Brasil colonial e imperial havia 'arquipélagos econômicos' voltados para fora (açúcar no Nordeste, ouro em Minas, café no Sudeste, borracha na Amazônia), pouco ligados entre si.",
+      "A industrialização do século XX (substituição de importações, a partir de 1930) concentrou-se no Sudeste, sobretudo em São Paulo, graças ao capital do café, à mão de obra, ao mercado consumidor e à infraestrutura. As demais regiões passaram a fornecer matérias-primas, alimentos e trabalhadores, e o mercado nacional se integrou.",
+      "Desconcentração industrial (a partir dos anos 1970, mais forte nos 1990): indústrias saem da Grande São Paulo para o interior paulista, o Sul, Minas, o Centro-Oeste e o Nordeste, atraídas por incentivos fiscais (a guerra fiscal entre estados), mão de obra e terrenos mais baratos e novas rodovias. O Sudeste continua sendo o principal polo, e o comando (sedes, finanças, tecnologia) segue em São Paulo.",
+      "Políticas regionais: Sudene (1959, Nordeste), Sudam (1966, Amazônia) e Zona Franca de Manaus (1967), polo industrial incentivado cujos benefícios foram prorrogados até 2073 pela EC 83/2014; construção de Brasília e a 'marcha para o oeste'.",
+      "Especializações atuais: Centro-Oeste e MATOPIBA (Maranhão, Tocantins, Piauí e Bahia) — fronteira agrícola de grãos; Norte — mineração (Carajás), energia e Zona Franca; Nordeste — polos petroquímico e automotivo, fruticultura irrigada, turismo e energia eólica e solar; Sul — agroindústria e indústria metalmecânica; Sudeste — indústria diversificada, serviços avançados e petróleo (pré-sal).",
+      "O resultado é um território desigual: a 'Região Concentrada' (Sudeste e Sul) reúne a maior parte da indústria, da ciência e da infraestrutura. São as redes de transporte e de comunicação que permitem a integração entre as regiões."
+     ],
+     "pegadinhas": [
+      "Desconcentração industrial não é o fim da indústria no Sudeste: a região segue líder, e o comando continua em São Paulo.",
+      "A concentração industrial em São Paulo decorre principalmente do capital e da infraestrutura do café, não só de decisão do governo.",
+      "MATOPIBA fica no Cerrado do Norte e do Nordeste, não na Amazônia."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "urbanizacao",
+     "titulo": "Estrutura urbana e grandes metrópoles",
+     "edital": "4 A estrutura urbana brasileira e as grandes metrópoles",
+     "peso": 2,
+     "pontos": [
+      "O Brasil se urbanizou rápido: a população urbana ultrapassou a rural na década de 1960, puxada pela industrialização e pelo êxodo rural. No Censo 2022, 87,4% da população (177,5 milhões de pessoas) vivia em áreas urbanas; o Sudeste é a região mais urbanizada (94,4%) e o Nordeste, a menos (77,6%).",
+      "Rede urbana é o conjunto de cidades ligadas por fluxos de pessoas, mercadorias, serviços e informações; hierarquia urbana é a posição de cada cidade conforme a sua área de influência. O estudo do IBGE sobre o tema é a REGIC (Regiões de Influência das Cidades), cuja edição mais recente é a de 2018.",
+      "REGIC 2018 — cinco níveis: Metrópoles, Capitais Regionais, Centros Sub-regionais, Centros de Zona e Centros Locais. São 15 metrópoles: São Paulo (Grande Metrópole Nacional); Rio de Janeiro e Brasília (Metrópoles Nacionais); e 12 Metrópoles — Belém, Belo Horizonte, Campinas, Curitiba, Florianópolis, Fortaleza, Goiânia, Manaus, Porto Alegre, Recife, Salvador e Vitória.",
+      "Campinas, Florianópolis e Vitória entraram no grupo das metrópoles em 2018; Campinas é a única que não é capital. Ribeirão Preto e Uberlândia são Capitais Regionais (segundo nível), não metrópoles (item 55 da PRF 2021, Errado).",
+      "Metrópole é o centro que exerce influência direta sobre os demais níveis da rede urbana (item 54 da PRF 2021, Certo). Região metropolitana é criada por lei complementar ESTADUAL (CF, art. 25, § 3º) para integrar funções públicas de interesse comum; conurbação é a junção física das manchas urbanas de municípios vizinhos; megalópole é a união de metrópoles (eixo Rio–São Paulo).",
+      "Tendências: crescimento mais forte das cidades médias e do interior, expansão do entorno das capitais e interiorização ligada ao agronegócio.",
+      "Problemas urbanos: segregação socioespacial, favelas e ocupações irregulares, déficit de moradia, mobilidade dependente do transporte rodoviário, enchentes, ilhas de calor e violência."
+     ],
+     "pegadinhas": [
+      "Região metropolitana é instituída pelos ESTADOS, por lei complementar — não pela União nem pelos municípios.",
+      "Só São Paulo é Grande Metrópole Nacional; Rio de Janeiro e Brasília são Metrópoles Nacionais.",
+      "Metrópole (hierarquia do IBGE) não é o mesmo que região metropolitana (criada por lei)."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 54
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 55
+      }
+     ]
+    },
+    {
+     "id": "populacao",
+     "titulo": "População e migrações",
+     "edital": "5 Distribuição espacial da população no Brasil e movimentos migratórios internos",
+     "peso": 2,
+     "pontos": [
+      "O Censo 2022 contou 203,1 milhões de habitantes; a estimativa do IBGE para 2025 é de 213,4 milhões. O Brasil é populoso (um dos dez países com mais habitantes), mas pouco povoado: a densidade média é de cerca de 24 hab./km².",
+      "A distribuição é desigual: a população se concentra na faixa litorânea e no Centro-Sul, herança da colonização. O Sudeste é a região mais populosa (cerca de 42% do total), seguido do Nordeste; o Norte tem a menor densidade. São Paulo é o estado e o município mais populoso.",
+      "Transição demográfica: queda da mortalidade e, depois, da fecundidade (hoje abaixo do nível de reposição, de 2,1 filhos por mulher). O crescimento populacional desacelerou muito entre 2010 e 2022.",
+      "Envelhecimento: a idade mediana subiu de 29 anos (2010) para 35 anos (2022); as pessoas com 65 anos ou mais passaram de 14,1 milhões para 22,2 milhões (10,9% da população). A pirâmide etária estreita a base e alarga o topo; o bônus demográfico (muita gente em idade ativa) está no fim.",
+      "As mulheres são maioria: 51,5% da população (2022). O Norte é a região mais jovem (idade mediana de 29 anos) e o Sudeste, a mais velha (37 anos); o Rio Grande do Sul é o estado mais envelhecido.",
+      "Migrações internas: êxodo rural e fluxo Nordeste → Sudeste no século XX (industrialização); 'marcha para o oeste' e ocupação do Centro-Oeste e da Amazônia (Brasília, fronteira agrícola, grandes projetos). Hoje predominam os fluxos entre cidades (urbano-urbano), a migração de retorno ao Nordeste, a atração das cidades médias e do Centro-Oeste e os movimentos pendulares diários nas metrópoles.",
+      "Migrações internacionais: o Brasil recebeu europeus e asiáticos do fim do século XIX a meados do XX, passou a ter emigração a partir dos anos 1980 (EUA, Europa, Japão) e recebe hoje venezuelanos (por Roraima), haitianos e bolivianos."
+     ],
+     "pegadinhas": [
+      "Populoso (muita gente) ≠ povoado (muita gente por km²): o Brasil é populoso e pouco povoado.",
+      "A banca afirma que o êxodo rural e o fluxo Nordeste → Sudeste continuam sendo os principais: hoje predominam fluxos urbano-urbano, cidades médias e migração de retorno.",
+      "O envelhecimento decorre da queda da fecundidade somada ao aumento da expectativa de vida."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "industria-agro",
+     "titulo": "Indústria, cidade e campo",
+     "edital": "6 Integração entre indústria e estrutura urbana e setor agrícola no Brasil",
+     "peso": 1,
+     "pontos": [
+      "Campo e cidade estão integrados: a indústria fornece ao campo máquinas, fertilizantes, sementes e defensivos, e o campo fornece matérias-primas e alimentos à indústria e às cidades. Esse encadeamento forma o complexo agroindustrial; 'agronegócio' é a cadeia inteira (insumos, produção, processamento, transporte e comércio).",
+      "A modernização do campo (a partir dos anos 1960–70, com a 'revolução verde', crédito rural e pesquisa da Embrapa) aumentou a produtividade, mas foi 'conservadora': manteve a concentração de terras, expulsou trabalhadores (êxodo rural) e acelerou a urbanização.",
+      "A correção dos solos ácidos do Cerrado permitiu a expansão da fronteira agrícola para o Centro-Oeste e o MATOPIBA. O Brasil está entre os maiores produtores e exportadores mundiais de soja, café, açúcar, suco de laranja, carnes e milho.",
+      "Estrutura fundiária concentrada: poucos estabelecimentos grandes ocupam a maior parte da área. A agricultura familiar reúne a maioria dos estabelecimentos (mas a menor parte da área) e é importante na produção de alimentos para o mercado interno; o agronegócio patronal domina as commodities de exportação.",
+      "A agropecuária, sozinha, responde por parcela pequena do PIB, mas o agronegócio como cadeia pesa bem mais e sustenta o saldo comercial do país.",
+      "'Cidades do agronegócio' crescem como centros de serviços, comércio de insumos e agroindústria; a indústria se interioriza junto com a produção.",
+      "Impactos: desmatamento e pressão sobre o Cerrado e a Amazônia, uso intensivo de água e de agrotóxicos, conflitos por terra e dependência das rodovias para escoar a safra até os portos."
+     ],
+     "pegadinhas": [
+      "Agronegócio não é só a fazenda: inclui a indústria de insumos, o processamento e a distribuição.",
+      "A modernização agrícola aumentou a produção sem desconcentrar a terra (modernização conservadora).",
+      "Agricultura familiar: maioria dos estabelecimentos, minoria da área."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "transportes",
+     "titulo": "Rede de transportes: modais e infraestrutura",
+     "edital": "7 Rede de transporte no Brasil: modais e principais infraestruturas",
+     "peso": 3,
+     "pontos": [
+      "A matriz de transporte de cargas do Brasil é desequilibrada: o modal rodoviário leva entre 60% e 66% das cargas (66,2% segundo o Plano Nacional de Logística 2035; 62,2% segundo a Fundação Dom Cabral), seguido do ferroviário e do aquaviário. Para um país continental e exportador de grãos e minérios, isso encarece o frete (o chamado custo Brasil).",
+      "Origem do rodoviarismo: a partir dos anos 1950 (governo JK, indústria automobilística, construção de Brasília), as políticas públicas priorizaram as rodovias em detrimento de ferrovias e hidrovias (item 53 da PRF 2021, Certo).",
+      "Comparação dos modais: RODOVIÁRIO — flexível, porta a porta, ideal para curtas e médias distâncias, mas caro, poluente e com mais acidentes; FERROVIÁRIO — grande capacidade e baixo custo em longas distâncias para cargas pesadas (minério, grãos), mas pouco flexível, com malha pequena e bitolas diferentes; AQUAVIÁRIO (hidrovias e cabotagem) — o mais barato por tonelada, porém lento e dependente de rios navegáveis e portos; DUTOVIÁRIO — petróleo, gás e minério; AÉREO — rápido e caro, para cargas de alto valor.",
+      "A rede NÃO é integrada nem eficiente (item 52 da PRF 2021, Errado): há poucas conexões entre modais, rodovias em mau estado (só cerca de 12% das estradas do país são pavimentadas, segundo a CNT) e gargalos nos portos. O caminho apontado é a multimodalidade: duplicar os eixos rodoviários, ampliar e modernizar as ferrovias e mudar o modelo de investimento e de exploração (item 51 da PRF 2021, Certo).",
+      "Rodovias federais (BR): 0xx radiais, que partem de Brasília (BR-040, BR-060); 1xx longitudinais, de sentido norte–sul (BR-101, pelo litoral; BR-116; BR-153, a Transbrasiliana, que corta Goiás); 2xx transversais, leste–oeste (BR-230, a Transamazônica; BR-262; BR-277); 3xx diagonais (BR-364, BR-381); 4xx de ligação.",
+      "Ferrovias e hidrovias: Estrada de Ferro Carajás (minério do Pará ao porto de Ponta da Madeira, no Maranhão) e Vitória–Minas (minério até Tubarão, no Espírito Santo); Ferrovia Norte–Sul, espinha dorsal do sistema; hidrovias Tietê–Paraná, do Madeira, do Tapajós e do Paraguai. O Arco Norte (portos da Amazônia) ganhou peso no escoamento de grãos; o porto de Santos é o maior do país em movimentação de contêineres.",
+      "Cabotagem é a navegação entre portos do próprio país (Lei 9.432/1997); a Lei 14.301/2022 (BR do Mar) criou um programa de estímulo a ela, e a Lei 14.273/2021 (Lei das Ferrovias) passou a permitir ferrovias privadas por autorização."
+     ],
+     "pegadinhas": [
+      "O modal rodoviário predomina, mas NÃO é o mais barato nem o mais adequado para longas distâncias e cargas pesadas.",
+      "A banca descreve a rede brasileira como 'integrada, diversa e eficiente': é o contrário.",
+      "BR-1xx são longitudinais (norte–sul); BR-2xx, transversais (leste–oeste); BR-0xx, radiais (saem de Brasília)."
+     ],
+     "novidades": [
+      "Lei 14.273/2021 (Lei das Ferrovias): ferrovias privadas por autorização. Lei 14.301/2022 (BR do Mar): estímulo à cabotagem."
+     ],
+     "itens": 6,
+     "questoes": [
+      {
+       "banco": "prf-2021-p1",
+       "item": 51
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 52
+      },
+      {
+       "banco": "prf-2021-p1",
+       "item": 53
+      }
+     ]
+    },
+    {
+     "id": "economia-global",
+     "titulo": "O Brasil na economia internacional",
+     "edital": "8 A integração do Brasil ao processo de internacionalização da economia",
+     "peso": 1,
+     "pontos": [
+      "O Brasil está entre as maiores economias do mundo (em torno da 10ª posição), mas tem participação pequena no comércio mundial e pauta de exportação concentrada em commodities: soja, petróleo bruto, minério de ferro, carnes, açúcar, café e celulose. Importa principalmente manufaturados, combustíveis, fertilizantes e eletrônicos.",
+      "A China é o principal parceiro comercial do Brasil desde 2009; também são grandes parceiros a União Europeia, os Estados Unidos e a Argentina (importante destino de manufaturados, como automóveis).",
+      "Mercosul: criado pelo Tratado de Assunção (1991) por Argentina, Brasil, Paraguai e Uruguai; é uma união aduaneira (imperfeita), com Tarifa Externa Comum. A Venezuela está suspensa desde 2016–2017; a Bolívia tornou-se Estado Parte em 2024 (protocolo de adesão em vigor desde agosto de 2024), com até quatro anos para adotar as normas do bloco.",
+      "Acordo Mercosul–União Europeia: negociado desde 1999, foi assinado em 17/1/2026; a parte comercial passou a vigorar de forma provisória em 1º/5/2026, criando uma das maiores áreas de livre comércio do mundo (cerca de 718 milhões de pessoas).",
+      "BRICS: grupo de cooperação entre economias emergentes — Brasil, Rússia, Índia, China e África do Sul (esta desde 2011) —, ampliado em 2024–2025 com Arábia Saudita, Egito, Emirados Árabes Unidos, Etiópia, Irã e Indonésia. Não é bloco econômico nem área de livre comércio. Criou o Novo Banco de Desenvolvimento, com sede em Xangai.",
+      "O Brasil integra o G20 (presidiu o grupo em 2024, com cúpula no Rio de Janeiro) e a OMC, e sediou a COP30 do clima, em Belém, em novembro de 2025.",
+      "Globalização: integração de mercados, cadeias produtivas e fluxos financeiros. Para o Brasil, trouxe abertura comercial (anos 1990), privatizações, entrada de multinacionais, maior peso das commodities nas exportações e maior exposição a crises externas."
+     ],
+     "pegadinhas": [
+      "BRICS não é bloco econômico com tarifa comum; o Mercosul é união aduaneira.",
+      "A banca troca o principal parceiro comercial: é a China, não os EUA.",
+      "Chile, Colômbia, Peru e Equador são Estados ASSOCIADOS do Mercosul, não Estados Partes."
+     ],
+     "novidades": [
+      "Acordo Mercosul–União Europeia: assinado em 17/1/2026; a parte comercial vigora provisoriamente desde 1º/5/2026.",
+      "Bolívia: Estado Parte do Mercosul desde agosto de 2024."
+     ],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "gestao-ambiental",
+     "titulo": "Geografia e gestão ambiental",
+     "edital": "9 Geografia e gestão ambiental",
+     "peso": 1,
+     "pontos": [
+      "Política Nacional do Meio Ambiente (Lei 6.938/1981): criou o SISNAMA, sistema que reúne os órgãos ambientais da União, dos estados e dos municípios, com o CONAMA como órgão consultivo e deliberativo. Instrumentos: licenciamento, avaliação de impactos (EIA/RIMA), zoneamento ambiental e padrões de qualidade.",
+      "IBAMA: licenciamento e fiscalização ambiental na esfera federal. ICMBio: gestão das unidades de conservação federais. A CF, art. 225, garante a todos o meio ambiente ecologicamente equilibrado e impõe ao poder público e à coletividade o dever de defendê-lo.",
+      "Licenciamento ambiental: tradicionalmente em três fases — Licença Prévia (LP), de Instalação (LI) e de Operação (LO). A Lei 15.190/2025 (Lei Geral do Licenciamento Ambiental) está em vigor desde 4/2/2026, e a Lei 15.300/2025 criou a Licença Ambiental Especial (LAE), para empreendimentos estratégicos. As duas são questionadas no STF (ADIs 7913, 7916 e 7919).",
+      "Unidades de conservação (SNUC, Lei 9.985/2000), em dois grupos: PROTEÇÃO INTEGRAL (só uso indireto: estação ecológica, reserva biológica, parque nacional, monumento natural e refúgio de vida silvestre) e USO SUSTENTÁVEL (conciliam conservação e uso: área de proteção ambiental — APA, área de relevante interesse ecológico, floresta nacional, reserva extrativista, reserva de fauna, reserva de desenvolvimento sustentável e RPPN).",
+      "Código Florestal (Lei 12.651/2012): Área de Preservação Permanente (APP) protege margens de rios, nascentes, encostas e topos de morro; Reserva Legal é a parte do imóvel rural que deve manter vegetação nativa — 80% em área de floresta na Amazônia Legal, 35% em cerrado na Amazônia Legal e 20% nas demais regiões. O CAR (Cadastro Ambiental Rural) é o registro eletrônico dos imóveis rurais.",
+      "Principais problemas: desmatamento e queimadas (Amazônia e Cerrado, monitorados pelo INPE), garimpo ilegal, poluição e falta de saneamento nas cidades, desertificação no Semiárido, erosão e assoreamento e eventos extremos ligados às mudanças climáticas (como as enchentes de 2024 no Rio Grande do Sul).",
+      "Clima: pelo Acordo de Paris (2015), cada país define a sua meta de redução de emissões (NDC). No Brasil, as maiores fontes de emissão são a mudança de uso da terra (desmatamento) e a agropecuária, e não a geração de eletricidade, pois a matriz elétrica é majoritariamente renovável (hidrelétricas, eólica e solar)."
+     ],
+     "pegadinhas": [
+      "Parque nacional é de PROTEÇÃO INTEGRAL (só uso indireto); a APA é de uso sustentável e admite ocupação humana.",
+      "IBAMA licencia e fiscaliza; ICMBio gere as unidades de conservação federais.",
+      "Reserva Legal (percentual do imóvel rural) ≠ APP (locais frágeis, como margens de rios)."
+     ],
+     "novidades": [
+      "Lei 15.190/2025 (Lei Geral do Licenciamento Ambiental): em vigor desde 4/2/2026, depois de o Congresso derrubar a maior parte dos vetos em 27/11/2025. Lei 15.300/2025: Licença Ambiental Especial. Ambas são questionadas no STF (ADIs 7913, 7916 e 7919)."
+     ],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "biomas",
+     "titulo": "Biomas e domínios morfoclimáticos",
+     "edital": "10 Macrodivisão natural do espaço brasileiro: biomas, domínios e ecossistemas",
+     "peso": 2,
+     "pontos": [
+      "O IBGE reconhece 6 biomas continentais: Amazônia (49,5% do território), Cerrado (23,3%), Mata Atlântica (13%), Caatinga (10,1%), Pampa (2,3%) e Pantanal (1,8%).",
+      "AMAZÔNIA: maior floresta tropical do mundo, clima equatorial (quente e úmido) e a maior bacia hidrográfica; tem mata de terra firme, de várzea e de igapó; os solos são pobres, mantidos pela própria floresta. Ameaças: desmatamento (no chamado arco do desmatamento), pecuária, garimpo e queimadas.",
+      "CERRADO: a savana brasileira, de clima tropical com estação seca; árvores tortuosas, de casca grossa e raízes profundas. É o 'berço das águas': abriga nascentes de grandes bacias (Tocantins-Araguaia, São Francisco, Paraná). É o bioma mais pressionado pela fronteira agrícola.",
+      "MATA ATLÂNTICA: floresta tropical do litoral, a mais devastada (restam pouco mais de 12% da floresta original, segundo a SOS Mata Atlântica), onde vive a maior parte da população. Cerrado e Mata Atlântica são os dois hotspots brasileiros (alta biodiversidade muito ameaçada).",
+      "CAATINGA: único bioma EXCLUSIVAMENTE brasileiro; clima semiárido, chuvas irregulares e rios intermitentes; vegetação xerófila (adaptada à seca), que perde as folhas na estiagem. Há risco de desertificação.",
+      "PANTANAL: maior planície alagável do mundo (MT e MS), com ciclo anual de cheias e secas; é o menor bioma. PAMPA: campos do Rio Grande do Sul, de clima subtropical e relevo de coxilhas, com pecuária tradicional; sofre arenização.",
+      "Domínios morfoclimáticos (Aziz Ab'Sáber) combinam relevo, clima e vegetação. São 6: Amazônico, Cerrado, Mares de Morros (Mata Atlântica), Caatinga, Araucárias e Pradarias, além das faixas de transição (como a Mata dos Cocais e o Pantanal)."
+     ],
+     "pegadinhas": [
+      "O Pantanal é bioma para o IBGE, mas faixa de transição na classificação de Ab'Sáber.",
+      "A Caatinga é o único bioma exclusivamente brasileiro; a Amazônia se estende por outros países.",
+      "O Cerrado é o segundo maior bioma e o 'berço das águas' — a banca atribui isso à Amazônia."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
     }
    ]
   },
@@ -2667,6 +3545,60 @@
       "Eficiência entrou com a EC 19/1998 — não estava no texto original de 1988.",
       "A Súmula Vinculante 13 vai até o terceiro grau: primo (quarto grau) não entra (PRF 2021, item 50).",
       "Concurso: validade de ATÉ 2 anos, prorrogável UMA vez por igual período."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    }
+   ]
+  },
+  {
+   "materia": "Língua Inglesa",
+   "trilha": "prf-ingles",
+   "fonte": "Inglês instrumental para leitura (edital PRF 2021, Cebraspe: compreensão de texto e itens gramaticais relevantes), escrito em 16/11/2026. A prova de 2021 trouxe 8 itens sobre uma notícia em inglês.",
+   "atualizado": "2026-11-16",
+   "topicos": [
+    {
+     "id": "ingles-texto",
+     "titulo": "Inglês: compreensão de textos",
+     "edital": "1 Compreensão de texto escrito em língua inglesa",
+     "peso": 1,
+     "pontos": [
+      "Na PRF são 8 itens Certo/Errado sobre um texto em inglês (em 2021, uma notícia sobre o apagão de energia no Texas). Os itens vêm em inglês e cobram principalmente compreensão: ideia principal, informações explícitas, inferências e sentido de palavras no contexto.",
+      "Estratégias: leia primeiro os itens; faça o skimming (leitura rápida para captar o assunto: título e primeira frase de cada parágrafo) e depois o scanning (busca de informação específica: nomes, números, datas). Não é preciso traduzir palavra por palavra.",
+      "Cognatos (palavras parecidas com as do português e de mesmo sentido) são a maioria e ajudam: information, important, energy, production, government, different, problem, temperature.",
+      "Falsos cognatos mais cobrados: actually = na verdade (atualmente = currently); pretend = fingir (pretender = intend); push = empurrar (puxar = pull); parents = pais (parentes = relatives); college = faculdade; library = biblioteca (livraria = bookstore); eventually = por fim; realize = perceber; attend = comparecer; policy = política, diretriz (polícia = police); fabric = tecido; lecture = palestra; prejudice = preconceito; sensible = sensato.",
+      "Os itens da Cebraspe em inglês usam os mesmos truques dos de português: extrapolação (o texto diz 'some' e o item diz 'all'), troca de causa e consequência, palavras absolutas (always, never, only) e contradição sutil. Compare cada item com o trecho exato do texto.",
+      "Prefixos e sufixos ajudam a deduzir o sentido: un-, dis-, im-/in- (negação: unimpeded = sem impedimento; unable = incapaz); re- (de novo); over- (em excesso); -less (sem: powerless = sem energia, sem poder); -ful (cheio de); -ly (advérbio: quickly); -er/-or (quem faz: driver); -ness e -tion (substantivos).",
+      "Palavras de referência (it, they, this, that, which, who, its, their) retomam termos anteriores — a banca pergunta a que se referem, como nas questões de coesão em português."
+     ],
+     "pegadinhas": [
+      "'Actually' não é 'atualmente'; 'eventually' não é 'eventualmente'; 'policy' não é 'polícia'.",
+      "O item pode ser verdadeiro no mundo real e, mesmo assim, Errado, por não estar no texto.",
+      "'Some' (alguns) não autoriza concluir 'all' (todos)."
+     ],
+     "novidades": [],
+     "itens": 6,
+     "questoes": []
+    },
+    {
+     "id": "ingles-gramatica",
+     "titulo": "Inglês: gramática para entender o texto",
+     "edital": "2 Itens gramaticais relevantes para a compreensão dos conteúdos semânticos",
+     "peso": 1,
+     "pontos": [
+      "Tempos verbais básicos: simple present (fatos e rotinas: 'Texas produces energy'); present continuous (am/is/are + -ing: ação em andamento); simple past (ação concluída: 'created', 'went'); present perfect (have/has + particípio: ação passada com efeito no presente ou em tempo não definido: 'has changed'); futuro com will ou going to.",
+      "Verbos modais mudam o grau de certeza ou de obrigação: can (poder, capacidade), could (poderia), may e might (possibilidade: pode ser que), must (dever, obrigação ou dedução forte), should (deveria, conselho), would (condicional: -ria). Trocar 'may' por 'must' num item transforma possibilidade em certeza.",
+      "Conectores (linking words): adição — and, also, moreover, in addition, besides; contraste — but, however, although, though, despite, in spite of, nevertheless, whereas; causa — because, since, as, due to; consequência — so, therefore, thus; condição — if, unless (a menos que); finalidade — to, in order to; exemplo — for example, such as.",
+      "'Despite' e 'in spite of' (apesar de) vêm seguidos de substantivo ou de verbo com -ing: 'Despite the cold temperatures...'. 'Although' (embora) vem seguido de oração com sujeito e verbo.",
+      "Voz passiva: to be + particípio ('The power grid was damaged by the storm' = a rede elétrica foi danificada pela tempestade). É muito usada em notícias e textos técnicos; o agente vem depois de 'by'.",
+      "Comparativo e superlativo: adjetivo curto + -er/-est (colder, the coldest); adjetivo longo com more/the most (more efficient, the most efficient); irregulares: good–better–best; bad–worse–worst. 'As... as' indica igualdade; 'similar to' = semelhante a.",
+      "Negativas e quantificadores: no, none, neither, never, hardly (quase não), few/little (pouco) × a few/a little (algum); many/much (muito), most (a maioria), some (alguns), any (qualquer, nenhum). 'Hardly' NÃO significa 'duramente'."
+     ],
+     "pegadinhas": [
+      "'Unless' significa 'a menos que' (if not).",
+      "'Few' (poucos, quase nenhum) tem sentido negativo; 'a few' (alguns) tem sentido positivo.",
+      "'May' e 'might' indicam possibilidade; 'must' indica obrigação ou quase certeza."
      ],
      "novidades": [],
      "itens": 6,
