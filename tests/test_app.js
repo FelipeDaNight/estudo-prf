@@ -715,6 +715,35 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     assert.strictEqual(await page.evaluate(() => localStorage.getItem("ep_lixo")), null);
   });
 
+  await t("Discursiva: regras, provas anteriores, treino com linhas, cronômetro, autoavaliação e histórico", async () => {
+    await page.evaluate(() => window.__app.abrir("hoje"));
+    await espera(() => /8 temas para treinar/.test(document.getElementById("h_disc_t").textContent));
+    await page.click("#h_disc_go");
+    await espera(() => document.querySelectorAll("#disc_corpo .disc_tema").length === 8 && document.querySelectorAll("#disc_corpo .disc_ant").length === 3);
+    assert.ok((await page.locator("#disc_regras").textContent()).includes("NPD = NC − 4 × (NE ÷ TL)"));
+    assert.strictEqual(await page.locator("#disc_c_res").textContent(), "14,33");      // 15 − 4 × 5/30
+    const p21 = await page.locator('#disc_corpo .disc_ant[data-ano="2021"]').textContent();
+    assert.ok(p21.includes("Lei Seca") && p21.includes("9 pontos"), p21);
+    await page.locator('#disc_corpo .disc_tema[data-id="alcool"]').click();
+    await espera(() => document.getElementById("disc_txt") && document.querySelectorAll("#disc_corpo .disc_q").length === 3);
+    assert.ok((await page.locator("#disc_corpo").textContent()).includes("Res. CONTRAN 1.031/2026"));
+    await page.click("#disc_crono");
+    const par = "A embriaguez ao volante continua sendo uma das principais causas de mortes nas rodovias federais do país. ".repeat(3);
+    await page.fill("#disc_txt", [par, par, par, par].join("\n"));
+    await espera(() => /≈ 2\d de 30 linhas/.test(document.getElementById("disc_info").textContent));
+    const sel = page.locator("#disc_corpo .disc_q");
+    await sel.nth(0).selectOption("3"); await sel.nth(1).selectOption("2"); await sel.nth(2).selectOption("3");
+    await page.fill("#disc_ne", "3");
+    const nota = await page.locator("#disc_npd").textContent();
+    assert.ok(/^1\d,\d\d$/.test(nota), nota);
+    await page.click("#disc_salvar");
+    await page.click("#disc_sair");
+    await espera(() => document.getElementById("disc_corpo").textContent.includes("Suas redações") && document.querySelector('#disc_corpo .disc_tema[data-id="alcool"]').textContent.includes("treinado 1x"));
+    await page.locator('#disc_corpo .disc_tema[data-id="alcool"]').click();                 // rascunho continua salvo
+    await espera(() => document.getElementById("disc_txt") && document.getElementById("disc_txt").value.startsWith("A embriaguez"));
+    await page.click("#disc_sair");
+  });
+
   await page.click('[data-t="estudo"]');
   await page.screenshot({ path: "shot_estudo.png" });
   await page.click('[data-t="corrida"]'); await page.screenshot({ path: "shot_corrida.png" });

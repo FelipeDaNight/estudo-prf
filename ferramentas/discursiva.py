@@ -1,0 +1,133 @@
+# Gera bancos/discursiva-prf.json: regras da prova discursiva da PRF, provas anteriores e temas para treinar.
+# Regras conferidas no Edital PRF nº 1/2021 (item 10); provas e padrões de resposta da Cebraspe (2018 e 2021)
+# e prova de 2013 comentada; dados da PRF de 2025 (balanço divulgado em fevereiro de 2026). Conferido em 17/11/2026.
+import json, os
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+REGRAS = {
+    "pontos": [
+        "Um texto dissertativo de até 30 linhas sobre tema do conteúdo do edital, com aspectos obrigatórios (Edital PRF nº 1/2021, item 10.1). O que passar da linha 30 é desconsiderado.",
+        "Vale 20 pontos de conteúdo (NC): até 1 ponto para apresentação (letra legível, margens, parágrafos) e estrutura; o resto é dividido entre os aspectos pedidos.",
+        "Nota final: NPD = NC − 4 × (NE ÷ TL), em que NE é o número de erros de português (grafia, morfossintaxe e propriedade vocabular) e TL o número de linhas escritas.",
+        "Eliminado quem tirar NPD menor que 10 pontos. Nota zero por fuga ao tema; marca de identificação ou assinatura ANULA a prova.",
+        "Só tem a discursiva corrigida quem ficou bem colocado na objetiva (em 2021: até a posição 4.500 na ampla concorrência, 1.200 entre negros e 300 entre pessoas com deficiência).",
+        "Cada aspecto é corrigido numa escala de conceitos (0 a 3): 0 = não abordou; 1 = só mencionou; 2 = desenvolveu de forma inconsistente ou desconectada; 3 = desenvolveu de forma consistente, articulada ao tema e aos outros aspectos.",
+    ],
+    "dicas": [
+        "Escreva perto das 30 linhas: com 30 linhas cada erro de português custa 0,13 ponto; com 20 linhas, custa 0,2.",
+        "Responda os aspectos NA ORDEM do enunciado, um parágrafo para cada, usando as palavras do próprio enunciado (o corretor procura o aspecto).",
+        "Linhas proporcionais aos pontos: o aspecto que vale mais merece o parágrafo maior.",
+        "Os textos motivadores só motivam: não copie trechos deles. Dados e leis que você souber valem mais.",
+        "Não dê título, não assine, não escreva nada fora do espaço do texto definitivo.",
+        "Reserve uns 60 minutos: 10 para planejar, 35 para o rascunho e 15 para passar a limpo.",
+    ],
+}
+
+ANTERIORES = [
+    {"ano": "2021", "tema": "A inovação legislativa como instrumento para a redução dos acidentes de transporte terrestre (ATT)",
+     "aspectos": [["O impacto da previsão dos crimes de trânsito sobre os ATTs e as possíveis causas desse impacto", 5],
+                  ["O impacto da Lei Seca sobre os ATTs e as possíveis causas desse impacto", 5],
+                  ["Ações para a redução dos ATTs", 9]],
+     "esperado": "Segundo o padrão de resposta, a previsão dos crimes no CTB e a Lei Seca tiveram impacto inicial positivo (queda dos acidentes), mas os acidentes voltaram a subir depois, por exemplo pela diminuição da fiscalização e por campanhas curtas. Como ações: conscientização da sociedade e do indivíduo, atividades educativas de trânsito e mais estrutura (pessoal e equipamentos) para os órgãos de fiscalização.",
+     "fonte": "Cebraspe, prova discursiva e padrão de resposta (aplicação em 9/5/2021)"},
+    {"ano": "2018", "tema": "O combate às infrações de trânsito nas rodovias federais brasileiras",
+     "aspectos": [["Medidas adotadas pela PRF no combate às infrações", 7],
+                  ["Ações da sociedade que auxiliem no combate às infrações", 6],
+                  ["Atitudes individuais para a diminuição das infrações", 6]],
+     "esperado": "Padrão de resposta: PRF com aumento do efetivo, mais equipamentos eletrônicos, operações integradas e campanhas; sociedade com campanhas da iniciativa privada, palestras e parcerias com escolas; indivíduo com conscientização sobre a conduta correta, atividades educativas e apoio às vítimas.",
+     "fonte": "Cebraspe, padrão de resposta definitivo (prova aplicada em 3/2/2019)"},
+    {"ano": "2013", "tema": "O crime de contrabando no Brasil (Direito Penal)",
+     "aspectos": [["Definir o crime de contrabando e indicar as circunstâncias que integram o tipo penal", 4],
+                  ["As principais mercadorias e cargas contrabandeadas no país", 3],
+                  ["Os problemas do contrabando para a economia nacional e para a saúde pública", 6],
+                  ["Medidas e ações efetivas das forças públicas para combater o contrabando", 6]],
+     "esperado": "Tema de conhecimento específico (Direito Penal). Contrabando é importar ou exportar mercadoria PROIBIDA (CP, art. 334-A); não confundir com descaminho, que é iludir o pagamento do imposto devido por mercadoria permitida (CP, art. 334). O último aspecto pedia ações do PODER PÚBLICO, não da população.",
+     "fonte": "Prova de 2013 (Cespe), conforme a prova comentada do Você Concursado"},
+]
+
+def tema(id, titulo, porque, aspectos, repertorio):
+    assert sum(p for _, p in aspectos) == 19, id
+    return {"id": id, "titulo": titulo, "porque": porque, "aspectos": [{"t": t, "p": p} for t, p in aspectos], "repertorio": repertorio}
+
+PRF25 = "Em 2025 as rodovias federais tiveram 72.483 acidentes, 6.044 mortes e 83.490 feridos, cerca de 16 mortes por dia (balanço da PRF divulgado em fevereiro de 2026)."
+TEMAS = [
+ tema("alcool", "O combate à embriaguez ao volante nas rodovias federais",
+  "A Lei Seca já caiu em 2021, e a Res. CONTRAN 1.031/2026 mudou a fiscalização de álcool e drogas.",
+  [["As consequências da combinação entre álcool e direção para a segurança viária", 5],
+   ["Os instrumentos legais e de fiscalização disponíveis para coibir a embriaguez ao volante", 7],
+   ["Ações do poder público e da sociedade para reduzir a combinação de álcool e direção", 7]],
+  ["CTB, art. 165: dirigir sob a influência de álcool é infração gravíssima, com multa multiplicada por 10 e suspensão do direito de dirigir por 12 meses; o art. 165-A pune igualmente a recusa ao teste.",
+   "CTB, art. 306: é crime conduzir com capacidade psicomotora alterada por álcool ou outra substância psicoativa.",
+   "Lei 11.705/2008 (Lei Seca) instituiu a tolerância zero; a Res. CONTRAN 1.031/2026 regula hoje a fiscalização, com etilômetro, sinais de alteração (pelo menos dois) e aparelho para outras substâncias.",
+   "Dados da PRF citados na prova de 2021: em 2019, 5.631 acidentes nas rodovias federais foram provocados por bebida alcoólica, 1.412 deles graves, e cerca de 18 mil motoristas foram flagrados dirigindo sob efeito de álcool.",
+   PRF25]),
+ tema("mortes", "A redução das mortes no trânsito das rodovias federais",
+  "É o centro da missão da PRF e o tema das provas de 2018 e 2021, com dados novos.",
+  [["O cenário atual da violência no trânsito nas rodovias federais", 5],
+   ["As principais causas dos acidentes graves", 6],
+   ["Medidas de educação, fiscalização e engenharia para reduzir as mortes", 8]],
+  [PRF25,
+   "Segundo o mesmo balanço, transitar na contramão foi a principal causa de mortes em 2025 (958 óbitos, 15,9%) e a ausência de reação do condutor a causa mais frequente de acidentes (15,8%); a BR-101 concentrou 17,9% dos acidentes.",
+   "Comparado a 2024 (73.201 acidentes e 6.163 mortes), 2025 teve leve queda; comparado a 2020, alta de 14% nos acidentes e de 18,3% nas mortes.",
+   "O CONTRAN regula o Plano Nacional de Redução de Mortes e Lesões no Trânsito (PNATRANS) pela Res. 1.004/2023.",
+   "CF, art. 144, § 2º: a PRF destina-se ao patrulhamento ostensivo das rodovias federais."]),
+ tema("velocidade", "Excesso de velocidade e fiscalização eletrônica nas rodovias",
+  "Velocidade é fator central de gravidade, e a fiscalização eletrônica é regulada por resolução do edital (798/2020).",
+  [["A relação entre velocidade e gravidade dos acidentes", 5],
+   ["O papel da fiscalização, inclusive eletrônica, e os critérios que a tornam legítima", 7],
+   ["Outras medidas para reduzir o excesso de velocidade", 7]],
+  ["CTB, art. 218: transitar acima da velocidade máxima é infração média, grave ou gravíssima conforme o excesso; acima de 50%, com suspensão do direito de dirigir.",
+   "CTB, art. 61: sem placa, a velocidade máxima é de 110 km/h em rodovia de pista dupla e 100 km/h em pista simples para automóveis, camionetas e motocicletas.",
+   "Res. CONTRAN 798/2020: o medidor desconta o erro máximo admitido (7 km/h na faixa da tabela; 7% acima dela) e o fixo precisa de estudo técnico e placa R-19 antes dele; o portátil só em vias com limite de 60 km/h ou mais (urbanas) e 80 km/h ou mais (rodovias).",
+   PRF25]),
+ tema("contrabando", "Contrabando e descaminho nas fronteiras e rodovias",
+  "Caiu em 2013 e é atribuição diária da PRF nas rodovias de fronteira.",
+  [["A diferença entre contrabando e descaminho e seus elementos", 5],
+   ["Os prejuízos para a economia, a saúde e a segurança pública", 7],
+   ["A atuação das forças públicas, inclusive integrada, no combate a esses crimes", 7]],
+  ["CP, art. 334-A (contrabando): importar ou exportar mercadoria proibida; reclusão de 2 a 5 anos.",
+   "CP, art. 334 (descaminho): iludir, no todo ou em parte, o pagamento de direito ou imposto devido pela entrada, saída ou consumo de mercadoria; reclusão de 1 a 4 anos. A separação dos dois crimes veio com a Lei 13.008/2014.",
+   "Exemplos de produtos: cigarros, eletrônicos, agrotóxicos e medicamentos proibidos, armas e munições.",
+   "CF, art. 144, § 2º (PRF) e Lei 13.675/2018 (Sistema Único de Segurança Pública), que prevê atuação integrada dos órgãos de segurança."]),
+ tema("drogas-armas", "O enfrentamento ao tráfico de drogas e de armas pelas rodovias federais",
+  "As rodovias são rota do crime organizado, e as leis de Drogas e de Armas estão no edital.",
+  [["A importância das rodovias federais como rota do tráfico", 5],
+   ["Os instrumentos legais de repressão ao tráfico de drogas e de armas", 6],
+   ["Estratégias de prevenção e repressão, com ênfase em inteligência e integração", 8]],
+  ["Lei 11.343/2006, art. 33: tráfico de drogas, reclusão de 5 a 15 anos; art. 40 aumenta a pena quando há transnacionalidade ou tráfico entre estados.",
+   "Lei 10.826/2003 (Estatuto do Desarmamento): arts. 17 e 18 punem o comércio ilegal e o tráfico internacional de arma de fogo.",
+   "Lei 12.850/2013: organização criminosa e meios de investigação (colaboração premiada, ação controlada, infiltração).",
+   "Lei 13.675/2018 (SUSP): integração e compartilhamento de informações entre os órgãos de segurança pública."]),
+ tema("pessoas", "Tráfico de pessoas e exploração sexual de crianças e adolescentes nas rodovias",
+  "Tema de direitos humanos ligado à rotina do policial rodoviário (ECA e tráfico de pessoas).",
+  [["Por que as rodovias favorecem a exploração e o tráfico de pessoas", 5],
+   ["A proteção legal às vítimas", 6],
+   ["O papel da PRF e da rede de proteção no enfrentamento", 8]],
+  ["CP, art. 149-A (Lei 13.344/2016): tráfico de pessoas, reclusão de 4 a 8 anos.",
+   "ECA (Lei 8.069/1990), art. 244-A: submeter criança ou adolescente à prostituição ou à exploração sexual é crime.",
+   "CF, art. 227: dever da família, da sociedade e do Estado de assegurar com absoluta prioridade os direitos da criança e do adolescente.",
+   "Ideias de ação: fiscalização de pontos vulneráveis (postos, bares e paradas), capacitação dos agentes, denúncia pelo Disque 100 e atuação com conselhos tutelares e Ministério Público."]),
+ tema("motociclistas", "A vulnerabilidade dos motociclistas no trânsito",
+  "Motos estão entre as principais vítimas; capacete e motofrete são regulados por resoluções do edital.",
+  [["Fatores que tornam o motociclista vulnerável", 5],
+   ["As regras de segurança previstas na legislação", 6],
+   ["Ações para reduzir acidentes com motociclistas", 8]],
+  ["CTB, arts. 54 e 55: condutor e passageiro de moto só circulam com capacete com viseira ou óculos de proteção.",
+   "Res. CONTRAN 940/2022: viseira só levantada com a moto parada, viseira cristal à noite, proibida película na viseira.",
+   "CTB, art. 244: conduzir moto sem capacete é infração gravíssima, com suspensão do direito de dirigir.",
+   "Motofrete e mototáxi exigem curso especializado (Res. CONTRAN 1.020/2025)."]),
+ tema("cargas", "O transporte de cargas: excesso de peso, jornada do motorista e segurança",
+  "Pesos e dimensões, jornada e amarração de carga estão nas resoluções do edital.",
+  [["Os riscos do excesso de peso e da jornada exaustiva para a segurança e para as rodovias", 6],
+   ["As normas de fiscalização aplicáveis ao transporte de cargas", 6],
+   ["Medidas para tornar o transporte de cargas mais seguro", 7]],
+  ["CTB, art. 231, V: transitar com excesso de peso é infração média, com multa acrescida a cada 200 kg ou fração e retenção para transbordo.",
+   "Res. CONTRAN 882/2021: limites de peso e dimensões; Autorização Especial de Trânsito para combinações com mais de 57 t ou 19,80 m (até 74 t).",
+   "Res. CONTRAN 525/2015 e CTB, art. 67-C: no máximo 5 horas e meia de direção ininterrupta e 11 horas de descanso a cada 24 horas.",
+   "Excesso de peso danifica o pavimento e aumenta a distância de frenagem."]),
+]
+
+out = {"id": "discursiva-prf", "atualizado": "2026-11-17", "regras": REGRAS, "anteriores": ANTERIORES, "temas": TEMAS,
+       "aviso": "Temas prováveis escritos para treino a partir do edital e das provas anteriores; não são previsão oficial. Dados e leis conferidos até 17/11/2026."}
+json.dump(out, open(os.path.join(BASE, "bancos", "discursiva-prf.json"), "w"), ensure_ascii=False, indent=1)
+print(len(TEMAS), "temas,", len(ANTERIORES), "provas anteriores")

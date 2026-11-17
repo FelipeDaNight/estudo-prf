@@ -165,6 +165,11 @@ nav button i{font-size:19px}
 .tiles .card{margin:0;padding:12px;display:flex;flex-direction:column;cursor:pointer}.tiles .card>b{font-size:15px}
 .tiles .note{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;font-size:12px;flex:1;margin-top:4px!important}
 .tiles button{margin-top:8px;padding:8px 6px;font-size:14px}
+.disc_tema{display:block;width:100%;text-align:left;margin:10px 0 0;padding:10px 0 8px;background:transparent;color:var(--ink);border:0;border-top:1px solid var(--line);border-radius:0;font-weight:600;font-size:15px}.disc_tema small{display:block;font-weight:400;color:var(--mut);font-size:12px;margin-top:3px}
+.disc_ant{border-top:1px solid var(--line);padding:8px 0}.disc_ant summary{font-weight:600;font-size:15px;cursor:pointer}.disc_ant ol,.disc_asp{padding-left:20px;line-height:1.45;font-size:15px}
+.disc_top{display:flex;align-items:center;gap:10px}.disc_top b{font-size:20px;font-variant-numeric:tabular-nums;flex:1}.disc_top button{width:auto;margin:0;padding:8px 12px;font-size:14px}
+#disc_txt{min-height:360px;margin-top:10px;font-size:16px;line-height:1.5}
+#disc_regras summary,#disc_corpo details.card summary{font-weight:600;cursor:pointer}
 </style>
 </head>
 <body>
@@ -182,6 +187,7 @@ nav button i{font-size:19px}
   <div class="card" id="h_lei"><b>📖 Lei seca (Semana 1)</b><div class="note" id="h_lei_t" style="margin-top:6px"></div><button id="h_lei_go" class="sec">Começar</button></div>
   <div class="card" id="h_ctb"><b>🚔 CTB</b><div class="note" id="h_ctb_t" style="margin-top:6px"></div><button id="h_ctb_go" class="sec">Começar</button></div>
   <div class="card" id="h_res"><b>📚 Resumos</b><div class="note" id="h_res_t" style="margin-top:6px">A teoria de cada tópico do edital, com as pegadinhas e o que mudou na lei.</div><button id="h_res_go" class="sec">Abrir resumos</button></div>
+  <div class="card" id="h_disc"><b>✍️ Discursiva</b><div class="note" id="h_disc_t">Redação da PRF: temas, provas anteriores e nota como na Cebraspe.</div><button id="h_disc_go" class="sec">Treinar redação</button></div>
   <div class="card" id="h_mac"><b>🧠 Macetes</b><div class="note" id="h_mac_t" style="margin-top:6px">Mnemônicos conferidos com a lei.</div><button id="h_mac_go" class="sec">Abrir macetes</button></div>
  </div>
  <div class="card">
@@ -354,6 +360,11 @@ nav button i{font-size:19px}
 <section id="des" class="tab">
  <div class="row" style="align-items:center;margin-top:8px"><button id="des_voltar" class="sec" style="width:auto;margin:0;flex:none;padding:8px 12px">Hoje</button><b style="flex:1;font-size:18px">📊 Desempenho</b></div>
  <div id="des_corpo"></div>
+</section>
+
+<section id="disc" class="tab">
+ <div class="row" style="align-items:center;margin-top:8px"><button id="disc_voltar" class="sec" style="width:auto;margin:0;flex:none;padding:8px 12px">Hoje</button><b style="flex:1;font-size:18px">✍️ Discursiva</b></div>
+ <div id="disc_corpo"></div>
 </section>
 
 <section id="res" class="tab">

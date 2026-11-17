@@ -166,3 +166,9 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Tela Hoje: o plano do dia continua no topo; Desempenho, Trilha, Checklist, Lei seca, CTB, Resumos e Macetes viraram blocos lado a lado.
 - Questões: os bancos da PRF (prova 2021, Sócrates e macetes) aparecem antes dos outros concursos.
 
+## Discursiva (17/11/2026)
+- **✍️ Discursiva** (bloco na tela Hoje): regras do Edital PRF nº 1/2021 (até 30 linhas, 20 pontos, NPD = NC − 4 × NE ÷ TL, eliminado abaixo de 10) e dicas; calculadora da nota; as provas de 2013 (contrabando), 2018 (infrações de trânsito) e 2021 (inovação legislativa e acidentes) com aspectos, pontos e o que a banca esperava.
+- 8 temas para treinar, cada um com aspectos pontuados, estrutura sugerida (linhas por parágrafo proporcionais aos pontos) e repertório de leis e dados (balanço da PRF de 2025).
+- Treino: editor com rascunho salvo, contador de linhas (ajustável ao tamanho da sua letra), cronômetro, autoavaliação pelos quesitos (0 a 3), nota estimada e histórico. **📤 Enviar para correção** prepara o texto para colar na conversa com o Claude.
+- Conteúdo em `bancos/discursiva-prf.json`, gerado por `ferramentas/discursiva.py`.
+

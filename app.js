@@ -1639,6 +1639,117 @@
     toast("Backup restaurado."); setTimeout(() => location.reload(), 600);
   }
 
+  // ---------------------------------------------------------------- DISCURSIVA (redação da PRF: regras, provas anteriores, temas e treino)
+  let DSC = LS.get("disc_dados", null);
+  const dscEst = { tema: null, ini: 0, acum: 0, tmr: null };
+  let dscRasc = LS.get("disc_rasc", {}), dscHist = LS.get("disc_hist", []), dscCpl = LS.get("disc_cpl", 65);
+  async function dscCarrega() {
+    try { const r = await fetch("bancos/discursiva-prf.json"); if (r.ok) { DSC = await r.json(); LS.set("disc_dados", DSC); } } catch (e) { /* usa a cópia salva */ }
+    return DSC;
+  }
+  // linhas estimadas na folha: cada parágrafo ocupa ao menos 1 linha; o resto segue a quantidade de letras por linha da sua letra
+  const dscLinhas = (txt) => txt.split(/\n/).filter((p) => p.trim()).reduce((n, p) => n + Math.max(1, Math.ceil(p.trim().length / dscCpl)), 0);
+  const dscNota = (nc, ne, tl) => Math.max(0, nc - 4 * (ne / Math.max(1, tl)));
+  const f2 = (n) => n.toFixed(2).replace(".", ",");
+  function dscPintaHoje() {
+    const h = $("h_disc_t"); if (!h || !DSC) return;
+    const u = dscHist[dscHist.length - 1];
+    h.textContent = u ? dscHist.length + " redação(ões) treinada(s) · última nota estimada " + f2(u.npd) + " de 20." : DSC.temas.length + " temas para treinar, as provas de 2013, 2018 e 2021 e a nota calculada como na Cebraspe.";
+  }
+  function dscTimer() { const s = Math.floor((dscEst.acum + (dscEst.ini ? Date.now() - dscEst.ini : 0)) / 1000); const t = $("disc_tempo"); if (t) t.textContent = "⏱ " + String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0"); }
+  function dscPara() { if (dscEst.ini) { dscEst.acum += Date.now() - dscEst.ini; dscEst.ini = 0; } clearInterval(dscEst.tmr); dscEst.tmr = null; }
+  async function dscRender() {
+    const d = DSC || (await dscCarrega());
+    if (!d) { $("disc_corpo").replaceChildren(el("div", "Não foi possível carregar a discursiva. Conecte-se à internet uma vez.", "note")); return; }
+    if (dscEst.tema) return dscTreino(d.temas.find((t) => t.id === dscEst.tema) || d.anteriores.find((t) => "prova-" + t.ano === dscEst.tema));
+    const box = document.createDocumentFragment();
+    const cr = el("details", undefined, "card"); cr.id = "disc_regras"; cr.appendChild(el("summary", "📏 Como é a prova discursiva da PRF"));
+    cr.appendChild(resLista("Regras (Edital PRF nº 1/2021)", d.regras.pontos, "disc_r", "ul")); cr.appendChild(resLista("Dicas", d.regras.dicas, "disc_d", "ul"));
+    box.appendChild(cr);
+    // calculadora
+    const cc = el("details", undefined, "card"); cc.appendChild(el("summary", "🧮 Calcular a nota (NPD = NC − 4 × NE ÷ TL)"));
+    const rw = el("div", undefined, "row"), mk = (id, ph, v) => { const w = el("div"); w.appendChild(el("label", ph)); const i = el("input"); i.id = id; i.type = "number"; i.inputMode = "decimal"; i.value = v; w.appendChild(i); return [w, i]; };
+    const [w1, i1] = mk("disc_c_nc", "NC (0 a 20)", "15"), [w2, i2] = mk("disc_c_ne", "Erros (NE)", "5"), [w3, i3] = mk("disc_c_tl", "Linhas (TL)", "30");
+    rw.appendChild(w1); rw.appendChild(w2); rw.appendChild(w3); cc.appendChild(rw);
+    const res = el("div", "", "mid"); res.id = "disc_c_res"; cc.appendChild(res);
+    const calc = () => { const npd = dscNota(num(i1.value) || 0, num(i2.value) || 0, num(i3.value) || 1); res.textContent = f2(npd); res.style.color = npd < 10 ? "var(--warn)" : "var(--acc)"; cc.querySelector(".sub").textContent = npd < 10 ? "Abaixo de 10: eliminado." : "Cada erro custa " + f2(4 / Math.max(1, num(i3.value) || 1)) + " ponto com essa quantidade de linhas."; };
+    cc.appendChild(el("div", "", "sub")); [i1, i2, i3].forEach((i) => { i.oninput = calc; }); calc();
+    box.appendChild(cc);
+    // temas
+    const ct = el("div", undefined, "card"); ct.appendChild(el("b", "✍️ Temas para treinar"));
+    d.temas.forEach((t) => { const b = el("button", undefined, "disc_tema"); b.dataset.id = t.id; b.appendChild(el("span", t.titulo)); const n = dscHist.filter((h) => h.tema === t.id); b.appendChild(el("small", t.porque + (n.length ? " · treinado " + n.length + "x, última nota " + f2(n[n.length - 1].npd) : "") + (dscRasc[t.id] ? " · rascunho salvo" : ""))); b.onclick = () => { dscEst.tema = t.id; dscEst.acum = 0; dscEst.ini = 0; dscRender(); window.scrollTo(0, 0); }; ct.appendChild(b); });
+    ct.appendChild(el("div", d.aviso, "note")).style.marginTop = "8px"; box.appendChild(ct);
+    // provas anteriores
+    const ca = el("div", undefined, "card"); ca.appendChild(el("b", "📜 O que caiu nas provas anteriores"));
+    d.anteriores.forEach((p) => {
+      const dt = el("details", undefined, "disc_ant"); dt.dataset.ano = p.ano; dt.appendChild(el("summary", p.ano + " · " + p.tema));
+      const ol = el("ol"); p.aspectos.forEach((x) => ol.appendChild(el("li", x[0] + " (" + String(x[1]).replace(".", ",") + " pontos)"))); dt.appendChild(ol);
+      dt.appendChild(el("div", "O que a banca esperava: " + p.esperado, "note")); dt.appendChild(el("div", "Fonte: " + p.fonte, "note"));
+      const b = el("button", "Treinar este tema"); b.className = "sec"; b.onclick = () => { dscEst.tema = "prova-" + p.ano; dscEst.acum = 0; dscEst.ini = 0; dscRender(); window.scrollTo(0, 0); }; dt.appendChild(b);
+      ca.appendChild(dt);
+    });
+    box.appendChild(ca);
+    // histórico
+    if (dscHist.length) {
+      const ch = el("div", undefined, "card"); ch.appendChild(el("b", "📈 Suas redações"));
+      dscHist.slice(-10).reverse().forEach((h) => ch.appendChild(el("div", h.d.split("-").reverse().join("/") + " · " + h.titulo + ": " + f2(h.npd) + " (conteúdo " + f2(h.nc) + ", " + h.ne + " erros em " + h.tl + " linhas, " + h.min + " min)", "des_conf")));
+      box.appendChild(ch);
+    }
+    $("disc_corpo").replaceChildren(box);
+  }
+  function dscTreino(t) {
+    if (!t) { dscEst.tema = null; return dscRender(); }
+    const id = t.id || "prova-" + t.ano, titulo = t.titulo || t.tema, asp = t.aspectos.map((x) => (Array.isArray(x) ? { t: x[0], p: x[1] } : x));
+    const box = document.createDocumentFragment(), sair = () => { dscPara(); dscEst.tema = null; dscRender(); window.scrollTo(0, 0); };
+    const bt0 = el("button", "← Temas"); bt0.className = "sec"; bt0.id = "disc_sair"; bt0.style.cssText = "width:auto;margin:8px 0 0;padding:8px 12px"; bt0.onclick = sair; box.appendChild(bt0);
+    const c = el("div", undefined, "card"); c.appendChild(el("b", titulo)).style.fontSize = "18px";
+    if (t.ano) c.appendChild(el("div", "Tema da prova de " + t.ano, "note"));
+    c.appendChild(el("div", "Redija um texto dissertativo de até 30 linhas abordando, nesta ordem:", "note")).style.marginTop = "8px";
+    const ol = el("ol", undefined, "disc_asp"); asp.forEach((x) => ol.appendChild(el("li", x.t + " [" + String(x.p).replace(".", ",") + " pontos]"))); c.appendChild(ol);
+    // estrutura sugerida: introdução 4, conclusão 3, o resto dividido pelos pontos
+    const resto = 23, tot = asp.reduce((s, x) => s + x.p, 0);
+    const est = ["Introdução (tema e tese): 4 linhas"].concat(asp.map((x, i) => "Parágrafo " + (i + 2) + " (aspecto " + (i + 1) + "): " + Math.round(resto * x.p / tot) + " linhas"), ["Conclusão (retoma e fecha): 3 linhas"]);
+    c.appendChild(resLista("Estrutura sugerida (30 linhas)", est, "disc_est", "ul"));
+    if (t.repertorio) c.appendChild(resLista("Repertório (dados e leis para usar)", t.repertorio, "disc_rep", "ul"));
+    if (t.esperado) c.appendChild(resLista("O que a banca esperava", [t.esperado], "disc_rep", "ul"));
+    box.appendChild(c);
+    // editor
+    const ce = el("div", undefined, "card");
+    const top = el("div", undefined, "disc_top"); const tm = el("b", "⏱ 00:00"); tm.id = "disc_tempo"; top.appendChild(tm);
+    const bt = el("button", dscEst.ini ? "Pausar" : "Iniciar cronômetro"); bt.className = "sec"; bt.id = "disc_crono";
+    bt.onclick = () => { if (dscEst.ini) { dscPara(); bt.textContent = "Continuar"; } else { dscEst.ini = Date.now(); dscEst.tmr = setInterval(dscTimer, 1000); bt.textContent = "Pausar"; } };
+    top.appendChild(bt); ce.appendChild(top);
+    const ta = el("textarea"); ta.id = "disc_txt"; ta.placeholder = "Escreva aqui. Um parágrafo por aspecto; deixe uma linha em branco entre os parágrafos se quiser."; ta.value = dscRasc[id] || ""; ce.appendChild(ta);
+    const info = el("div", "", "note"); info.id = "disc_info"; ce.appendChild(info);
+    const cpl = el("details"); cpl.appendChild(el("summary", "Ajustar a contagem de linhas")); const ic = el("input"); ic.type = "number"; ic.id = "disc_cpl"; ic.value = dscCpl; cpl.appendChild(el("div", "Letras por linha na sua letra à mão (conte numa folha pautada; o normal fica entre 55 e 75):", "note")); cpl.appendChild(ic); ce.appendChild(cpl);
+    const conta = () => { const l = dscLinhas(ta.value), p = ta.value.trim() ? ta.value.trim().split(/\s+/).length : 0; info.textContent = "≈ " + l + " de 30 linhas · " + p + " palavras" + (l > 30 ? " · passou de 30: o excesso é desconsiderado" : ""); info.style.color = l > 30 ? "var(--warn)" : ""; dscRasc[id] = ta.value; LS.set("disc_rasc", dscRasc); };
+    ta.oninput = conta; ic.oninput = () => { dscCpl = Math.max(30, num(ic.value) || 65); LS.set("disc_cpl", dscCpl); conta(); }; conta();
+    box.appendChild(ce);
+    // autoavaliação
+    const ca = el("div", undefined, "card"); ca.id = "disc_aval"; ca.appendChild(el("b", "Autoavaliação pelos quesitos da banca"));
+    ca.appendChild(el("div", "0 = não abordou · 1 = só mencionou · 2 = desenvolveu de forma inconsistente ou solta · 3 = desenvolveu bem, ligado ao tema e aos outros aspectos", "note"));
+    const sels = asp.map((x, i) => { const w = el("label", (i + 1) + ". " + x.t); const s = el("select"); s.className = "disc_q"; [0, 1, 2, 3].forEach((v) => { const o = el("option", String(v)); o.value = v; s.appendChild(o); }); ca.appendChild(w); ca.appendChild(s); return s; });
+    ca.appendChild(el("label", "Apresentação e estrutura (letra, margens, parágrafos, organização)"));
+    const sa = el("select"); sa.id = "disc_apr"; [["1", "Boa (1 ponto)"], ["0.5", "Regular (0,5)"], ["0", "Ruim (0)"]].forEach(([v, t]) => { const o = el("option", t); o.value = v; sa.appendChild(o); }); ca.appendChild(sa);
+    ca.appendChild(el("label", "Erros de português que você achou (grafia, concordância, regência, crase, vocabulário)")); const ne = el("input"); ne.type = "number"; ne.id = "disc_ne"; ne.value = "0"; ca.appendChild(ne);
+    const out = el("div", "", "mid"); out.id = "disc_npd"; ca.appendChild(out); const sub = el("div", "", "sub"); ca.appendChild(sub);
+    const recalc = () => { const nc = Math.min(20, asp.reduce((s, x, i) => s + x.p * (Number(sels[i].value) / 3), 0) + Number(sa.value)), tl = Math.max(1, dscLinhas(ta.value)), npd = dscNota(nc, num(ne.value) || 0, tl); out.textContent = f2(npd); out.style.color = npd < 10 ? "var(--warn)" : "var(--acc)"; sub.textContent = "Conteúdo " + f2(nc) + " de 20 · " + tl + " linhas" + (npd < 10 ? " · abaixo de 10 elimina" : ""); return { nc, tl, npd }; };
+    sels.concat([sa, ne]).forEach((s) => { s.oninput = recalc; s.onchange = recalc; }); ta.addEventListener("input", recalc); recalc();
+    const bs = el("button", "Salvar esta tentativa"); bs.className = "ok"; bs.id = "disc_salvar";
+    bs.onclick = () => { if (!ta.value.trim()) { toast("Escreva o texto antes de salvar."); return; } dscPara(); const r = recalc(); dscHist.push({ d: hoje(), tema: id, titulo, nc: Math.round(r.nc * 100) / 100, ne: num(ne.value) || 0, tl: r.tl, npd: Math.round(r.npd * 100) / 100, min: Math.round(dscEst.acum / 60000), notas: sels.map((s) => Number(s.value)) }); LS.set("disc_hist", dscHist); hist.push({ k: "estudo", v: Math.max(1, Math.round(dscEst.acum / 60000)), m: "Discursiva", d: hoje(), id: "d" + uid() }); LS.set("hist", hist); toast("Tentativa salva: " + f2(r.npd) + " de 20."); dscPintaHoje(); };
+    ca.appendChild(bs);
+    const bc = el("button", "📤 Enviar para correção"); bc.className = "sec"; bc.id = "disc_enviar";
+    bc.onclick = async () => {
+      const txt = "Corrija minha redação da discursiva da PRF como a Cebraspe: nota de 0 a 3 em cada aspecto, apresentação e estrutura, lista dos erros de português (NE), linhas (TL) e a nota NPD = NC − 4 × NE ÷ TL. Diga onde perdi ponto e como melhorar.\n\nTEMA: " + titulo + "\nASPECTOS:\n" + asp.map((x, i) => (i + 1) + ". " + x.t + " [" + x.p + " pontos]").join("\n") + "\n\nMEU TEXTO:\n" + ta.value.trim();
+      try { if (navigator.share) { await navigator.share({ title: "Redação PRF", text: txt }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
+      try { await navigator.clipboard.writeText(txt); toast("Copiado. Cole na conversa com o Claude para a correção."); } catch (e) { toast("Não consegui copiar."); }
+    };
+    ca.appendChild(bc); ca.appendChild(el("div", "Envia o tema, os aspectos e o seu texto prontos para colar na conversa com o Claude, que corrige pelos critérios da banca.", "note"));
+    box.appendChild(ca);
+    const bv = el("button", "Voltar aos temas"); bv.className = "sec"; bv.id = "disc_sair2"; bv.onclick = sair; box.appendChild(bv);
+    $("disc_corpo").replaceChildren(box); dscTimer();
+  }
+
   function abrir(t) {
     if (t !== "quest") { qFlushErro(); qFlushSessao(); }
     document.querySelectorAll(".tab").forEach((s) => s.classList.toggle("on", s.id === t));
@@ -1652,6 +1763,7 @@
     if (t === "res") resHome();
     if (t === "mac") macRender();
     if (t === "des") desRender();
+    if (t === "disc") dscRender();
     if (t === "lei") { const kt = $("k_tela"); if (kt) kt.style.display = "none"; leiHome(); }
     if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none" && $("k_tela").style.display === "none") qDesenhaLista();
   }
@@ -1682,7 +1794,7 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
-    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); document.querySelectorAll("#h_tiles > .card").forEach((c) => { c.onclick = (e) => { if (e.target.tagName !== "BUTTON") { const b = c.querySelector("button"); if (b) b.click(); } }; }); $("bk_fazer").onclick = bkFazer; $("bk_arq").onchange = (e) => bkLer(e.target.files[0]); $("bk_confirma").onclick = bkAplicar; $("h_mac_go").onclick = () => abrir("mac"); $("mac_voltar").onclick = () => abrir("hoje"); macCarrega().then(macPintaHoje); $("h_des_go").onclick = () => abrir("des"); $("des_voltar").onclick = () => abrir("hoje"); desPintaHoje(); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => { if (RES.volta) { const v = RES.volta; RES.volta = null; abrir(v); } else resHome(); }; $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
+    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); $("h_disc_go").onclick = () => { dscEst.tema = null; abrir("disc"); }; $("disc_voltar").onclick = () => { dscPara(); abrir("hoje"); }; dscCarrega().then(dscPintaHoje); document.querySelectorAll("#h_tiles > .card").forEach((c) => { c.onclick = (e) => { if (e.target.tagName !== "BUTTON") { const b = c.querySelector("button"); if (b) b.click(); } }; }); $("bk_fazer").onclick = bkFazer; $("bk_arq").onchange = (e) => bkLer(e.target.files[0]); $("bk_confirma").onclick = bkAplicar; $("h_mac_go").onclick = () => abrir("mac"); $("mac_voltar").onclick = () => abrir("hoje"); macCarrega().then(macPintaHoje); $("h_des_go").onclick = () => abrir("des"); $("des_voltar").onclick = () => abrir("hoje"); desPintaHoje(); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => { if (RES.volta) { const v = RES.volta; RES.volta = null; abrir(v); } else resHome(); }; $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
     $("lei_lido").onclick = leiMarcarLido; $("lei_lac").onclick = () => leiLacunas(LEI.bloco);
     $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
     document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });
