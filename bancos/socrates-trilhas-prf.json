@@ -4219,6 +4219,26 @@
    "just": "Art. 1º, I, c."
   },
   {
+   "n": 755,
+   "ref": "trilha:prf-legislacao-especial:tortura:6",
+   "materia": "Legislação Especial",
+   "topico": "Tortura",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Submeter mulher, reiteradamente, a intenso sofrimento físico ou mental, no contexto de violência doméstica e familiar, passou a configurar crime de tortura.",
+   "just": "Lei 9.455/1997, art. 1º, III, incluído pela Lei 15.410/2026."
+  },
+  {
+   "n": 756,
+   "ref": "trilha:prf-legislacao-especial:tortura:7",
+   "materia": "Legislação Especial",
+   "topico": "Tortura",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Para configurar a tortura contra a mulher no contexto de violência doméstica e familiar, basta um único episódio de sofrimento físico leve.",
+   "just": "Lei 9.455/1997, art. 1º, III (Lei 15.410/2026): exige sofrimento intenso imposto reiteradamente."
+  },
+  {
    "n": 111,
    "ref": "trilha:prf-legislacao-especial:ambientais:1",
    "materia": "Legislação Especial",
@@ -5407,6 +5427,16 @@
    "resp": "E",
    "enunciado": "O acordo de não persecução penal pode ser celebrado em crime cometido com grave ameaça, desde que a pena mínima seja inferior a quatro anos.",
    "just": "Art. 28-A: exige infração sem violência ou grave ameaça."
+  },
+  {
+   "n": 757,
+   "ref": "trilha:prf-processo-penal:acao-penal:7",
+   "materia": "Direito Processual Penal",
+   "topico": "Ação penal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Nos crimes praticados no âmbito da violência doméstica e familiar contra a mulher, o direito de representação decai em seis meses, contados do dia em que a ofendida souber quem é o autor do crime.",
+   "just": "CPP, art. 38, § 2º, e CP, art. 103, parágrafo único (Lei 15.438/2026): o prazo é de 12 meses."
   },
   {
    "n": 148,
