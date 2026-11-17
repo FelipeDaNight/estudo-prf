@@ -171,4 +171,5 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - 8 temas para treinar, cada um com aspectos pontuados, estrutura sugerida (linhas por parágrafo proporcionais aos pontos) e repertório de leis e dados (balanço da PRF de 2025).
 - Treino: editor com rascunho salvo, contador de linhas (ajustável ao tamanho da sua letra), cronômetro, autoavaliação pelos quesitos (0 a 3), nota estimada e histórico. **📤 Enviar para correção** prepara o texto para colar na conversa com o Claude.
 - Conteúdo em `bancos/discursiva-prf.json`, gerado por `ferramentas/discursiva.py`.
+- **⏱ Horas de estudo** (dentro de Desempenho, 17/11/2026): horas por período (Hoje, Semana, Mês, 7 dias, 30 dias, Tudo), dias estudados e média por dia, meta do período (minutos por dia × dias), comparação com o período anterior, horas e % por matéria, matérias do plano que ficaram sem estudo e o registro de cada bloco. O bloco Desempenho da tela Hoje mostra as horas da semana.
 

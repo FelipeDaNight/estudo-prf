@@ -696,6 +696,25 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     assert.ok(ev.m === "Direito Penal" && ev.b === "macetes-prf" && ev.ce === 1 && ev.c, JSON.stringify(ev));
   });
 
+  await t("Desempenho: horas de estudo por período e matéria, meta e registro", async () => {
+    await page.evaluate(() => {
+      const f = (k) => { const d = new Date(); d.setDate(d.getDate() - k); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+      const h = JSON.parse(localStorage.getItem("ep_hist") || "[]").filter((x) => x.k !== "estudo");
+      h.push({ k: "estudo", v: 50, m: "Raciocínio Lógico", d: f(0), id: "e1" }, { k: "estudo", v: 25, m: "Direito Penal", d: f(0), id: "e2" }, { k: "estudo", v: 40, m: "Direito Penal", d: f(40), id: "e3" });
+      localStorage.setItem("ep_hist", JSON.stringify(h));
+    });
+    await page.reload(); await espera(() => window.__app && /Estudo na semana: 1h15/.test(document.getElementById("h_des_t").textContent));
+    await page.click("#h_des_go");
+    await page.click('#des_corpo .des_per button[data-p="hoje"]');
+    await espera(() => document.querySelector("#des_h_kpi") && document.getElementById("des_h_kpi").textContent.includes("1h15"));
+    const c = await page.locator("#des_horas").innerText();
+    assert.ok(c.includes("Raciocínio Lógico-Matemático") && c.includes("50 min · 67%") && c.includes("25 min · 33%") && /Meta: 1h30/.test(c), c);
+    await page.click('#des_corpo .des_per button[data-p="tudo"]');
+    await espera(() => document.getElementById("des_h_kpi").textContent.includes("1h55"));
+    await page.click("#des_horas .des_log summary");
+    assert.ok((await page.locator("#des_horas .des_log").innerText()).includes("3 blocos"));
+  });
+
   await t("Backup: lembrete na tela Hoje, gera o arquivo e restaura os dados", async () => {
     await page.evaluate(() => { localStorage.removeItem("ep_backup_ult"); window.__app.abrir("hoje"); });
     await espera(() => document.getElementById("h_bk") && document.getElementById("h_alertas").textContent.includes("ainda não fez backup"));

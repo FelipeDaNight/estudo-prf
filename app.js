@@ -1486,7 +1486,36 @@
     const h = $("h_des_t"); if (!h) return;
     const ev = desEventos(), hj = desSoma(ev, hoje(), hoje()), [i, f] = desIntervalo("semana", 0), se = desSoma(ev, i, f);
     const t = (r) => r.n + " questões" + (r.n ? ", " + pct(r.a, r.n) + "% de acerto" : "");
-    h.textContent = "Hoje: " + t(hj) + " · Semana: " + t(se) + ".";
+    h.textContent = "Hoje: " + t(hj) + " · Semana: " + t(se) + " · Estudo na semana: " + hmin(desEstudo(i, f).min) + ".";
+  }
+
+  const hmin = (m) => { m = Math.round(m); const h = Math.floor(m / 60), r = m % 60; return h ? h + "h" + (r ? String(r).padStart(2, "0") : "") : r + " min"; };
+  function desEstudo(ini, fim) {
+    const r = { min: 0, mats: {}, dias: new Set(), log: [] };
+    hist.forEach((x) => { if (x.k !== "estudo" || !(x.v > 0) || x.d < ini || x.d > fim) return; const m = desMat(x.m === undefined ? "" : x.m).replace(/^Sem matéria.*/, "Sem matéria"); r.min += x.v; r.mats[m] = (r.mats[m] || 0) + x.v; r.dias.add(x.d); r.log.push(x); });
+    return r;
+  }
+  function desHorasCard(per, i0, f0) {
+    const e = desEstudo(i0, f0), ant = per === "tudo" ? null : desEstudo(...desIntervalo(per, 1));
+    const c = el("div", undefined, "card"); c.id = "des_horas"; c.appendChild(el("b", "⏱ Horas de estudo"));
+    const g = el("div", undefined, "grid3"), kp = (v, t) => { const d = el("div"); d.appendChild(el("b", v)); d.appendChild(el("span", t)); return d; };
+    g.appendChild(kp(hmin(e.min), "estudadas")); g.appendChild(kp(String(e.dias.size), e.dias.size === 1 ? "dia" : "dias")); g.appendChild(kp(e.dias.size ? hmin(e.min / e.dias.size) : "–", "por dia estudado"));
+    g.id = "des_h_kpi"; c.appendChild(g);
+    let nd = 0; if (per !== "tudo") { for (let d = i0; d <= f0; d = addDias(d, 1)) nd++; }
+    if (nd && cfg.metaMin) { const meta = nd * cfg.metaMin; c.appendChild(el("div", "Meta: " + hmin(meta) + " (" + cfg.metaMin + " min por dia) · feito " + Math.round(100 * e.min / meta) + "%", "sub")).style.marginTop = "8px"; const pb = el("div", undefined, "pbar"), i = el("i", undefined, "a"); i.style.width = Math.min(100, Math.round(100 * e.min / meta)) + "%"; pb.appendChild(i); c.appendChild(pb); }
+    if (ant) { const dif = e.min - ant.min; c.appendChild(el("div", (dif > 0 ? "▲ " : dif < 0 ? "▼ " : "= ") + hmin(Math.abs(dif)) + " em relação " + ({ hoje: "a ontem", semana: "à semana passada", mes: "ao mês passado", "7d": "aos 7 dias anteriores", "30d": "aos 30 dias anteriores" }[per]) + " (" + hmin(ant.min) + ")", "note")).style.marginTop = "6px"; }
+    const mats = Object.keys(e.mats).sort((x, y) => e.mats[y] - e.mats[x]), mx = Math.max(1, ...mats.map((m) => e.mats[m]));
+    if (!mats.length) c.appendChild(el("div", "Nenhum estudo registrado neste período. Use o cronômetro ou o registro manual na aba Estudo.", "note")).style.marginTop = "8px";
+    mats.forEach((m) => { const r = el("div", undefined, "des_hmat"); r.dataset.m = m; const l1 = el("div", undefined, "des_l1"); l1.appendChild(el("span", m)); l1.appendChild(el("b", hmin(e.mats[m]) + " · " + Math.round(100 * e.mats[m] / e.min) + "%")); r.appendChild(l1); const pb = el("div", undefined, "pbar"), i = el("i", undefined, "a"); i.style.width = Math.round(100 * e.mats[m] / mx) + "%"; pb.appendChild(i); r.appendChild(pb); c.appendChild(r); });
+    // matérias do plano da semana sem nenhum minuto no período
+    if (per !== "hoje") { const doPlano = [...new Set(plano.dias.flatMap((d) => d.mats || []))].map(desMat).filter((m) => m && !e.mats[m] && !/Revisão/i.test(m)); if (doPlano.length) c.appendChild(el("div", "Sem estudo no período (estão no seu plano): " + doPlano.join(", ") + ".", "note")).style.marginTop = "8px"; }
+    if (e.log.length) {
+      const dt = el("details", undefined, "des_log"); dt.appendChild(el("summary", "Ver o registro (" + e.log.length + " blocos)"));
+      e.log.slice().sort((x, y) => (x.d < y.d ? 1 : x.d > y.d ? -1 : 0)).slice(0, 60).forEach((x) => dt.appendChild(el("div", x.d.split("-").reverse().join("/") + " · " + desMat(x.m === undefined ? "" : x.m).replace(/^Sem matéria.*/, "Sem matéria") + " · " + x.v + " min", "des_conf")));
+      c.appendChild(dt);
+    }
+    c.appendChild(el("div", "Conta o que foi registrado neste celular (cronômetro e registro manual). Blocos digitados direto na planilha não aparecem aqui.", "note")).style.marginTop = "8px";
+    return c;
   }
   function desRender() {
     const ev = desEventos(), per = DES.per, [i0, f0] = desIntervalo(per, 0), cur = desSoma(ev, i0, f0);
@@ -1508,6 +1537,7 @@
     }
     if (cur.ce) { const liq = cur.ceA - (cur.ce - cur.ceA); c.appendChild(el("div", "Nota líquida no estilo Cebraspe: " + liq + " em " + cur.ce + " itens Certo/Errado (cada erro anula um acerto).", "note")).style.marginTop = "8px"; }
     box.appendChild(c);
+    box.appendChild(desHorasCard(per, i0, f0));
     // leitura rápida: onde estou melhor e pior
     const mats = Object.keys(cur.mats).map((m) => ({ m, n: cur.mats[m].n, a: cur.mats[m].a, p: pct(cur.mats[m].a, cur.mats[m].n) }));
     const firmes = mats.filter((x) => x.n >= 10).sort((x, y) => y.p - x.p);
