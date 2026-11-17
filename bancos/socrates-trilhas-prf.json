@@ -2279,6 +2279,76 @@
    "just": "Decreto 6.029/2007, art. 19."
   },
   {
+   "n": 720,
+   "ref": "trilha:prf-etica:conduta-alta-administracao:1",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Conduta da Alta Administração Federal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "De acordo com o Código de Conduta da Alta Administração Federal, a violação de suas normas acarreta advertência, aplicável às autoridades no exercício do cargo, ou censura ética, aplicável às que já o tiverem deixado.",
+   "just": "Código de Conduta da Alta Administração Federal, art. 17, I e II."
+  },
+  {
+   "n": 721,
+   "ref": "trilha:prf-etica:conduta-alta-administracao:2",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Conduta da Alta Administração Federal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Comissão de Ética Pública pode demitir a autoridade que violar o Código de Conduta da Alta Administração Federal.",
+   "just": "Código de Conduta da Alta Administração Federal, art. 17, parágrafo único: a CEP aplica advertência ou censura ética e pode apenas encaminhar sugestão de demissão à autoridade hierarquicamente superior."
+  },
+  {
+   "n": 722,
+   "ref": "trilha:prf-etica:conduta-alta-administracao:3",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Conduta da Alta Administração Federal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O Código de Conduta da Alta Administração Federal aplica-se a todos os servidores públicos civis do Poder Executivo federal.",
+   "just": "Código de Conduta da Alta Administração Federal, art. 2º: alcança Ministros e Secretários de Estado, cargos de natureza especial, secretários-executivos e equivalentes (DAS 6) e presidentes e diretores de entidades da administração indireta. O servidor em geral segue o Decreto 1.171/1994."
+  },
+  {
+   "n": 723,
+   "ref": "trilha:prf-etica:conduta-alta-administracao:4",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Conduta da Alta Administração Federal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A autoridade pública que mantiver participação superior a cinco por cento do capital de sociedade de economia mista, de instituição financeira ou de empresa que negocie com o Poder Público deve tornar público esse fato.",
+   "just": "Código de Conduta da Alta Administração Federal, art. 6º."
+  },
+  {
+   "n": 724,
+   "ref": "trilha:prf-etica:conduta-alta-administracao:5",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Conduta da Alta Administração Federal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "É permitido à autoridade pública aceitar presentes de empresas privadas, de qualquer valor, desde que os declare à Comissão de Ética Pública.",
+   "just": "Código de Conduta da Alta Administração Federal, art. 9º: é vedada a aceitação de presentes, salvo de autoridades estrangeiras nos casos protocolares em que houver reciprocidade; brinde de até R$ 100,00 não é presente."
+  },
+  {
+   "n": 725,
+   "ref": "trilha:prf-etica:conduta-alta-administracao:6",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Conduta da Alta Administração Federal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As propostas de trabalho ou de negócio futuro no setor privado devem ser imediatamente informadas pela autoridade pública à Comissão de Ética Pública, independentemente de sua aceitação ou rejeição.",
+   "just": "Código de Conduta da Alta Administração Federal, art. 13."
+  },
+  {
+   "n": 726,
+   "ref": "trilha:prf-etica:conduta-alta-administracao:7",
+   "materia": "Ética e Cidadania",
+   "topico": "Código de Conduta da Alta Administração Federal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "É permitido à autoridade pública opinar publicamente sobre o desempenho funcional de outra autoridade pública federal, desde que a matéria seja de sua área de competência.",
+   "just": "Código de Conduta da Alta Administração Federal, art. 12, I: é vedado opinar publicamente sobre a honorabilidade e o desempenho funcional de outra autoridade pública federal."
+  },
+  {
    "n": 416,
    "ref": "trilha:prf-etica:lai:1",
    "materia": "Ética e Cidadania",
