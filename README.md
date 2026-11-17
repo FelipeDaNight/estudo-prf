@@ -138,3 +138,5 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Página **🧭 Trilha do edital** (card na tela Hoje): as 15 matérias do edital PRF 2021 (item 24), cada uma em ordem do mais básico ao mais difícil, com nível (Base, Médio, Difícil), o item do edital e o motivo da ordem. Marque o que já estudou; o próximo tópico fica destacado.
 - O **Plano de hoje** mostra o próximo tópico da trilha para cada matéria do dia.
 - Dados em `bancos/trilha-edital-prf.json` (gerado por um script fora do repositório).
+- Cada tópico da trilha ligado a um resumo do Sócrates ganha os botões **📚 Resumo** e **🎯 Treinar** (107 dos 151 tópicos). "Voltar" no resumo traz de volta para a trilha.
+- **Língua Portuguesa** entrou nos resumos e no banco do Sócrates (14 tópicos, 82 itens Certo/Errado), com os itens 9 a 26 da PRF 2021 ligados.

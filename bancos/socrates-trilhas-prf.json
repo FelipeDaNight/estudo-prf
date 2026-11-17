@@ -6,7 +6,7 @@
  "tipo": "ce",
  "sincroniza_simulado": false,
  "origem": "socrates",
- "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 13/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Direitos Humanos, Ética e Cidadania, Legislação Especial, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
+ "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 16/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Direitos Humanos, Ética e Cidadania, Legislação Especial, Língua Portuguesa, Direito Processual Penal e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
  "questoes": [
   {
    "n": 325,
@@ -3047,6 +3047,826 @@
    "resp": "C",
    "enunciado": "Deixar de se identificar ao preso por ocasião de sua captura pode configurar crime de abuso de autoridade.",
    "just": "Art. 16 da Lei 13.869/2019."
+  },
+  {
+   "n": 431,
+   "ref": "trilha:prf-portugues:interpretacao:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Compreensão e interpretação de textos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Nas questões de interpretação, uma afirmação verdadeira no mundo real deve ser julgada certa ainda que o texto não a sustente.",
+   "just": "Método de interpretação: a conclusão precisa estar autorizada pelo texto."
+  },
+  {
+   "n": 432,
+   "ref": "trilha:prf-portugues:interpretacao:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Compreensão e interpretação de textos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A frase 'O motorista deixou de beber antes de dirigir' pressupõe que ele bebia antes de dirigir.",
+   "just": "Gramática normativa: pressuposto marcado pelo verbo 'deixar de'."
+  },
+  {
+   "n": 433,
+   "ref": "trilha:prf-portugues:interpretacao:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Compreensão e interpretação de textos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Afirmar que 'todos os condutores' agem de certo modo, quando o texto fala em 'muitos condutores', configura extrapolação.",
+   "just": "Método de interpretação."
+  },
+  {
+   "n": 434,
+   "ref": "trilha:prf-portugues:interpretacao:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Compreensão e interpretação de textos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Inferir é repetir literalmente uma informação explícita do texto.",
+   "just": "Inferência é a conclusão implícita, autorizada pelo texto."
+  },
+  {
+   "n": 435,
+   "ref": "trilha:prf-portugues:interpretacao:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Compreensão e interpretação de textos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Quando o autor cita a opinião de um estudioso, essa opinião deve sempre ser atribuída ao próprio autor.",
+   "just": "Método de interpretação: distinga as vozes do texto."
+  },
+  {
+   "n": 436,
+   "ref": "trilha:prf-portugues:tipologia:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Tipos e gêneros textuais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O artigo de opinião é um gênero textual em que predomina o tipo dissertativo-argumentativo.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 437,
+   "ref": "trilha:prf-portugues:tipologia:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Tipos e gêneros textuais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Narração, descrição e dissertação são exemplos de gêneros textuais.",
+   "just": "Gramática normativa: são tipos textuais."
+  },
+  {
+   "n": 438,
+   "ref": "trilha:prf-portugues:tipologia:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Tipos e gêneros textuais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Uma receita culinária é exemplo de texto em que predomina o tipo injuntivo.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 439,
+   "ref": "trilha:prf-portugues:tipologia:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Tipos e gêneros textuais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O texto expositivo tem como objetivo principal defender uma tese por meio de argumentos.",
+   "just": "Gramática normativa: isso é o argumentativo; o expositivo informa e explica."
+  },
+  {
+   "n": 440,
+   "ref": "trilha:prf-portugues:tipologia:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Tipos e gêneros textuais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Um mesmo gênero textual pode apresentar trechos de tipos textuais diferentes.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 441,
+   "ref": "trilha:prf-portugues:ortografia:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Ortografia oficial e acentuação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A palavra 'ideia' deixou de ser acentuada com o Acordo Ortográfico, mas 'herói' continua acentuada.",
+   "just": "Gramática normativa: queda do acento só nos ditongos abertos de paroxítonas."
+  },
+  {
+   "n": 442,
+   "ref": "trilha:prf-portugues:ortografia:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Ortografia oficial e acentuação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Ninguém sabe o porque da demora', a grafia do termo destacado está correta.",
+   "just": "Gramática normativa: substantivado, com artigo, escreve-se 'porquê'."
+  },
+  {
+   "n": 443,
+   "ref": "trilha:prf-portugues:ortografia:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Ortografia oficial e acentuação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "'Microondas' e 'antiinflamatório' seguem a grafia oficial vigente.",
+   "just": "Gramática normativa: prefixo terminado na mesma vogal que inicia a palavra seguinte pede hífen: micro-ondas, anti-inflamatório."
+  },
+  {
+   "n": 444,
+   "ref": "trilha:prf-portugues:ortografia:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Ortografia oficial e acentuação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As palavras 'júri', 'vírus' e 'hífen' são acentuadas por serem paroxítonas terminadas, respectivamente, em i, us e n.",
+   "just": "Gramática normativa: regra das paroxítonas."
+  },
+  {
+   "n": 445,
+   "ref": "trilha:prf-portugues:ortografia:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Ortografia oficial e acentuação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Ontem ele não pode comparecer', a forma verbal está corretamente grafada sem acento.",
+   "just": "Gramática normativa: no passado, 'pôde' mantém o acento diferencial."
+  },
+  {
+   "n": 446,
+   "ref": "trilha:prf-portugues:ortografia:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Ortografia oficial e acentuação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "'Mau' é antônimo de 'bom', e 'mal' é antônimo de 'bem'.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 447,
+   "ref": "trilha:prf-portugues:coesao:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Coesão textual: referência, substituição e conectores",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A substituição de 'porém' por 'contudo' mantém o sentido adversativo do período.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 448,
+   "ref": "trilha:prf-portugues:coesao:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Coesão textual: referência, substituição e conectores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A conjunção 'embora' introduz ideia de causa.",
+   "just": "Gramática normativa: embora é concessiva."
+  },
+  {
+   "n": 449,
+   "ref": "trilha:prf-portugues:coesao:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Coesão textual: referência, substituição e conectores",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'O caminhão tombou na curva; o veículo transportava grãos', o termo 'o veículo' retoma 'O caminhão' por hiperonímia.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 450,
+   "ref": "trilha:prf-portugues:coesao:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Coesão textual: referência, substituição e conectores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "As locuções 'à medida que' e 'na medida em que' têm o mesmo sentido e podem ser trocadas sem alteração semântica.",
+   "just": "Gramática normativa: proporção × causa."
+  },
+  {
+   "n": 451,
+   "ref": "trilha:prf-portugues:coesao:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Coesão textual: referência, substituição e conectores",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A elipse do sujeito em 'O motorista desceu e entregou os documentos' é um recurso de coesão.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 452,
+   "ref": "trilha:prf-portugues:coesao:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Coesão textual: referência, substituição e conectores",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Um texto coeso é sempre coerente.",
+   "just": "Gramática normativa: coesão e coerência são distintas."
+  },
+  {
+   "n": 453,
+   "ref": "trilha:prf-portugues:tempos-verbais:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Tempos e modos verbais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Se o policial ver a infração, deverá autuar', a forma verbal está correta.",
+   "just": "Gramática normativa: futuro do subjuntivo de ver é 'vir'."
+  },
+  {
+   "n": 454,
+   "ref": "trilha:prf-portugues:tempos-verbais:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Tempos e modos verbais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Quando a equipe detiver o veículo, fará a vistoria', a forma 'detiver' está correta.",
+   "just": "Gramática normativa: deter conjuga-se como ter."
+  },
+  {
+   "n": 455,
+   "ref": "trilha:prf-portugues:tempos-verbais:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Tempos e modos verbais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'O suspeito teria fugido pela BR-153', o futuro do pretérito indica que a informação não está confirmada.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 456,
+   "ref": "trilha:prf-portugues:tempos-verbais:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Tempos e modos verbais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A frase 'Se estudasse mais, passará na prova' respeita a correlação entre os tempos verbais.",
+   "just": "Gramática normativa: imperfeito do subjuntivo combina com futuro do pretérito: passaria."
+  },
+  {
+   "n": 457,
+   "ref": "trilha:prf-portugues:tempos-verbais:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Tempos e modos verbais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O pretérito imperfeito do indicativo pode indicar ação habitual no passado.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 458,
+   "ref": "trilha:prf-portugues:tempos-verbais:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Tempos e modos verbais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O modo subjuntivo exprime fatos apresentados como certos.",
+   "just": "Gramática normativa: certeza é o indicativo; o subjuntivo exprime hipótese, dúvida ou desejo."
+  },
+  {
+   "n": 459,
+   "ref": "trilha:prf-portugues:classes-palavras:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Classes de palavras",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Vendem-se casas na praia', o 'se' é pronome apassivador, e o verbo concorda com 'casas'.",
+   "just": "Gramática normativa: voz passiva sintética."
+  },
+  {
+   "n": 460,
+   "ref": "trilha:prf-portugues:classes-palavras:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Classes de palavras",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Precisam-se de motoristas', a concordância está correta.",
+   "just": "Gramática normativa: com índice de indeterminação do sujeito (verbo + preposição), o verbo fica no singular: precisa-se."
+  },
+  {
+   "n": 461,
+   "ref": "trilha:prf-portugues:classes-palavras:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Classes de palavras",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Ela ficou meia preocupada', a palavra 'meia' está corretamente flexionada.",
+   "just": "Gramática normativa: advérbio é invariável: meio preocupada."
+  },
+  {
+   "n": 462,
+   "ref": "trilha:prf-portugues:classes-palavras:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Classes de palavras",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'O documento que recebi estava rasurado', o vocábulo 'que' é pronome relativo, substituível por 'o qual'.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 463,
+   "ref": "trilha:prf-portugues:classes-palavras:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Classes de palavras",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Quero que você chegue cedo', o 'que' introduz oração que funciona como complemento do verbo 'querer'.",
+   "just": "Gramática normativa: conjunção integrante (oração substantiva objetiva direta)."
+  },
+  {
+   "n": 464,
+   "ref": "trilha:prf-portugues:classes-palavras:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Classes de palavras",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A palavra 'alto' é sempre adjetivo, independentemente do contexto.",
+   "just": "Gramática normativa: em 'falou alto' é advérbio."
+  },
+  {
+   "n": 465,
+   "ref": "trilha:prf-portugues:periodo:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Coordenação e subordinação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Os candidatos, que estudaram, foram aprovados', a oração entre vírgulas indica que todos os candidatos estudaram.",
+   "just": "Gramática normativa: oração adjetiva explicativa."
+  },
+  {
+   "n": 466,
+   "ref": "trilha:prf-portugues:periodo:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Coordenação e subordinação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A retirada das vírgulas em 'Os carros, que estavam sem licenciamento, foram removidos' preservaria o sentido original do período.",
+   "just": "Gramática normativa: a oração passaria a restritiva (só alguns carros)."
+  },
+  {
+   "n": 467,
+   "ref": "trilha:prf-portugues:periodo:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Coordenação e subordinação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A locução 'à medida que' expressa ideia de proporção.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 468,
+   "ref": "trilha:prf-portugues:periodo:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Coordenação e subordinação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Estudou muito, mas não passou', a oração introduzida por 'mas' é coordenada adversativa.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 469,
+   "ref": "trilha:prf-portugues:periodo:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Coordenação e subordinação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Embora estava cansado, continuou o plantão', o modo verbal está de acordo com a norma padrão.",
+   "just": "Gramática normativa: oração concessiva com 'embora' pede subjuntivo: estivesse."
+  },
+  {
+   "n": 470,
+   "ref": "trilha:prf-portugues:periodo:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Coordenação e subordinação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na oração 'É preciso que todos colaborem', a oração 'que todos colaborem' exerce a função de sujeito.",
+   "just": "Gramática normativa: oração subordinada substantiva subjetiva."
+  },
+  {
+   "n": 471,
+   "ref": "trilha:prf-portugues:pontuacao:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Pontuação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Os policiais que participaram da operação na rodovia federal, foram condecorados', a vírgula está empregada corretamente.",
+   "just": "Gramática normativa: não se separa sujeito do verbo."
+  },
+  {
+   "n": 472,
+   "ref": "trilha:prf-portugues:pontuacao:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Pontuação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O vocativo deve ser isolado por vírgula.",
+   "just": "Gramática normativa; também no MRPR, item 4.4."
+  },
+  {
+   "n": 473,
+   "ref": "trilha:prf-portugues:pontuacao:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Pontuação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'O motorista, contudo, recusou o teste', as vírgulas isolam conjunção adversativa deslocada e são obrigatórias.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 474,
+   "ref": "trilha:prf-portugues:pontuacao:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Pontuação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'O agente saiu e o colega ficou na base', a inserção de vírgula antes de 'e' seria incorreta.",
+   "just": "Gramática normativa: sujeitos diferentes admitem vírgula antes do 'e'."
+  },
+  {
+   "n": 475,
+   "ref": "trilha:prf-portugues:pontuacao:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Pontuação",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A substituição das vírgulas que isolam um aposto por travessões prejudica a correção gramatical.",
+   "just": "Gramática normativa: travessões podem isolar o aposto."
+  },
+  {
+   "n": 476,
+   "ref": "trilha:prf-portugues:pontuacao:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Pontuação",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Adjunto adverbial curto anteposto ao verbo admite ou não a vírgula, conforme a ênfase.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 477,
+   "ref": "trilha:prf-portugues:concordancia:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Concordância verbal e nominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Houveram muitos acidentes no feriado', a concordância está correta.",
+   "just": "Gramática normativa: haver = acontecer é impessoal: houve."
+  },
+  {
+   "n": 478,
+   "ref": "trilha:prf-portugues:concordancia:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Concordância verbal e nominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Devem existir outras soluções', a flexão do auxiliar está correta.",
+   "just": "Gramática normativa: existir é pessoal e concorda com 'soluções'."
+  },
+  {
+   "n": 479,
+   "ref": "trilha:prf-portugues:concordancia:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Concordância verbal e nominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Seguem anexo os documentos', a concordância nominal está correta.",
+   "just": "Gramática normativa: 'anexo' é adjetivo e concorda: anexos."
+  },
+  {
+   "n": 480,
+   "ref": "trilha:prf-portugues:concordancia:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Concordância verbal e nominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Faz cinco anos que ele ingressou na PRF', o verbo fazer está corretamente no singular.",
+   "just": "Gramática normativa: fazer indicando tempo é impessoal."
+  },
+  {
+   "n": 481,
+   "ref": "trilha:prf-portugues:concordancia:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Concordância verbal e nominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Fui eu quem resolveu o problema', a concordância está de acordo com a norma.",
+   "just": "Gramática normativa: com 'quem', 3ª pessoa (também se admite 'resolvi')."
+  },
+  {
+   "n": 482,
+   "ref": "trilha:prf-portugues:concordancia:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Concordância verbal e nominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Precisa-se de agentes', o verbo deveria ir para o plural.",
+   "just": "Gramática normativa: verbo com preposição + se (índice de indeterminação) fica no singular."
+  },
+  {
+   "n": 483,
+   "ref": "trilha:prf-portugues:regencia:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Regência verbal e nominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Prefiro trabalhar na rua do que no escritório', a regência do verbo preferir segue a norma padrão.",
+   "just": "Gramática normativa: prefere-se uma coisa A outra."
+  },
+  {
+   "n": 484,
+   "ref": "trilha:prf-portugues:regencia:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Regência verbal e nominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'O policial assistiu ao acidente', o verbo assistir tem sentido de presenciar e pede a preposição 'a'.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 485,
+   "ref": "trilha:prf-portugues:regencia:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Regência verbal e nominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A frase 'A infração implica em multa' está de acordo com a norma padrão.",
+   "just": "Gramática normativa: implicar (acarretar) é transitivo direto."
+  },
+  {
+   "n": 486,
+   "ref": "trilha:prf-portugues:regencia:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Regência verbal e nominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Esse é o cargo a que aspiro', a preposição antes do relativo é exigida pelo verbo aspirar.",
+   "just": "Gramática normativa: aspirar (desejar) pede 'a'."
+  },
+  {
+   "n": 487,
+   "ref": "trilha:prf-portugues:regencia:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Regência verbal e nominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Cheguei no posto às 6h', a regência segue a norma padrão escrita.",
+   "just": "Gramática normativa: chegar pede 'a': cheguei ao posto."
+  },
+  {
+   "n": 488,
+   "ref": "trilha:prf-portugues:regencia:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Regência verbal e nominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O verbo obedecer é transitivo indireto e exige a preposição 'a'.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 489,
+   "ref": "trilha:prf-portugues:crase:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Crase",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'O condutor foi multado devido à alta velocidade', o acento grave está empregado corretamente.",
+   "just": "Gramática normativa: 'devido a' + artigo 'a'."
+  },
+  {
+   "n": 490,
+   "ref": "trilha:prf-portugues:crase:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Crase",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Ele começou à estudar para a PRF', o acento grave é obrigatório.",
+   "just": "Gramática normativa: não há crase antes de verbo."
+  },
+  {
+   "n": 491,
+   "ref": "trilha:prf-portugues:crase:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Crase",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O acento grave em 'Entregue o relatório à sua chefe' é facultativo.",
+   "just": "Gramática normativa: antes de possessivo feminino singular a crase é facultativa."
+  },
+  {
+   "n": 492,
+   "ref": "trilha:prf-portugues:crase:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Crase",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'O plantão vai das 19h às 7h', o uso do acento grave está correto.",
+   "just": "Gramática normativa: horas determinadas."
+  },
+  {
+   "n": 493,
+   "ref": "trilha:prf-portugues:crase:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Crase",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Fiquei frente à frente com o suspeito', o acento grave está correto.",
+   "just": "Gramática normativa: entre palavras repetidas não há crase: frente a frente."
+  },
+  {
+   "n": 494,
+   "ref": "trilha:prf-portugues:crase:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Crase",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Vou a Goiânia amanhã', a ausência do acento grave está correta, pois se diz 'volto de Goiânia'.",
+   "just": "Gramática normativa: regra do 'vou a, volto de'."
+  },
+  {
+   "n": 495,
+   "ref": "trilha:prf-portugues:colocacao-pronominal:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Colocação pronominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Me informaram sobre a operação', a colocação do pronome está de acordo com a norma padrão escrita.",
+   "just": "Gramática normativa: não se inicia frase com pronome átono: Informaram-me."
+  },
+  {
+   "n": 496,
+   "ref": "trilha:prf-portugues:colocacao-pronominal:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Colocação pronominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Não se sabe o motivo', a próclise é obrigatória por causa do advérbio de negação.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 497,
+   "ref": "trilha:prf-portugues:colocacao-pronominal:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Colocação pronominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A forma 'Realizará-se a perícia amanhã' está correta.",
+   "just": "Gramática normativa: com futuro do presente, sem atrativa, usa-se mesóclise: Realizar-se-á."
+  },
+  {
+   "n": 498,
+   "ref": "trilha:prf-portugues:colocacao-pronominal:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Colocação pronominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Quando o vi, reconheci-o', ambas as colocações estão corretas.",
+   "just": "Gramática normativa: a conjunção 'quando' atrai o pronome; 'reconheci-o' é ênclise sem atrativa."
+  },
+  {
+   "n": 499,
+   "ref": "trilha:prf-portugues:colocacao-pronominal:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Colocação pronominal",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Tudo se resolveu', a próclise se justifica pela presença de pronome indefinido.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 500,
+   "ref": "trilha:prf-portugues:colocacao-pronominal:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Colocação pronominal",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Com verbo no particípio, a ênclise é a colocação recomendada pela norma padrão.",
+   "just": "Gramática normativa: não há ênclise com particípio."
+  },
+  {
+   "n": 501,
+   "ref": "trilha:prf-portugues:reescrita:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Reescrita de frases e parágrafos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A frase 'A PRF apreendeu a carga' pode ser reescrita como 'A carga foi apreendida pela PRF' sem prejuízo do sentido.",
+   "just": "Gramática normativa: transposição para a voz passiva analítica."
+  },
+  {
+   "n": 502,
+   "ref": "trilha:prf-portugues:reescrita:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Reescrita de frases e parágrafos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "'Eminente' e 'iminente' são sinônimos e podem ser trocados em qualquer contexto.",
+   "just": "Gramática normativa: eminente = ilustre; iminente = prestes a acontecer."
+  },
+  {
+   "n": 503,
+   "ref": "trilha:prf-portugues:reescrita:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Reescrita de frases e parágrafos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A substituição de 'retificar o documento' por 'ratificar o documento' mantém o sentido original.",
+   "just": "Gramática normativa: retificar = corrigir; ratificar = confirmar."
+  },
+  {
+   "n": 504,
+   "ref": "trilha:prf-portugues:reescrita:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Reescrita de frases e parágrafos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Uma reescrita pode estar gramaticalmente correta e, ainda assim, alterar o sentido do texto original.",
+   "just": "Gramática normativa."
+  },
+  {
+   "n": 505,
+   "ref": "trilha:prf-portugues:reescrita:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Reescrita de frases e parágrafos",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Apreenderam-se várias cargas', a substituição por 'Foram apreendidas várias cargas' mantém a correção e o sentido.",
+   "just": "Gramática normativa: passiva sintética → analítica."
+  },
+  {
+   "n": 506,
+   "ref": "trilha:prf-portugues:reescrita:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Reescrita de frases e parágrafos",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A retirada das vírgulas que isolam uma oração adjetiva explicativa nunca altera o sentido do texto.",
+   "just": "Gramática normativa: ela passa a restritiva."
+  },
+  {
+   "n": 507,
+   "ref": "trilha:prf-portugues:redacao-oficial:1",
+   "materia": "Língua Portuguesa",
+   "topico": "Redação oficial (Manual da Presidência)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Nas comunicações oficiais, o fecho 'Respeitosamente' é empregado para autoridades de hierarquia superior à do remetente.",
+   "just": "MRPR, 3ª ed., item 5.1.7."
+  },
+  {
+   "n": 508,
+   "ref": "trilha:prf-portugues:redacao-oficial:2",
+   "materia": "Língua Portuguesa",
+   "topico": "Redação oficial (Manual da Presidência)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo o Manual de Redação da Presidência da República, o tratamento 'Digníssimo' deve ser usado para autoridades do Poder Judiciário.",
+   "just": "MRPR, 3ª ed., item 4.4: 'Digníssimo' e 'Ilustríssimo' foram abolidos."
+  },
+  {
+   "n": 509,
+   "ref": "trilha:prf-portugues:redacao-oficial:3",
+   "materia": "Língua Portuguesa",
+   "topico": "Redação oficial (Manual da Presidência)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Vossa Excelência deve trazer vossos documentos', o possessivo está empregado de acordo com o Manual.",
+   "just": "MRPR, 3ª ed., item 4.1.1: com pronome de tratamento, o possessivo é da 3ª pessoa (seus documentos)."
+  },
+  {
+   "n": 510,
+   "ref": "trilha:prf-portugues:redacao-oficial:4",
+   "materia": "Língua Portuguesa",
+   "topico": "Redação oficial (Manual da Presidência)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na 3ª edição do Manual, o memorando e o aviso foram reunidos sob o nome de ofício.",
+   "just": "MRPR, 3ª ed., item 5."
+  },
+  {
+   "n": 511,
+   "ref": "trilha:prf-portugues:redacao-oficial:5",
+   "materia": "Língua Portuguesa",
+   "topico": "Redação oficial (Manual da Presidência)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Dirigindo-se a uma ministra, a concordância correta é 'Vossa Excelência está atarefada'.",
+   "just": "MRPR, 3ª ed., item 4.1.1: o adjetivo concorda com o sexo da pessoa."
+  },
+  {
+   "n": 512,
+   "ref": "trilha:prf-portugues:redacao-oficial:6",
+   "materia": "Língua Portuguesa",
+   "topico": "Redação oficial (Manual da Presidência)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O e-mail institucional, por si só, tem valor de documento original.",
+   "just": "MRPR, 3ª ed., item 6.4.2: exige certificação digital na ICP-Brasil."
   },
   {
    "n": 142,

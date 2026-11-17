@@ -1251,6 +1251,14 @@
     const tot = TRI.materias.reduce((n, m) => n + m.passos.length, 0), ok = TRI.materias.reduce((n, m) => n + m.passos.filter((p) => triFeito[triChave(m, p)]).length, 0);
     $("h_tri_t").textContent = "Cada matéria do edital em ordem, do mais básico ao mais difícil. Estudados: " + ok + "/" + tot + " tópicos de " + TRI.materias.length + " matérias.";
   }
+  // Abre o resumo do Sócrates ligado ao passo ("trilha:tópico"), ou já começa o treino dele.
+  async function triResumo(ref, treinar) {
+    if (!(await resCarrega())) { toast("Não foi possível carregar os resumos. Conecte-se à internet uma vez."); return; }
+    const [tid, id] = ref.split(":"), m = RES.dados.materias.find((x) => x.trilha === tid), t = m && m.topicos.find((x) => x.id === id);
+    if (!t) { toast("Esse resumo ainda não está no app."); return; }
+    if (treinar) { RES.mat = m; RES.top = t; await resTreinar(false); return; }
+    RES.volta = "trilha"; abrir("res"); resAbrir(m, t);
+  }
   function triMarcar(m, p, sim) { const k = triChave(m, p); if (sim) triFeito[k] = hoje(); else delete triFeito[k]; LS.set("trilha", triFeito); }
   async function triRender() {
     const d = TRI || (await triCarrega()), box = document.createDocumentFragment();
@@ -1279,6 +1287,12 @@
       if (p === prox) sp.appendChild(el("em", "▶ próximo", "tri_nv tri_px"));
       sp.appendChild(el("small", "Edital: " + p.ed));
       lb.appendChild(sp); c.appendChild(lb);
+      if (p.res) {
+        const acoes = el("div", undefined, "tri_acoes");
+        const br = el("button", "📚 Resumo"); br.className = "sec tri_res"; br.onclick = () => triResumo(p.res, false);
+        const bt = el("button", "🎯 Treinar"); bt.className = "sec tri_trein"; bt.onclick = () => triResumo(p.res, true);
+        acoes.appendChild(br); acoes.appendChild(bt); c.appendChild(acoes);
+      }
     });
     box.appendChild(c);
     box.appendChild(el("div", d.fonte, "note"));
@@ -1409,7 +1423,7 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
-    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => resHome(); $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
+    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => { if (RES.volta) { const v = RES.volta; RES.volta = null; abrir(v); } else resHome(); }; $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
     $("lei_lido").onclick = leiMarcarLido; $("lei_lac").onclick = () => leiLacunas(LEI.bloco);
     $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
     document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });

@@ -279,7 +279,7 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
   await t("Questões: lista os bancos e o treino filtra por matéria", async () => {
     await page.click('[data-t="quest"]');
     await espera(() => document.querySelectorAll("#q_lista .card[data-banco]").length === 4);
-    assert.ok((await page.locator('#q_lista .card[data-banco="socrates-trilhas-prf"]').innerText()).includes("Respondidas 0/430"), "banco do Sócrates");
+    assert.ok((await page.locator('#q_lista .card[data-banco="socrates-trilhas-prf"]').innerText()).includes("Respondidas 0/512"), "banco do Sócrates");
     const card = page.locator('#q_lista .card[data-banco="cbmgo-2022-soldado"]');
     assert.ok((await card.textContent()).includes("gabarito é de elaboração própria"), "aviso do gabarito");
     await card.locator('.q_mat[data-m="Raciocínio Lógico"]').click();
@@ -453,6 +453,18 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await page.reload(); await page.evaluate(() => window.__app.abrir("trilha"));
     await espera(() => document.querySelector("#tri_corpo .tri_passo.prox") && document.querySelector("#tri_corpo .tri_passo.prox").textContent.includes("Lei penal no tempo"));
     await page.locator('#tri_corpo .tri_passo input[data-n="1"]').uncheck();
+    // resumo do Sócrates ligado ao passo, e volta para a trilha
+    await page.locator("#tri_corpo .tri_res").first().click();
+    await espera(() => document.getElementById("res_topico").style.display === "block" && document.getElementById("res_corpo").textContent.includes("Princípios"));
+    await page.click("#res_sair");
+    await espera(() => document.getElementById("trilha").classList.contains("on") && document.querySelectorAll("#tri_corpo .tri_passo").length === 15);
+    await page.click('#tri_corpo .tri_mat[data-m="Língua Portuguesa"]');
+    await espera(() => document.querySelectorAll("#tri_corpo .tri_res").length === 15);
+    await page.locator("#tri_corpo .tri_trein").nth(7).click();   // 8. Crase
+    await espera(() => document.getElementById("q_tela").style.display === "block");
+    assert.ok((await page.locator("#q_tela").innerText()).includes("Crase") || (await page.locator("#q_tela").innerText()).length > 50);
+    await page.evaluate(() => window.__app.abrir("hoje"));
+    await page.evaluate(() => window.__app.abrir("trilha"));
     await page.click("#tri_voltar");
   });
 

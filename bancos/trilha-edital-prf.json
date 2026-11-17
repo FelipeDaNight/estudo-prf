@@ -12,91 +12,106 @@
      "n": 1,
      "t": "Ortografia oficial",
      "ed": "3",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-portugues:ortografia"
     },
     {
      "n": 2,
      "t": "Redação oficial: Manual de Redação da Presidência da República",
      "ed": "7, 7.1 a 7.4",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-portugues:redacao-oficial"
     },
     {
      "n": 3,
      "t": "Classes de palavras",
      "ed": "5.1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-portugues:classes-palavras"
     },
     {
      "n": 4,
      "t": "Termos da oração: coordenação e subordinação",
      "ed": "5.2, 5.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-portugues:periodo"
     },
     {
      "n": 5,
      "t": "Pontuação",
      "ed": "5.4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-portugues:pontuacao"
     },
     {
      "n": 6,
      "t": "Concordância verbal e nominal",
      "ed": "5.5",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-portugues:concordancia"
     },
     {
      "n": 7,
      "t": "Regência verbal e nominal",
      "ed": "5.6",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-portugues:regencia"
     },
     {
      "n": 8,
      "t": "Crase (depende da regência)",
      "ed": "5.7",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-portugues:crase"
     },
     {
      "n": 9,
      "t": "Colocação dos pronomes átonos",
      "ed": "5.8",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-portugues:colocacao-pronominal"
     },
     {
      "n": 10,
      "t": "Tempos e modos verbais",
      "ed": "4.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-portugues:tempos-verbais"
     },
     {
      "n": 11,
      "t": "Coesão: referenciação, substituição, conectores e sequenciação",
      "ed": "4, 4.1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-portugues:coesao"
     },
     {
      "n": 12,
      "t": "Tipos e gêneros textuais",
      "ed": "2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-portugues:tipologia"
     },
     {
      "n": 13,
      "t": "Significação e substituição de palavras e trechos",
      "ed": "6.1, 6.2",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-portugues:reescrita"
     },
     {
      "n": 14,
      "t": "Compreensão e interpretação de textos",
      "ed": "1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-portugues:interpretacao"
     },
     {
      "n": 15,
      "t": "Reescrita: reorganização de orações, períodos e textos",
      "ed": "6, 6.3, 6.4",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-portugues:reescrita"
     }
    ]
   },
@@ -304,37 +319,43 @@
      "n": 1,
      "t": "Ética e moral",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-etica:etica-moral"
     },
     {
      "n": 2,
      "t": "Ética, princípios e valores",
      "ed": "2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-etica:etica-moral"
     },
     {
      "n": 3,
      "t": "Ética e função pública: integridade",
      "ed": "3",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-etica:etica-funcao-publica"
     },
     {
      "n": 4,
      "t": "Moralidade: art. 37 da CF e art. 116, IX, da Lei 8.112",
      "ed": "4, 4.1, 4.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-etica:etica-funcao-publica"
     },
     {
      "n": 5,
      "t": "Código de Ética do Servidor (Decreto 1.171/1994)",
      "ed": "4.4.1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-etica:codigo-etica"
     },
     {
      "n": 6,
      "t": "Sistema de Gestão da Ética e Comissões de Ética (Decreto 6.029/2007)",
      "ed": "4.4.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-etica:gestao-etica"
     },
     {
      "n": 7,
@@ -346,19 +367,22 @@
      "n": 8,
      "t": "Governança pública (Decreto 9.203/2017)",
      "ed": "4.3",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-etica:governanca"
     },
     {
      "n": 9,
      "t": "Acesso à informação (Lei 12.527/2011 e Decreto 7.724/2012)",
      "ed": "5, 5.1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-etica:lai"
     },
     {
      "n": 10,
      "t": "Conflito de interesses e nepotismo (Lei 12.813/2013 e Decreto 7.203/2010)",
      "ed": "5.2",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-etica:conflito-interesses"
     }
    ]
   },
@@ -457,7 +481,8 @@
      "n": 1,
      "t": "CTB: disposições preliminares e Sistema Nacional de Trânsito (arts. 1º a 25)",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-transito:ctb-snt"
     },
     {
      "n": 2,
@@ -469,85 +494,99 @@
      "n": 3,
      "t": "CTB: normas gerais de circulação e conduta (arts. 26 a 67)",
      "ed": "1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-transito:ctb-circulacao"
     },
     {
      "n": 4,
      "t": "CTB: pedestres, condutores não motorizados, cidadão e educação (arts. 68 a 79)",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-transito:ctb-pedestres"
     },
     {
      "n": 5,
      "t": "CTB: sinalização (arts. 80 a 90)",
      "ed": "1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-transito:ctb-sinalizacao"
     },
     {
      "n": 6,
      "t": "CTB: engenharia, fiscalização e obras na via (arts. 91 a 95)",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-transito:ctb-fiscalizacao"
     },
     {
      "n": 7,
      "t": "CTB: veículos, segurança, registro e licenciamento (arts. 96 a 135)",
      "ed": "1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-transito:ctb-veiculos"
     },
     {
      "n": 8,
      "t": "CTB: condução de escolares e motofrete (arts. 136 a 139-B)",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-transito:ctb-escolares"
     },
     {
      "n": 9,
      "t": "CTB: habilitação (arts. 140 a 160)",
      "ed": "1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-transito:ctb-habilitacao"
     },
     {
      "n": 10,
      "t": "CTB: infrações (arts. 161 a 255)",
      "ed": "1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-transito:ctb-infracoes"
     },
     {
      "n": 11,
      "t": "CTB: penalidades (arts. 256 a 268-A)",
      "ed": "1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-transito:ctb-penalidades"
     },
     {
      "n": 12,
      "t": "CTB: medidas administrativas (arts. 269 a 279-A)",
      "ed": "1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-transito:ctb-medidas"
     },
     {
      "n": 13,
      "t": "CTB: autuação, julgamento e recursos (arts. 280 a 290)",
      "ed": "1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-transito:ctb-processo"
     },
     {
      "n": 14,
      "t": "CTB: crimes de trânsito (arts. 291 a 312-B)",
      "ed": "1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-transito:ctb-crimes"
     },
     {
      "n": 15,
      "t": "Lei 5.970/1973: remoção de vítimas e veículos",
      "ed": "2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-transito:lei-5970"
     },
     {
      "n": 16,
      "t": "Resoluções do CONTRAN do edital (39 resoluções)",
      "ed": "3 a 41",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-transito:contran"
     }
    ]
   },
@@ -560,49 +599,57 @@
      "n": 1,
      "t": "Poder constituinte: fundamentos, originário e derivado",
      "ed": "1, 1.1, 1.2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-constitucional:poder-constituinte"
     },
     {
      "n": 2,
      "t": "Reforma, revisão e emendas à Constituição",
      "ed": "1.3 a 1.5",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:poder-constituinte"
     },
     {
      "n": 3,
      "t": "Direitos e deveres individuais e coletivos (art. 5º)",
      "ed": "2, 2.1, 2.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:direitos-individuais"
     },
     {
      "n": 4,
      "t": "Garantias constitucionais individuais",
      "ed": "2.4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:direitos-individuais"
     },
     {
      "n": 5,
      "t": "Remédios constitucionais",
      "ed": "2.6",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-constitucional:remedios"
     },
     {
      "n": 6,
      "t": "Direitos sociais",
      "ed": "2.3",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-constitucional:direitos-sociais"
     },
     {
      "n": 7,
      "t": "Nacionalidade",
      "ed": "2.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:nacionalidade"
     },
     {
      "n": 8,
      "t": "Cidadania e direitos políticos",
      "ed": "2.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:direitos-politicos"
     },
     {
      "n": 9,
@@ -614,31 +661,36 @@
      "n": 10,
      "t": "Poder Executivo: forma e sistema de governo, chefia e atribuições do Presidente",
      "ed": "3, 3.1 a 3.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:poder-executivo"
     },
     {
      "n": 11,
      "t": "União: bens e competências (arts. 20 a 24)",
      "ed": "3.4",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-constitucional:organizacao-estado"
     },
     {
      "n": 12,
      "t": "Forças Armadas (art. 142)",
      "ed": "4, 4.1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-constitucional:seguranca-publica"
     },
     {
      "n": 13,
      "t": "Segurança pública e atribuições da PRF (art. 144)",
      "ed": "4.2 a 4.4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:seguranca-publica"
     },
     {
      "n": 14,
      "t": "Ordem social: seguridade, meio ambiente, família, criança, idoso e índio",
      "ed": "5, 5.1 a 5.4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-constitucional:ordem-social"
     }
    ]
   },
@@ -651,55 +703,64 @@
      "n": 1,
      "t": "Regime jurídico-administrativo e princípios",
      "ed": "8, 8.1, 8.2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-administrativo:regime-juridico"
     },
     {
      "n": 2,
      "t": "Organização administrativa: direta, indireta, descentralização",
      "ed": "1, 1.1 a 1.3",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-administrativo:organizacao"
     },
     {
      "n": 3,
      "t": "Agentes públicos: conceito, espécies, cargo, emprego e função",
      "ed": "3, 3.2",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-administrativo:agentes-publicos"
     },
     {
      "n": 4,
      "t": "Agentes públicos: Lei 8.112/1990 e normas da Constituição",
      "ed": "3.1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-administrativo:agentes-publicos"
     },
     {
      "n": 5,
      "t": "Poderes administrativos e abuso de poder",
      "ed": "4, 4.1, 4.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-administrativo:poderes"
     },
     {
      "n": 6,
      "t": "Ato administrativo: requisitos, atributos, classificação e espécies",
      "ed": "2, 2.1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-administrativo:ato-administrativo"
     },
     {
      "n": 7,
      "t": "Controle da Administração: administrativo, judicial e legislativo",
      "ed": "6, 6.1 a 6.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-administrativo:controle"
     },
     {
      "n": 8,
      "t": "Responsabilidade civil do Estado",
      "ed": "7, 7.1 a 7.3",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-administrativo:responsabilidade-civil"
     },
     {
      "n": 9,
      "t": "Licitação (Lei 14.133/2021): princípios, contratação direta, modalidades e procedimento",
      "ed": "5, 5.1 a 5.5",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-administrativo:licitacao"
     }
    ]
   },
@@ -712,91 +773,106 @@
      "n": 1,
      "t": "Princípios do Direito Penal",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-penal:principios"
     },
     {
      "n": 2,
      "t": "Lei penal no tempo",
      "ed": "2, 2.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:lei-penal-tempo"
     },
     {
      "n": 3,
      "t": "Lei penal no espaço",
      "ed": "2.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:lei-penal-espaco"
     },
     {
      "n": 4,
      "t": "Fato típico: crime doloso e culposo",
      "ed": "3, 3.1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:fato-tipico"
     },
     {
      "n": 5,
      "t": "Consumação, tentativa e crime impossível",
      "ed": "3.3, 3.4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:iter-criminis"
     },
     {
      "n": 6,
      "t": "Erro de tipo",
      "ed": "3.2",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-penal:erro-de-tipo"
     },
     {
      "n": 7,
      "t": "Ilicitude: excludentes e excesso punível",
      "ed": "4, 4.1, 4.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:ilicitude"
     },
     {
      "n": 8,
      "t": "Culpabilidade: imputabilidade e erro de proibição",
      "ed": "5, 5.1 a 5.3",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-penal:culpabilidade"
     },
     {
      "n": 9,
      "t": "Punibilidade e extinção da punibilidade",
      "ed": "3.5",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:punibilidade"
     },
     {
      "n": 10,
      "t": "Crimes contra a pessoa",
      "ed": "6.1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:crimes-pessoa"
     },
     {
      "n": 11,
      "t": "Crimes contra o patrimônio",
      "ed": "6.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:crimes-patrimonio"
     },
     {
      "n": 12,
      "t": "Crimes contra a Administração Pública",
      "ed": "6.6",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-penal:adm-publica"
     },
     {
      "n": 13,
      "t": "Crimes contra a fé pública",
      "ed": "6.5",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-penal:fe-publica"
     },
     {
      "n": 14,
      "t": "Crimes contra a incolumidade pública",
      "ed": "6.4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:incolumidade"
     },
     {
      "n": 15,
      "t": "Crimes contra a dignidade sexual",
      "ed": "6.3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-penal:dignidade-sexual"
     }
    ]
   },
@@ -809,67 +885,78 @@
      "n": 1,
      "t": "Diligências investigatórias (arts. 6º e 13 do CPP)",
      "ed": "6",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-processo-penal:diligencias"
     },
     {
      "n": 2,
      "t": "Identificação criminal (CF, art. 5º, LVIII; Lei 12.037/2009, art. 3º)",
      "ed": "5",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-processo-penal:identificacao-criminal"
     },
     {
      "n": 3,
      "t": "Atos processuais: forma, lugar e tempo",
      "ed": "2.1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-processo-penal:atos-processuais"
     },
     {
      "n": 4,
      "t": "Ação penal: conceito, características, espécies e condições",
      "ed": "1, 1.1 a 1.4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-processo-penal:acao-penal"
     },
     {
      "n": 5,
      "t": "Termo circunstanciado (Lei 9.099/1995)",
      "ed": "2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-processo-penal:tco"
     },
     {
      "n": 6,
      "t": "Prova: conceito, objeto, ônus e provas ilícitas",
      "ed": "3, 3.1, 3.3, 3.4",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-processo-penal:prova"
     },
     {
      "n": 7,
      "t": "Preservação do local de crime",
      "ed": "3.2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-processo-penal:prova"
     },
     {
      "n": 8,
      "t": "Meios de prova: perícia, interrogatório, confissão, testemunhas, indícios",
      "ed": "3.5",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-processo-penal:meios-de-prova"
     },
     {
      "n": 9,
      "t": "Busca e apreensão pessoal e domiciliar",
      "ed": "3.6",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-processo-penal:busca-apreensao"
     },
     {
      "n": 10,
      "t": "Prisão: conceito, formalidades, espécies e mandado",
      "ed": "4, 4.1",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-processo-penal:prisao-cautelar"
     },
     {
      "n": 11,
      "t": "Prisão em flagrante",
      "ed": "4.2",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-processo-penal:prisao-flagrante"
     }
    ]
   },
@@ -882,73 +969,85 @@
      "n": 1,
      "t": "Retenção de documentos (Lei 5.553/1968)",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-legislacao-especial:documentos"
     },
     {
      "n": 2,
      "t": "Identificação criminal (Lei 12.037/2009)",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-processo-penal:identificacao-criminal"
     },
     {
      "n": 3,
      "t": "SUSP: Sistema Único de Segurança Pública (Lei 13.675/2018)",
      "ed": "11",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-legislacao-especial:susp"
     },
     {
      "n": 4,
      "t": "Juizados especiais criminais (Lei 9.099/1995)",
      "ed": "5",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-legislacao-especial:juizados"
     },
     {
      "n": 5,
      "t": "ECA (Lei 8.069/1990)",
      "ed": "2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-legislacao-especial:eca"
     },
     {
      "n": 6,
      "t": "Tortura (Lei 9.455/1997)",
      "ed": "6",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-legislacao-especial:tortura"
     },
     {
      "n": 7,
      "t": "Crimes hediondos (Lei 8.072/1990)",
      "ed": "3",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-legislacao-especial:hediondos"
     },
     {
      "n": 8,
      "t": "Crimes ambientais (Lei 9.605/1998, caps. III e V)",
      "ed": "7",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-legislacao-especial:ambientais"
     },
     {
      "n": 9,
      "t": "Estatuto do Desarmamento: crimes (Lei 10.826/2003, cap. IV)",
      "ed": "8",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-legislacao-especial:armas"
     },
     {
      "n": 10,
      "t": "Lei de Drogas (Lei 11.343/2006)",
      "ed": "9",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-legislacao-especial:drogas"
     },
     {
      "n": 11,
      "t": "Organizações criminosas (Lei 12.850/2013)",
      "ed": "10",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-legislacao-especial:organizacoes-criminosas"
     },
     {
      "n": 12,
      "t": "Abuso de autoridade (Lei 13.869/2019)",
      "ed": "12",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-legislacao-especial:abuso-autoridade"
     }
    ]
   },
@@ -961,25 +1060,29 @@
      "n": 1,
      "t": "Direitos humanos na Constituição Federal",
      "ed": "1",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-direitos-humanos:dh-teoria"
     },
     {
      "n": 2,
      "t": "Constituição e tratados internacionais de direitos humanos",
      "ed": "1.1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-direitos-humanos:dh-cf-tratados"
     },
     {
      "n": 3,
      "t": "Declaração Universal dos Direitos Humanos",
      "ed": "2",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-direitos-humanos:dudh"
     },
     {
      "n": 4,
      "t": "Convenção Americana: Pacto de São José (Decreto 678/1992)",
      "ed": "3",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-direitos-humanos:pacto-sao-jose"
     }
    ]
   },
@@ -992,25 +1095,29 @@
      "n": 1,
      "t": "Competências da PRF (Decreto 1.655/1995 e art. 47 do Decreto 9.662/2019)",
      "ed": "Leg. Especial 4",
-     "nv": 1
+     "nv": 1,
+     "res": "prf-legislacao-especial:prf-competencias"
     },
     {
      "n": 2,
      "t": "Carreira de PRF (Lei 9.654/1998)",
      "ed": "Dir. Adm. 3.3.1",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-administrativo:carreira-prf"
     },
     {
      "n": 3,
      "t": "Carreira de PRF (Decreto 8.282/2014)",
      "ed": "Dir. Adm. 3.3.4",
-     "nv": 2
+     "nv": 2,
+     "res": "prf-administrativo:carreira-prf"
     },
     {
      "n": 4,
      "t": "Indenizações: fronteiras (Lei 12.855/2013) e PRF (Lei 13.712/2018)",
      "ed": "Dir. Adm. 3.3.2, 3.3.3",
-     "nv": 3
+     "nv": 3,
+     "res": "prf-administrativo:carreira-prf"
     }
    ]
   }
