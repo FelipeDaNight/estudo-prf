@@ -6,7 +6,7 @@
  "tipo": "ce",
  "sincroniza_simulado": false,
  "origem": "socrates",
- "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 16/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Direitos Humanos, Ética e Cidadania, Física, Geopolítica, Informática, Língua Inglesa, Legislação Especial, Língua Portuguesa, Direito Processual Penal, Raciocínio Lógico-Matemático e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
+ "aviso": "Itens de fixação no estilo Cebraspe, os mesmos das aulas do Sócrates, escritos e conferidos nas fontes oficiais (leis atualizadas até 17/11/2026). Matérias: Direito Administrativo, Direito Constitucional, Direito Penal, Direitos Humanos, Ética e Cidadania, Física, Geopolítica, Informática, Língua Inglesa, Legislação Especial, Língua Portuguesa, Direito Processual Penal, Raciocínio Lógico-Matemático e Legislação de Trânsito. Não são questões de prova: as da PRF 2021 estão no banco da prova. Certo/Errado; a justificativa cita o artigo.",
  "questoes": [
   {
    "n": 325,
@@ -7267,6 +7267,286 @@
    "resp": "C",
    "enunciado": "Ônibus, micro-ônibus e caminhões podem circular com até três danos no para-brisa fora da área crítica de visão, com trinca de até 20 cm ou fratura circular de até 4 cm.",
    "just": "Res. CONTRAN 960/2022, art. 15."
+  },
+  {
+   "n": 727,
+   "ref": "trilha:prf-transito:contran-alcool:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "Fiscalização de álcool e drogas (Res. 1.031/2026)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Pela Resolução CONTRAN 1.031/2026, o resultado do pré-teste ou do teste passivo de alcoolemia basta para fundamentar a autuação.",
+   "just": "Res. CONTRAN 1.031/2026, art. 4º: pré-teste e teste passivo têm caráter apenas indicativo."
+  },
+  {
+   "n": 728,
+   "ref": "trilha:prf-transito:contran-alcool:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "Fiscalização de álcool e drogas (Res. 1.031/2026)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A constatação da infração por sinais de alteração da capacidade psicomotora exige pelo menos dois sinais, descritos no auto de infração ou em termo próprio.",
+   "just": "Res. CONTRAN 1.031/2026, art. 7º, §§ 1º e 2º."
+  },
+  {
+   "n": 729,
+   "ref": "trilha:prf-transito:contran-alcool:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "Fiscalização de álcool e drogas (Res. 1.031/2026)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Na fiscalização por etilômetro, a medição de 0,05 mg de álcool por litro de ar alveolar, descontado o erro máximo, já caracteriza a infração do art. 165 do CTB.",
+   "just": "Res. CONTRAN 1.031/2026, art. 8º, I, e Anexo I (valor considerado 0,01 mg/L)."
+  },
+  {
+   "n": 730,
+   "ref": "trilha:prf-transito:contran-alcool:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "Fiscalização de álcool e drogas (Res. 1.031/2026)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O condutor fiscalizado pode escolher entre o etilômetro e o exame de sangue; se o agente não oferecer a opção, não há recusa.",
+   "just": "Res. CONTRAN 1.031/2026, art. 8º, § 3º: a recusa é a negativa ao procedimento adequado, e não cabe ao condutor escolher a modalidade."
+  },
+  {
+   "n": 731,
+   "ref": "trilha:prf-transito:contran-alcool:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "Fiscalização de álcool e drogas (Res. 1.031/2026)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Constatada a infração de alcoolemia, o veículo fica retido até a apresentação de condutor habilitado e, se não houver, é recolhido ao depósito.",
+   "just": "Res. CONTRAN 1.031/2026, art. 11 e § 1º."
+  },
+  {
+   "n": 732,
+   "ref": "trilha:prf-transito:contran-alcool:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "Fiscalização de álcool e drogas (Res. 1.031/2026)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Para o crime do art. 306 do CTB, a resolução considera a medição do etilômetro igual ou superior a 0,34 mg/L, descontado o erro máximo admissível.",
+   "just": "Res. CONTRAN 1.031/2026, art. 9º, I, e Anexo I (valor considerado 0,30 mg/L)."
+  },
+  {
+   "n": 733,
+   "ref": "trilha:prf-transito:contran-jornada:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "Tempo de direção do motorista profissional (Res. 525/2015)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A Resolução CONTRAN 525/2015 alcança o motorista profissional de veículo de carga com peso bruto total superior a 4.536 kg.",
+   "just": "Res. CONTRAN 525/2015, art. 1º."
+  },
+  {
+   "n": 734,
+   "ref": "trilha:prf-transito:contran-jornada:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "Tempo de direção do motorista profissional (Res. 525/2015)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No transporte rodoviário de passageiros, o motorista deve observar 30 minutos de descanso a cada 6 horas de direção.",
+   "just": "Res. CONTRAN 525/2015, art. 3º, III: no transporte de passageiros, 30 minutos a cada 4 horas; a cada 6 horas é a regra da carga."
+  },
+  {
+   "n": 735,
+   "ref": "trilha:prf-transito:contran-jornada:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "Tempo de direção do motorista profissional (Res. 525/2015)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Descumprido o descanso diário de 11 horas, o veículo pode ficar retido por 11 horas, inclusive em depósito oficial.",
+   "just": "Res. CONTRAN 525/2015, art. 6º, § 1º, II, e § 2º."
+  },
+  {
+   "n": 736,
+   "ref": "trilha:prf-transito:contran-jornada:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "Tempo de direção do motorista profissional (Res. 525/2015)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A retenção por descumprimento do tempo de descanso é mantida mesmo que outro condutor habilitado, que cumpriu os descansos, assuma a direção.",
+   "just": "Res. CONTRAN 525/2015, art. 6º, § 3º: a retenção é encerrada com a substituição por condutor habilitado que cumpriu as regras."
+  },
+  {
+   "n": 737,
+   "ref": "trilha:prf-transito:contran-jornada:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "Tempo de direção do motorista profissional (Res. 525/2015)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O diário de bordo é o meio principal de comprovação do tempo de direção, prevalecendo sobre o registrador instantâneo do veículo.",
+   "just": "Res. CONTRAN 525/2015, art. 2º, § 1º: os documentos em papel são usados somente quando o registrador do veículo não comprovar o tempo."
+  },
+  {
+   "n": 738,
+   "ref": "trilha:prf-transito:contran-capacete:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "Capacete do motociclista (Res. 940/2022)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Segundo a Resolução CONTRAN 940/2022, o condutor de motocicleta pode manter a viseira levantada em velocidade reduzida em vias urbanas.",
+   "just": "Res. CONTRAN 940/2022: a viseira só pode ser levantada com o veículo parado."
+  },
+  {
+   "n": 739,
+   "ref": "trilha:prf-transito:contran-capacete:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "Capacete do motociclista (Res. 940/2022)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O motociclista que usa capacete sem viseira deve usar óculos de proteção, que não podem ser substituídos por óculos de sol.",
+   "just": "Res. CONTRAN 940/2022: óculos de sol, de grau ou de segurança do trabalho não substituem os óculos de proteção."
+  },
+  {
+   "n": 740,
+   "ref": "trilha:prf-transito:contran-capacete:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "Capacete do motociclista (Res. 940/2022)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No período noturno, é obrigatório o uso de viseira cristal.",
+   "just": "Res. CONTRAN 940/2022."
+  },
+  {
+   "n": 741,
+   "ref": "trilha:prf-transito:contran-capacete:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "Capacete do motociclista (Res. 940/2022)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A obrigatoriedade do capacete alcança também o condutor de triciclo motorizado com cabine fechada.",
+   "just": "Res. CONTRAN 940/2022: os triciclos e quadriciclos com cabine fechada estão fora da regra."
+  },
+  {
+   "n": 742,
+   "ref": "trilha:prf-transito:contran-capacete:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "Capacete do motociclista (Res. 940/2022)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "É permitida a aplicação de película na viseira do capacete, desde que seja transparente.",
+   "just": "Res. CONTRAN 940/2022: é proibida a aplicação de película na viseira e nos óculos de proteção."
+  },
+  {
+   "n": 743,
+   "ref": "trilha:prf-transito:contran-habilitacao:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "Formação e habilitação de condutores (Res. 1.020/2025)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Pela Resolução CONTRAN 1.020/2025, o candidato à CNH pode fazer as aulas práticas com instrutor autônomo, com carga mínima de duas horas por categoria.",
+   "just": "Res. CONTRAN 1.020/2025, arts. 36, I, e 38."
+  },
+  {
+   "n": 744,
+   "ref": "trilha:prf-transito:contran-habilitacao:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "Formação e habilitação de condutores (Res. 1.020/2025)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O curso teórico de formação de condutores exige carga horária mínima de 45 horas-aula em centro de formação de condutores.",
+   "just": "Res. CONTRAN 1.020/2025, arts. 20 e 21: não há carga horária mínima e o candidato escolhe onde fazer o curso; o CFC não é obrigatório."
+  },
+  {
+   "n": 745,
+   "ref": "trilha:prf-transito:contran-habilitacao:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "Formação e habilitação de condutores (Res. 1.020/2025)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "No exame teórico, o candidato é aprovado se acertar no mínimo 20 das 30 questões.",
+   "just": "Res. CONTRAN 1.020/2025, arts. 31 a 34."
+  },
+  {
+   "n": 746,
+   "ref": "trilha:prf-transito:contran-habilitacao:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "Formação e habilitação de condutores (Res. 1.020/2025)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Encerrado o prazo da Permissão para Dirigir, a CNH definitiva é emitida automaticamente, sem necessidade de requerimento.",
+   "just": "Res. CONTRAN 1.020/2025, art. 50."
+  },
+  {
+   "n": 747,
+   "ref": "trilha:prf-transito:contran-habilitacao:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "Formação e habilitação de condutores (Res. 1.020/2025)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O condutor estrangeiro de país com acordo e reciprocidade pode dirigir no Brasil com sua habilitação de origem por até um ano.",
+   "just": "Res. CONTRAN 1.020/2025, art. 102: até 180 dias."
+  },
+  {
+   "n": 748,
+   "ref": "trilha:prf-transito:contran-habilitacao:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "Formação e habilitação de condutores (Res. 1.020/2025)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Para mudar para a categoria D, o condutor deve ter mais de 21 anos e estar habilitado há pelo menos dois anos na categoria B ou um ano na categoria C.",
+   "just": "Res. CONTRAN 1.020/2025, art. 53, II, a."
+  },
+  {
+   "n": 749,
+   "ref": "trilha:prf-transito:contran-mapa:1",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do edital: o que vale hoje",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Resolução CONTRAN 432/2013, sobre fiscalização do consumo de álcool, continua em vigor.",
+   "just": "Res. CONTRAN 1.031/2026, art. 15: revogou a 432/2013."
+  },
+  {
+   "n": 750,
+   "ref": "trilha:prf-transito:contran-mapa:2",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do edital: o que vale hoje",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Combinação de veículos de carga com mais de duas unidades e PBTC acima de 57 t depende de Autorização Especial de Trânsito.",
+   "just": "Res. CONTRAN 882/2021, art. 18."
+  },
+  {
+   "n": 751,
+   "ref": "trilha:prf-transito:contran-mapa:3",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do edital: o que vale hoje",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "As combinações que dependem de AET podem circular a qualquer hora em qualquer rodovia, desde que a no máximo 80 km/h.",
+   "just": "Res. CONTRAN 882/2021, art. 20: só do amanhecer ao pôr do sol, salvo pista dupla com separador e duas ou mais faixas por sentido."
+  },
+  {
+   "n": 752,
+   "ref": "trilha:prf-transito:contran-mapa:4",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do edital: o que vale hoje",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em via com limite de 60 km/h, um veículo medido a 60 km/h pelo radar tem velocidade considerada de 53 km/h.",
+   "just": "Res. CONTRAN 798/2020, art. 8º e Anexo III."
+  },
+  {
+   "n": 753,
+   "ref": "trilha:prf-transito:contran-mapa:5",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do edital: o que vale hoje",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O medidor de velocidade portátil pode ser usado em via urbana com limite de 40 km/h.",
+   "just": "Res. CONTRAN 798/2020, art. 7º: em via urbana, só com limite igual ou superior a 60 km/h."
+  },
+  {
+   "n": 754,
+   "ref": "trilha:prf-transito:contran-mapa:6",
+   "materia": "Legislação de Trânsito",
+   "topico": "Resoluções do edital: o que vale hoje",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em rodovia com limite de 80 km/h ou mais, a placa R-19 deve estar entre 1.000 m e 2.000 m antes do medidor fixo.",
+   "just": "Res. CONTRAN 798/2020, Anexo IV."
   }
  ]
 }

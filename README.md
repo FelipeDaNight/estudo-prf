@@ -107,8 +107,8 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Capítulos I e II (dias 1 a 6) ganharam 98 lacunas escritas à mão, incluindo cartões "De quem é a competência?".
 
 ## Banco do Sócrates: fixação de Trânsito, Penal, Processo Penal e Legislação Especial (13/11/2026)
-- Aba **Questões** → card **"Sócrates · Fixação PRF"**: 726 itens Certo/Errado no estilo Cebraspe, com justificativa citando o artigo. São os mesmos itens das aulas do Sócrates (assistente de voz), escritos e conferidos nas fontes oficiais, com as leis atualizadas até 13/11/2026 (Lei Antifacção, Leis 15.245/2025, 15.397/2026 e 15.487/2026, TCO pela PRF no STF, Decreto 11.348/2023).
-- Matérias (14): Língua Portuguesa (82), Direito Penal (79), Legislação de Trânsito (76), Raciocínio Lógico-Matemático (66), Legislação Especial (62), Geopolítica (60), Direito Constitucional (57), Direito Processual Penal (50), Direito Administrativo (49), Ética e Cidadania (42), Informática (36), Física (33), Direitos Humanos (22) e Língua Inglesa (12).
+- Aba **Questões** → card **"Sócrates · Fixação PRF"**: 754 itens Certo/Errado no estilo Cebraspe, com justificativa citando o artigo. São os mesmos itens das aulas do Sócrates (assistente de voz), escritos e conferidos nas fontes oficiais, com as leis atualizadas até 13/11/2026 (Lei Antifacção, Leis 15.245/2025, 15.397/2026 e 15.487/2026, TCO pela PRF no STF, Decreto 11.348/2023).
+- Matérias (14): Língua Portuguesa (82), Direito Penal (79), Legislação de Trânsito (104), Raciocínio Lógico-Matemático (66), Legislação Especial (62), Geopolítica (60), Direito Constitucional (57), Direito Processual Penal (50), Direito Administrativo (49), Ética e Cidadania (42), Informática (36), Física (33), Direitos Humanos (22) e Língua Inglesa (12).
 - Ética: Código de Ética (Decreto 1.171/1994: ausência INJUSTIFICADA, pena de censura), Sistema de Gestão da Ética (Decreto 6.029/2007), LAI e Decreto 7.724 (com a mudança de 2023), conflito de interesses e nepotismo (primo é 4º grau) e governança (Decreto 9.203/2017). Direitos Humanos: teoria, tratados na CF (Convenção da Pessoa com Deficiência tem status de emenda), DUDH e Pacto de São José.
 - Administrativo: organização, ato administrativo (Lei 9.784), agentes públicos e PAD (Lei 8.112), carreira de PRF (Lei 9.654 e Decreto 8.282: 120/150/360 horas para promoção), poderes e poder de polícia (STF, Tema 532), licitações pela Lei 14.133, controle, responsabilidade civil (dupla garantia, Tema 940) e princípios (nepotismo, SV 13).
 - Constitucional (CF atualizada até 13/11/2026): poder constituinte, art. 5º com as teses do STF (domicílio, reunião, confisco), remédios, direitos sociais (greve de policial), nacionalidade pela EC 131/2023, direitos políticos, competências (trânsito é privativa da União), Executivo (posse em 5 de janeiro, EC 111/2021), segurança pública e estados de defesa e sítio (com a PEC 18/2025 aguardando promulgação) e ordem social.
@@ -122,7 +122,7 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Os outros 13 itens de resoluções do CONTRAN da PRF 2021 foram conferidos nas resoluções em vigor e continuam com o gabarito oficial.
 
 ## Resumos do Sócrates (13/11/2026)
-- **Hoje → 📚 Resumos** (ou o botão "Ler os resumos dos tópicos" no card do Sócrates, em Questões): a teoria de cada tópico do edital, por matéria e na ordem do que mais cai (★ a ★★★). São 132 tópicos em 14 matérias (todas as do edital; Língua Estrangeira só em Inglês).
+- **Hoje → 📚 Resumos** (ou o botão "Ler os resumos dos tópicos" no card do Sócrates, em Questões): a teoria de cada tópico do edital, por matéria e na ordem do que mais cai (★ a ★★★). São 137 tópicos em 14 matérias (todas as do edital; Língua Estrangeira só em Inglês).
 - Cada tópico traz **pontos-chave** (com o artigo), **pegadinhas da banca** e **o que mudou na lei**, conferidos nas fontes oficiais até 13/11/2026.
 - **🎯 Treinar** abre só os itens de fixação daquele tópico; **📝 Questões da prova deste tópico** abre as questões reais da PRF 2021 ligadas a ele.
 - "Marcar como lido" fica guardado no aparelho e aparece na lista (✅) e no card da Hoje.
@@ -143,10 +143,14 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 
 ## Edital coberto: Bloco I completo (16/11/2026)
 - Entraram no Sócrates e no app: **Raciocínio Lógico-Matemático** (11 tópicos, 66 itens), **Informática** (6, 36), **Física** (5, 33), **Geopolítica** (10, 60) e **Língua Inglesa** (2, 12), com os itens 27 a 55 da PRF 2021 ligados aos tópicos.
-- **Conteúdo no app: 152 dos 152 tópicos da trilha (100%)**. O card da trilha na tela Hoje mostra esse número, e cada matéria mostra "N de M com conteúdo no app".
+- **Conteúdo no app: 157 dos 157 tópicos da trilha (100%)**. O card da trilha na tela Hoje mostra esse número, e cada matéria mostra "N de M com conteúdo no app".
 - **Ética** ganhou o Código de Conduta da Alta Administração Federal (item 4.4.3 do edital; 7 itens): quem ele alcança, presentes e brindes (com o Decreto 10.889/2021), interdição de 4 meses x quarentena de 6 meses da Lei 12.813/2013, advertência e censura ética, e o que mudou com os Decretos 10.478/2020 e 10.571/2020.
 - As 103 questões do banco da PRF 2021 estão todas ligadas a um tópico dos resumos.
 - O tópico do **Anexo I do CTB** (conceitos e definições) abre direto a leitura da lei (**📖 Ler no CTB do app**).
 - Raciocínio Lógico ganhou um passo extra de lógica proposicional (não está no edital de 2021, mas a banca cobra em outros concursos policiais).
 - Geopolítica usa os dados do IBGE (Censo 2022, estimativa de 2025, REGIC 2018, biomas) e as mudanças recentes (acordo Mercosul–União Europeia, Lei 15.190/2025 do licenciamento ambiental).
 - Cobertura quer dizer que o tópico tem resumo e itens de fixação (ou a lei) dentro do app. É resumo: não substitui a leitura da lei seca das leis especiais nem das resoluções do CONTRAN, que entram só com o que mais cai.
+
+## Resoluções do CONTRAN aprofundadas (17/11/2026)
+- Na trilha de Legislação de Trânsito, o passo único de resoluções virou 6 passos: as mais cobradas; álcool e drogas (Res. 1.031/2026, que substituiu a 432/2013); tempo de direção (525/2015); capacete (940/2022); habilitação (1.020/2025: autoescola facultativa, instrutor autônomo, estrangeiro 180 dias); e "o que vale hoje", com o mapa das 34 resoluções do edital retificado e as que as substituíram, AET, tolerância dos radares e distância da placa R-19.
+- 28 itens novos no banco do Sócrates (Legislação de Trânsito: 104).

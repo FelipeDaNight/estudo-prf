@@ -524,7 +524,7 @@
   {
    "materia": "Legislação de Trânsito",
    "logica": "Segue a ordem do CTB, que já vai do básico (quem é quem e conceitos) para o pesado (infrações, penalidades, processo e crimes). As resoluções vêm por último, cada uma ligada ao capítulo que regulamenta. Os dias do CTB no app seguem esta ordem.",
-   "nota": "O edital de 2021 listou 39 resoluções do CONTRAN. Muitas foram consolidadas ou trocadas pelo CONTRAN depois disso; confira a lista do próximo edital antes de estudá-las.",
+   "nota": "O edital de 2021, depois da retificação de 26/1/2021, listou 34 resoluções do CONTRAN. Quase todas foram consolidadas ou trocadas pelo CONTRAN depois disso: o último passo mostra qual resolução vale hoje no lugar de cada uma. Confira a lista do próximo edital antes de estudá-las.",
    "passos": [
     {
      "n": 1,
@@ -633,10 +633,45 @@
     },
     {
      "n": 16,
-     "t": "Resoluções do CONTRAN do edital (39 resoluções)",
-     "ed": "3 a 41",
+     "t": "Resoluções do CONTRAN mais cobradas: pesos, tacógrafo, câmeras, radares, placas, vidros, carga",
+     "ed": "3",
      "nv": 3,
      "res": "prf-transito:contran"
+    },
+    {
+     "n": 17,
+     "t": "Resolução do álcool e das drogas (1.031/2026, que substituiu a 432/2013)",
+     "ed": "3",
+     "nv": 3,
+     "res": "prf-transito:contran-alcool"
+    },
+    {
+     "n": 18,
+     "t": "Tempo de direção do motorista profissional (Res. 525/2015)",
+     "ed": "3",
+     "nv": 2,
+     "res": "prf-transito:contran-jornada"
+    },
+    {
+     "n": 19,
+     "t": "Capacete do motociclista (Res. 940/2022, que substituiu a 453/2013)",
+     "ed": "3",
+     "nv": 2,
+     "res": "prf-transito:contran-capacete"
+    },
+    {
+     "n": 20,
+     "t": "Formação e habilitação de condutores (Res. 1.020/2025)",
+     "ed": "3",
+     "nv": 2,
+     "res": "prf-transito:contran-habilitacao"
+    },
+    {
+     "n": 21,
+     "t": "Resoluções do edital: o que vale hoje (AET, radares, transferência)",
+     "ed": "3",
+     "nv": 3,
+     "res": "prf-transito:contran-mapa"
     }
    ]
   },
