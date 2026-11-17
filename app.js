@@ -237,7 +237,7 @@
       $(x[1] + "_t").textContent = nl || leiCardsDe(m).length ? (m === "sem1" && leiFeitoHoje() ? "✅ Treino de hoje feito. " : "") + lv + " lacunas para revisar · trechos lidos " + nl + "/" + bt : x[2];
       $(x[1] + "_go").textContent = nl || leiCardsDe(m).length ? "Continuar" : "Começar";
     });
-    pintarChkCard(); planoPintaHoje();
+    pintarChkCard(); planoPintaHoje(); triPintaHoje();
     const al = [];
     const de = diasDesde("estudo"), dc = diasDesde("corrida"), da = diasDesde("academia");
     if (de !== null && de >= 2) al.push("Você não estuda há " + de + " dias.");
@@ -1235,6 +1235,56 @@
     if ($("q_tela").style.display === "block") abrir("quest");
   }
 
+  // ---------------------------------------------------------------- TRILHA DO EDITAL (cada matéria do mais básico ao mais difícil)
+  let TRI = LS.get("tri_dados", null), triFeito = LS.get("trilha", {}), triMat = LS.get("tri_mat", null);
+  const TRI_NV = { 1: "Base", 2: "Médio", 3: "Difícil" };
+  async function triCarrega() {
+    try { const r = await fetch("bancos/trilha-edital-prf.json"); if (r.ok) { TRI = await r.json(); LS.set("tri_dados", TRI); } } catch (e) { /* usa a cópia salva */ }
+    return TRI;
+  }
+  const triChave = (m, p) => m.materia + "|" + p.n;
+  const triMateria = (nome) => (TRI ? TRI.materias.find((m) => m.materia === nome) : null);
+  const triProximo = (m) => m.passos.find((p) => !triFeito[triChave(m, p)]);
+  function triPintaHoje() {
+    if (!$("h_tri_t")) return;
+    if (!TRI) { $("h_tri_t").textContent = "Cada matéria do edital em ordem, do mais básico ao mais difícil."; return; }
+    const tot = TRI.materias.reduce((n, m) => n + m.passos.length, 0), ok = TRI.materias.reduce((n, m) => n + m.passos.filter((p) => triFeito[triChave(m, p)]).length, 0);
+    $("h_tri_t").textContent = "Cada matéria do edital em ordem, do mais básico ao mais difícil. Estudados: " + ok + "/" + tot + " tópicos de " + TRI.materias.length + " matérias.";
+  }
+  function triMarcar(m, p, sim) { const k = triChave(m, p); if (sim) triFeito[k] = hoje(); else delete triFeito[k]; LS.set("trilha", triFeito); }
+  async function triRender() {
+    const d = TRI || (await triCarrega()), box = document.createDocumentFragment();
+    if (!d) { $("tri_corpo").replaceChildren(el("div", "Não foi possível carregar a trilha. Conecte-se à internet uma vez.", "note")); return; }
+    if (!triMat || !triMateria(triMat)) triMat = (planoHoje().mats.find((x) => triMateria(x)) || d.materias[0].materia);
+    const seg = el("div", undefined, "tri_mats");
+    d.materias.forEach((m) => {
+      const ok = m.passos.filter((p) => triFeito[triChave(m, p)]).length, b = el("button", m.materia + " " + ok + "/" + m.passos.length);
+      b.className = "tri_mat" + (m.materia === triMat ? " on" : "") + (ok === m.passos.length ? " fim" : ""); b.dataset.m = m.materia;
+      b.onclick = () => { triMat = m.materia; LS.set("tri_mat", triMat); triRender(); };
+      seg.appendChild(b);
+    });
+    box.appendChild(seg);
+    const m = triMateria(triMat), ok = m.passos.filter((p) => triFeito[triChave(m, p)]).length, prox = triProximo(m);
+    const c = el("div", undefined, "card"); c.appendChild(el("b", m.materia)).style.fontSize = "18px";
+    c.appendChild(el("div", ok + " de " + m.passos.length + " tópicos estudados", "sub")).style.marginTop = "4px";
+    const pb = el("div", undefined, "pbar"), ia = el("i", undefined, "a"); ia.style.width = (100 * ok / m.passos.length) + "%"; pb.appendChild(ia); c.appendChild(pb);
+    c.appendChild(el("div", "Por que esta ordem: " + m.logica, "lei-res"));
+    if (m.nota) c.appendChild(el("div", "⚠ " + m.nota, "note")).style.marginTop = "8px";
+    m.passos.forEach((p) => {
+      const feito = !!triFeito[triChave(m, p)], lb = el("label", undefined, "tri_passo" + (feito ? " feito" : "") + (p === prox ? " prox" : "")), cx = el("input");
+      cx.type = "checkbox"; cx.checked = feito; cx.dataset.n = p.n; cx.onchange = () => { triMarcar(m, p, cx.checked); triRender(); };
+      lb.appendChild(cx); const sp = el("span");
+      sp.appendChild(el("b", p.n + ". ")); sp.appendChild(document.createTextNode(p.t + " "));
+      sp.appendChild(el("em", TRI_NV[p.nv], "tri_nv tri_nv" + p.nv));
+      if (p === prox) sp.appendChild(el("em", "▶ próximo", "tri_nv tri_px"));
+      sp.appendChild(el("small", "Edital: " + p.ed));
+      lb.appendChild(sp); c.appendChild(lb);
+    });
+    box.appendChild(c);
+    box.appendChild(el("div", d.fonte, "note"));
+    $("tri_corpo").replaceChildren(box);
+  }
+
   // ---------------------------------------------------------------- PLANO DA SEMANA (o que estudar em cada dia)
   // Padrão = aba Estudos da planilha (planilha-concurso-v2.4). Questões: a meta diária de Ajustes (30); segunda usa os 15-20 do plano.
   const PLANO_DIAS = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
@@ -1266,6 +1316,9 @@
     if (!p.mats.length) box.appendChild(el("div", "Dia livre no seu plano.", "note"));
     p.mats.forEach((m) => { const min = f.porMat[m] || 0, ch = el("span", (min ? "✅ " : "") + m + (min ? " · " + min + " min" : ""), "plano_chip" + (min ? " feito" : "")); box.appendChild(ch); });
     $("h_plano_o").textContent = [p.o, p.t].filter(Boolean).join(" · ");
+    const tr = $("h_plano_tri"); tr.replaceChildren();
+    p.mats.forEach((m) => { const tm = triMateria(m); if (!tm) return; const px = triProximo(tm); const lin = el("button", undefined, "tri_hoje"); lin.dataset.m = m;
+      lin.appendChild(el("b", "🧭 " + m + ": ")); lin.appendChild(document.createTextNode(px ? px.n + ". " + px.t : "trilha concluída ✅")); lin.onclick = () => { triMat = m; LS.set("tri_mat", m); abrir("trilha"); }; tr.appendChild(lin); });
     const meta = Number(p.q) || 0;
     $("h_plano_q").textContent = meta ? "Questões hoje: " + f.questoes + " de " + meta + (f.questoes >= meta ? " ✅" : "") : "Questões hoje: " + f.questoes;
     $("h_plano_qb").style.width = (meta ? Math.min(100, 100 * f.questoes / meta) : 0) + "%";
@@ -1324,6 +1377,7 @@
     if (t === "hoje") pintarHoje();
     if (t === "chk") chkRender();
     if (t === "plano") planoRender();
+    if (t === "trilha") triRender();
     if (t === "res") resHome();
     if (t === "lei") { const kt = $("k_tela"); if (kt) kt.style.display = "none"; leiHome(); }
     if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none" && $("k_tela").style.display === "none") qDesenhaLista();
@@ -1355,7 +1409,7 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
-    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_res_go").onclick = () => abrir("res"); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => resHome(); $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
+    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => resHome(); $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
     $("lei_lido").onclick = leiMarcarLido; $("lei_lac").onclick = () => leiLacunas(LEI.bloco);
     $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
     document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });
@@ -1387,6 +1441,6 @@
     sync(false);
   }
 
-  window.__app = { leiIr, getPlano: () => plano, planoPintaHoje, chkRender, Q, getLido: () => lido, setLido: (l) => { lido = l; LS.set("lei_lido", lido); }, getCards: () => cards, setCards: (c) => { cards = c; kSalvar(); }, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
+  window.__app = { leiIr, triRender, getPlano: () => plano, planoPintaHoje, chkRender, Q, getLido: () => lido, setLido: (l) => { lido = l; LS.set("lei_lido", lido); }, getCards: () => cards, setCards: (c) => { cards = c; kSalvar(); }, qProg, simHist: () => simHist, stats, sequencia, recordes, setHist: (h) => { hist = h; LS.set("hist", hist); }, getHist: () => hist, pintarHoje, urlFoco, Geo, enqueue, sync, getFila: () => fila, getCfg: () => cfg, abrir, P, C, pomoIniciar, pomoTick, corridaIniciar, gpsPonto, corridaFinalizar, setCfg: (c) => { cfg = Object.assign(cfg, c); LS.set("cfg", cfg); } };
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", iniciar); else iniciar();
 })();

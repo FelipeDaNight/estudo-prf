@@ -133,3 +133,8 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 - Card **🗓 Plano de hoje** no topo da tela Hoje: matérias do dia (✅ quando você registra estudo nelas), o que fazer, tempo e "Questões hoje: X de N".
 - **Ver a semana**: os 7 dias editáveis (adicionar/tirar matérias, nº de questões, tempo, o que fazer). Salvo no aparelho.
 - Começa com o plano da aba Estudos da planilha. Questões: 15-20 na segunda (do próprio plano) e a meta diária de Ajustes (30) nos outros dias. Botão "Voltar ao plano da planilha" restaura.
+
+## Trilha do edital (16/11/2026)
+- Página **🧭 Trilha do edital** (card na tela Hoje): as 15 matérias do edital PRF 2021 (item 24), cada uma em ordem do mais básico ao mais difícil, com nível (Base, Médio, Difícil), o item do edital e o motivo da ordem. Marque o que já estudou; o próximo tópico fica destacado.
+- O **Plano de hoje** mostra o próximo tópico da trilha para cada matéria do dia.
+- Dados em `bancos/trilha-edital-prf.json` (gerado por um script fora do repositório).

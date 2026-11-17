@@ -433,6 +433,29 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
   });
 
 
+  await t("Trilha do edital: ordem por matéria, marcar estudado e próximo no plano de hoje", async () => {
+    await page.evaluate(() => window.__app.abrir("hoje"));
+    await espera(() => /\/151 tópicos de 15/.test(document.getElementById("h_tri_t").textContent));
+    const dados = await page.evaluate(async () => (await fetch("bancos/trilha-edital-prf.json")).json());
+    dados.materias.forEach((m) => { assert.ok(m.passos.length >= 2 && m.logica, m.materia); m.passos.forEach((p, i) => { assert.strictEqual(p.n, i + 1); assert.ok([1, 2, 3].includes(p.nv)); }); });
+    const lp = dados.materias.find((m) => m.materia === "Direito Penal").passos.map((p) => p.t);
+    assert.ok(lp.indexOf("Princípios do Direito Penal") === 0 && lp.findIndex((x) => /patrimônio/.test(x)) > lp.findIndex((x) => /Culpabilidade/.test(x)), "parte geral antes dos crimes");
+    // o plano de hoje mostra o próximo tópico de cada matéria do dia
+    const nHoje = await page.evaluate(() => window.__app.getPlano().dias[(new Date().getDay() + 6) % 7].mats.filter((m) => m !== "Revisão geral").length);
+    assert.strictEqual(await page.locator("#h_plano_tri .tri_hoje").count(), nHoje);
+    await page.click("#h_tri_go");
+    await espera(() => document.querySelectorAll("#tri_corpo .tri_mat").length === 15);
+    await page.click('#tri_corpo .tri_mat[data-m="Direito Penal"]');
+    await espera(() => document.querySelector("#tri_corpo .tri_passo.prox") && document.querySelector("#tri_corpo .tri_passo.prox").textContent.includes("Princípios"));
+    await page.locator('#tri_corpo .tri_passo input[data-n="1"]').check();
+    await espera(() => document.querySelector("#tri_corpo .tri_passo.prox").textContent.includes("Lei penal no tempo"));
+    assert.ok((await page.locator('#tri_corpo .tri_mat[data-m="Direito Penal"]').innerText()).includes("1/15"));
+    await page.reload(); await page.evaluate(() => window.__app.abrir("trilha"));
+    await espera(() => document.querySelector("#tri_corpo .tri_passo.prox") && document.querySelector("#tri_corpo .tri_passo.prox").textContent.includes("Lei penal no tempo"));
+    await page.locator('#tri_corpo .tri_passo input[data-n="1"]').uncheck();
+    await page.click("#tri_voltar");
+  });
+
   await t("Plano da semana: vem da planilha, aparece no Hoje e fica salvo", async () => {
     await page.evaluate(() => window.__app.abrir("hoje"));
     const DIAS = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
