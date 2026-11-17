@@ -1,0 +1,1282 @@
+{
+ "id": "macetes-prf",
+ "titulo": "Macetes · PRF",
+ "banca": "Cebraspe (estilo)",
+ "ano": 2026,
+ "tipo": "ce",
+ "sincroniza_simulado": false,
+ "origem": "macetes",
+ "aviso": "Macetes conferidos com o texto da lei (ou marcados como doutrina) em 17/11/2026. Cada item testa a 'lista trocada', a pegadinha preferida da Cebraspe.",
+ "macetes": [
+  {
+   "id": "socidivaplu",
+   "materia": "Direito Constitucional",
+   "res": "",
+   "nome": "Fundamentos da República",
+   "sigla": "SOCIDIVAPLU",
+   "partes": [
+    {
+     "l": "SO",
+     "t": "soberania"
+    },
+    {
+     "l": "CI",
+     "t": "cidadania"
+    },
+    {
+     "l": "DI",
+     "t": "dignidade da pessoa humana"
+    },
+    {
+     "l": "VA",
+     "t": "valores sociais do trabalho e da livre iniciativa"
+    },
+    {
+     "l": "PLU",
+     "t": "pluralismo político"
+    }
+   ],
+   "fonte": "CF, art. 1º, I a V",
+   "pegadinha": "Fundamento é substantivo (soberania, cidadania...). Se a frase começa com verbo (construir, garantir, erradicar, promover), é OBJETIVO do art. 3º.",
+   "extra": "Princípios fundamentais (arts. 1º a 4º): fora do edital da PRF de 2021, mas cai em quase todo concurso.",
+   "itens": [
+    {
+     "t": "O pluralismo político e a dignidade da pessoa humana são fundamentos da República Federativa do Brasil.",
+     "r": "C",
+     "j": "CF, art. 1º, III e V."
+    },
+    {
+     "t": "A erradicação da pobreza e da marginalização é um dos fundamentos da República Federativa do Brasil.",
+     "r": "E",
+     "j": "CF, art. 3º, III: é objetivo fundamental, não fundamento (art. 1º)."
+    }
+   ]
+  },
+  {
+   "id": "congaerrpro",
+   "materia": "Direito Constitucional",
+   "res": "",
+   "nome": "Objetivos fundamentais da República",
+   "sigla": "CONGAERRPRO",
+   "partes": [
+    {
+     "l": "CON",
+     "t": "CONstruir uma sociedade livre, justa e solidária"
+    },
+    {
+     "l": "GA",
+     "t": "GArantir o desenvolvimento nacional"
+    },
+    {
+     "l": "ERR",
+     "t": "ERRadicar a pobreza e a marginalização e reduzir as desigualdades sociais e regionais"
+    },
+    {
+     "l": "PRO",
+     "t": "PROmover o bem de todos, sem preconceitos de origem, raça, sexo, cor, idade e quaisquer outras formas de discriminação"
+    }
+   ],
+   "fonte": "CF, art. 3º, I a IV",
+   "pegadinha": "Todo objetivo começa com VERBO. E é reduzir desigualdades, não 'erradicar' desigualdades: erradicar é a pobreza e a marginalização.",
+   "extra": "Princípios fundamentais (arts. 1º a 4º): fora do edital da PRF de 2021, mas cai em quase todo concurso.",
+   "itens": [
+    {
+     "t": "Garantir o desenvolvimento nacional é objetivo fundamental da República Federativa do Brasil.",
+     "r": "C",
+     "j": "CF, art. 3º, II."
+    },
+    {
+     "t": "Constitui objetivo fundamental da República erradicar as desigualdades sociais e regionais.",
+     "r": "E",
+     "j": "CF, art. 3º, III: erradicar a pobreza e a marginalização e REDUZIR as desigualdades sociais e regionais."
+    }
+   ]
+  },
+  {
+   "id": "ainda-nao-comprei-recopa",
+   "materia": "Direito Constitucional",
+   "res": "",
+   "nome": "Princípios das relações internacionais",
+   "sigla": "AINDA NÃO COMPREI RECOPA",
+   "partes": [
+    {
+     "l": "A",
+     "t": "Autodeterminação dos povos"
+    },
+    {
+     "l": "IN",
+     "t": "INdependência nacional"
+    },
+    {
+     "l": "DA",
+     "t": "Defesa dA paz"
+    },
+    {
+     "l": "NÃO",
+     "t": "NÃO-intervenção"
+    },
+    {
+     "l": "CO",
+     "t": "COncessão de asilo político"
+    },
+    {
+     "l": "PRE",
+     "t": "PREvalência dos direitos humanos"
+    },
+    {
+     "l": "I",
+     "t": "Igualdade entre os Estados"
+    },
+    {
+     "l": "RE",
+     "t": "REpúdio ao terrorismo e ao racismo"
+    },
+    {
+     "l": "CO",
+     "t": "COoperação entre os povos para o progresso da humanidade"
+    },
+    {
+     "l": "PA",
+     "t": "solução PAcífica dos conflitos"
+    }
+   ],
+   "fonte": "CF, art. 4º, I a X",
+   "pegadinha": "É asilo POLÍTICO (não 'refúgio'). E o parágrafo único fala em integração econômica, política, social e cultural dos povos da América Latina.",
+   "extra": "Princípios fundamentais (arts. 1º a 4º): fora do edital da PRF de 2021, mas cai em quase todo concurso.",
+   "itens": [
+    {
+     "t": "A concessão de asilo político é princípio que rege o Brasil em suas relações internacionais.",
+     "r": "C",
+     "j": "CF, art. 4º, X."
+    },
+    {
+     "t": "A soberania é princípio que rege o Brasil nas relações internacionais, previsto no art. 4º da Constituição.",
+     "r": "E",
+     "j": "CF, art. 1º, I: soberania é fundamento da República; no art. 4º está a independência nacional."
+    }
+   ]
+  },
+  {
+   "id": "mp3com",
+   "materia": "Direito Constitucional",
+   "res": "prf-constitucional:nacionalidade",
+   "nome": "Cargos privativos de brasileiro nato",
+   "sigla": "MP3.COM",
+   "partes": [
+    {
+     "l": "M",
+     "t": "Ministro do STF"
+    },
+    {
+     "l": "P3",
+     "t": "Presidente e Vice-Presidente da República, Presidente da Câmara dos Deputados e Presidente do Senado Federal"
+    },
+    {
+     "l": "C",
+     "t": "carreira diplomática"
+    },
+    {
+     "l": "O",
+     "t": "oficial das Forças Armadas"
+    },
+    {
+     "l": "M",
+     "t": "Ministro de Estado da Defesa"
+    }
+   ],
+   "fonte": "CF, art. 12, § 3º, I a VII",
+   "pegadinha": "Deputado, senador e ministros de Estado em geral (salvo o da Defesa) podem ser naturalizados. Só os PRESIDENTES da Câmara e do Senado precisam ser natos.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "O cargo de Ministro de Estado da Defesa é privativo de brasileiro nato.",
+     "r": "C",
+     "j": "CF, art. 12, § 3º, VII."
+    },
+    {
+     "t": "Brasileiro naturalizado não pode exercer mandato de senador da República.",
+     "r": "E",
+     "j": "CF, art. 12, § 3º: só o cargo de Presidente do Senado Federal é privativo de nato."
+    }
+   ]
+  },
+  {
+   "id": "capacete-de-pm",
+   "materia": "Direito Constitucional",
+   "res": "prf-constitucional:organizacao-estado",
+   "nome": "Competência privativa da União para legislar",
+   "sigla": "CAPACETE DE PM",
+   "partes": [
+    {
+     "l": "C",
+     "t": "Civil"
+    },
+    {
+     "l": "A",
+     "t": "Agrário"
+    },
+    {
+     "l": "P",
+     "t": "Penal"
+    },
+    {
+     "l": "A",
+     "t": "Aeronáutico"
+    },
+    {
+     "l": "C",
+     "t": "Comercial"
+    },
+    {
+     "l": "E",
+     "t": "Eleitoral"
+    },
+    {
+     "l": "T",
+     "t": "do Trabalho"
+    },
+    {
+     "l": "E",
+     "t": "Espacial"
+    },
+    {
+     "l": "DE P",
+     "t": "Processual (o 'DE' é só para formar a frase)"
+    },
+    {
+     "l": "M",
+     "t": "Marítimo"
+    }
+   ],
+   "fonte": "CF, art. 22, I (e XI: trânsito e transporte)",
+   "pegadinha": "Trânsito e transporte também são competência PRIVATIVA da União (art. 22, XI): lei estadual ou municipal que crie regra de trânsito é inconstitucional.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "Compete privativamente à União legislar sobre direito agrário, marítimo, aeronáutico e espacial.",
+     "r": "C",
+     "j": "CF, art. 22, I."
+    },
+    {
+     "t": "Os estados podem legislar concorrentemente com a União sobre trânsito e transporte.",
+     "r": "E",
+     "j": "CF, art. 22, XI: competência privativa da União."
+    }
+   ]
+  },
+  {
+   "id": "pufet",
+   "materia": "Direito Constitucional",
+   "res": "prf-constitucional:organizacao-estado",
+   "nome": "Competência concorrente (art. 24, I)",
+   "sigla": "PUFET",
+   "partes": [
+    {
+     "l": "P",
+     "t": "Penitenciário"
+    },
+    {
+     "l": "U",
+     "t": "Urbanístico"
+    },
+    {
+     "l": "F",
+     "t": "Financeiro"
+    },
+    {
+     "l": "E",
+     "t": "Econômico"
+    },
+    {
+     "l": "T",
+     "t": "Tributário"
+    }
+   ],
+   "fonte": "CF, art. 24, I",
+   "pegadinha": "Penal é privativo da União (art. 22, I); PENITENCIÁRIO é concorrente (art. 24, I). A banca troca um pelo outro.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "Compete à União, aos estados e ao Distrito Federal legislar concorrentemente sobre direito penitenciário.",
+     "r": "C",
+     "j": "CF, art. 24, I."
+    },
+    {
+     "t": "Compete concorrentemente à União, aos estados e ao Distrito Federal legislar sobre direito penal.",
+     "r": "E",
+     "j": "CF, art. 22, I: direito penal é competência privativa da União."
+    }
+   ]
+  },
+  {
+   "id": "limpe",
+   "materia": "Direito Administrativo",
+   "res": "prf-administrativo:regime-juridico",
+   "nome": "Princípios expressos da administração pública",
+   "sigla": "LIMPE",
+   "partes": [
+    {
+     "l": "L",
+     "t": "Legalidade"
+    },
+    {
+     "l": "I",
+     "t": "Impessoalidade"
+    },
+    {
+     "l": "M",
+     "t": "Moralidade"
+    },
+    {
+     "l": "P",
+     "t": "Publicidade"
+    },
+    {
+     "l": "E",
+     "t": "Eficiência"
+    }
+   ],
+   "fonte": "CF, art. 37, caput",
+   "pegadinha": "Eficiência entrou pela EC 19/1998. Supremacia do interesse público, razoabilidade e proporcionalidade são princípios IMPLÍCITOS (não estão no caput do art. 37).",
+   "extra": "",
+   "itens": [
+    {
+     "t": "A eficiência é princípio expresso da administração pública no caput do art. 37 da Constituição.",
+     "r": "C",
+     "j": "CF, art. 37, caput (redação da EC 19/1998)."
+    },
+    {
+     "t": "A supremacia do interesse público está expressa no caput do art. 37 da Constituição.",
+     "r": "E",
+     "j": "CF, art. 37, caput: só legalidade, impessoalidade, moralidade, publicidade e eficiência; a supremacia é princípio implícito (doutrina)."
+    }
+   ]
+  },
+  {
+   "id": "fase",
+   "materia": "Direito Administrativo",
+   "res": "prf-administrativo:organizacao",
+   "nome": "Administração indireta",
+   "sigla": "FASE",
+   "partes": [
+    {
+     "l": "F",
+     "t": "Fundações públicas"
+    },
+    {
+     "l": "A",
+     "t": "Autarquias"
+    },
+    {
+     "l": "S",
+     "t": "Sociedades de economia mista"
+    },
+    {
+     "l": "E",
+     "t": "Empresas públicas"
+    }
+   ],
+   "fonte": "Decreto-Lei 200/1967, art. 4º, II; CF, art. 37, XIX",
+   "pegadinha": "Órgão (ministério, PRF, secretaria) NÃO é administração indireta: é administração direta, sem personalidade jurídica. A PRF é órgão da União.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "As sociedades de economia mista integram a administração indireta.",
+     "r": "C",
+     "j": "Decreto-Lei 200/1967, art. 4º, II, c."
+    },
+    {
+     "t": "A Polícia Rodoviária Federal é autarquia federal integrante da administração indireta.",
+     "r": "E",
+     "j": "CF, art. 144, § 2º, e Decreto-Lei 200/1967: a PRF é órgão da administração direta da União."
+    }
+   ]
+  },
+  {
+   "id": "cofifomob",
+   "materia": "Direito Administrativo",
+   "res": "prf-administrativo:ato-administrativo",
+   "nome": "Elementos (requisitos) do ato administrativo",
+   "sigla": "COFIFOMOB",
+   "partes": [
+    {
+     "l": "CO",
+     "t": "COmpetência"
+    },
+    {
+     "l": "FI",
+     "t": "FInalidade"
+    },
+    {
+     "l": "FO",
+     "t": "FOrma"
+    },
+    {
+     "l": "MO",
+     "t": "MOtivo"
+    },
+    {
+     "l": "OB",
+     "t": "OBjeto"
+    }
+   ],
+   "fonte": "Lei 4.717/1965 (Ação Popular), art. 2º",
+   "pegadinha": "Motivo e objeto formam o MÉRITO do ato discricionário. Competência, finalidade e forma são sempre vinculados.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "Competência, finalidade, forma, motivo e objeto são elementos do ato administrativo.",
+     "r": "C",
+     "j": "Lei 4.717/1965, art. 2º."
+    },
+    {
+     "t": "No ato discricionário, a finalidade integra o mérito administrativo, ao lado do motivo.",
+     "r": "E",
+     "j": "Doutrina: o mérito está no motivo e no objeto; a finalidade é sempre vinculada."
+    }
+   ]
+  },
+  {
+   "id": "pati",
+   "materia": "Direito Administrativo",
+   "res": "prf-administrativo:ato-administrativo",
+   "nome": "Atributos do ato administrativo",
+   "sigla": "PATI",
+   "partes": [
+    {
+     "l": "P",
+     "t": "Presunção de legitimidade (e de veracidade)"
+    },
+    {
+     "l": "A",
+     "t": "Autoexecutoriedade"
+    },
+    {
+     "l": "T",
+     "t": "Tipicidade"
+    },
+    {
+     "l": "I",
+     "t": "Imperatividade"
+    }
+   ],
+   "fonte": "Doutrina (Di Pietro)",
+   "pegadinha": "Nem todo ato tem autoexecutoriedade e imperatividade (uma licença, por exemplo, não impõe nada). A presunção de legitimidade está em todos os atos e é RELATIVA (admite prova em contrário).",
+   "extra": "",
+   "itens": [
+    {
+     "t": "A presunção de legitimidade dos atos administrativos é relativa, admitindo prova em contrário.",
+     "r": "C",
+     "j": "Doutrina: presunção juris tantum."
+    },
+    {
+     "t": "Todos os atos administrativos são dotados de imperatividade.",
+     "r": "E",
+     "j": "Doutrina: atos negociais e enunciativos (licença, certidão) não têm imperatividade."
+    }
+   ]
+  },
+  {
+   "id": "nap-4r",
+   "materia": "Direito Administrativo",
+   "res": "prf-administrativo:agentes-publicos",
+   "nome": "Formas de provimento (Lei 8.112)",
+   "sigla": "NAP + 4 R",
+   "partes": [
+    {
+     "l": "N",
+     "t": "Nomeação"
+    },
+    {
+     "l": "A",
+     "t": "Aproveitamento"
+    },
+    {
+     "l": "P",
+     "t": "Promoção"
+    },
+    {
+     "l": "4R",
+     "t": "Readaptação, Reversão, Reintegração e Recondução"
+    }
+   ],
+   "fonte": "Lei 8.112/1990, art. 8º",
+   "pegadinha": "Ascensão e transferência foram REVOGADAS (Lei 9.527/1997). Nomeação é a única forma de provimento ORIGINÁRIO; as demais são derivadas.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "A recondução e a reintegração são formas de provimento de cargo público previstas na Lei 8.112/1990.",
+     "r": "C",
+     "j": "Lei 8.112/1990, art. 8º, VIII e IX."
+    },
+    {
+     "t": "A transferência é forma de provimento de cargo público prevista na Lei 8.112/1990.",
+     "r": "E",
+     "j": "Lei 8.112/1990, art. 8º: a transferência foi revogada pela Lei 9.527/1997."
+    }
+   ]
+  },
+  {
+   "id": "leed",
+   "materia": "Direito Penal",
+   "res": "prf-penal:ilicitude",
+   "nome": "Excludentes de ilicitude",
+   "sigla": "LEED",
+   "partes": [
+    {
+     "l": "L",
+     "t": "Legítima defesa"
+    },
+    {
+     "l": "E",
+     "t": "Estado de necessidade"
+    },
+    {
+     "l": "E",
+     "t": "Estrito cumprimento do dever legal"
+    },
+    {
+     "l": "D",
+     "t": "exercício regular de Direito"
+    }
+   ],
+   "fonte": "CP, art. 23",
+   "pegadinha": "Coação moral irresistível e obediência hierárquica (art. 22) excluem a CULPABILIDADE, não a ilicitude. E o excesso, doloso ou culposo, é punido (art. 23, parágrafo único).",
+   "extra": "",
+   "itens": [
+    {
+     "t": "O estrito cumprimento do dever legal exclui a ilicitude do fato.",
+     "r": "C",
+     "j": "CP, art. 23, III."
+    },
+    {
+     "t": "A obediência a ordem não manifestamente ilegal de superior hierárquico é causa de exclusão da ilicitude.",
+     "r": "E",
+     "j": "CP, art. 22: exclui a culpabilidade (só o superior responde)."
+    }
+   ]
+  },
+  {
+   "id": "ipe",
+   "materia": "Direito Penal",
+   "res": "prf-penal:culpabilidade",
+   "nome": "Elementos da culpabilidade",
+   "sigla": "I-P-E",
+   "partes": [
+    {
+     "l": "I",
+     "t": "Imputabilidade"
+    },
+    {
+     "l": "P",
+     "t": "Potencial consciência da ilicitude"
+    },
+    {
+     "l": "E",
+     "t": "Exigibilidade de conduta diversa"
+    }
+   ],
+   "fonte": "Doutrina (teoria normativa pura); CP, arts. 21, 22 e 26 a 28",
+   "pegadinha": "Embriaguez voluntária ou culposa NÃO exclui a imputabilidade (CP, art. 28, II). Só a completa, por caso fortuito ou força maior, isenta de pena.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "A embriaguez voluntária, ainda que completa, não exclui a imputabilidade penal.",
+     "r": "C",
+     "j": "CP, art. 28, II."
+    },
+    {
+     "t": "O erro de proibição evitável isenta de pena, por excluir a potencial consciência da ilicitude.",
+     "r": "E",
+     "j": "CP, art. 21: o erro inevitável isenta de pena; o evitável apenas diminui a pena de 1/6 a 1/3."
+    }
+   ]
+  },
+  {
+   "id": "nim",
+   "materia": "Direito Penal",
+   "res": "prf-penal:fato-tipico",
+   "nome": "Modalidades de culpa",
+   "sigla": "NIM",
+   "partes": [
+    {
+     "l": "N",
+     "t": "Negligência (deixar de fazer o cuidado devido)"
+    },
+    {
+     "l": "I",
+     "t": "Imprudência (agir com afoiteza)"
+    },
+    {
+     "l": "M",
+     "t": "iMperícia (falta de aptidão técnica)"
+    }
+   ],
+   "fonte": "CP, art. 18, II",
+   "pegadinha": "Crime culposo só existe quando a lei prevê expressamente (art. 18, parágrafo único). Ex.: não há dano culposo no CP.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "Diz-se o crime culposo quando o agente deu causa ao resultado por imprudência, negligência ou imperícia.",
+     "r": "C",
+     "j": "CP, art. 18, II."
+    },
+    {
+     "t": "Todo crime doloso admite a forma culposa, ainda que a lei não a preveja expressamente.",
+     "r": "E",
+     "j": "CP, art. 18, parágrafo único: só há punição por culpa nos casos expressos em lei."
+    }
+   ]
+  },
+  {
+   "id": "dioesi",
+   "materia": "Direito Processual Penal",
+   "res": "prf-processo-penal:diligencias",
+   "nome": "Características do inquérito policial",
+   "sigla": "DIOSEI",
+   "partes": [
+    {
+     "l": "D",
+     "t": "Dispensável"
+    },
+    {
+     "l": "I",
+     "t": "Inquisitivo"
+    },
+    {
+     "l": "O",
+     "t": "Oficioso (oficialidade)"
+    },
+    {
+     "l": "S",
+     "t": "Sigiloso"
+    },
+    {
+     "l": "E",
+     "t": "Escrito"
+    },
+    {
+     "l": "I",
+     "t": "Indisponível"
+    }
+   ],
+   "fonte": "Doutrina; CPP, arts. 9º (escrito), 17 (indisponível) e 20 (sigiloso)",
+   "pegadinha": "Indisponível: a AUTORIDADE POLICIAL não pode mandar arquivar o inquérito (CPP, art. 17). E o sigilo não alcança o advogado quanto aos elementos já documentados (Súmula Vinculante 14).",
+   "extra": "",
+   "itens": [
+    {
+     "t": "A autoridade policial não poderá mandar arquivar autos de inquérito.",
+     "r": "C",
+     "j": "CPP, art. 17."
+    },
+    {
+     "t": "O sigilo do inquérito policial impede o defensor de ter acesso aos elementos de prova já documentados.",
+     "r": "E",
+     "j": "STF, Súmula Vinculante 14: o defensor tem acesso aos elementos já documentados."
+    }
+   ]
+  },
+  {
+   "id": "flagrante",
+   "materia": "Direito Processual Penal",
+   "res": "prf-processo-penal:prisao-flagrante",
+   "nome": "Hipóteses de flagrante",
+   "sigla": "ESTÁ – ACABA – LOGO APÓS – LOGO DEPOIS",
+   "partes": [
+    {
+     "l": "ESTÁ",
+     "t": "está cometendo a infração (flagrante próprio)"
+    },
+    {
+     "l": "ACABA",
+     "t": "acaba de cometê-la (flagrante próprio)"
+    },
+    {
+     "l": "LOGO APÓS",
+     "t": "é perseguido logo após (flagrante impróprio)"
+    },
+    {
+     "l": "LOGO DEPOIS",
+     "t": "é encontrado logo depois com instrumentos, armas ou objetos que façam presumir a autoria (flagrante presumido ou ficto)"
+    }
+   ],
+   "fonte": "CPP, art. 302, I a IV",
+   "pegadinha": "Perseguição = logo APÓS (impróprio); encontrado com objetos = logo DEPOIS (presumido). A banca troca as expressões.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "Considera-se em flagrante quem é encontrado, logo depois, com instrumentos, armas, objetos ou papéis que façam presumir ser ele autor da infração.",
+     "r": "C",
+     "j": "CPP, art. 302, IV."
+    },
+    {
+     "t": "O flagrante impróprio ocorre quando o agente é encontrado, logo depois, com objetos que façam presumir a autoria.",
+     "r": "E",
+     "j": "CPP, art. 302: impróprio é a perseguição logo após (III); encontrado logo depois com objetos é o presumido (IV)."
+    }
+   ]
+  },
+  {
+   "id": "7543",
+   "materia": "Legislação de Trânsito",
+   "res": "prf-transito:ctb-penalidades",
+   "nome": "Pontos por infração e limites de suspensão",
+   "sigla": "7-5-4-3 e 20-30-40",
+   "partes": [
+    {
+     "l": "7",
+     "t": "gravíssima = 7 pontos"
+    },
+    {
+     "l": "5",
+     "t": "grave = 5 pontos"
+    },
+    {
+     "l": "4",
+     "t": "média = 4 pontos"
+    },
+    {
+     "l": "3",
+     "t": "leve = 3 pontos"
+    },
+    {
+     "l": "20-30-40",
+     "t": "suspensão em 12 meses: 20 pontos com 2 ou mais gravíssimas; 30 com 1 gravíssima; 40 sem gravíssima"
+    }
+   ],
+   "fonte": "CTB, arts. 259 e 261, I (Lei 14.071/2020)",
+   "pegadinha": "Para quem exerce atividade remunerada ao volante (EAR), o limite é 40 pontos, independentemente da natureza das infrações.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "Infração de natureza média computa 4 pontos no prontuário do condutor.",
+     "r": "C",
+     "j": "CTB, art. 259, III."
+    },
+    {
+     "t": "O condutor que somar 30 pontos em 12 meses, sem nenhuma infração gravíssima, terá o direito de dirigir suspenso.",
+     "r": "E",
+     "j": "CTB, art. 261, I, c: sem gravíssima, o limite é 40 pontos."
+    }
+   ]
+  },
+  {
+   "id": "velocidades",
+   "materia": "Legislação de Trânsito",
+   "res": "prf-transito:ctb-circulacao",
+   "nome": "Velocidades máximas sem sinalização",
+   "sigla": "80-60-40-30 / 110-100-60",
+   "partes": [
+    {
+     "l": "80",
+     "t": "via de trânsito rápido"
+    },
+    {
+     "l": "60",
+     "t": "via arterial"
+    },
+    {
+     "l": "40",
+     "t": "via coletora"
+    },
+    {
+     "l": "30",
+     "t": "via local"
+    },
+    {
+     "l": "110/100",
+     "t": "rodovia de pista dupla 110 km/h e de pista simples 100 km/h (automóveis, camionetas e motocicletas; demais veículos 90 km/h)"
+    },
+    {
+     "l": "60",
+     "t": "estrada (via rural não pavimentada)"
+    }
+   ],
+   "fonte": "CTB, art. 61, § 1º",
+   "pegadinha": "Na cidade a ordem é a da hierarquia das vias: trânsito rápido > arterial > coletora > local. Os 90 km/h valem para os 'demais veículos' nas rodovias, em pista dupla ou simples.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "Onde não houver sinalização, a velocidade máxima em via arterial é de 60 km/h.",
+     "r": "C",
+     "j": "CTB, art. 61, § 1º, I, b."
+    },
+    {
+     "t": "Em rodovia de pista simples sem sinalização, a velocidade máxima para automóveis é de 110 km/h.",
+     "r": "E",
+     "j": "CTB, art. 61, § 1º, II, a, 2: 100 km/h; os 110 km/h são da pista dupla."
+    }
+   ]
+  },
+  {
+   "id": "mane",
+   "materia": "Raciocínio Lógico-Matemático",
+   "res": "prf-rlm:logica",
+   "nome": "Negação da condicional",
+   "sigla": "MANÉ",
+   "partes": [
+    {
+     "l": "MA",
+     "t": "MAntém a primeira"
+    },
+    {
+     "l": "N",
+     "t": "E (troca o 'se...então' por 'e')"
+    },
+    {
+     "l": "É",
+     "t": "nEga a segunda"
+    }
+   ],
+   "fonte": "Lógica proposicional: ~(p → q) ≡ p ∧ ~q",
+   "pegadinha": "A negação de 'se p, então q' NUNCA é outra condicional. Já a equivalência (contrapositiva) é 'volta negando': p → q ≡ ~q → ~p.",
+   "extra": "",
+   "itens": [
+    {
+     "t": "A negação de 'Se chove, então a pista fica molhada' é 'Chove e a pista não fica molhada'.",
+     "r": "C",
+     "j": "Lógica: ~(p → q) ≡ p ∧ ~q."
+    },
+    {
+     "t": "A negação de 'Se chove, então a pista fica molhada' é 'Se não chove, então a pista não fica molhada'.",
+     "r": "E",
+     "j": "Lógica: a negação de uma condicional é uma conjunção (p ∧ ~q), não outra condicional."
+    }
+   ]
+  },
+  {
+   "id": "crase-volta",
+   "materia": "Língua Portuguesa",
+   "res": "prf-portugues:crase",
+   "nome": "Crase com nome de lugar",
+   "sigla": "VOU A, VOLTO DA: CRASE HÁ",
+   "partes": [
+    {
+     "l": "DA",
+     "t": "vou à Bahia, porque volto DA Bahia: tem crase"
+    },
+    {
+     "l": "DE",
+     "t": "vou a Goiânia, porque volto DE Goiânia: não tem crase ('vou a, volto de, crase pra quê?')"
+    }
+   ],
+   "fonte": "Gramática normativa (crase = preposição a + artigo a)",
+   "pegadinha": "Com lugar especificado volta o artigo: 'vou à Goiânia dos anos 60'. E nunca há crase antes de palavra masculina (salvo 'à moda de' implícito).",
+   "extra": "",
+   "itens": [
+    {
+     "t": "Em 'Viajou à Bahia nas férias', o acento grave está correto.",
+     "r": "C",
+     "j": "Gramática: volto da Bahia, logo há artigo e a crase é obrigatória."
+    },
+    {
+     "t": "Em 'Chegou à Goiânia ontem à noite', o primeiro acento grave está correto.",
+     "r": "E",
+     "j": "Gramática: volto de Goiânia, logo não há artigo e não há crase (o segundo, 'à noite', está correto)."
+    }
+   ]
+  }
+ ],
+ "questoes": [
+  {
+   "n": 1,
+   "ref": "macete:socidivaplu",
+   "materia": "Direito Constitucional",
+   "topico": "Macete SOCIDIVAPLU · Fundamentos da República",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O pluralismo político e a dignidade da pessoa humana são fundamentos da República Federativa do Brasil.",
+   "just": "CF, art. 1º, III e V."
+  },
+  {
+   "n": 2,
+   "ref": "macete:socidivaplu",
+   "materia": "Direito Constitucional",
+   "topico": "Macete SOCIDIVAPLU · Fundamentos da República",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A erradicação da pobreza e da marginalização é um dos fundamentos da República Federativa do Brasil.",
+   "just": "CF, art. 3º, III: é objetivo fundamental, não fundamento (art. 1º)."
+  },
+  {
+   "n": 3,
+   "ref": "macete:congaerrpro",
+   "materia": "Direito Constitucional",
+   "topico": "Macete CONGAERRPRO · Objetivos fundamentais da República",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Garantir o desenvolvimento nacional é objetivo fundamental da República Federativa do Brasil.",
+   "just": "CF, art. 3º, II."
+  },
+  {
+   "n": 4,
+   "ref": "macete:congaerrpro",
+   "materia": "Direito Constitucional",
+   "topico": "Macete CONGAERRPRO · Objetivos fundamentais da República",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Constitui objetivo fundamental da República erradicar as desigualdades sociais e regionais.",
+   "just": "CF, art. 3º, III: erradicar a pobreza e a marginalização e REDUZIR as desigualdades sociais e regionais."
+  },
+  {
+   "n": 5,
+   "ref": "macete:ainda-nao-comprei-recopa",
+   "materia": "Direito Constitucional",
+   "topico": "Macete AINDA NÃO COMPREI RECOPA · Princípios das relações internacionais",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A concessão de asilo político é princípio que rege o Brasil em suas relações internacionais.",
+   "just": "CF, art. 4º, X."
+  },
+  {
+   "n": 6,
+   "ref": "macete:ainda-nao-comprei-recopa",
+   "materia": "Direito Constitucional",
+   "topico": "Macete AINDA NÃO COMPREI RECOPA · Princípios das relações internacionais",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A soberania é princípio que rege o Brasil nas relações internacionais, previsto no art. 4º da Constituição.",
+   "just": "CF, art. 1º, I: soberania é fundamento da República; no art. 4º está a independência nacional."
+  },
+  {
+   "n": 7,
+   "ref": "macete:mp3com",
+   "materia": "Direito Constitucional",
+   "topico": "Macete MP3.COM · Cargos privativos de brasileiro nato",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O cargo de Ministro de Estado da Defesa é privativo de brasileiro nato.",
+   "just": "CF, art. 12, § 3º, VII."
+  },
+  {
+   "n": 8,
+   "ref": "macete:mp3com",
+   "materia": "Direito Constitucional",
+   "topico": "Macete MP3.COM · Cargos privativos de brasileiro nato",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Brasileiro naturalizado não pode exercer mandato de senador da República.",
+   "just": "CF, art. 12, § 3º: só o cargo de Presidente do Senado Federal é privativo de nato."
+  },
+  {
+   "n": 9,
+   "ref": "macete:capacete-de-pm",
+   "materia": "Direito Constitucional",
+   "topico": "Macete CAPACETE DE PM · Competência privativa da União para legislar",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Compete privativamente à União legislar sobre direito agrário, marítimo, aeronáutico e espacial.",
+   "just": "CF, art. 22, I."
+  },
+  {
+   "n": 10,
+   "ref": "macete:capacete-de-pm",
+   "materia": "Direito Constitucional",
+   "topico": "Macete CAPACETE DE PM · Competência privativa da União para legislar",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Os estados podem legislar concorrentemente com a União sobre trânsito e transporte.",
+   "just": "CF, art. 22, XI: competência privativa da União."
+  },
+  {
+   "n": 11,
+   "ref": "macete:pufet",
+   "materia": "Direito Constitucional",
+   "topico": "Macete PUFET · Competência concorrente (art. 24, I)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Compete à União, aos estados e ao Distrito Federal legislar concorrentemente sobre direito penitenciário.",
+   "just": "CF, art. 24, I."
+  },
+  {
+   "n": 12,
+   "ref": "macete:pufet",
+   "materia": "Direito Constitucional",
+   "topico": "Macete PUFET · Competência concorrente (art. 24, I)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Compete concorrentemente à União, aos estados e ao Distrito Federal legislar sobre direito penal.",
+   "just": "CF, art. 22, I: direito penal é competência privativa da União."
+  },
+  {
+   "n": 13,
+   "ref": "macete:limpe",
+   "materia": "Direito Administrativo",
+   "topico": "Macete LIMPE · Princípios expressos da administração pública",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A eficiência é princípio expresso da administração pública no caput do art. 37 da Constituição.",
+   "just": "CF, art. 37, caput (redação da EC 19/1998)."
+  },
+  {
+   "n": 14,
+   "ref": "macete:limpe",
+   "materia": "Direito Administrativo",
+   "topico": "Macete LIMPE · Princípios expressos da administração pública",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A supremacia do interesse público está expressa no caput do art. 37 da Constituição.",
+   "just": "CF, art. 37, caput: só legalidade, impessoalidade, moralidade, publicidade e eficiência; a supremacia é princípio implícito (doutrina)."
+  },
+  {
+   "n": 15,
+   "ref": "macete:fase",
+   "materia": "Direito Administrativo",
+   "topico": "Macete FASE · Administração indireta",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "As sociedades de economia mista integram a administração indireta.",
+   "just": "Decreto-Lei 200/1967, art. 4º, II, c."
+  },
+  {
+   "n": 16,
+   "ref": "macete:fase",
+   "materia": "Direito Administrativo",
+   "topico": "Macete FASE · Administração indireta",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A Polícia Rodoviária Federal é autarquia federal integrante da administração indireta.",
+   "just": "CF, art. 144, § 2º, e Decreto-Lei 200/1967: a PRF é órgão da administração direta da União."
+  },
+  {
+   "n": 17,
+   "ref": "macete:cofifomob",
+   "materia": "Direito Administrativo",
+   "topico": "Macete COFIFOMOB · Elementos (requisitos) do ato administrativo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Competência, finalidade, forma, motivo e objeto são elementos do ato administrativo.",
+   "just": "Lei 4.717/1965, art. 2º."
+  },
+  {
+   "n": 18,
+   "ref": "macete:cofifomob",
+   "materia": "Direito Administrativo",
+   "topico": "Macete COFIFOMOB · Elementos (requisitos) do ato administrativo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "No ato discricionário, a finalidade integra o mérito administrativo, ao lado do motivo.",
+   "just": "Doutrina: o mérito está no motivo e no objeto; a finalidade é sempre vinculada."
+  },
+  {
+   "n": 19,
+   "ref": "macete:pati",
+   "materia": "Direito Administrativo",
+   "topico": "Macete PATI · Atributos do ato administrativo",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A presunção de legitimidade dos atos administrativos é relativa, admitindo prova em contrário.",
+   "just": "Doutrina: presunção juris tantum."
+  },
+  {
+   "n": 20,
+   "ref": "macete:pati",
+   "materia": "Direito Administrativo",
+   "topico": "Macete PATI · Atributos do ato administrativo",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Todos os atos administrativos são dotados de imperatividade.",
+   "just": "Doutrina: atos negociais e enunciativos (licença, certidão) não têm imperatividade."
+  },
+  {
+   "n": 21,
+   "ref": "macete:nap-4r",
+   "materia": "Direito Administrativo",
+   "topico": "Macete NAP + 4 R · Formas de provimento (Lei 8.112)",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A recondução e a reintegração são formas de provimento de cargo público previstas na Lei 8.112/1990.",
+   "just": "Lei 8.112/1990, art. 8º, VIII e IX."
+  },
+  {
+   "n": 22,
+   "ref": "macete:nap-4r",
+   "materia": "Direito Administrativo",
+   "topico": "Macete NAP + 4 R · Formas de provimento (Lei 8.112)",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A transferência é forma de provimento de cargo público prevista na Lei 8.112/1990.",
+   "just": "Lei 8.112/1990, art. 8º: a transferência foi revogada pela Lei 9.527/1997."
+  },
+  {
+   "n": 23,
+   "ref": "macete:leed",
+   "materia": "Direito Penal",
+   "topico": "Macete LEED · Excludentes de ilicitude",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "O estrito cumprimento do dever legal exclui a ilicitude do fato.",
+   "just": "CP, art. 23, III."
+  },
+  {
+   "n": 24,
+   "ref": "macete:leed",
+   "materia": "Direito Penal",
+   "topico": "Macete LEED · Excludentes de ilicitude",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A obediência a ordem não manifestamente ilegal de superior hierárquico é causa de exclusão da ilicitude.",
+   "just": "CP, art. 22: exclui a culpabilidade (só o superior responde)."
+  },
+  {
+   "n": 25,
+   "ref": "macete:ipe",
+   "materia": "Direito Penal",
+   "topico": "Macete I-P-E · Elementos da culpabilidade",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A embriaguez voluntária, ainda que completa, não exclui a imputabilidade penal.",
+   "just": "CP, art. 28, II."
+  },
+  {
+   "n": 26,
+   "ref": "macete:ipe",
+   "materia": "Direito Penal",
+   "topico": "Macete I-P-E · Elementos da culpabilidade",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O erro de proibição evitável isenta de pena, por excluir a potencial consciência da ilicitude.",
+   "just": "CP, art. 21: o erro inevitável isenta de pena; o evitável apenas diminui a pena de 1/6 a 1/3."
+  },
+  {
+   "n": 27,
+   "ref": "macete:nim",
+   "materia": "Direito Penal",
+   "topico": "Macete NIM · Modalidades de culpa",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Diz-se o crime culposo quando o agente deu causa ao resultado por imprudência, negligência ou imperícia.",
+   "just": "CP, art. 18, II."
+  },
+  {
+   "n": 28,
+   "ref": "macete:nim",
+   "materia": "Direito Penal",
+   "topico": "Macete NIM · Modalidades de culpa",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Todo crime doloso admite a forma culposa, ainda que a lei não a preveja expressamente.",
+   "just": "CP, art. 18, parágrafo único: só há punição por culpa nos casos expressos em lei."
+  },
+  {
+   "n": 29,
+   "ref": "macete:dioesi",
+   "materia": "Direito Processual Penal",
+   "topico": "Macete DIOSEI · Características do inquérito policial",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A autoridade policial não poderá mandar arquivar autos de inquérito.",
+   "just": "CPP, art. 17."
+  },
+  {
+   "n": 30,
+   "ref": "macete:dioesi",
+   "materia": "Direito Processual Penal",
+   "topico": "Macete DIOSEI · Características do inquérito policial",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O sigilo do inquérito policial impede o defensor de ter acesso aos elementos de prova já documentados.",
+   "just": "STF, Súmula Vinculante 14: o defensor tem acesso aos elementos já documentados."
+  },
+  {
+   "n": 31,
+   "ref": "macete:flagrante",
+   "materia": "Direito Processual Penal",
+   "topico": "Macete ESTÁ – ACABA – LOGO APÓS – LOGO DEPOIS · Hipóteses de flagrante",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Considera-se em flagrante quem é encontrado, logo depois, com instrumentos, armas, objetos ou papéis que façam presumir ser ele autor da infração.",
+   "just": "CPP, art. 302, IV."
+  },
+  {
+   "n": 32,
+   "ref": "macete:flagrante",
+   "materia": "Direito Processual Penal",
+   "topico": "Macete ESTÁ – ACABA – LOGO APÓS – LOGO DEPOIS · Hipóteses de flagrante",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O flagrante impróprio ocorre quando o agente é encontrado, logo depois, com objetos que façam presumir a autoria.",
+   "just": "CPP, art. 302: impróprio é a perseguição logo após (III); encontrado logo depois com objetos é o presumido (IV)."
+  },
+  {
+   "n": 33,
+   "ref": "macete:7543",
+   "materia": "Legislação de Trânsito",
+   "topico": "Macete 7-5-4-3 e 20-30-40 · Pontos por infração e limites de suspensão",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Infração de natureza média computa 4 pontos no prontuário do condutor.",
+   "just": "CTB, art. 259, III."
+  },
+  {
+   "n": 34,
+   "ref": "macete:7543",
+   "materia": "Legislação de Trânsito",
+   "topico": "Macete 7-5-4-3 e 20-30-40 · Pontos por infração e limites de suspensão",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "O condutor que somar 30 pontos em 12 meses, sem nenhuma infração gravíssima, terá o direito de dirigir suspenso.",
+   "just": "CTB, art. 261, I, c: sem gravíssima, o limite é 40 pontos."
+  },
+  {
+   "n": 35,
+   "ref": "macete:velocidades",
+   "materia": "Legislação de Trânsito",
+   "topico": "Macete 80-60-40-30 / 110-100-60 · Velocidades máximas sem sinalização",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Onde não houver sinalização, a velocidade máxima em via arterial é de 60 km/h.",
+   "just": "CTB, art. 61, § 1º, I, b."
+  },
+  {
+   "n": 36,
+   "ref": "macete:velocidades",
+   "materia": "Legislação de Trânsito",
+   "topico": "Macete 80-60-40-30 / 110-100-60 · Velocidades máximas sem sinalização",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em rodovia de pista simples sem sinalização, a velocidade máxima para automóveis é de 110 km/h.",
+   "just": "CTB, art. 61, § 1º, II, a, 2: 100 km/h; os 110 km/h são da pista dupla."
+  },
+  {
+   "n": 37,
+   "ref": "macete:mane",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Macete MANÉ · Negação da condicional",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "A negação de 'Se chove, então a pista fica molhada' é 'Chove e a pista não fica molhada'.",
+   "just": "Lógica: ~(p → q) ≡ p ∧ ~q."
+  },
+  {
+   "n": 38,
+   "ref": "macete:mane",
+   "materia": "Raciocínio Lógico-Matemático",
+   "topico": "Macete MANÉ · Negação da condicional",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "A negação de 'Se chove, então a pista fica molhada' é 'Se não chove, então a pista não fica molhada'.",
+   "just": "Lógica: a negação de uma condicional é uma conjunção (p ∧ ~q), não outra condicional."
+  },
+  {
+   "n": 39,
+   "ref": "macete:crase-volta",
+   "materia": "Língua Portuguesa",
+   "topico": "Macete VOU A, VOLTO DA: CRASE HÁ · Crase com nome de lugar",
+   "tipo": "ce",
+   "resp": "C",
+   "enunciado": "Em 'Viajou à Bahia nas férias', o acento grave está correto.",
+   "just": "Gramática: volto da Bahia, logo há artigo e a crase é obrigatória."
+  },
+  {
+   "n": 40,
+   "ref": "macete:crase-volta",
+   "materia": "Língua Portuguesa",
+   "topico": "Macete VOU A, VOLTO DA: CRASE HÁ · Crase com nome de lugar",
+   "tipo": "ce",
+   "resp": "E",
+   "enunciado": "Em 'Chegou à Goiânia ontem à noite', o primeiro acento grave está correto.",
+   "just": "Gramática: volto de Goiânia, logo não há artigo e não há crase (o segundo, 'à noite', está correto)."
+  }
+ ]
+}

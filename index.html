@@ -148,6 +148,19 @@ nav button i{font-size:19px}
 #v_map{display:block;width:100%;height:auto;background:#0c141d;border-radius:14px;margin:6px 0}
 #v_aviso{font-size:12px;color:#ffb74d;min-height:16px}
 #visor button.sec{color:#9fb0c3;border-color:#3a4a5c}
+.mac_cab{display:flex;flex-direction:column;gap:2px}.mac_sigla{font-size:22px;letter-spacing:1px;color:var(--pri)}.mac_nome{font-size:14px;color:var(--mut)}
+.mac_partes{margin:8px 0;padding-left:18px;line-height:1.45;font-size:15px}.mac_partes b{color:var(--pri)}
+.mac_peg{font-size:14px;line-height:1.4;margin:6px 0;padding:8px 10px;border-radius:10px;background:rgba(224,161,0,.12)}
+.mac_grupo{font-weight:700;margin:16px 0 0;color:var(--mut);font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+.res_mac{margin-top:14px;padding-top:10px;border-top:1px solid var(--line)}.res_mac .mac{margin-top:8px}
+.des_per{flex-wrap:wrap}.des_per button{flex:1 0 30%}
+.des_mat{display:block;width:100%;text-align:left;margin:10px 0 0;padding:10px 0 8px;background:transparent;color:var(--ink);border:0;border-top:1px solid var(--line);border-radius:0;font-weight:400;font-size:15px}
+.des_l1{display:flex;justify-content:space-between;gap:8px}.des_mat small{display:block;color:var(--mut);font-size:12px;margin-top:4px}
+.des_conf{font-size:15px;padding:6px 0;border-top:1px solid var(--line)}.des_conf:first-of-type{border-top:0}
+.des_graf{display:flex;align-items:flex-end;gap:3px;height:130px;margin-top:10px}.des_col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0}
+.des_col i{display:block;width:100%;border-radius:4px 4px 0 0;min-height:2px}.des_col small{font-size:9px;color:var(--mut)}.des_col span{font-size:10px;color:var(--mut);margin-top:3px}
+.des_insight div{font-size:15px}
+#des_fora summary{font-weight:600;cursor:pointer}
 </style>
 </head>
 <body>
@@ -157,6 +170,7 @@ nav button i{font-size:19px}
 <section id="hoje" class="tab on">
  <div class="sub" id="h_data" style="margin:6px 0 0"></div>
  <div class="card" id="h_plano"><b id="h_plano_dia">🗓 Plano de hoje</b><div id="h_plano_mats" class="plano_mats"></div><div class="note" id="h_plano_o"></div><div id="h_plano_tri"></div><div class="sub" id="h_plano_q" style="margin-top:10px"></div><div class="pbar"><i class="a" id="h_plano_qb"></i></div><div class="row" style="gap:8px"><button id="h_plano_go" class="ok" style="flex:2"></button><button id="h_plano_ver" class="sec" style="flex:1">Ver a semana</button></div></div>
+ <div class="card" id="h_des"><b>📊 Desempenho</b><div class="note" id="h_des_t" style="margin-top:6px"></div><button id="h_des_go" class="sec">Ver desempenho</button></div>
  <div class="card" id="h_tri"><b>🧭 Trilha do edital</b><div class="note" id="h_tri_t" style="margin-top:6px"></div><button id="h_tri_go" class="sec">Abrir trilha</button></div>
  <div class="card" id="h_chk"><b>📋 Checklist PRF 2021</b><div class="note" id="h_chk_t" style="margin-top:6px"></div><button id="h_chk_go" class="ok">Abrir checklist</button></div>
  <div class="card">
@@ -171,6 +185,7 @@ nav button i{font-size:19px}
  <div class="card" id="h_lei"><b>📖 Lei seca (Semana 1)</b><div class="note" id="h_lei_t" style="margin-top:6px"></div><button id="h_lei_go" class="sec">Começar</button></div>
  <div class="card" id="h_ctb"><b>🚔 CTB</b><div class="note" id="h_ctb_t" style="margin-top:6px"></div><button id="h_ctb_go" class="sec">Começar</button></div>
  <div class="card" id="h_res"><b>📚 Resumos</b><div class="note" id="h_res_t" style="margin-top:6px">A teoria de cada tópico do edital, com as pegadinhas e o que mudou na lei.</div><button id="h_res_go" class="sec">Abrir resumos</button></div>
+ <div class="card" id="h_mac"><b>🧠 Macetes</b><div class="note" id="h_mac_t" style="margin-top:6px">Mnemônicos conferidos com a lei.</div><button id="h_mac_go" class="sec">Abrir macetes</button></div>
  <div class="card" id="h_alertas" style="display:none"></div>
  <div class="card kpi">
   <div><div class="mid" id="h_seq">0</div><div class="sub">dias seguidos</div></div>
@@ -323,6 +338,16 @@ nav button i{font-size:19px}
   <div id="lei_arts"></div>
   <div id="lei_bar"><button id="lei_lido" class="ok">Marcar como lido</button><button id="lei_lac" class="sec">Lacunas deste trecho</button></div>
  </div>
+</section>
+
+<section id="mac" class="tab">
+ <div class="row" style="align-items:center;margin-top:8px"><button id="mac_voltar" class="sec" style="width:auto;margin:0;flex:none;padding:8px 12px">Hoje</button><b style="flex:1;font-size:18px">🧠 Macetes</b></div>
+ <div id="mac_corpo"></div>
+</section>
+
+<section id="des" class="tab">
+ <div class="row" style="align-items:center;margin-top:8px"><button id="des_voltar" class="sec" style="width:auto;margin:0;flex:none;padding:8px 12px">Hoje</button><b style="flex:1;font-size:18px">📊 Desempenho</b></div>
+ <div id="des_corpo"></div>
 </section>
 
 <section id="res" class="tab">

@@ -224,6 +224,7 @@
     return { aba: "estudo", btn: "Estudar mais", msg: "Metas do dia em dia. Abra a aba Revisar erros da planilha e revise o que venceu." };
   }
   function pintarHoje() {
+    if (typeof desPintaHoje === "function") try { desPintaHoje(); } catch (e) { /* painel ainda não iniciado */ }
     if (!$("h_data")) return;
     const s = stats(), h = hoje();
     try { const tx = paraData(h).toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long" }); $("h_data").textContent = tx.charAt(0).toUpperCase() + tx.slice(1); } catch (e) { $("h_data").textContent = h; }
@@ -790,14 +791,19 @@
     f.appendChild(d);
     if (!ok && Q.pend && Q.pend.q === q) { $("q_erro").style.display = "block"; }
   }
-  function histQuestao(ok) { hist.push({ k: "questao", v: ok ? 1 : 0, d: hoje(), id: "q" + uid() }); LS.set("hist", hist); }
+  function histQuestao(ok, q, b, conf, sim) {
+    const ev = { k: "questao", v: ok ? 1 : 0, d: hoje(), id: "q" + uid() };
+    if (q) { ev.m = q.materia; ev.c = conf || "Certeza"; if (q.tipo === "ce") ev.ce = 1; }
+    if (b) ev.b = b.id; if (sim) ev.s = 1;
+    hist.push(ev); LS.set("hist", hist);
+  }
   function qResponder(k) {
     const q = qAtual(), sim = Q.modo === "sim";
     const conf = ((document.querySelector("#q_conf button.on") || {}).dataset || {}).c || "Certeza";
     if (sim) { Q.resp[q.n] = Q.resp[q.n] === k ? undefined : k; if (Q.resp[q.n] === undefined) delete Q.conf[q.n]; else Q.conf[q.n] = conf; qRender(); return; }
     if (Q.trav) return;
     const ok = k === qGab(q); Q.resp[q.n] = k; Q.conf[q.n] = conf; Q.trav = true;
-    qProg(Q.b)[q.n] = { r: k, ok, conf, d: hoje() }; qSalvarProg(); histQuestao(ok);
+    qProg(Q.b)[q.n] = { r: k, ok, conf, d: hoje() }; qSalvarProg(); histQuestao(ok, q, Q.b, conf, false);
     const g = q.materia + "||" + q.topico; const s = (Q.sessao[g] = Q.sessao[g] || { feitas: 0, acertos: 0, erros: 0 });
     s.feitas++; if (ok) s.acertos++; else s.erros++;
     if (!ok) {
@@ -846,7 +852,7 @@
       const g = (grupo[q.materia + "||" + q.topico] = grupo[q.materia + "||" + q.topico] || { feitas: 0, acertos: 0, erros: 0 });
       m.n++; g.feitas++;
       if (r === undefined) { m.b++; br++; return; }
-      const ok = r === q.resp; qProg(b)[q.n] = { r, ok, conf: Q.conf[q.n] || "Certeza", d: hoje() }; histQuestao(ok);
+      const ok = r === q.resp; qProg(b)[q.n] = { r, ok, conf: Q.conf[q.n] || "Certeza", d: hoje() }; histQuestao(ok, q, b, Q.conf[q.n] || "Certeza", true);
       if (ok) { m.a++; ac++; g.acertos++; } else { m.e++; er++; g.erros++; erradas.push(q); }
     });
     qSalvarProg();
@@ -1207,6 +1213,8 @@
     c.appendChild(resLista("Pontos-chave", t.pontos || [], "res_pts", "ol"));
     if (t.pegadinhas && t.pegadinhas.length) c.appendChild(resLista("Pegadinhas da banca", t.pegadinhas, "res_peg", "ul"));
     if (t.novidades && t.novidades.length) c.appendChild(resLista("O que mudou na lei", t.novidades, "res_nov", "ul"));
+    const macs = MAC ? MAC.macetes.filter((x) => x.res === resChave(m, t)) : [];
+    if (macs.length) { const bx = el("div", undefined, "res_mac"); bx.appendChild(el("b", "🧠 Macete" + (macs.length > 1 ? "s" : ""))); macs.forEach((x) => bx.appendChild(macCard(x, true))); c.appendChild(bx); }
     if (t.questoes && t.questoes.length) {
       const bq = el("button", "📝 Questões da prova deste tópico (" + t.questoes.length + ")"); bq.className = "sec res_prova"; bq.onclick = () => resTreinar(true); c.appendChild(bq);
     }
@@ -1253,12 +1261,12 @@
     $("h_tri_t").textContent = "Cada matéria do edital em ordem, do mais básico ao mais difícil. Estudados: " + ok + "/" + tot + " tópicos de " + TRI.materias.length + " matérias. Conteúdo no app: " + Math.round(100 * cob / tot) + "% do edital.";
   }
   // Abre o resumo do Sócrates ligado ao passo ("trilha:tópico"), ou já começa o treino dele.
-  async function triResumo(ref, treinar) {
+  async function triResumo(ref, treinar, volta) {
     if (!(await resCarrega())) { toast("Não foi possível carregar os resumos. Conecte-se à internet uma vez."); return; }
     const [tid, id] = ref.split(":"), m = RES.dados.materias.find((x) => x.trilha === tid), t = m && m.topicos.find((x) => x.id === id);
     if (!t) { toast("Esse resumo ainda não está no app."); return; }
     if (treinar) { RES.mat = m; RES.top = t; await resTreinar(false); return; }
-    RES.volta = "trilha"; abrir("res"); resAbrir(m, t);
+    RES.volta = volta || "trilha"; abrir("res"); resAbrir(m, t);
   }
   function triMarcar(m, p, sim) { const k = triChave(m, p); if (sim) triFeito[k] = hoje(); else delete triFeito[k]; LS.set("trilha", triFeito); }
   async function triRender() {
@@ -1385,6 +1393,199 @@
   }
 
   // ---------------------------------------------------------------- navegação e config
+
+  // ---------------------------------------------------------------- MACETES (mnemônicos conferidos com a lei)
+  let MAC = LS.get("mac_dados", null), macMat = LS.get("mac_mat", "");
+  async function macCarrega() {
+    try { const r = await fetch("bancos/macetes-prf.json"); if (r.ok) { MAC = await r.json(); LS.set("mac_dados", MAC); } } catch (e) { /* usa a cópia salva */ }
+    return MAC;
+  }
+  function macCard(m, compacto) {
+    const c = el("div", undefined, "mac"); c.dataset.id = m.id;
+    const h = el("div", undefined, "mac_cab"); h.appendChild(el("b", m.sigla, "mac_sigla")); h.appendChild(el("span", m.nome, "mac_nome")); c.appendChild(h);
+    const ul = el("ul", undefined, "mac_partes");
+    m.partes.forEach((p) => { const li = el("li"); li.appendChild(el("b", p.l)); li.appendChild(document.createTextNode(" " + p.t)); ul.appendChild(li); });
+    c.appendChild(ul);
+    c.appendChild(el("div", "⚠ " + m.pegadinha, "mac_peg"));
+    c.appendChild(el("div", "Fonte: " + m.fonte + (m.extra ? " · " + m.extra : ""), "note"));
+    if (!compacto) {
+      const ac = el("div", undefined, "tri_acoes"); ac.style.marginLeft = "0";
+      const bt = el("button", "🎯 Testar (" + m.itens.length + ")"); bt.className = "sec mac_treinar"; bt.onclick = () => macTreinar([m.id]); ac.appendChild(bt);
+      if (m.res) { const br = el("button", "📚 Resumo"); br.className = "sec mac_res"; br.onclick = () => triResumo(m.res, false, "mac"); ac.appendChild(br); }
+      c.appendChild(ac);
+    }
+    return c;
+  }
+  async function macTreinar(ids) {
+    await qIndice(); const info = Q.bancos.find((x) => x.id === "macetes-prf"); if (!info) { toast("Os macetes não estão disponíveis."); return; }
+    const b = await qBanco(info), set = ids ? new Set(ids.map((i) => "macete:" + i)) : null;
+    qIniciar(b, "treino", "", "todas", set ? (q) => set.has(q.ref) : null);
+    if ($("q_tela").style.display === "block") abrir("quest");
+  }
+  function macPintaHoje() {
+    const h = $("h_mac_t"); if (!h || !MAC) return;
+    h.textContent = MAC.macetes.length + " macetes de " + new Set(MAC.macetes.map((m) => m.materia)).size + " matérias, cada um com itens de lista trocada (a pegadinha preferida da Cebraspe).";
+  }
+  async function macRender() {
+    const d = MAC || (await macCarrega()); await resCarrega();
+    if (!d) { $("mac_corpo").replaceChildren(el("div", "Não foi possível carregar os macetes. Conecte-se à internet uma vez.", "note")); return; }
+    const box = document.createDocumentFragment(), mats = [...new Set(d.macetes.map((m) => m.materia))];
+    if (macMat && !mats.includes(macMat)) macMat = "";
+    const ch = el("div", undefined, "tri_mats");
+    ["", ...mats].forEach((m) => { const b = el("button", m || "Todas"); b.className = "tri_mat mac_mat" + (m === macMat ? " on" : ""); b.dataset.m = m; b.onclick = () => { macMat = m; LS.set("mac_mat", m); macRender(); }; ch.appendChild(b); });
+    box.appendChild(ch);
+    const lista = d.macetes.filter((m) => !macMat || m.materia === macMat);
+    const top = el("button", "🎯 Testar " + (macMat ? "os macetes de " + macMat : "todos os macetes") + " (" + lista.reduce((n, m) => n + m.itens.length, 0) + " itens)"); top.className = "ok"; top.id = "mac_testar"; top.onclick = () => macTreinar(lista.map((m) => m.id));
+    box.appendChild(top);
+    let atual = "";
+    lista.forEach((m) => { if (m.materia !== atual) { atual = m.materia; box.appendChild(el("div", atual, "mac_grupo")); } const c = el("div", undefined, "card"); c.appendChild(macCard(m, false)); box.appendChild(c); });
+    box.appendChild(el("div", d.aviso, "note"));
+    $("mac_corpo").replaceChildren(box);
+  }
+
+  // ---------------------------------------------------------------- DESEMPENHO (questões por dia, semana, mês e matéria)
+  const DES = { per: LS.get("des_per", "semana") };
+  const DES_ALIAS = { "Processo Penal": "Direito Processual Penal", "Raciocínio Lógico": "Raciocínio Lógico-Matemático" };
+  const desMat = (m) => DES_ALIAS[m] || m || "Sem matéria (antes de 17/11/2026)";
+  const pct = (a, n) => (n ? Math.round(100 * a / n) : null);
+  function desEventos() {
+    const ev = [];
+    hist.forEach((x) => {
+      if (x.k === "questao") ev.push({ d: x.d, m: desMat(x.m), n: 1, a: x.v ? 1 : 0, c: x.c || "", ce: !!x.ce });
+      else if (x.k === "qfora") ev.push({ d: x.d, m: desMat(x.m), n: x.n || 0, a: x.a || 0, c: "", ce: false });
+    });
+    return ev;
+  }
+  function desIntervalo(per, desloc) {
+    const h = hoje();
+    if (per === "hoje") { const d = addDias(h, -desloc); return [d, d]; }
+    if (per === "7d") return [addDias(h, -6 - 7 * desloc), addDias(h, -7 * desloc)];
+    if (per === "30d") return [addDias(h, -29 - 30 * desloc), addDias(h, -30 * desloc)];
+    if (per === "semana") { const i = addDias(iniSemana(h), -7 * desloc); return [i, desloc ? addDias(i, 6) : h]; }
+    if (per === "mes") { const dt = paraData(h); dt.setDate(1); dt.setMonth(dt.getMonth() - desloc); const i = fmtData(dt); const f = new Date(dt); f.setMonth(f.getMonth() + 1); f.setDate(0); return [i, desloc ? fmtData(f) : h]; }
+    return ["0000-00-00", h];
+  }
+  function desSoma(ev, ini, fim) {
+    const r = { n: 0, a: 0, ce: 0, ceA: 0, mats: {}, conf: {} };
+    ev.forEach((e) => {
+      if (e.d < ini || e.d > fim) return;
+      r.n += e.n; r.a += e.a; if (e.ce) { r.ce += e.n; r.ceA += e.a; }
+      const m = (r.mats[e.m] = r.mats[e.m] || { n: 0, a: 0 }); m.n += e.n; m.a += e.a;
+      if (e.c) { const c = (r.conf[e.c] = r.conf[e.c] || { n: 0, a: 0 }); c.n += e.n; c.a += e.a; }
+    });
+    return r;
+  }
+  const desCor = (p) => (p === null ? "var(--line)" : p >= 80 ? "var(--acc)" : p >= 60 ? "#e0a100" : "var(--warn)");
+  function desMeta(ini, fim) { let t = 0; for (let d = ini; d <= fim; d = addDias(d, 1)) t += (plano.dias[planoIdx(d)] || {}).q || 0; return t; }
+  function desPintaHoje() {
+    const h = $("h_des_t"); if (!h) return;
+    const ev = desEventos(), hj = desSoma(ev, hoje(), hoje()), [i, f] = desIntervalo("semana", 0), se = desSoma(ev, i, f);
+    const t = (r) => r.n + " questões" + (r.n ? ", " + pct(r.a, r.n) + "% de acerto" : "");
+    h.textContent = "Hoje: " + t(hj) + " · Semana: " + t(se) + ".";
+  }
+  function desRender() {
+    const ev = desEventos(), per = DES.per, [i0, f0] = desIntervalo(per, 0), cur = desSoma(ev, i0, f0);
+    const ant = per === "tudo" ? null : desSoma(ev, ...desIntervalo(per, 1));
+    const rot = { hoje: "ontem", semana: "à semana passada", mes: "ao mês passado", "7d": "aos 7 dias anteriores", "30d": "aos 30 dias anteriores" }[per], rotSem = { hoje: "ontem", semana: "na semana passada", mes: "no mês passado", "7d": "nos 7 dias anteriores", "30d": "nos 30 dias anteriores" }[per];
+    const box = document.createDocumentFragment();
+    const ch = el("div", undefined, "chips des_per");
+    [["hoje", "Hoje"], ["semana", "Semana"], ["mes", "Mês"], ["7d", "7 dias"], ["30d", "30 dias"], ["tudo", "Tudo"]].forEach(([k, t]) => { const b = el("button", t); b.dataset.p = k; if (k === per) b.className = "on"; b.onclick = () => { DES.per = k; LS.set("des_per", k); desRender(); }; ch.appendChild(b); });
+    box.appendChild(ch);
+    // resumo do período
+    const c = el("div", undefined, "card"), g = el("div", undefined, "grid3"), p0 = pct(cur.a, cur.n);
+    const kp = (v, t) => { const d = el("div"); d.appendChild(el("b", v)); d.appendChild(el("span", t)); return d; };
+    g.appendChild(kp(String(cur.n), "respondidas")); g.appendChild(kp(String(cur.a), "acertos")); g.appendChild(kp(p0 === null ? "–" : p0 + "%", "de acerto"));
+    g.id = "des_kpi"; c.appendChild(g);
+    if (ant) { const p1 = pct(ant.a, ant.n); const cmp = el("div", p0 !== null && p1 !== null ? (p0 > p1 ? "▲ " : p0 < p1 ? "▼ " : "= ") + Math.abs(p0 - p1) + " pontos em relação " + (per === "hoje" ? "a ontem" : rot) + " (" + p1 + "% em " + ant.n + " questões)" : "Sem questões " + rotSem + " para comparar.", "note"); cmp.id = "des_cmp"; cmp.style.textAlign = "center"; cmp.style.marginTop = "8px"; c.appendChild(cmp); }
+    if (per === "hoje" || per === "semana") {
+      const meta = desMeta(i0, per === "semana" ? addDias(i0, 6) : f0);
+      if (meta) { const pm = Math.min(100, Math.round(100 * cur.n / meta)); c.appendChild(el("div", "Meta do plano: " + cur.n + " de " + meta + " questões" + (per === "semana" ? " na semana" : " hoje"), "sub")).style.marginTop = "10px"; const pb = el("div", undefined, "pbar"), i = el("i", undefined, "a"); i.style.width = pm + "%"; pb.appendChild(i); c.appendChild(pb); }
+    }
+    if (cur.ce) { const liq = cur.ceA - (cur.ce - cur.ceA); c.appendChild(el("div", "Nota líquida no estilo Cebraspe: " + liq + " em " + cur.ce + " itens Certo/Errado (cada erro anula um acerto).", "note")).style.marginTop = "8px"; }
+    box.appendChild(c);
+    // leitura rápida: onde estou melhor e pior
+    const mats = Object.keys(cur.mats).map((m) => ({ m, n: cur.mats[m].n, a: cur.mats[m].a, p: pct(cur.mats[m].a, cur.mats[m].n) }));
+    const firmes = mats.filter((x) => x.n >= 10).sort((x, y) => y.p - x.p);
+    if (firmes.length >= 2) {
+      const ins = el("div", undefined, "card des_insight"), mel = firmes[0], pio = firmes[firmes.length - 1];
+      ins.appendChild(el("div", "💪 Mais forte: " + mel.m + " (" + mel.p + "%)"));
+      ins.appendChild(el("div", "🎯 Precisa de atenção: " + pio.m + " (" + pio.p + "%)")).style.marginTop = "4px";
+      const bt = el("button", "Treinar " + pio.m); bt.className = "sec"; bt.onclick = () => desTreinar(pio.m); ins.appendChild(bt);
+      box.appendChild(ins);
+    }
+    // por matéria
+    const cm = el("div", undefined, "card"); cm.appendChild(el("b", "Por matéria"));
+    if (!mats.length) cm.appendChild(el("div", "Nenhuma questão respondida neste período.", "note")).style.marginTop = "6px";
+    mats.sort((x, y) => (x.n >= 5) !== (y.n >= 5) ? (x.n >= 5 ? -1 : 1) : x.p - y.p || y.n - x.n).forEach((x) => {
+      const r = el("button", undefined, "des_mat"); r.dataset.m = x.m;
+      const l1 = el("div", undefined, "des_l1"); l1.appendChild(el("span", x.m)); l1.appendChild(el("b", x.p + "%")); r.appendChild(l1);
+      const pb = el("div", undefined, "pbar"), i = el("i"); i.style.width = x.p + "%"; i.style.background = desCor(x.p); pb.appendChild(i); r.appendChild(pb);
+      let s = x.a + " de " + x.n + " certas";
+      const pa = ant && ant.mats[x.m] && ant.mats[x.m].n >= 5 ? pct(ant.mats[x.m].a, ant.mats[x.m].n) : null;
+      if (pa !== null && x.n >= 5) s += " · " + (x.p > pa ? "▲ " : x.p < pa ? "▼ " : "= ") + Math.abs(x.p - pa) + " pts";
+      if (x.n < 5) s += " · poucas questões para concluir";
+      r.appendChild(el("small", s)); r.onclick = () => desTreinar(x.m); cm.appendChild(r);
+    });
+    if (mats.length) cm.appendChild(el("div", "Toque numa matéria para treinar as que você errou nela (ou as novas, se não houver erros).", "note")).style.marginTop = "8px";
+    box.appendChild(cm);
+    // certeza x resultado
+    const cf = cur.conf, totc = Object.keys(cf).reduce((t, k) => t + cf[k].n, 0);
+    if (totc) {
+      const cc = el("div", undefined, "card"); cc.appendChild(el("b", "Certeza × resultado"));
+      ["Certeza", "Dúvida", "Chute"].forEach((k) => { if (!cf[k]) return; cc.appendChild(el("div", k + ": " + cf[k].a + " de " + cf[k].n + " (" + pct(cf[k].a, cf[k].n) + "%)", "des_conf")); });
+      const errCert = cf.Certeza ? cf.Certeza.n - cf.Certeza.a : 0, acChute = cf.Chute ? cf.Chute.a : 0;
+      if (errCert) cc.appendChild(el("div", "❗ " + errCert + " erro(s) com certeza: é teoria aprendida errada. Esses valem mais revisão do que os chutes.", "note")).style.marginTop = "6px";
+      if (acChute) cc.appendChild(el("div", "🍀 " + acChute + " acerto(s) no chute: na prova eles podem virar erro e custar ponto. Revise mesmo tendo acertado.", "note")).style.marginTop = "6px";
+      box.appendChild(cc);
+    }
+    // evolução
+    const sem = per === "mes" || per === "30d" || per === "tudo", cols = [];
+    if (sem) { let i = iniSemana(hoje()); for (let k = 7; k >= 0; k--) { const a = addDias(i, -7 * k); cols.push([a, addDias(a, 6), a.slice(8) + "/" + a.slice(5, 7)]); } }
+    else for (let k = 13; k >= 0; k--) { const d = addDias(hoje(), -k); cols.push([d, d, d.slice(8)]); }
+    const vals = cols.map(([a, b, r]) => Object.assign(desSoma(ev, a, b), { r })), mx = Math.max(1, ...vals.map((v) => v.n));
+    const cg = el("div", undefined, "card"); cg.appendChild(el("b", sem ? "Últimas 8 semanas" : "Últimos 14 dias"));
+    const gr = el("div", undefined, "des_graf"); gr.id = "des_graf";
+    vals.forEach((v) => { const col = el("div", undefined, "des_col"), p = pct(v.a, v.n); col.appendChild(el("small", p === null ? "" : p + "%")); const bar = el("i"); bar.style.height = Math.round(90 * v.n / mx) + "px"; bar.style.background = desCor(p); col.appendChild(bar); col.appendChild(el("span", v.r)); col.title = v.n + " questões"; gr.appendChild(col); });
+    cg.appendChild(gr); cg.appendChild(el("div", "Altura = quantidade de questões; cor = acerto (verde 80%+, amarelo 60–79%, vermelho abaixo de 60%).", "note")); box.appendChild(cg);
+    // simulados
+    if (simHist.length) {
+      const cs = el("div", undefined, "card"); cs.appendChild(el("b", "Simulados"));
+      simHist.slice(-5).reverse().forEach((s) => { const info = Q.bancos.find((x) => x.id === s.banco); cs.appendChild(el("div", s.d.split("-").reverse().join("/") + " · " + (info ? fonteCurta(info) : s.banco) + ": nota " + s.nota + " (" + s.acertos + " certas, " + s.erros + " erradas, " + s.brancos + " em branco) em " + s.tempo + " min", "des_conf")); });
+      box.appendChild(cs);
+    }
+    // questões feitas fora do app
+    const cf2 = el("details", undefined, "card"); cf2.id = "des_fora";
+    cf2.appendChild(el("summary", "➕ Registrar questões feitas fora do app"));
+    cf2.appendChild(el("div", "Questões do Gran, QConcursos, livro etc. Entram nas contas daqui e vão para a planilha.", "note"));
+    const sm = el("select"); sm.id = "des_f_mat"; const todas = [...new Set([...(listas.materias || []), ...(TRI ? TRI.materias.map((m) => m.materia) : []), ...Object.keys(desSoma(ev, "0000-00-00", hoje()).mats)].filter((m) => !/^Sem matéria/.test(m)).map(desMat))].sort();
+    todas.forEach((m) => { const o = el("option", m); o.value = m; sm.appendChild(o); });
+    const lm = el("label", "Matéria"); cf2.appendChild(lm); cf2.appendChild(sm);
+    const rw = el("div", undefined, "row"), fz = el("input"), ac = el("input"); fz.id = "des_f_n"; ac.id = "des_f_a"; fz.type = ac.type = "number"; fz.inputMode = ac.inputMode = "numeric"; fz.placeholder = "Feitas"; ac.placeholder = "Acertos";
+    rw.appendChild(fz); rw.appendChild(ac); cf2.appendChild(rw);
+    const bs = el("button", "Registrar"); bs.id = "des_f_ok"; bs.onclick = () => {
+      const n = Math.round(num(fz.value)), a = Math.round(num(ac.value)), m = sm.value;
+      if (!m || !(n > 0) || !(a >= 0) || a > n) { toast("Confira: feitas maior que zero e acertos entre 0 e feitas."); return; }
+      hist.push({ k: "qfora", m, n, a, d: hoje(), id: "f" + uid() }); LS.set("hist", hist);
+      enqueue("questoes", { data: hoje(), materia: m, topico: "Fora do app", feitas: n, acertos: a, erros: n - a, fonte: "Fora do app" });
+      toast("Registrado: " + a + " de " + n + " em " + m + "."); desRender(); desPintaHoje();
+    };
+    cf2.appendChild(bs); box.appendChild(cf2);
+    box.appendChild(el("div", "Conta as questões respondidas neste aparelho a partir de 17/11/2026 com a matéria (as de antes aparecem como \"Sem matéria\"). Cada resposta conta uma vez, inclusive quando você refaz a mesma questão.", "note"));
+    $("des_corpo").replaceChildren(box);
+  }
+  async function desTreinar(m) {
+    await qIndice();
+    const ordem = ["socrates-trilhas-prf", "prf-2021-p1", "macetes-prf"];
+    for (const id of ordem) {
+      const info = Q.bancos.find((x) => x.id === id); if (!info) continue;
+      const b = await qBanco(info); if (!b.questoes.some((q) => desMat(q.materia) === m)) continue;
+      const p = qProg(b), err = b.questoes.some((q) => desMat(q.materia) === m && p[q.n] && !p[q.n].ok);
+      qIniciar(b, "treino", "", err ? "erradas" : "novas", (q) => desMat(q.materia) === m);
+      if ($("q_tela").style.display === "block") { abrir("quest"); return; }
+    }
+    if ($("q_tela").style.display !== "block") toast("Ainda não há questões de " + m + " nos bancos do app.");
+  }
+
   function abrir(t) {
     if (t !== "quest") { qFlushErro(); qFlushSessao(); }
     document.querySelectorAll(".tab").forEach((s) => s.classList.toggle("on", s.id === t));
@@ -1396,6 +1597,8 @@
     if (t === "plano") planoRender();
     if (t === "trilha") triRender();
     if (t === "res") resHome();
+    if (t === "mac") macRender();
+    if (t === "des") desRender();
     if (t === "lei") { const kt = $("k_tela"); if (kt) kt.style.display = "none"; leiHome(); }
     if (t === "quest" && $("q_tela").style.display === "none" && $("q_res").style.display === "none" && $("k_tela").style.display === "none") qDesenhaLista();
   }
@@ -1426,7 +1629,7 @@
     $("q_fim").onclick = () => { if (Q.modo === "sim") qFinalizar(false); else qEncerrar(); };
     $("q_manual").onclick = () => abrir("erro");
     $("q_e_ok").onclick = qSalvarErroAgora;
-    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => { if (RES.volta) { const v = RES.volta; RES.volta = null; abrir(v); } else resHome(); }; $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
+    $("h_lei_go").onclick = () => leiIr("sem1"); $("h_ctb_go").onclick = () => leiIr("ctb"); $("h_chk_go").onclick = () => abrir("chk"); $("h_plano_go").onclick = (e) => planoEstudar(e.currentTarget.dataset.m); $("h_plano_ver").onclick = () => abrir("plano"); $("plano_voltar").onclick = () => abrir("hoje"); $("h_tri_go").onclick = () => abrir("trilha"); $("tri_voltar").onclick = () => abrir("hoje"); triCarrega().then(() => { triPintaHoje(); planoPintaHoje(); }); $("h_res_go").onclick = () => abrir("res"); $("h_mac_go").onclick = () => abrir("mac"); $("mac_voltar").onclick = () => abrir("hoje"); macCarrega().then(macPintaHoje); $("h_des_go").onclick = () => abrir("des"); $("des_voltar").onclick = () => abrir("hoje"); desPintaHoje(); $("res_voltar").onclick = () => abrir("hoje"); $("res_sair").onclick = () => { if (RES.volta) { const v = RES.volta; RES.volta = null; abrir(v); } else resHome(); }; $("res_lido").onclick = resMarcarLido; $("res_treinar").onclick = () => resTreinar(false); resCarrega().then(resPintaHoje); $("chk_voltar").onclick = () => abrir("hoje"); $("lei_voltar").onclick = () => abrir("hoje"); $("lei_sair").onclick = () => leiHome();
     $("lei_lido").onclick = leiMarcarLido; $("lei_lac").onclick = () => leiLacunas(LEI.bloco);
     $("k_mostrar").onclick = kMostrar; $("k_sair").onclick = () => kFim(true);
     document.querySelectorAll("#k_notas button").forEach((b) => { b.onclick = () => kNota(b.dataset.r); });

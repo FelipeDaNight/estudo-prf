@@ -278,7 +278,7 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
 
   await t("Questões: lista os bancos e o treino filtra por matéria", async () => {
     await page.click('[data-t="quest"]');
-    await espera(() => document.querySelectorAll("#q_lista .card[data-banco]").length === 4);
+    await espera(() => document.querySelectorAll("#q_lista .card[data-banco]").length === 5);
     assert.ok((await page.locator('#q_lista .card[data-banco="socrates-trilhas-prf"]').innerText()).includes("Respondidas 0/754"), "banco do Sócrates");
     const card = page.locator('#q_lista .card[data-banco="cbmgo-2022-soldado"]');
     assert.ok((await card.textContent()).includes("gabarito é de elaboração própria"), "aviso do gabarito");
@@ -633,6 +633,67 @@ async function t(nome, fn) { try { await fn(); console.log("OK  ", nome); } catc
     await espera(() => document.getElementById("q_tela").style.display === "block" && document.getElementById("q_tag").textContent.includes("PRF 2021"));
     assert.ok((await page.locator("#q_cab").innerText()).includes("(1/14)"), await page.locator("#q_cab").innerText());
     await page.click("#q_fim");
+  });
+
+  await t("Macetes: lista por matéria, macete dentro do resumo e teste de lista trocada", async () => {
+    await page.click('[data-t="hoje"]');
+    await espera(() => /20 macetes de 7 matérias/.test(document.getElementById("h_mac_t").textContent));
+    await page.click("#h_mac_go");
+    await espera(() => document.querySelectorAll("#mac_corpo .mac").length === 20);
+    await page.click('#mac_corpo .mac_mat[data-m="Direito Administrativo"]');
+    await espera(() => document.querySelectorAll("#mac_corpo .mac").length === 5);
+    const limpe = await page.locator('#mac_corpo .mac[data-id="limpe"]').innerText();
+    assert.ok(limpe.includes("LIMPE") && limpe.includes("Eficiência") && limpe.includes("CF, art. 37"), limpe);
+    await page.locator('#mac_corpo .mac[data-id="limpe"] .mac_res').click();          // abre o resumo e volta para os macetes
+    await espera(() => document.getElementById("res_topico").style.display === "block" && document.querySelector("#res_corpo .res_mac") && document.getElementById("res_corpo").textContent.includes("LIMPE"));
+    await page.click("#res_sair");
+    await espera(() => document.getElementById("mac").classList.contains("on"));
+    await page.click('#mac_corpo .mac_mat[data-m=""]');
+    await page.locator('#mac_corpo .mac[data-id="capacete-de-pm"] .mac_treinar').click();
+    await espera(() => document.getElementById("q_tela").style.display === "block" && document.getElementById("q_tag").textContent.includes("CAPACETE DE PM"));
+    assert.ok((await page.locator("#q_cab").innerText()).includes("(1/2)"));
+    await page.click("#q_fim");
+  });
+
+  await t("Desempenho: acertos por período e por matéria, certeza, meta do plano e questões de fora do app", async () => {
+    await page.evaluate(() => { const h = JSON.parse(localStorage.getItem("ep_hist") || "[]").filter((x) => x.k !== "questao" && x.k !== "qfora"); localStorage.setItem("ep_hist", JSON.stringify(h)); });
+    await page.reload(); await espera(() => window.__app && document.getElementById("h_des_t").textContent.startsWith("Hoje: 0 questões"));
+    await page.evaluate(() => window.__app.abrir("hoje"));
+    await page.click("#h_mac_go"); await espera(() => document.querySelectorAll("#mac_corpo .mac").length > 0);
+    await page.click('#mac_corpo .mac_mat[data-m="Direito Penal"]');
+    await page.click("#mac_testar");                                                   // 6 itens de Penal
+    await espera(() => document.getElementById("q_tela").style.display === "block");
+    const gabs = await page.evaluate(async () => (await (await fetch("bancos/macetes-prf.json")).json()).questoes.filter((q) => q.materia === "Direito Penal").map((q) => q.resp));
+    for (let i = 0; i < gabs.length; i++) {
+      const errar = i === 0, r = errar ? (gabs[i] === "C" ? "E" : "C") : gabs[i];
+      if (i === 1) await page.click('#q_conf button[data-c="Chute"]');
+      await page.click('#q_alts .alt[data-k="' + r + '"]');
+      if (i < gabs.length - 1) await page.click("#q_prox");
+    }
+    await page.click("#q_fim");
+    await page.evaluate(() => window.__app.abrir("hoje"));
+    await espera(() => /Hoje: 6 questões, 83% de acerto/.test(document.getElementById("h_des_t").textContent));
+    await page.click("#h_des_go");
+    await page.click('#des_corpo .des_per button[data-p="hoje"]');
+    await espera(() => document.querySelector('#des_corpo .des_mat[data-m="Direito Penal"]'));
+    const kpi = await page.locator("#des_kpi").innerText();
+    assert.ok(kpi.includes("6") && kpi.includes("5") && kpi.includes("83%"), kpi);
+    const corpo = await page.locator("#des_corpo").innerText();
+    assert.ok(corpo.includes("Meta do plano: 6 de") && corpo.includes("Nota líquida no estilo Cebraspe: 4 em 6") && corpo.includes("1 erro(s) com certeza") && corpo.includes("acerto(s) no chute"), corpo.slice(0, 600));
+    assert.ok((await page.locator('#des_corpo .des_mat[data-m="Direito Penal"]').innerText()).includes("5 de 6 certas"));
+    await page.click("#des_fora summary");
+    await page.selectOption("#des_f_mat", "Informática");
+    await page.fill("#des_f_n", "10"); await page.fill("#des_f_a", "4");
+    await page.click("#des_f_ok");
+    await espera(() => document.querySelector('#des_corpo .des_mat[data-m="Informática"]') && /16/.test(document.getElementById("des_kpi").textContent));
+    assert.ok((await page.locator('#des_corpo .des_mat[data-m="Informática"]').innerText()).includes("40%"));
+    await page.click('#des_corpo .des_per button[data-p="mes"]');
+    await espera(() => document.querySelector("#des_graf") && document.querySelectorAll("#des_graf .des_col").length === 8);
+    await page.locator('#des_corpo .des_mat[data-m="Direito Penal"]').click();       // treina as erradas da matéria
+    await espera(() => document.getElementById("q_tela").style.display === "block" && document.getElementById("q_tag").textContent.startsWith("Direito Penal"));
+    await page.click("#q_fim");
+    const ev = await page.evaluate(() => JSON.parse(localStorage.getItem("ep_hist")).filter((x) => x.k === "questao").slice(-1)[0]);
+    assert.ok(ev.m === "Direito Penal" && ev.b === "macetes-prf" && ev.ce === 1 && ev.c, JSON.stringify(ev));
   });
 
   await page.click('[data-t="estudo"]');

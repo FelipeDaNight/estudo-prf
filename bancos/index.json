@@ -17,5 +17,12 @@
   "titulo": "Sócrates · Fixação PRF",
   "n": 754,
   "origem": "socrates"
+ },
+ {
+  "id": "macetes-prf",
+  "arquivo": "bancos/macetes-prf.json",
+  "titulo": "Macetes · PRF",
+  "n": 40,
+  "origem": "macetes"
  }
 ]

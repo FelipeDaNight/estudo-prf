@@ -154,3 +154,10 @@ Aba Questões → "➕ Importar questões": cole o JSON (ou escolha o arquivo). 
 ## Resoluções do CONTRAN aprofundadas (17/11/2026)
 - Na trilha de Legislação de Trânsito, o passo único de resoluções virou 6 passos: as mais cobradas; álcool e drogas (Res. 1.031/2026, que substituiu a 432/2013); tempo de direção (525/2015); capacete (940/2022); habilitação (1.020/2025: autoescola facultativa, instrutor autônomo, estrangeiro 180 dias); e "o que vale hoje", com o mapa das 34 resoluções do edital retificado e as que as substituíram, AET, tolerância dos radares e distância da placa R-19.
 - 28 itens novos no banco do Sócrates (Legislação de Trânsito: 104).
+
+## Macetes e Desempenho (17/11/2026)
+- **🧠 Macetes** (card na tela Hoje): 20 mnemônicos conferidos com a lei (SOCIDIVAPLU, CONGAERRPRO, LIMPE, FASE, COFIFOMOB, PATI, CAPACETE DE PM, PUFET, MP3.COM, LEED, NIM, MANÉ, pontos 7-5-4-3 e 20-30-40, velocidades do art. 61 etc.). Cada um mostra as partes, a pegadinha que ele evita e a fonte, abre o resumo do tópico e tem 2 itens de "lista trocada" (banco **Macetes · PRF**, 40 itens). O macete também aparece dentro do resumo do tópico. Para editar: `ferramentas/macetes.py` (regera `bancos/macetes-prf.json`).
+- **📊 Desempenho** (card na tela Hoje): questões respondidas e % de acerto por Hoje, Semana, Mês, 7 dias, 30 dias ou Tudo, com comparação com o período anterior; por matéria (da pior para a melhor, com variação); matéria mais forte e a que precisa de atenção; certeza × resultado (erros com certeza e acertos no chute); meta de questões do plano; nota líquida estilo Cebraspe; gráfico dos últimos 14 dias ou 8 semanas; últimos simulados. Tocar numa matéria abre o treino das erradas dela.
+- Dá para registrar questões feitas fora do app (Gran, QConcursos, livro): entram nas contas e vão para a planilha.
+- A partir desta versão cada resposta guarda matéria, banco e certeza no histórico do aparelho; as respostas anteriores aparecem como "Sem matéria".
+
